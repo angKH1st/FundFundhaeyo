@@ -75,7 +75,7 @@
 								    </div>
 								</div>
 							</div>
-                            <div class="ffh_header_center_right6 fl headtext" style="text-align:right"><%= loginUser.getNickname() %> 님💜</div>
+                            <div class="ffh_header_center_right6 fl headtext" style="text-align:right"><%= loginUser.getNickname() %> 님💙
                             <% } %>
                         </div>
                         <script>

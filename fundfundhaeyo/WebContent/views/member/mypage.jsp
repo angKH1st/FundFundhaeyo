@@ -12,9 +12,16 @@
 	
 	<div class="mypage_outer">
 		<div class="blank_top"><%-- 여백 --%></div>
+		
+		
+		
 		<div class="mypage_main">
-			TBU
+			시작
 	    </div>
+	    
+	    
+	    
+	    
 	    <div class="blank_bottom"><%-- 여백 --%></div>
     </div>
     
