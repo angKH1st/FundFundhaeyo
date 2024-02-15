@@ -22,6 +22,20 @@ public class Member {
 	private String userStatus;
 	
 	public Member() {}
+	
+	public Member(String userId, String userPwd, String userName, String userSsn, String nickname, String phone,
+			String email, String address, String marketing) {
+		super();
+		this.userId = userId;
+		this.userPwd = userPwd;
+		this.userName = userName;
+		this.userSsn = userSsn;
+		this.nickname = nickname;
+		this.phone = phone;
+		this.email = email;
+		this.address = address;
+		this.marketing = marketing;
+	}
 
 	public Member(int userNo, String userId, String userPwd, String userName, String userSsn, String nickname,
 			String phone, String email, String address, String profile, int grade, String marketing, Date enrollDate,
