@@ -4,6 +4,8 @@
 <%
 	Member loginUser = (Member)session.getAttribute("loginUser");
 	String contextPath = request.getContextPath();
+	
+	String alertMsg = (String)session.getAttribute("alertMsg");
 %>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,6 +37,12 @@
 	.font_sejong_outer{font-family: SejonghospitalBold; font-weight: 400; font-style: normal;}	
 </style>
 <body>
+	<% if(alertMsg != null) { %>
+		<script>
+			alert("<%= alertMsg %>");	
+		</script>
+		<% session.removeAttribute("alertMsg"); %>
+	<% } %>
     <div class="header_outer font_outer">
         <%-- 전체 레이아웃 --%>
         <div class="ffh_wrap ffh_main">
