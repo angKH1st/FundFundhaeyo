@@ -1,32 +1,156 @@
 @charset "UTF-8";
 /* 기본 셋업 */
-.login_form_outer{width:100%; height: 1000px; padding: 0 250px;}
+.login_form_outer{width:100%; height: 1000px;}
 .login_form_outer>div{width:100%;}
-.blank_top{height: 15%;}
+.blank_top{height: 5%;}
 .blank_bottom{height: 5%;}
-
 
 /* 메인 영역 시작 */
 .login_form_main{height: 80%;}
-.login_form_main>div{width: 100%;}
 
-.login_form_main_header{
-    height: 30%; 
+.login_form_outer *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Alata', sans-serif;
+}
+
+.page-container{
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.login_form_main_content{height: 70%; width: 300px; margin-top: 30px;}
-.login_form_main_content_wrap{border: 1px solid lightgray; border-radius: 5px; width: 450px; height: 470px;}
-.long_input_btn{background-color: white; border: 0.5px solid lightskyblue; border-radius: 5px;}
-.long_input{background-color: white; border: none; width: 350px; height: 40px;}
-.login_btn_div{margin-bottom: 20px;}
-.login_btn{width: 385px; height: 40px; background-color: lightskyblue; border: 0.5px solid lightgray; border-radius: 5px; color: white;}
+.shadow{
+    -webkit-box-shadow: 27px 43px 43px -26px rgba(89,89,89,0.39);
+    -moz-box-shadow: 27px 43px 43px -26px rgba(89,89,89,0.39);
+    box-shadow: 27px 43px 43px -26px rgba(89,89,89,0.39);
+}
 
-.login_btn_search_div{margin: 0 36px;}
+.login-form-container{
+ 
+    background:#f5f5f5 ;
+    width:860px;
+    height: 540px;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 10px black;
+    border-radius: 10px;
+}
 
-/* 메인 영역 끝 */
+.login-form-left-side{
+    width: 50%; 
+    border-radius: 10px 0px 0px 10px;
+    padding:75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-image: 
+  radial-gradient(ellipse farthest-corner at 0 140%, #5d9dff 0%, #2178ff 70%, #3585ff 70%);
+}
+
+.login-form-left-side h1{
+    color: white;
+    width:100%;
+    text-align: right;
+    opacity: 0.9;
+}
+
+.login-form-left-side p{
+    padding-top: 50px;
+    font-size:12px;
+    text-align: right;
+    opacity: 0.8;
+}
+
+.login-form-right-side{
+    width: 50%;
+    border-radius: 0px 10px 10px 0px;
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    padding:40px;
+    background: rgb(255,255,255);
+	background: linear-gradient(287deg, rgba(255,255,255,1) 0%, rgba(243,244,244,1) 0%, rgba(255,255,255,1) 100%);
+}
+.login-form-right-side .login-top-wrap{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width:100%;
+}
+.login-form-right-side .login-top-wrap span{
+    color: gray;
+    font-size: 11px;
+    padding-right:20px;
+
+}
+.login-form-right-side .login-top-wrap .create-account-btn {
+    background: white;
+    border:  0;
+    width:85px;
+    height: 35px;
+    font-size: 11px;
+    color: #2178ff;
+    border-radius: 3px;
+
+}
+.login-input-container{
+    padding-top:40px;
+    width:300px;
+}
+.login-input-container .login-input-wrap{
+    width:300px;
+    height: 45px;
+    margin-top: 20px;
+    border-radius: 2px;
+    border-bottom: solid 2px #2178ff;
+   
+}
+.login-input-container .login-input-wrap i{
+    color: #2178ff;
+    line-height: 45px;
+}
+
+.login-input-container .login-input-wrap input{
+    background: none;
+   
+    border: none;
+    line-height: 45px;
+    padding-left:10px;
+    width:267px;
+}
+.login-input-container .login-input-wrap input:focus{
+    outline: none;
+}
+.login-btn-wrap{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;;
+}
+.login-btn-wrap .login-btn{
+    width:95px;
+    height:35px;
+    color:white;
+    border: 0;
+    border-radius: 4px;
+
+    background: rgb(105,163,255);
+background: linear-gradient(162deg, rgba(105,163,255,1) 0%, rgba(43,125,254,1) 50%, rgba(43,125,254,1) 100%);
+}
+.login-btn-wrap a{
+    margin-top:10px;
+    text-decoration: none;
+    font-size: 11px;
+    color: gray;
+
+}
 
 /* 소셜 로그인 시작 */
 
@@ -44,7 +168,7 @@
   content: "";
   position: absolute;
   top: 50%;
-  width: 165px;
+  width: 100px;
   height: 1px;
   background-color: #ccc;
 }
@@ -56,3 +180,4 @@
 .login-alternative-methods span:after {
   left: calc(100% + 10px);
 }
+
