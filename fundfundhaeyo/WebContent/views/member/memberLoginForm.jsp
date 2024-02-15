@@ -55,7 +55,7 @@
 							<br><br>
 	
 							<div class="login-alternative-methods font_outer">
-								<span>소셜 로그인</span>
+								<span>또는</span>
 							</div>
 	
 							<div style="height: 17px;"><%-- 여백 --%></div>
