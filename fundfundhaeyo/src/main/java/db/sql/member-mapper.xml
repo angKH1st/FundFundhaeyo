@@ -26,4 +26,34 @@
 		   AND USER_STATUS IN ('Y','A')
 	</entry>
 	
+	<entry key="insertMember">
+		INSERT
+		  INTO MEMBER
+		  (
+		    USER_NO
+		  , USER_ID
+		  , USER_PWD
+		  , USER_NAME
+		  , USER_SSN
+		  , NICKNAME
+		  , PHONE
+		  , EMAIL
+		  , ADDRESS
+		  , MARKETING
+		  )
+		  VALUES
+		  (
+		    SEQ_UNO.NEXTVAL
+		  , ?
+		  , ?
+		  , ?
+		  , ?
+		  , ?
+		  , ?
+		  , ?
+		  , ?
+		  , ?
+		  )
+	</entry>
+	
 </properties>
