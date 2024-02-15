@@ -44,16 +44,15 @@
   content: "";
   position: absolute;
   top: 50%;
-  width: 100px; /* Adjust the width as needed */
+  width: 165px;
   height: 1px;
   background-color: #ccc;
 }
 
 .login-alternative-methods span:before {
-  right: calc(100% + 10px); /* Adjust the distance from the text */
+  right: calc(100% + 10px);
 }
 
 .login-alternative-methods span:after {
-  left: calc(100% + 10px); /* Adjust the distance from the text */
+  left: calc(100% + 10px);
 }
-
