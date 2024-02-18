@@ -16,7 +16,7 @@ public class MemberDao {
 	private Properties prop = new Properties();
 	
 	public MemberDao() {
-		String filePath = MemberDao.class.getResource("/db/sql/member-mapper.xml").getPath();
+		String filePath = MemberDao.class.getResource("/db/sql/tb_member-mapper.xml").getPath();
 		
 		try {
 			prop.loadFromXML(new FileInputStream(filePath));
@@ -52,15 +52,15 @@ public class MemberDao {
 							   rset.getString("user_pwd"), 
 							   rset.getString("user_name"),
 							   rset.getString("user_ssn"),
-							   rset.getString("nickname"),
-							   rset.getString("phone"), 
-							   rset.getString("email"), 
-							   rset.getString("address"), 
-							   rset.getString("profile"),
-							   rset.getInt("grade"),
-							   rset.getString("marketing"),
-							   rset.getDate("enroll_date"),
-							   rset.getDate("modify_date"),
+							   rset.getString("user_nickname"),
+							   rset.getString("user_phone"), 
+							   rset.getString("user_email"), 
+							   rset.getString("user_address"), 
+							   rset.getString("user_profile"),
+							   rset.getInt("user_grade"),
+							   rset.getString("user_marketing"),
+							   rset.getDate("user_enroll_date"),
+							   rset.getDate("user_modify_date"),
 							   rset.getString("user_type"),
 							   rset.getString("user_status"));
 			}
@@ -91,11 +91,11 @@ public class MemberDao {
 			pstmt.setString(2, m.getUserPwd());
 			pstmt.setString(3, m.getUserName());
 			pstmt.setString(4, m.getUserSsn());
-			pstmt.setString(5, m.getNickname());
-			pstmt.setString(6, m.getPhone());
-			pstmt.setString(7, m.getEmail());
-			pstmt.setString(8, m.getAddress());
-			pstmt.setString(9, m.getMarketing());
+			pstmt.setString(5, m.getUserNickname());
+			pstmt.setString(6, m.getUserPhone());
+			pstmt.setString(7, m.getUserEmail());
+			pstmt.setString(8, m.getUserAddress());
+			pstmt.setString(9, m.getUserMarketing());
 			
 			result = pstmt.executeUpdate();
 		} catch (SQLException e) {
