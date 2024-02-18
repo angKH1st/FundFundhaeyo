@@ -9,52 +9,52 @@ public class Member {
 	private String userPwd;
 	private String userName;
 	private String userSsn;
-	private String nickname;
-	private String phone;
-	private String email;
-	private String address;
-	private String profile;
-	private int grade;
-	private String marketing;
-	private Date enrollDate;
-	private Date modifyDate;
+	private String userNickname;
+	private String userPhone;
+	private String userEmail;
+	private String userAddress;
+	private String userProfile;
+	private int userGrade;
+	private String userMarketing;
+	private Date userEnrollDate;
+	private Date userModifyDate;
 	private String userType;
 	private String userStatus;
 	
 	public Member() {}
 	
-	public Member(String userId, String userPwd, String userName, String userSsn, String nickname, String phone,
-			String email, String address, String marketing) {
+	public Member(String userId, String userPwd, String userName, String userSsn, String userNickname, String userPhone,
+			String userEmail, String userAddress, String userMarketing) {
 		super();
 		this.userId = userId;
 		this.userPwd = userPwd;
 		this.userName = userName;
 		this.userSsn = userSsn;
-		this.nickname = nickname;
-		this.phone = phone;
-		this.email = email;
-		this.address = address;
-		this.marketing = marketing;
+		this.userNickname = userNickname;
+		this.userPhone = userPhone;
+		this.userEmail = userEmail;
+		this.userAddress = userAddress;
+		this.userMarketing = userMarketing;
 	}
 
-	public Member(int userNo, String userId, String userPwd, String userName, String userSsn, String nickname,
-			String phone, String email, String address, String profile, int grade, String marketing, Date enrollDate,
-			Date modifyDate, String userType, String userStatus) {
+	public Member(int userNo, String userId, String userPwd, String userName, String userSsn, String userNickname,
+			String userPhone, String userEmail, String userAddress, String userProfile, int userGrade,
+			String userMarketing, Date userEnrollDate, Date userModifyDate, String userType, String userStatus) {
 		super();
 		this.userNo = userNo;
 		this.userId = userId;
 		this.userPwd = userPwd;
 		this.userName = userName;
 		this.userSsn = userSsn;
-		this.nickname = nickname;
-		this.phone = phone;
-		this.email = email;
-		this.address = address;
-		this.profile = profile;
-		this.grade = grade;
-		this.marketing = marketing;
-		this.enrollDate = enrollDate;
-		this.modifyDate = modifyDate;
+		this.userNickname = userNickname;
+		this.userPhone = userPhone;
+		this.userEmail = userEmail;
+		this.userAddress = userAddress;
+		this.userProfile = userProfile;
+		this.userGrade = userGrade;
+		this.userMarketing = userMarketing;
+		this.userEnrollDate = userEnrollDate;
+		this.userModifyDate = userModifyDate;
 		this.userType = userType;
 		this.userStatus = userStatus;
 	}
@@ -99,76 +99,76 @@ public class Member {
 		this.userSsn = userSsn;
 	}
 
-	public String getNickname() {
-		return nickname;
+	public String getUserNickname() {
+		return userNickname;
 	}
 
-	public void setNickname(String nickname) {
-		this.nickname = nickname;
+	public void setUserNickname(String userNickname) {
+		this.userNickname = userNickname;
 	}
 
-	public String getPhone() {
-		return phone;
+	public String getUserPhone() {
+		return userPhone;
 	}
 
-	public void setPhone(String phone) {
-		this.phone = phone;
+	public void setUserPhone(String userPhone) {
+		this.userPhone = userPhone;
 	}
 
-	public String getEmail() {
-		return email;
+	public String getUserEmail() {
+		return userEmail;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setUserEmail(String userEmail) {
+		this.userEmail = userEmail;
 	}
 
-	public String getAddress() {
-		return address;
+	public String getUserAddress() {
+		return userAddress;
 	}
 
-	public void setAddress(String address) {
-		this.address = address;
+	public void setUserAddress(String userAddress) {
+		this.userAddress = userAddress;
 	}
 
-	public String getProfile() {
-		return profile;
+	public String getUserProfile() {
+		return userProfile;
 	}
 
-	public void setProfile(String profile) {
-		this.profile = profile;
+	public void setUserProfile(String userProfile) {
+		this.userProfile = userProfile;
 	}
 
-	public int getGrade() {
-		return grade;
+	public int getUserGrade() {
+		return userGrade;
 	}
 
-	public void setGrade(int grade) {
-		this.grade = grade;
+	public void setUserGrade(int userGrade) {
+		this.userGrade = userGrade;
 	}
 
-	public String getMarketing() {
-		return marketing;
+	public String getUserMarketing() {
+		return userMarketing;
 	}
 
-	public void setMarketing(String marketing) {
-		this.marketing = marketing;
+	public void setUserMarketing(String userMarketing) {
+		this.userMarketing = userMarketing;
 	}
 
-	public Date getEnrollDate() {
-		return enrollDate;
+	public Date getUserEnrollDate() {
+		return userEnrollDate;
 	}
 
-	public void setEnrollDate(Date enrollDate) {
-		this.enrollDate = enrollDate;
+	public void setUserEnrollDate(Date userEnrollDate) {
+		this.userEnrollDate = userEnrollDate;
 	}
 
-	public Date getModifyDate() {
-		return modifyDate;
+	public Date getUserModifyDate() {
+		return userModifyDate;
 	}
 
-	public void setModifyDate(Date modifyDate) {
-		this.modifyDate = modifyDate;
+	public void setUserModifyDate(Date userModifyDate) {
+		this.userModifyDate = userModifyDate;
 	}
 
 	public String getUserType() {
@@ -190,10 +190,10 @@ public class Member {
 	@Override
 	public String toString() {
 		return "Member [userNo=" + userNo + ", userId=" + userId + ", userPwd=" + userPwd + ", userName=" + userName
-				+ ", userSsn=" + userSsn + ", nickname=" + nickname + ", phone=" + phone + ", email=" + email
-				+ ", address=" + address + ", profile=" + profile + ", grade=" + grade + ", marketing=" + marketing
-				+ ", enrollDate=" + enrollDate + ", modifyDate=" + modifyDate + ", userType=" + userType
-				+ ", userStatus=" + userStatus + "]";
+				+ ", userSsn=" + userSsn + ", userNickname=" + userNickname + ", userPhone=" + userPhone
+				+ ", userEmail=" + userEmail + ", userAddress=" + userAddress + ", userProfile=" + userProfile
+				+ ", userGrade=" + userGrade + ", userMarketing=" + userMarketing + ", userEnrollDate=" + userEnrollDate
+				+ ", userModifyDate=" + userModifyDate + ", userType=" + userType + ", userStatus=" + userStatus + "]";
 	}
 
 }
