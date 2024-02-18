@@ -49,7 +49,6 @@
             <%-- 헤드 --%>
             <div class="ffh_header" style="border-bottom: 1px solid lightgray;">
                 <div class="ffh_header_center fl">
-                    <div class="ffh_header_center1"></div>
                     <div class="ffh_header_center2">
                         <div class="ffh_header_center_left fl">
                             <div class="ffh_header_center_left1 fl"><a href="<%= contextPath %>"><div class="bg_image"></div></a></div>
