@@ -9,18 +9,18 @@
 		     , USER_PWD
 		     , USER_NAME
 		     , USER_SSN
-		     , NICKNAME
-		     , PHONE
-		     , EMAIL
-		     , ADDRESS
-		     , PROFILE
-		     , GRADE
-		     , MARKETING
-		     , ENROLL_DATE
-		     , MODIFY_DATE
+		     , USER_NICKNAME
+		     , USER_PHONE
+		     , USER_EMAIL
+		     , USER_ADDRESS
+		     , USER_PROFILE
+		     , USER_GRADE
+		     , USER_MARKETING
+		     , USER_ENROLL_DATE
+		     , USER_MODIFY_DATE
 		     , USER_TYPE
 		     , USER_STATUS
-		  FROM MEMBER
+		  FROM TB_MEMBER
 		 WHERE USER_ID = ?
 		   AND USER_PWD = ?
 		   AND USER_STATUS IN ('Y','A')
@@ -35,11 +35,11 @@
 		  , USER_PWD
 		  , USER_NAME
 		  , USER_SSN
-		  , NICKNAME
-		  , PHONE
-		  , EMAIL
-		  , ADDRESS
-		  , MARKETING
+		  , USER_NICKNAME
+		  , USER_PHONE
+		  , USER_EMAIL
+		  , USER_ADDRESS
+		  , USER_MARKETING
 		  )
 		  VALUES
 		  (
