@@ -12,11 +12,14 @@
 	
 	<div class="introduction_outer">
 		<div class="blank_top"><%-- 여백 --%></div>
+		
 		<div class="introduction_main">
 			TBU
 	    </div>
+	    
 	    <div class="blank_bottom"><%-- 여백 --%></div>
     </div>
+    
 	<%@ include file="../common/footer.jsp" %>
 </body>
 </html>
