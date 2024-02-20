@@ -1,23 +1,28 @@
 package com.kh.semi1st.company.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.kh.semi1st.company.model.service.AnnouncementService;
+import com.kh.semi1st.company.model.vo.Announcement;
+
 /**
  * Servlet implementation class MoveToHelpCenterController
  */
-@WebServlet("/help.cp")
-public class MoveToHelpCenterController extends HttpServlet {
+@WebServlet("/announcement.hp")
+public class AnnouncementCenterListController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public MoveToHelpCenterController() {
+    public AnnouncementCenterListController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -26,7 +31,11 @@ public class MoveToHelpCenterController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("views/company/helpCenter.jsp").forward(request, response);
+		ArrayList<Announcement> list = new AnnouncementService().selectAnnouncementList();
+		
+		request.setAttribute("list", list);
+		
+		request.getRequestDispatcher("views/helpCenter/announcementCenter.jsp").forward(request, response);
 	}
 
 	/**

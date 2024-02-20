@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="selectAnnouncementList">
+	SELECT
+	       ANNOUNCEMENT_NO
+	     , ANNOUNCEMENT_TITLE
+	     , USER_NICKNAME
+	     , ANNOUNCEMENT_COUNT
+	     , ANNOUNCEMENT_CREATE_DATE
+	  FROM TB_ANNOUNCEMENT
+	  JOIN TB_MEMBER ON (USER_NO = ANNOUNCEMENT_WRITER)
+	 WHERE ANNOUNCEMENT_STATUS = 'Y'
+	 ORDER
+	    BY ANNOUNCEMENT_NO DESC
+	</entry>
+</properties>
