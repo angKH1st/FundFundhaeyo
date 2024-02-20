@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>뻔뻔해요</title>
+<title>뻔뻔해요2222</title>
 <link rel="stylesheet" href="resources/css/mypage.css">
 </head>
 <body>
