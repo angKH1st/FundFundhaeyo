@@ -80,19 +80,19 @@ CREATE SEQUENCE SEQ_USER_NO
 NOCACHE;
 
 INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'admin', '1234', '관리자', '950814-1234567', '관리자', '010-1234-5678', 'admin@kh.or.kr', '서울시 강남구 역삼동', '관리자입니다', 1, 'N', SYSDATE, SYSDATE, DEFAULT, 'A');
+VALUES (SEQ_USER_NO.NEXTVAL, 'admin', '1234', '관리자', '950814-1234567', '관리자', '010-1234-5678', 'admin@kh.or.kr', '서울시 강남구 역삼동', '관리자입니다', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'A');
 
 INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user01', 'pass01', '박보영', '900212-232141', '뽀', '010-1111-1111', 'user01@kh.or.kr', '서울시 강동구 천호동', '박보영이에요', 1, 'N', SYSDATE, SYSDATE, DEFAULT, 'Y');
+VALUES (SEQ_USER_NO.NEXTVAL, 'user01', 'pass01', '박보영', '900212-232141', '뽀', '010-1111-1111', 'user01@kh.or.kr', '서울시 강동구 천호동', '박보영이에요', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
 
 INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user02', 'pass02', '윈터', '010101-2213456', '앙', '010-2222-2222', 'user02@kh.or.kr', '서울시 양천구 목동', '힘들다', 1, 'N', SYSDATE, SYSDATE, DEFAULT, 'Y');
+VALUES (SEQ_USER_NO.NEXTVAL, 'user02', 'pass02', '윈터', '010101-2213456', '앙', '010-2222-2222', 'user02@kh.or.kr', '서울시 양천구 목동', '힘들다', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
 
 INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user03', 'pass03', '진세연', '940215-2224131', '파스타', '010-3333-3333', 'user03@kh.or.kr', '서울시 강서구', '로제 파스타 먹고 싶어요', 1, 'N', SYSDATE, SYSDATE, DEFAULT, 'Y');
+VALUES (SEQ_USER_NO.NEXTVAL, 'user03', 'pass03', '진세연', '940215-2224131', '파스타', '010-3333-3333', 'user03@kh.or.kr', '서울시 강서구', '로제 파스타 먹고 싶어요', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
 
 INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user04', 'pass04', '하니', '010101-2141231', '뉴진스', '010-4444-4444', 'user04@kh.or.kr', '서울시 강북구', '뉴진스 하입보이요', 1, 'N', SYSDATE, SYSDATE, DEFAULT, 'Y');
+VALUES (SEQ_USER_NO.NEXTVAL, 'user04', 'pass04', '하니', '010101-2141231', '뉴진스', '010-4444-4444', 'user04@kh.or.kr', '서울시 강북구', '뉴진스 하입보이요', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
 --------------------------------------------------
 ----------------- NOTICE 알림 관련 ------------------	
 --------------------------------------------------
@@ -119,19 +119,19 @@ CREATE SEQUENCE SEQ_NOTICE_NO
 NOCACHE;
 
 INSERT INTO TB_NOTICE
-VALUES (SEQ_NOTICE_NO.NEXTVAL, '오픈! 뻔뻔해요!', '첫번째 알림 내용입니다.', 1, '2020-02-10', DEFAULT, DEFAULT);
+VALUES (SEQ_NOTICE_NO.NEXTVAL, '오픈! 뻔뻔해요!', '첫번째 알림 내용입니다.', 1, '2024-02-22', DEFAULT, DEFAULT);
 
 INSERT INTO TB_NOTICE
-VALUES (SEQ_NOTICE_NO.NEXTVAL, '두번째 알림 제목입니다.', '다섯번째 알림 내용입니다.', 1, '2020-02-15', DEFAULT, DEFAULT);
+VALUES (SEQ_NOTICE_NO.NEXTVAL, '두번째 알림 제목입니다.', '두번째 알림 내용입니다.', 1, '2024-02-23', DEFAULT, DEFAULT);
 
 INSERT INTO TB_NOTICE
-VALUES (SEQ_NOTICE_NO.NEXTVAL, '세번째 알림 제목입니다.', '다섯번째 알림 내용입니다.', 1, '2020-02-15', DEFAULT, DEFAULT);
+VALUES (SEQ_NOTICE_NO.NEXTVAL, '세번째 알림 제목입니다.', '세번째 알림 내용입니다.', 1, '2024-02-24', DEFAULT, DEFAULT);
 
 INSERT INTO TB_NOTICE
-VALUES (SEQ_NOTICE_NO.NEXTVAL, '네번째 알림 제목입니다.', '다섯번째 알림 내용입니다.', 1, '2020-02-15', DEFAULT, DEFAULT);
+VALUES (SEQ_NOTICE_NO.NEXTVAL, '네번째 알림 제목입니다.', '네번째 알림 내용입니다.', 1, '2024-02-25', DEFAULT, DEFAULT);
 
 INSERT INTO TB_NOTICE
-VALUES (SEQ_NOTICE_NO.NEXTVAL, '다섯번째 알림 제목입니다.', '다섯번째 알림 내용입니다.', 1, '2020-02-15', DEFAULT, DEFAULT);
+VALUES (SEQ_NOTICE_NO.NEXTVAL, '다섯번째 알림 제목입니다.', '다섯번째 알림 내용입니다.', 1, '2024-02-26', DEFAULT, DEFAULT);
 --------------------------------------------------
 ----------------- FAQ 게시판 관련 ------------------	
 --------------------------------------------------
@@ -160,19 +160,34 @@ CREATE SEQUENCE SEQ_FAQ_NO
 NOCACHE;
 
 INSERT INTO TB_FAQ
-VALUES (SEQ_FAQ_NO.NEXTVAL, '첫번째 자주묻는질문 제목입니다.', '첫번째 자주묻는질문 내용입니다.', 1, DEFAULT, '2020-02-10', '2020-02-10', DEFAULT);
+VALUES (SEQ_FAQ_NO.NEXTVAL, '첫번째 자주묻는질문 제목입니다.', '첫번째 자주묻는질문 내용입니다.', 1, DEFAULT, '2024-02-22', '2024-02-22', DEFAULT);
 
 INSERT INTO TB_FAQ
-VALUES (SEQ_FAQ_NO.NEXTVAL, '두번째 자주묻는질문 제목입니다.', '두번째 자주묻는질문 내용입니다.', 1, DEFAULT, '2020-02-15', '2020-02-15', DEFAULT);
+VALUES (SEQ_FAQ_NO.NEXTVAL, '두번째 자주묻는질문 제목입니다.', '두번째 자주묻는질문 내용입니다.', 1, DEFAULT, '2024-02-22', '2024-02-22', DEFAULT);
 
 INSERT INTO TB_FAQ
-VALUES (SEQ_FAQ_NO.NEXTVAL, '세번째 자주묻는질문 제목입니다.', '세번째 자주묻는질문 내용입니다.', 1, DEFAULT, '2020-02-16', '2020-02-16', DEFAULT);
+VALUES (SEQ_FAQ_NO.NEXTVAL, '세번째 자주묻는질문 제목입니다.', '세번째 자주묻는질문 내용입니다.', 1, DEFAULT, '2024-02-22', '2024-02-22', DEFAULT);
 
 INSERT INTO TB_FAQ
-VALUES (SEQ_FAQ_NO.NEXTVAL, '네번째 자주묻는질문 제목입니다.', '네번째 자주묻는질문 내용입니다.', 1, DEFAULT, '2020-02-18', '2020-02-18', DEFAULT);
+VALUES (SEQ_FAQ_NO.NEXTVAL, '네번째 자주묻는질문 제목입니다.', '네번째 자주묻는질문 내용입니다.', 1, DEFAULT, '2024-02-22', '2024-02-22', DEFAULT);
 
 INSERT INTO TB_FAQ
-VALUES (SEQ_FAQ_NO.NEXTVAL, '다섯번째 자주묻는질문 제목입니다.', '다섯번째 자주묻는질문 내용입니다.', 1, DEFAULT, '2020-02-22', '2020-02-22', DEFAULT);
+VALUES (SEQ_FAQ_NO.NEXTVAL, '다섯번째 자주묻는질문 제목입니다.', '다섯번째 자주묻는질문 내용입니다.', 1, DEFAULT, '2024-02-22', '2024-02-22', DEFAULT);
+
+INSERT INTO TB_FAQ
+VALUES (SEQ_FAQ_NO.NEXTVAL, '여섯번째 자주묻는질문 제목입니다.', '여섯번째 자주묻는질문 내용입니다.', 1, DEFAULT, '2024-02-22', '2024-02-22', DEFAULT);
+
+INSERT INTO TB_FAQ
+VALUES (SEQ_FAQ_NO.NEXTVAL, '일곱번째 자주묻는질문 제목입니다.', '일곱번째 자주묻는질문 내용입니다.', 1, DEFAULT, '2024-02-22', '2024-02-22', DEFAULT);
+
+INSERT INTO TB_FAQ
+VALUES (SEQ_FAQ_NO.NEXTVAL, '여덟번째 자주묻는질문 제목입니다.', '여덟번째 자주묻는질문 내용입니다.', 1, DEFAULT, '2024-02-22', '2024-02-22', DEFAULT);
+
+INSERT INTO TB_FAQ
+VALUES (SEQ_FAQ_NO.NEXTVAL, '아홉번째 자주묻는질문 제목입니다.', '아홉번째 자주묻는질문 내용입니다.', 1, DEFAULT, '2024-02-22', '2024-02-22', DEFAULT);
+
+INSERT INTO TB_FAQ
+VALUES (SEQ_FAQ_NO.NEXTVAL, '열번째 자주묻는질문 제목입니다.', '열번째 자주묻는질문 내용입니다.', 1, DEFAULT, '2024-02-22', '2024-02-22', DEFAULT);
 --------------------------------------------------
 ----------------- PJ_CATEGORY 관련 ----------------	
 --------------------------------------------------
@@ -256,19 +271,19 @@ CREATE SEQUENCE SEQ_QNA_NO
 NOCACHE;
 
 INSERT INTO TB_QNA(QNA_NO, QNA_TYPE, QNA_WRITER, QNA_TITLE, QNA_CONTENT, QNA_CREATE_DATE, QNA_ANSWER_STATUS, QNA_STATUS) 
-VALUES(SEQ_QNA_NO.NEXTVAL, 1, 2, '프로젝트에 대한 문의', '상세한 내용을 알려주실 수 있나요?', '2020-02-21', 'N', 'Y');
+VALUES(SEQ_QNA_NO.NEXTVAL, 1, 2, '프로젝트에 대한 문의', '상세한 내용을 알려주실 수 있나요?', '2024-02-22', 'N', 'Y');
 
 INSERT INTO TB_QNA(QNA_NO, QNA_TYPE, QNA_WRITER, QNA_TITLE, QNA_CONTENT, QNA_CREATE_DATE, QNA_ANSWER_STATUS, QNA_STATUS) 
-VALUES(SEQ_QNA_NO.NEXTVAL, 1, 2, '프로젝트 후원 방법 문의', '후원 방법에 대해 자세히 설명해주실 수 있나요?', '2020-02-25', 'N', 'Y');
+VALUES(SEQ_QNA_NO.NEXTVAL, 1, 2, '프로젝트 후원 방법 문의', '후원 방법에 대해 자세히 설명해주실 수 있나요?', '2024-02-23', 'N', 'Y');
 
 INSERT INTO TB_QNA(QNA_NO, QNA_TYPE, QNA_WRITER, QNA_TITLE, QNA_CONTENT, QNA_CREATE_DATE, QNA_ANSWER_STATUS, QNA_STATUS) 
-VALUES(SEQ_QNA_NO.NEXTVAL, 1, 4, '프로젝트 진행 상황 문의', '진행 상황에 대해 업데이트 해주실 수 있나요?', '2020-03-01', 'N', 'Y');
+VALUES(SEQ_QNA_NO.NEXTVAL, 1, 4, '프로젝트 진행 상황 문의', '진행 상황에 대해 업데이트 해주실 수 있나요?', '2024-02-24', 'N', 'Y');
 
 INSERT INTO TB_QNA(QNA_NO, QNA_TYPE, QNA_WRITER, QNA_TITLE, QNA_CONTENT, QNA_CREATE_DATE, QNA_ANSWER_STATUS, QNA_STATUS) 
-VALUES(SEQ_QNA_NO.NEXTVAL, 1, 3, '후원한 프로젝트의 선물 배송 일정 문의', '선물 배송 일정에 대해 알려주실 수 있나요?', '2020-03-01', 'N', 'Y');
+VALUES(SEQ_QNA_NO.NEXTVAL, 1, 3, '후원한 프로젝트의 선물 배송 일정 문의', '선물 배송 일정에 대해 알려주실 수 있나요?', '2024-02-25', 'N', 'Y');
 
 INSERT INTO TB_QNA(QNA_NO, QNA_TYPE, QNA_WRITER, QNA_TITLE, QNA_CONTENT, QNA_CREATE_DATE, QNA_ANSWER_STATUS, QNA_STATUS) 
-VALUES(SEQ_QNA_NO.NEXTVAL, 1, 2, '프로젝트에 대해 더 자세히 알고 싶습니다', '추가 정보를 제공해주실 수 있나요?', '2020-03-15', 'N', 'Y');
+VALUES(SEQ_QNA_NO.NEXTVAL, 1, 2, '프로젝트에 대해 더 자세히 알고 싶습니다', '추가 정보를 제공해주실 수 있나요?', '2024-02-26', 'N', 'Y');
 --------------------------------------------------
 ----------------- PROJECT 관련 --------------------	
 --------------------------------------------------
@@ -435,22 +450,22 @@ CREATE SEQUENCE SEQ_LIKES_NO
 NOCACHE;
 
 INSERT INTO TB_LIKES(LIKES_USER_NO, LIKES_PROJECT_NO, LIKES_CREATE_DATE, LIKES_STATUS) 
-VALUES(2, 1000, '2020-03-11', 'Y');
+VALUES(2, 1000, '2024-02-26', 'Y');
 
 INSERT INTO TB_LIKES(LIKES_USER_NO, LIKES_PROJECT_NO, LIKES_CREATE_DATE, LIKES_STATUS) 
-VALUES(2, 1001, '2020-03-12', 'Y');
+VALUES(2, 1001, '2024-02-26', 'Y');
 
 INSERT INTO TB_LIKES(LIKES_USER_NO, LIKES_PROJECT_NO, LIKES_CREATE_DATE, LIKES_STATUS) 
-VALUES(4, 1000, '2020-03-15', 'Y');
+VALUES(4, 1000, '2024-02-27', 'Y');
 
 INSERT INTO TB_LIKES(LIKES_USER_NO, LIKES_PROJECT_NO, LIKES_CREATE_DATE, LIKES_STATUS) 
-VALUES(3, 1001, '2020-03-15', 'Y');
+VALUES(3, 1001, '2024-02-27', 'Y');
 
 INSERT INTO TB_LIKES(LIKES_USER_NO, LIKES_PROJECT_NO, LIKES_CREATE_DATE, LIKES_STATUS) 
-VALUES(2, 1003, '2020-03-16', 'Y');
+VALUES(2, 1003, '2024-02-28', 'Y');
 
 INSERT INTO TB_LIKES(LIKES_USER_NO, LIKES_PROJECT_NO, LIKES_CREATE_DATE, LIKES_STATUS) 
-VALUES(2, 1002, '2020-03-16', 'Y');
+VALUES(2, 1002, '2024-03-01', 'Y');
 --------------------------------------------------
 ------------------ FILE 관련 ----------------------	
 --------------------------------------------------

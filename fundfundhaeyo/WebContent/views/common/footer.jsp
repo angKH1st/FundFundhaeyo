@@ -30,7 +30,7 @@
 		                    <button id="btn-open-modal3" class="btn-open-modal">프로젝트 등록 심사 기준</button>
 		                </div>
 		                <div class="ffh_footer_top_left5 fl">
-		                	<a onclick="moveToHelpCenter();">고객센터</a>
+		                	<a onclick="moveToHelpCenter();">고객지원</a>
 		                </div>
 		            </div>
 		            <div class="ffh_footer_top_middle fl">

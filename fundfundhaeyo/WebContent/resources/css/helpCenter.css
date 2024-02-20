@@ -8,4 +8,9 @@
 /* 메인 영역 시작 */
 .help_center_main{height: 80%; border:1px solid blue;}
 
+/* 상단 div 쇼/노쇼 조절용 */
+.btn-a-div, .btn-b-div, .btn-c-div, .btn-d-div {
+    display: none;
+}
+
 /* 메인 영역 끝 */

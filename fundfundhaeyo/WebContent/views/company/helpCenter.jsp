@@ -12,11 +12,26 @@
 	
 	<div class="help_center_outer">
 		<div class="blank_top"><%-- 여백 --%></div>
+		
 		<div class="help_center_main">
-			TBU
+		
+			<div class="btn-a">공지사항</div>
+			<div class="btn-b">FAQ</div>
+			<div class="btn-c">Q&A</div>
+			<div class="btn-d">펀딩 가이드</div>
+			
+			<div class="btn-a-div">A 클래스 div</div>
+			<div class="btn-b-div">B 클래스 div</div>
+			<div class="btn-c-div">B 클래스 div</div>
+			<div class="btn-d-div">B 클래스 div</div>
+		
+			
+			
 	    </div>
+	    
 	    <div class="blank_bottom"><%-- 여백 --%></div>
     </div>
+    
 	<%@ include file="../common/footer.jsp" %>
 </body>
 </html>

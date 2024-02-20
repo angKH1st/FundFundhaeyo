@@ -110,7 +110,6 @@
     margin-top: 20px;
     border-radius: 2px;
     border-bottom: solid 2px #2178ff;
-   
 }
 .login-input-container .login-input-wrap i{
     color: #2178ff;
@@ -119,13 +118,13 @@
 
 .login-input-container .login-input-wrap input{
     background: none;
-   
     border: none;
     line-height: 45px;
     padding-left:10px;
     width:267px;
 }
 .login-input-container .login-input-wrap input:focus{
+	border: none;
     outline: none;
 }
 .login-btn-wrap{
@@ -140,9 +139,8 @@
     color:white;
     border: 0;
     border-radius: 4px;
-
     background: rgb(105,163,255);
-background: linear-gradient(162deg, rgba(105,163,255,1) 0%, rgba(43,125,254,1) 50%, rgba(43,125,254,1) 100%);
+	background: linear-gradient(162deg, rgba(105,163,255,1) 0%, rgba(43,125,254,1) 50%, rgba(43,125,254,1) 100%);
 }
 .login-btn-wrap a{
     margin-top:10px;

@@ -17,7 +17,8 @@
 			
 			<div class="mypage_left_area fl">
 				<div class="mypage_left_top" align="center">
-					TBU : 프로필
+					<div>TBU : 프로필</div>
+					<div><i class="fa-solid fa-gear fa-lg"></i></div>
 				</div>
 				<div class="mypage_left_content">
 					<pre>TBU : 리스트</pre>
