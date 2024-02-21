@@ -72,7 +72,7 @@
 						<div class="ffh_content_top_left2_all fl">
 							<div class="ffh_content_top_left2_p1_row1 pr1"><%-- 여백 --%></div>
 							<div class="ffh_content_top_left2_p1_row2 pr2">
-								<a href="#"><img src="resources/image/temp2.jpg" alt="" width="200px" height="180px"></a>
+								<a href="#"><img src="resources/image/temp2.jpg" alt="" width="180px" height="180px"></a>
 							</div>
 							<div class="ffh_content_top_left2_p1_row3 pr3">
 								<div class="pr3_r1"><a href="#" class="pca">언더웨어</a></div>
@@ -86,7 +86,7 @@
 						<div class="ffh_content_top_left2_all fl">
 							<div class="ffh_content_top_left2_p1_row1 pr1"><%-- 여백 --%></div>
 							<div class="ffh_content_top_left2_p1_row2 pr2">
-								<a href="#"><img src="resources/image/temp2.jpg" alt="" width="200px" height="180px"></a>
+								<a href="#"><img src="resources/image/temp2.jpg" alt="" width="180px" height="180px"></a>
 							</div>
 							<div class="ffh_content_top_left2_p1_row3 pr3">
 								<div class="pr3_r1"><a href="#" class="pca">언더웨어</a></div>
@@ -100,7 +100,7 @@
 						<div class="ffh_content_top_left2_all fl">
 							<div class="ffh_content_top_left2_p1_row1 pr1"><%-- 여백 --%></div>
 							<div class="ffh_content_top_left2_p1_row2 pr2">
-								<a href="#"><img src="resources/image/temp2.jpg" alt="" width="200px" height="180px"></a>
+								<a href="#"><img src="resources/image/temp2.jpg" alt="" width="180px" height="180px"></a>
 							</div>
 							<div class="ffh_content_top_left2_p1_row3 pr3">
 								<div class="pr3_r1"><a href="#" class="pca">언더웨어</a></div>
@@ -114,7 +114,7 @@
 						<div class="ffh_content_top_left2_all fl">
 							<div class="ffh_content_top_left2_p1_row1 pr1"><%-- 여백 --%></div>
 							<div class="ffh_content_top_left2_p1_row2 pr2">
-								<a href="#"><img src="resources/image/temp2.jpg" alt="" width="200px" height="180px"></a>
+								<a href="#"><img src="resources/image/temp2.jpg" alt="" width="180px" height="180px"></a>
 							</div>
 							<div class="ffh_content_top_left2_p1_row3 pr3">
 								<div class="pr3_r1"><a href="#" class="pca">언더웨어</a></div>
@@ -128,7 +128,7 @@
 						<div class="ffh_content_top_left2_all fl">
 							<div class="ffh_content_top_left2_p1_row1 pr1"><%-- 여백 --%></div>
 							<div class="ffh_content_top_left2_p1_row2 pr2">
-								<a href="#"><img src="resources/image/temp2.jpg" alt="" width="200px" height="180px"></a>
+								<a href="#"><img src="resources/image/temp2.jpg" alt="" width="180px" height="180px"></a>
 							</div>
 							<div class="ffh_content_top_left2_p1_row3 pr3">
 								<div class="pr3_r1"><a href="#" class="pca">언더웨어</a></div>
@@ -142,7 +142,7 @@
 						<div class="ffh_content_top_left2_all fl">
 							<div class="ffh_content_top_left2_p1_row1 pr1"><%-- 여백 --%></div>
 							<div class="ffh_content_top_left2_p1_row2 pr2">
-								<a href="#"><img src="resources/image/temp2.jpg" alt="" width="200px" height="180px"></a>
+								<a href="#"><img src="resources/image/temp2.jpg" alt="" width="180px" height="180px"></a>
 							</div>
 							<div class="ffh_content_top_left2_p1_row3 pr3">
 								<div class="pr3_r1"><a href="#" class="pca">언더웨어</a></div>
@@ -156,7 +156,7 @@
 						<div class="ffh_content_top_left2_all fl">
 							<div class="ffh_content_top_left2_p1_row1 pr1"><%-- 여백 --%></div>
 							<div class="ffh_content_top_left2_p1_row2 pr2">
-								<a href="#"><img src="resources/image/temp2.jpg" alt="" width="200px" height="180px"></a>
+								<a href="#"><img src="resources/image/temp2.jpg" alt="" width="180px" height="180px"></a>
 							</div>
 							<div class="ffh_content_top_left2_p1_row3 pr3">
 								<div class="pr3_r1"><a href="#" class="pca">언더웨어</a></div>
@@ -170,7 +170,7 @@
 						<div class="ffh_content_top_left2_all fl">
 							<div class="ffh_content_top_left2_p1_row1 pr1"><%-- 여백 --%></div>
 							<div class="ffh_content_top_left2_p1_row2 pr2">
-								<a href="#"><img src="resources/image/temp2.jpg" alt="" width="200px" height="180px"></a>
+								<a href="#"><img src="resources/image/temp2.jpg" alt="" width="180px" height="180px"></a>
 							</div>
 							<div class="ffh_content_top_left2_p1_row3 pr3">
 								<div class="pr3_r1"><a href="#" class="pca">언더웨어</a></div>

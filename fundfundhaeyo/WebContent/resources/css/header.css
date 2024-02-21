@@ -22,7 +22,7 @@ html {overflow-y: scroll;}
 .fl{float: left;}
 
 /* 전체 레이아웃 */
-.ffh_wrap{width: 100%; margin: auto; padding: 0 250px;}
+.ffh_wrap{width: 100%; margin: auto; padding: 0 300px;}
 
 /* 전체 가로 */
 .ffh_wrap>div{width: 100%;}
@@ -31,9 +31,9 @@ html {overflow-y: scroll;}
 .ffh_header{height: 7%; position: fixed; top: 0; left: 0; right: 0; background-color: white; z-index: 1000;}
 /* ============================ 헤드 시작 ============================ */
 .ffh_header>div{height: 100%;}
-.ffh_header_center{width: 100%; padding: 0 250px;}
-.ffh_header_center_left{width: 70%; height: 100%;}
-.ffh_header_center_right{width: 30%; height: 100%;}
+.ffh_header_center{width: 100%; padding: 0 300px;}
+.ffh_header_center_left{width: 66%; height: 100%;}
+.ffh_header_center_right{width: 34%; height: 100%;}
 
 .ffh_header_center1{height: 50%;}
 .ffh_header_center2{height: 50%;}
@@ -54,8 +54,8 @@ html {overflow-y: scroll;}
     background-size: contain;
     background-repeat: no-repeat;
 }
-.ffh_header_center_left1{width: 20%;}
-.ffh_header_center_left2{width: 4%;}
+.ffh_header_center_left1{width: 22%;}
+.ffh_header_center_left2{width: 5%;}
 /*검은색 막대 바*/
 .bottom-bar {
     display: none;
@@ -69,12 +69,12 @@ html {overflow-y: scroll;}
 }
 .active .bottom-bar {display: block;}
 
-.ffh_header_center_left3{width: 5%;}
-.ffh_header_center_left4{width: 8%;}
-.ffh_header_center_left5{width: 5%;}
-.ffh_header_center_left6{width: 5%;}
-.ffh_header_center_left7{width: 8%;}
-.ffh_header_center_left8{width: 45%;}
+.ffh_header_center_left3{width: 6%;}
+.ffh_header_center_left4{width: 9%;}
+.ffh_header_center_left5{width: 6%;}
+.ffh_header_center_left6{width: 6%;}
+.ffh_header_center_left7{width: 9%;}
+.ffh_header_center_left8{width: 37%;}
 
 .ffh_header_center_right>div{height: 100%;}
 .ffh_header_center_right1{width: 29%;}

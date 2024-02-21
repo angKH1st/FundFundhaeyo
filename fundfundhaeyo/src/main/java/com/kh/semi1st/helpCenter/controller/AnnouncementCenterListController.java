@@ -1,4 +1,4 @@
-package com.kh.semi1st.company.controller;
+package com.kh.semi1st.helpCenter.controller;
 
 import java.io.IOException;
 import java.util.ArrayList;
