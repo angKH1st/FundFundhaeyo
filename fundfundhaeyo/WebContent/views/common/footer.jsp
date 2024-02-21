@@ -41,17 +41,16 @@
 		            </div>
 		        </div>
 		        <div class="ffh_footer_middle fl">
-		            <p class="p1 font_sejong_outer" style="font-size:13px;">
-		            	회사명 : (주)KH세미프로젝트_뻔뻔해요 &nbsp;&nbsp;|&nbsp;&nbsp; 
-		            	주소 : 서울특별시 강남구 테헤란로14길 6 남도빌딩 3F &nbsp;&nbsp;|&nbsp;&nbsp; 
-		            	대표 : 김시연 &nbsp;&nbsp;|&nbsp;&nbsp; 
-		            	사업자등록번호 : KH-SEMI-FFHY &nbsp;&nbsp;|&nbsp;&nbsp; 
-		            	통신판매업 신고번호 : 2024-서울서초-뻔뻔하조 <br>
-						대표번호 : 02-1234-FFHY &nbsp;&nbsp;|&nbsp;&nbsp;
-						메일주소 : khproject1st@gmail.com <br>
-					</p>
-		            <p class="p2 font_outer" style="font-size:15px; margin: 10px 0;">뻔뻔해요는 프로젝트의 당사자가 아니며, 직접적인 통신판매를 진행하지 않습니다. 프로젝트의 완수 및 선물제공의 책임은 해당 프로젝트의 창작자에게 있으며, 프로젝트와 관련하여 후원자와 발생하는 법적 분쟁에 대한 책임은 해당 창작자가 부담합니다.</p>
-		            <p class="p3 font_outer" style="font-size:13px; margin: 10px 0; text-align: center;">Copyright © 2024 FundFundhaeyo Institute All Right Reserved</p>
+		        	<div class="ffh_footer_middle_row1 font_sejong_outer">
+		        		<div class="ffh_footer_middle_row1_col1 fl">
+			            	<br><br><br><br><br><br><br><br>
+						</div>
+						<div class="ffh_footer_middle_row1_col2 fl">
+							<br><br>TBU<br><br><br><br><br><br>
+						</div>
+		        	</div>
+		        	<div class="ffh_footer_middle_row2 font_outer"><p>뻔뻔해요는 프로젝트의 당사자가 아니며, 직접적인 통신판매를 진행하지 않습니다. 프로젝트의 완수 및 선물제공의 책임은 해당 프로젝트의 창작자에게 있으며, 프로젝트와 관련하여 후원자와 발생하는 법적 분쟁에 대한 책임은 해당 창작자가 부담합니다.</p></div>
+		        	<div class="ffh_footer_middle_row3 font_outer"><p style="text-align: center;">Copyright © 2024 FundFundhaeyo Institute All Right Reserved</p></div>
 		        </div>
 		    </div>
 	    </div>
