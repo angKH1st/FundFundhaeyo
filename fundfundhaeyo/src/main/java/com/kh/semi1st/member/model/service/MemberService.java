@@ -30,7 +30,7 @@ public class MemberService {
 		if(result > 0) {
 			commit(conn);
 		}else {
-			close(conn);
+			rollback(conn);
 		}
 		
 		close(conn);
