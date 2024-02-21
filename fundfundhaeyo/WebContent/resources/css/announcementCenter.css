@@ -11,7 +11,7 @@
 .announcement_center_main_top{height: 7%;}
 .announcement_center_main_navi{height: 4%; border-bottom: 2px solid lightgray;}
 .announcement_center_main_select{height: 18%;}
-.announcement_center_main_content{height: 61%;}
+.announcement_center_main_content{height: 61%; padding: 20px;}
 .announcement_center_main_bottom{height: 10%;}
 
 .announcement_center_main_top>div{width: 100%;}

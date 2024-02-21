@@ -1,12 +1,12 @@
 @charset "UTF-8";
 /* 기본 셋업 */
-.member_enroll_agreement_form_outer{width:100%; height: 1300px; padding: 0 250px; margin: auto;}
+.member_enroll_agreement_form_outer{width:100%; height: 1300px; padding: 0 300px; margin: auto;}
 .member_enroll_agreement_form_outer>div{width:100%;}
-.blank_top{height: 15%;}
+.blank_top{height: 5%;}
 .blank_bottom{height: 5%;}
 
 /* 메인 영역 시작 */
-.member_enroll_agreement_form_main{height: 80%;}
+.member_enroll_agreement_form_main{height: 90%;}
 
 .shadow{
     -webkit-box-shadow: 27px 43px 43px -26px rgba(89,89,89,0.39);
