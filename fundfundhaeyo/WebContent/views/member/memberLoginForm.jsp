@@ -21,8 +21,8 @@
 		                <div class="top-logo-wrap">
 		                    
 		                </div>
-		                <h1>나중에 제목 넣기 그럴싸한걸로다가?</h1>
-		                <p>뻔뻔하다 뻔뻔해 뻔뻔하다 뻔뻔해 뻔뻔하다 뻔뻔해 뻔뻔하다 뻔뻔해 뻔뻔하다 뻔뻔해 뻔뻔하다 뻔뻔해 뻔뻔하다 뻔뻔해 뻔뻔하다 뻔뻔해 뻔뻔하다 뻔뻔해 뻔뻔하다 뻔뻔해 뻔뻔하다 뻔뻔해 뻔뻔하다 뻔뻔해 </p>
+		                <h1 class="font_outer">개성이 모여 <br> 세상을 바꾸는 곳</h1>
+		                <p>아이디어를 가진 당신의 꿈을 현실로 만들어주는 <br> 크라우드펀딩 플랫폼</p>
 		            </div>
 		            <div class="login-form-right-side">
 		                <div class="login-top-wrap">
@@ -40,6 +40,7 @@
 		                    </div>
 		                </div>
 		                <div class="login-btn-wrap">
+		                	<br>
 		                    <button class="login-btn"  type="submit">로그인</button>
 		                    <a href="<%= contextPath %>/moveToMemberSearchIdPw.me">아이디/비밀번호 찾기</a>
 		                </div>
