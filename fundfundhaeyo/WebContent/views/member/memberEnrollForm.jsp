@@ -8,6 +8,7 @@
 <head>
 <meta charset="UTF-8">
 <title>뻔뻔해요</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <link rel="stylesheet" href="resources/css/memberEnrollForm.css">
 <script src="resources/js/memberEnrollForm.js"></script>
 </head>
@@ -29,7 +30,7 @@
 					<div class="enroll_input_frame">
 						<div class="enroll_input_frame_row1">
 							<div class="enroll_input_frame_row1_col1 fl"><b>아이디 *</b></div>
-							<div class="enroll_input_frame_row1_col2 fl">유효성 검사</div>
+							<div class="enroll_input_frame_row1_col2 fl"></div>
 						</div>
 						<div class="enroll_input_frame_row2"><input type="text" name="userId" required></div>
 					</div>
@@ -37,7 +38,7 @@
 					<div class="enroll_input_frame">
 						<div class="enroll_input_frame_row1">
 							<div class="enroll_input_frame_row1_col1 fl"><b>비밀번호 *</b></div>
-							<div class="enroll_input_frame_row1_col2 fl">유효성 검사</div>
+							<div class="enroll_input_frame_row1_col2 fl"></div>
 						</div>
 						<div class="enroll_input_frame_row2"><input type="password" name="userPwd" required></div>
 					</div>
@@ -45,7 +46,7 @@
 					<div class="enroll_input_frame">
 						<div class="enroll_input_frame_row1">
 							<div class="enroll_input_frame_row1_col1 fl"><b>비밀번호 확인 *</b></div>
-							<div class="enroll_input_frame_row1_col2 fl">유효성 검사</div>
+							<div class="enroll_input_frame_row1_col2 fl"></div>
 						</div>
 						<div class="enroll_input_frame_row2"><input type="password" required></div>
 					</div>
@@ -53,7 +54,7 @@
 					<div class="enroll_input_frame">
 						<div class="enroll_input_frame_row1">
 							<div class="enroll_input_frame_row1_col1 fl"><b>이름 *</b></div>
-							<div class="enroll_input_frame_row1_col2 fl">유효성 검사</div>
+							<div class="enroll_input_frame_row1_col2 fl"></div>
 						</div>
 						<div class="enroll_input_frame_row2"><input type="text" name="userName" required></div>
 					</div>
@@ -61,7 +62,7 @@
 					<div class="enroll_input_frame">
 						<div class="enroll_input_frame_row1">
 							<div class="enroll_input_frame_row1_col1 fl"><b>주민등록번호 *</b></div>
-							<div class="enroll_input_frame_row1_col2 fl">유효성 검사</div>
+							<div class="enroll_input_frame_row1_col2 fl"></div>
 						</div>
 						<div class="enroll_input_frame_row2"><input type="text" name="userSsn" required></div>
 					</div>
@@ -69,7 +70,7 @@
 					<div class="enroll_input_frame">
 						<div class="enroll_input_frame_row1">
 							<div class="enroll_input_frame_row1_col1 fl"><b>닉네임 *</b></div>
-							<div class="enroll_input_frame_row1_col2 fl">유효성 검사</div>
+							<div class="enroll_input_frame_row1_col2 fl"></div>
 						</div>
 						<div class="enroll_input_frame_row2"><input type="text" name="nickname" required></div>
 					</div>
@@ -77,7 +78,7 @@
 					<div class="enroll_input_frame">
 						<div class="enroll_input_frame_row1">
 							<div class="enroll_input_frame_row1_col1 fl"><b>전화번호 *</b></div>
-							<div class="enroll_input_frame_row1_col2 fl">유효성 검사</div>
+							<div class="enroll_input_frame_row1_col2 fl"></div>
 						</div>
 						<div class="enroll_input_frame_row2"><input type="text" name="phone" required></div>
 					</div>
@@ -85,7 +86,7 @@
 					<div class="enroll_input_frame">
 						<div class="enroll_input_frame_row1">
 							<div class="enroll_input_frame_row1_col1 fl"><b>이메일 *</b></div>
-							<div class="enroll_input_frame_row1_col2 fl">유효성 검사</div>
+							<div class="enroll_input_frame_row1_col2 fl"></div>
 						</div>
 						<div class="enroll_input_frame_row2 enroll_input_frame_row2_email">
 							<div class="enroll_input_email_header fl"><input type="text" name="emailHead" required style="height: 35px;"></div>
@@ -105,7 +106,7 @@
 					<div class="enroll_input_frame" style="margin-top: 15px;">
 						<div class="enroll_input_frame_row1">
 							<div class="enroll_input_frame_row1_col1 fl"><b>주소 *</b></div>
-							<div class="enroll_input_frame_row1_col2 fl">유효성 검사</div>
+							<div class="enroll_input_frame_row1_col2 fl"></div>
 						</div>
 						<div class="enroll_input_frame_row2"><input type="text" name="address" required></div>
 					</div>
