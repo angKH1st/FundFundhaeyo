@@ -6,7 +6,6 @@
 <meta charset="UTF-8">
 <title>뻔뻔해요</title>
 <link rel="stylesheet" href="resources/css/memberSearchIdPwForm.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="resources/js/memberSearchIdPwForm.js"></script>
 </head>
 <body>
