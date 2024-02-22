@@ -28,7 +28,7 @@
 	
 	<entry key="insertMember">
 		INSERT
-		  INTO MEMBER
+		  INTO TB_MEMBER
 		  (
 		    USER_NO
 		  , USER_ID
@@ -43,7 +43,7 @@
 		  )
 		  VALUES
 		  (
-		    SEQ_UNO.NEXTVAL
+		    SEQ_USER_NO.NEXTVAL
 		  , ?
 		  , ?
 		  , ?
