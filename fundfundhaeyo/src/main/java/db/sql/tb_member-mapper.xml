@@ -56,4 +56,11 @@
 		  )
 	</entry>
 	
+	<entry key="idCheck">
+		SELECT
+		       COUNT(*) "COUNT"
+		  FROM TB_MEMBER
+		 WHERE USER_ID = ?
+	</entry>
+	
 </properties>

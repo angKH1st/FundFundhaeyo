@@ -106,4 +106,36 @@ public class MemberDao {
 		
 		return result;
 	}
+	
+	/** 아이디를 입력받아 중복확인을 처리하는 메소드
+	 * @param conn
+	 * @param checkId
+	 * @return
+	 */
+	public int idCheck(Connection conn, String checkId) {
+		int count = 0;
+		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+		String sql = prop.getProperty("idCheck");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setString(1, checkId);
+			
+			rset = pstmt.executeQuery();
+			
+			if(rset.next()) {
+				count = rset.getInt("count");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		
+		return count;
+	}
+	
 }

@@ -30,7 +30,7 @@
 					<div class="enroll_input_frame">
 						<div class="enroll_input_frame_row1">
 							<div class="enroll_input_frame_row1_col1 fl"><b>아이디 *</b></div>
-							<div class="enroll_input_frame_row1_col2 fl"></div>
+							<div class="enroll_input_frame_row1_col2 fl idInspection"></div>
 						</div>
 						<div class="enroll_input_frame_row2"><input type="text" name="userId" required></div>
 					</div>
@@ -38,7 +38,7 @@
 					<div class="enroll_input_frame">
 						<div class="enroll_input_frame_row1">
 							<div class="enroll_input_frame_row1_col1 fl"><b>비밀번호 *</b></div>
-							<div class="enroll_input_frame_row1_col2 fl"></div>
+							<div class="enroll_input_frame_row1_col2 fl pwdInspection"></div>
 						</div>
 						<div class="enroll_input_frame_row2"><input type="password" name="userPwd" required></div>
 					</div>
@@ -46,15 +46,15 @@
 					<div class="enroll_input_frame">
 						<div class="enroll_input_frame_row1">
 							<div class="enroll_input_frame_row1_col1 fl"><b>비밀번호 확인 *</b></div>
-							<div class="enroll_input_frame_row1_col2 fl"></div>
+							<div class="enroll_input_frame_row1_col2 fl pwdConfirmInspection"></div>
 						</div>
-						<div class="enroll_input_frame_row2"><input type="password" required></div>
+						<div class="enroll_input_frame_row2"><input type="password" name="userPwdConfirm" required></div>
 					</div>
 					
 					<div class="enroll_input_frame">
 						<div class="enroll_input_frame_row1">
 							<div class="enroll_input_frame_row1_col1 fl"><b>이름 *</b></div>
-							<div class="enroll_input_frame_row1_col2 fl"></div>
+							<div class="enroll_input_frame_row1_col2 fl nameInspection"></div>
 						</div>
 						<div class="enroll_input_frame_row2"><input type="text" name="userName" required></div>
 					</div>
@@ -62,7 +62,7 @@
 					<div class="enroll_input_frame">
 						<div class="enroll_input_frame_row1">
 							<div class="enroll_input_frame_row1_col1 fl"><b>주민등록번호 *</b></div>
-							<div class="enroll_input_frame_row1_col2 fl"></div>
+							<div class="enroll_input_frame_row1_col2 fl ssnInspection"></div>
 						</div>
 						<div class="enroll_input_frame_row2"><input type="text" name="userSsn" required></div>
 					</div>
@@ -70,7 +70,7 @@
 					<div class="enroll_input_frame">
 						<div class="enroll_input_frame_row1">
 							<div class="enroll_input_frame_row1_col1 fl"><b>닉네임 *</b></div>
-							<div class="enroll_input_frame_row1_col2 fl"></div>
+							<div class="enroll_input_frame_row1_col2 fl nicknameInspection"></div>
 						</div>
 						<div class="enroll_input_frame_row2"><input type="text" name="nickname" required></div>
 					</div>
@@ -78,7 +78,7 @@
 					<div class="enroll_input_frame">
 						<div class="enroll_input_frame_row1">
 							<div class="enroll_input_frame_row1_col1 fl"><b>전화번호 *</b></div>
-							<div class="enroll_input_frame_row1_col2 fl"></div>
+							<div class="enroll_input_frame_row1_col2 fl phoneInspection"></div>
 						</div>
 						<div class="enroll_input_frame_row2"><input type="text" name="phone" required></div>
 					</div>
