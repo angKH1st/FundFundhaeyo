@@ -2,16 +2,45 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 	<entry key="selectAnnouncementList">
-	SELECT
-	       ANNOUNCEMENT_NO
-	     , ANNOUNCEMENT_TITLE
-	     , USER_NICKNAME
-	     , ANNOUNCEMENT_COUNT
-	     , ANNOUNCEMENT_CREATE_DATE
-	  FROM TB_ANNOUNCEMENT
-	  JOIN TB_MEMBER ON (USER_NO = ANNOUNCEMENT_WRITER)
-	 WHERE ANNOUNCEMENT_STATUS = 'Y'
-	 ORDER
-	    BY ANNOUNCEMENT_NO DESC
+		SELECT
+		       ANNOUNCEMENT_NO
+		     , ANNOUNCEMENT_TITLE
+		     , USER_NICKNAME
+		     , ANNOUNCEMENT_COUNT
+		     , ANNOUNCEMENT_CREATE_DATE
+		  FROM TB_ANNOUNCEMENT
+		  JOIN TB_MEMBER ON (USER_NO = ANNOUNCEMENT_WRITER)
+		 WHERE ANNOUNCEMENT_STATUS = 'Y'
+		 ORDER
+		    BY ANNOUNCEMENT_NO DESC
 	</entry>
+	
+	<entry key="selectAnnouncementLimitList">
+		SELECT *
+		  FROM (
+		        SELECT ROWNUM RNUM, E.*
+		          FROM (
+		                SELECT
+		                       ANNOUNCEMENT_NO
+		                     , ANNOUNCEMENT_TITLE
+		                     , USER_NICKNAME
+		                     , ANNOUNCEMENT_COUNT
+		                     , ANNOUNCEMENT_CREATE_DATE
+		                  FROM TB_ANNOUNCEMENT
+		                  JOIN TB_MEMBER ON (USER_NO = ANNOUNCEMENT_WRITER)
+		                 WHERE ANNOUNCEMENT_STATUS = 'Y'
+		                 ORDER
+		                    BY ANNOUNCEMENT_NO DESC
+		                 ) E 
+		       ) 
+		 WHERE RNUM BETWEEN ? AND ?
+	</entry>
+	
+	<entry key="selectAnnouncementListCount">
+		SELECT
+		       COUNT(*) count
+		  FROM TB_ANNOUNCEMENT
+		 WHERE ANNOUNCEMENT_STATUS = 'Y'
+	</entry>
+	
 </properties>

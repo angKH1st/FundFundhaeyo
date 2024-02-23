@@ -64,7 +64,7 @@
       	
       	<%-- 고객센터 페이지 이동 --%>
       	function moveToHelpCenter(){
-      		location.href = "<%= request.getContextPath() %>/announcement.hp";
+      		location.href = "<%= request.getContextPath() %>/announcement.hp?cpage=1";
       	}
     </script>
     <%-- ============================ 푸터바 모달 시작 ============================ --%>

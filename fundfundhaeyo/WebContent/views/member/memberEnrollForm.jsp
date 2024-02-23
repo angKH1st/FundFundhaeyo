@@ -32,7 +32,7 @@
 							<div class="enroll_input_frame_row1_col1 fl"><b>아이디 *</b></div>
 							<div class="enroll_input_frame_row1_col2 fl idInspection allClearAlert"></div>
 						</div>
-						<div class="enroll_input_frame_row2"><input class=".allClearInput" type="text" name="userId" required></div>
+						<div class="enroll_input_frame_row2"><input class=".allClearInput" type="text" name="userId" placeholder="아이디" required></div>
 					</div>
 				
 					<div class="enroll_input_frame">
@@ -40,7 +40,7 @@
 							<div class="enroll_input_frame_row1_col1 fl"><b>비밀번호 *</b></div>
 							<div class="enroll_input_frame_row1_col2 fl pwdInspection allClearAlert"></div>
 						</div>
-						<div class="enroll_input_frame_row2"><input class=".allClearInput" type="password" name="userPwd" required></div>
+						<div class="enroll_input_frame_row2"><input class=".allClearInput" type="password" name="userPwd" placeholder="비밀번호" required></div>
 					</div>
 					
 					<div class="enroll_input_frame">
@@ -48,7 +48,7 @@
 							<div class="enroll_input_frame_row1_col1 fl"><b>비밀번호 확인 *</b></div>
 							<div class="enroll_input_frame_row1_col2 fl pwdConfirmInspection allClearAlert"></div>
 						</div>
-						<div class="enroll_input_frame_row2"><input class=".allClearInput" type="password" name="userPwdConfirm" required></div>
+						<div class="enroll_input_frame_row2"><input class=".allClearInput" type="password" name="userPwdConfirm" placeholder="비밀번호 확인" required></div>
 					</div>
 					
 					<div class="enroll_input_frame">
@@ -56,7 +56,7 @@
 							<div class="enroll_input_frame_row1_col1 fl"><b>이름 *</b></div>
 							<div class="enroll_input_frame_row1_col2 fl nameInspection allClearAlert"></div>
 						</div>
-						<div class="enroll_input_frame_row2"><input class=".allClearInput" type="text" name="userName" required></div>
+						<div class="enroll_input_frame_row2"><input class=".allClearInput" type="text" name="userName" placeholder="이름" required></div>
 					</div>
 					
 					<div class="enroll_input_frame">
@@ -64,7 +64,7 @@
 							<div class="enroll_input_frame_row1_col1 fl"><b>주민등록번호 *</b></div>
 							<div class="enroll_input_frame_row1_col2 fl ssnInspection allClearAlert"></div>
 						</div>
-						<div class="enroll_input_frame_row2"><input class=".allClearInput" type="text" name="userSsn" required></div>
+						<div class="enroll_input_frame_row2"><input class=".allClearInput" type="text" name="userSsn" placeholder="주민등록번호 '-'포함" required></div>
 					</div>
 					
 					<div class="enroll_input_frame">
@@ -72,7 +72,7 @@
 							<div class="enroll_input_frame_row1_col1 fl"><b>닉네임 *</b></div>
 							<div class="enroll_input_frame_row1_col2 fl nicknameInspection allClearAlert"></div>
 						</div>
-						<div class="enroll_input_frame_row2"><input class=".allClearInput" type="text" name="nickname" required></div>
+						<div class="enroll_input_frame_row2"><input class=".allClearInput" type="text" name="nickname" placeholder="닉네임" required></div>
 					</div>
 					
 					<div class="enroll_input_frame">
@@ -80,7 +80,7 @@
 							<div class="enroll_input_frame_row1_col1 fl"><b>전화번호 *</b></div>
 							<div class="enroll_input_frame_row1_col2 fl phoneInspection allClearAlert"></div>
 						</div>
-						<div class="enroll_input_frame_row2"><input class=".allClearInput" type="text" name="phone" required></div>
+						<div class="enroll_input_frame_row2"><input class=".allClearInput" type="text" name="phone" placeholder="전화번호 '-'포함" required></div>
 					</div>
 					
 					<div class="enroll_input_frame">
@@ -89,7 +89,7 @@
 							<div class="enroll_input_frame_row1_col2 fl emailInspection allClearAlert"></div>
 						</div>
 						<div class="enroll_input_frame_row2 enroll_input_frame_row2_email">
-							<div class="enroll_input_email_header fl emailHeader"><input class="allClearInput" type="text" name="emailHead" required style="height: 35px;"></div>
+							<div class="enroll_input_email_header fl emailHeader"><input class="allClearInput" type="text" name="emailHead" placeholder="이메일" required style="height: 35px;"></div>
 							<div class="enroll_input_email_body fl">@</div>
 							<div class="enroll_input_email_footer fl emailFooter"><input class="allClearInput" type="text" name="emailBody" class="domain-txt" style="height: 35px;"></div>
 							<div class="enroll_input_email_footer_select fl">
@@ -108,7 +108,7 @@
 							<div class="enroll_input_frame_row1_col1 fl"><b>주소 *</b></div>
 							<div class="enroll_input_frame_row1_col2 fl addressInspection allClearAlert"></div>
 						</div>
-						<div class="enroll_input_frame_row2"><input class=".allClearInput" type="text" name="address" required></div>
+						<div class="enroll_input_frame_row2"><input class=".allClearInput" type="text" name="address" placeholder="주소" required></div>
 					</div>
 					
 					<br><br>

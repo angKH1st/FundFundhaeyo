@@ -1,9 +1,17 @@
+<%@page import="com.kh.semi1st.common.model.vo.*"%>
 <%@page import="com.kh.semi1st.company.model.vo.*"%>
 <%@page import="java.util.*"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
+	PageInfo pi = (PageInfo)request.getAttribute("pi");
 	ArrayList<Announcement> list = (ArrayList<Announcement>)request.getAttribute("list");
+	// 공지 번호, 제목, 작성자, 조회수, 작성일
+
+	int currentPage = pi.getCurrentPage();
+	int startPage = pi.getStartPage();
+	int endPage = pi.getEndPage();
+	int maxPage = pi.getMaxPage();
 %>
 <!DOCTYPE html>
 <html>
@@ -40,14 +48,14 @@
 				검색기능 넣던가 하자
 			</div>
 			<div class="announcement_center_main_content">
-				<table class="announcement_list_area">
+				<table border=1 class="announcement_list_area">
 					<thead>
 						<tr>
-		                    <th>글번호</th>
-		                    <th width="400">글제목</th>
+		                    <th width="100">글번호</th>
+		                    <th>글제목</th>
 		                    <th width="100">작성자</th>
-		                    <th>조회수</th>
-		                    <th width="100">작성일</th>
+		                    <th width="100">조회수</th>
+		                    <th width="130">작성일</th>
                 		</tr>
 					</thead>
 					<tbody>
@@ -73,7 +81,24 @@
 					</tbody>					
 				</table>
 			</div>
-			<div class="announcement_center_main_bottom"></div>
+			
+			<div class="announcement_center_main_bottom">
+				<% if(currentPage != 1){ %>
+            		<button onclick="location.href='<%= contextPath %>/announcement.hp?cpage=<%= currentPage-1 %>'">&lt;</button>
+	        	<% } %>
+	        	
+	            <% for(int p = startPage; p <= endPage; p++){ %>
+	            	<% if(p == currentPage){ %>
+	            		<button disabled><%= p %></button>
+	            	<% }else{ %>
+	            		<button onclick="location.href='<%= contextPath %>/announcement.hp?cpage=<%= p %>'"><%= p %></button>
+	            	<% } %>
+	            <% } %>
+	            
+	            <% if(currentPage != maxPage){ %>
+	            	<button onclick="location.href='<%= contextPath %>/announcement.hp?cpage=<%= currentPage+1 %>'">&gt;</button>
+	            <% } %>
+			</div>
 			
 	    </div>
 	    
