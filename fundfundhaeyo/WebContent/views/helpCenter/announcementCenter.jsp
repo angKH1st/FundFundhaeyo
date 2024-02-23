@@ -82,6 +82,7 @@
 				</table>
 			</div>
 			
+			<%-- 페이징바 --%>
 			<div class="announcement_center_main_bottom">
 				<% if(currentPage != 1){ %>
             		<button onclick="location.href='<%= contextPath %>/announcement.hp?cpage=<%= currentPage-1 %>'">&lt;</button>
