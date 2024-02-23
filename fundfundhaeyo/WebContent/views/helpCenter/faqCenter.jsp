@@ -6,6 +6,7 @@
 <meta charset="UTF-8">
 <title>뻔뻔해요</title>
 <link rel="stylesheet" href="resources/css/faqCenter.css">
+<script src="resources/js/faqCenter.js" rel="javascript"></script>
 </head>
 <body>
 	<%@ include file="../common/header.jsp" %>
