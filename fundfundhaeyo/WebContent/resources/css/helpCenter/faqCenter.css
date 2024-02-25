@@ -27,7 +27,7 @@
 .faq_center_main_top_row2_bottom{width: 5%; margin: auto; border-top: 2px solid black;}
 
 .faq_center_main_navi>div{width: 25%; height: 100%; line-height:170%; font-size: 25px; font-weight: 600; text-align: center;}
-.faq_center_main_navi a{color: gray; text-decoration: none;}
+.faq_center_main_navi a{color: gray; text-decoration: none; display: block;}
 .faq_center_main_navi a:hover {text-decoration: none; color: lightskyblue;}
 
 /* 메인 영역 끝 */
