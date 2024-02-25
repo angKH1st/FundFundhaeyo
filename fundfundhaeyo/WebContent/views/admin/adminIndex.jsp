@@ -13,7 +13,15 @@
 	<%@ include file="common/adminHeader.jsp" %>
 	
     <div class="adm-content">
-	    <div class="adm-content-top"></div>
+	    <div class="adm-content-top">
+	    	<div class="adm-content-top-title fl"><h1>Dashboard</h1></div>
+	    	<div class="adm-content-top-blank fl"></div>
+	    	<div class="adm-content-top-root fl">
+	    		<div class="adm-content-top-root-first fl"><a href="<%= contextPath %>">Home</a></div>
+	    		<div class="adm-content-top-root-second fl">/</div>
+	    		<div class="adm-content-top-root-third fl">Dashboard</div>
+	    	</div>
+	    </div>
 	    <div class="adm-content-center"></div>
 	</div>
 	

@@ -16,4 +16,14 @@
 .adm-member-update-form-top{height: 55px; margin-bottom: 20px;}
 .adm-member-update-form-center{height: 1200px;}
 
+.adm-member-update-form-top>div{height: 100%;}
+.adm-member-update-form-top-title{width: 20%;}
+.adm-member-update-form-top-blank{width: 70%;}
+.adm-member-update-form-top-root{width: 10%;}
+
+.adm-member-update-form-top-root>div{height: 100%; line-height: 50px;}
+.adm-member-update-form-top-root-first{width: 49%; text-align: right; padding-right: 5px;}
+.adm-member-update-form-top-root-third{width: 49%; padding-left: 5px;}
+.adm-member-update-form-top-root-second{width: 2%;}
+
 div{border: 1px solid red;}

@@ -13,7 +13,15 @@
 	<%@ include file="../common/adminHeader.jsp" %>
 	
     <div class="adm-member-select-wrap">
-	    <div class="adm-member-select-top"></div>
+	    <div class="adm-member-select-top">
+	    	<div class="adm-member-select-top-title fl"><h1>회원정보조회</h1></div>
+	    	<div class="adm-member-select-top-blank fl"></div>
+	    	<div class="adm-member-select-top-root fl">
+	    		<div class="adm-member-select-top-root-first fl"><a href="<%= contextPath %>">Home</a></div>
+	    		<div class="adm-member-select-top-root-second fl">/</div>
+	    		<div class="adm-member-select-top-root-third fl">Member</div>
+	    	</div>
+	    </div>
 	    <div class="adm-member-select-center"></div>
 	</div>
 	

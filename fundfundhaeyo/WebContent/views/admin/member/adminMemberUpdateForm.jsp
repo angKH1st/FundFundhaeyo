@@ -13,7 +13,15 @@
 	<%@ include file="../common/adminHeader.jsp" %>
 	
     <div class="adm-member-update-form-wrap">
-	    <div class="adm-member-update-form-top"></div>
+	    <div class="adm-member-update-form-top">
+	    	<div class="adm-member-update-form-top-title fl"><h1>회원정보수정</h1></div>
+	    	<div class="adm-member-update-form-top-blank fl"></div>
+	    	<div class="adm-member-update-form-top-root fl">
+	    		<div class="adm-member-update-form-top-root-first fl"><a href="<%= contextPath %>">Home</a></div>
+	    		<div class="adm-member-update-form-top-root-second fl">/</div>
+	    		<div class="adm-member-update-form-top-root-third fl">Member</div>
+	    	</div>
+	    </div>
 	    <div class="adm-member-update-form-center"></div>
 	</div>
 	
