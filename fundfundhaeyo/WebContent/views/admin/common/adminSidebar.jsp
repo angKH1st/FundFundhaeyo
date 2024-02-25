@@ -25,7 +25,7 @@
 		            <a class="adm-sidebar-main-menu"><i class="fas fa-angle-up"></i> 회원 관리</a>
 		            <ul class="hidden">
 		                <li><a href="admSelect.me">회원정보조회</a></li>
-		                <li><a href="#">회원정보수정</a></li>
+		                <li><a href="admMoveToUpdate.me">회원정보수정</a></li>
 		                <li><a href="#">등급별 리워드</a></li>
 		            </ul>
 		        </li>

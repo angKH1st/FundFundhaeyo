@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+.adm-member-update-form-wrap {
+    position: relative;  /* 추가 */
+    width: calc(100% - 70px);  /* 컨텐츠의 초기 너비를 사이드바의 너비에 맞게 설정 */
+    height: 1500px;
+    padding: 20px;
+    left: 70px;  /* 헤더의 초기 위치를 사이드바의 너비에 맞게 설정 */
+    top: 55px;
+    transition: width 0.5s, left 0.5s;  /* 컨텐츠의 너비와 위치가 0.5초 동안 변하도록 설정 */
+    background-color: #f8f9fa;
+    overflow: auto;
+}
+
+.adm-member-update-form-wrap>div{width: 100%;}
+.adm-member-update-form-top{height: 55px; margin-bottom: 20px;}
+.adm-member-update-form-center{height: 1200px;}
+
+div{border: 1px solid red;}
