@@ -17,13 +17,13 @@ import com.kh.semi1st.member.model.vo.Member;
  * Servlet implementation class LoginController
  */
 @WebServlet("/login.me")
-public class LoginController extends HttpServlet {
+public class MemberLoginController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public LoginController() {
+    public MemberLoginController() {
         super();
         // TODO Auto-generated constructor stub
     }
