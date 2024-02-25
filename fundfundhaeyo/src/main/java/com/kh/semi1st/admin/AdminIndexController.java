@@ -1,8 +1,6 @@
-package com.kh.semi1st.member.controller;
+package com.kh.semi1st.admin;
 
 import java.io.IOException;
-
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -10,20 +8,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.kh.semi1st.member.model.service.MemberService;
 import com.kh.semi1st.member.model.vo.Member;
 
 /**
- * Servlet implementation class LoginController
+ * Servlet implementation class AdminIndexController
  */
-@WebServlet("/login.me")
-public class MemberLoginController extends HttpServlet {
+@WebServlet("/admin")
+public class AdminIndexController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public MemberLoginController() {
+    public AdminIndexController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -32,23 +29,14 @@ public class MemberLoginController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String userId = request.getParameter("userId");
-		String userPwd = request.getParameter("userPwd");
+		HttpSession session = request.getSession();
+	    Member loginUser = (Member) session.getAttribute("loginUser");
 		
-		Member loginUser = new MemberService().loginMember(userId, userPwd);
-		
-		if(loginUser != null) {
-			HttpSession session = request.getSession();
-			session.setAttribute("loginUser", loginUser);
-			
-			if(loginUser.getUserId().equals("admin")) {
-				response.sendRedirect(request.getContextPath() + "/admin");
-			}else {
-				response.sendRedirect(request.getContextPath());
-			}
-		}else {
-			// 추후에 로그인 실패 에러 페이지 추가 TBU
-		}
+	    if(loginUser != null && loginUser.getUserId().equals("admin")) {
+	    	request.getRequestDispatcher("views/admin/adminIndex.jsp").forward(request, response);
+	    }else {
+	    	// 로그인 정보가 없거나, 관리자가 아닌 경우 처리
+	    }
 	}
 
 	/**

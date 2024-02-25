@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+.adm-footer {
+    width: calc(100% - 70px);  /* 푸터의 초기 너비를 사이드바의 너비에 맞게 설정 */
+    height: 55px;
+    padding: 20px;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    left: 70px;  /* 푸터의 초기 위치를 사이드바의 너비에 맞게 설정 */
+    z-index: 1;
+    transition: left 0.5s, width 0.5s;  /* 푸터의 위치와 너비가 0.5초 동안 변하도록 설정 */
+    border-top: 0.5px solid lightgray;
+}
