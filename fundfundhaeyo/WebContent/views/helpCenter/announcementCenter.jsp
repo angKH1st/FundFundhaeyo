@@ -18,9 +18,9 @@
 <head>
 <meta charset="UTF-8">
 <title>뻔뻔해요</title>
-<link rel="stylesheet" href="resources/css/announcementCenter.css">
+<link rel="stylesheet" href="resources/css/helpCenter/announcementCenter.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="resources/js/announcementCenter.js" rel="javascript"></script>
+<script src="resources/js/helpCenter/announcementCenter.js" rel="javascript"></script>
 </head>
 <body>
 	<%@ include file="../common/header.jsp" %>

@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>뻔뻔해요</title>
-<link rel="stylesheet" href="resources/css/mypage.css">
+<link rel="stylesheet" href="resources/css/member/memberMypage.css">
 </head>
 <body>
 	<%@ include file="../common/header.jsp" %>

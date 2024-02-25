@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>뻔뻔해요</title>
-<link rel="stylesheet" href="resources/css/productSortRank.css">
+<link rel="stylesheet" href="resources/css/product/productSortRank.css">
 </head>
 <body>
 	<%@ include file="../common/header.jsp" %>

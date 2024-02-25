@@ -12,7 +12,7 @@ import com.kh.semi1st.member.model.service.MemberService;
 /**
  * Servlet implementation class MemberIdCheckController
  */
-@WebServlet("/memberIdCheck.me")
+@WebServlet("/idCheck.me")
 public class MemberIdCheckController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

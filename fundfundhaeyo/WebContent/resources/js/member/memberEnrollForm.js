@@ -52,7 +52,7 @@ $(document).ready(function() {
       }
 
       $.ajax({
-        url: '/fund/memberIdCheck.me', // 아이디 중복 검사 진행
+        url: '/fund/idCheck.me', // 아이디 중복 검사 진행
         type: 'GET',
         data: {checkId: checkId},
         success: function(result) {

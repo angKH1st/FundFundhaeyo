@@ -11,7 +11,7 @@
 <head>
 <meta charset="UTF-8">
 <title>뻔뻔해요</title>
-<link rel="stylesheet" href="resources/css/main.css">
+<link rel="stylesheet" href="resources/css/index.css">
 </head>
 <body>
 	<%@ include file="views/common/header.jsp" %>

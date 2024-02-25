@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>뻔뻔해요</title>
-<link rel="stylesheet" href="resources/css/memberLoginForm.css">
+<link rel="stylesheet" href="resources/css/member/memberLoginForm.css">
 </head>
 <body>
 	<%@ include file="../common/header.jsp" %>
@@ -27,7 +27,7 @@
 		            <div class="login-form-right-side">
 		                <div class="login-top-wrap">
 		                    <span>계정이 없으신가요?</span>
-		                    <button onclick="location.href='<%= contextPath %>/moveToMemberEnrollAgreement.me'" type="button" class="create-account-btn shadow-light">회원가입</button>
+		                    <button onclick="location.href='<%= contextPath %>/moveToEnrollAgreement.me'" type="button" class="create-account-btn shadow-light">회원가입</button>
 		                </div>
 		                <div class="login-input-container">
 		                    <div class="login-input-wrap input-id">
@@ -42,7 +42,7 @@
 		                <div class="login-btn-wrap">
 		                	<br>
 		                    <button class="login-btn"  type="submit">로그인</button>
-		                    <a href="<%= contextPath %>/moveToMemberSearchIdPw.me">아이디/비밀번호 찾기</a>
+		                    <a href="<%= contextPath %>/moveToSearchIdPw.me">아이디/비밀번호 찾기</a>
 		                </div>
 		                
 		                <br>

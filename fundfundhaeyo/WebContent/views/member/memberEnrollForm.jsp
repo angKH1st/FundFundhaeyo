@@ -9,8 +9,8 @@
 <meta charset="UTF-8">
 <title>뻔뻔해요</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<link rel="stylesheet" href="resources/css/memberEnrollForm.css">
-<script src="resources/js/memberEnrollForm.js"></script>
+<link rel="stylesheet" href="resources/css/member/memberEnrollForm.css">
+<script src="resources/js/member/memberEnrollForm.js"></script>
 </head>
 <body>
 	<%@ include file="../common/header.jsp" %>

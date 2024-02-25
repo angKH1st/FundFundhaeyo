@@ -5,8 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>뻔뻔해요</title>
-<link rel="stylesheet" href="resources/css/qnaCenter.css">
-<script src="resources/js/qnaCenter.js" rel="javascript"></script>
+<link rel="stylesheet" href="resources/css/helpCenter/qnaCenter.css">
+<script src="resources/js/helpCenter/qnaCenter.js" rel="javascript"></script>
 </head>
 <body>
 	<%@ include file="../common/header.jsp" %>

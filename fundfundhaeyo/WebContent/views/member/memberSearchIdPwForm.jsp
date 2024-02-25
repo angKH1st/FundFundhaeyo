@@ -5,8 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>뻔뻔해요</title>
-<link rel="stylesheet" href="resources/css/memberSearchIdPwForm.css">
-<script src="resources/js/memberSearchIdPwForm.js"></script>
+<link rel="stylesheet" href="resources/css/member/memberSearchIdPwForm.css">
+<script src="resources/js/member/memberSearchIdPwForm.js"></script>
 </head>
 <body>
 	<%@ include file="../common/header.jsp" %>
@@ -28,7 +28,7 @@
 		            <div class="search-id-pw-form-right-side">
 		                <div class="search-id-pw-top-wrap">
 		                    <span>계정이 없으신가요?</span>
-		                    <button onclick="location.href='<%= contextPath %>/moveToMemberEnrollAgreement.me'" type="button" class="create-account-btn shadow-light">회원가입</button>
+		                    <button onclick="location.href='<%= contextPath %>/moveToEnrollAgreement.me'" type="button" class="create-account-btn shadow-light">회원가입</button>
 		                </div>
 		                <div class="search-id-pw-input-container">
 		                    <div class="search-id-pw-input-wrap input-id">

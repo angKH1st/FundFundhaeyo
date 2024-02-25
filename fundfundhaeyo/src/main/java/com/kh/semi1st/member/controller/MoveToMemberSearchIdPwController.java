@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class MoveToMemberSearchIdPwController
  */
-@WebServlet("/moveToMemberSearchIdPw.me")
+@WebServlet("/moveToSearchIdPw.me")
 public class MoveToMemberSearchIdPwController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

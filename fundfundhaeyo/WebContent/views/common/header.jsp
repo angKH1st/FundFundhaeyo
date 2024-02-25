@@ -60,13 +60,13 @@
                         </div>
                         <div class="ffh_header_center_right fl">
                             <div class="ffh_header_center_right1 fl"><a href="<%= contextPath %>/moveToEnrollIntroduction.pr" class="heada headtext texthover">프로젝트 등록</a></div>
-                            <div class="ffh_header_center_right2 fl"><a href="#" class="heada" onclick="moveToProductSearch();"><i class="fa-solid fa-magnifying-glass fa-xl" style="display: flex; justify-content: center; line-height: 150%;"></i></a></div>
+                            <div class="ffh_header_center_right2 fl"><a href="#" class="heada" onclick="moveToSearch();"><i class="fa-solid fa-magnifying-glass fa-xl" style="display: flex; justify-content: center; line-height: 150%;"></i></a></div>
                             <% if(loginUser == null) {%>
                             <%-- 로그인 전 --%>
                             <div class="ffh_header_center_right3 fl"><%-- 여백 --%></div>
                             <div class="ffh_header_center_right4 fl"><%-- 여백 --%></div>
                             <div class="ffh_header_center_right5 fl"><%-- 여백 --%></div>
-                            <div class="ffh_header_center_right6 fl"><button class="btn" type=button onclick="moveToMemberLogin();">로그인/회원가입</button></div>
+                            <div class="ffh_header_center_right6 fl"><button class="btn" type=button onclick="moveToLogin();">로그인/회원가입</button></div>
                             <% }else { %>
                             <%-- 로그인 후 --%>
                             <div class="ffh_header_center_right3 fl"><a href="#" class="heada"><i class="fa-solid fa-heart fa-xl" style="color: #ff0000; line-height: 150%;"></i></a></div>
@@ -84,12 +84,12 @@
                             <% } %>
                         </div>
                         <script>
-                        	function moveToMemberLogin(){
-                        		location.href = "<%= contextPath %>/moveToMemberLogin.me";
+                        	function moveToLogin(){
+                        		location.href = "<%= contextPath %>/moveToLogin.me";
                         	}
                         	
-                        	function moveToProductSearch(){
-                        		location.href = "<%= contextPath %>/moveToProductSearch.pr";
+                        	function moveToSearch(){
+                        		location.href = "<%= contextPath %>/moveToSearch.pr";
                         	}
                         </script>
                     </div>

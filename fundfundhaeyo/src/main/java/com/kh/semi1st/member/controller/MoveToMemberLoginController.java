@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class MemberloginFromController
  */
-@WebServlet("/moveToMemberLogin.me")
+@WebServlet("/moveToLogin.me")
 public class MoveToMemberLoginController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
