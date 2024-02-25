@@ -6,8 +6,8 @@
 <meta charset="UTF-8">
 <title>뻔뻔해요</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<link rel="stylesheet" href="resources/css/admin/adminSidebar.css">
-<script src="resources/js/admin/adminSidebar.js" rel="javascript"></script>
+<link rel="stylesheet" href="resources/css/admin/common/adminSidebar.css">
+<script src="resources/js/admin/common/adminSidebar.js" rel="javascript"></script>
 </head>
 <body>
 	<div class="adm-sidebar">
@@ -24,7 +24,7 @@
 		        <li>
 		            <a class="adm-sidebar-main-menu"><i class="fas fa-angle-up"></i> 회원 관리</a>
 		            <ul class="hidden">
-		                <li><a href="#">회원정보조회</a></li>
+		                <li><a href="admSelect.me">회원정보조회</a></li>
 		                <li><a href="#">회원정보수정</a></li>
 		                <li><a href="#">등급별 리워드</a></li>
 		            </ul>

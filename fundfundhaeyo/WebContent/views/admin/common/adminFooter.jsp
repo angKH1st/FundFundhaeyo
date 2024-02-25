@@ -6,8 +6,8 @@
 <meta charset="UTF-8">
 <title>뻔뻔해요</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<link rel="stylesheet" href="resources/css/admin/adminFooter.css">
-<script src="resources/js/admin/adminFooter.js" rel="javascript"></script>
+<link rel="stylesheet" href="resources/css/admin/common/adminFooter.css">
+<script src="resources/js/admin/common/adminFooter.js" rel="javascript"></script>
 </head>
 <body>
 	<div class="adm-footer">
