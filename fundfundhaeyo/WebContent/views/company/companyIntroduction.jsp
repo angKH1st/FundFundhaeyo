@@ -15,7 +15,7 @@
 		<div class="blank_top"><%-- 여백 --%></div>
 		
 		<div class="introduction_main">
-			TBU
+			sadfaseasfas
 	    </div>
 	    
 	    <div class="blank_bottom"><%-- 여백 --%></div>
