@@ -42,7 +42,7 @@
 		                </div>
 		                <div class="search-id-pw-btn-wrap">
 		                	<br>
-		                    <button class="search-id-pw-btn"  type="submit">ID 찾기</button>
+		                    <button class="search-id-pw-btn" type="submit">ID 찾기</button>
 		                </div>
 		                
 		                <br>
