@@ -40,7 +40,7 @@
 		                        <input placeholder="비밀번호" type="password" name="userPwd">
 		                    </div>
 		                </div>
-		                <div class="search-id-pw-btn-wrap">
+		                <div class="search-id-pw-btn-wrap"> 
 		                	<br>
 		                    <button class="search-id-pw-btn" type="submit">ID 찾기</button>
 		                </div>
