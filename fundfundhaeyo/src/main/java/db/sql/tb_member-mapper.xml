@@ -63,4 +63,13 @@
 		 WHERE USER_ID = ?
 	</entry>
 	
+	<entry key="searchId">
+		SELECT
+		       USER_ID
+		  FROM TB_MEMBER
+		 WHERE USER_NAME = ?
+		   AND USER_EMAIL = ?
+		   AND USER_STATUS = 'Y'
+	</entry>
+	
 </properties>

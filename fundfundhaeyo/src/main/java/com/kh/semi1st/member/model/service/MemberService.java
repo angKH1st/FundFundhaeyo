@@ -2,6 +2,8 @@ package com.kh.semi1st.member.model.service;
 
 import static com.kh.semi1st.common.JDBCTemplate.*;
 import java.sql.Connection;
+import java.util.ArrayList;
+
 import com.kh.semi1st.member.model.dao.MemberDao;
 import com.kh.semi1st.member.model.vo.Member;
 
@@ -46,6 +48,14 @@ public class MemberService {
 		close(conn);
 		
 		return count;
+	}
+	
+	public ArrayList<Member> searchIdMember(String name, String email){
+		Connection conn = getConnection();
+		ArrayList<Member> list = new MemberDao().searchIdMember(conn, name, email);
+		
+		close(conn);
+		return list;
 	}
 	
 }

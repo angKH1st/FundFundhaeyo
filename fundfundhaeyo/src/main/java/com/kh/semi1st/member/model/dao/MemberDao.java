@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Properties;
 
 import static com.kh.semi1st.common.JDBCTemplate.*;
@@ -136,6 +137,38 @@ public class MemberDao {
 		}
 		
 		return count;
+	}
+	
+	public ArrayList<Member> searchIdMember(Connection conn, String name, String email){
+		
+		ArrayList<Member> list = new ArrayList<Member>();
+		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+		
+		String sql = prop.getProperty("searchId");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setString(1, name);
+			pstmt.setString(2, email);
+			
+			rset = pstmt.executeQuery();
+			
+			while(rset.next()) {
+				
+				list.add(new Member(rset.getString("user_id")));
+				
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		return list;
 	}
 	
 }

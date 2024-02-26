@@ -58,6 +58,12 @@ public class Member {
 		this.userType = userType;
 		this.userStatus = userStatus;
 	}
+	
+
+	public Member(String userId) {
+		super();
+		this.userId = userId;
+	}
 
 	public int getUserNo() {
 		return userNo;
