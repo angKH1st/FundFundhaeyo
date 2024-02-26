@@ -13,7 +13,7 @@
 	<div class="adm-sidebar">
 		<div class="adm-sidebar-admin">
 			<div class="adm-sidebar-admin-symbol fl">F</div>
-			<div class="adm-sidebar-admin-logo fl"><h3><a href="<%= contextPath %>" class="hoverA">FundFund</a></h3></div>
+			<div class="adm-sidebar-admin-logo fl"><h3><a href="<%= contextPath %>" class="hoverA"></a></h3></div>
 		</div>
 		<div class="adm-sidebar-user">
 			<div class="adm-sidebar-user-profile fl"></div>

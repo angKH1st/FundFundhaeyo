@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Properties;
 
 import static com.kh.semi1st.common.JDBCTemplate.*;
@@ -136,6 +137,50 @@ public class MemberDao {
 		}
 		
 		return count;
+	}
+
+	/** 전체 회원 정보 조회
+	 *  @param conn 
+	 *  @return list : 전체 회원 정보가 담긴 list
+	 */
+	public ArrayList<Member> selectMemberList(Connection conn) {
+		ArrayList<Member> list = new ArrayList<Member>();
+		
+		ResultSet rset = null;
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("selectMemberList");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			rset = pstmt.executeQuery();
+			
+			while(rset.next()) {
+				list.add(new Member(rset.getInt("user_no")
+								  , rset.getString("user_id")
+								  , rset.getString("user_pwd")
+								  , rset.getString("user_name")
+								  , rset.getString("user_ssn")
+								  , rset.getString("user_nickname")
+								  , rset.getString("user_phone")
+								  , rset.getString("user_email")
+								  , rset.getString("user_address")
+								  , rset.getString("user_profile")
+								  , rset.getInt("user_grade")
+								  , rset.getString("user_marketing")
+								  , rset.getDate("user_enroll_date")
+								  , rset.getDate("user_modify_date")
+								  , rset.getString("user_type")
+								  , rset.getString("user_status")));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		
+		return list;
 	}
 	
 }
