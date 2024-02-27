@@ -10,6 +10,8 @@ import java.util.ArrayList;
 import java.util.Properties;
 
 import static com.kh.semi1st.common.JDBCTemplate.*;
+
+import com.kh.semi1st.common.model.vo.PageInfo;
 import com.kh.semi1st.member.model.vo.Member;
 
 public class MemberDao {
@@ -172,6 +174,82 @@ public class MemberDao {
 								  , rset.getDate("user_modify_date")
 								  , rset.getString("user_type")
 								  , rset.getString("user_status")));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		
+		return list;
+	}
+
+	/** 전체 회원 숫자 조회
+	 *  @param conn
+	 *  @return listCount : 전체 회원 숫자
+	 */
+	public int selectMemberListCount(Connection conn) {
+		int listCount = 0;
+		
+		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+		String sql = prop.getProperty("selectMemberListCount");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			rset = pstmt.executeQuery();
+			
+			if(rset.next()) {
+				listCount = rset.getInt("COUNT");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		
+		return listCount;
+	}
+
+	public ArrayList<Member> selectMemberLimitList(Connection conn, PageInfo pi) {
+		ArrayList<Member> list = new ArrayList<Member>();
+		
+		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+		
+		String sql = prop.getProperty("selectMemberLimitList");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			int startRow = (pi.getCurrentPage()-1) * pi.getBoardLimit() + 1;
+			int endRow = startRow + pi.getBoardLimit() - 1;
+			
+			pstmt.setInt(1, startRow);
+			pstmt.setInt(2, endRow);
+			
+			rset = pstmt.executeQuery();
+			
+			while(rset.next()) {
+				list.add(new Member(rset.getInt("user_no")
+						  , rset.getString("user_id")
+						  , rset.getString("user_pwd")
+						  , rset.getString("user_name")
+						  , rset.getString("user_ssn")
+						  , rset.getString("user_nickname")
+						  , rset.getString("user_phone")
+						  , rset.getString("user_email")
+						  , rset.getString("user_address")
+						  , rset.getString("user_profile")
+						  , rset.getInt("user_grade")
+						  , rset.getString("user_marketing")
+						  , rset.getDate("user_enroll_date")
+						  , rset.getDate("user_modify_date")
+						  , rset.getString("user_type")
+						  , rset.getString("user_status")));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

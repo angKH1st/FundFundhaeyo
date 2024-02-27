@@ -95,6 +95,36 @@ VALUES (SEQ_USER_NO.NEXTVAL, 'user03', 'pass03', '진세연', '940215-2224131', '파
 
 INSERT INTO TB_MEMBER
 VALUES (SEQ_USER_NO.NEXTVAL, 'user04', 'pass04', '하니', '010101-2141231', '뉴진스', '010-4444-4444', 'user04@kh.or.kr', '서울시 강북구', '뉴진스 하입보이요', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+
+INSERT INTO TB_MEMBER
+VALUES (SEQ_USER_NO.NEXTVAL, 'user05', 'pass05', '김새론', '930814-2212164', '사탕', '010-1234-6456', 'user05@kh.or.kr', '서울시 강동구', '글쎄요', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+
+INSERT INTO TB_MEMBER
+VALUES (SEQ_USER_NO.NEXTVAL, 'user06', 'pass06', '홍두식', '881201-1227812', '졸린사람', '010-6542-1815', 'user06@kh.or.kr', '서울시 강동구', '안녕하세요', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+
+INSERT INTO TB_MEMBER
+VALUES (SEQ_USER_NO.NEXTVAL, 'user07', 'pass07', '김돌개', '010511-1231214', '일반인', '010-6661-8142', 'user07@kh.or.kr', '서울시 서초구 서초동', 'ㅎㅇ요', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+
+INSERT INTO TB_MEMBER
+VALUES (SEQ_USER_NO.NEXTVAL, 'user08', 'pass08', '박정찰', '050103-1112125', '양념반', '010-8842-7151', 'user08@kh.or.kr', '서울시 서초구 서초동', '아 몰랑', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+
+INSERT INTO TB_MEMBER
+VALUES (SEQ_USER_NO.NEXTVAL, 'user09', 'pass09', '최연두', '930814-2262141', '메론맛딸기', '010-1234-6456', 'user09@kh.or.kr', '서울시 강동구', '잠 온다', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+
+INSERT INTO TB_MEMBER
+VALUES (SEQ_USER_NO.NEXTVAL, 'user10', 'pass10', '하주연', '930814-2223154', '열받는사람', '010-1234-6456', 'user10@kh.or.kr', '서울시 강동구', '집 가고 싶다', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+
+INSERT INTO TB_MEMBER
+VALUES (SEQ_USER_NO.NEXTVAL, 'user11', 'pass11', '김주황', '930814-2141231', 'bj지망생', '010-1234-6456', 'user11@kh.or.kr', '서울시 강서구', '배고파요', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+
+INSERT INTO TB_MEMBER
+VALUES (SEQ_USER_NO.NEXTVAL, 'user12', 'pass12', '박팔두', '930814-1231511', '도깨비', '010-1234-6456', 'user12@kh.or.kr', '서울시 강동구', '언제까지', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+
+INSERT INTO TB_MEMBER
+VALUES (SEQ_USER_NO.NEXTVAL, 'user13', 'pass13', '최지훈', '930814-1221811', '청바지가 잘 어울리는', '010-1234-6456', 'user13@kh.or.kr', '서울시 강동구', '으아아악', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+
+INSERT INTO TB_MEMBER
+VALUES (SEQ_USER_NO.NEXTVAL, 'user14', 'pass14', '이딸기', '930814-2141231', '깃털', '010-1234-6456', 'user14@kh.or.kr', '서울시 강남구 역삼동', '잘 부탁드립니다', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
 --------------------------------------------------
 -------------- ANNOUNCEMENT 관련 ------------------	
 --------------------------------------------------

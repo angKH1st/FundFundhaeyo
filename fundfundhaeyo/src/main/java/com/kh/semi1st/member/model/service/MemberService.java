@@ -4,6 +4,7 @@ import static com.kh.semi1st.common.JDBCTemplate.*;
 import java.sql.Connection;
 import java.util.ArrayList;
 
+import com.kh.semi1st.common.model.vo.PageInfo;
 import com.kh.semi1st.member.model.dao.MemberDao;
 import com.kh.semi1st.member.model.vo.Member;
 
@@ -57,6 +58,33 @@ public class MemberService {
 		Connection conn = getConnection();
 		
 		ArrayList<Member> list = new MemberDao().selectMemberList(conn);
+		
+		close(conn);
+		
+		return list;
+	}
+
+	/** 전체 회원 숫자 조회
+	 *  @return listCount : 전체 회원 숫자
+	 */
+	public int selectMemberListCount() {
+		Connection conn = getConnection();
+		
+		int listCount = new MemberDao().selectMemberListCount(conn);
+		
+		close(conn);
+		
+		return listCount;
+	}
+
+	/** 회원 제한 조회
+	 *  @param pi : 페이징 처리 객체
+	 *  @return list : 회원 제한 list
+	 */
+	public ArrayList<Member> selectMemberList(PageInfo pi) {
+		Connection conn = getConnection();
+		
+		ArrayList<Member> list = new MemberDao().selectMemberLimitList(conn, pi);
 		
 		close(conn);
 		

@@ -84,4 +84,41 @@
 		  FROM TB_MEMBER
 	</entry>
 	
+	<entry key="selectMemberLimitList">
+		SELECT *
+		  FROM (
+		        SELECT ROWNUM RNUM, E.*
+		          FROM (
+		                SELECT
+		                       USER_NO
+						     , USER_ID
+						     , USER_PWD
+						     , USER_NAME
+						     , USER_SSN
+						     , USER_NICKNAME
+						     , USER_PHONE
+						     , USER_EMAIL
+						     , USER_ADDRESS
+						     , USER_PROFILE
+						     , USER_GRADE
+						     , USER_MARKETING
+						     , USER_ENROLL_DATE
+						     , USER_MODIFY_DATE
+						     , USER_TYPE
+						     , USER_STATUS
+						  FROM TB_MEMBER
+		                 ORDER
+		                    BY USER_NO DESC
+		                 ) E 
+		       ) 
+		 WHERE RNUM BETWEEN ? AND ?
+	</entry>
+	
+	<entry key="selectMemberListCount">
+		SELECT
+		       COUNT(*) count
+		  FROM TB_MEMBER
+		 WHERE USER_STATUS = 'Y'
+	</entry>
+	
 </properties>
