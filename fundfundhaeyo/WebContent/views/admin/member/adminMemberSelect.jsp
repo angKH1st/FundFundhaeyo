@@ -5,9 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>뻔뻔해요</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <link rel="stylesheet" href="resources/css/admin/member/adminMemberSelect.css">
-<script src="resources/js/admin/member/adminMemberSelect.js" rel="javascript"></script>
 </head>
 <body>
 	<%@ include file="../common/adminHeader.jsp" %>
@@ -82,5 +80,7 @@
 	<%@ include file="../common/adminSidebar.jsp" %>
 	
 	<%@ include file="../common/adminFooter.jsp" %>
+	
+	<script type="text/javascript" src="resources/js/admin/member/adminMemberSelect.js"></script>
 </body>
 </html>

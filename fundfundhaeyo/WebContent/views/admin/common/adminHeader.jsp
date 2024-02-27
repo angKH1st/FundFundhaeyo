@@ -14,9 +14,10 @@
 <title>뻔뻔해요</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <link rel="stylesheet" href="resources/css/admin/common/adminHeader.css">
-<script src="resources/js/admin/common/adminHeader.js" rel="javascript"></script>
+<script type="text/javascript" src="resources/js/admin/common/adminHeader.js"></script>
 <script src="https://kit.fontawesome.com/4dc2c036ac.js" crossorigin="anonymous"></script>
 </head>
+<link rel="icon" href="data:;base64,iVBORw0KGgo=">
 <body>
 	<% if(alertMsg != null) { %>
 		<script>
