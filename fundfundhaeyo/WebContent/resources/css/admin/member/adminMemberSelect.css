@@ -14,7 +14,7 @@
 
 .adm-content>div{width: 100%;}
 .adm-content-top{height: 55px; margin-bottom: 20px;}
-.adm-content-center{height: 800px;}
+.adm-content-center{height: 1200px; border: 0.5px solid lightgray;}
 
 .adm-content-top>div{height: 100%;}
 .adm-content-top-title{width: 20%;}
@@ -32,13 +32,16 @@
 
 .adm-content-center-main>div{width: 100%;}
 .adm-content-center-main-header{height: 5%;}
-.adm-content-center-main-body{height: 95%;}
+.adm-content-center-main-body{height: 95%; padding: 15px;}
 
 .adm-content-center-main-body>div{width: 100%;}
 .adm-content-center-main-body1{height: 5%;}
-.adm-content-center-main-body2{height: 90%;}
+.adm-content-center-main-body2{height: 90%; margin: 20px 0;}
 .adm-content-center-main-body3{height: 5%;}
 
+.adm-content-center-main-body1>div{height: 100%;}
+.adm-content-center-main-body1-col1{width: 6%;}
+.adm-content-center-main-body1-col2{width: 10%;}
+.adm-content-center-main-body1-col3{width: 70%;}
+.adm-content-center-main-body1-col4{width: 14%;}
 
-
-div{border: 1px solid red;}
