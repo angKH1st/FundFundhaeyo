@@ -14,7 +14,7 @@
 
 .adm-content>div{width: 100%;}
 .adm-content-top{height: 55px; margin-bottom: 20px;}
-.adm-content-center{height: 1200px;}
+.adm-content-center{height: 800px;}
 
 .adm-content-top>div{height: 100%;}
 .adm-content-top-title{width: 20%;}
@@ -26,11 +26,18 @@
 .adm-content-top-root-third{width: 49%; padding-left: 5px;}
 .adm-content-top-root-second{width: 2%;}
 
-.adm-content-center>div{width: 100%;}
-.adm-content-center-top{height: 30%;}
-.adm-content-center-main{height: 70%;}
+.adm-content-center>div{width: 100%; border-radius: 5px;}
+.adm-content-center-top{height: 5%; margin-bottom: 20px;}
+.adm-content-center-main{height: 95%;}
 
+.adm-content-center-main>div{width: 100%;}
+.adm-content-center-main-header{height: 5%;}
+.adm-content-center-main-body{height: 95%;}
 
+.adm-content-center-main-body>div{width: 100%;}
+.adm-content-center-main-body1{height: 5%;}
+.adm-content-center-main-body2{height: 90%;}
+.adm-content-center-main-body3{height: 5%;}
 
 
 

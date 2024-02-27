@@ -28,12 +28,14 @@
 	    </div>
 	    <div class="adm-content-center">
 	    	<div class="adm-content-center-top">
-	    	
+	    		top
 	    	</div>
 	    	<div class="adm-content-center-main">
-	    		<div class="adm-content-center-main1"></div>
-	    		<div class="adm-content-center-main2">
-	    			<table border=1>
+	    		<div class="adm-content-center-main-header">main1</div>
+	    		<div class="adm-content-center-main-body">
+	    			<div class="adm-content-center-main-body1"></div>
+	    			<div class="adm-content-center-main-body2">
+	    				<table border=1>
 	    				<thead>
 	    					<tr>
 	    						<th>회원번호</th>
@@ -55,8 +57,10 @@
 	    					<% } %>
 	    				</tbody>
 	    			</table>
+	    			</div>
+	    			<div class="adm-content-center-main-body3"></div>
+	    			
 	    		</div>
-	    		<div class="adm-content-center-main3"></div>
 	    	</div>
 	    </div>
 	</div>
