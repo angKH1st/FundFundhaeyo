@@ -1,5 +1,9 @@
+<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+	ArrayList<Member> list = (ArrayList<Member>)request.getAttribute("list");
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,17 +16,58 @@
 <body>
 	<%@ include file="../common/adminHeader.jsp" %>
 	
-    <div class="adm-member-select-wrap">
-	    <div class="adm-member-select-top">
-	    	<div class="adm-member-select-top-title fl"><h1>회원정보조회</h1></div>
-	    	<div class="adm-member-select-top-blank fl"></div>
-	    	<div class="adm-member-select-top-root fl">
-	    		<div class="adm-member-select-top-root-first fl"><a href="<%= contextPath %>">Home</a></div>
-	    		<div class="adm-member-select-top-root-second fl">/</div>
-	    		<div class="adm-member-select-top-root-third fl">Member</div>
+    <div class="adm-content">
+	    <div class="adm-content-top">
+	    	<div class="adm-content-top-title fl"><h1>회원정보조회</h1></div>
+	    	<div class="adm-content-top-blank fl"></div>
+	    	<div class="adm-content-top-root fl">
+	    		<div class="adm-content-top-root-first fl"><a href="<%= contextPath %>">Home</a></div>
+	    		<div class="adm-content-top-root-second fl">/</div>
+	    		<div class="adm-content-top-root-third fl">Member</div>
 	    	</div>
 	    </div>
-	    <div class="adm-member-select-center"></div>
+	    <div class="adm-content-center">
+	    	<div class="adm-content-center-top">
+	    		top : TBU
+	    	</div>
+	    	<div class="adm-content-center-main">
+	    		<div class="adm-content-center-main-header">회원정보조회</div>
+	    		<div class="adm-content-center-main-body">
+	    			<div class="adm-content-center-main-body1">
+	    				<div class="adm-content-center-main-body1-col1 fl">숫자박스</div>
+	    				<div class="adm-content-center-main-body1-col2 fl">entries per page</div>
+	    				<div class="adm-content-center-main-body1-col3 fl"><%-- 여백 --%></div>
+	    				<div class="adm-content-center-main-body1-col4 fl">검색</div>
+	    			</div>
+	    			<div class="adm-content-center-main-body2">
+	    				<table border=1>
+	    				<thead>
+	    					<tr>
+	    						<th>회원번호</th>
+	    						<th>이름</th>
+	    						<th>닉네임</th>
+	    						<th>소개말</th>
+	    						<th>상태값</th>
+	    					</tr>
+	    				</thead>
+	    				<tbody>
+	    					<% for(Member m : list){ %>
+	    					<tr>
+	    						<th><%= m.getUserNo() %></th>
+	    						<th><%= m.getUserName() %></th>
+	    						<th><%= m.getUserNickname() %></th>
+	    						<th><%= m.getUserProfile() %></th>
+	    						<th><%= m.getUserStatus() %></th>
+	    					</tr>
+	    					<% } %>
+	    				</tbody>
+	    			</table>
+	    			</div>
+	    			<div class="adm-content-center-main-body3"></div>
+	    			
+	    		</div>
+	    	</div>
+	    </div>
 	</div>
 	
 	<%@ include file="../common/adminSidebar.jsp" %>

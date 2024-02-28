@@ -1,11 +1,16 @@
 package com.kh.semi1st.admin.member;
 
 import java.io.IOException;
+import java.util.ArrayList;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.kh.semi1st.member.model.service.MemberService;
+import com.kh.semi1st.member.model.vo.Member;
 
 /**
  * Servlet implementation class AdminMemberSelectController
@@ -26,6 +31,9 @@ public class AdminMemberSelectController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		ArrayList<Member> list = new MemberService().selectMemberList();
+		
+		request.setAttribute("list", list);
 		request.getRequestDispatcher("views/admin/member/adminMemberSelect.jsp").forward(request, response);
 	}
 

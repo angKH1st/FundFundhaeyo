@@ -49,6 +49,19 @@ public class MemberService {
 		
 		return count;
 	}
+
+	/** 전체 회원 정보 조회
+	 *  @return list : 전체 회원 정보가 담긴 list
+	 */
+	public ArrayList<Member> selectMemberList() {
+		Connection conn = getConnection();
+		
+		ArrayList<Member> list = new MemberDao().selectMemberList(conn);
+		
+		close(conn);
+		
+		return list;
+	}
 	
 	public ArrayList<Member> searchIdMember(String name, String email){
 		Connection conn = getConnection();
