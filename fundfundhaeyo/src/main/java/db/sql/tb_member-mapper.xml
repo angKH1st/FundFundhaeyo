@@ -63,7 +63,6 @@
 		 WHERE USER_ID = ?
 	</entry>
 	
-<<<<<<< HEAD
 	<entry key="searchId">
 		SELECT
 		       USER_ID
@@ -71,7 +70,8 @@
 		 WHERE USER_NAME = ?
 		   AND USER_EMAIL = ?
 		   AND USER_STATUS = 'Y'
-=======
+    </entry>
+		   
 	<entry key="selectMemberList">
 		SELECT
 		       USER_NO
@@ -91,7 +91,6 @@
 		     , USER_TYPE
 		     , USER_STATUS
 		  FROM TB_MEMBER
->>>>>>> 279c5237fd17f6b04485b8199445440e4548a028
 	</entry>
 	
 	<entry key="selectMemberLimitList">
