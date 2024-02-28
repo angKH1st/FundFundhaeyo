@@ -139,36 +139,65 @@ public class MemberDao {
 		return count;
 	}
 	
-	public ArrayList<Member> searchIdMember(Connection conn, String name, String email){
+	public String searchIdMember(Connection conn, String name, String email){
 		
-		ArrayList<Member> list = new ArrayList<Member>();
+		String userId = "";
 		PreparedStatement pstmt = null;
 		ResultSet rset = null;
 		
 		String sql = prop.getProperty("searchId");
 		
 		try {
-			pstmt = conn.prepareStatement(sql);
+			pstmt = conn.prepareStatement(sql); // 미완성
 			
 			pstmt.setString(1, name);
 			pstmt.setString(2, email);
 			
 			rset = pstmt.executeQuery();
 			
-			while(rset.next()) {
-				
-				list.add(new Member(rset.getString("user_id")));
-				
+			if(rset.next()) {
+				userId = rset.getString("user_id");
+
 			}
 			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
 			close(rset);
 			close(pstmt);
 		}
-		return list;
+		return userId;
+	}
+	
+	public String searchPwMember(Connection conn, String userId, String name, String email) {
+		
+		String userPw = "";
+		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+		
+		String sql = prop.getProperty("searchPw");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setString(1, userId);
+			pstmt.setString(2, name);
+			pstmt.setString(3, email);
+			
+			rset = pstmt.executeQuery();
+			
+			if(rset.next()) {
+				userPw = rset.getString("user_pwd");
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		
+		return userPw;
 	}
 	
 }

@@ -50,12 +50,20 @@ public class MemberService {
 		return count;
 	}
 	
-	public ArrayList<Member> searchIdMember(String name, String email){
+	public String searchIdMember(String name, String email){
 		Connection conn = getConnection();
-		ArrayList<Member> list = new MemberDao().searchIdMember(conn, name, email);
+		String userId = new MemberDao().searchIdMember(conn, name, email);
 		
 		close(conn);
-		return list;
+		return userId;
+	}
+	
+	public String searchPwMember(String userId, String name, String email) {
+		Connection conn = getConnection();
+		String userPw = new MemberDao().searchPwMember(conn, userId, name, email);
+		
+		close(conn);
+		return userPw;
 	}
 	
 }
