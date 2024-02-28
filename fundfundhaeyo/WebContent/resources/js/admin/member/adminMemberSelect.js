@@ -20,20 +20,24 @@ function loadPage(cpage) {
 			$pageDiv.empty(); // 페이지 번호 버튼 비우기
 			
 			if(currentPage != 1){
-	          $pageDiv.append("<button class=\"page-num page-button\" data-page=\"" + (currentPage-1) + "\">&lt;</button>");
-	        }
+			  $pageDiv.append("<button class=\"page-num page-button\" data-page=\"" + (currentPage-1) + "\">&lt;</button>");
+			}else{
+			  $pageDiv.append("<button class=\"page-num page-button\" data-page=\"" + (currentPage-1) + "\" disabled>&lt;</button>");
+			}
 	        
 	        for(let p = startPage; p <= endPage; p++){
-	          if(p == currentPage){
-	            $pageDiv.append("<button class=\"page-button\" disabled>" + p + "</button>");
-	          }else{
-	            $pageDiv.append("<button class=\"page-num page-button\" data-page=\"" + p + "\">" + p + "</button>");
-	          }
-	        }
+			  if(p == currentPage){
+			    $pageDiv.append("<button class=\"page-button\" disabled>" + p + "</button>");
+			  }else{
+			    $pageDiv.append("<button class=\"page-num page-button\" data-page=\"" + p + "\">" + p + "</button>");
+			  }
+			}
 
 	        if(currentPage != maxPage){
-	          $pageDiv.append("<button class=\"page-num page-button\" data-page=\"" + (currentPage+1) + "\">&gt;</button>");
-	        }
+			  $pageDiv.append("<button class=\"page-num page-button\" data-page=\"" + (currentPage+1) + "\">&gt;</button>");
+			}else{
+			  $pageDiv.append("<button class=\"page-num page-button\" data-page=\"" + (currentPage+1) + "\" disabled>&gt;</button>");
+			}
 			
 			const list = map.list; 	// 응답으로 받은 JSON 객체에서 list를 추출
 			

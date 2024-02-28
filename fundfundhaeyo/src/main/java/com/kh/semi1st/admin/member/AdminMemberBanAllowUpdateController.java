@@ -12,7 +12,7 @@ import com.kh.semi1st.member.model.service.MemberService;
 /**
  * Servlet implementation class AdminMemberBanAllowUpdateController
  */
-@WebServlet("/admBanAllowUpdate.me")
+@WebServlet("/admUpdateBanAllow.me")
 public class AdminMemberBanAllowUpdateController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
