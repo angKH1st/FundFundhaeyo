@@ -111,9 +111,9 @@ public class MemberDao {
 	}
 	
 	/** 아이디를 입력받아 중복확인을 처리하는 메소드
-	 * @param conn
-	 * @param checkId
-	 * @return
+	 *  @param conn
+	 *  @param checkId
+	 *  @return
 	 */
 	public int idCheck(Connection conn, String checkId) {
 		int count = 0;
@@ -214,6 +214,11 @@ public class MemberDao {
 		return listCount;
 	}
 
+	/** 회원 제한 조회
+	 *  @param conn
+	 *  @param pi : 페이징 처리 객체
+	 *  @return list : 회원 제한 list
+	 */
 	public ArrayList<Member> selectMemberLimitList(Connection conn, PageInfo pi) {
 		ArrayList<Member> list = new ArrayList<Member>();
 		
@@ -259,6 +264,75 @@ public class MemberDao {
 		}
 		
 		return list;
+	}
+
+	/** 회원 id로 검색
+	 *  @param conn
+	 *  @param searchId : 조회하고자 하는 회원 id
+	 *  @return m : 조회된 회원 객체 m
+	 */
+	public Member memberSearchId(Connection conn, String searchId) {
+		Member m = null;
+		
+		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+		
+		String sql = prop.getProperty("memberSearchId");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setString(1, searchId);
+			
+			rset = pstmt.executeQuery();
+			
+			while(rset.next()) {
+				m = new Member(rset.getInt("user_no")
+						     , rset.getString("user_id")
+						     , rset.getString("user_pwd")
+						     , rset.getString("user_name")
+						     , rset.getString("user_ssn")
+						     , rset.getString("user_nickname")
+						     , rset.getString("user_phone")
+						     , rset.getString("user_email")
+						     , rset.getString("user_address")
+						     , rset.getString("user_profile")
+						     , rset.getInt("user_grade")
+						     , rset.getString("user_marketing")
+						     , rset.getDate("user_enroll_date")
+						     , rset.getDate("user_modify_date")
+						     , rset.getString("user_type")
+						     , rset.getString("user_status"));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		
+		return m;
+	}
+
+	public int updateMemberBanAllow(Connection conn, String userId, String userStatus) {
+		int result = 0;
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("updateMemberBanAllow");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setString(1, userStatus);
+			pstmt.setString(2, userId);
+			
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		
+		return result;
 	}
 	
 }

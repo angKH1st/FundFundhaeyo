@@ -9,6 +9,8 @@
 .hoverA2{text-decoration: none; color: black;}
 .hoverA2:hover{font-weight: bold;}
 
+.pd15{padding: 15px;}
+
 .adm-header {
     width: calc(100% - 70px);  /* 헤더의 초기 너비를 사이드바의 너비에 맞게 설정 */
     height: 55px;

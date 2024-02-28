@@ -7,17 +7,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.google.gson.Gson;
+import com.kh.semi1st.member.model.service.MemberService;
+import com.kh.semi1st.member.model.vo.Member;
+
 /**
- * Servlet implementation class AdminMoveToMemberUpdateController
+ * Servlet implementation class AdminMemberSearchIdController
  */
-@WebServlet("/admMoveToUpdate.me")
-public class AdminMoveToMemberUpdateController extends HttpServlet {
+@WebServlet("/admSearchId.me")
+public class AdminMemberSearchIdController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AdminMoveToMemberUpdateController() {
+    public AdminMemberSearchIdController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -26,13 +30,12 @@ public class AdminMoveToMemberUpdateController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String searchId = request.getParameter("searchId"); 
+		String searchId = request.getParameter("searchId");
 		
-		if(searchId != null) {
-			request.setAttribute("searchId", searchId);
-		}
+		Member m = new MemberService().memberSearchId(searchId);
 		
-		request.getRequestDispatcher("views/admin/member/adminMemberUpdateForm.jsp").forward(request, response);
+		response.setContentType("application/json; charset=utf-8");
+		new Gson().toJson(m, response.getWriter());
 	}
 
 	/**

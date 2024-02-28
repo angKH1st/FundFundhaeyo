@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+.adm-content {
+    position: relative;  /* 추가 */
+    width: calc(100% - 70px);  /* 컨텐츠의 초기 너비를 사이드바의 너비에 맞게 설정 */
+    height: 1500px;
+    padding: 20px;
+    left: 70px;  /* 헤더의 초기 위치를 사이드바의 너비에 맞게 설정 */
+    top: 55px;
+    transition: width 0.5s, left 0.5s;  /* 컨텐츠의 너비와 위치가 0.5초 동안 변하도록 설정 */
+    background-color: #f8f9fa;
+    overflow: auto;
+}
+
+.adm-content>div{width: 100%;}
+.adm-content-top{height: 55px; margin-bottom: 20px;}
+.adm-content-center{height: 800px; margin-bottom: 80px;}
+
+.adm-content-top>div{height: 100%;}
+.adm-content-top-title{width: 20%;}
+.adm-content-top-blank{width: 70%;}
+.adm-content-top-root{width: 10%;}
+
+.adm-content-top-root>div{height: 100%; line-height: 50px;}
+.adm-content-top-root-first{width: 49%; text-align: right; padding-right: 5px;}
+.adm-content-top-root-third{width: 49%; padding-left: 5px;}
+.adm-content-top-root-second{width: 2%;}
+
+.adm-content-center>div{width: 100%; border-radius: 5px; border: 0.5px solid lightgray; border-radius: 5px; background-color: white;}
+.adm-content-center-top{height: 5%; margin-bottom: 20px;}
+.adm-content-center-main{height: 95%;}
+
+.adm-content-center-main>div{width: 100%;}
+.adm-content-center-main-header{height: 5%; background-color: #f8f9fa; border-bottom: 0.5px solid lightgray; padding: 8px 0 0 17px;}
+.adm-content-center-main-body{height: 95%; padding: 15px;}
+
+div{border: 1px solid red;}

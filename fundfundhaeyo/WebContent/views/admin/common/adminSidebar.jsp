@@ -41,9 +41,9 @@
 		        <li>
 		            <a class="adm-sidebar-main-menu"><i class="fas fa-angle-up"></i> 고객지원 관리</a>
 		            <ul class="hidden">
-		                <li><a href="#">공지사항</a></li>
-		                <li><a href="#">Q&A</a></li>
-		                <li><a href="#">FAQ</a></li>
+		                <li><a href="admAnnouncement.hp">공지사항</a></li>
+		                <li><a href="admFaq.hp">FAQ</a></li>
+		                <li><a href="admQna.hp">Q&A</a></li>
 		            </ul>
 		        </li>
 		        <li>
