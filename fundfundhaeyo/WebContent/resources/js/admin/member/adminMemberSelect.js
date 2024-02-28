@@ -53,7 +53,10 @@ function loadPage(cpage) {
 						     + "<td>" + list[i].userEnrollDate + "</td>"
 						     + "<td>" + list[i].userGrade + "</td>"
 						     + "<td>" + list[i].userStatus + "</td>"
-						     + "<td>" + "</td>"
+						     + "<td>" + 
+						     	"<a href=\"#\"><i class=\"hoverA2 fa-regular fa-pen-to-square fa-lg\"></i></a>" +
+						     	"<a href=\"#\"><i style=\"margin-left: 10px;\" class=\"hoverA2 fa-solid fa-ban fa-lg\"></i></a>" +
+					     	   "</td>"
 						     + "</tr>");
 			}
 			

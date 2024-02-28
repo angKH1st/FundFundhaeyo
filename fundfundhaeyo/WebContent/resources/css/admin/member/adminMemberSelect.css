@@ -65,8 +65,7 @@
 .adm-content-center-main-body3>div{height: 100%;}
 .adm-content-center-main-body3-col1{width: 15%;}
 .adm-content-center-main-body3-col2{width: 65%;}
-.adm-content-center-main-body3-col3{width: 20%;}
+.adm-content-center-main-body3-col3{width: 20%; text-align: right;}
 
 .page-button{cursor: pointer;}
 .page-button, .page-button.disabled{width: 30px; height: 30px;}
-
