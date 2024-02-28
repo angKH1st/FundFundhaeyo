@@ -91,4 +91,12 @@ public class MemberService {
 		return list;
 	}
 	
+	public ArrayList<Member> searchIdMember(String name, String email){
+		Connection conn = getConnection();
+		ArrayList<Member> list = new MemberDao().searchIdMember(conn, name, email);
+		
+		close(conn);
+		return list;
+	}
+	
 }

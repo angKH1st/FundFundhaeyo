@@ -7,12 +7,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>뻔뻔해요</title>
-<link rel="stylesheet" href="resources/css/member/memberSearchIdPwForm.css">
-<script src="resources/js/member/memberSearchIdPwForm.js"></script>
+<title>Insert title here</title>
 </head>
 <body>
-	<%@ include file="../common/header.jsp" %>
+
+		<%@ include file="../common/header.jsp" %>
 	
 	<div class="member_search_id_pw_form_outer">
 		<div class="blank_top"><%-- 여백 --%></div>
@@ -38,32 +37,12 @@
 							<button onclick="Location.href='<%= contextPath %>/moveToSearchIdPw.me'" type="button" class="btn btn-primary">비밀번호 찾기</button>
 						</div>
 
-		                <div class="search-id-pw-input-container">
-		                    <div class="search-id-pw-input-wrap input-id">
-		                        <i class="far fa-envelope"></i>
-		                        <input placeholder="이름을 입력하세요." type="text" name="username" id="username">
-		                    </div>
-		                    <div class="search-id-pw-input-wrap input-password">
-		                        <i class="fas fa-key"></i>
-		                        <input placeholder="이메일을 입력하세요." type="email" name="userEmail" id="userEmail">
-		                    </div>
+		                <div class="searchId-result">
+		                	
+		                	<%= m.getUserName() %>님의 아이디는 <%= m.getUserId() %> 입니다.
+
 		                </div>
-		                
-		                <script>
-		                	function searchIdMember(){
-		                		$.ajax({
-		                			url:"searchId.me",
-		                			data:{name:$("#username").val(),
-		                				  email:$("#userEmail").val()},
-		                			type:"post",
-		                			success:function(list){
-		                				console.log(list);
-		                			},error:function(){
-		                				
-		                			}
-		                		})
-		                	}
-		                </script>
+
 		                
 		                
 		                <div class="search-id-pw-btn-wrap"> 
