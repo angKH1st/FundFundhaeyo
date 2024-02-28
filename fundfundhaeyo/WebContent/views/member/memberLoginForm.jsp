@@ -42,7 +42,7 @@
 		                <div class="login-btn-wrap">
 		                	<br>
 		                    <button class="login-btn"  type="submit">로그인</button>
-		                    <a href="<%= contextPath %>/moveToSearchIdPw.me">아이디/비밀번호 찾기</a>
+		                    <a href="<%= contextPath %>/moveToSearchId.me">아이디/비밀번호 찾기</a>
 		                </div>
 		                
 		                <br>

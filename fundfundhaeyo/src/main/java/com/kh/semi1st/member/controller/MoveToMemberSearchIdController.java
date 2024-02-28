@@ -8,16 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class MoveToMemberSearchIdResult
+ * Servlet implementation class MoveToMemberSearchIdController
  */
-@WebServlet("/searchIdResult.me")
-public class MoveToMemberSearchIdResult extends HttpServlet {
+@WebServlet("/moveToSearchId.me")
+public class MoveToMemberSearchIdController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public MoveToMemberSearchIdResult() {
+    public MoveToMemberSearchIdController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -25,10 +25,8 @@ public class MoveToMemberSearchIdResult extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("views/member/memberSearchIdResult.jsp").forward(request, response);
-
-	
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.getRequestDispatcher("views/member/memberSearchIdForm.jsp").forward(request, response);
 	}
 
 	/**

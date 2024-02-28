@@ -7,17 +7,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.kh.semi1st.member.model.service.MemberService;
+import com.kh.semi1st.member.model.vo.Member;
+
 /**
- * Servlet implementation class MoveToMemberSearchIdPwController
+ * Servlet implementation class MemberSearchPwController
  */
-@WebServlet("/moveToSearchIdPw.me")
-public class MoveToMemberSearchIdPwController extends HttpServlet {
+@WebServlet("/searchPw.me")
+public class MemberSearchPwController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public MoveToMemberSearchIdPwController() {
+    public MemberSearchPwController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -26,7 +29,17 @@ public class MoveToMemberSearchIdPwController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("views/member/memberSearchIdPwForm.jsp").forward(request, response);
+
+		String userId = request.getParameter("checkId");
+		String name = request.getParameter("checkName");
+		String email = request.getParameter("checkEmail");
+		
+		String userPw = new MemberService().searchPwMember(userId, name, email);
+		
+		response.setContentType("text/html; charset=utf-8");
+		response.getWriter().print(userPw);
+
+		
 	}
 
 	/**
