@@ -72,4 +72,15 @@
 		   AND USER_STATUS = 'Y'
 	</entry>
 	
+	<entry key="searchPw">
+		SELECT
+		       USER_PWD
+		  FROM TB_MEMBER
+		 WHERE USER_ID = ?
+		   AND USER_NAME = ?
+		   AND USER_EMAIL = ?
+		   AND USER_STATUS = 'Y'
+	
+	</entry>
+	
 </properties>
