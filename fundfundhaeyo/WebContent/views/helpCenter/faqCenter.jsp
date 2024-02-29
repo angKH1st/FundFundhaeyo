@@ -6,8 +6,8 @@
 <meta charset="UTF-8">
 <title>뻔뻔해요</title>
 <link rel="stylesheet" href="resources/css/helpCenter/faqCenter.css">
-<script src="resources/js/helpCenter/faqCenter.js" rel="javascript"></script>
 </head>
+<link rel="icon" href="data:;base64,iVBORw0KGgo=">
 <body>
 	<%@ include file="../common/header.jsp" %>
 	
@@ -42,5 +42,7 @@
     </div>
     
 	<%@ include file="../common/footer.jsp" %>
+	
+	<script src="resources/js/helpCenter/faqCenter.js" rel="javascript"></script>
 </body>
 </html>
