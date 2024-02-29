@@ -71,6 +71,16 @@
 		   AND USER_EMAIL = ?
 		   AND USER_STATUS = 'Y'
     </entry>
+    
+    <entry key="searchPw">
+		SELECT
+		       USER_PWD
+		  FROM TB_MEMBER
+		 WHERE USER_ID = ?
+		   AND USER_NAME = ?
+		   AND USER_EMAIL = ?
+		   AND USER_STATUS = 'Y'
+	</entry>
 		   
 	<entry key="selectMemberList">
 		SELECT
@@ -130,15 +140,32 @@
 		 WHERE USER_STATUS = 'Y'
 	</entry>
 	
-	<entry key="searchPw">
+	<entry key="memberSearchId">
 		SELECT
-		       USER_PWD
+		       USER_NO
+		     , USER_ID
+		     , USER_PWD
+		     , USER_NAME
+		     , USER_SSN
+		     , USER_NICKNAME
+		     , USER_PHONE
+		     , USER_EMAIL
+		     , USER_ADDRESS
+		     , USER_PROFILE
+		     , USER_GRADE
+		     , USER_MARKETING
+		     , USER_ENROLL_DATE
+		     , USER_MODIFY_DATE
+		     , USER_TYPE
+		     , USER_STATUS
 		  FROM TB_MEMBER
 		 WHERE USER_ID = ?
-		   AND USER_NAME = ?
-		   AND USER_EMAIL = ?
-		   AND USER_STATUS = 'Y'
+	</entry>
 	
+	<entry key="updateMemberBanAllow">
+		UPDATE TB_MEMBER
+		   SET USER_STATUS = ?
+		 WHERE USER_ID = ?
 	</entry>
 	
 </properties>

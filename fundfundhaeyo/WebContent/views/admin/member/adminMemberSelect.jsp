@@ -41,7 +41,7 @@
 	    				<thead>
 	    					<tr>
 	    						<td style="width:40px;">#</td>
-	    						<td style="width:80px;">회원번호</td>
+	    						<td style="width:100px;">회원번호</td>
 	    						<td style="width:120px;">이름</td>
 	    						<td style="width:120px;">아이디</td>
 	    						<td style="width:200px;">닉네임</td>

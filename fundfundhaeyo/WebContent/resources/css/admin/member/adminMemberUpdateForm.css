@@ -3,7 +3,7 @@
 .adm-content {
     position: relative;  /* 추가 */
     width: calc(100% - 70px);  /* 컨텐츠의 초기 너비를 사이드바의 너비에 맞게 설정 */
-    height: 1500px;
+    height: 1000px;
     padding: 20px;
     left: 70px;  /* 헤더의 초기 위치를 사이드바의 너비에 맞게 설정 */
     top: 55px;
@@ -14,7 +14,7 @@
 
 .adm-content>div{width: 100%;}
 .adm-content-top{height: 55px; margin-bottom: 20px;}
-.adm-content-center{height: 1200px;}
+.adm-content-center{height: 800px; margin-bottom: 80px;}
 
 .adm-content-top>div{height: 100%;}
 .adm-content-top-title{width: 20%;}
@@ -26,4 +26,85 @@
 .adm-content-top-root-third{width: 49%; padding-left: 5px;}
 .adm-content-top-root-second{width: 2%;}
 
-div{border: 1px solid red;}
+.adm-content-center>div{width: 100%; border-radius: 5px; border: 0.5px solid lightgray; border-radius: 5px; background-color: white;}
+.adm-content-center-top{height: 5%; margin-bottom: 20px;}
+.adm-content-center-main{height: 95%;}
+
+.adm-content-center-main>div{width: 100%;}
+.adm-content-center-main-header{height: 5%; background-color: #f8f9fa; border-bottom: 0.5px solid lightgray; padding: 8px 0 0 17px;}
+.adm-content-center-main-body{height: 95%;}
+
+.adm-content-center-main-body>div{height: 100%;}
+.adm-content-center-main-body-left{width: 20%;}
+.adm-content-center-main-body-right{width: 80%;}
+
+.adm-content-center-main-body-header{background-color: #f8f9fa; border-radius: 5px; text-align: center; line-height: 180%;}
+
+.adm-content-center-main-body-left>div{width: 100%; height: 50%;}
+.adm-content-center-main-body-right>div{width: 100%;}
+.adm-content-right-profile1{height: 60%;}
+.adm-content-right-profile2{height: 30%;}
+.adm-content-right-profile3{height: 10%;}
+
+.adm-content-left-profile1>div, .adm-content-left-profile2>div{border: 0.5px solid lightgray;}
+.adm-content-left-profile1-header{height: 10%;}
+.adm-content-left-profile1-body{height: 90%;}
+
+.adm-content-left-profile1-body>div, .adm-content-left-profile2-body>div{width: 100%; height: 100%;}
+.adm-content-left-profile1-body-photo{border: 0.5px solid lightgray; border-radius: 5px;}
+
+.adm-content-left-profile2-header{height: 10%;}
+.adm-content-left-profile2-body{height: 90%; padding: 15px;}
+.adm-content-left-profile2-body-grade>div{width: 100%; height: 25%;}
+.adm-content-left-profile2-body-grade>div>div{width: 50%; height: 100%; text-align:center; line-height: 360%; border: 0.5px solid lightgray; border-radius: 5px;}
+
+.adm-content-right-profile1>div, .adm-content-right-profile2>div{border: 0.5px solid lightgray;}
+.adm-content-right-profile1-header{height: 8%;}
+.adm-content-right-profile1-body{height: 92%;}
+
+.adm-content-right-profile1-body-info{width: 100%; height: 100%; border: 0.5px solid lightgray; border-radius: 5px;}
+.adm-content-right-profile1-body-info>div{height: 100%;}
+.adm-content-right-profile1-body-info-col1{width: 30%;}
+.adm-content-right-profile1-body-info-col2{width: 30%;}
+.adm-content-right-profile1-body-info-col3{width: 40%;}
+
+.adm-content-right-profile1-body-info-col1>div, .adm-content-right-profile1-body-info-col2>div{width: 100%; height: 20%;}
+
+.adm-content-right-profile1-body-info-col3>div{width: 100%;}
+.adm-info-col3-row1{height: 14%;}
+.adm-info-col3-row2{height: 60%;}
+.adm-info-col3-row3{height: 16%;}
+
+.adm-content-right-profile1-body-info-col1>div>div, .adm-content-right-profile1-body-info-col2>div>div{height: 100%;}
+.adm-info-userNo-title, .adm-info-userId-title, .adm-info-userPwd-title, .adm-info-userName-title, .adm-info-userSsn-title{width: 35%; border-right: 0.5px solid lightgray;} 
+.adm-info-userNo-input, .adm-info-userId-input, .adm-info-userPwd-input, .adm-info-userName-input, .adm-info-userSsn-input{width: 65%;} 
+
+.adm-info-userNickname-title, .adm-info-userPhone-title, .adm-info-userEmail-title, .adm-info-userAddress-title, .adm-info-userMarketing-title{width: 35%; border-right: 0.5px solid lightgray;} 
+.adm-info-userNickname-input, .adm-info-userPhone-input, .adm-info-userEmail-input, .adm-info-userAddress-input, .adm-info-userMarketing-input{width: 65%;} 
+
+
+.adm-info-col3-row1>div{height: 100%;}
+.adm-info-col3-row1-searchId-title{width: 40%; padding: 9px;}
+.adm-info-col3-row1-searchId-input{width: 53%;}
+.adm-info-col3-row1-searchId-input>input{width: 100%; height: 100%; padding-left: 10px;}
+.adm-info-col3-row1-searchId-btn{width: 7%;}
+
+.adm-info-col3-row2{margin: 15px 0;}
+.adm-info-col3-row2>div{width: 100%;}
+.adm-info-userProfile-title{height: 20%; text-align: center; padding: 5px; border-bottom: 0.5px solid lightgray;}
+.adm-info-userProfile-input{height: 80%; padding: 10px;}
+
+.adm-info-col3-row3>div{text-align: center; padding-top: 10px;}
+
+.adm-info-col3-row3>div{width: 50%; height: 100%;}
+
+.adm-content-right-profile2-header{height: 17%;}
+.adm-content-right-profile2-body{height: 83%;}
+
+.adm-content-right-profile3{text-align:right; margin-top: 30px;}
+.adm-content-right-profile3>button{width: 75px; height: 30px;}
+
+
+
+
+

@@ -90,6 +90,37 @@ public class MemberService {
 		
 		return list;
 	}
+
+	/** 회원 id로 검색
+	 *  @param searchId : 조회하고자 하는 회원 id
+	 *  @return m : 조회된 회원 객체 m
+	 */
+	public Member memberSearchId(String searchId) {
+		Connection conn = getConnection();
+		
+		Member m = new MemberDao().memberSearchId(conn, searchId);
+		
+		close(conn);
+		
+		return m;
+	}
+
+	public int updateMemberBanAllow(String userId, String userStatus) {
+		Connection conn = getConnection();
+		
+		int result = new MemberDao().updateMemberBanAllow(conn, userId, userStatus);
+		
+		if(result > 0) {
+			commit(conn);
+		}else {
+			rollback(conn);
+		}
+		
+		close(conn);
+		
+		return result;
+	}
+
 	
 	public String searchIdMember(String name, String email){
 		Connection conn = getConnection();

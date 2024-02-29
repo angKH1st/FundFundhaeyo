@@ -31,7 +31,7 @@
 .adm-content-center-main{height: 95%;}
 
 .adm-content-center-main>div{width: 100%;}
-.adm-content-center-main-header{height: 5%; border: 0.5px solid lightgray; padding: 8px 0 0 17px;}
+.adm-content-center-main-header{height: 5%; background-color: #f8f9fa; border-bottom: 0.5px solid lightgray; padding: 8px 0 0 17px;}
 .adm-content-center-main-body{height: 95%; padding: 15px;}
 
 .adm-content-center-main-body>div{width: 100%;}

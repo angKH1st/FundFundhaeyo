@@ -1,3 +1,4 @@
+<%@page import="com.kh.semi1st.member.model.vo.Member"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -13,11 +14,11 @@
 	<div class="adm-sidebar">
 		<div class="adm-sidebar-admin">
 			<div class="adm-sidebar-admin-symbol fl">F</div>
-			<div class="adm-sidebar-admin-logo fl"><h3><a href="<%= contextPath %>" class="hoverA"></a></h3></div>
+			<div class="adm-sidebar-admin-logo fl"><h3><a href="<%= request.getContextPath() %>" class="hoverA"><img src="resources/image/logo2.png" width="130px"></a></h3></div>
 		</div>
 		<div class="adm-sidebar-user">
 			<div class="adm-sidebar-user-profile fl"></div>
-			<div class="adm-sidebar-user-nickname fl"><h4><%= loginUser.getUserId() %></h4></div>
+			<div class="adm-sidebar-user-nickname fl"><h4><%= ((Member)session.getAttribute("loginUser")).getUserId() %></h4></div>
 		</div>
 		<div class="adm-sidebar-list listHover">
 			<ul>
@@ -41,9 +42,9 @@
 		        <li>
 		            <a class="adm-sidebar-main-menu"><i class="fas fa-angle-up"></i> 고객지원 관리</a>
 		            <ul class="hidden">
-		                <li><a href="#">공지사항</a></li>
-		                <li><a href="#">Q&A</a></li>
-		                <li><a href="#">FAQ</a></li>
+		                <li><a href="admAnnouncement.hp">공지사항</a></li>
+		                <li><a href="admFaq.hp">FAQ</a></li>
+		                <li><a href="admQna.hp">Q&A</a></li>
 		            </ul>
 		        </li>
 		        <li>

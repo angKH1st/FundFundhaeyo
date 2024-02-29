@@ -7,17 +7,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.kh.semi1st.member.model.service.MemberService;
+
 /**
- * Servlet implementation class AdminMoveToMemberUpdateController
+ * Servlet implementation class AdminMemberBanAllowUpdateController
  */
-@WebServlet("/admMoveToUpdate.me")
-public class AdminMoveToMemberUpdateController extends HttpServlet {
+@WebServlet("/admUpdateBanAllow.me")
+public class AdminMemberBanAllowUpdateController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AdminMoveToMemberUpdateController() {
+    public AdminMemberBanAllowUpdateController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -26,13 +28,13 @@ public class AdminMoveToMemberUpdateController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String searchId = request.getParameter("searchId"); 
+		String userId = (request.getParameter("userId"));
+		String userStatus = request.getParameter("userStatus"); 
 		
-		if(searchId != null) {
-			request.setAttribute("searchId", searchId);
-		}
+		int result = new MemberService().updateMemberBanAllow(userId, userStatus);
 		
-		request.getRequestDispatcher("views/admin/member/adminMemberUpdateForm.jsp").forward(request, response);
+		response.setContentType("text/html; charset=UTF-8");
+		response.getWriter().print(result);
 	}
 
 	/**

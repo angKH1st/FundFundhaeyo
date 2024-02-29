@@ -4,7 +4,7 @@ function loadPage(cpage) {
 	    type: "GET",
 	    data: {cpage:cpage},
 	    success: function(map){
-			var pi = map.pi; 		// 응답으로 받은 JSON 객체에서 pi를 추출
+			const pi = map.pi; 		// 응답으로 받은 JSON 객체에서 pi를 추출
 			
 			var listCount = pi.listCount;
 			var currentPage = pi.currentPage; 
@@ -20,22 +20,26 @@ function loadPage(cpage) {
 			$pageDiv.empty(); // 페이지 번호 버튼 비우기
 			
 			if(currentPage != 1){
-	          $pageDiv.append("<button class=\"page-num page-button\" data-page=\"" + (currentPage-1) + "\">&lt;</button>");
-	        }
-	
+			  $pageDiv.append("<button class=\"page-num page-button\" data-page=\"" + (currentPage-1) + "\">&lt;</button>");
+			}else{
+			  $pageDiv.append("<button class=\"page-num page-button\" data-page=\"" + (currentPage-1) + "\" disabled>&lt;</button>");
+			}
+	        
 	        for(let p = startPage; p <= endPage; p++){
-	          if(p == currentPage){
-	            $pageDiv.append("<button class=\"page-button\" disabled>" + p + "</button>");
-	          }else{
-	            $pageDiv.append("<button class=\"page-num page-button\" data-page=\"" + p + "\">" + p + "</button>");
-	          }
-	        }
-	
+			  if(p == currentPage){
+			    $pageDiv.append("<button class=\"page-button\" disabled>" + p + "</button>");
+			  }else{
+			    $pageDiv.append("<button class=\"page-num page-button\" data-page=\"" + p + "\">" + p + "</button>");
+			  }
+			}
+
 	        if(currentPage != maxPage){
-	          $pageDiv.append("<button class=\"page-num page-button\" data-page=\"" + (currentPage+1) + "\">&gt;</button>");
-	        }
+			  $pageDiv.append("<button class=\"page-num page-button\" data-page=\"" + (currentPage+1) + "\">&gt;</button>");
+			}else{
+			  $pageDiv.append("<button class=\"page-num page-button\" data-page=\"" + (currentPage+1) + "\" disabled>&gt;</button>");
+			}
 			
-			var list = map.list; 	// 응답으로 받은 JSON 객체에서 list를 추출
+			const list = map.list; 	// 응답으로 받은 JSON 객체에서 list를 추출
 			
 			const memberDiv = $(".adm-content-center-main-body2 tbody");
 			
@@ -54,7 +58,7 @@ function loadPage(cpage) {
 						     + "<td>" + list[i].userGrade + "</td>"
 						     + "<td>" + list[i].userStatus + "</td>"
 						     + "<td>" + 
-						     	"<a href=\"#\"><i class=\"hoverA2 fa-regular fa-pen-to-square fa-lg\"></i></a>" +
+						     	"<a href=\"admMoveToUpdate.me?searchId=" + list[i].userId + "\"><i class=\"hoverA2 fa-regular fa-pen-to-square fa-lg\"></i></a>" +
 						     	"<a href=\"#\"><i style=\"margin-left: 10px;\" class=\"hoverA2 fa-solid fa-ban fa-lg\"></i></a>" +
 					     	   "</td>"
 						     + "</tr>");
@@ -77,9 +81,9 @@ window.onload = function(){
 	loadPage(1);
 }
 
- $(document).on("click", ".page-num", function(e){
+$(document).on("click", ".page-num", function(e){
 	e.preventDefault();
 	var cpage = $(this).data("page");
 	loadPage(cpage);
- });
+});
 

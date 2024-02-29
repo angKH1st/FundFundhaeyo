@@ -1,4 +1,4 @@
-package com.kh.semi1st.admin.member;
+package com.kh.semi1st.admin.helpCenter;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -8,16 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class AdminMoveToMemberUpdateController
+ * Servlet implementation class AdminQnaCenterController
  */
-@WebServlet("/admMoveToUpdate.me")
-public class AdminMoveToMemberUpdateController extends HttpServlet {
+@WebServlet("/admQna.hp")
+public class AdminQnaCenterController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AdminMoveToMemberUpdateController() {
+    public AdminQnaCenterController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -26,13 +26,7 @@ public class AdminMoveToMemberUpdateController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String searchId = request.getParameter("searchId"); 
-		
-		if(searchId != null) {
-			request.setAttribute("searchId", searchId);
-		}
-		
-		request.getRequestDispatcher("views/admin/member/adminMemberUpdateForm.jsp").forward(request, response);
+		request.getRequestDispatcher("views/admin/helpCenter/adminQnaCenter.jsp").forward(request, response);
 	}
 
 	/**

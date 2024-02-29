@@ -5,6 +5,9 @@
 	Member loginUser = (Member)session.getAttribute("loginUser");
 	String contextPath = request.getContextPath() + "/admin";
 	
+	session.setAttribute("contextPath", contextPath);
+	session.setAttribute("loginUser", loginUser);
+	
 	String alertMsg = (String)session.getAttribute("alertMsg");
 %>
 <!DOCTYPE html>
