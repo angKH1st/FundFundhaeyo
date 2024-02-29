@@ -6,22 +6,12 @@
 <meta charset="UTF-8">
 <title>뻔뻔해요</title>
 <link rel="stylesheet" href="resources/css/company/companyIntroduction.css">
-<script src="resources/js/company/companyIntroduction.js" rel="javascript"></script>
-<style>
-/* 기본 셋업 */
-	.introduction_outer{width:100%; height: 1000px; padding: 0 300px;}
-	.introduction_outer>div{width:100%;}
-	.blank_top{height: 15%;}
-	.blank_bottom{height: 5%;}
-
-	/* 메인 영역 시작 */
-	.introduction_main{height: 80%;}
-</style>
 </head>
+<link rel="icon" href="data:;base64,iVBORw0KGgo=">
 <body>
 	<%@ include file="../common/header.jsp" %>
 	
-	<div class="introduction_outer">
+	<div class="introduction_outer font_outer">
 		<div class="blank_top"><%-- 여백 --%></div>
 		
 		<div class="introduction_main">
@@ -70,5 +60,7 @@
     </div>
     
 	<%@ include file="../common/footer.jsp" %>
+	
+	<script src="resources/js/company/companyIntroduction.js" rel="javascript"></script>
 </body>
 </html>

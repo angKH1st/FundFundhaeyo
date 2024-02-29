@@ -17,13 +17,13 @@ import com.kh.semi1st.company.model.vo.Announcement;
  * Servlet implementation class MoveToHelpCenterController
  */
 @WebServlet("/announcement.hp")
-public class AnnouncementCenterListController extends HttpServlet {
+public class AnnouncementCenterController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AnnouncementCenterListController() {
+    public AnnouncementCenterController() {
         super();
         // TODO Auto-generated constructor stub
     }

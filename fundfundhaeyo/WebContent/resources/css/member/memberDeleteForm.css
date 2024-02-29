@@ -1,0 +1,74 @@
+@charset "UTF-8";
+/* 기본 셋업 */
+.mypage_delete_form_outer{background-color: #eef5f5; width:100%; height: 1000px; padding: 0 300px; border: box-sizing;}
+.mypage_delete_form_outer>div{width:100%;}
+.blank_top{height: 15%;}
+.blank_bottom{height: 5%;}
+
+/* 메인 영역 시작 */
+.mypage_delete_form_main{height: 80%;}
+.mypage_delete_form_main>div{height: 100%;}
+
+.mypage_delete_form_left{width: 200px;}
+.mypage_delete_form_right{width: 1101px; background-color: white;}
+
+.mypage_delete_form_right>div{width: 100%;}
+.mypage_delete_form_right_root{height: 33px;}
+.mypage_delete_form_right_title{height: 54px; padding-top: 7px;}
+.mypage_delete_form_right_deleteForm{height: 89%;}
+.mypage_delete_form_right_outline{width: 500px;}
+
+.delete-input-container{text-align: center;}
+.delete-input-container{
+	display: block;
+    width: 50%;
+    margin: auto;
+    padding-top:40px;
+    width:300px;
+}
+.delete-input-container .delete-input-wrap{
+    width:300px;
+    height: 45px;
+    margin-top: 20px;
+    border-radius: 2px;
+    border-bottom: solid 2px #2178ff;
+}
+.delete-input-container .delete-input-wrap i{
+    color: #2178ff;
+    line-height: 45px;
+}
+
+.delete-input-container .delete-input-wrap input{
+    background: none;
+    border: none;
+    line-height: 45px;
+    padding-left:10px;
+    width:267px;
+}
+.delete-input-container .delete-input-wrap input:focus{
+	border: none;
+    outline: none;
+}
+.delete-btn-wrap{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;;
+}
+.delete-btn-wrap .delete-btn{
+    width:95px;
+    height:35px;
+    color:white;
+    border: 0;
+    border-radius: 4px;
+    background: rgb(105,163,255);
+	background: linear-gradient(162deg, rgba(105,163,255,1) 0%, rgba(43,125,254,1) 50%, rgba(43,125,254,1) 100%);
+}
+.delete-btn-wrap a{
+    margin-top:10px;
+    text-decoration: none;
+    font-size: 11px;
+    color: gray;
+}
+
+/* 메인 영역 끝 */

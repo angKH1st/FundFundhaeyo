@@ -1,59 +1,45 @@
 @charset "UTF-8";
 /* 기본 셋업 */
-.mypage_outer{width:100%; height: 1000px; padding: 0 300px;}
+.mypage_outer{background-color: #eef5f5; width:100%; height: 1000px; padding: 0 300px; border: box-sizing;}
 .mypage_outer>div{width:100%;}
 .blank_top{height: 15%;}
 .blank_bottom{height: 5%;}
 
 /* 메인 영역 시작 */
-.mypage_main{height: 80%; border:1px solid red;}
+.mypage_main{height: 80%;}
 .mypage_main>div{height: 100%;}
-.mypage_left_area{width: 19%; margin-right: 26px;}
-.mypage_right_area{width: 79%;}
 
-/* 좌측 영역 */
-.mypage_left_area>div{width: 100%;}
-.mypage_left_top{height: 29%; margin-bottom: 28px;}
-.mypage_left_content{height: 68%;}
+.mypage_left{width: 200px;}
+.mypage_right{width: 1101px; background-color: white;}
 
-.hidden {display: none;}
-.mypage_left_content:hover {cursor: pointer;}
-.mypage_left_content ul {list-style: none; padding-left: 0;}
+.mypage_right>div{width: 100%;}
+.mypage_right_content1{height: 57%;}
+.mypage_right_content2{height: 42%; margin-top: 10px;}
 
-.mypage_left_content ul li a, .mypage_left_content ul li .mypage_left_content-main-menu {
-    display: inline-block;
-    width: 100%;
-    height: 40px;
-    white-space: nowrap;
-    overflow: hidden;
-    font-size: 14px;
-    padding: 8px 8px;
-    text-decoration: none;
-}
+.mypage_right_content1>div{width: 100%;}
+.mypage_right_root{height: 8%;}
+.mypage_right_title{height: 13%; padding-top: 7px;}
+.mypage_right_activity{height: 79%;}
 
-.mypage_left_content ul li .mypage_left_content-main-menu {
-    background-color: #007BFF;
-    border-radius: 5px;
-}
+.mypage_right_activity>div{width: 100%;}
+.mypage_activity_row1{height: 80%;}
+.mypage_activity_row2{height: 20%; border-top: 0.5px solid lightgray;}
 
-.mypage_left_content > ul > li > ul > li:hover {background-color: lightskyblue;}
-.mypage_left_content-main-menu{color: white;}
+.mypage_activity_row1>div{height: 100%; width: 25%; text-align: center; padding: 40px;}
+.mypage_activity_row2>div{height: 100%; width: 25%; text-align: center;}
 
-/* 우측 영역 */
-.mypage_right_area>div{width: 100%;}
-.mypage_right_top{height: 20%;}
-.mypage_right_content{height: 40%; border-top: 2px solid black; border-bottom: 2px solid black;}
-.mypage_right_bottom{height: 40%;}
+.mypage_activity_row1>div>div{width: 100%; height: 50%;}
+.mypage_activity_row1>div>div>h2, .mypage_activity_row1>div>div>h5{display: inline;}
 
-.mypage_right_top>div{width: 100%;}
-.mypage_right_top_root{height: 20%;}
-.mypage_right_top_title{height: 80%;}
-.mypage_right_top_title>h1{line-height: 250%; font-size: 50px;}
+.mypage_activity_row1_grade2, .mypage_activity_row1_grade3, .mypage_activity_row1_grade4{border-left: 0.5px solid lightgray;}
+.mypage_activity_row1_grade1_title, .mypage_activity_row1_grade2_title, .mypage_activity_row1_grade3_title, .mypage_activity_row1_grade4_title{padding-top: 35px;}
+.mypage_activity_row1_grade1_count, .mypage_activity_row1_grade2_count, .mypage_activity_row1_grade3_count, .mypage_activity_row1_grade4_count{padding-top: 15px;}
 
-.mypage_right_content>div{height: 100%;}
-.mypage_right_content_grade{width: 15%;}
-.mypage_right_content_profile{width: 35%;}
-.mypage_right_content_introduction{width: 50%;}
+.mypage_activity_row2>div{padding-top: 20px;}
+.mypage_activity_row2_grade2, .mypage_activity_row2_grade3, .mypage_activity_row2_grade4{border-left: 0.5px solid lightgray;}
+
+.mypage_right_content2>div{width: 100%;}
+.mypage_right_title2{height: 15%; padding-top: 7px;}
+.mypage_right_TBD{height: 80%;}
 
 /* 메인 영역 끝 */
-.mypage_main div{border: 0.5px solid blue;}
