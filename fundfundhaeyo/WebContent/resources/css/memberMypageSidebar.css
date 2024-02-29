@@ -1,0 +1,32 @@
+@charset "UTF-8";
+/* 마이페이지 좌측 사이드바 영역 시작 */
+.mypage_left_area{background-color: #f5f5f5; width: 200px; height: 798px; border: box-sizing; border-right: 0.5px solid lightgray;}
+
+.mypage_left_area>div{width: 100%;}
+.mypage_left_top{height: 200px; margin-bottom: 28px; border-bottom: 0.5px solid lightgray;}
+.mypage_left_content{height: 572px;}
+
+.hidden {display: none;}
+.mypage_left_content:hover {cursor: pointer;}
+.mypage_left_content ul {list-style: none; padding-left: 0; margin: 0;}
+
+.mypage_left_content ul li a, .mypage_left_content ul li .mypage_left_content-main-menu {
+    display: inline-block;
+    width: 200px;
+    height: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 14px;
+    padding: 8px 8px;
+    text-decoration: none;
+}
+
+.mypage_left_content ul li .mypage_left_content-main-menu {
+    background-color: #add8e6;
+    border-radius: 5px;
+}
+
+.mypage_left_content > ul > li > ul > li:hover {background-color: lightskyblue;}
+.mypage_left_content-main-menu{color: white;}
+
+/* 마이페이지 좌측 사이드바 영역 끝 */

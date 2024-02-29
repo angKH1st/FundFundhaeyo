@@ -1,0 +1,29 @@
+@charset "UTF-8";
+/* 기본 셋업 */
+.mypage_likes_Form_outer{background-color: #eef5f5; width:100%; height: 1000px; padding: 0 300px; border: box-sizing;}
+.mypage_likes_Form_outer>div{width:100%;}
+.blank_top{height: 15%;}
+.blank_bottom{height: 5%;}
+
+/* 메인 영역 시작 */
+.mypage_likes_Form_main{height: 80%;}
+.mypage_likes_Form_main>div{height: 100%;}
+
+.mypage_likes_Form_left{width: 200px;}
+.mypage_likes_Form_right{width: 1101px; background-color: white;}
+
+.mypage_likes_Form_right>div{width: 100%;}
+.mypage_likes_Form_right_content1{height: 57%;}
+.mypage_likes_Form_right_content2{height: 42%; margin-top: 10px;}
+
+.mypage_likes_Form_right_content1>div{width: 100%;}
+.mypage_likes_Form_right_root{height: 8%;}
+.mypage_likes_Form_right_title{height: 13%; padding-top: 7px;}
+.mypage_likes_Form_right_TBD{height: 79%;}
+
+.mypage_likes_Form_right_content2>div{width: 100%;}
+.mypage_likes_Form_right_title2{height: 15%; padding-top: 7px;}
+.mypage_likes_Form_right_TBD2{height: 80%;}
+
+/* 메인 영역 끝 */
+.mypage_likes_main div{border: 0.5px solid skyblue;}

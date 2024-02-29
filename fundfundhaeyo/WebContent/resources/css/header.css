@@ -20,6 +20,27 @@ html {overflow-y: scroll;}
 .ca{text-decoration: none; color: rgb(108, 108, 108);}
 .texthover:hover{color: lightskyblue;}
 .fl{float: left;}
+.hoverA{text-decoration: none; color: white;}
+.hoverA:hover{font-weight: bold;}
+
+.hoverA2{text-decoration: none; color: black;}
+.hoverA2:hover{font-weight: bold;}
+
+.hoverA2-2{text-decoration: none; color: black;}
+.hoverA2-2:hover{font-weight: bold; background-color: #f5f5f5;}
+
+.hoverA3:hover{font-weight: bold; cursor: pointer;}
+
+.pd15{padding: 15px;}
+.br5{border-radius: 5px;}
+.brlg{border: 0.5px solid lightgray;}
+.bglg{background-color: #f5f5f5;}
+
+.shadow{
+    -webkit-box-shadow: 27px 43px 43px -26px rgba(89,89,89,0.39);
+    -moz-box-shadow: 27px 43px 43px -26px rgba(89,89,89,0.39);
+    box-shadow: 27px 43px 43px -26px rgba(89,89,89,0.39);
+}
 
 /* 전체 레이아웃 */
 .ffh_wrap{width: 100%; margin: auto; padding: 0 300px;}
