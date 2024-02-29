@@ -1,8 +1,8 @@
--- °èÁ¤ »ý¼º ±¸¹®
+-- ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 -- CREATE USER FFHY IDENTIFIED BY FFHY;
 -- GRANT CONNECT, RESOURCE TO FFHY;
 
----------------------- »èÁ¦ ----------------------
+---------------------- ï¿½ï¿½ï¿½ï¿½ ----------------------
 DROP TABLE TB_DELIVERY;
 DROP TABLE TB_ORDER;
 DROP TABLE TB_FUNDING_OPTION;
@@ -23,23 +23,23 @@ DROP TABLE TB_NOTICE;
 DROP TABLE TB_ANNOUNCEMENT;
 DROP TABLE TB_MEMBER;
 
-DROP SEQUENCE SEQ_DELIVERY_NO;       -- ¹è¼Û ¹øÈ£ ¹ß»ý ½ÃÄö½º
-DROP SEQUENCE SEQ_ORDER_NO;          -- ÁÖ¹® ¹øÈ£ ¹ß»ý ½ÃÄö½º
-DROP SEQUENCE SEQ_OPTION_NO;         -- ÆÝµù ¿É¼Ç ¹øÈ£ ¹ß»ý ½ÃÄö½º
-DROP SEQUENCE SEQ_REPLY_NO;          -- ´ñ±Û ¹øÈ£ ¹ß»ý ½ÃÄö½º
-DROP SEQUENCE SEQ_PAYMENT_NO;        -- °áÁ¦ ¹øÈ£ ¹ß»ý ½ÃÄö½º
-DROP SEQUENCE SEQ_FILE_NO;           -- ÆÄÀÏ ¹øÈ£ ¹ß»ý ½ÃÄö½º
-DROP SEQUENCE SEQ_LIKES_NO;          -- ÂòÇÏ±â ¹øÈ£ ¹ß»ý ½ÃÄö½º
-DROP SEQUENCE SEQ_PROJECT_NO;        -- ÇÁ·ÎÁ§Æ® ¹øÈ£ ¹ß»ý ½ÃÄö½º
-DROP SEQUENCE SEQ_USER_NO;           -- È¸¿ø ¹øÈ£ ¹ß»ý ½ÃÄö½º
-DROP SEQUENCE SEQ_ANNOUNCEMENT_NO;   -- °øÁö ¹øÈ£ ¹ß»ý ½ÃÄö½º
-DROP SEQUENCE SEQ_NOTICE_NO;         -- ¾Ë¸² ¹øÈ£ ¹ß»ý ½ÃÄö½º
-DROP SEQUENCE SEQ_FAQ_NO;            -- FAQ ¹øÈ£ ¹ß»ý ½ÃÄö½º
-DROP SEQUENCE SEQ_QNA_NO;            -- QNA ¹øÈ£ ¹ß»ý ½ÃÄö½º
-DROP SEQUENCE SEQ_CHAT_NO;           -- Ã¤ÆÃ ¹øÈ£ ¹ß»ý ½ÃÄö½º
-DROP SEQUENCE SEQ_REPORT_NO;         -- ½Å°í ¹øÈ£ ¹ß»ý ½ÃÄö½º
+DROP SEQUENCE SEQ_DELIVERY_NO;       -- ï¿½ï¿½ï¿½ ï¿½ï¿½È£ ï¿½ß»ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+DROP SEQUENCE SEQ_ORDER_NO;          -- ï¿½Ö¹ï¿½ ï¿½ï¿½È£ ï¿½ß»ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+DROP SEQUENCE SEQ_OPTION_NO;         -- ï¿½Ýµï¿½ ï¿½É¼ï¿½ ï¿½ï¿½È£ ï¿½ß»ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+DROP SEQUENCE SEQ_REPLY_NO;          -- ï¿½ï¿½ï¿½ ï¿½ï¿½È£ ï¿½ß»ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+DROP SEQUENCE SEQ_PAYMENT_NO;        -- ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£ ï¿½ß»ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+DROP SEQUENCE SEQ_FILE_NO;           -- ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£ ï¿½ß»ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+DROP SEQUENCE SEQ_LIKES_NO;          -- ï¿½ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½È£ ï¿½ß»ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+DROP SEQUENCE SEQ_PROJECT_NO;        -- ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½È£ ï¿½ß»ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+DROP SEQUENCE SEQ_USER_NO;           -- È¸ï¿½ï¿½ ï¿½ï¿½È£ ï¿½ß»ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+DROP SEQUENCE SEQ_ANNOUNCEMENT_NO;   -- ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£ ï¿½ß»ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+DROP SEQUENCE SEQ_NOTICE_NO;         -- ï¿½Ë¸ï¿½ ï¿½ï¿½È£ ï¿½ß»ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+DROP SEQUENCE SEQ_FAQ_NO;            -- FAQ ï¿½ï¿½È£ ï¿½ß»ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+DROP SEQUENCE SEQ_QNA_NO;            -- QNA ï¿½ï¿½È£ ï¿½ß»ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+DROP SEQUENCE SEQ_CHAT_NO;           -- Ã¤ï¿½ï¿½ ï¿½ï¿½È£ ï¿½ß»ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+DROP SEQUENCE SEQ_REPORT_NO;         -- ï¿½Å°ï¿½ ï¿½ï¿½È£ ï¿½ß»ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 --------------------------------------------------
------------------ MEMBER °ü·Ã ---------------------	
+----------------- MEMBER ï¿½ï¿½ï¿½ï¿½ ---------------------	
 --------------------------------------------------
 CREATE TABLE TB_MEMBER (
   USER_NO NUMBER CONSTRAINT USER_NO_PK PRIMARY KEY,               
@@ -51,7 +51,7 @@ CREATE TABLE TB_MEMBER (
   USER_PHONE VARCHAR2(13) CONSTRAINT USER_PHONE_NN NOT NULL,              
   USER_EMAIL VARCHAR2(100) CONSTRAINT USER_EMAIL_NN NOT NULL,            
   USER_ADDRESS VARCHAR2(100) CONSTRAINT USER_ADDRESS_NN NOT NULL,
-  USER_PROFILE VARCHAR2(4000) DEFAULT '¾È³çÇÏ¼¼¿ä',
+  USER_PROFILE VARCHAR2(4000) DEFAULT 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½',
   USER_GRADE NUMBER DEFAULT 1,
   USER_MARKETING VARCHAR2(1) DEFAULT 'N' CONSTRAINT USER_MARKETING_CK CHECK (USER_MARKETING IN('Y', 'N')),
   USER_ENROLL_DATE DATE DEFAULT SYSDATE,
@@ -61,126 +61,126 @@ CREATE TABLE TB_MEMBER (
   CONSTRAINT UID_UQ UNIQUE (USER_ID)
 );
 
-COMMENT ON COLUMN TB_MEMBER.USER_NO IS 'È¸¿ø ¹øÈ£';
-COMMENT ON COLUMN TB_MEMBER.USER_ID IS 'È¸¿ø ¾ÆÀÌµð';
-COMMENT ON COLUMN TB_MEMBER.USER_PWD IS 'È¸¿ø ºñ¹Ð¹øÈ£';
-COMMENT ON COLUMN TB_MEMBER.USER_NAME IS 'È¸¿ø ÀÌ¸§';
-COMMENT ON COLUMN TB_MEMBER.USER_SSN IS 'È¸¿ø ÁÖ¹Îµî·Ï¹øÈ£';
-COMMENT ON COLUMN TB_MEMBER.USER_NICKNAME IS 'È¸¿ø ´Ð³×ÀÓ';
-COMMENT ON COLUMN TB_MEMBER.USER_PHONE IS 'È¸¿ø ÀüÈ­¹øÈ£';
-COMMENT ON COLUMN TB_MEMBER.USER_EMAIL IS 'È¸¿ø ÀÌ¸ÞÀÏ';
-COMMENT ON COLUMN TB_MEMBER.USER_ADDRESS IS 'È¸¿ø ÁÖ¼Ò';
-COMMENT ON COLUMN TB_MEMBER.USER_PROFILE IS 'È¸¿ø ¼Ò°³±Û';
-COMMENT ON COLUMN TB_MEMBER.USER_GRADE IS 'È¸¿ø µî±Þ (1 : ÀÏ¹Ý / 2 : °í±Þ)';
-COMMENT ON COLUMN TB_MEMBER.USER_MARKETING IS 'È¸¿ø ¸¶ÄÉÆÃµ¿ÀÇ¿©ºÎ (Y : µ¿ÀÇ / N : ¹Ìµ¿ÀÇ)';
-COMMENT ON COLUMN TB_MEMBER.USER_ENROLL_DATE IS 'È¸¿ø °¡ÀÔÀÏ';
-COMMENT ON COLUMN TB_MEMBER.USER_MODIFY_DATE IS 'È¸¿ø Á¤º¸¼öÁ¤ÀÏ';
-COMMENT ON COLUMN TB_MEMBER.USER_TYPE IS 'È¸¿ø À¯Çü(U : ÀÏ¹Ý / S : ¼Ò¼È)';
-COMMENT ON COLUMN TB_MEMBER.USER_STATUS IS 'È¸¿ø »óÅÂ°ª (Y : »ç¿ëÁß / N : Å»Åð / A : °ü¸®ÀÚ / B : ºí·¢¸®½ºÆ®)';
+COMMENT ON COLUMN TB_MEMBER.USER_NO IS 'È¸ï¿½ï¿½ ï¿½ï¿½È£';
+COMMENT ON COLUMN TB_MEMBER.USER_ID IS 'È¸ï¿½ï¿½ ï¿½ï¿½ï¿½Ìµï¿½';
+COMMENT ON COLUMN TB_MEMBER.USER_PWD IS 'È¸ï¿½ï¿½ ï¿½ï¿½Ð¹ï¿½È£';
+COMMENT ON COLUMN TB_MEMBER.USER_NAME IS 'È¸ï¿½ï¿½ ï¿½Ì¸ï¿½';
+COMMENT ON COLUMN TB_MEMBER.USER_SSN IS 'È¸ï¿½ï¿½ ï¿½Ö¹Îµï¿½Ï¹ï¿½È£';
+COMMENT ON COLUMN TB_MEMBER.USER_NICKNAME IS 'È¸ï¿½ï¿½ ï¿½Ð³ï¿½ï¿½ï¿½';
+COMMENT ON COLUMN TB_MEMBER.USER_PHONE IS 'È¸ï¿½ï¿½ ï¿½ï¿½È­ï¿½ï¿½È£';
+COMMENT ON COLUMN TB_MEMBER.USER_EMAIL IS 'È¸ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½';
+COMMENT ON COLUMN TB_MEMBER.USER_ADDRESS IS 'È¸ï¿½ï¿½ ï¿½Ö¼ï¿½';
+COMMENT ON COLUMN TB_MEMBER.USER_PROFILE IS 'È¸ï¿½ï¿½ ï¿½Ò°ï¿½ï¿½ï¿½';
+COMMENT ON COLUMN TB_MEMBER.USER_GRADE IS 'È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ (1 : ï¿½Ï¹ï¿½ / 2 : ï¿½ï¿½ï¿½ï¿½)';
+COMMENT ON COLUMN TB_MEMBER.USER_MARKETING IS 'È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ãµï¿½ï¿½Ç¿ï¿½ï¿½ï¿½ (Y : ï¿½ï¿½ï¿½ï¿½ / N : ï¿½Ìµï¿½ï¿½ï¿½)';
+COMMENT ON COLUMN TB_MEMBER.USER_ENROLL_DATE IS 'È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½';
+COMMENT ON COLUMN TB_MEMBER.USER_MODIFY_DATE IS 'È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½';
+COMMENT ON COLUMN TB_MEMBER.USER_TYPE IS 'È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½(U : ï¿½Ï¹ï¿½ / S : ï¿½Ò¼ï¿½)';
+COMMENT ON COLUMN TB_MEMBER.USER_STATUS IS 'È¸ï¿½ï¿½ ï¿½ï¿½ï¿½Â°ï¿½ (Y : ï¿½ï¿½ï¿½ï¿½ï¿½ / N : Å»ï¿½ï¿½ / A : ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ / B : ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®)';
 
 CREATE SEQUENCE SEQ_USER_NO
 NOCACHE;
 
 INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'admin', '1234', '°ü¸®ÀÚ', '950814-1234567', '°ü¸®ÀÚ', '010-1234-5678', 'admin@kh.or.kr', '¼­¿ï½Ã °­³²±¸ ¿ª»ïµ¿', '°ü¸®ÀÚÀÔ´Ï´Ù', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'A');
+VALUES (SEQ_USER_NO.NEXTVAL, 'admin', '1234', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', '950814-1234567', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', '010-1234-5678', 'admin@kh.or.kr', 'ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ïµ¿', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'A');
 
 INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user01', 'pass01', '¹Úº¸Çü', '900212-232141', '»Ç', '010-8460-1245', 'tt012@kh.or.kr', '¼­¿ï½Ã °­µ¿±¸ ÃµÈ£µ¿', 'Àú´Â ³Ê¹« ±Í¿©¿ö¿ä', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+VALUES (SEQ_USER_NO.NEXTVAL, 'user01', 'pass01', 'ï¿½Úºï¿½ï¿½ï¿½', '900212-232141', 'ï¿½ï¿½', '010-8460-1245', 'tt012@kh.or.kr', 'ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ÃµÈ£ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¹ï¿½ ï¿½Í¿ï¿½ï¿½ï¿½ï¿½ï¿½', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
 
 INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user02', 'pass02', 'À©Åß', '010101-2213456', '¾Ó', '010-0157-2354', 'win1@kh.or.kr', '¼­¿ï½Ã ¾çÃµ±¸ ¸ñµ¿', 'Èûµé´Ù', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+VALUES (SEQ_USER_NO.NEXTVAL, 'user02', 'pass02', 'ï¿½ï¿½ï¿½ï¿½', '010101-2213456', 'ï¿½ï¿½', '010-0157-2354', 'win1@kh.or.kr', 'ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ãµï¿½ï¿½ ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
 
 INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user03', 'pass03', 'Áø»õ¿¬', '940215-2224131', 'ÆÄ½ºÅ¸', '010-1218-1884', 'lll010@kh.or.kr', '¼­¿ï½Ã °­¼­±¸', '·ÎÁ¦ ÆÄ½ºÅ¸ ¸Ô°í ½Í¾î¿ä', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+VALUES (SEQ_USER_NO.NEXTVAL, 'user03', 'pass03', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', '940215-2224131', 'ï¿½Ä½ï¿½Å¸', '010-1218-1884', 'lll010@kh.or.kr', 'ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ ï¿½Ä½ï¿½Å¸ ï¿½Ô°ï¿½ ï¿½Í¾ï¿½ï¿½', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
 
 INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user04', 'pass04', 'Çá´Ï', '010101-2141231', '´ºÁø½º', '010-4747-4151', 'qw1eqw@kh.or.kr', '¼­¿ï½Ã °­ºÏ±¸', '´ºÁø½º ÇÏÀÔº¸ÀÌ¿ä', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+VALUES (SEQ_USER_NO.NEXTVAL, 'user04', 'pass04', 'ï¿½ï¿½ï¿½', '010101-2141231', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', '010-4747-4151', 'qw1eqw@kh.or.kr', 'ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï±ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ôºï¿½ï¿½Ì¿ï¿½', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
 
 INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user05', 'pass05', '±è»õ·Ð', '930814-2212164', '»çÅÁ', '010-0977-6456', 'zv3b@kh.or.kr', '¼­¿ï½Ã °­µ¿±¸', '±Û½ê¿ä', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+VALUES (SEQ_USER_NO.NEXTVAL, 'user05', 'pass05', 'ï¿½ï¿½ï¿½ï¿½ï¿½', '930814-2212164', 'ï¿½ï¿½ï¿½ï¿½', '010-0977-6456', 'zv3b@kh.or.kr', 'ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½Û½ï¿½ï¿½', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
 
 INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user06', 'pass06', 'È«µÎ½Ä', '881201-1227812', 'Á¹¸°»ç¶÷', '010-6542-1815', 'mmf34@kh.or.kr', '¼­¿ï½Ã °­µ¿±¸', '¾È³çÇÏ¼¼¿ä', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+VALUES (SEQ_USER_NO.NEXTVAL, 'user06', 'pass06', 'È«ï¿½Î½ï¿½', '881201-1227812', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', '010-6542-1815', 'mmf34@kh.or.kr', 'ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
 
 INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user07', 'pass07', '±èµ¹°³', '010511-1231214', 'ÀÏ¹ÝÀÎ', '010-6661-8142', 'dd1517@kh.or.kr', '¼­¿ï½Ã ¼­ÃÊ±¸ ¼­ÃÊµ¿', '¤¾¤·¿ä', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+VALUES (SEQ_USER_NO.NEXTVAL, 'user07', 'pass07', 'ï¿½èµ¹ï¿½ï¿½', '010511-1231214', 'ï¿½Ï¹ï¿½ï¿½ï¿½', '010-6661-8142', 'dd1517@kh.or.kr', 'ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ê±ï¿½ ï¿½ï¿½ï¿½Êµï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
 
 INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user08', 'pass08', '¹ÚÁ¤Âû', '050103-1112125', '¾ç³ä¹Ý', '010-8842-7151', 'qeqw111@kh.or.kr', '¼­¿ï½Ã ¼­ÃÊ±¸ ¼­ÃÊµ¿', '¾Æ ¸ô¶û', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+VALUES (SEQ_USER_NO.NEXTVAL, 'user08', 'pass08', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', '050103-1112125', 'ï¿½ï¿½ï¿½ï¿½', '010-8842-7151', 'qeqw111@kh.or.kr', 'ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ê±ï¿½ ï¿½ï¿½ï¿½Êµï¿½', 'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
 
 INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user09', 'pass09', 'ÃÖ¿¬µÎ', '931210-2262141', '¸Þ·Ð¸Àµþ±â', '010-8445-6456', 'mnmd2@kh.or.kr', '¼­¿ï½Ã °­µ¿±¸', 'Àá ¿Â´Ù', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+VALUES (SEQ_USER_NO.NEXTVAL, 'user09', 'pass09', 'ï¿½Ö¿ï¿½ï¿½ï¿½', '931210-2262141', 'ï¿½Þ·Ð¸ï¿½ï¿½ï¿½ï¿½ï¿½', '010-8445-6456', 'mnmd2@kh.or.kr', 'ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ ï¿½Â´ï¿½', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
 
 INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user10', 'pass10', 'ÇÏÁÖ¿¬', '870501-2223154', '¿­¹Þ´Â»ç¶÷', '010-1234-8124', 'uqeqweq@kh.or.kr', '¼­¿ï½Ã °­µ¿±¸', 'Áý °¡°í ½Í´Ù', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+VALUES (SEQ_USER_NO.NEXTVAL, 'user10', 'pass10', 'ï¿½ï¿½ï¿½Ö¿ï¿½', '870501-2223154', 'ï¿½ï¿½ï¿½Þ´Â»ï¿½ï¿½', '010-1234-8124', 'uqeqweq@kh.or.kr', 'ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Í´ï¿½', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
 
 INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user11', 'pass11', '±èÁÖÈ²', '990101-2141231', 'bjÁö¸Á»ý', '010-4312-1917', 'ubbd2@kh.or.kr', '¼­¿ï½Ã °­¼­±¸', '¹è°íÆÄ¿ä', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+VALUES (SEQ_USER_NO.NEXTVAL, 'user11', 'pass11', 'ï¿½ï¿½ï¿½ï¿½È²', '990101-2141231', 'bjï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', '010-4312-1917', 'ubbd2@kh.or.kr', 'ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
 
 INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user12', 'pass12', '¹ÚÆÈµÎ', '030923-1231511', 'µµ±úºñ', '010-0123-6456', 'rewab@kh.or.kr', '¼­¿ï½Ã °­µ¿±¸', '¾ðÁ¦±îÁö', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+VALUES (SEQ_USER_NO.NEXTVAL, 'user12', 'pass12', 'ï¿½ï¿½ï¿½Èµï¿½', '030923-1231511', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', '010-0123-6456', 'rewab@kh.or.kr', 'ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
 
 INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user13', 'pass13', 'ÃÖÁöÈÆ', '971012-1221811', 'Ã»¹ÙÁö°¡Àß¾î¿ï¸®´Â', '010-1234-6456', 'asee@kh.or.kr', '¼­¿ï½Ã °­µ¿±¸', 'À¸¾Æ¾Æ¾Ç', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+VALUES (SEQ_USER_NO.NEXTVAL, 'user13', 'pass13', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', '971012-1221811', 'Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß¾ï¿½ï¸®ï¿½ï¿½', '010-1234-6456', 'asee@kh.or.kr', 'ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½Æ¾Æ¾ï¿½', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
 
 INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user14', 'pass14', 'ÀÌµþ±â', '871108-2141231', '±êÅÐ', '010-1234-6456', 'usewer@kh.or.kr', '¼­¿ï½Ã °­³²±¸ ¿ª»ïµ¿', 'Àß ºÎÅ¹µå¸³´Ï´Ù', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+VALUES (SEQ_USER_NO.NEXTVAL, 'user14', 'pass14', 'ï¿½Ìµï¿½ï¿½ï¿½', '871108-2141231', 'ï¿½ï¿½ï¿½ï¿½', '010-1234-6456', 'usewer@kh.or.kr', 'ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ïµ¿', 'ï¿½ï¿½ ï¿½ï¿½Å¹ï¿½å¸³ï¿½Ï´ï¿½', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
 
 INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user15', 'pass15', '±èÅÂÇö', '950814-2234561', 'LovelyÅ´', '010-3456-7890', 'urewim@kh.or.kr', '¼­¿ï½Ã °­³²±¸', '¹Ý°©½À´Ï´Ù, ±èÅÂÇöÀÔ´Ï´Ù.', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+VALUES (SEQ_USER_NO.NEXTVAL, 'user15', 'pass15', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', '950814-2234561', 'LovelyÅ´', '010-3456-7890', 'urewim@kh.or.kr', 'ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½Ý°ï¿½ï¿½ï¿½ï¿½Ï´ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
 
 INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user16', 'pass16', 'ÀÌ¹Î¼ö', '671001-1234562', 'Handsomely', '010-4567-8901', 'user16lee@kh.or.kr', '°æ±âµµ ¼ö¿ø½Ã', '¾È³çÇÏ¼¼¿ä, ÀÌ¹Î¼öÀÔ´Ï´Ù.', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+VALUES (SEQ_USER_NO.NEXTVAL, 'user16', 'pass16', 'ï¿½Ì¹Î¼ï¿½', '671001-1234562', 'Handsomely', '010-4567-8901', 'user16lee@kh.or.kr', 'ï¿½ï¿½âµµ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½, ï¿½Ì¹Î¼ï¿½ï¿½Ô´Ï´ï¿½.', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
 
 INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user17', 'pass17', '¹Úº¸°â', '000106-1234563', 'Sweet¹Ú', '010-5678-9012', 'uspark@kh.or.kr', '¼­¿ï½Ã ¼­ÃÊ±¸', '¹Úº¸°âÀÔ´Ï´Ù. Àß ºÎÅ¹µå·Á¿ä!', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+VALUES (SEQ_USER_NO.NEXTVAL, 'user17', 'pass17', 'ï¿½Úºï¿½ï¿½ï¿½', '000106-1234563', 'Sweetï¿½ï¿½', '010-5678-9012', 'uspark@kh.or.kr', 'ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ê±ï¿½', 'ï¿½Úºï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ ï¿½ï¿½Å¹ï¿½ï¿½ï¿½ï¿½ï¿½!', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
 
 INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user18', 'pass18', 'ÀüÁöÇå', '901203-2234564', 'BeautifulÀü', '010-6789-0123', 'ujeon@kh.or.kr', 'ºÎ»ê½Ã ÇØ¿î´ë±¸', 'ÀüÁöÇåÀÔ´Ï´Ù. ¸¸³ª¼­ ¹Ý°¡¿ö¿ä!', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+VALUES (SEQ_USER_NO.NEXTVAL, 'user18', 'pass18', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', '901203-2234564', 'Beautifulï¿½ï¿½', '010-6789-0123', 'ujeon@kh.or.kr', 'ï¿½Î»ï¿½ï¿½ ï¿½Ø¿ï¿½ë±¸', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ý°ï¿½ï¿½ï¿½ï¿½ï¿½!', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
 
 INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user19', 'pass19', '¼ÛÁß±æ', '970518-1234565', 'Cool¼Û', '010-7890-1234', 's19song@kh.or.kr', '´ë±¸½Ã Áß±¸', '¾È³çÇÏ¼¼¿ä, ¼ÛÁß±æÀÔ´Ï´Ù.', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+VALUES (SEQ_USER_NO.NEXTVAL, 'user19', 'pass19', 'ï¿½ï¿½ï¿½ß±ï¿½', '970518-1234565', 'Coolï¿½ï¿½', '010-7890-1234', 's19song@kh.or.kr', 'ï¿½ë±¸ï¿½ï¿½ ï¿½ß±ï¿½', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ß±ï¿½ï¿½Ô´Ï´ï¿½.', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
 
 INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user20', 'pass20', '¼öÁø', '980113-2234566', 'Cute¼ö', '010-8901-2345', 'zzzsuzy@kh.or.kr', '±¤ÁÖ½Ã ¼­±¸', '¼öÁøÂ¯ÀÔ´Ï´Ù. Àß ºÎÅ¹µå¸³´Ï´Ù!', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+VALUES (SEQ_USER_NO.NEXTVAL, 'user20', 'pass20', 'ï¿½ï¿½ï¿½ï¿½', '980113-2234566', 'Cuteï¿½ï¿½', '010-8901-2345', 'zzzsuzy@kh.or.kr', 'ï¿½ï¿½ï¿½Ö½ï¿½ ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½Â¯ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ ï¿½ï¿½Å¹ï¿½å¸³ï¿½Ï´ï¿½!', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
 
 INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user21', 'pass21', 'À±¾Æ¸°', '910901-2245789', 'ShineÀ±', '010-9123-4567', 'user21yoon@kh.or.kr', 'ÀÎÃµ½Ã Áß±¸', 'À±¾Æ¸°ÀÔ´Ï´Ù. Àß ºÎÅ¹µå¸³´Ï´Ù!', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+VALUES (SEQ_USER_NO.NEXTVAL, 'user21', 'pass21', 'ï¿½ï¿½ï¿½Æ¸ï¿½', '910901-2245789', 'Shineï¿½ï¿½', '010-9123-4567', 'user21yoon@kh.or.kr', 'ï¿½ï¿½Ãµï¿½ï¿½ ï¿½ß±ï¿½', 'ï¿½ï¿½ï¿½Æ¸ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ ï¿½ï¿½Å¹ï¿½å¸³ï¿½Ï´ï¿½!', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
 
 INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user22', 'pass22', 'Á¶ÀÎ¼Í', '821102-1356891', 'BrightÁ¶', '010-0234-5678', 'user22cho@kh.or.kr', '´ëÀü½Ã Áß±¸', '¾È³çÇÏ¼¼¿ä, ÀÎ¼ºÀÌ ´ë´ÜÇÕ´Ï´Ù.', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+VALUES (SEQ_USER_NO.NEXTVAL, 'user22', 'pass22', 'ï¿½ï¿½ï¿½Î¼ï¿½', '821102-1356891', 'Brightï¿½ï¿½', '010-0234-5678', 'user22cho@kh.or.kr', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ß±ï¿½', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½, ï¿½Î¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
 
 INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user23', 'pass23', 'ÇÑÈ¿Áê', '031017-2467912', 'LovelyÇÑ', '010-1345-6789', 'user23han@kh.or.kr', '¿ï»ê½Ã ³²±¸', 'ÇÑÈ¿ÁÖÀÔ´Ï´Ù. ¸¸³ª¼­ ¹Ý°¡¿ö¿ä!', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+VALUES (SEQ_USER_NO.NEXTVAL, 'user23', 'pass23', 'ï¿½ï¿½È¿ï¿½ï¿½', '031017-2467912', 'Lovelyï¿½ï¿½', '010-1345-6789', 'user23han@kh.or.kr', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½È¿ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ý°ï¿½ï¿½ï¿½ï¿½ï¿½!', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
 
 INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user24', 'pass24', '°í¼Òºó', '940316-2578123', 'Beautiful°í', '010-2456-7890', 'user24ko@kh.or.kr', '°æ»óºÏµµ Æ÷Ç×½Ã', '°í¼Ò ºÎÅ¹µå¸³´Ï´Ù!', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+VALUES (SEQ_USER_NO.NEXTVAL, 'user24', 'pass24', 'ï¿½ï¿½ï¿½Òºï¿½', '940316-2578123', 'Beautifulï¿½ï¿½', '010-2456-7890', 'user24ko@kh.or.kr', 'ï¿½ï¿½ï¿½Ïµï¿½ ï¿½ï¿½ï¿½×½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å¹ï¿½å¸³ï¿½Ï´ï¿½!', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
 
 INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user25', 'pass25', '¹Ú½ÃÁØ', '951211-1689234', 'Cool¹Ú', '010-3567-8901', 'user25park@kh.or.kr', 'Àü¶óºÏµµ ÀüÁÖ½Ã', '¹Ý°©½À´Ï´Ù, Cool¹ÚÀÔ´Ï´Ù.', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+VALUES (SEQ_USER_NO.NEXTVAL, 'user25', 'pass25', 'ï¿½Ú½ï¿½ï¿½ï¿½', '951211-1689234', 'Coolï¿½ï¿½', '010-3567-8901', 'user25park@kh.or.kr', 'ï¿½ï¿½ï¿½ï¿½Ïµï¿½ ï¿½ï¿½ï¿½Ö½ï¿½', 'ï¿½Ý°ï¿½ï¿½ï¿½ï¿½Ï´ï¿½, Coolï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
 
 INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user26', 'pass26', '±è±³Àº', '960517-2791345', 'Sweet±è', '010-4678-9012', 'user26kim@kh.or.kr', '°æ»ó³²µµ Ã¢¿ø½Ã', '±è±³ÀºÀÔ´Ï´Ù. ¸¸³ª¼­ ¹Ý°¡¿ö¿ä!', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+VALUES (SEQ_USER_NO.NEXTVAL, 'user26', 'pass26', 'ï¿½è±³ï¿½ï¿½', '960517-2791345', 'Sweetï¿½ï¿½', '010-4678-9012', 'user26kim@kh.or.kr', 'ï¿½ï¿½ó³²µï¿½ Ã¢ï¿½ï¿½ï¿½ï¿½', 'ï¿½è±³ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ý°ï¿½ï¿½ï¿½ï¿½ï¿½!', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
 
 INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user27', 'pass27', '±èÇöÁÖ', '901204-2114631', 'Shine', '010-9108-5670', 'khyun27@kh.or.kr', '°æ±âµµ ¼ö¿ø½Ã', '±èÇöÁÖÀÔ´Ï´Ù. ¸¸³ª¼­ ¹Ý°¡¿ö¿ä!', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+VALUES (SEQ_USER_NO.NEXTVAL, 'user27', 'pass27', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', '901204-2114631', 'Shine', '010-9108-5670', 'khyun27@kh.or.kr', 'ï¿½ï¿½âµµ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ý°ï¿½ï¿½ï¿½ï¿½ï¿½!', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
 
 INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user28', 'pass28', '¼ÛÇö±â', '970519-1212168', '¼Û¼Û¼Û', '010-1910-6781', 'shsong28@kh.or.kr', '´ë±¸½Ã ³²±¸', '¾È³çÇÏ¼¼¿ä, ¼ÛÇö±âÀÔ´Ï´Ù.', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+VALUES (SEQ_USER_NO.NEXTVAL, 'user28', 'pass28', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', '970519-1212168', 'ï¿½Û¼Û¼ï¿½', '010-1910-6781', 'shsong28@kh.or.kr', 'ï¿½ë±¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½', 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
 
 INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user29', 'pass29', '¼öÁöºñ', '980114-2201316', 'Cute¼öºñ', '010-0061-7892', 'suzib29@kh.or.kr', '±¤ÁÖ½Ã ³²±¸', '¼öÁöºñÀÔ´Ï´Ù. Àß ºÎÅ¹µå¸³´Ï´Ù!', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+VALUES (SEQ_USER_NO.NEXTVAL, 'user29', 'pass29', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', '980114-2201316', 'Cuteï¿½ï¿½ï¿½ï¿½', '010-0061-7892', 'suzib29@kh.or.kr', 'ï¿½ï¿½ï¿½Ö½ï¿½ ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ ï¿½ï¿½Å¹ï¿½å¸³ï¿½Ï´ï¿½!', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
 
 INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user30', 'pass30', 'À±¾Æ¸®', '910902-2212570', 'ShineÀ±', '010-7431-8903', 'yar30@kh.or.kr', 'ÀÎÃµ½Ã µ¿±¸', 'À±¾Æ¸®ÀÔ´Ï´Ù. Àß ºÎÅ¹µå¸³´Ï´Ù!', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+VALUES (SEQ_USER_NO.NEXTVAL, 'user30', 'pass30', 'ï¿½ï¿½ï¿½Æ¸ï¿½', '910902-2212570', 'Shineï¿½ï¿½', '010-7431-8903', 'yar30@kh.or.kr', 'ï¿½ï¿½Ãµï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½Æ¸ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ ï¿½ï¿½Å¹ï¿½å¸³ï¿½Ï´ï¿½!', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
 
 INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user31', 'pass31', 'ÀÓÇÏ¸®', '980114-2214176', '¾Ëºü´©', '010-1314-7112', 'ang1515@kh.or.kr', '°æ±âµµ ¼ö¿ø½Ã', '¸¹Àº Âü¿© ¿¹Á¤', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+VALUES (SEQ_USER_NO.NEXTVAL, 'user31', 'pass31', 'ï¿½ï¿½ï¿½Ï¸ï¿½', '980114-2214176', 'ï¿½Ëºï¿½ï¿½ï¿½', '010-1314-7112', 'ang1515@kh.or.kr', 'ï¿½ï¿½âµµ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
 
 INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user32', 'pass32', 'À±ÇÏ¿¹', '870117-2211050', '¹è°íÇÂ»ç¶÷', '010-8171-0904', 'vest1013@kh.or.kr', '±¤ÁÖ½Ã ³²±¸', 'Ã³À½ °¡ÀÔÇß¾î¿ä', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+VALUES (SEQ_USER_NO.NEXTVAL, 'user32', 'pass32', 'ï¿½ï¿½ï¿½Ï¿ï¿½', '870117-2211050', 'ï¿½ï¿½ï¿½ï¿½Â»ï¿½ï¿½', '010-8171-0904', 'vest1013@kh.or.kr', 'ï¿½ï¿½ï¿½Ö½ï¿½ ï¿½ï¿½ï¿½ï¿½', 'Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ß¾ï¿½ï¿½', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
 --------------------------------------------------
--------------- ANNOUNCEMENT °ü·Ã ------------------	
+-------------- ANNOUNCEMENT ï¿½ï¿½ï¿½ï¿½ ------------------	
 --------------------------------------------------
 CREATE TABLE TB_ANNOUNCEMENT (
     ANNOUNCEMENT_NO NUMBER CONSTRAINT ANNOUNCEMENT_NO_PK PRIMARY KEY,
@@ -193,156 +193,156 @@ CREATE TABLE TB_ANNOUNCEMENT (
     CONSTRAINT ANNOUNCEMENT_WRITER_FK FOREIGN KEY(ANNOUNCEMENT_WRITER) REFERENCES TB_MEMBER(USER_NO)
 );
 
-COMMENT ON COLUMN TB_ANNOUNCEMENT.ANNOUNCEMENT_NO IS '°øÁö ¹øÈ£';
-COMMENT ON COLUMN TB_ANNOUNCEMENT.ANNOUNCEMENT_TITLE IS '°øÁö Á¦¸ñ';
-COMMENT ON COLUMN TB_ANNOUNCEMENT.ANNOUNCEMENT_CONTENT IS '°øÁö ³»¿ë';
-COMMENT ON COLUMN TB_ANNOUNCEMENT.ANNOUNCEMENT_WRITER IS '°øÁö ÀÛ¼ºÀÚÈ¸¿ø¹øÈ£';
-COMMENT ON COLUMN TB_ANNOUNCEMENT.ANNOUNCEMENT_COUNT IS '°øÁö Á¶È¸¼ö';
-COMMENT ON COLUMN TB_ANNOUNCEMENT.ANNOUNCEMENT_CREATE_DATE IS '°øÁö ÀÛ¼ºÀÏ';
-COMMENT ON COLUMN TB_ANNOUNCEMENT.ANNOUNCEMENT_STATUS IS '°øÁö »óÅÂ°ª (Y : °Ô½Ã / N : ºñ°Ô½Ã)';
+COMMENT ON COLUMN TB_ANNOUNCEMENT.ANNOUNCEMENT_NO IS 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£';
+COMMENT ON COLUMN TB_ANNOUNCEMENT.ANNOUNCEMENT_TITLE IS 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½';
+COMMENT ON COLUMN TB_ANNOUNCEMENT.ANNOUNCEMENT_CONTENT IS 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½';
+COMMENT ON COLUMN TB_ANNOUNCEMENT.ANNOUNCEMENT_WRITER IS 'ï¿½ï¿½ï¿½ï¿½ ï¿½Û¼ï¿½ï¿½ï¿½È¸ï¿½ï¿½ï¿½ï¿½È£';
+COMMENT ON COLUMN TB_ANNOUNCEMENT.ANNOUNCEMENT_COUNT IS 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ï¿½ï¿½';
+COMMENT ON COLUMN TB_ANNOUNCEMENT.ANNOUNCEMENT_CREATE_DATE IS 'ï¿½ï¿½ï¿½ï¿½ ï¿½Û¼ï¿½ï¿½ï¿½';
+COMMENT ON COLUMN TB_ANNOUNCEMENT.ANNOUNCEMENT_STATUS IS 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â°ï¿½ (Y : ï¿½Ô½ï¿½ / N : ï¿½ï¿½Ô½ï¿½)';
 
 CREATE SEQUENCE SEQ_ANNOUNCEMENT_NO
 NOCACHE;
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '¿ÀÇÂ! »·»·ÇØ¿ä!', 'Ã¹¹øÂ° °øÁö ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-02-22', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, 'ï¿½ï¿½ï¿½ï¿½! ï¿½ï¿½ï¿½ï¿½ï¿½Ø¿ï¿½!', 'Ã¹ï¿½ï¿½Â° ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-02-22', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, 'µÎ¹øÂ° °øÁö Á¦¸ñÀÔ´Ï´Ù.', 'µÎ¹øÂ° °øÁö ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-02-22', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, 'ï¿½Î¹ï¿½Â° ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 'ï¿½Î¹ï¿½Â° ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-02-22', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '¼¼¹øÂ° °øÁö Á¦¸ñÀÔ´Ï´Ù.', '¼¼¹øÂ° °øÁö ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-02-22', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, 'ï¿½ï¿½ï¿½ï¿½Â° ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 'ï¿½ï¿½ï¿½ï¿½Â° ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-02-22', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '³×¹øÂ° °øÁö Á¦¸ñÀÔ´Ï´Ù.', '³×¹øÂ° °øÁö ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-02-23', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, 'ï¿½×¹ï¿½Â° ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 'ï¿½×¹ï¿½Â° ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-02-23', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '´Ù¼¸¹øÂ° °øÁö Á¦¸ñÀÔ´Ï´Ù.', '´Ù¼¸¹øÂ° °øÁö ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-02-23', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, 'ï¿½Ù¼ï¿½ï¿½ï¿½Â° ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 'ï¿½Ù¼ï¿½ï¿½ï¿½Â° ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-02-23', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '¿©¼¸¹øÂ° °øÁö Á¦¸ñÀÔ´Ï´Ù.', '¿©¼¸¹øÂ° °øÁö ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-02-23', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â° ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â° ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-02-23', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, 'ÀÏ°ö¹øÂ° °øÁö Á¦¸ñÀÔ´Ï´Ù.', 'ÀÏ°ö¹øÂ° °øÁö ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-02-24', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, 'ï¿½Ï°ï¿½ï¿½ï¿½Â° ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 'ï¿½Ï°ï¿½ï¿½ï¿½Â° ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-02-24', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '¿©´ü¹øÂ° °øÁö Á¦¸ñÀÔ´Ï´Ù.', '¿©´ü¹øÂ° °øÁö ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-02-24', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â° ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â° ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-02-24', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '¾ÆÈ©¹øÂ° °øÁö Á¦¸ñÀÔ´Ï´Ù.', '¾ÆÈ©¹øÂ° °øÁö ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-02-25', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, 'ï¿½ï¿½È©ï¿½ï¿½Â° ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 'ï¿½ï¿½È©ï¿½ï¿½Â° ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-02-25', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '10 °øÁö Á¦¸ñÀÔ´Ï´Ù.', '10 °øÁö ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-02-25', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '10 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', '10 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-02-25', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '11 °øÁö Á¦¸ñÀÔ´Ï´Ù.', '11 °øÁö ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-02-25', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '11 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', '11 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-02-25', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '12 °øÁö Á¦¸ñÀÔ´Ï´Ù.', '12 °øÁö ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-02-26', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '12 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', '12 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-02-26', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '13 °øÁö Á¦¸ñÀÔ´Ï´Ù.', '13 °øÁö ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-02-26', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '13 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', '13 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-02-26', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '14 °øÁö Á¦¸ñÀÔ´Ï´Ù.', '14 °øÁö ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-02-26', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '14 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', '14 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-02-26', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '15 °øÁö Á¦¸ñÀÔ´Ï´Ù.', '15 °øÁö ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-02-27', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '15 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', '15 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-02-27', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '16 °øÁö Á¦¸ñÀÔ´Ï´Ù.', '16 °øÁö ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-02-27', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '16 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', '16 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-02-27', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '17 °øÁö Á¦¸ñÀÔ´Ï´Ù.', '17 °øÁö ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-02-27', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '17 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', '17 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-02-27', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '18 °øÁö Á¦¸ñÀÔ´Ï´Ù.', '18 °øÁö ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-02-27', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '18 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', '18 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-02-27', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '19 °øÁö Á¦¸ñÀÔ´Ï´Ù.', '19 °øÁö ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-02-28', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '19 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', '19 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-02-28', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '20 °øÁö Á¦¸ñÀÔ´Ï´Ù.', '20 °øÁö ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-02-28', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '20 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', '20 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-02-28', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '21 °øÁö Á¦¸ñÀÔ´Ï´Ù.', '21 °øÁö ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-03-01', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '21 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', '21 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-03-01', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '22 °øÁö Á¦¸ñÀÔ´Ï´Ù.', '22 °øÁö ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-03-01', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '22 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', '22 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-03-01', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '23 °øÁö Á¦¸ñÀÔ´Ï´Ù.', '23 °øÁö ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-03-01', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '23 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', '23 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-03-01', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '24 °øÁö Á¦¸ñÀÔ´Ï´Ù.', '24 °øÁö ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-03-02', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '24 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', '24 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-03-02', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '25 °øÁö Á¦¸ñÀÔ´Ï´Ù.', '25 °øÁö ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-03-02', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '25 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', '25 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-03-02', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '26 °øÁö Á¦¸ñÀÔ´Ï´Ù.', '26 °øÁö ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-03-02', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '26 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', '26 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-03-02', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '27 °øÁö Á¦¸ñÀÔ´Ï´Ù.', '27 °øÁö ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-03-02', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '27 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', '27 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-03-02', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '28 °øÁö Á¦¸ñÀÔ´Ï´Ù.', '28 °øÁö ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-03-03', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '28 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', '28 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-03-03', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '29 °øÁö Á¦¸ñÀÔ´Ï´Ù.', '29 °øÁö ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-03-03', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '29 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', '29 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-03-03', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '30 °øÁö Á¦¸ñÀÔ´Ï´Ù.', '30 °øÁö ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-03-03', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '30 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', '30 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-03-03', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '31 °øÁö Á¦¸ñÀÔ´Ï´Ù.', '31 °øÁö ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-03-03', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '31 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', '31 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-03-03', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '32 °øÁö Á¦¸ñÀÔ´Ï´Ù.', '32 °øÁö ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-03-03', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '32 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', '32 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-03-03', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '33 °øÁö Á¦¸ñÀÔ´Ï´Ù.', '33 °øÁö ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-03-04', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '33 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', '33 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-03-04', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '34 °øÁö Á¦¸ñÀÔ´Ï´Ù.', '34 °øÁö ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-03-04', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '34 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', '34 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-03-04', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '35 °øÁö Á¦¸ñÀÔ´Ï´Ù.', '35 °øÁö ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-03-04', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '35 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', '35 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-03-04', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '36 °øÁö Á¦¸ñÀÔ´Ï´Ù.', '36 °øÁö ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-03-04', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '36 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', '36 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-03-04', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '37 °øÁö Á¦¸ñÀÔ´Ï´Ù.', '37 °øÁö ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-03-05', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '37 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', '37 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-03-05', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '38 °øÁö Á¦¸ñÀÔ´Ï´Ù.', '38 °øÁö ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-03-05', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '38 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', '38 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-03-05', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '39 °øÁö Á¦¸ñÀÔ´Ï´Ù.', '39 °øÁö ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-03-05', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '39 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', '39 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-03-05', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '40 °øÁö Á¦¸ñÀÔ´Ï´Ù.', '40 °øÁö ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-03-05', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '40 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', '40 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-03-05', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '41 °øÁö Á¦¸ñÀÔ´Ï´Ù.', '41 °øÁö ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-03-06', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '41 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', '41 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-03-06', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '42 °øÁö Á¦¸ñÀÔ´Ï´Ù.', '42 °øÁö ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-03-06', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '42 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', '42 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-03-06', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '43 °øÁö Á¦¸ñÀÔ´Ï´Ù.', '43 °øÁö ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-03-06', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '43 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', '43 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-03-06', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '44 °øÁö Á¦¸ñÀÔ´Ï´Ù.', '44 °øÁö ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-03-06', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '44 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', '44 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-03-06', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '45 °øÁö Á¦¸ñÀÔ´Ï´Ù.', '45 °øÁö ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-03-06', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '45 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', '45 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-03-06', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '46 °øÁö Á¦¸ñÀÔ´Ï´Ù.', '46 °øÁö ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-03-07', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '46 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', '46 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-03-07', DEFAULT);
 --------------------------------------------------
------------------ NOTICE ¾Ë¸² °ü·Ã -----------------	
+----------------- NOTICE ï¿½Ë¸ï¿½ ï¿½ï¿½ï¿½ï¿½ -----------------	
 --------------------------------------------------
 CREATE TABLE TB_NOTICE (
     NOTICE_NO NUMBER CONSTRAINT NOTICE_NO_PK PRIMARY KEY,
@@ -355,18 +355,18 @@ CREATE TABLE TB_NOTICE (
     CONSTRAINT NOTICE_WRITER_FK FOREIGN KEY(NOTICE_WRITER) REFERENCES TB_MEMBER(USER_NO)
 );
 
-COMMENT ON COLUMN TB_NOTICE.NOTICE_NO IS '¾Ë¸² ¹øÈ£';
-COMMENT ON COLUMN TB_NOTICE.NOTICE_TITLE IS '¾Ë¸² Á¦¸ñ';
-COMMENT ON COLUMN TB_NOTICE.NOTICE_CONTENT IS '¾Ë¸² ³»¿ë';
-COMMENT ON COLUMN TB_NOTICE.NOTICE_WRITER IS '¾Ë¸² ÀÛ¼ºÀÚÈ¸¿ø¹øÈ£';
-COMMENT ON COLUMN TB_NOTICE.NOTICE_CREATE_DATE IS '¾Ë¸² ÀÛ¼ºÀÏ';
-COMMENT ON COLUMN TB_NOTICE.NOTICE_TYPE IS '¾Ë¸² À¯Çü (1 : ÀÏ¹Ý °øÁö / 2 : ÇÁ·ÎÁ§Æ® ¾Ë¸² / 3 : QNA ¾Ë¸²)';
-COMMENT ON COLUMN TB_NOTICE.NOTICE_STATUS IS '¾Ë¸² »óÅÂ°ª (Y : ÀÐÀ½ / N : ¾ÈÀÐÀ½)';
+COMMENT ON COLUMN TB_NOTICE.NOTICE_NO IS 'ï¿½Ë¸ï¿½ ï¿½ï¿½È£';
+COMMENT ON COLUMN TB_NOTICE.NOTICE_TITLE IS 'ï¿½Ë¸ï¿½ ï¿½ï¿½ï¿½ï¿½';
+COMMENT ON COLUMN TB_NOTICE.NOTICE_CONTENT IS 'ï¿½Ë¸ï¿½ ï¿½ï¿½ï¿½ï¿½';
+COMMENT ON COLUMN TB_NOTICE.NOTICE_WRITER IS 'ï¿½Ë¸ï¿½ ï¿½Û¼ï¿½ï¿½ï¿½È¸ï¿½ï¿½ï¿½ï¿½È£';
+COMMENT ON COLUMN TB_NOTICE.NOTICE_CREATE_DATE IS 'ï¿½Ë¸ï¿½ ï¿½Û¼ï¿½ï¿½ï¿½';
+COMMENT ON COLUMN TB_NOTICE.NOTICE_TYPE IS 'ï¿½Ë¸ï¿½ ï¿½ï¿½ï¿½ï¿½ (1 : ï¿½Ï¹ï¿½ ï¿½ï¿½ï¿½ï¿½ / 2 : ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½Ë¸ï¿½ / 3 : QNA ï¿½Ë¸ï¿½)';
+COMMENT ON COLUMN TB_NOTICE.NOTICE_STATUS IS 'ï¿½Ë¸ï¿½ ï¿½ï¿½ï¿½Â°ï¿½ (Y : ï¿½ï¿½ï¿½ï¿½ / N : ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)';
 
 CREATE SEQUENCE SEQ_NOTICE_NO
 NOCACHE;
 --------------------------------------------------
------------------ FAQ °Ô½ÃÆÇ °ü·Ã ------------------	
+----------------- FAQ ï¿½Ô½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ------------------	
 --------------------------------------------------
 CREATE TABLE TB_FAQ (
     FAQ_NO NUMBER CONSTRAINT FAQ_NO_PK PRIMARY KEY,
@@ -380,101 +380,101 @@ CREATE TABLE TB_FAQ (
     CONSTRAINT FAQ_WRITER_FK FOREIGN KEY(FAQ_WRITER) REFERENCES TB_MEMBER(USER_NO)
 );
 
-COMMENT ON COLUMN TB_FAQ.FAQ_NO IS 'ÀÚÁÖ¹¯´ÂÁú¹® ¹øÈ£';
-COMMENT ON COLUMN TB_FAQ.FAQ_TITLE IS 'ÀÚÁÖ¹¯´ÂÁú¹® Á¦¸ñ';
-COMMENT ON COLUMN TB_FAQ.FAQ_CONTENT IS 'ÀÚÁÖ¹¯´ÂÁú¹® ³»¿ë';
-COMMENT ON COLUMN TB_FAQ.FAQ_WRITER IS 'ÀÚÁÖ¹¯´ÂÁú¹® ÀÛ¼ºÀÚÈ¸¿ø¹øÈ£';
-COMMENT ON COLUMN TB_FAQ.FAQ_COUNT IS 'ÀÚÁÖ¹¯´ÂÁú¹® Á¶È¸¼ö';
-COMMENT ON COLUMN TB_FAQ.FAQ_CREATE_DATE IS 'ÀÚÁÖ¹¯´ÂÁú¹® ÀÛ¼ºÀÏ';
-COMMENT ON COLUMN TB_FAQ.FAQ_MODIFY_DATE IS 'ÀÚÁÖ¹¯´ÂÁú¹® ¼öÁ¤ÀÏ';
-COMMENT ON COLUMN TB_FAQ.FAQ_STATUS IS 'ÀÚÁÖ¹¯´ÂÁú¹® »óÅÂ°ª (Y : °Ô½Ã / N : ºñ°Ô½Ã)';
+COMMENT ON COLUMN TB_FAQ.FAQ_NO IS 'ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£';
+COMMENT ON COLUMN TB_FAQ.FAQ_TITLE IS 'ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½';
+COMMENT ON COLUMN TB_FAQ.FAQ_CONTENT IS 'ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½';
+COMMENT ON COLUMN TB_FAQ.FAQ_WRITER IS 'ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Û¼ï¿½ï¿½ï¿½È¸ï¿½ï¿½ï¿½ï¿½È£';
+COMMENT ON COLUMN TB_FAQ.FAQ_COUNT IS 'ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ï¿½ï¿½';
+COMMENT ON COLUMN TB_FAQ.FAQ_CREATE_DATE IS 'ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Û¼ï¿½ï¿½ï¿½';
+COMMENT ON COLUMN TB_FAQ.FAQ_MODIFY_DATE IS 'ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½';
+COMMENT ON COLUMN TB_FAQ.FAQ_STATUS IS 'ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â°ï¿½ (Y : ï¿½Ô½ï¿½ / N : ï¿½ï¿½Ô½ï¿½)';
 
 CREATE SEQUENCE SEQ_FAQ_NO
 NOCACHE;
 
 INSERT INTO TB_FAQ
-VALUES (SEQ_FAQ_NO.NEXTVAL, 'Ã¹¹øÂ° ÀÚÁÖ¹¯´ÂÁú¹® Á¦¸ñÀÔ´Ï´Ù.', 'Ã¹¹øÂ° ÀÚÁÖ¹¯´ÂÁú¹® ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-02-22', '2024-02-22', DEFAULT);
+VALUES (SEQ_FAQ_NO.NEXTVAL, 'Ã¹ï¿½ï¿½Â° ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 'Ã¹ï¿½ï¿½Â° ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-02-22', '2024-02-22', DEFAULT);
 
 INSERT INTO TB_FAQ
-VALUES (SEQ_FAQ_NO.NEXTVAL, 'µÎ¹øÂ° ÀÚÁÖ¹¯´ÂÁú¹® Á¦¸ñÀÔ´Ï´Ù.', 'µÎ¹øÂ° ÀÚÁÖ¹¯´ÂÁú¹® ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-02-22', '2024-02-22', DEFAULT);
+VALUES (SEQ_FAQ_NO.NEXTVAL, 'ï¿½Î¹ï¿½Â° ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 'ï¿½Î¹ï¿½Â° ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-02-22', '2024-02-22', DEFAULT);
 
 INSERT INTO TB_FAQ
-VALUES (SEQ_FAQ_NO.NEXTVAL, '¼¼¹øÂ° ÀÚÁÖ¹¯´ÂÁú¹® Á¦¸ñÀÔ´Ï´Ù.', '¼¼¹øÂ° ÀÚÁÖ¹¯´ÂÁú¹® ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-02-22', '2024-02-22', DEFAULT);
+VALUES (SEQ_FAQ_NO.NEXTVAL, 'ï¿½ï¿½ï¿½ï¿½Â° ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 'ï¿½ï¿½ï¿½ï¿½Â° ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-02-22', '2024-02-22', DEFAULT);
 
 INSERT INTO TB_FAQ
-VALUES (SEQ_FAQ_NO.NEXTVAL, '³×¹øÂ° ÀÚÁÖ¹¯´ÂÁú¹® Á¦¸ñÀÔ´Ï´Ù.', '³×¹øÂ° ÀÚÁÖ¹¯´ÂÁú¹® ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-02-22', '2024-02-22', DEFAULT);
+VALUES (SEQ_FAQ_NO.NEXTVAL, 'ï¿½×¹ï¿½Â° ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 'ï¿½×¹ï¿½Â° ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-02-22', '2024-02-22', DEFAULT);
 
 INSERT INTO TB_FAQ
-VALUES (SEQ_FAQ_NO.NEXTVAL, '´Ù¼¸¹øÂ° ÀÚÁÖ¹¯´ÂÁú¹® Á¦¸ñÀÔ´Ï´Ù.', '´Ù¼¸¹øÂ° ÀÚÁÖ¹¯´ÂÁú¹® ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-02-22', '2024-02-22', DEFAULT);
+VALUES (SEQ_FAQ_NO.NEXTVAL, 'ï¿½Ù¼ï¿½ï¿½ï¿½Â° ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 'ï¿½Ù¼ï¿½ï¿½ï¿½Â° ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-02-22', '2024-02-22', DEFAULT);
 
 INSERT INTO TB_FAQ
-VALUES (SEQ_FAQ_NO.NEXTVAL, '¿©¼¸¹øÂ° ÀÚÁÖ¹¯´ÂÁú¹® Á¦¸ñÀÔ´Ï´Ù.', '¿©¼¸¹øÂ° ÀÚÁÖ¹¯´ÂÁú¹® ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-02-22', '2024-02-22', DEFAULT);
+VALUES (SEQ_FAQ_NO.NEXTVAL, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â° ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â° ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-02-22', '2024-02-22', DEFAULT);
 
 INSERT INTO TB_FAQ
-VALUES (SEQ_FAQ_NO.NEXTVAL, 'ÀÏ°ö¹øÂ° ÀÚÁÖ¹¯´ÂÁú¹® Á¦¸ñÀÔ´Ï´Ù.', 'ÀÏ°ö¹øÂ° ÀÚÁÖ¹¯´ÂÁú¹® ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-02-22', '2024-02-22', DEFAULT);
+VALUES (SEQ_FAQ_NO.NEXTVAL, 'ï¿½Ï°ï¿½ï¿½ï¿½Â° ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 'ï¿½Ï°ï¿½ï¿½ï¿½Â° ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-02-22', '2024-02-22', DEFAULT);
 
 INSERT INTO TB_FAQ
-VALUES (SEQ_FAQ_NO.NEXTVAL, '¿©´ü¹øÂ° ÀÚÁÖ¹¯´ÂÁú¹® Á¦¸ñÀÔ´Ï´Ù.', '¿©´ü¹øÂ° ÀÚÁÖ¹¯´ÂÁú¹® ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-02-22', '2024-02-22', DEFAULT);
+VALUES (SEQ_FAQ_NO.NEXTVAL, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â° ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â° ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-02-22', '2024-02-22', DEFAULT);
 
 INSERT INTO TB_FAQ
-VALUES (SEQ_FAQ_NO.NEXTVAL, '¾ÆÈ©¹øÂ° ÀÚÁÖ¹¯´ÂÁú¹® Á¦¸ñÀÔ´Ï´Ù.', '¾ÆÈ©¹øÂ° ÀÚÁÖ¹¯´ÂÁú¹® ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-02-22', '2024-02-22', DEFAULT);
+VALUES (SEQ_FAQ_NO.NEXTVAL, 'ï¿½ï¿½È©ï¿½ï¿½Â° ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 'ï¿½ï¿½È©ï¿½ï¿½Â° ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-02-22', '2024-02-22', DEFAULT);
 
 INSERT INTO TB_FAQ
-VALUES (SEQ_FAQ_NO.NEXTVAL, '¿­¹øÂ° ÀÚÁÖ¹¯´ÂÁú¹® Á¦¸ñÀÔ´Ï´Ù.', '¿­¹øÂ° ÀÚÁÖ¹¯´ÂÁú¹® ³»¿ëÀÔ´Ï´Ù.', 1, DEFAULT, '2024-02-22', '2024-02-22', DEFAULT);
+VALUES (SEQ_FAQ_NO.NEXTVAL, 'ï¿½ï¿½ï¿½ï¿½Â° ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 'ï¿½ï¿½ï¿½ï¿½Â° ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.', 1, DEFAULT, '2024-02-22', '2024-02-22', DEFAULT);
 --------------------------------------------------
------------------ PJ_CATEGORY °ü·Ã ----------------	
+----------------- PJ_CATEGORY ï¿½ï¿½ï¿½ï¿½ ----------------	
 --------------------------------------------------
 CREATE TABLE TB_PJ_CATEGORY(
   PJ_CATEGORY_NO NUMBER CONSTRAINT PJ_CATEGORY_NO_PK PRIMARY KEY,
   PJ_CATEGORY_NAME VARCHAR2(30) CONSTRAINT PJ_CATEGORY_NAME_NN NOT NULL
 );
 
-COMMENT ON COLUMN TB_PJ_CATEGORY.PJ_CATEGORY_NO IS 'ÆÝµù ÇÁ·ÎÁ§Æ® Ä«Å×°í¸® ¹øÈ£';
-COMMENT ON COLUMN TB_PJ_CATEGORY.PJ_CATEGORY_NAME IS 'ÆÝµù ÇÁ·ÎÁ§Æ® Ä«Å×°í¸® ÀÌ¸§';
+COMMENT ON COLUMN TB_PJ_CATEGORY.PJ_CATEGORY_NO IS 'ï¿½Ýµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® Ä«ï¿½×°ï¿½ï¿½ï¿½ ï¿½ï¿½È£';
+COMMENT ON COLUMN TB_PJ_CATEGORY.PJ_CATEGORY_NAME IS 'ï¿½Ýµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® Ä«ï¿½×°ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½';
 
-INSERT INTO TB_PJ_CATEGORY VALUES(10, '°øÅë');
-INSERT INTO TB_PJ_CATEGORY VALUES(20, 'Çªµå');
-INSERT INTO TB_PJ_CATEGORY VALUES(30, 'º¸µå°ÔÀÓ');
-INSERT INTO TB_PJ_CATEGORY VALUES(40, 'Ä³¸¯ÅÍ');
-INSERT INTO TB_PJ_CATEGORY VALUES(50, 'Çâ¼ö');
-INSERT INTO TB_PJ_CATEGORY VALUES(60, '°ø¿¬');
-INSERT INTO TB_PJ_CATEGORY VALUES(70, '°ÔÀÓ');
-INSERT INTO TB_PJ_CATEGORY VALUES(80, 'ÀÇ·ù');
-INSERT INTO TB_PJ_CATEGORY VALUES(90, 'À¥Å÷');
-INSERT INTO TB_PJ_CATEGORY VALUES(100, '°¡Àü');
-INSERT INTO TB_PJ_CATEGORY VALUES(110, 'ÀâÈ­');
-INSERT INTO TB_PJ_CATEGORY VALUES(120, '»çÁø');
-INSERT INTO TB_PJ_CATEGORY VALUES(130, '¹Ý·Áµ¿¹°');
-INSERT INTO TB_PJ_CATEGORY VALUES(140, 'ÁÖ¾ó¸®');
-INSERT INTO TB_PJ_CATEGORY VALUES(150, 'À½¾Ç');
-INSERT INTO TB_PJ_CATEGORY VALUES(160, '½ºÆ÷Ã÷');
-INSERT INTO TB_PJ_CATEGORY VALUES(170, 'ÆÐ¼Ç');
-INSERT INTO TB_PJ_CATEGORY VALUES(180, 'Å°Áî');
-INSERT INTO TB_PJ_CATEGORY VALUES(190, '°¡±¸');
-INSERT INTO TB_PJ_CATEGORY VALUES(200, '±âÅ¸');
+INSERT INTO TB_PJ_CATEGORY VALUES(10, 'ï¿½ï¿½ï¿½ï¿½');
+INSERT INTO TB_PJ_CATEGORY VALUES(20, 'Çªï¿½ï¿½');
+INSERT INTO TB_PJ_CATEGORY VALUES(30, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½');
+INSERT INTO TB_PJ_CATEGORY VALUES(40, 'Ä³ï¿½ï¿½ï¿½ï¿½');
+INSERT INTO TB_PJ_CATEGORY VALUES(50, 'ï¿½ï¿½ï¿½');
+INSERT INTO TB_PJ_CATEGORY VALUES(60, 'ï¿½ï¿½ï¿½ï¿½');
+INSERT INTO TB_PJ_CATEGORY VALUES(70, 'ï¿½ï¿½ï¿½ï¿½');
+INSERT INTO TB_PJ_CATEGORY VALUES(80, 'ï¿½Ç·ï¿½');
+INSERT INTO TB_PJ_CATEGORY VALUES(90, 'ï¿½ï¿½ï¿½ï¿½');
+INSERT INTO TB_PJ_CATEGORY VALUES(100, 'ï¿½ï¿½ï¿½ï¿½');
+INSERT INTO TB_PJ_CATEGORY VALUES(110, 'ï¿½ï¿½È­');
+INSERT INTO TB_PJ_CATEGORY VALUES(120, 'ï¿½ï¿½ï¿½ï¿½');
+INSERT INTO TB_PJ_CATEGORY VALUES(130, 'ï¿½Ý·ï¿½ï¿½ï¿½ï¿½ï¿½');
+INSERT INTO TB_PJ_CATEGORY VALUES(140, 'ï¿½Ö¾ï¿½');
+INSERT INTO TB_PJ_CATEGORY VALUES(150, 'ï¿½ï¿½ï¿½ï¿½');
+INSERT INTO TB_PJ_CATEGORY VALUES(160, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½');
+INSERT INTO TB_PJ_CATEGORY VALUES(170, 'ï¿½Ð¼ï¿½');
+INSERT INTO TB_PJ_CATEGORY VALUES(180, 'Å°ï¿½ï¿½');
+INSERT INTO TB_PJ_CATEGORY VALUES(190, 'ï¿½ï¿½ï¿½ï¿½');
+INSERT INTO TB_PJ_CATEGORY VALUES(200, 'ï¿½ï¿½Å¸');
 --------------------------------------------------
------------------ RP_CATEGORY °ü·Ã ----------------	
+----------------- RP_CATEGORY ï¿½ï¿½ï¿½ï¿½ ----------------	
 --------------------------------------------------
 CREATE TABLE TB_RP_CATEGORY(
   RP_CATEGORY_NO NUMBER CONSTRAINT RP_CATEGORY_NO_RP PRIMARY KEY,
   RP_CATEGORY_NAME VARCHAR2(100) CONSTRAINT RP_CATEGORY_NAME_NN NOT NULL
 );
 
-COMMENT ON COLUMN TB_RP_CATEGORY.RP_CATEGORY_NO IS 'ÆÝµù ÇÁ·ÎÁ§Æ® Ä«Å×°í¸® ¹øÈ£';
-COMMENT ON COLUMN TB_RP_CATEGORY.RP_CATEGORY_NAME IS 'ÆÝµù ÇÁ·ÎÁ§Æ® Ä«Å×°í¸® ÀÌ¸§';
+COMMENT ON COLUMN TB_RP_CATEGORY.RP_CATEGORY_NO IS 'ï¿½Ýµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® Ä«ï¿½×°ï¿½ï¿½ï¿½ ï¿½ï¿½È£';
+COMMENT ON COLUMN TB_RP_CATEGORY.RP_CATEGORY_NAME IS 'ï¿½Ýµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® Ä«ï¿½×°ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½';
 
-INSERT INTO TB_RP_CATEGORY VALUES(1, '½ºÆÔÈ«º¸/µµ¹è±ÛÀÔ´Ï´Ù.');
-INSERT INTO TB_RP_CATEGORY VALUES(2, 'À½¶õ¹°ÀÔ´Ï´Ù.');
-INSERT INTO TB_RP_CATEGORY VALUES(3, 'ºÒ¹ýÁ¤º¸¸¦ Æ÷ÇÔÇÏ°í ÀÖ½À´Ï´Ù.');
-INSERT INTO TB_RP_CATEGORY VALUES(4, 'Ã»¼Ò³â¿¡°Ô À¯ÇØÇÑ ³»¿ëÀÔ´Ï´Ù.');
-INSERT INTO TB_RP_CATEGORY VALUES(5, '¿å¼³/»ý¸í°æ½Ã/Çø¿À/Â÷º°Àû Ç¥ÇöÀÔ´Ï´Ù.');
-INSERT INTO TB_RP_CATEGORY VALUES(6, '°³ÀÎÁ¤º¸ ³ëÃâ °Ô½Ã¹°ÀÔ´Ï´Ù.');
-INSERT INTO TB_RP_CATEGORY VALUES(7, 'ºÒÄèÇÑ Ç¥ÇöÀÌ ÀÖ½À´Ï´Ù.');
-INSERT INTO TB_RP_CATEGORY VALUES(8, '¸í¿¹ÈÑ¼Õ ¶Ç´Â ÀúÀÛ±ÇÀÌ Ä§ÇØµÇ¾ú½À´Ï´Ù.');
-INSERT INTO TB_RP_CATEGORY VALUES(9, 'ºÒ¹ýÃÔ¿µ¹°µîÀÌ Æ÷ÇÔµÇ¾î ÀÖ½À´Ï´Ù.');
-INSERT INTO TB_RP_CATEGORY VALUES(10, '±âÅ¸');
+INSERT INTO TB_RP_CATEGORY VALUES(1, 'ï¿½ï¿½ï¿½ï¿½È«ï¿½ï¿½/ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.');
+INSERT INTO TB_RP_CATEGORY VALUES(2, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.');
+INSERT INTO TB_RP_CATEGORY VALUES(3, 'ï¿½Ò¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.');
+INSERT INTO TB_RP_CATEGORY VALUES(4, 'Ã»ï¿½Ò³â¿¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.');
+INSERT INTO TB_RP_CATEGORY VALUES(5, 'ï¿½å¼³/ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½/ï¿½ï¿½ï¿½ï¿½/ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ç¥ï¿½ï¿½ï¿½Ô´Ï´ï¿½.');
+INSERT INTO TB_RP_CATEGORY VALUES(6, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô½Ã¹ï¿½ï¿½Ô´Ï´ï¿½.');
+INSERT INTO TB_RP_CATEGORY VALUES(7, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ç¥ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.');
+INSERT INTO TB_RP_CATEGORY VALUES(8, 'ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¼ï¿½ ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½Û±ï¿½ï¿½ï¿½ Ä§ï¿½ØµÇ¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.');
+INSERT INTO TB_RP_CATEGORY VALUES(9, 'ï¿½Ò¹ï¿½ï¿½Ô¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ÔµÇ¾ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.');
+INSERT INTO TB_RP_CATEGORY VALUES(10, 'ï¿½ï¿½Å¸');
 --------------------------------------------------
------------------ QNA °Ô½ÃÆÇ °ü·Ã ------------------	
+----------------- QNA ï¿½Ô½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ------------------	
 --------------------------------------------------
 CREATE TABLE TB_QNA(
     QNA_NO NUMBER CONSTRAINT QNA_NO_PK PRIMARY KEY,
@@ -490,36 +490,36 @@ CREATE TABLE TB_QNA(
     CONSTRAINT QNA_WRITER_FK FOREIGN KEY (QNA_WRITER) REFERENCES TB_MEMBER(USER_NO)
 );
 
-COMMENT ON COLUMN TB_QNA.QNA_NO IS 'QNA ¹øÈ£';
-COMMENT ON COLUMN TB_QNA.QNA_WRITER IS 'QNA ÀÛ¼ºÀÚÈ¸¿ø¹øÈ£';
-COMMENT ON COLUMN TB_QNA.QNA_TYPE IS 'QNA Å¸ÀÔ (1 : ÀÏ¹Ý / 2 : »çÁø)';
-COMMENT ON COLUMN TB_QNA.QNA_TITLE IS 'QNA Á¦¸ñ';
-COMMENT ON COLUMN TB_QNA.QNA_CONTENT IS 'QNA ³»¿ë';
-COMMENT ON COLUMN TB_QNA.QNA_COUNT IS 'QNA Á¶È¸¼ö';
-COMMENT ON COLUMN TB_QNA.QNA_CREATE_DATE IS 'QNA ÀÛ¼ºÀÏ';
-COMMENT ON COLUMN TB_QNA.QNA_MODIFY_DATE IS 'QNA ¼öÁ¤ÀÏ';
-COMMENT ON COLUMN TB_QNA.QNA_ANSWER_STATUS IS 'QNA ´äº¯ »óÅÂ°ª';
-COMMENT ON COLUMN TB_QNA.QNA_STATUS IS 'QNA »óÅÂ°ª (Y : °Ô½Ã / N : ºñ°Ô½Ã)';
+COMMENT ON COLUMN TB_QNA.QNA_NO IS 'QNA ï¿½ï¿½È£';
+COMMENT ON COLUMN TB_QNA.QNA_WRITER IS 'QNA ï¿½Û¼ï¿½ï¿½ï¿½È¸ï¿½ï¿½ï¿½ï¿½È£';
+COMMENT ON COLUMN TB_QNA.QNA_TYPE IS 'QNA Å¸ï¿½ï¿½ (1 : ï¿½Ï¹ï¿½ / 2 : ï¿½ï¿½ï¿½ï¿½)';
+COMMENT ON COLUMN TB_QNA.QNA_TITLE IS 'QNA ï¿½ï¿½ï¿½ï¿½';
+COMMENT ON COLUMN TB_QNA.QNA_CONTENT IS 'QNA ï¿½ï¿½ï¿½ï¿½';
+COMMENT ON COLUMN TB_QNA.QNA_COUNT IS 'QNA ï¿½ï¿½È¸ï¿½ï¿½';
+COMMENT ON COLUMN TB_QNA.QNA_CREATE_DATE IS 'QNA ï¿½Û¼ï¿½ï¿½ï¿½';
+COMMENT ON COLUMN TB_QNA.QNA_MODIFY_DATE IS 'QNA ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½';
+COMMENT ON COLUMN TB_QNA.QNA_ANSWER_STATUS IS 'QNA ï¿½äº¯ ï¿½ï¿½ï¿½Â°ï¿½';
+COMMENT ON COLUMN TB_QNA.QNA_STATUS IS 'QNA ï¿½ï¿½ï¿½Â°ï¿½ (Y : ï¿½Ô½ï¿½ / N : ï¿½ï¿½Ô½ï¿½)';
 
 CREATE SEQUENCE SEQ_QNA_NO
 NOCACHE;
 
 INSERT INTO TB_QNA(QNA_NO, QNA_TYPE, QNA_WRITER, QNA_TITLE, QNA_CONTENT, QNA_CREATE_DATE, QNA_ANSWER_STATUS, QNA_STATUS) 
-VALUES(SEQ_QNA_NO.NEXTVAL, 1, 2, 'ÇÁ·ÎÁ§Æ®¿¡ ´ëÇÑ ¹®ÀÇ', '»ó¼¼ÇÑ ³»¿ëÀ» ¾Ë·ÁÁÖ½Ç ¼ö ÀÖ³ª¿ä?', '2024-02-22', 'N', 'Y');
+VALUES(SEQ_QNA_NO.NEXTVAL, 1, 2, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ë·ï¿½ï¿½Ö½ï¿½ ï¿½ï¿½ ï¿½Ö³ï¿½ï¿½ï¿½?', '2024-02-22', 'N', 'Y');
 
 INSERT INTO TB_QNA(QNA_NO, QNA_TYPE, QNA_WRITER, QNA_TITLE, QNA_CONTENT, QNA_CREATE_DATE, QNA_ANSWER_STATUS, QNA_STATUS) 
-VALUES(SEQ_QNA_NO.NEXTVAL, 1, 2, 'ÇÁ·ÎÁ§Æ® ÈÄ¿ø ¹æ¹ý ¹®ÀÇ', 'ÈÄ¿ø ¹æ¹ý¿¡ ´ëÇØ ÀÚ¼¼È÷ ¼³¸íÇØÁÖ½Ç ¼ö ÀÖ³ª¿ä?', '2024-02-23', 'N', 'Y');
+VALUES(SEQ_QNA_NO.NEXTVAL, 1, 2, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½Ä¿ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½', 'ï¿½Ä¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ú¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö½ï¿½ ï¿½ï¿½ ï¿½Ö³ï¿½ï¿½ï¿½?', '2024-02-23', 'N', 'Y');
 
 INSERT INTO TB_QNA(QNA_NO, QNA_TYPE, QNA_WRITER, QNA_TITLE, QNA_CONTENT, QNA_CREATE_DATE, QNA_ANSWER_STATUS, QNA_STATUS) 
-VALUES(SEQ_QNA_NO.NEXTVAL, 1, 4, 'ÇÁ·ÎÁ§Æ® ÁøÇà »óÈ² ¹®ÀÇ', 'ÁøÇà »óÈ²¿¡ ´ëÇØ ¾÷µ¥ÀÌÆ® ÇØÁÖ½Ç ¼ö ÀÖ³ª¿ä?', '2024-02-24', 'N', 'Y');
+VALUES(SEQ_QNA_NO.NEXTVAL, 1, 4, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È² ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È²ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½Ö½ï¿½ ï¿½ï¿½ ï¿½Ö³ï¿½ï¿½ï¿½?', '2024-02-24', 'N', 'Y');
 
 INSERT INTO TB_QNA(QNA_NO, QNA_TYPE, QNA_WRITER, QNA_TITLE, QNA_CONTENT, QNA_CREATE_DATE, QNA_ANSWER_STATUS, QNA_STATUS) 
-VALUES(SEQ_QNA_NO.NEXTVAL, 1, 3, 'ÈÄ¿øÇÑ ÇÁ·ÎÁ§Æ®ÀÇ ¼±¹° ¹è¼Û ÀÏÁ¤ ¹®ÀÇ', '¼±¹° ¹è¼Û ÀÏÁ¤¿¡ ´ëÇØ ¾Ë·ÁÁÖ½Ç ¼ö ÀÖ³ª¿ä?', '2024-02-25', 'N', 'Y');
+VALUES(SEQ_QNA_NO.NEXTVAL, 1, 3, 'ï¿½Ä¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ë·ï¿½ï¿½Ö½ï¿½ ï¿½ï¿½ ï¿½Ö³ï¿½ï¿½ï¿½?', '2024-02-25', 'N', 'Y');
 
 INSERT INTO TB_QNA(QNA_NO, QNA_TYPE, QNA_WRITER, QNA_TITLE, QNA_CONTENT, QNA_CREATE_DATE, QNA_ANSWER_STATUS, QNA_STATUS) 
-VALUES(SEQ_QNA_NO.NEXTVAL, 1, 2, 'ÇÁ·ÎÁ§Æ®¿¡ ´ëÇØ ´õ ÀÚ¼¼È÷ ¾Ë°í ½Í½À´Ï´Ù', 'Ãß°¡ Á¤º¸¸¦ Á¦°øÇØÁÖ½Ç ¼ö ÀÖ³ª¿ä?', '2024-02-26', 'N', 'Y');
+VALUES(SEQ_QNA_NO.NEXTVAL, 1, 2, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ú¼ï¿½ï¿½ï¿½ ï¿½Ë°ï¿½ ï¿½Í½ï¿½ï¿½Ï´ï¿½', 'ï¿½ß°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö½ï¿½ ï¿½ï¿½ ï¿½Ö³ï¿½ï¿½ï¿½?', '2024-02-26', 'N', 'Y');
 --------------------------------------------------
------------------ PROJECT °ü·Ã --------------------	
+----------------- PROJECT ï¿½ï¿½ï¿½ï¿½ --------------------	
 --------------------------------------------------
 CREATE TABLE TB_PROJECT (
     PROJECT_NO NUMBER CONSTRAINT PROJECT_NO_PK PRIMARY KEY,
@@ -539,232 +539,232 @@ CREATE TABLE TB_PROJECT (
     CONSTRAINT PROJECT_CATEGORY_NO_FK FOREIGN KEY (PROJECT_CATEGORY_NO) REFERENCES TB_PJ_CATEGORY(PJ_CATEGORY_NO)
 );
 
-COMMENT ON COLUMN TB_PROJECT.PROJECT_NO IS 'ÆÝµù ÇÁ·ÎÁ§Æ® ¹øÈ£';
-COMMENT ON COLUMN TB_PROJECT.PROJECT_SELLER IS 'ÆÝµù ÇÁ·ÎÁ§Æ® Ã¢ÀÛÀÚÈ¸¿ø¹øÈ£';
-COMMENT ON COLUMN TB_PROJECT.PROJECT_CATEGORY_NO IS 'ÆÝµù ÇÁ·ÎÁ§Æ® Ä«Å×°í¸®';
-COMMENT ON COLUMN TB_PROJECT.PROJECT_OVERVIEW IS 'ÆÝµù ÇÁ·ÎÁ§Æ® ¿ä¾à ¼³¸í';
-COMMENT ON COLUMN TB_PROJECT.PROJECT_TITLE IS 'ÆÝµù ÇÁ·ÎÁ§Æ® Á¦¸ñ';
-COMMENT ON COLUMN TB_PROJECT.PROJECT_CONTENT IS 'ÆÝµù ÇÁ·ÎÁ§Æ® ³»¿ë';
-COMMENT ON COLUMN TB_PROJECT.PROJECT_TAG IS 'ÆÝµù ÇÁ·ÎÁ§Æ® ÅÂ±×';
-COMMENT ON COLUMN TB_PROJECT.PROJECT_PRICE IS 'ÆÝµù ÇÁ·ÎÁ§Æ® ¸ñÇ¥±Ý¾×';
-COMMENT ON COLUMN TB_PROJECT.PROJECT_START IS 'ÆÝµù ÇÁ·ÎÁ§Æ® ½ÃÀÛÀÏ';
-COMMENT ON COLUMN TB_PROJECT.PROJECT_END IS 'ÆÝµù ÇÁ·ÎÁ§Æ® Á¾·áÀÏ';
-COMMENT ON COLUMN TB_PROJECT.PROJECT_PAYMENT_BUYER IS 'ÆÝµù ÇÁ·ÎÁ§Æ® ÈÄ¿øÀÚ°áÁ¦±âÇÑ';
-COMMENT ON COLUMN TB_PROJECT.PROJECT_PAYMENT_SELLER IS 'ÆÝµù ÇÁ·ÎÁ§Æ® Ã¢ÀÛÀÚÁ¤»êÀÏ';
-COMMENT ON COLUMN TB_PROJECT.PROJECT_STATUS IS 'ÆÝµù ÇÁ·ÎÁ§Æ® »óÅÂ°ª (Y : °Ô½Ã / N : ºñ°Ô½Ã)';
+COMMENT ON COLUMN TB_PROJECT.PROJECT_NO IS 'ï¿½Ýµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½È£';
+COMMENT ON COLUMN TB_PROJECT.PROJECT_SELLER IS 'ï¿½Ýµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® Ã¢ï¿½ï¿½ï¿½ï¿½È¸ï¿½ï¿½ï¿½ï¿½È£';
+COMMENT ON COLUMN TB_PROJECT.PROJECT_CATEGORY_NO IS 'ï¿½Ýµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® Ä«ï¿½×°ï¿½ï¿½ï¿½';
+COMMENT ON COLUMN TB_PROJECT.PROJECT_OVERVIEW IS 'ï¿½Ýµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½';
+COMMENT ON COLUMN TB_PROJECT.PROJECT_TITLE IS 'ï¿½Ýµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½';
+COMMENT ON COLUMN TB_PROJECT.PROJECT_CONTENT IS 'ï¿½Ýµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½';
+COMMENT ON COLUMN TB_PROJECT.PROJECT_TAG IS 'ï¿½Ýµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½Â±ï¿½';
+COMMENT ON COLUMN TB_PROJECT.PROJECT_PRICE IS 'ï¿½Ýµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½Ç¥ï¿½Ý¾ï¿½';
+COMMENT ON COLUMN TB_PROJECT.PROJECT_START IS 'ï¿½Ýµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½';
+COMMENT ON COLUMN TB_PROJECT.PROJECT_END IS 'ï¿½Ýµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½';
+COMMENT ON COLUMN TB_PROJECT.PROJECT_PAYMENT_BUYER IS 'ï¿½Ýµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½Ä¿ï¿½ï¿½Ú°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½';
+COMMENT ON COLUMN TB_PROJECT.PROJECT_PAYMENT_SELLER IS 'ï¿½Ýµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® Ã¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½';
+COMMENT ON COLUMN TB_PROJECT.PROJECT_STATUS IS 'ï¿½Ýµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½Â°ï¿½ (Y : ï¿½Ô½ï¿½ / N : ï¿½ï¿½Ô½ï¿½)';
 
 CREATE SEQUENCE SEQ_PROJECT_NO
 START WITH 1000
 NOCACHE;
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 2, 20, '¼¼»ó ´Ü ÇÏ³ª»ÓÀÎ ¸¶½Ã´Â Çªµù', 'ÇªµùÀ» ¸¶½Ç ¼ö ÀÖ´Ù?', '±¹³» ÃÖÃÊ ¸¶½Ã´Â ÇªµùÀ» °³¹ßÇÏ¿´½À´Ï´Ù. ´õ ÀÌ»ó ¶° ¸ÔÁö ¸»°í ¸¶¼Å¿ä', '#¸¶½Ã´Â Çªµù', 1000000, '2020-02-21', '2020-03-20', '2020-03-27', '2020-04-03', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 2, 20, 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ï³ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ã´ï¿½ Çªï¿½ï¿½', 'Çªï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö´ï¿½?', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ã´ï¿½ Çªï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½ï¿½Ï´ï¿½. ï¿½ï¿½ ï¿½Ì»ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Å¿ï¿½', '#ï¿½ï¿½ï¿½Ã´ï¿½ Çªï¿½ï¿½', 1000000, '2020-02-21', '2020-03-20', '2020-03-27', '2020-04-03', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 2, 30, 'Ãß¾ïÀÇ ºñ¼®Ä¡±â', 'µ¹µ¢ÀÌ·Î °ÔÀÓÀÌ µÈ´Ù', 'ÀüÅë³îÀÌÀÎ ºñ¼®Ä¡±â, ´õ ÀÌ»ó ¿¾ ³îÀÌ°¡ ¾Æ´Ï¿¡¿ä', '#ºñ¼®Ä¡±â', 2000000, '2020-02-25', '2020-03-24', '2020-03-31', '2020-04-07', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 2, 30, 'ï¿½ß¾ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½Ì·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½È´ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½, ï¿½ï¿½ ï¿½Ì»ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Ì°ï¿½ ï¿½Æ´Ï¿ï¿½ï¿½ï¿½', '#ï¿½ï¿½Ä¡ï¿½ï¿½', 2000000, '2020-02-25', '2020-03-24', '2020-03-31', '2020-04-07', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 3, 140, 'µÞ¸ð½ÀÀº »ç¶÷ÀÌ´Ù', 'Âû¶ûÂû¶û ¸ÍÀÌ »çÁø', '¸Ó¸´°áÀÌ Âû¶û°Å¸®´Â ¹Ý·Á°ß ¸ÍÀÌÀÇ ´Üµ¶ »çÁø', '#±Í¿©¿î °­¾ÆÁö', 3000000, '2020-02-26', '2020-03-25', '2020-04-01', '2020-04-08', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 3, 140, 'ï¿½Þ¸ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ì´ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½', 'ï¿½Ó¸ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Å¸ï¿½ï¿½ï¿½ ï¿½Ý·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Üµï¿½ ï¿½ï¿½ï¿½ï¿½', '#ï¿½Í¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 3000000, '2020-02-26', '2020-03-25', '2020-04-01', '2020-04-08', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 2, 50, '¹ú²Ü Çâ¼ö?', '¿©¸§´ëºñ °í±Þ Çâ¼ö', '¹«´õ¿î ¿©¸§À» ³¯·ÁÁÙ Ãµ¿¬ Çâ¼ö', '#Ãµ¿¬ Çâ¼ö', 4000000, '2020-02-28', '2020-03-27', '2020-04-03', '2020-04-10', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 2, 50, 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½?', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ãµï¿½ï¿½ ï¿½ï¿½ï¿½', '#Ãµï¿½ï¿½ ï¿½ï¿½ï¿½', 4000000, '2020-02-28', '2020-03-27', '2020-04-03', '2020-04-10', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 4, 60, '¼È·ÏÈ¨Áî', '¼È·ÏÈ¨Áî ÀÏ´ë±â', '±×°¡ »ì¾Æ¿Â ÀÎ»ýÀÌ ±Ã±ÝÇÏ´Ù¸é?', '#¼È·ÏÈ¨Áî', 5000000, '2020-03-01', '2020-03-31', '2020-04-07', '2020-04-14', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 4, 60, 'ï¿½È·ï¿½È¨ï¿½ï¿½', 'ï¿½È·ï¿½È¨ï¿½ï¿½ ï¿½Ï´ï¿½ï¿½', 'ï¿½×°ï¿½ ï¿½ï¿½Æ¿ï¿½ ï¿½Î»ï¿½ï¿½ï¿½ ï¿½Ã±ï¿½ï¿½Ï´Ù¸ï¿½?', '#ï¿½È·ï¿½È¨ï¿½ï¿½', 5000000, '2020-03-01', '2020-03-31', '2020-04-07', '2020-04-14', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 2, 70, 'Ãß¾ïÀÇ ÀÌ¼ø½Å °ÔÀÓ', '7Â÷ ±³À°°úÁ¤¿¡µµ ½Ç¸° ÀÌ¼ø½Å °ÔÀÓ', '±× ½ÃÀýÀÌ ±Ã±ÝÇÏ½Å°¡¿ä?', '#ÀÌ¼ø½Å °ÔÀÓ', 6000000, '2020-03-15', '2020-04-14', '2020-04-21', '2020-04-28', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 2, 70, 'ï¿½ß¾ï¿½ï¿½ï¿½ ï¿½Ì¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½', '7ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¸ï¿½ ï¿½Ì¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ã±ï¿½ï¿½Ï½Å°ï¿½ï¿½ï¿½?', '#ï¿½Ì¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½', 6000000, '2020-03-15', '2020-04-14', '2020-04-21', '2020-04-28', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 1, 20, '»ý¿øÀ¯·Î ¸¸µç ÁøÂ¥ Ä«ÀÌ¸·' , 'ÇöÀç ±×´ë·Î ÁøÂ¥ Ä«ÀÌ¸·', 'ÈÄÃ³¸® ¾ÐÃà°úÁ¤À» ÅëÇÑ ´õ ÁøÇÏ°í ±íÀº ¸À', '#Ä«ÀÌ¸·', 500000, '2024-02-19', '2024-03-18', '2024-03-25', '2024-04-03', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 1, 20, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Â¥ Ä«ï¿½Ì¸ï¿½' , 'ï¿½ï¿½ï¿½ï¿½ ï¿½×´ï¿½ï¿½ ï¿½ï¿½Â¥ Ä«ï¿½Ì¸ï¿½', 'ï¿½ï¿½Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½', '#Ä«ï¿½Ì¸ï¿½', 500000, '2024-02-19', '2024-03-18', '2024-03-25', '2024-04-03', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 2, 20, 'Á©¶ó¶ÇÃ³·³ ÁøÇÏ°í ²Ù´öÇÑ ±×¸¯¿ä°ÅÆ®' , 'Á©¶ó¶ÇÀÎ°¡ ±×¸¯¿ä°ÅÆ®ÀÎ°¡', '½Å¸ÀÀº ÁÙÀÌ°í, ´Ü¸ÀÀº ´õ¿í ±Ø´ëÈ­ Çß½À´Ï´Ù.', '#±×¸¯¿ä°ÅÆ®', 600000, '2024-02-19', '2024-03-18', '2024-03-25', '2024-04-03', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 2, 20, 'ï¿½ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Ù´ï¿½ï¿½ï¿½ ï¿½×¸ï¿½ï¿½ï¿½ï¿½Æ®' , 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î°ï¿½ ï¿½×¸ï¿½ï¿½ï¿½ï¿½Æ®ï¿½Î°ï¿½', 'ï¿½Å¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì°ï¿½, ï¿½Ü¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ø´ï¿½È­ ï¿½ß½ï¿½ï¿½Ï´ï¿½.', '#ï¿½×¸ï¿½ï¿½ï¿½ï¿½Æ®', 600000, '2024-02-19', '2024-03-18', '2024-03-25', '2024-04-03', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 3, 20, '170½Ã°£ Àý±¸¿¡ °¥¾Æ ¸¸µç ½ä¾î ¸Ô´Â ÃÊÄÝ¸´' , '170½Ã°£ Àý±¸°¥¾Æ ¸¸µç ÃÊÄÝ¸´', 'Bean to Bar °úÁ¤À» ÅëÇØ ¸¸µç', '#ÃÊÄÝ¸´', 700000, '2024-02-19', '2024-03-18', '2024-03-25', '2024-04-03', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 3, 20, '170ï¿½Ã°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Ô´ï¿½ ï¿½ï¿½ï¿½Ý¸ï¿½' , '170ï¿½Ã°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ý¸ï¿½', 'Bean to Bar ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½', '#ï¿½ï¿½ï¿½Ý¸ï¿½', 700000, '2024-02-19', '2024-03-18', '2024-03-25', '2024-04-03', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 4, 20, 'È­ÀÌÆ®µ¥ÀÌ ÄíÅ° ¹Ú½º' , 'È­ÀÌÆ®µ¥ÀÌ ÄíÅ° ¹Ú½º', '¹öÅÍ¿Í ÃÊÄÝ·¿À¸·Î ÆîÄ¥ ¼ö ÀÖ´Â »ç¶û½º·¯¿î ÄíÅ°¹Ú½º', '#ÄíÅ°', 800000, '2024-02-19', '2024-03-18', '2024-03-25', '2024-04-03', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 4, 20, 'È­ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å° ï¿½Ú½ï¿½' , 'È­ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å° ï¿½Ú½ï¿½', 'ï¿½ï¿½ï¿½Í¿ï¿½ ï¿½ï¿½ï¿½Ý·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¥ ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å°ï¿½Ú½ï¿½', '#ï¿½ï¿½Å°', 800000, '2024-02-19', '2024-03-18', '2024-03-25', '2024-04-03', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 3, 20, '¸À°ú ¿µ¾ç °¡µæ Ãµ¿¬¹ú²Ü' , 'Ãµ¿¬¹ú²Ü, °¨±Ö²É²Ü', '°¢Á¾ ºñÅ¸¹Î°ú Ãµ¿¬ ´çºÐÀÌ Ç³ºÎÇÕ´Ï´Ù.', '#Ãµ¿¬¹ú²Ü', 900000, '2024-02-19', '2024-03-18', '2024-03-25', '2024-04-03', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 3, 20, 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½' , 'Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½Ö²É²ï¿½', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å¸ï¿½Î°ï¿½ Ãµï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ Ç³ï¿½ï¿½ï¿½Õ´Ï´ï¿½.', '#Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 900000, '2024-02-19', '2024-03-18', '2024-03-25', '2024-04-03', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 2, 40, 'Ç«½ÅÇ«½Å ÇÜ½ºÅÍ Å°¸µ' , 'Ç«ÇÜÀÌµé ÀÎÇüÅ°¸µ', 'Ç«ÇÜÀÌ ¸¸Áö¸é¼­ Èú¸µÇÏ¼¼¿ä', '#ÀÎÇü Å°¸µ', 800000, '2024-02-19', '2024-03-18', '2024-03-25', '2024-04-03', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 2, 40, 'Ç«ï¿½ï¿½Ç«ï¿½ï¿½ ï¿½Ü½ï¿½ï¿½ï¿½ Å°ï¿½ï¿½' , 'Ç«ï¿½ï¿½ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ï¿½Å°ï¿½ï¿½', 'Ç«ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½é¼­ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½', '#ï¿½ï¿½ï¿½ï¿½ Å°ï¿½ï¿½', 800000, '2024-02-19', '2024-03-18', '2024-03-25', '2024-04-03', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 1, 40, '¸»¶ûÂËµæ Æë±ÏÀÎÇü' , '¸»¶ûÂËµæ Æë±ÏÀÎÇü', 'ÀÏ»ó¿¡¼­ ÇÔ²² ÇÏ´Â ¸»¶ûÂËµæ Æë±ÏÀÎÇü', '#Ä³¸¯ÅÍ ÀÎÇü', 700000, '2024-02-19', '2024-03-18', '2024-03-25', '2024-04-03', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 1, 40, 'ï¿½ï¿½ï¿½ï¿½ï¿½Ëµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½' , 'ï¿½ï¿½ï¿½ï¿½ï¿½Ëµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½Ï»ó¿¡¼ï¿½ ï¿½Ô²ï¿½ ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ëµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', '#Ä³ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½', 700000, '2024-02-19', '2024-03-18', '2024-03-25', '2024-04-03', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 2, 50, '´«À¸·Î º¼ ¼ö ¾ø´Â »ì³¿»õ' , '¸Å·ÂÀÇ Çâ±â ÄÚÆ° ½º³ë¿ì', '±ò²ûÇÏ°í, ±º´õ´õ±â ¾ø´Â ±ú²ýÇÑ Çâ±â', '#ÄÚÆ°Çâ', 600000, '2024-02-19', '2024-03-18', '2024-03-25', '2024-04-03', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 2, 50, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ì³¿ï¿½ï¿½' , 'ï¿½Å·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½Æ° ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½Ï°ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½', '#ï¿½ï¿½Æ°ï¿½ï¿½', 600000, '2024-02-19', '2024-03-18', '2024-03-25', '2024-04-03', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 3, 50, 'ÀÏ»ó ¼Ó¿¡¼­ º¸³»´Â ¸ÅÀÏÀÇ ÀÏ°ú¿¡ ¸Ã´Â ÇÑ ³¿»õ' , '±Ã±ÝÇÑ ³¿»õ, ³Ê', 'ÆÄ¿ì´õ¸®ÇÑ µûµíÇÏ°í ºÎµå·¯¿î ´À³¦ÀÇ Çâ', '#ÆÄ¿ì´õ¸®Çâ', 400000, '2024-02-19', '2024-03-18', '2024-03-25', '2024-04-03', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 3, 50, 'ï¿½Ï»ï¿½ ï¿½Ó¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ï°ï¿½ï¿½ï¿½ ï¿½Ã´ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½' , 'ï¿½Ã±ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½', 'ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Îµå·¯ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½', '#ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 400000, '2024-02-19', '2024-03-18', '2024-03-25', '2024-04-03', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 4, 50, '·Î¸Ç½º ÆÇÅ¸Áö ¼¼°èÀÇ Çâ' , 'Çâ¼ö¸¦ »Ñ¸®°í ÀÏ¾î³ª´Ï ³»°¡ È²³à?', 'ÀØÇôÁø ºñ¹Ð½º·¯¿î ±â¾ïÀÌ ¶°¿À¸£´Â Çâ±â', '#ÇÃ¶ó¿öÇâ', 300000, '2024-02-19', '2024-03-18', '2024-03-25', '2024-04-03', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 4, 50, 'ï¿½Î¸Ç½ï¿½ ï¿½ï¿½Å¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½' , 'ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ¸ï¿½ï¿½ï¿½ ï¿½Ï¾î³ªï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È²ï¿½ï¿½?', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ð½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½', '#ï¿½Ã¶ï¿½ï¿½ï¿½ï¿½', 300000, '2024-02-19', '2024-03-18', '2024-03-25', '2024-04-03', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 3, 50, '¾ÆÀÌ½ºÅ©¸² ÀÌÁ¦ ¸ÔÁö¸»°í »Ñ¸®ÀÚ' , 'È­Á¦ÀÇ ¾ÆÀÌ½ºÅ©¸² Çâ¼ö', '¸À»Ó ¾Æ´Ï¶ó ÇâÀ¸·Îµµ Áñ±â´Â ¹Ù´Ò¶ó Çâ¼ö', '#¹Ù´Ò¶óÇâ', 500000, '2024-02-19', '2024-03-18', '2024-03-25', '2024-04-03', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 3, 50, 'ï¿½ï¿½ï¿½Ì½ï¿½Å©ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ¸ï¿½ï¿½ï¿½' , 'È­ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì½ï¿½Å©ï¿½ï¿½ ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ ï¿½Æ´Ï¶ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Îµï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ù´Ò¶ï¿½ ï¿½ï¿½ï¿½', '#ï¿½Ù´Ò¶ï¿½ï¿½ï¿½', 500000, '2024-02-19', '2024-03-18', '2024-03-25', '2024-04-03', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 2, 50, '´ÞÄÞÇÏ°Ô ÆÛÁö´Â °í´çµµ Æ÷µµÇâ Çâ¼ö' , '´ÞÄÞÇÑ ÇÑµµÃÊ°ú! Çâ±â·Î Áñ°Ü¿ä', '»þÀÎ¸Ó½ºÄÏÀ» ±×·¡µµ ³óÃà½ÃÅ²°Í °°Àº ´ÞÄÞÇÑ Çâ±â', '#ÇÁ·çÆ¼Çâ', 600000, '2024-02-19', '2024-03-18', '2024-03-25', '2024-04-03', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 2, 50, 'ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½çµµ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½' , 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ñµï¿½ï¿½Ê°ï¿½! ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ü¿ï¿½', 'ï¿½ï¿½ï¿½Î¸Ó½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½×·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Å²ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½', '#ï¿½ï¿½ï¿½ï¿½Æ¼ï¿½ï¿½', 600000, '2024-02-19', '2024-03-18', '2024-03-25', '2024-04-03', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 1, 50, '»õÇÏ¾á ¹éµµ¸¦ °¥¾Æ³ÖÀºµíÇÑ Çâ±â' , 'ÇÑÀÔ º£¾î¹°¶§ ±× Çâ±â, ¹éµµ ¾Æ»è', 'ÀÎÀ§ÀûÀÌÁö ¾ÊÀº ÀÚ¿¬½º·´°Ô ´ÞÄÞÇÑ ³¿»õ', '#ÇÁ·çÆ¼Çâ', 300000, '2024-02-19', '2024-03-18', '2024-03-25', '2024-04-03', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 1, 50, 'ï¿½ï¿½ï¿½Ï¾ï¿½ ï¿½éµµï¿½ï¿½ ï¿½ï¿½ï¿½Æ³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½' , 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½î¹°ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½, ï¿½éµµ ï¿½Æ»ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ú¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½', '#ï¿½ï¿½ï¿½ï¿½Æ¼ï¿½ï¿½', 300000, '2024-02-19', '2024-03-18', '2024-03-25', '2024-04-03', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 2, 70, 'ÅÐºüÁü ¾ø´Â °í¾çÀÌ Å°¿ì±â' , '·£¼±Áý»ç°¡ µÇ¾îº¸ÀÚ <¾ß¿ËÈ¨>', 'Çö½Ç¿¡¼­ °í¾çÀÌ¸¦ ¸ø Å°¿ì´ÂºÐµéÀ» À§ÇÑ', '#°í¾çÀÌÀ°¼º', 600000, '2024-02-19', '2024-03-18', '2024-03-25', '2024-04-03', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 2, 70, 'ï¿½Ðºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Å°ï¿½ï¿½ï¿½' , 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ç°¡ ï¿½Ç¾îº¸ï¿½ï¿½ <ï¿½ß¿ï¿½È¨>', 'ï¿½ï¿½ï¿½Ç¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ì¸ï¿½ ï¿½ï¿½ Å°ï¿½ï¿½ÂºÐµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½', '#ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 600000, '2024-02-19', '2024-03-18', '2024-03-25', '2024-04-03', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 3, 70, '¸¶¹ý ·¹½ÃÇÇ¸¦ Ã£¾Æ °­¾ÆÁö Ä£±¸¿Í ¿ä¸®ÇÏ´Â °ÔÀÓ' , '°­¾ÆÁö°¡ ¿ä¸® ÇØÁØ´Ù? <°­¾ÆÁö¿Í ºñ¹Ð·¹½ÃÇÇ>', 'ÇÒ¾Æ¹öÁöÀÇ ÆíÁö¸¦ ¹Þ°í µµÂøÇÑ ÀÌ°÷Àº?', '#¿ä¸®°ÔÀÓ', 500000, '2024-02-19', '2024-03-18', '2024-03-25', '2024-04-03', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 3, 70, 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç¸ï¿½ Ã£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ä£ï¿½ï¿½ï¿½ï¿½ ï¿½ä¸®ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½' , 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ä¸® ï¿½ï¿½ï¿½Ø´ï¿½? <ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½>', 'ï¿½Ò¾Æ¹ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Þ°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì°ï¿½ï¿½ï¿½?', '#ï¿½ä¸®ï¿½ï¿½ï¿½ï¿½', 500000, '2024-02-19', '2024-03-18', '2024-03-25', '2024-04-03', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 4, 70, 'AI¾ÖÀÎÀÇ È£°¨µµ¸¦ ¿Ã·Á °ø·«ÇØº¸ÀÚ' , '´ç½ÅÀ» ¼³·¹°Ô ÇÒ AI ¾ÖÀÎ', 'È£°¨µµ¸¦ ¿Ã·Á ¸ñÇ¥¸¦ ´Þ¼ºÇØº¸ÀÚ!', '#AI', 800000, '2024-02-19', '2024-03-18', '2024-03-25', '2024-04-03', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 4, 70, 'AIï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ã·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Øºï¿½ï¿½ï¿½' , 'ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ AI ï¿½ï¿½ï¿½ï¿½', 'È£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ã·ï¿½ ï¿½ï¿½Ç¥ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½Øºï¿½ï¿½ï¿½!', '#AI', 800000, '2024-02-19', '2024-03-18', '2024-03-25', '2024-04-03', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 3, 70, '¾îµð¼­µç Áñ±â´Â ¿¢¼¿ ¹æÅ»Ãâ°ÔÀÓ' , 'Ã¹¹øÂ° ¿¡ÇÇ¼Òµå <¾Ç¸ù>', '»ç¹«¿ëÀ¸·Î ¾²ÀÌ´Â ¿¢¼¿ ÇÁ·Î±×·¥À» ÀÌ¿ëÇÑ ¹æÅ»Ãâ°ÔÀÓ', '#¿¢¼¿¹æÅ»Ãâ', 300000, '2024-02-19', '2024-03-18', '2024-03-25', '2024-04-03', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 3, 70, 'ï¿½ï¿½ð¼­µï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å»ï¿½ï¿½ï¿½ï¿½ï¿½' , 'Ã¹ï¿½ï¿½Â° ï¿½ï¿½ï¿½Ç¼Òµï¿½ <ï¿½Ç¸ï¿½>', 'ï¿½ç¹«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î±×·ï¿½ï¿½ï¿½ ï¿½Ì¿ï¿½ï¿½ï¿½ ï¿½ï¿½Å»ï¿½ï¿½ï¿½ï¿½ï¿½', '#ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å»ï¿½ï¿½', 300000, '2024-02-19', '2024-03-18', '2024-03-25', '2024-04-03', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 2, 70, 'Ä«Åå¸¸ ÀÖÀ¸¸é ÇÒ ¼ö ÀÖ´Â ¹æÅ»Ãâ°ÔÀÓ' , 'Ä«Åå µÎ±ÙµÎ±Ù ·Î¸Ç½º', 'Ä«Åå Ãªº¿ ±â¼úÀ» È°¿ëÇÑ ¿¬¾Ö ½Ã¹Ä·¹ÀÌ¼Ç °ÔÀÓ', '#Ä«Åå°ÔÀÓ', 500000, '2024-02-20', '2024-03-19', '2024-03-26', '2024-04-04', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 2, 70, 'Ä«ï¿½å¸¸ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½Å»ï¿½ï¿½ï¿½ï¿½ï¿½' , 'Ä«ï¿½ï¿½ ï¿½Î±ÙµÎ±ï¿½ ï¿½Î¸Ç½ï¿½', 'Ä«ï¿½ï¿½ Ãªï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ È°ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ã¹Ä·ï¿½ï¿½Ì¼ï¿½ ï¿½ï¿½ï¿½ï¿½', '#Ä«ï¿½ï¿½ï¿½ï¿½ï¿½', 500000, '2024-02-20', '2024-03-19', '2024-03-26', '2024-04-04', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 1, 80, '¸ðµç ¿¬·É´ëÀÇ »ç¶÷µéÀÌ ÇÔ²² ÀÔÀ» ¼ö ÀÖ´Â Ãß¸®´×' , '³²³à³ë¼Ò¸¦ À§ÇÑ ¹è»ö Áý¾÷ Ãß¸®´×', '´Ù°¡¿Ã º½À» À§ÇÑ ÆíÇÏ°í ¿¹»Û Ãß¸®´×', '#Ãß¸®´×', 400000, '2024-02-20', '2024-03-19', '2024-03-26', '2024-04-04', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 1, 80, 'ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½É´ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô²ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ß¸ï¿½ï¿½ï¿½' , 'ï¿½ï¿½ï¿½ï¿½ï¿½Ò¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ß¸ï¿½ï¿½ï¿½', 'ï¿½Ù°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ß¸ï¿½ï¿½ï¿½', '#ï¿½ß¸ï¿½ï¿½ï¿½', 400000, '2024-02-20', '2024-03-19', '2024-03-26', '2024-04-04', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 2, 80, '°í¼ö Á¶¾Æ Å¬·´ÀÇ Æ¼¼ÅÃ÷' , '°í¼öÁ¶¾ÆÅ¬·´ Æ¼¼ÅÃ÷¿Í ÇÔ²²ÇÏ´Â ¸ÀÀÖ´Â ¿©Çà', '°í¼ö¸¦ ÁÁ¾ÆÇÏ´Â ±×´ë, ¿©ÇàÁö¿¡¼­ ÀÌ ¿ÊÀ» º¸¿©ÁÖ¼¼¿ä', '#°í¼öÁÁ¾Æ', 700000, '2024-02-20', '2024-03-19', '2024-03-26', '2024-04-04', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 2, 80, 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ Æ¼ï¿½ï¿½ï¿½ï¿½' , 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å¬ï¿½ï¿½ Æ¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô²ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½×´ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½', '#ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 700000, '2024-02-20', '2024-03-19', '2024-03-26', '2024-04-04', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 3, 80, '±¸¸Û³ª´Â ÆÒÆ¼´Â ÀÌÁ¦ ±×¸¸ Áú±äÆÒÆ¼' , 'µµ±úºñºþ½º', 'Âõ¾îÁú °ÆÁ¤ ¾ø´Â ÆÒÆ¼', '#µµ±úºñ', 700000, '2024-02-20', '2024-03-19', '2024-03-26', '2024-04-04', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 3, 80, 'ï¿½ï¿½ï¿½Û³ï¿½ï¿½ï¿½ ï¿½ï¿½Æ¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½×¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¼' , 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ¼', '#ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 700000, '2024-02-20', '2024-03-19', '2024-03-26', '2024-04-04', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 4, 80, '¼Ó¿Ê°°Áö ¾ÊÀº Æ®··Å© ÆÒÆ¼' , '¼Ó¿Ê°°Áö ¾ÊÀº ¼Ó¿Ê, Æ®··Å© ÆÒÆ¼', 'ÀÚÃë¹æ¿¡¼­ ÇÏÀÇ´Â ÆíÈ÷ Æ®··Å© ÆÒÆ¼¸¸ ÀÔ¾îµµ µÇ°Ô', '#¾ð´õ¿þ¾î', 400000, '2024-02-20', '2024-03-19', '2024-03-26', '2024-04-04', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 4, 80, 'ï¿½Ó¿Ê°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Æ®ï¿½ï¿½Å© ï¿½ï¿½Æ¼' , 'ï¿½Ó¿Ê°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ó¿ï¿½, Æ®ï¿½ï¿½Å© ï¿½ï¿½Æ¼', 'ï¿½ï¿½ï¿½ï¿½æ¿¡ï¿½ï¿½ ï¿½ï¿½ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½ï¿½ Æ®ï¿½ï¿½Å© ï¿½ï¿½Æ¼ï¿½ï¿½ ï¿½Ô¾îµµ ï¿½Ç°ï¿½', '#ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 400000, '2024-02-20', '2024-03-19', '2024-03-26', '2024-04-04', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 1, 80, 'Àü¼¼°è »ý»ê·® 5% ¸íÇ°¿ï·Î ¸¸µç Ä³½Ã¹Ì¾î ÄÚÆ®' , 'Ä³½Ã¹Ì¾î ¸ÆÄÚÆ®', '¿Ã °Ü¿ï¿¡µµ ÀÌ ÄÚÆ® ÇÏ³ª¸é ³¡', '#Ä³½Ã¹Ì¾î', 900000, '2024-02-20', '2024-03-19', '2024-03-26', '2024-04-04', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 1, 80, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ê·® 5% ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ä³ï¿½Ã¹Ì¾ï¿½ ï¿½ï¿½Æ®' , 'Ä³ï¿½Ã¹Ì¾ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®', 'ï¿½ï¿½ ï¿½Ü¿ï¿¡ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½Æ® ï¿½Ï³ï¿½ï¿½ï¿½ ï¿½ï¿½', '#Ä³ï¿½Ã¹Ì¾ï¿½', 900000, '2024-02-20', '2024-03-19', '2024-03-26', '2024-04-04', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 2, 80, '°Ü¿ï ½ÈÀº »ç¶÷µé ¸ð¿©¶ó À©ÅÍ ÇìÀÌÆ® Å¬·´' , 'À©ÇìÅ¬ Æ¼¼ÅÃ÷', '´©±¸³ª ¸¶À½ ÇÑÄÒ¿¡ °Ü¿ïÀ» ½È¾îÇÏ´Â ¸¶À½À» ¾È°í »ìÁÒ', '#°Ü¿ï½È¾î', 300000, '2024-02-20', '2024-03-19', '2024-03-26', '2024-04-04', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 2, 80, 'ï¿½Ü¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ð¿©¶ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ® Å¬ï¿½ï¿½' , 'ï¿½ï¿½ï¿½ï¿½Å¬ Æ¼ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ò¿ï¿½ ï¿½Ü¿ï¿½ï¿½ï¿½ ï¿½È¾ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½È°ï¿½ ï¿½ï¿½ï¿½ï¿½', '#ï¿½Ü¿ï¿½È¾ï¿½', 300000, '2024-02-20', '2024-03-19', '2024-03-26', '2024-04-04', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 3, 90, '¼ÒÀÛÀÎÀ¸·Î ½ÃÀÛÇØ ´ëÁöÁÖ±îÁö' , '»çÇ¥³»°í ÀÌ°è¿¡¼­ ³ó»çÁþ½À´Ï´Ù 1~2±Ç', '¼ÒÀÛÀÎÀ¸·Î ½ÃÀÛÇØ ´ëÁöÁÖ±îÁö Áñ±â´Â Èú¸µ ¶óÀÌÇÁ', '#³ó»ç', 500000, '2024-02-20', '2024-03-19', '2024-03-26', '2024-04-04', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 3, 90, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ö±ï¿½ï¿½ï¿½' , 'ï¿½ï¿½Ç¥ï¿½ï¿½ï¿½ï¿½ ï¿½Ì°è¿¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ 1~2ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ö±ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', '#ï¿½ï¿½ï¿½', 500000, '2024-02-20', '2024-03-19', '2024-03-26', '2024-04-04', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 4, 90, 'N»ç ÀÎ±â À¥Å÷ <¿©ÁÖÀÇ Ã¹³¯¹ãÀ» °¡Á®¹ö·È´Ù> ´ÜÇàº»' , 'N»çÀ¥Å÷<¿©ÁÖÀÇ Ã¹³¯¹ãÀ» °¡Á®¹ö·È´Ù> ´ÜÇàº» 4~6±Ç', 'º»Æí ¿Ï°á±îÁö ´ãÀº ´ÜÇàº» 4~6±Ç', '#·Î¸Ç½ºÆÇÅ¸Áö', 800000, '2024-02-20', '2024-03-19', '2024-03-26', '2024-04-04', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 4, 90, 'Nï¿½ï¿½ ï¿½Î±ï¿½ ï¿½ï¿½ï¿½ï¿½ <ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ã¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È´ï¿½> ï¿½ï¿½ï¿½àº»' , 'Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½<ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ã¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È´ï¿½> ï¿½ï¿½ï¿½àº» 4~6ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ ï¿½Ï°ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½àº» 4~6ï¿½ï¿½', '#ï¿½Î¸Ç½ï¿½ï¿½ï¿½Å¸ï¿½ï¿½', 800000, '2024-02-20', '2024-03-19', '2024-03-26', '2024-04-04', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 3, 90, '¼­À¯·´ ½ÅÈ­¸¦ ¸¸È­·Î ¹è¿öº¸ÀÚ' , 'ÆÇÅ¸Áö ±Ùº», º»°Ý ¼­À¯·´ ½ÅÈ­ ¸¸È­ 1±Ç', 'µåµð¾î Á¦´ë·Î µÈ ±Ùº» ¼­À¯·´ ½ÅÈ­ ¸¸È­ µîÀå', '#½ÅÈ­', 300000, '2024-02-20', '2024-03-19', '2024-03-26', '2024-04-04', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 3, 90, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È­ï¿½ï¿½ ï¿½ï¿½È­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½' , 'ï¿½ï¿½Å¸ï¿½ï¿½ ï¿½Ùºï¿½, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È­ ï¿½ï¿½È­ 1ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ùºï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È­ ï¿½ï¿½È­ ï¿½ï¿½ï¿½ï¿½', '#ï¿½ï¿½È­', 300000, '2024-02-20', '2024-03-19', '2024-03-26', '2024-04-04', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 2, 90, '20¼¼±â¸¦ »ì¾Æ°¡´Â x¼¼´ëÀÇ °í±ººÐÅõ »ýÁ¸±â' , '¶÷ÀÚ ÀÌ¾ß±â', '¶÷ÀÚÀÇ °í±ººÐÅõ »ýÁ¸±â¸¦ ±×¸° ¿¡¼¼ÀÌ', '#¿¡¼¼ÀÌ', 100000, '2024-02-20', '2024-03-19', '2024-03-26', '2024-04-04', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 2, 90, '20ï¿½ï¿½ï¿½â¸¦ ï¿½ï¿½Æ°ï¿½ï¿½ï¿½ xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½' , 'ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¾ß±ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½â¸¦ ï¿½×¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', '#ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 100000, '2024-02-20', '2024-03-19', '2024-03-26', '2024-04-04', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 1, 90, 'ÀÎ½ºÅ¸Å÷ ¸ðÀ½ <¿£ÇÁÇÇ ¼³¸í¼­>' , '¼ÓÀ» ¾Ë±â ½¬¿î <¿£ÇÁÇÇ ¼³¸í¼­>', '¼ÓÀ» ¾Ë±â ½¬¿î ENFP ÁøÂ¥¸¦ ¸»ÇÏ´Ù', '#MBTI', 400000, '2024-02-21', '2024-03-20', '2024-03-27', '2024-04-05', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 1, 90, 'ï¿½Î½ï¿½Å¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ <ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½>' , 'ï¿½ï¿½ï¿½ï¿½ ï¿½Ë±ï¿½ ï¿½ï¿½ï¿½ï¿½ <ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½>', 'ï¿½ï¿½ï¿½ï¿½ ï¿½Ë±ï¿½ ï¿½ï¿½ï¿½ï¿½ ENFP ï¿½ï¿½Â¥ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½', '#MBTI', 400000, '2024-02-21', '2024-03-20', '2024-03-27', '2024-04-05', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 2, 90, 'Ã¹Â° ÂÞ±¸¸®°¡ ±â·ÏÇÏ´Â ÀÏ»ó/°¡Á·Å÷' , 'Ã¹Â°µé ¸ð¿©! ¼¼ ÀÚ¸ÅÀÇ Ã¹Â° <ÂÞ±¼ÂÞ±¼ °¡Á·ÀÏ±â>', 'ÀÌ·±ºÐ²² ÃßÃµµå·Á¿ä! Ã¹Â°ÀÌ½Å ºÐ', '#ÀÏ»óÅ÷', 200000, '2024-02-21', '2024-03-20', '2024-03-27', '2024-04-05', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 2, 90, 'Ã¹Â° ï¿½Þ±ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Ï»ï¿½/ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½' , 'Ã¹Â°ï¿½ï¿½ ï¿½ï¿½! ï¿½ï¿½ ï¿½Ú¸ï¿½ï¿½ï¿½ Ã¹Â° <ï¿½Þ±ï¿½ï¿½Þ±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ï¿½>', 'ï¿½Ì·ï¿½ï¿½Ð²ï¿½ ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½! Ã¹Â°ï¿½Ì½ï¿½ ï¿½ï¿½', '#ï¿½Ï»ï¿½ï¿½ï¿½', 200000, '2024-02-21', '2024-03-20', '2024-03-27', '2024-04-05', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 3, 90, '¿©¼¸ ¸¶¹ý¼Ò³âµéÀÌ ÆîÄ¡´Â Â¥¸´ÇÑ ¾×¼ÇÈ°±Ø' , '¸¶¹ý¼Ò³â Àú¼¼°è¾ÆÀÌµ¹ ´ÜÇàº» °ø½Ä ±ÂÁî', '¸¶¼¼µ¹ ´ÜÇàº», Æ¯º° È­º¸Áý ¹× ±ÂÁî', '#¸¶¼¼µ¹', 900000, '2024-02-21', '2024-03-20', '2024-03-27', '2024-04-05', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 3, 90, 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ Â¥ï¿½ï¿½ï¿½ï¿½ ï¿½×¼ï¿½È°ï¿½ï¿½' , 'ï¿½ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ìµï¿½ ï¿½ï¿½ï¿½àº» ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½àº», Æ¯ï¿½ï¿½ È­ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½', '#ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 900000, '2024-02-21', '2024-03-20', '2024-03-27', '2024-04-05', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 4, 100, 'Æí¸®ÇÏ°í, ¾ÈÀüÇÏ°Ô Àüµ¿ ´«½ç Á¤¸®±â' , 'À§À×À§À× ÇÁ¸®¹Ì¾ö Àüµ¿ ´«½ç Á¤¸®±â', 'Ä®³¯, »ö»ó, ¹èÅÍ¸® ¾÷±×·¹ÀÌµå', '#´«½çÁ¤¸®', 300000, '2024-02-21', '2024-03-20', '2024-03-27', '2024-04-05', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 4, 100, 'ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½' , 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'Ä®ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½ï¿½×·ï¿½ï¿½Ìµï¿½', '#ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 300000, '2024-02-21', '2024-03-20', '2024-03-27', '2024-04-05', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 3, 100, 'µû¶æÇÔ°ú ±Í¿©¿òÀ» µ¿½Ã¿¡' , 'Ä¡Áî °í¾çÀÌ ÀÎÇü º¸Á¶¹èÅÍ¸®', '±Í¿±°í ½Ç¿ë¼ºµµ ³ôÀº Á¦Ç°', '#º¸Á¶¹èÅÍ¸®', 300000, '2024-02-21', '2024-03-20', '2024-03-27', '2024-04-05', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 3, 100, 'ï¿½ï¿½ï¿½ï¿½ï¿½Ô°ï¿½ ï¿½Í¿ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ã¿ï¿½' , 'Ä¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½', 'ï¿½Í¿ï¿½ï¿½ï¿½ ï¿½Ç¿ë¼ºï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°', '#ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½', 300000, '2024-02-21', '2024-03-20', '2024-03-27', '2024-04-05', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 2, 100, 'Æ®·»µðÇÑ ±â´ÉÀ¸·Î ²ËÂù ¶È¶ÈÇÑ °¡½À±â' , '¹°¸Û ÇÒ ¼ö ÀÖ´Â ¹«Áß·Â °¡½À±â', '°Ç°­À» À§ÇØ ±ú²ýÇÑ ¹æ½ÄÀÇ °¡½À±â¸¦ ¸¸µé¾ú½À´Ï´Ù.', '#°¡½À±â', 600000, '2024-02-21', '2024-03-20', '2024-03-27', '2024-04-05', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 2, 100, 'Æ®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½È¶ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½' , 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ß·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½Ç°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½â¸¦ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.', '#ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 600000, '2024-02-21', '2024-03-20', '2024-03-27', '2024-04-05', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 1, 100, 'UV-C·Î °­·ÂÇÑ »ì±Õ' , '´Ã »õ°ÍÃ³·³ ±ú²ýÇÏ°Ô Ä©¼Ö »ì±Õ±â', '°ÇÁ¶, »ì±Õ ÀüºÎ °¡´ÉÇÑ Ä©¼Ö »ì±Õ±â', '#Ä©¼Ö»ì±Õ±â', 300000, '2024-02-21', '2024-03-20', '2024-03-27', '2024-04-05', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 1, 100, 'UV-Cï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½' , 'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ Ä©ï¿½ï¿½ ï¿½ï¿½Õ±ï¿½', 'ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ä©ï¿½ï¿½ ï¿½ï¿½Õ±ï¿½', '#Ä©ï¿½Ö»ï¿½Õ±ï¿½', 300000, '2024-02-21', '2024-03-20', '2024-03-27', '2024-04-05', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 2, 100, 'Æ¼ ³ªÁö ¾Ê´Â »ç¿øÁõ ³ìÀ½±â' , 'Á÷ÀåÀÎ ÇÊ¼öÅÛ »ç¿øÁõ ³ìÀ½±â', '±Ù¹«Áß À§ÇùÀ¸·Î ÀÎÇÑ ÃÖ¼ÒÇÑÀÇ ¹æ¾î¼ö´Ü', '#³ìÀ½±â', 600000, '2024-02-21', '2024-03-20', '2024-03-27', '2024-04-05', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 2, 100, 'Æ¼ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½' , 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½Ù¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', '#ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 600000, '2024-02-21', '2024-03-20', '2024-03-27', '2024-04-05', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 3, 100, '¾ðÁ¦³ª ±ú²ýÇÑ °í¾çÀÌ È­Àå½Ç' , '¸ðµÎ¸¦ À§ÇÑ °í¾çÀÌ ÀÚµ¿ È­Àå½Ç', '¿ëº¯À» º» ÈÄ 10ºÐ µÚ ÀÚµ¿À¸·Î Ã»¼Ò', '#ÀÚµ¿ È­Àå½Ç', 900000, '2024-02-21', '2024-03-20', '2024-03-27', '2024-04-05', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 3, 100, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È­ï¿½ï¿½ï¿½' , 'ï¿½ï¿½Î¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Úµï¿½ È­ï¿½ï¿½ï¿½', 'ï¿½ëº¯ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ 10ï¿½ï¿½ ï¿½ï¿½ ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ Ã»ï¿½ï¿½', '#ï¿½Úµï¿½ È­ï¿½ï¿½ï¿½', 900000, '2024-02-21', '2024-03-20', '2024-03-27', '2024-04-05', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 4, 110, '¼Õ¸ñ ¾ÆÇÂ »ç¶÷µéÀ» À§ÇÑ Å×ÀÌÇÎ ¼Õ¸ñº¸È£´ë' , '¼Õ¸ñ Á¶Áø³ðÀÌ ¸¸µç Å×ÀÌÇÎ º¸È£´ë', '°ÇÃÊ¿°À¸·Î °í»ýÇÏ´Â ºÐµéÀº ¿ìÇÑ ¼Õ¸ñ º¸È£´ë', '#¼Õ¸ñ º¸È£´ë', 500000, '2024-02-21', '2024-03-20', '2024-03-27', '2024-04-05', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 4, 110, 'ï¿½Õ¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Õ¸ï¿½È£ï¿½ï¿½' , 'ï¿½Õ¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½', 'ï¿½ï¿½ï¿½Ê¿ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Ðµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Õ¸ï¿½ ï¿½ï¿½È£ï¿½ï¿½', '#ï¿½Õ¸ï¿½ ï¿½ï¿½È£ï¿½ï¿½', 500000, '2024-02-21', '2024-03-20', '2024-03-27', '2024-04-05', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 4, 110, '½Ç·Â »ó°ü ¾øÀÌ ¼ö¿µ¿¡ ¹ÌÄ£ ºÐµéÀ» À§ÇÑ ¼ö¸ð' , '¼ö¿µÀå ÆÐ¼Å´Ï½ºÅ¸ °¡´ÉÇÑ ¼ö¸ð', '¹ÐÂø·Â ÁÁ°í ±Í¿©¿î ¼öÄ£³ð ¼ö¸ð', '#¾ÐÃàÆÄ¿ìÄ¡', 500000, '2024-02-21', '2024-03-20', '2024-03-27', '2024-04-05', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 4, 110, 'ï¿½Ç·ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä£ ï¿½Ðµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½' , 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ð¼Å´Ï½ï¿½Å¸ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Í¿ï¿½ï¿½ï¿½ ï¿½ï¿½Ä£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½', '#ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½Ä¡', 500000, '2024-02-21', '2024-03-20', '2024-03-27', '2024-04-05', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 5, 120, 'Ç×»ó º¯ÇÏ´Â ¿©·¯°¡Áö ¸ð¾çÀÇ ±¸¸§' , '½Ã½Ã°¢°¢ º¯ÇÏ´Â ±¸¸§ÀÇ ¸ð¾ç', 'Âû³ªÀÇ ¼ø°£µéÀ» ¿«Àº »çÁø ¿±¼­ºÏ', '#±¸¸§»çÁø', 800000, '2024-02-22', '2024-03-21', '2024-03-28', '2024-04-04', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 5, 120, 'ï¿½×»ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½' , 'ï¿½Ã½Ã°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', '#ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 800000, '2024-02-22', '2024-03-21', '2024-03-28', '2024-04-04', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 6, 120, 'Ä¡¾Ó¸¶ÀÌ Ç³°æÀ» ´ãÀº ¿±¼­ºÏ°ú ½ºÆ¼Ä¿' , '²É, Ä¡¾Ó¸¶ÀÌ ¿±¼­ºÏ', '10°¡Áö ²É°ú ¿©ÇàÀ» ÁÖÁ¦·Î ¹­Àº 20Á¾ÀÇ ¿±¼­ºÏ', '#²É', 400000, '2024-02-22', '2024-03-21', '2024-03-28', '2024-04-04', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 6, 120, 'Ä¡ï¿½Ó¸ï¿½ï¿½ï¿½ Ç³ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½Æ¼Ä¿' , 'ï¿½ï¿½, Ä¡ï¿½Ó¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', '10ï¿½ï¿½ï¿½ï¿½ ï¿½É°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 20ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', '#ï¿½ï¿½', 400000, '2024-02-22', '2024-03-21', '2024-03-28', '2024-04-04', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 7, 120, 'Ä¡Áî»ö °í¾çÀÌ ¿±¼­Ã¥' , 'ÇÏ³ª, µÑ, ¼Â, Ä¡Áî', '¶ó¹Ì¿Í µ¿¶ôÀÌÀÇ ÀÏ»óÀ» ´ãÀº ¿±¼­Ã¥', '#°í¾çÀÌ ¿±¼­', 600000, '2024-02-22', '2024-03-21', '2024-03-28', '2024-04-04', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 7, 120, 'Ä¡ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ã¥' , 'ï¿½Ï³ï¿½, ï¿½ï¿½, ï¿½ï¿½, Ä¡ï¿½ï¿½', 'ï¿½ï¿½Ì¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ï»ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ã¥', '#ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½', 600000, '2024-02-22', '2024-03-21', '2024-03-28', '2024-04-04', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 8, 120, '°¨¼º»çÁø »ö°¨ ÇÊÅÍ' , '¼îÇÎ¸ô »ç¿øÀÌ ¸¸µç »çÁøÇÊÅÍ', 'ºñ½Ñ À¯·áÇÊÅÍ, ¶óÀÌÆ®·ë °­ÁÂ ÇÊ¿ä ¾ø´Â »çÁø ÇÊÅÍ', '#»çÁøÇÊÅÍ', 200000, '2024-02-22', '2024-03-21', '2024-03-28', '2024-04-04', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 8, 120, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½' , 'ï¿½ï¿½ï¿½Î¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½', '#ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 200000, '2024-02-22', '2024-03-21', '2024-03-28', '2024-04-04', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 9, 120, '10³â°£ ¿©Çà ´Ù´Ï¸ç ´ãÀº ³ª¹« »çÁøµé' , '³ª¹« °°Àº »ç¶÷, ³ª¹«¿©Çà »çÁøÁý', '¿©Çà ´Ù´Ò¶§ ´À³¦ ±×´ë·Î »çÁø¿¡ ´ã¾Ò½À´Ï´Ù', '#³ª¹«', 400000, '2024-02-22', '2024-03-21', '2024-03-28', '2024-04-04', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 9, 120, '10ï¿½â°£ ï¿½ï¿½ï¿½ï¿½ ï¿½Ù´Ï¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½' , 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ ï¿½Ù´Ò¶ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½×´ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ò½ï¿½ï¿½Ï´ï¿½', '#ï¿½ï¿½ï¿½ï¿½', 400000, '2024-02-22', '2024-03-21', '2024-03-28', '2024-04-04', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 10, 120, 'Á¦ÁÖµµ ¹Ù´Ù ÆÐºê¸¯ Æ÷½ºÅÍ' , 'Á¦ÁÖµµ¸¦ Ãß¾ïÇÏ´Â ¹æ½Ä ÆÐºê¸¯ Æ÷½ºÅÍ', 'À°Áö¿¡¼­´Â ´À³¢Áö ¸øÇÑ °¨¼ºµéÀ» ´ã¾ÆºÃ½À´Ï´Ù.', '#Á¦ÁÖ¹Ù´Ù', 300000, '2024-02-22', '2024-03-21', '2024-03-28', '2024-04-04', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 10, 120, 'ï¿½ï¿½ï¿½Öµï¿½ ï¿½Ù´ï¿½ ï¿½Ðºê¸¯ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½' , 'ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ ï¿½ß¾ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ ï¿½Ðºê¸¯ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ÆºÃ½ï¿½ï¿½Ï´ï¿½.', '#ï¿½ï¿½ï¿½Ö¹Ù´ï¿½', 300000, '2024-02-22', '2024-03-21', '2024-03-28', '2024-04-04', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 11, 120, 'ºÏ¹Ì,³²¹Ì,À¯·´ µî ¿©ÇàÇÏ¸ç ÂïÀº ÁöÆò¼±ÀÌ ´ã±ä ¿±¼­ºÏ' , '¿©Çà Áß ¸¸³­ ÁöÆò¼± ¿¬°á ¿±¼­ºÏ', '»çÁø¹ÛÀ¸·Î ¿¬°áµÇ´Â ¼¼°è °¢ÁöÀÇ ¼ø°£À» ÇÔ²²', '#ÁöÆò¼±' 800000, '2024-02-22', '2024-03-21', '2024-03-28', '2024-04-04', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 11, 120, 'ï¿½Ï¹ï¿½,ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½' , 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô²ï¿½', '#ï¿½ï¿½ï¿½ï¿½' 800000, '2024-02-22', '2024-03-21', '2024-03-28', '2024-04-04', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 12, 120, '¾ß»ýÈ­ ¿±¼­ºÏ' , '¾ß»ýÈ­ ¿±¼­ºÏ', '¿±¼­¿¡ ÀÌ¸§, ÇÐ¸í, ¹®ÀåÀ» Àû¾î¼­ ¾îµð Ç³°æÀÎÁö ¾Ë ¼ö ÀÖ¾î¿ä', '#²É', 300000, '2024-02-22', '2024-03-21', '2024-03-28', '2024-04-04', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 12, 120, 'ï¿½ß»ï¿½È­ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½' , 'ï¿½ß»ï¿½È­ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½, ï¿½Ð¸ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½î¼­ ï¿½ï¿½ï¿½ Ç³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö¾ï¿½ï¿½', '#ï¿½ï¿½', 300000, '2024-02-22', '2024-03-21', '2024-03-28', '2024-04-04', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 13, 120, '¿±¼­º¸´Ù ´õ ¹° °°Àº ¹®Áø' , '¹°ÀÇ ¼ø°£, ¾ÆÄ«ÀÌºê ¿Àºê ¿öÅÍ', 'Á¾ÀÌ¸¦ ´©¸£´Â ¿ëµµ ¶Ç´Â °ø°£À» ²Ù¹Ì´Â ¿ÀºêÁ¦·Î È°¿ë °¡´É', '#¹®Áø', 700000, '2024-02-22', '2024-03-21', '2024-03-28', '2024-04-04', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 13, 120, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½' , 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½Ä«ï¿½Ìºï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½Ì¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ëµµ ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù¹Ì´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½', '#ï¿½ï¿½ï¿½ï¿½', 700000, '2024-02-22', '2024-03-21', '2024-03-28', '2024-04-04', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 14, 120, '25 ¶Ë±ªÀÌ³× ±ÂÁî' , '25 ¶Ë±ªÀÌ³× Æ÷½ºÅÍºÏ 2Á¾', '¾ÆÀÌµéÀÇ ±Í¿°»ÇÂ¦ÇÑ »çÁøÀ¸·Î ¿±¼­ºÏÀ» Á¦ÀÛ', '#¶Ë±ªÀÌ³×', 500000, '2024-02-22', '2024-03-21', '2024-03-28', '2024-04-04', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 14, 120, '25 ï¿½Ë±ï¿½ï¿½Ì³ï¿½ ï¿½ï¿½ï¿½ï¿½' , '25 ï¿½Ë±ï¿½ï¿½Ì³ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Íºï¿½ 2ï¿½ï¿½', 'ï¿½ï¿½ï¿½Ìµï¿½ï¿½ï¿½ ï¿½Í¿ï¿½ï¿½ï¿½Â¦ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½', '#ï¿½Ë±ï¿½ï¿½Ì³ï¿½', 500000, '2024-02-22', '2024-03-21', '2024-03-28', '2024-04-04', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 15, 120, 'ÆÝµùÀ» 100% ´Þ¼ºÇÒ¶§¸¶´Ù ÇÊ¸§ÀÚÆÇ±âÀÇ ¼³Ä¡ Àå¼Ò Ãß°¡' , '¾ðÁ¦ ¾îµð¼­µç ÇÊ¿äÇÒ¶§¸¶´Ù Àü±¹ ÇÊ¸§ ÀÚÆÇ±â ¼³Ä¡', 'µðÁöÅÐ ¼¼´ë°¡ ÇÊ¸§¿¡ °ü½ÉÀ» °®°Ô ÇØÁÖ´Â ¿ªÇÒ', '#ÇÊ¸§ ÀÚÆÇ±â', 900000, '2024-02-22', '2024-03-21', '2024-03-28', '2024-04-04', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 15, 120, 'ï¿½Ýµï¿½ï¿½ï¿½ 100% ï¿½Þ¼ï¿½ï¿½Ò¶ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¸ï¿½ï¿½ï¿½ï¿½Ç±ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ ï¿½ï¿½ï¿½ ï¿½ß°ï¿½' , 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ð¼­µï¿½ ï¿½Ê¿ï¿½ï¿½Ò¶ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¸ï¿½ ï¿½ï¿½ï¿½Ç±ï¿½ ï¿½ï¿½Ä¡', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ë°¡ ï¿½Ê¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½', '#ï¿½Ê¸ï¿½ ï¿½ï¿½ï¿½Ç±ï¿½', 900000, '2024-02-22', '2024-03-21', '2024-03-28', '2024-04-04', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 16, 120, '¼¼ ÀÛ°¡ÀÇ ÀÛÀº Àü½ÃÈ¸' , '¼¼ ÀÛ°¡ÀÇ ÀÛÀº Àü½ÃÈ¸, ¿±¼­ºÏ »çÁøÀü', '´ç½ÅÀÇ °ø°£¿¡¼­ ÀÛÀº Àü½ÃÈ¸¸¦ ¿­¾îº¸¼¼¿ä', '#¿±¼­ºÏ', 200000, '2024-02-23', '2024-03-22', '2024-03-29', '2024-04-05', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 16, 120, 'ï¿½ï¿½ ï¿½Û°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½È¸' , 'ï¿½ï¿½ ï¿½Û°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½È¸, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½È¸ï¿½ï¿½ ï¿½ï¿½ï¿½îº¸ï¿½ï¿½ï¿½ï¿½', '#ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 200000, '2024-02-23', '2024-03-22', '2024-03-29', '2024-04-05', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 17, 130, '¿ì¸® ¾ÆÀÌ¸¦ À§ÇÑ ¸»¶ûÇÏ°í ¸ÀÀÖ´Â Ãò¸£½ºÆ½' , '¼öÀÇ»çÀÇ ¹Ù¸¥ ¸Ô°Å¸® ÃòÀ×½ºÆ½', 'ÇÊ¼ö¿µ¾ç¼Ò°¡ µé¾î°£ °Ç°­ÇÏ°í ¸ÀÀÖ´Â ÃòÀ×½ºÆ½', '#°³²­', 600000, '2024-02-23', '2024-03-22', '2024-03-29', '2024-04-05', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 17, 130, 'ï¿½ì¸® ï¿½ï¿½ï¿½Ì¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½Ö´ï¿½ ï¿½ò¸£½ï¿½Æ½' , 'ï¿½ï¿½ï¿½Ç»ï¿½ï¿½ï¿½ ï¿½Ù¸ï¿½ ï¿½Ô°Å¸ï¿½ ï¿½ï¿½ï¿½×½ï¿½Æ½', 'ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½Ò°ï¿½ ï¿½ï¿½î°£ ï¿½Ç°ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½×½ï¿½Æ½', '#ï¿½ï¿½ï¿½ï¿½', 600000, '2024-02-23', '2024-03-22', '2024-03-29', '2024-04-05', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 18, 130, 'Ãµ¿¬±êÅÐ¸¸ »ç¿ëÇÑ ÇÚµå¸ÞÀÌµå °í¾çÀÌ Àå³­°¨' , 'Ãµ¿¬±êÅÐ¸¸ »ç¿ëÇÑ °í¾çÀÌ Àå³­°¨', '¹°ºüÁü ¾ø´Â ¾ÈÀüÇÑ ÇÚµå¸ÞÀÌµå ±êÅÐ Àå³­°¨', '#°í¾çÀÌ Àå³­°¨', 300000, '2024-02-23', '2024-03-22', '2024-03-29', '2024-04-05', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 18, 130, 'Ãµï¿½ï¿½ï¿½ï¿½ï¿½Ð¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Úµï¿½ï¿½ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½å³­ï¿½ï¿½' , 'Ãµï¿½ï¿½ï¿½ï¿½ï¿½Ð¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½å³­ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Úµï¿½ï¿½ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½å³­ï¿½ï¿½', '#ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½å³­ï¿½ï¿½', 300000, '2024-02-23', '2024-03-22', '2024-03-29', '2024-04-05', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 19, 130, '°í¾çÀÌ ±¸³»¿° °³¼±ÃËÁø ½ºÇÁ·¹ÀÌ' , '¸ðµç °í¾çÀÌ¸¦ À§ÇÑ Ä¹µûºñ ½ºÇÁ·¹ÀÌ', '¼¼»ó ¸ðµç °í¾çÀÌ ±¸³»¿° °³¼± ÃËÁø ÇÁ·ÎÁ§Æ®', '#°í¾çÀÌ ¿µ¾çÁ¦', 500000, '2024-02-23', '2024-03-22', '2024-03-29', '2024-04-05', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 19, 130, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½' , 'ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ì¸ï¿½ ï¿½ï¿½ï¿½ï¿½ Ä¹ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®', '#ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 500000, '2024-02-23', '2024-03-22', '2024-03-29', '2024-04-05', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 20, 130, '¹Ý·Áµ¿¹°µµ °°ÀÌ ¸¶½Ç ¼ö ÀÖ´Â ¿ÍÀÎ' , '°­¾ÆÁö °í¾çÀÌ ¿ÍÀÎ Ãò¿ÍÀÎ', 'Á¦ÁÖÁö¿ªÀÇ ¹«Ç×»ýÁ¦ Ä¡Å²À¸·Î Á¦Á¶', '#¹Ý·Áµ¿¹° °£½Ä', 400000, '2024-02-23', '2024-03-22', '2024-03-29', '2024-04-05', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 20, 130, 'ï¿½Ý·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½' , 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½×»ï¿½ï¿½ï¿½ Ä¡Å²ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½', '#ï¿½Ý·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½', 400000, '2024-02-23', '2024-03-22', '2024-03-29', '2024-04-05', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 21, 130, '³îÀÌ¿Í Ä¡¼®Á¦°Å¸¦ ÇÑ¹ø¿¡' , '³îÀÌºÎÅÍ Ä¡¼®Á¦°Å±îÁö 1¼®2Á¶ Àå³­°¨', 'Ãµ¿¬°í¹«·Î ¸¸µç °­¾ÆÁö ³ëÁî¿öÅ© Àå³­°¨', '#°­¾ÆÁö Àå³­°¨', 800000, '2024-02-23', '2024-03-22', '2024-03-29', '2024-04-05', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 21, 130, 'ï¿½ï¿½ï¿½Ì¿ï¿½ Ä¡ï¿½ï¿½ï¿½ï¿½ï¿½Å¸ï¿½ ï¿½Ñ¹ï¿½ï¿½ï¿½' , 'ï¿½ï¿½ï¿½Ìºï¿½ï¿½ï¿½ Ä¡ï¿½ï¿½ï¿½ï¿½ï¿½Å±ï¿½ï¿½ï¿½ 1ï¿½ï¿½2ï¿½ï¿½ ï¿½å³­ï¿½ï¿½', 'Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Å© ï¿½å³­ï¿½ï¿½', '#ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½å³­ï¿½ï¿½', 800000, '2024-02-23', '2024-03-22', '2024-03-29', '2024-04-05', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 22, 130, '¼¼»ó¿¡ ´Ü ÇÏ³ª»ÓÀÎ °í¾çÀÌ Ãò¸£Â¥°³' , '¸¶Áö¸·±îÁö Ãò¸¨ °í¾çÀÌ Àü¿ë Ãò¸£Â¥°³', 'ÀÌ¸§À» °¢ÀÎÇÒ ¼ö ÀÖ°í, Å°¸µÀ¸·Î ¾µ ¼ö ÀÖ¾î¿ä', '#°í¾çÀÌ Ãò¸£Â¥°³', 400000, '2024-02-23', '2024-03-22', '2024-03-29', '2024-04-05', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 22, 130, 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ï³ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Â¥ï¿½ï¿½' , 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Â¥ï¿½ï¿½', 'ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö°ï¿½, Å°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö¾ï¿½ï¿½', '#ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Â¥ï¿½ï¿½', 400000, '2024-02-23', '2024-03-22', '2024-03-29', '2024-04-05', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 23, 130, '°í¾çÀÌ Àü¿ë ¹ÐÅ©Æ¼' , '°í¾çÀÌ¿Í Æ¼Å¸ÀÓ', '°í¾çÀÌ°¡ ÁÁ¾ÆÇÏ´Â Çãºê4Á¾', '#°³²­', 500000, '2024-02-23', '2024-03-22', '2024-03-29', '2024-04-05', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 23, 130, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å©Æ¼' , 'ï¿½ï¿½ï¿½ï¿½ï¿½Ì¿ï¿½ Æ¼Å¸ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½Ì°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½4ï¿½ï¿½', '#ï¿½ï¿½ï¿½ï¿½', 500000, '2024-02-23', '2024-03-22', '2024-03-29', '2024-04-05', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 24, 140, '½Åºñ·Î¿î Çà¼ºÀ¸·Î °¡±â À§ÇÑ ¹®À» ¿­ ¼ö ÀÖ´Â ¿­¼è' , '²Þ²Ù´ø ¼¼°è·Î, Àú¼¼°è ¿­¼è ¸ñ°ÉÀÌ', '½Åºñ·Ó°í ¿À¹¦ÇÑ ºûÀÇ Ãµ¿¬¼®À¸·Î ¼ÂÆÃ', '#¸ñ°ÉÀÌ', 600000, '2024-02-23', '2024-03-22', '2024-03-29', '2024-04-05', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 24, 140, 'ï¿½Åºï¿½Î¿ï¿½ ï¿½à¼ºï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½' , 'ï¿½Þ²Ù´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½Åºï¿½Ó°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½', '#ï¿½ï¿½ï¿½ï¿½ï¿½', 600000, '2024-02-23', '2024-03-22', '2024-03-29', '2024-04-05', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 25, 140, '¿µ¿øÇÑ ¿ì¸® ¿ìÁ¤ÀÇ ¼­¾à¼­' , '¿ìÁ¤ÀÇ ¼­¾à, ¿ìÁ¤ ¸ñ°ÉÀÌ', '1/n¾¿ ³ª´²°¡Áú ¼ö ÀÖ¾î¿ä', '#¸ñ°ÉÀÌ', 600000, '2024-02-23', '2024-03-22', '2024-03-29', '2024-04-05', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 25, 140, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ì¸® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½à¼­' , 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½', '1/nï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö¾ï¿½ï¿½', '#ï¿½ï¿½ï¿½ï¿½ï¿½', 600000, '2024-02-23', '2024-03-22', '2024-03-29', '2024-04-05', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 26, 140, 'Çâ±â¸¦ ³Ö¾î º¸°üÇÏ¼¼¿ä' , '¾îµð¿¡µµ ¾ø´Â Çâ±â ¸ñ°ÉÀÌ', 'Çâ¼ö¸¦ ½ºÅæÀÌ ¸Ô±Ý°Ô ÇØÁÖ¸é ÀÏÁÖÀÏ ÀÌ»ó ÇâÀÌ Áö¼ÓµÇ¿ä', '#¸ñ°ÉÀÌ', 600000, '2024-02-23', '2024-03-22', '2024-03-29', '2024-04-05', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 26, 140, 'ï¿½ï¿½â¸¦ ï¿½Ö¾ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½' , 'ï¿½ï¿½ð¿¡µï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô±Ý°ï¿½ ï¿½ï¿½ï¿½Ö¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ÓµÇ¿ï¿½', '#ï¿½ï¿½ï¿½ï¿½ï¿½', 600000, '2024-02-23', '2024-03-22', '2024-03-29', '2024-04-05', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 27, 140, '´ÙÀÌ¾Æ¸óµå¸¦ ´ëÃ¼ÇÒ ¸ðÀÌ»ç³ªÀÌÆ®' , '´ÙÀÌ¾Æ¸óµå¸¦ ´ëÃ¼ÇÒ ¸ðÀÌ»ç³ªÀÌÆ®', '´ÙÀÌ¾Æ¸óµå¿Í ºñ½ÁÇÏÁö¸¸ ´õ Ä£È¯°æÀûÀÎ', '#¸ðÀÌ»ç³ªÀÌÆ®', 400000, '2024-02-23', '2024-03-22', '2024-03-29', '2024-04-05', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 27, 140, 'ï¿½ï¿½ï¿½Ì¾Æ¸ï¿½å¸¦ ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½Ì»ç³ªï¿½ï¿½Æ®' , 'ï¿½ï¿½ï¿½Ì¾Æ¸ï¿½å¸¦ ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½Ì»ç³ªï¿½ï¿½Æ®', 'ï¿½ï¿½ï¿½Ì¾Æ¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ Ä£È¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', '#ï¿½ï¿½ï¿½Ì»ç³ªï¿½ï¿½Æ®', 400000, '2024-02-23', '2024-03-22', '2024-03-29', '2024-04-05', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 24, 140, '»ì°í½ÍÀº »îÀ» ¼ºÃëÇÒ ¼ö ÀÖµµ·Ï ÁöÁöÇÏ°í µµ¿ÍÁÖ´Â ¿ø¼®' , '¾Ç¸ùÀ» °É·¯ÁÖ´Â µå¸²Ä³ÃÄ ¸ñ°ÉÀÌ', 'Âø¿ëÇÒ¼ö·Ï ³» ¸ö¿¡ ¸Â°Ô ¿¡ÀÌÂ¡ µÇ´Â ±Ý¼Ó ½ºÅÐ¸µ ½Ç¹ö·Î Á¦ÀÛ', '#¸ñ°ÉÀÌ', 800000, '2024-02-23', '2024-03-22', '2024-03-29', '2024-04-05', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 24, 140, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Öµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½' , 'ï¿½Ç¸ï¿½ï¿½ï¿½ ï¿½É·ï¿½ï¿½Ö´ï¿½ ï¿½å¸²Ä³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½Ò¼ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Â°ï¿½ ï¿½ï¿½ï¿½ï¿½Â¡ ï¿½Ç´ï¿½ ï¿½Ý¼ï¿½ ï¿½ï¿½ï¿½Ð¸ï¿½ ï¿½Ç¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½', '#ï¿½ï¿½ï¿½ï¿½ï¿½', 800000, '2024-02-23', '2024-03-22', '2024-03-29', '2024-04-05', 'Y');
 --------------------------------------------------
------------------- CHAT °ü·Ã ----------------------	
+------------------ CHAT ï¿½ï¿½ï¿½ï¿½ ----------------------	
 --------------------------------------------------
 CREATE TABLE TB_CHAT (
     CHAT_NO NUMBER CONSTRAINT CHAT_NO_PK PRIMARY KEY,
@@ -775,39 +775,39 @@ CREATE TABLE TB_CHAT (
     CONSTRAINT CHAT_PROJECT_NO_FK FOREIGN KEY (CHAT_PROJECT_NO) REFERENCES TB_PROJECT(PROJECT_NO)
 );
 
-COMMENT ON COLUMN TB_CHAT.CHAT_NO IS 'Ã¤ÆÃ ¹øÈ£';
-COMMENT ON COLUMN TB_CHAT.CHAT_WRITER IS 'Ã¤ÆÃ ÀÛ¼ºÀÚ';
-COMMENT ON COLUMN TB_CHAT.CHAT_PROJECT_NO IS 'Ã¤ÆÃ ÇÁ·ÎÁ§Æ®¹øÈ£';
-COMMENT ON COLUMN TB_CHAT.CHAT_CONTENT IS 'Ã¤ÆÃ ³»¿ë';
+COMMENT ON COLUMN TB_CHAT.CHAT_NO IS 'Ã¤ï¿½ï¿½ ï¿½ï¿½È£';
+COMMENT ON COLUMN TB_CHAT.CHAT_WRITER IS 'Ã¤ï¿½ï¿½ ï¿½Û¼ï¿½ï¿½ï¿½';
+COMMENT ON COLUMN TB_CHAT.CHAT_PROJECT_NO IS 'Ã¤ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½È£';
+COMMENT ON COLUMN TB_CHAT.CHAT_CONTENT IS 'Ã¤ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½';
 
 CREATE SEQUENCE SEQ_CHAT_NO
 NOCACHE;
 
 INSERT INTO TB_CHAT(CHAT_NO, CHAT_WRITER, CHAT_PROJECT_NO, CHAT_CONTENT) 
-VALUES(SEQ_CHAT_NO.NEXTVAL, 2, 1001, '¾È³çÇÏ¼¼¿ä Ã¢ÀÛÀÚ´Ô. ¹¹ Á» ¹°¾îºÁµµ µÉ±î¿ä?');
+VALUES(SEQ_CHAT_NO.NEXTVAL, 2, 1001, 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½ Ã¢ï¿½ï¿½ï¿½Ú´ï¿½. ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½É±ï¿½ï¿½?');
 
 INSERT INTO TB_CHAT(CHAT_NO, CHAT_WRITER, CHAT_PROJECT_NO, CHAT_CONTENT) 
-VALUES(SEQ_CHAT_NO.NEXTVAL, 4, 1001, '¾È³çÇÏ¼¼¿ä ÈÄ¿øÀÚ´Ô! ¾ðÁ¦µçÁö ÆíÈ÷ ¿¬¶ôÁÖ¼¼¿ä!');
+VALUES(SEQ_CHAT_NO.NEXTVAL, 4, 1001, 'ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½ ï¿½Ä¿ï¿½ï¿½Ú´ï¿½! ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½!');
 
 INSERT INTO TB_CHAT(CHAT_NO, CHAT_WRITER, CHAT_PROJECT_NO, CHAT_CONTENT) 
-VALUES(SEQ_CHAT_NO.NEXTVAL, 2, 1001, '´äº¯ÀÌ ±â°èÀûÀÌ³×');
+VALUES(SEQ_CHAT_NO.NEXTVAL, 2, 1001, 'ï¿½äº¯ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì³ï¿½');
 
 INSERT INTO TB_CHAT(CHAT_NO, CHAT_WRITER, CHAT_PROJECT_NO, CHAT_CONTENT) 
-VALUES(SEQ_CHAT_NO.NEXTVAL, 4, 1001, 'ºÒÆíÀ» ³¢ÃÄ ÁË¼ÛÇÕ´Ï´Ù');
+VALUES(SEQ_CHAT_NO.NEXTVAL, 4, 1001, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ë¼ï¿½ï¿½Õ´Ï´ï¿½');
 
 INSERT INTO TB_CHAT(CHAT_NO, CHAT_WRITER, CHAT_PROJECT_NO, CHAT_CONTENT) 
-VALUES(SEQ_CHAT_NO.NEXTVAL, 2, 1001, '±×·± ¸»Åõ°¡ ºÒÆíÇÏ´Ù°í¿ä');
+VALUES(SEQ_CHAT_NO.NEXTVAL, 2, 1001, 'ï¿½×·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´Ù°ï¿½ï¿½ï¿½');
 
 INSERT INTO TB_CHAT(CHAT_NO, CHAT_WRITER, CHAT_PROJECT_NO, CHAT_CONTENT) 
-VALUES(SEQ_CHAT_NO.NEXTVAL, 4, 1001, 'ºÒÆíÀ» ³¢ÃÄ ÁË¼ÛÇÕ´Ï´Ù');
+VALUES(SEQ_CHAT_NO.NEXTVAL, 4, 1001, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ë¼ï¿½ï¿½Õ´Ï´ï¿½');
 
 INSERT INTO TB_CHAT(CHAT_NO, CHAT_WRITER, CHAT_PROJECT_NO, CHAT_CONTENT) 
-VALUES(SEQ_CHAT_NO.NEXTVAL, 2, 1001, 'ÀÌÁ¨ ´äº¯µµ º¹ºÙÀÌ³×');
+VALUES(SEQ_CHAT_NO.NEXTVAL, 2, 1001, 'ï¿½ï¿½ï¿½ï¿½ ï¿½äº¯ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ì³ï¿½');
 
 INSERT INTO TB_CHAT(CHAT_NO, CHAT_WRITER, CHAT_PROJECT_NO, CHAT_CONTENT) 
-VALUES(SEQ_CHAT_NO.NEXTVAL, 4, 1001, '¿øÇÏ½Ã´Â ´äº¯À» µå¸®Áö ¸øÇØ ÁË¼ÛÇÕ´Ï´Ù');
+VALUES(SEQ_CHAT_NO.NEXTVAL, 4, 1001, 'ï¿½ï¿½ï¿½Ï½Ã´ï¿½ ï¿½äº¯ï¿½ï¿½ ï¿½å¸®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ë¼ï¿½ï¿½Õ´Ï´ï¿½');
 --------------------------------------------------
------------------ REPORT °ü·Ã ---------------------	
+----------------- REPORT ï¿½ï¿½ï¿½ï¿½ ---------------------	
 --------------------------------------------------
 CREATE TABLE TB_REPORT (
     REPORT_NO NUMBER CONSTRAINT REPORT_NO_PK PRIMARY KEY,
@@ -824,35 +824,35 @@ CREATE TABLE TB_REPORT (
     CONSTRAINT REPORT_REF_NO_FK FOREIGN KEY (REPORT_REF_NO) REFERENCES TB_CHAT(CHAT_NO)
 );
 
-COMMENT ON COLUMN TB_REPORT.REPORT_NO IS '½Å°í ¹øÈ£';
-COMMENT ON COLUMN TB_REPORT.REPORT_CATEGORY_NO IS '½Å°í Ä«Å×°í¸® ¹øÈ£';
-COMMENT ON COLUMN TB_REPORT.REPORT_WRITER IS '½Å°í ÀÛ¼ºÀÚÈ¸¿ø¹øÈ£';
-COMMENT ON COLUMN TB_REPORT.REPORT_REF_NO IS '½Å°í ÂüÁ¶ÇÏ´Â °Ô½Ã±Û ¹øÈ£';
-COMMENT ON COLUMN TB_REPORT.REPORT_TITLE IS '½Å°í Á¦¸ñ';
-COMMENT ON COLUMN TB_REPORT.REPORT_CONTENT IS '½Å°í ³»¿ë';
-COMMENT ON COLUMN TB_REPORT.REPORT_CREATE_DATE IS '½Å°í ÀÛ¼ºÀÏ';
-COMMENT ON COLUMN TB_REPORT.REPORT_MODIFY_DATE IS '½Å°í ¼öÁ¤ÀÏ';
-COMMENT ON COLUMN TB_REPORT.REPORT_STATUS IS '½Å°í »óÅÂ°ª (Y : °Ô½Ã / N : ºñ°Ô½Ã)';
+COMMENT ON COLUMN TB_REPORT.REPORT_NO IS 'ï¿½Å°ï¿½ ï¿½ï¿½È£';
+COMMENT ON COLUMN TB_REPORT.REPORT_CATEGORY_NO IS 'ï¿½Å°ï¿½ Ä«ï¿½×°ï¿½ï¿½ï¿½ ï¿½ï¿½È£';
+COMMENT ON COLUMN TB_REPORT.REPORT_WRITER IS 'ï¿½Å°ï¿½ ï¿½Û¼ï¿½ï¿½ï¿½È¸ï¿½ï¿½ï¿½ï¿½È£';
+COMMENT ON COLUMN TB_REPORT.REPORT_REF_NO IS 'ï¿½Å°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Ô½Ã±ï¿½ ï¿½ï¿½È£';
+COMMENT ON COLUMN TB_REPORT.REPORT_TITLE IS 'ï¿½Å°ï¿½ ï¿½ï¿½ï¿½ï¿½';
+COMMENT ON COLUMN TB_REPORT.REPORT_CONTENT IS 'ï¿½Å°ï¿½ ï¿½ï¿½ï¿½ï¿½';
+COMMENT ON COLUMN TB_REPORT.REPORT_CREATE_DATE IS 'ï¿½Å°ï¿½ ï¿½Û¼ï¿½ï¿½ï¿½';
+COMMENT ON COLUMN TB_REPORT.REPORT_MODIFY_DATE IS 'ï¿½Å°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½';
+COMMENT ON COLUMN TB_REPORT.REPORT_STATUS IS 'ï¿½Å°ï¿½ ï¿½ï¿½ï¿½Â°ï¿½ (Y : ï¿½Ô½ï¿½ / N : ï¿½ï¿½Ô½ï¿½)';
 
 CREATE SEQUENCE SEQ_REPORT_NO
 NOCACHE;
 
 INSERT INTO TB_REPORT(REPORT_NO, REPORT_CATEGORY_NO, REPORT_WRITER, REPORT_REF_NO, REPORT_TITLE, REPORT_CONTENT, REPORT_CREATE_DATE)
-VALUES(SEQ_REPORT_NO.NEXTVAL, 7, 4, (SELECT CHAT_NO FROM TB_CHAT WHERE CHAT_CONTENT = '´äº¯ÀÌ ±â°èÀûÀÌ³×'), '¸»Åõ°¡ ºÒÆíÇÏ³×¿ä', '³Ê¹« ¹«·ÊÇØ¿ä', SYSDATE);
+VALUES(SEQ_REPORT_NO.NEXTVAL, 7, 4, (SELECT CHAT_NO FROM TB_CHAT WHERE CHAT_CONTENT = 'ï¿½äº¯ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì³ï¿½'), 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï³×¿ï¿½', 'ï¿½Ê¹ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¿ï¿½', SYSDATE);
 
 INSERT INTO TB_REPORT(REPORT_NO, REPORT_CATEGORY_NO, REPORT_WRITER, REPORT_REF_NO, REPORT_TITLE, REPORT_CONTENT, REPORT_CREATE_DATE)
-VALUES(SEQ_REPORT_NO.NEXTVAL, 7, 4, (SELECT CHAT_NO FROM TB_CHAT WHERE CHAT_CONTENT = '±×·± ¸»Åõ°¡ ºÒÆíÇÏ´Ù°í¿ä'), '¸»Åõ°¡ ºÒÆíÇÏ³×¿ä', 'º»ÀÎ ¸»Åõ°¡ ºÒÆíÇÑ °É ¸ð¸£´Â µí', SYSDATE);
+VALUES(SEQ_REPORT_NO.NEXTVAL, 7, 4, (SELECT CHAT_NO FROM TB_CHAT WHERE CHAT_CONTENT = 'ï¿½×·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´Ù°ï¿½ï¿½ï¿½'), 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï³×¿ï¿½', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ð¸£´ï¿½ ï¿½ï¿½', SYSDATE);
 
 INSERT INTO TB_REPORT(REPORT_NO, REPORT_CATEGORY_NO, REPORT_WRITER, REPORT_REF_NO, REPORT_TITLE, REPORT_CONTENT, REPORT_CREATE_DATE)
-VALUES(SEQ_REPORT_NO.NEXTVAL, 7, 4, (SELECT CHAT_NO FROM TB_CHAT WHERE CHAT_CONTENT = 'ÀÌÁ¨ ´äº¯µµ º¹ºÙÀÌ³×'), '¸»Åõ°¡ ºÒÆíÇÏ³×¿ä', '´ë³õ°í ½Ãºñ°É¾î¿ä~ ÀÌ»ç¶÷~', SYSDATE);
+VALUES(SEQ_REPORT_NO.NEXTVAL, 7, 4, (SELECT CHAT_NO FROM TB_CHAT WHERE CHAT_CONTENT = 'ï¿½ï¿½ï¿½ï¿½ ï¿½äº¯ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ì³ï¿½'), 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï³×¿ï¿½', 'ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ãºï¿½É¾ï¿½ï¿½~ ï¿½Ì»ï¿½ï¿½~', SYSDATE);
 
 INSERT INTO TB_REPORT(REPORT_NO, REPORT_CATEGORY_NO, REPORT_WRITER, REPORT_REF_NO, REPORT_TITLE, REPORT_CONTENT, REPORT_CREATE_DATE)
-VALUES(SEQ_REPORT_NO.NEXTVAL, 7, 3, (SELECT CHAT_NO FROM TB_CHAT WHERE CHAT_CONTENT = '±×·± ¸»Åõ°¡ ºÒÆíÇÏ´Ù°í¿ä'), '¾ÇÇÃ ½Å°íÇÕ´Ï´Ù', 'Á¦Àç ºÎÅ¹µå·Á¿ä', SYSDATE);
+VALUES(SEQ_REPORT_NO.NEXTVAL, 7, 3, (SELECT CHAT_NO FROM TB_CHAT WHERE CHAT_CONTENT = 'ï¿½×·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´Ù°ï¿½ï¿½ï¿½'), 'ï¿½ï¿½ï¿½ï¿½ ï¿½Å°ï¿½ï¿½Õ´Ï´ï¿½', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å¹ï¿½ï¿½ï¿½ï¿½ï¿½', SYSDATE);
 
 INSERT INTO TB_REPORT(REPORT_NO, REPORT_CATEGORY_NO, REPORT_WRITER, REPORT_REF_NO, REPORT_TITLE, REPORT_CONTENT, REPORT_CREATE_DATE)
-VALUES(SEQ_REPORT_NO.NEXTVAL, 7, 3, (SELECT CHAT_NO FROM TB_CHAT WHERE CHAT_CONTENT = 'ÀÌÁ¨ ´äº¯µµ º¹ºÙÀÌ³×'), '½Å°íÇÕ´Ï´Ù', 'ÀÌ ºÐ Á¦ÀçÁ» ÇØÁÖ¼¼¿ä', SYSDATE);
+VALUES(SEQ_REPORT_NO.NEXTVAL, 7, 3, (SELECT CHAT_NO FROM TB_CHAT WHERE CHAT_CONTENT = 'ï¿½ï¿½ï¿½ï¿½ ï¿½äº¯ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ì³ï¿½'), 'ï¿½Å°ï¿½ï¿½Õ´Ï´ï¿½', 'ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½', SYSDATE);
 --------------------------------------------------
------------------- LIKES °ü·Ã ---------------------	
+------------------ LIKES ï¿½ï¿½ï¿½ï¿½ ---------------------	
 --------------------------------------------------
 CREATE TABLE TB_LIKES (
     LIKES_USER_NO NUMBER, 
@@ -864,10 +864,10 @@ CREATE TABLE TB_LIKES (
     CONSTRAINT LIKES_PROJECT_NO_FK FOREIGN KEY (LIKES_PROJECT_NO) REFERENCES TB_PROJECT(PROJECT_NO)
 );
 
-COMMENT ON COLUMN TB_LIKES.LIKES_USER_NO IS 'Âò È¸¿ø¹øÈ£';
-COMMENT ON COLUMN TB_LIKES.LIKES_PROJECT_NO IS 'Âò ÇÁ·ÎÁ§Æ®¹øÈ£';
-COMMENT ON COLUMN TB_LIKES.LIKES_CREATE_DATE IS 'Âò µî·ÏÀÏ';
-COMMENT ON COLUMN TB_LIKES.LIKES_STATUS IS 'Âò »óÅÂ°ª (Y : Âò / N : Âò ÇØÁ¦)';
+COMMENT ON COLUMN TB_LIKES.LIKES_USER_NO IS 'ï¿½ï¿½ È¸ï¿½ï¿½ï¿½ï¿½È£';
+COMMENT ON COLUMN TB_LIKES.LIKES_PROJECT_NO IS 'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½È£';
+COMMENT ON COLUMN TB_LIKES.LIKES_CREATE_DATE IS 'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½';
+COMMENT ON COLUMN TB_LIKES.LIKES_STATUS IS 'ï¿½ï¿½ ï¿½ï¿½ï¿½Â°ï¿½ (Y : ï¿½ï¿½ / N : ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½)';
 
 CREATE SEQUENCE SEQ_LIKES_NO
 NOCACHE;
@@ -890,7 +890,7 @@ VALUES(2, 1003, '2024-02-28', 'Y');
 INSERT INTO TB_LIKES(LIKES_USER_NO, LIKES_PROJECT_NO, LIKES_CREATE_DATE, LIKES_STATUS) 
 VALUES(2, 1002, '2024-03-01', 'Y');
 --------------------------------------------------
------------------- FILE °ü·Ã ----------------------	
+------------------ FILE ï¿½ï¿½ï¿½ï¿½ ----------------------	
 --------------------------------------------------
 CREATE TABLE TB_FILE (
     FILE_NO NUMBER CONSTRAINT FILE_NO_PK PRIMARY KEY,
@@ -914,44 +914,44 @@ CREATE TABLE TB_FILE (
     CONSTRAINT FILE_PROJECT_NO_FK FOREIGN KEY (FILE_PROJECT_NO) REFERENCES TB_PROJECT (PROJECT_NO)
 );
 
-COMMENT ON COLUMN TB_FILE.FILE_NO IS 'ÆÄÀÏ ¹øÈ£';
-COMMENT ON COLUMN TB_FILE.FILE_USER_NO IS 'ÆÄÀÏ ÂüÁ¶°Ô½Ã±Û¹øÈ£ (MEMBER)';
-COMMENT ON COLUMN TB_FILE.FILE_CHAT_NO IS 'ÆÄÀÏ ÂüÁ¶°Ô½Ã±Û¹øÈ£ (CHAT)';
-COMMENT ON COLUMN TB_FILE.FILE_QNA_NO IS 'ÆÄÀÏ ÂüÁ¶°Ô½Ã±Û¹øÈ£ (QNA)';
-COMMENT ON COLUMN TB_FILE.FILE_REPORT_NO IS 'ÆÄÀÏ ÂüÁ¶°Ô½Ã±Û¹øÈ£ (REPORT)';
-COMMENT ON COLUMN TB_FILE.FILE_NOTICE_NO IS 'ÆÄÀÏ ÂüÁ¶°Ô½Ã±Û¹øÈ£ (NOTICE)';
-COMMENT ON COLUMN TB_FILE.FILE_PROJECT_NO IS 'ÆÄÀÏ ÂüÁ¶°Ô½Ã±Û¹øÈ£ (PROJECT)';
-COMMENT ON COLUMN TB_FILE.FILE_ORIGIN_NAME IS 'ÆÄÀÏ ¿øº»ÆÄÀÏ¸í';
-COMMENT ON COLUMN TB_FILE.FILE_UPDATE_NAME IS 'ÆÄÀÏ ¼öÁ¤ÆÄÀÏ¸í';
-COMMENT ON COLUMN TB_FILE.FILE_PATH IS 'ÆÄÀÏ ÀúÀåÆú´õ°æ·Î';
-COMMENT ON COLUMN TB_FILE.FILE_UPLOAD_DATE IS 'ÆÄÀÏ ¾÷·ÎµåÀÏ';
-COMMENT ON COLUMN TB_FILE.FILE_LEVEL IS 'ÆÄÀÏ ·¹º§ (1 : ¸ÞÀÎ / 2 : ¼­ºê)';
-COMMENT ON COLUMN TB_FILE.FILE_STATUS IS 'ÆÄÀÏ »óÅÂ°ª (Y : À¯È¿ / N : ºñÀ¯È¿)';
+COMMENT ON COLUMN TB_FILE.FILE_NO IS 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£';
+COMMENT ON COLUMN TB_FILE.FILE_USER_NO IS 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô½Ã±Û¹ï¿½È£ (MEMBER)';
+COMMENT ON COLUMN TB_FILE.FILE_CHAT_NO IS 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô½Ã±Û¹ï¿½È£ (CHAT)';
+COMMENT ON COLUMN TB_FILE.FILE_QNA_NO IS 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô½Ã±Û¹ï¿½È£ (QNA)';
+COMMENT ON COLUMN TB_FILE.FILE_REPORT_NO IS 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô½Ã±Û¹ï¿½È£ (REPORT)';
+COMMENT ON COLUMN TB_FILE.FILE_NOTICE_NO IS 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô½Ã±Û¹ï¿½È£ (NOTICE)';
+COMMENT ON COLUMN TB_FILE.FILE_PROJECT_NO IS 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô½Ã±Û¹ï¿½È£ (PROJECT)';
+COMMENT ON COLUMN TB_FILE.FILE_ORIGIN_NAME IS 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½';
+COMMENT ON COLUMN TB_FILE.FILE_UPDATE_NAME IS 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½';
+COMMENT ON COLUMN TB_FILE.FILE_PATH IS 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½';
+COMMENT ON COLUMN TB_FILE.FILE_UPLOAD_DATE IS 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Îµï¿½ï¿½ï¿½';
+COMMENT ON COLUMN TB_FILE.FILE_LEVEL IS 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ (1 : ï¿½ï¿½ï¿½ï¿½ / 2 : ï¿½ï¿½ï¿½ï¿½)';
+COMMENT ON COLUMN TB_FILE.FILE_STATUS IS 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â°ï¿½ (Y : ï¿½ï¿½È¿ / N : ï¿½ï¿½ï¿½ï¿½È¿)';
 
 CREATE SEQUENCE SEQ_FILE_NO
 NOCACHE;
 --------------------------------------------------
------------------- BUYER °ü·Ã ---------------------	
+------------------ BUYER ï¿½ï¿½ï¿½ï¿½ ---------------------	
 --------------------------------------------------
 CREATE TABLE TB_BUYER (
     BUYER_USER_NO NUMBER CONSTRAINT BUYER_USER_NO_FK REFERENCES TB_MEMBER(USER_NO),
     BUYER_PROJECT_NO NUMBER CONSTRAINT BUYER_PROJECT_NO_FK REFERENCES TB_PROJECT(PROJECT_NO)
 );
 
-COMMENT ON COLUMN TB_BUYER.BUYER_USER_NO IS 'ÈÄ¿øÀÚ È¸¿ø¹øÈ£';
-COMMENT ON COLUMN TB_BUYER.BUYER_PROJECT_NO IS 'ÈÄ¿øÀÚ ÇÁ·ÎÁ§Æ®¹øÈ£';
+COMMENT ON COLUMN TB_BUYER.BUYER_USER_NO IS 'ï¿½Ä¿ï¿½ï¿½ï¿½ È¸ï¿½ï¿½ï¿½ï¿½È£';
+COMMENT ON COLUMN TB_BUYER.BUYER_PROJECT_NO IS 'ï¿½Ä¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½È£';
 --------------------------------------------------
------------------- SELLER °ü·Ã --------------------	
+------------------ SELLER ï¿½ï¿½ï¿½ï¿½ --------------------	
 --------------------------------------------------
 CREATE TABLE TB_SELLER (
     SELLER_USER_NO NUMBER CONSTRAINT SELLER_USER_NO_FK REFERENCES TB_MEMBER(USER_NO),
     SELLER_PROJECT_NO NUMBER CONSTRAINT SELLER_PROJECT_NO_FK REFERENCES TB_PROJECT(PROJECT_NO)
 );
 
-COMMENT ON COLUMN TB_SELLER.SELLER_USER_NO IS 'Ã¢ÀÛÀÚ È¸¿ø¹øÈ£';
-COMMENT ON COLUMN TB_SELLER.SELLER_PROJECT_NO IS 'Ã¢ÀÛÀÚ ÇÁ·ÎÁ§Æ®¹øÈ£';
+COMMENT ON COLUMN TB_SELLER.SELLER_USER_NO IS 'Ã¢ï¿½ï¿½ï¿½ï¿½ È¸ï¿½ï¿½ï¿½ï¿½È£';
+COMMENT ON COLUMN TB_SELLER.SELLER_PROJECT_NO IS 'Ã¢ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½È£';
 --------------------------------------------------
------------------- PAYMENT °ü·Ã -------------------	
+------------------ PAYMENT ï¿½ï¿½ï¿½ï¿½ -------------------	
 --------------------------------------------------
 CREATE TABLE TB_PAYMENT (
     PAYMENT_NO NUMBER CONSTRAINT PAYMENT_NO_PK PRIMARY KEY,
@@ -965,18 +965,18 @@ CREATE TABLE TB_PAYMENT (
     CONSTRAINT PAYMENT_PROJECT_NO_FK FOREIGN KEY (PAYMENT_PROJECT_NO) REFERENCES TB_PROJECT(PROJECT_NO)
 );
 
-COMMENT ON COLUMN TB_PAYMENT.PAYMENT_NO IS '°áÁ¦ ¹øÈ£';
-COMMENT ON COLUMN TB_PAYMENT.PAYMENT_USER_NO IS '°áÁ¦ ÈÄ¿øÀÚÈ¸¿ø¹øÈ£';
-COMMENT ON COLUMN TB_PAYMENT.PAYMENT_PROJECT_NO IS '°áÁ¦ ÇÁ·ÎÁ§Æ®¹øÈ£';
-COMMENT ON COLUMN TB_PAYMENT.PAYMENT_AMOUNT IS '°áÁ¦ ±Ý¾×';
-COMMENT ON COLUMN TB_PAYMENT.PAYMENT_METHOD IS '°áÁ¦ ¼ö´Ü (1 : °èÁÂÀÌÃ¼ / 2 : ³×ÀÌ¹öÆäÀÌ)';
-COMMENT ON COLUMN TB_PAYMENT.PAYMENT_STATUS IS '°áÁ¦ »óÅÂ°ª (Y : °áÁ¦ / 2 : ¹Ì°áÁ¦)';
-COMMENT ON COLUMN TB_PAYMENT.PAYMENT_DATE IS '°áÁ¦ ÀÏÀÚ';
+COMMENT ON COLUMN TB_PAYMENT.PAYMENT_NO IS 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£';
+COMMENT ON COLUMN TB_PAYMENT.PAYMENT_USER_NO IS 'ï¿½ï¿½ï¿½ï¿½ ï¿½Ä¿ï¿½ï¿½ï¿½È¸ï¿½ï¿½ï¿½ï¿½È£';
+COMMENT ON COLUMN TB_PAYMENT.PAYMENT_PROJECT_NO IS 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½È£';
+COMMENT ON COLUMN TB_PAYMENT.PAYMENT_AMOUNT IS 'ï¿½ï¿½ï¿½ï¿½ ï¿½Ý¾ï¿½';
+COMMENT ON COLUMN TB_PAYMENT.PAYMENT_METHOD IS 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ (1 : ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¼ / 2 : ï¿½ï¿½ï¿½Ì¹ï¿½ï¿½ï¿½ï¿½ï¿½)';
+COMMENT ON COLUMN TB_PAYMENT.PAYMENT_STATUS IS 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â°ï¿½ (Y : ï¿½ï¿½ï¿½ï¿½ / 2 : ï¿½Ì°ï¿½ï¿½ï¿½)';
+COMMENT ON COLUMN TB_PAYMENT.PAYMENT_DATE IS 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½';
 
 CREATE SEQUENCE SEQ_PAYMENT_NO
 NOCACHE;
 --------------------------------------------------
-------------------- REPLY °ü·Ã --------------------	
+------------------- REPLY ï¿½ï¿½ï¿½ï¿½ --------------------	
 --------------------------------------------------
 CREATE TABLE TB_REPLY (
     REPLY_NO NUMBER CONSTRAINT REPLY_NO_PK PRIMARY KEY,
@@ -990,18 +990,18 @@ CREATE TABLE TB_REPLY (
     CONSTRAINT REPLY_WRITER_FK FOREIGN KEY (REPLY_WRITER) REFERENCES TB_MEMBER(USER_NO)
 );
 
-COMMENT ON COLUMN TB_REPLY.REPLY_NO IS '´ñ±Û ¹øÈ£';
-COMMENT ON COLUMN TB_REPLY.REPLY_CONTENT IS '´ñ±Û ³»¿ë';
-COMMENT ON COLUMN TB_REPLY.REPLY_REF_NO IS '´ñ±Û ÂüÁ¶°Ô½Ã±Û¹øÈ£';
-COMMENT ON COLUMN TB_REPLY.REPLY_WRITER IS '´ñ±Û ÀÛ¼ºÀÚÈ¸¿ø¹øÈ£';
-COMMENT ON COLUMN TB_REPLY.REPLY_CREATE_DATE IS '´ñ±Û ÀÛ¼ºÀÏ';
-COMMENT ON COLUMN TB_REPLY.REPLY_MODIFY_DATE IS '´ñ±Û ¼öÁ¤ÀÏ';
-COMMENT ON COLUMN TB_REPLY.REPLY_STATUS IS '´ñ±Û »óÅÂ°ª (Y : °Ô½Ã / N : ºñ°Ô½Ã)';
+COMMENT ON COLUMN TB_REPLY.REPLY_NO IS 'ï¿½ï¿½ï¿½ ï¿½ï¿½È£';
+COMMENT ON COLUMN TB_REPLY.REPLY_CONTENT IS 'ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½';
+COMMENT ON COLUMN TB_REPLY.REPLY_REF_NO IS 'ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô½Ã±Û¹ï¿½È£';
+COMMENT ON COLUMN TB_REPLY.REPLY_WRITER IS 'ï¿½ï¿½ï¿½ ï¿½Û¼ï¿½ï¿½ï¿½È¸ï¿½ï¿½ï¿½ï¿½È£';
+COMMENT ON COLUMN TB_REPLY.REPLY_CREATE_DATE IS 'ï¿½ï¿½ï¿½ ï¿½Û¼ï¿½ï¿½ï¿½';
+COMMENT ON COLUMN TB_REPLY.REPLY_MODIFY_DATE IS 'ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½';
+COMMENT ON COLUMN TB_REPLY.REPLY_STATUS IS 'ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â°ï¿½ (Y : ï¿½Ô½ï¿½ / N : ï¿½ï¿½Ô½ï¿½)';
 
 CREATE SEQUENCE SEQ_REPLY_NO
 NOCACHE;
 --------------------------------------------------
--------------- FUNDING_OPTION °ü·Ã ----------------	
+-------------- FUNDING_OPTION ï¿½ï¿½ï¿½ï¿½ ----------------	
 --------------------------------------------------
 CREATE TABLE TB_FUNDING_OPTION (
     OPTION_NO NUMBER CONSTRAINT OPTION_NO_PK PRIMARY KEY,
@@ -1011,15 +1011,15 @@ CREATE TABLE TB_FUNDING_OPTION (
     CONSTRAINT OPTION_PROJECT_NO_FK FOREIGN KEY (OPTION_PROJECT_NO) REFERENCES TB_PROJECT(PROJECT_NO)
 );
 
-COMMENT ON COLUMN TB_FUNDING_OPTION.OPTION_NO IS 'ÆÝµù ¿É¼Ç ¹øÈ£';
-COMMENT ON COLUMN TB_FUNDING_OPTION.OPTION_PROJECT_NO IS 'ÆÝµù ÇÁ·ÎÁ§Æ® ¹øÈ£';
-COMMENT ON COLUMN TB_FUNDING_OPTION.OPTION_AMOUNT IS 'ÆÝµù ¿É¼Ç ±Ý¾×';
-COMMENT ON COLUMN TB_FUNDING_OPTION.OPTION_DESCRIPTION IS 'ÆÝµù ¿É¼Ç ¼³¸í';
+COMMENT ON COLUMN TB_FUNDING_OPTION.OPTION_NO IS 'ï¿½Ýµï¿½ ï¿½É¼ï¿½ ï¿½ï¿½È£';
+COMMENT ON COLUMN TB_FUNDING_OPTION.OPTION_PROJECT_NO IS 'ï¿½Ýµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½È£';
+COMMENT ON COLUMN TB_FUNDING_OPTION.OPTION_AMOUNT IS 'ï¿½Ýµï¿½ ï¿½É¼ï¿½ ï¿½Ý¾ï¿½';
+COMMENT ON COLUMN TB_FUNDING_OPTION.OPTION_DESCRIPTION IS 'ï¿½Ýµï¿½ ï¿½É¼ï¿½ ï¿½ï¿½ï¿½ï¿½';
 
 CREATE SEQUENCE SEQ_OPTION_NO
 NOCACHE;
 --------------------------------------------------
------------------- ORDER °ü·Ã ---------------------	
+------------------ ORDER ï¿½ï¿½ï¿½ï¿½ ---------------------	
 --------------------------------------------------
 CREATE TABLE TB_ORDER (
     ORDER_NO NUMBER CONSTRAINT ORDER_NO_PK PRIMARY KEY,
@@ -1034,17 +1034,17 @@ CREATE TABLE TB_ORDER (
     CONSTRAINT ORDER_PAYMENT_NO_FK FOREIGN KEY (ORDER_PAYMENT_NO) REFERENCES TB_PAYMENT(PAYMENT_NO)
 );
 
-COMMENT ON COLUMN TB_ORDER.ORDER_NO IS 'ÁÖ¹® ¹øÈ£';
-COMMENT ON COLUMN TB_ORDER.ORDER_USER_NO IS 'ÁÖ¹®ÀÚ È¸¿ø ¹øÈ£';
-COMMENT ON COLUMN TB_ORDER.ORDER_PROJECT_NO IS 'ÁÖ¹® ÇÁ·ÎÁ§Æ® ¹øÈ£';
-COMMENT ON COLUMN TB_ORDER.ORDER_OPTION_NO IS 'ÁÖ¹® ÈÄ¿ø ¿É¼Ç ¹øÈ£';
-COMMENT ON COLUMN TB_ORDER.ORDER_STATUS IS 'ÁÖ¹® »óÅÂ°ª (Y : ÁÖ¹®¿Ï·á / N : ÁÖ¹®´ë±â / C : ÁÖ¹®Ãë¼Ò)';
-COMMENT ON COLUMN TB_ORDER.ORDER_PAYMENT_NO IS 'ÁÖ¹® °áÁ¦ ¹øÈ£';
+COMMENT ON COLUMN TB_ORDER.ORDER_NO IS 'ï¿½Ö¹ï¿½ ï¿½ï¿½È£';
+COMMENT ON COLUMN TB_ORDER.ORDER_USER_NO IS 'ï¿½Ö¹ï¿½ï¿½ï¿½ È¸ï¿½ï¿½ ï¿½ï¿½È£';
+COMMENT ON COLUMN TB_ORDER.ORDER_PROJECT_NO IS 'ï¿½Ö¹ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½È£';
+COMMENT ON COLUMN TB_ORDER.ORDER_OPTION_NO IS 'ï¿½Ö¹ï¿½ ï¿½Ä¿ï¿½ ï¿½É¼ï¿½ ï¿½ï¿½È£';
+COMMENT ON COLUMN TB_ORDER.ORDER_STATUS IS 'ï¿½Ö¹ï¿½ ï¿½ï¿½ï¿½Â°ï¿½ (Y : ï¿½Ö¹ï¿½ï¿½Ï·ï¿½ / N : ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ / C : ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½)';
+COMMENT ON COLUMN TB_ORDER.ORDER_PAYMENT_NO IS 'ï¿½Ö¹ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£';
 
 CREATE SEQUENCE SEQ_ORDER_NO
 NOCACHE;
 --------------------------------------------------
------------------ DELIVERY °ü·Ã -------------------	
+----------------- DELIVERY ï¿½ï¿½ï¿½ï¿½ -------------------	
 --------------------------------------------------
 CREATE TABLE TB_DELIVERY (
     DELIVERY_NO NUMBER CONSTRAINT DELIVERY_NO_PK PRIMARY KEY,
@@ -1056,12 +1056,12 @@ CREATE TABLE TB_DELIVERY (
     CONSTRAINT DELIVERY_ORDER_NO_FK FOREIGN KEY (DELIVERY_ORDER_NO) REFERENCES TB_ORDER(ORDER_NO)
 );
 
-COMMENT ON COLUMN TB_DELIVERY.DELIVERY_NO IS '¹è¼Û ¹øÈ£';
-COMMENT ON COLUMN TB_DELIVERY.DELIVERY_ORDER_NO IS '¹è¼Û ÁÖ¹® ¹øÈ£';
-COMMENT ON COLUMN TB_DELIVERY.DELIVERY_ADDRESS IS '¹è¼ÛÁö ÁÖ¼Ò';
-COMMENT ON COLUMN TB_DELIVERY.DELIVERY_STATUS IS '¹è¼Û »óÅÂ°ª (Y : ¹è¼Û¿Ï·á / I : ¹è¼ÛÁß / N : ¹è¼Û´ë±â)';
-COMMENT ON COLUMN TB_DELIVERY.DELIVERY_START IS '¹è¼Û ½ÃÀÛÀÏ';
-COMMENT ON COLUMN TB_DELIVERY.DELIVERY_END IS '¹è¼Û µµÂøÀÏ';
+COMMENT ON COLUMN TB_DELIVERY.DELIVERY_NO IS 'ï¿½ï¿½ï¿½ ï¿½ï¿½È£';
+COMMENT ON COLUMN TB_DELIVERY.DELIVERY_ORDER_NO IS 'ï¿½ï¿½ï¿½ ï¿½Ö¹ï¿½ ï¿½ï¿½È£';
+COMMENT ON COLUMN TB_DELIVERY.DELIVERY_ADDRESS IS 'ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¼ï¿½';
+COMMENT ON COLUMN TB_DELIVERY.DELIVERY_STATUS IS 'ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â°ï¿½ (Y : ï¿½ï¿½Û¿Ï·ï¿½ / I : ï¿½ï¿½ï¿½ï¿½ï¿½ / N : ï¿½ï¿½Û´ï¿½ï¿½)';
+COMMENT ON COLUMN TB_DELIVERY.DELIVERY_START IS 'ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½';
+COMMENT ON COLUMN TB_DELIVERY.DELIVERY_END IS 'ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½';
 
 CREATE SEQUENCE SEQ_DELIVERY_NO
 NOCACHE;
