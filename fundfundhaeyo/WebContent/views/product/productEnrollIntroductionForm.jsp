@@ -19,5 +19,7 @@
     </div>
 	
 	<%@ include file="../common/footer.jsp" %>
+	
+	<script src="resources/js/member/productEnrollIntroductionForm.js"></script>
 </body>
 </html>
