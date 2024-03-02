@@ -1,4 +1,4 @@
-![뻔뻔해요_배경](https://github.com/angKH1st/FundFundhaeyo/assets/151509995/9ff67b26-d280-45cc-9f4d-c9986d4bf7cc)
+![Fund](https://github.com/angKH1st/FundFundhaeyo/assets/151509995/890cecc2-e9ed-4014-8e64-26bf45065ba1)
 
 # FundFundhaeyo
 
