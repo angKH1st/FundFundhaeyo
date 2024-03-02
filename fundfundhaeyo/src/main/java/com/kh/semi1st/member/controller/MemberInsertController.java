@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.kh.semi1st.member.model.service.MemberService;
+import com.kh.semi1st.member.model.vo.Attachment;
 import com.kh.semi1st.member.model.vo.Member;
 
 /**
@@ -46,7 +47,13 @@ public class MemberInsertController extends HttpServlet {
 		
 		Member m = new Member(userId, userPwd, userName, userSsn, nickname, phone, email, address, marketing);
 		
-		int result = new MemberService().insertMember(m);
+		Attachment at = new Attachment();
+		at.setAttachmentOriginName("basicUserProfile.png");
+		at.setAttachmentUpdateName("2024022209000081110.png");
+		at.setAttachmentPath("resources/member_upfiles/");
+		at.setAttachmentLevel(1);
+		
+		int result = new MemberService().insertMember(m, at);
 		
 		if(result > 0) {
 			HttpSession session = request.getSession();

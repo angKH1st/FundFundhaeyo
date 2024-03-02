@@ -9,9 +9,8 @@
 <meta charset="UTF-8">
 <title>뻔뻔해요</title>
 <link rel="stylesheet" href="resources/css/member/memberSearchIdPwForm.css">
-<script src="resources/js/member/memberSearchIdPwForm.js"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 </head>
+<link rel="icon" href="data:;base64,iVBORw0KGgo=">
 <body>
 	<%@ include file="../common/header.jsp" %>
 	
@@ -38,8 +37,6 @@
 							<button onclick="location.href='<%= contextPath %>/moveToSearchId.me'" type="button" class="btn btn-primary">아이디 찾기</button>
 							<button onclick="location.href='<%= contextPath %>/moveToSearchPw.me'" type="button" class="btn btn-primary">비밀번호 찾기</button>
 						</div>
-
-					
 		
 		                <div class="search-id-pw-input-container">
 		                    <div class="search-id-pw-input-wrap input-id">
@@ -51,55 +48,12 @@
 		                        <input placeholder="이메일을 입력하세요." type="email" name="userEmail" id="userEmail">
 		                    </div>
 		                </div>
-  
 		                
 		                <div class="search-id-pw-btn-wrap"> 
 		                	<br>
 		                    <button class="search-id-pw-btn" type="button" onclick="searchIdMember();">ID 찾기</button>
 		                </div>
 					
-					
-					<script>
-						function searchIdMember(){
-							
-							//console.log("1");
-							
-							var $nameSearch = $("#userName");
-							var $emailSearch = $("#userEmail"); 
-							
-							//console.log("nameSearch");
-							//console.log("emailSearch");
-							
-							$.ajax({
-								url:"searchId.me",
-								data:{checkName:$nameSearch.val(),
-									  checkEmail:$emailSearch.val()
-									 
-								},
-								type:"post",
-								success:function(id){
-									//console.log(id);
-								if(id !== ""){
-									$(".search-id-pw-input-container").css("visibility","hidden"); // $()를 공간을 남겨두고 안보이게 해줌 / 이름 이메일 숨김
-									$(".search-id-pw-btn-wrap").css("display","none"); // 공간까지 없애고 안보이게 해줌 / id찾기 버튼 숨김
-									
-									let value = "<div>당신의 아이디는 " + id + "입니다</div>";
-									
-									$(".search-id-pw-input-container").html(value);
-									$(".search-id-pw-input-container").css("visibility","visible"); // 반대로 다시 보이게 해줌
-										
-								} else {
-				                    alert('입력하신 정보와 맞는 회원이 없습니다.');
-				                }
-									
-									}, error:function(){
-										alert('오류');
-									}
-							})
-						}
-					</script>
-
-
 		                <br>
 		                
 						<div style="height: 10px;"><%-- 여백 --%></div>
@@ -113,5 +67,7 @@
     </div>
 	
 	<%@ include file="../common/footer.jsp" %>
+	
+	<script src="resources/js/member/memberSearchIdForm.js"></script>
 </body>
 </html>

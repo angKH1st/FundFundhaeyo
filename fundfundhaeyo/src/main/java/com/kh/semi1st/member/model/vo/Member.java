@@ -21,6 +21,8 @@ public class Member {
 	private String userType;
 	private String userStatus;
 	
+	private String userImg;
+	
 	public Member() {}
 	
 	public Member(String userId, String userPwd, String userName, String userSsn, String userNickname, String userPhone,
@@ -39,7 +41,7 @@ public class Member {
 
 	public Member(int userNo, String userId, String userPwd, String userName, String userSsn, String userNickname,
 			String userPhone, String userEmail, String userAddress, String userProfile, int userGrade,
-			String userMarketing, Date userEnrollDate, Date userModifyDate, String userType, String userStatus) {
+			String userMarketing, Date userEnrollDate, Date userModifyDate, String userType, String userStatus, String userImg) {
 		super();
 		this.userNo = userNo;
 		this.userId = userId;
@@ -57,6 +59,7 @@ public class Member {
 		this.userModifyDate = userModifyDate;
 		this.userType = userType;
 		this.userStatus = userStatus;
+		this.userImg = userImg;
 	}
 	
 
@@ -191,6 +194,14 @@ public class Member {
 
 	public void setUserStatus(String userStatus) {
 		this.userStatus = userStatus;
+	}
+	
+	public String getUserImg() {
+		return userImg;
+	}
+	
+	public void setUserImg(String userImg) {
+		this.userImg = userImg;
 	}
 
 	@Override

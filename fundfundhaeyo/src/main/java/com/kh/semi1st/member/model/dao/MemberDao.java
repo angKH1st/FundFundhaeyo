@@ -12,6 +12,7 @@ import java.util.Properties;
 import static com.kh.semi1st.common.JDBCTemplate.*;
 
 import com.kh.semi1st.common.model.vo.PageInfo;
+import com.kh.semi1st.member.model.vo.Attachment;
 import com.kh.semi1st.member.model.vo.Member;
 
 public class MemberDao {
@@ -65,7 +66,8 @@ public class MemberDao {
 							   rset.getDate("user_enroll_date"),
 							   rset.getDate("user_modify_date"),
 							   rset.getString("user_type"),
-							   rset.getString("user_status"));
+							   rset.getString("user_status"),
+							   rset.getString("user_img"));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -99,6 +101,29 @@ public class MemberDao {
 			pstmt.setString(7, m.getUserEmail());
 			pstmt.setString(8, m.getUserAddress());
 			pstmt.setString(9, m.getUserMarketing());
+			
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		
+		return result;
+	}
+	
+	public int insertMemberAttachment(Connection conn, Member m, Attachment at) {
+		int result = 0;
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("insertMemberAttachment");
+				
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setString(1, at.getAttachmentOriginName());
+			pstmt.setString(2, at.getAttachmentUpdateName());
+			pstmt.setString(3, at.getAttachmentPath());
+			pstmt.setInt(4, at.getAttachmentLevel());
 			
 			result = pstmt.executeUpdate();
 		} catch (SQLException e) {
@@ -173,7 +198,8 @@ public class MemberDao {
 								  , rset.getDate("user_enroll_date")
 								  , rset.getDate("user_modify_date")
 								  , rset.getString("user_type")
-								  , rset.getString("user_status")));
+								  , rset.getString("user_status")
+								  , rset.getString("user_img")));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -254,7 +280,8 @@ public class MemberDao {
 						  , rset.getDate("user_enroll_date")
 						  , rset.getDate("user_modify_date")
 						  , rset.getString("user_type")
-						  , rset.getString("user_status")));
+						  , rset.getString("user_status")
+						  , rset.getString("user_img")));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -302,7 +329,8 @@ public class MemberDao {
 						     , rset.getDate("user_enroll_date")
 						     , rset.getDate("user_modify_date")
 						     , rset.getString("user_type")
-						     , rset.getString("user_status"));
+						     , rset.getString("user_status")
+						     , rset.getString("user_img"));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -416,5 +444,127 @@ public class MemberDao {
 		
 		return result;
 	}
+
+	public int updateMember(Connection conn, Member m) {
+		int result = 0;
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("updateMember");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setString(1, m.getUserPhone());
+			pstmt.setString(2, m.getUserEmail());
+			pstmt.setString(3, m.getUserAddress());
+			pstmt.setString(4, m.getUserMarketing());
+			pstmt.setString(5, m.getUserProfile());
+			pstmt.setInt(6, m.getUserNo());
+			
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally{
+			close(pstmt);
+		}
+		
+		return result;
+	}
 	
+	public int updateMemberAttachment(Connection conn, Member m, Attachment at) {
+		int result = 0;
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("updateMemberAttachment");
+				
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, m.getUserNo());
+			pstmt.setString(2, at.getAttachmentOriginName());
+			pstmt.setString(3, at.getAttachmentUpdateName());
+			pstmt.setString(4, at.getAttachmentPath());
+			pstmt.setInt(5, at.getAttachmentNo());
+			
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		
+		return result;
+	}
+	
+	public Member selectMember(Connection conn, int userNo) {
+		Member m = null;
+		
+		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+		String sql = prop.getProperty("selectMember");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, userNo);
+			
+			rset = pstmt.executeQuery();
+			
+			if(rset.next()) {
+				m = new Member(rset.getInt("user_no")
+					     , rset.getString("user_id")
+					     , rset.getString("user_pwd")
+					     , rset.getString("user_name")
+					     , rset.getString("user_ssn")
+					     , rset.getString("user_nickname")
+					     , rset.getString("user_phone")
+					     , rset.getString("user_email")
+					     , rset.getString("user_address")
+					     , rset.getString("user_profile")
+					     , rset.getInt("user_grade")
+					     , rset.getString("user_marketing")
+					     , rset.getDate("user_enroll_date")
+					     , rset.getDate("user_modify_date")
+					     , rset.getString("user_type")
+					     , rset.getString("user_status")
+					     , rset.getString("user_img"));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		
+		return m;
+	}
+
+	public Attachment selectMemberAttachment(Connection conn, int userNo) {
+		Attachment at = null;
+		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+		String sql = prop.getProperty("selectMemberAttachment");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, userNo);
+			
+			rset = pstmt.executeQuery();
+			
+			if(rset.next()) {
+				at = new Attachment();
+				at.setAttachmentNo(rset.getInt("attachment_no"));
+				at.setAttachmentOriginName(rset.getString("attachment_origin_name"));
+				at.setAttachmentUpdateName(rset.getString("attachment_update_name"));
+				at.setAttachmentPath(rset.getString("attachment_path"));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		
+		return at;
+	}
+
 }

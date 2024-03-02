@@ -34,20 +34,14 @@ public class MemberSearchIdController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
 		
-		
 		String name = request.getParameter("checkName");
 		String email = request.getParameter("checkEmail");
 		
 		String userId = new MemberService().searchIdMember(name, email);
 		
-		
 		response.setContentType("text/html; charset=utf-8");
 		response.getWriter().print(userId);
-		
-	
-
 	}
-	
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)

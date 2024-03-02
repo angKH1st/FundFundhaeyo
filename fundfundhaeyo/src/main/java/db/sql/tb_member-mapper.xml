@@ -20,7 +20,9 @@
 		     , USER_MODIFY_DATE
 		     , USER_TYPE
 		     , USER_STATUS
+		     , ATTACHMENT_PATH || ATTACHMENT_UPDATE_NAME "USER_IMG"
 		  FROM TB_MEMBER
+		  JOIN TB_ATTACHMENT ON (USER_NO = ATTACHMENT_USER_NO)
 		 WHERE USER_ID = ?
 		   AND USER_PWD = ?
 		   AND USER_STATUS IN ('Y','A')
@@ -54,6 +56,28 @@
 		  , ?
 		  , ?
 		  )
+	</entry>
+	
+	<entry key="insertMemberAttachment">
+		INSERT
+	      INTO TB_ATTACHMENT
+			  (
+			    ATTACHMENT_NO
+			  , ATTACHMENT_USER_NO
+			  , ATTACHMENT_ORIGIN_NAME
+			  , ATTACHMENT_UPDATE_NAME
+			  , ATTACHMENT_PATH
+			  , ATTACHMENT_LEVEL
+			  )
+			  VALUES
+			  (
+			    SEQ_ATTACHMENT_NO.NEXTVAL
+			  , SEQ_USER_NO.CURRVAL
+			  , ?
+			  , ?
+			  , ?
+			  , ?
+			  )
 	</entry>
 	
 	<entry key="idCheck">
@@ -100,7 +124,9 @@
 		     , USER_MODIFY_DATE
 		     , USER_TYPE
 		     , USER_STATUS
+		     , ATTACHMENT_PATH || ATTACHMENT_UPDATE_NAME "USER_IMG"
 		  FROM TB_MEMBER
+		  JOIN TB_ATTACHMENT ON (USER_NO = ATTACHMENT_USER_NO)
 	</entry>
 	
 	<entry key="selectMemberLimitList">
@@ -125,7 +151,9 @@
 						     , USER_MODIFY_DATE
 						     , USER_TYPE
 						     , USER_STATUS
-						  FROM TB_MEMBER
+						     , ATTACHMENT_PATH || ATTACHMENT_UPDATE_NAME "USER_IMG"
+		  				  FROM TB_MEMBER
+		  				  JOIN TB_ATTACHMENT ON (USER_NO = ATTACHMENT_USER_NO)
 		                 ORDER
 		                    BY USER_NO DESC
 		                 ) E 
@@ -158,7 +186,9 @@
 		     , USER_MODIFY_DATE
 		     , USER_TYPE
 		     , USER_STATUS
+		     , ATTACHMENT_PATH || ATTACHMENT_UPDATE_NAME "USER_IMG"
 		  FROM TB_MEMBER
+		  JOIN TB_ATTACHMENT ON (USER_NO = ATTACHMENT_USER_NO)
 		 WHERE USER_ID = ?
 	</entry>
 	
@@ -174,6 +204,61 @@
 		     , USER_MODIFY_DATE = SYSDATE
 		 WHERE USER_ID = ?
 		   AND USER_PWD = ?
+	</entry>
+	
+	<entry key="updateMember">
+		UPDATE
+		       TB_MEMBER
+		   SET USER_PHONE = ?
+		     , USER_EMAIL = ?
+		     , USER_ADDRESS = ?
+		     , USER_MARKETING = ?
+		     , USER_PROFILE = ?
+		 WHERE USER_NO = ?
+	</entry>
+	
+	<entry key="updateMemberAttachment">
+		UPDATE
+			   TB_ATTACHMENT
+		   SET ATTACHMENT_USER_NO = ?
+		     , ATTACHMENT_ORIGIN_NAME = ?
+		     , ATTACHMENT_UPDATE_NAME = ?
+		     , ATTACHMENT_PATH = ?
+		 WHERE ATTACHMENT_NO = ?
+	</entry>
+	
+	<entry key="selectMember">
+		SELECT
+		       USER_NO
+		     , USER_ID
+		     , USER_PWD
+		     , USER_NAME
+		     , USER_SSN
+		     , USER_NICKNAME
+		     , USER_PHONE
+		     , USER_EMAIL
+		     , USER_ADDRESS
+		     , USER_PROFILE
+		     , USER_GRADE
+		     , USER_MARKETING
+		     , USER_ENROLL_DATE
+		     , USER_MODIFY_DATE
+		     , USER_TYPE
+		     , USER_STATUS
+		     , ATTACHMENT_PATH || ATTACHMENT_UPDATE_NAME "USER_IMG"
+		  FROM TB_MEMBER
+		  JOIN TB_ATTACHMENT ON (USER_NO = ATTACHMENT_USER_NO)
+		 WHERE USER_NO = ?
+	</entry>
+	
+	<entry key="selectMemberAttachment">
+		SELECT
+		       ATTACHMENT_NO
+		     , ATTACHMENT_ORIGIN_NAME
+		     , ATTACHMENT_UPDATE_NAME
+		     , ATTACHMENT_PATH
+		  FROM TB_ATTACHMENT
+		 WHERE ATTACHMENT_USER_NO = ?
 	</entry>
 	
 </properties>

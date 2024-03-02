@@ -9,8 +9,8 @@
 <meta charset="UTF-8">
 <title>뻔뻔해요</title>
 <link rel="stylesheet" href="resources/css/member/memberSearchIdPwForm.css">
-<script src="resources/js/member/memberSearchIdPwForm.js"></script>
 </head>
+<link rel="icon" href="data:;base64,iVBORw0KGgo=">
 <body>
 	<%@ include file="../common/header.jsp" %>
 	
@@ -38,8 +38,6 @@
 							<button onclick="location.href='<%= contextPath %>/moveToSearchPw.me'" type="button" class="btn btn-primary">비밀번호 찾기</button>
 						</div>
 
-				
-
 		                <div class="search-id-pw-input-container">
 		                    <div class="search-id-pw-input-wrap input-id">
 		                        <i class="far fa-envelope"></i>
@@ -54,49 +52,11 @@
 		                        <input placeholder="이메일을 입력하세요." type="email" name="userEmail" id="userEmail">
 		                    </div>
 		                </div>
-  
 		                
 		                <div class="search-id-pw-btn-wrap"> 
 		                	<br>
 		                    <button class="search-id-pw-btn" type="button" onclick="searchPwMember();">Pw 찾기</button>
 		                </div>
-		                
-		                <script>
-		                	function searchPwMember(){
-		                		
-		                		var $idSearch = $("#userId");
-		                		var $nameSearch = $("#userName");
-		                		var $emailSearch = $("#userEmail");
-		                		
-		                		
-		                		$.ajax({
-		                			url:"searchPw.me",
-		                			data:{checkId:$idSearch.val(),
-		                				  checkName:$nameSearch.val(),
-		                				  checkEmail:$emailSearch.val()
-		                			},
-		                			type:"post",
-		                			success:function(pw){
-		                			   if (pw !== "") {
-		                				$(".search-id-pw-input-container").css("visibility","hidden");
-		                				$(".search-id-pw-btn-wrap").css("display","none");
-		                				
-		                				let value = "<div>당신의 비밀번호는 " + pw + "입니다.</div>";
-		                				
-		                				$(".search-id-pw-input-container").html(value);
-										$(".search-id-pw-input-container").css("visibility","visible");
-		                			   } else {
-		                                   alert('입력하신 정보와 맞는 회원이 없습니다.');
-		                               }
-		                			},error:function(){
-		                				alert('입력하신 정보와 맞는 회원이 없습니다.');
-		                			}
-		                		})
-		                	}	
-		                
-		                
-		                </script>
-					
 
 		                <br>
 		                
@@ -111,5 +71,7 @@
     </div>
 	
 	<%@ include file="../common/footer.jsp" %>
+	
+	<script src="resources/js/member/memberSearchPwForm.js"></script>
 </body>
 </html>

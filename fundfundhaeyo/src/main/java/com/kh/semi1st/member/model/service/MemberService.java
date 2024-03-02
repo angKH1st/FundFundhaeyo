@@ -6,6 +6,7 @@ import java.util.ArrayList;
 
 import com.kh.semi1st.common.model.vo.PageInfo;
 import com.kh.semi1st.member.model.dao.MemberDao;
+import com.kh.semi1st.member.model.vo.Attachment;
 import com.kh.semi1st.member.model.vo.Member;
 
 public class MemberService {
@@ -25,12 +26,14 @@ public class MemberService {
 		return m; 
 	}
 
-	public int insertMember(Member m) {
+	public int insertMember(Member m, Attachment at) {
 		Connection conn = getConnection();
 		
-		int result = new MemberDao().insertMember(conn, m);
+		int result1 = new MemberDao().insertMember(conn, m);
 		
-		if(result > 0) {
+		int result2 = new MemberDao().insertMemberAttachment(conn, m, at);
+		
+		if(result1 > 0 && result2 > 0) {
 			commit(conn);
 		}else {
 			rollback(conn);
@@ -38,7 +41,7 @@ public class MemberService {
 		
 		close(conn);
 		
-		return result;
+		return result1 * result2;
 	}
 	
 	public int idCheck(String checkId) {
@@ -151,5 +154,49 @@ public class MemberService {
 		close(conn);
 		return result;
 	}
+
+	public int updateMember(Member m, Attachment at) {
+		Connection conn = getConnection();
+		int result1 = new MemberDao().updateMember(conn, m);
+		
+		int result2 = 1;
+		if(at != null) {// 새로운 첨파가 있을 경우
+			if(at.getAttachmentNo() != 0) {
+				result2 = new MemberDao().updateMemberAttachment(conn, m, at);
+			}
+		}
+		
+		// int result2 = new MemberDao().updateMemberAttachment(conn, m, at);
+		
+		if(result1 > 0 && result2 > 0) {
+			commit(conn);
+		}else {
+			rollback(conn);
+		}
+		
+		close(conn);
+		
+		return result1 * result2;
+	}
 	
+	public Member selectMember(int userNo, Attachment at) {
+		Connection conn = getConnection();
+		
+		Member updateMem = new MemberDao().selectMember(conn, userNo);
+		
+		close(conn);
+		
+		return updateMem;
+	}
+
+	public static Attachment selectMemberAttachment(int userNo) {
+		Connection conn = getConnection();
+		
+		Attachment at = new MemberDao().selectMemberAttachment(conn, userNo);
+		
+		close(conn);
+		
+		return at;
+	}
+
 }
