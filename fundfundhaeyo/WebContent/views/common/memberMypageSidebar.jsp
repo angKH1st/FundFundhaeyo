@@ -46,8 +46,8 @@
 		        <li>
 		            <a class="mypage_left_content-main-menu"><i class="fas fa-angle-up"></i> 회원 정보</a>
 		            <ul class="hidden">
-		                <li><a href="<%= request.getContextPath() %>/moveToUpdate.me">회원정보 수정</a></li>
-		                <li><a href="<%= request.getContextPath() %>/moveToDelete.me">회원 탈퇴</a></li>
+		                <li><a href="<%= request.getContextPath() %>/moveToUpdate.me">회원정보수정</a></li>
+		                <li><a href="<%= request.getContextPath() %>/moveToDelete.me">회원탈퇴</a></li>
 		            </ul>
 		        </li>
 		        <li>

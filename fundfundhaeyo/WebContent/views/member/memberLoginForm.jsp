@@ -7,6 +7,7 @@
 <title>뻔뻔해요</title>
 <link rel="stylesheet" href="resources/css/member/memberLoginForm.css">
 </head>
+<link rel="icon" href="data:;base64,iVBORw0KGgo=">
 <body>
 	<%@ include file="../common/header.jsp" %>
 	
@@ -64,6 +65,7 @@
 		    </div>
 	    <div class="blank_bottom"><%-- 여백 --%></div>
     </div>
+    
 	<%@ include file="../common/footer.jsp" %>
 </body>
 </html>

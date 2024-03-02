@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* 기본 셋업 */
-.mypage_outer{background-color: #eef5f5; width:100%; height: 1000px; padding: 0 300px; border: box-sizing;}
+.mypage_outer{width:100%; height: 1000px; padding: 0 300px; border: box-sizing;}
 .mypage_outer>div{width:100%;}
 .blank_top{height: 15%;}
 .blank_bottom{height: 5%;}
@@ -17,8 +17,8 @@
 .mypage_right_content2{height: 42%; margin-top: 10px;}
 
 .mypage_right_content1>div{width: 100%;}
-.mypage_right_root{height: 8%;}
-.mypage_right_title{height: 13%; padding-top: 7px;}
+.mypage_right_root{height: 34px;}
+.mypage_right_title{height: 55px; padding-top: 7px;}
 .mypage_right_activity{height: 79%;}
 
 .mypage_right_activity>div{width: 100%;}

@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* 기본 셋업 */
-.mypage_update_Form_outer{background-color: #eef5f5; width:100%; height: 1000px; padding: 0 300px; border: box-sizing;}
+.mypage_update_Form_outer{width:100%; height: 1000px; padding: 0 300px; border: box-sizing;}
 .mypage_update_Form_outer>div{width:100%;}
 .blank_top{height: 15%;}
 .blank_bottom{height: 5%;}
@@ -13,17 +13,32 @@
 .mypage_update_Form_right{width: 1101px; background-color: white;}
 
 .mypage_update_Form_right>div{width: 100%;}
-.mypage_update_Form_right_content1{height: 57%;}
-.mypage_update_Form_right_content2{height: 42%; margin-top: 10px;}
+.mypage_update_Form_right_content1{height: 70%;}
+.mypage_update_Form_right_content2{height: 29%; margin-top: 10px;}
 
 .mypage_update_Form_right_content1>div{width: 100%;}
-.mypage_update_Form_right_root{height: 8%;}
-.mypage_update_Form_right_title{height: 13%; padding-top: 7px;}
-.mypage_update_Form_right_TBD{height: 79%;}
+.mypage_update_Form_right_root{height: 34px;}
+.mypage_update_Form_right_title{height: 55px; padding-top: 7px;}
+.mypage_update_Form_right_info{height: 79%;}
+
+.mypage_update_Form_right_info>div{height: 100%;}
+.mypage_update_picture{width: 35%; padding: 40px;}
+.mypage_update_picture>div{width: 100%; height: 100%;}
+.mypage_update_picture_outline>div{width: 100%;}
+.mypage_update_picture_org{height: 80%; text-align: center; padding-top: 50px;}
+.mypage_update_picture_upload{height: 20%; text-align: center;}
+#file-area{display:none;}
+
+.mypage_update_etc{width: 65%; padding: 40px;}
+.mypage_update_etc>table{width: 100%; height: 50%;}
+.mypage_update_etc_table input, .mypage_update_etc_table textarea{width: 100%; height: 100%; border: none;}
+.mypage_update_etc_table td{padding-left: 5px;}
 
 .mypage_update_Form_right_content2>div{width: 100%;}
-.mypage_update_Form_right_title2{height: 15%; padding-top: 7px;}
-.mypage_update_Form_right_TBD2{height: 80%;}
+.mypage_update_Form_right_title2{height: 20%;}
+.mypage_update_Form_right_btn{height: 80%; text-align: center;}
+.mypage_update_Form_right_submitBtn{margin-right: 20px;}
+
+
 
 /* 메인 영역 끝 */
-.mypage_update_main div{border: 0.5px solid skyblue;}

@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* 기본 셋업 */
-.mypage_delete_form_outer{background-color: #eef5f5; width:100%; height: 1000px; padding: 0 300px; border: box-sizing;}
+.mypage_delete_form_outer{width:100%; height: 1000px; padding: 0 300px; border: box-sizing;}
 .mypage_delete_form_outer>div{width:100%;}
 .blank_top{height: 15%;}
 .blank_bottom{height: 5%;}
@@ -13,8 +13,8 @@
 .mypage_delete_form_right{width: 1101px; background-color: white;}
 
 .mypage_delete_form_right>div{width: 100%;}
-.mypage_delete_form_right_root{height: 33px;}
-.mypage_delete_form_right_title{height: 54px; padding-top: 7px;}
+.mypage_delete_form_right_root{height: 34px;}
+.mypage_delete_form_right_title{height: 55px; padding-top: 7px;}
 .mypage_delete_form_right_deleteForm{height: 89%;}
 .mypage_delete_form_right_outline{width: 500px;}
 

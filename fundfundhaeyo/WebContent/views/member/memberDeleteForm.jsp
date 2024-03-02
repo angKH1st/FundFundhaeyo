@@ -22,7 +22,7 @@
 					<div class="mypage_delete_form_right_root pd15">
 						<span><a href="<%= request.getContextPath() %>/mypage.me">Home</a></span>
 						<span> > </span>
-						<span>회원탈퇴</span>
+						<span>회원정보</span>
 					</div>
 					<div class="mypage_delete_form_right_title pd15"><h3>회원탈퇴</h3></div>
 					<div class="mypage_delete_form_right_deleteForm" align="center">
