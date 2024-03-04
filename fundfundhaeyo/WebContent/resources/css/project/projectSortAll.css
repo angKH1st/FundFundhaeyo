@@ -1,0 +1,42 @@
+@charset "UTF-8";
+/* 기본 셋업 */
+.project_sort_all_outer{width:100%; height: auto; padding: 0 200px 0 300px; overflow: auto; margin-bottom: 50px;}
+.project_sort_all_outer>div{width:100%;}
+.blank_top{height: 150px;}
+.blank_bottom{height: 50px;}
+
+/* 메인 영역 시작 */
+.project_sort_all_main{height: auto; position: relative;}
+.project_sort_all_left{width: 1065px; height: auto; margin-right: 5px;}
+.project_sort_all_left>div{width: 100%;}
+
+.range_area{height: 50px; margin-bottom: 50px;}
+.range_area>div{height: 100%;}
+.range_area_col1{width: 20%;}
+.range_area_col2{width: 50%;}
+.range_area_col3{width: 30%; text-align: right; padding: 20px 22px 0 0;}
+
+.project_area{height: auto; overflow: auto;}
+.project_area_pr{width: 245px; height: auto; margin-right: 20px;}
+.project_area_head{height: 60%;}
+.project_area_body{height: 40%;}
+
+.project_area_body>div{width: 100%;}
+.project_area_body_row1{height: 25%;}
+.project_area_body_row2{height: 50%;}
+.project_area_body_row3{height: 15%;}
+.project_area_body_row4{width: 90%; height: 10%;}
+
+.project_area_body_row3>div{height: 100%;}
+.project_area_body_row3_col1{width: 50%;}
+.project_area_body_row3_col2{width: 50%;}
+
+.project_sort_all_right{
+	position: fixed;
+    top: 150px;
+    right: 200px;
+    width: 300px; 
+    height: 500px;
+}
+
+/* 메인 영역 끝 */

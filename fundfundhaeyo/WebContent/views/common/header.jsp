@@ -50,7 +50,7 @@
                     <div class="ffh_header_center2">
                         <div class="ffh_header_center_left fl">
                             <div class="ffh_header_center_left1 fl"><a href="<%= contextPath %>"><div class="bg_image"></div></a></div>
-                            <div class="ffh_header_center_left2 fl"><a href="<%= contextPath %>" class="heada headtext texthover <%= request.getRequestURI().equals(contextPath+"/") ? "active" : "" %>">홈<span class="bottom-bar"></span></a></div>
+                            <div class="ffh_header_center_left2 fl"><a href="<%= contextPath %>" class="heada headtext texthover <%= request.getRequestURI().equals(contextPath) ? "active" : "" %>">홈<span class="bottom-bar"></span></a></div>
                             <div class="ffh_header_center_left3 fl"><a href="<%= contextPath %>/all.pr" class="heada headtext texthover <%= "all".equals(request.getAttribute("currentPage")) ? "active" : "" %>">전체<span class="bottom-bar"></span></a></div>
                             <div class="ffh_header_center_left4 fl"><a href="<%= contextPath %>/category.pr" class="heada headtext texthover <%= "category".equals(request.getAttribute("currentPage")) ? "active" : "" %>">카테고리<span class="bottom-bar"></span></a></div>
                             <div class="ffh_header_center_left5 fl"><a href="<%= contextPath %>/rank.pr" class="heada headtext texthover <%= "rank".equals(request.getAttribute("currentPage")) ? "active" : "" %>">인기<span class="bottom-bar"></span></a></div>
@@ -97,5 +97,7 @@
             </div>
         </div>
     </div>
+    
+    <script src="resources/js/header.js"></script>
 </body>
 </html>

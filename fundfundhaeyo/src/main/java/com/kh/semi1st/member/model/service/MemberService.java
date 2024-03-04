@@ -11,10 +11,10 @@ import com.kh.semi1st.member.model.vo.Member;
 
 public class MemberService {
 
-	/** 로그인
-	 * @param userId
-	 * @param userPwd
-	 * @return
+	/** 아이디와 비밀번호를 입력받아 로그인을 처리하는 메소드
+	 *  @param userId : 로그인하고자하는 회원의 id
+	 *  @param userPwd : 로그인하고자하는 회원의 pwd
+	 *  @return m : 로그인 세션에 담기는 객체 m
 	 */
 	public Member loginMember(String userId, String userPwd) {
 		Connection conn = getConnection();
@@ -26,6 +26,11 @@ public class MemberService {
 		return m; 
 	}
 
+	/** 회원가입을 위해 입력한 정보들로 멤버 객체를 받아 가입을 처리하는 메소드
+	 *  @param m : 회원 테이블에 추가되는 객체 m
+	 *  @param at : 회원의 기본 프로필 이미지로 추가되는 첨부파일 at
+	 *  @return result1 * result2 : 처리 결과 (1 = 성공 / 0 = 실패) 
+	 */
 	public int insertMember(Member m, Attachment at) {
 		Connection conn = getConnection();
 		
@@ -44,6 +49,10 @@ public class MemberService {
 		return result1 * result2;
 	}
 	
+	/** 아이디를 입력받아 중복확인을 처리하는 메소드
+	 *  @param checkId
+	 *  @return count : 처리 결과 (1 = 중복 / 0 = 중복없음) 
+	 */
 	public int idCheck(String checkId) {
 		Connection conn = getConnection();
 		
@@ -108,6 +117,11 @@ public class MemberService {
 		return m;
 	}
 
+	/** 회원의 차단/차단해제를 처리하는 메소드
+	 *  @param userId : 차단/차단해제 하고자 하는 회원의 id
+	 *  @param userStatus : 해당 회원의 차단/차단해제 상태값
+	 *  @return result : 처리 결과 (1 = 성공 / 0 = 실패) 
+	 */
 	public int updateMemberBanAllow(String userId, String userStatus) {
 		Connection conn = getConnection();
 		
@@ -125,22 +139,42 @@ public class MemberService {
 	}
 
 	
+	/** 회원의 Id를 검색해주는 메소드 
+	 *  @param name : 검색하고자 하는 회원의 이름
+	 *  @param email : 검색하고자 하는 회원의 이메일
+	 *  @return userId : 검색된 회원의 id
+	 */
 	public String searchIdMember(String name, String email){
 		Connection conn = getConnection();
+		
 		String userId = new MemberDao().searchIdMember(conn, name, email);
 		
 		close(conn);
+		
 		return userId;
 	}
 	
+	/** 회원의 pw를 검색해주는 메소드
+	 *  @param userId : 검색하고자 하는 회원의 id
+	 *  @param name : 검색하고자 하는 회원의 이름
+	 *  @param email : 검색하고자 하는 회원의 이메일
+	 *  @return userPw : 검색된 회원의 pw
+	 */
 	public String searchPwMember(String userId, String name, String email) {
 		Connection conn = getConnection();
+		
 		String userPw = new MemberDao().searchPwMember(conn, userId, name, email);
 		
 		close(conn);
+		
 		return userPw;
 	}
 
+	/** 회원탈퇴를 처리해주는 메소드
+	 *  @param userId : 탈퇴하고자 하는 회원의 id
+	 *  @param userPwd : 탈퇴하고자 하는 회원의 pwd
+	 *  @return result : 처리 결과 (1 = 성공 / 0 = 실패) 
+	 */
 	public int deleteMember(String userId, String userPwd) {
 		Connection conn = getConnection();
 		int result = new MemberDao().deleteMember(conn, userId, userPwd);
@@ -155,18 +189,21 @@ public class MemberService {
 		return result;
 	}
 
+	/** 회원정보수정을 처리해주는 메소드
+	 *  @param m : 수정하고자 하는 회원 객체 m
+	 *  @param at : 수정하고자 하는 회원 사진 at
+	 *  @return result1 * result2 : 처리 결과 (1 = 성공 / 0 = 실패) 
+	 */
 	public int updateMember(Member m, Attachment at) {
 		Connection conn = getConnection();
 		int result1 = new MemberDao().updateMember(conn, m);
 		
 		int result2 = 1;
-		if(at != null) {// 새로운 첨파가 있을 경우
+		if(at != null) {
 			if(at.getAttachmentNo() != 0) {
 				result2 = new MemberDao().updateMemberAttachment(conn, m, at);
 			}
 		}
-		
-		// int result2 = new MemberDao().updateMemberAttachment(conn, m, at);
 		
 		if(result1 > 0 && result2 > 0) {
 			commit(conn);
@@ -179,6 +216,25 @@ public class MemberService {
 		return result1 * result2;
 	}
 	
+	/** 회원정보수정 전, 기존의 프로필 사진을 조회해주는 메소드
+	 *  @param userNo : 조회하고자 하는 회원의 no
+	 *  @return at : 조회된 회원의 기존 프로필 사진
+	 */
+	public static Attachment selectMemberAttachment(int userNo) {
+		Connection conn = getConnection();
+		
+		Attachment at = new MemberDao().selectMemberAttachment(conn, userNo);
+		
+		close(conn);
+		
+		return at;
+	}
+	
+	/** 회원정보수정 이후, 갱신된 회원 정보를 조회해주는 메소드
+	 *  @param userNo : 조회하고자 하는 회원의 no
+	 *  @param at : 조회하고자 하는 회원의 프로필 사진 at
+	 *  @return updateMem : 갱신된 회원 객체
+	 */
 	public Member selectMember(int userNo, Attachment at) {
 		Connection conn = getConnection();
 		
@@ -188,15 +244,42 @@ public class MemberService {
 		
 		return updateMem;
 	}
-
-	public static Attachment selectMemberAttachment(int userNo) {
+	
+	/** 회원의 찜/찜해제 상태를 조회해주는 메소드
+	 *  @param userNo : 조회하고자 하는 회원의 no
+	 *  @param projectNo : 조회하고자 하는 프로젝트의 no
+	 *  @return result : 조회 결과 (true = 찜 / false = 찜 해제)
+	 */
+	public boolean checkMemberLikes(int userNo, int projectNo) {
 		Connection conn = getConnection();
 		
-		Attachment at = new MemberDao().selectMemberAttachment(conn, userNo);
+		boolean result = new MemberDao().checkMemberLikes(conn, userNo, projectNo);
 		
 		close(conn);
 		
-		return at;
+		return result;
+	}
+
+	/** 회원의 찜/찜해제를 처리해주는 메소드
+	 *  @param userNo : 처리하고자 하는 회원의 no
+	 *  @param projectNo : 처리하고자 하는 프로젝트의 no
+	 *  @param likes : 현 상태값
+	 *  @return result : 처리 결과 (1 = 성공 / 0 = 실패) 
+	 */
+	public int updateMemberLikes(int userNo, int projectNo, boolean likes) {
+		Connection conn = getConnection();
+		
+		int result = 0;
+		
+		if(likes == true) {
+			result = new MemberDao().deleteMemberLikes(conn, userNo, projectNo, likes);
+		}else{
+			result = new MemberDao().insertMemberLikes(conn, userNo, projectNo, likes);
+		}
+		
+		close(conn);
+		
+		return result;
 	}
 
 }
