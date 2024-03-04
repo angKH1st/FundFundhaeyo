@@ -1,0 +1,11 @@
+@charset "UTF-8";
+/* 기본 셋업 */
+.project_sort_category_outer{width:100%; height: 1000px; padding: 0 300px;}
+.project_sort_category_outer>div{width:100%;}
+.blank_top{height: 15%;}
+.blank_bottom{height: 5%;}
+
+/* 메인 영역 시작 */
+.project_sort_category_main{height: 80%; border:1px solid blue;}
+
+/* 메인 영역 끝 */

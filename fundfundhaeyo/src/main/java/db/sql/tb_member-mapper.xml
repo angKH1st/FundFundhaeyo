@@ -69,7 +69,7 @@
 			  , ATTACHMENT_PATH
 			  , ATTACHMENT_LEVEL
 			  )
-			  VALUES
+	    VALUES
 			  (
 			    SEQ_ATTACHMENT_NO.NEXTVAL
 			  , SEQ_USER_NO.CURRVAL
@@ -227,6 +227,16 @@
 		 WHERE ATTACHMENT_NO = ?
 	</entry>
 	
+	<entry key="selectMemberAttachment">
+		SELECT
+		       ATTACHMENT_NO
+		     , ATTACHMENT_ORIGIN_NAME
+		     , ATTACHMENT_UPDATE_NAME
+		     , ATTACHMENT_PATH
+		  FROM TB_ATTACHMENT
+		 WHERE ATTACHMENT_USER_NO = ?
+	</entry>
+	
 	<entry key="selectMember">
 		SELECT
 		       USER_NO
@@ -251,14 +261,37 @@
 		 WHERE USER_NO = ?
 	</entry>
 	
-	<entry key="selectMemberAttachment">
+	<entry key="checkMemberLikes">
 		SELECT
-		       ATTACHMENT_NO
-		     , ATTACHMENT_ORIGIN_NAME
-		     , ATTACHMENT_UPDATE_NAME
-		     , ATTACHMENT_PATH
-		  FROM TB_ATTACHMENT
-		 WHERE ATTACHMENT_USER_NO = ?
+		       LIKES_STATUS
+		  FROM TB_LIKES
+		 WHERE LIKES_USER_NO = ?
+		   AND LIKES_PROJECT_NO = ?
+		   AND LIKES_STATUS = 'Y'
+	</entry>
+	
+	<entry key="insertMemberLikes">
+		INSERT
+		  INTO TB_LIKES
+		     (
+		       LIKES_USER_NO
+		     , LIKES_PROJECT_NO
+		     , LIKES_STATUS
+		     )
+		VALUES
+			 (
+			   ?
+			 , ?
+			 , 'Y'
+			 )
+	</entry>
+	
+	<entry key="deleteMemberLikes">
+		DELETE
+		       TB_LIKES
+		 WHERE LIKES_USER_NO = ?
+		   AND LIKES_PROJECT_NO = ?
+		   AND LIKES_STATUS = 'Y'
 	</entry>
 	
 </properties>
