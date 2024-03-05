@@ -6,8 +6,8 @@
 <meta charset="UTF-8">
 <title>뻔뻔해요</title>
 <link rel="stylesheet" href="resources/css/helpCenter/qnaCenter.css">
-<script src="resources/js/helpCenter/qnaCenter.js" rel="javascript"></script>
 </head>
+<link rel="icon" href="data:;base64,iVBORw0KGgo=">
 <body>
 	<%@ include file="../common/header.jsp" %>
 	
@@ -30,9 +30,7 @@
 				<div class="btn-c fl"><a style="color: skyblue;">Q&A</a></div>
 				<div class="btn-d fl"><a href="<%= contextPath %>/guide.hp">펀딩 가이드</a></div>
 			</div>
-			<div class="qna_center_main_select">
-				검색기능 넣던가 하자
-			</div>
+			<div class="qna_center_main_select"><%-- 여백 --%></div>
 			<div class="qna_center_main_content">
 			</div>
 			
@@ -42,5 +40,7 @@
     </div>
     
 	<%@ include file="../common/footer.jsp" %>
+	
+	<script src="resources/js/helpCenter/qnaCenter.js" rel="javascript"></script>
 </body>
 </html>

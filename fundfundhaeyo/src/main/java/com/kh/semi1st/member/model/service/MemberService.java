@@ -8,6 +8,8 @@ import com.kh.semi1st.common.model.vo.PageInfo;
 import com.kh.semi1st.member.model.dao.MemberDao;
 import com.kh.semi1st.member.model.vo.Attachment;
 import com.kh.semi1st.member.model.vo.Member;
+import com.kh.semi1st.project.model.dao.ProjectDao;
+import com.kh.semi1st.project.model.vo.Project;
 
 public class MemberService {
 
@@ -280,6 +282,48 @@ public class MemberService {
 		close(conn);
 		
 		return result;
+	}
+	
+	/** 찜등록된 프로젝트를 조회해주는 메소드
+	 *  @param pi : 페이징 처리 객체
+	 *  @return list : 찜목록 리스트
+	 */
+	public ArrayList<Project> selectProjectLikesList(PageInfo pi, int userNo) {
+		Connection conn = getConnection();
+		
+		ArrayList<Project> list = new MemberDao().selectProjectLikesList(conn, pi, userNo);
+		
+		close(conn);
+		
+		return list;
+	}
+
+	/** 회원의 창작자 정보를 조회해주는 메소드
+	 *  @param userNo : 조회하고자 하는 회원의 번호
+	 *  @return m : 창작자 정보
+	 */
+	public Member selectMemberSellerList(int userNo) {
+		Connection conn = getConnection();
+		
+		Member m = new MemberDao().selectMemberSellerList(conn, userNo);
+		
+		close(conn);
+		
+		return m;
+	}
+
+	/** 회원의 후원자 정보를 조회해주는 메소드
+	 *  @param userNo : 조회하고자 하는 회원의 번호
+	 *  @return m : 후원자 정보
+	 */
+	public Member selectMemberBuyerList(int userNo) {
+		Connection conn = getConnection();
+		
+		Member m = new MemberDao().selectMemberBuyerList(conn, userNo);
+		
+		close(conn);
+		
+		return m;
 	}
 
 }

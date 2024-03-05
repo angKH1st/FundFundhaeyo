@@ -102,7 +102,7 @@
 .ffh_footer_middle_row1_col1{
     display: block;
     width: 25%;
-    background-image: url(../image/logo2.png);
+    background-image: url(../../image/logo2.png);
     background-size: contain;
     background-repeat: no-repeat;
 }

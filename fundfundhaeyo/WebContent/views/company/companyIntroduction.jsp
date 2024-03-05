@@ -14,7 +14,7 @@
 	<div class="introduction_outer font_outer">
 		<div class="blank_top"><%-- 여백 --%></div>
 		
-		<div class="introduction_main">
+		<div class="introduction_main brlg br5 shadow">
 			
 			<div class="title">
 				<h1>뻔뻔해요</h1>
@@ -46,12 +46,18 @@
 							우리의 목표는 창의적인 아이디어와 열정이 모여 새로운 가치를 창출하는 크라우드펀딩 커뮤니티를 만드는 것입니다.
 							</p>
 						</td>
-						<td>
-							<img src="https://help.miricanvas.com/hc/article_attachments/4409250561049/_______5_.png" width="400" height="500">
+						<td colspan=2>
+							<img src="resources/image/logo.gif" width="400" height="500">
 						</td>
 					</tr>
 				</table>
-				
+				<table>
+					<tr>
+						<td width=100>김재영</td>
+						<td width=100>어수지</td>
+						<td width=100>임정현</td>
+					</tr>
+				</table>
 			</div>
 
 	    </div>

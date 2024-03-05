@@ -22,8 +22,12 @@
 				<p>개성이 모여 세상을 바꾸는 뻔뻔해요에서</p>
 			</div>
 			<div class="project_enroll_introduction_bottom">
-				<button type="button" class="blueBtnBig">펀딩 시작하기</button>
-				<button type="button" class="grayBtnBig">창작자 가이드</button>
+				<% if(loginUser != null) { %>
+				<button type="button" class="blueBtnBig" style="margin-right: 5px;" onclick=location.href="<%= contextPath %>/moveToEnroll.pr">펀딩 시작하기</button>
+				<% }else{ %>
+				<button type="button" class="blueBtnBig" style="margin-right: 5px;" onclick="alertToLogin();">펀딩 시작하기</button>
+				<% } %>
+				<button type="button" onclick=location.href="<%= contextPath %>/guide.hp" class="grayBtnBig">창작자 가이드</button>
 			</div>
 	    </div>
 	    <div class="blank_bottom"><%-- 여백 --%></div>

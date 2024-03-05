@@ -34,7 +34,7 @@
 
 	<form class="mypage_update_Form_rifht_out form" action="<%= contextPath %>/update.me" method="post" enctype="multipart/form-data">
 
-		<div class="mypage_update_Form_outer">
+		<div class="mypage_update_Form_outer font_outer">
 			<div class="blank_top"><%-- 여백 --%></div>
 			
 				<div class="mypage_update_Form_main shadow brlg br5">
@@ -49,7 +49,7 @@
 							<div class="mypage_update_Form_right_root">
 								<span><a href="<%= request.getContextPath() %>/mypage.me">Home</a></span>
 								<span> > </span>
-								<span>회원정보수정</span>
+								<span>회원정보</span>
 							</div>
 							<div class="mypage_update_Form_right_title"><h3>회원정보수정</h3></div>
 							<div class="mypage_update_Form_right_info pd15 brlg br5">
@@ -66,11 +66,11 @@
 									<table class="mypage_update_etc_table">
 										<tr><td><br></td></tr>
 										<tr>
-											<td width=100>아이디</td>
-											<td width=140><input type="text" class="bgsb br5" name="userId" maxlength="12" value="<%= userId %>" readonly></td>
-											<td width=80>전화번호</td>
+											<td width=110>아이디</td>
+											<td width=150><input type="text" class="bgsb br5" name="userId" maxlength="12" value="<%= userId %>" readonly></td>
+											<td width=90>전화번호</td>
 											<td><input type="text" id="phoneInput" class="bgsb br5" name="userPhone" placeholder="- 포함해서 입력" maxlength="13" value="<%= userPhone %>"></td>
-											<td width=50><button class="phoneBtn br5 blueBtnSmall" type="button">변경</button></td>
+											<td width=60><button class="phoneBtn br5 blueBtnSmall" type="button">변경</button></td>
 										</tr>
 										<tr><td><br></td></tr>
 										<tr>

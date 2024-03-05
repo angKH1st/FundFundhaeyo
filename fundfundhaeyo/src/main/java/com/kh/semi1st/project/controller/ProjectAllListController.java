@@ -50,6 +50,8 @@ public class ProjectAllListController extends HttpServlet {
 	    ArrayList<Project> rankList = new ProjectService().selectRankThumbnailList();
 	    request.setAttribute("rankList", rankList);
 	    
+	    request.setAttribute("currentPage", "fund");
+	    
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");
 	    dispatcher.forward(request, response);
 		/*

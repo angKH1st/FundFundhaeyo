@@ -1,5 +1,14 @@
+<%@page import="java.util.Locale"%>
+<%@page import="java.text.NumberFormat"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+	Member seller = (Member)request.getAttribute("seller"); 
+	Member buyer = (Member)request.getAttribute("buyer"); 
+	
+	// 원화 처리
+	NumberFormat nf = NumberFormat.getInstance(Locale.KOREA);
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,24 +32,24 @@
 					<div class="mypage_right_root">
 						<span><a href="<%= request.getContextPath() %>/mypage.me">Home</a></span>
 					</div>
-					<div class="mypage_right_title"><h3>나의 활동</h3></div>
+					<div class="mypage_right_title"><h3>마이페이지</h3></div>
 					<div class="mypage_right_activity brlg br5">
 						<div class="mypage_activity_row1">
 							<div class="mypage_activity_row1_grade1 hoverA2-2 fl">
 								<div class="mypage_activity_row1_grade1_title"><h4>후원활동</h4></div>
-								<div class="mypage_activity_row1_grade1_count"><h2>6</h2><h5> 회</h5></div>
+								<div class="mypage_activity_row1_grade1_count"><h3><%= buyer.getBuyerCount() %></h3><h5> 회</h5></div>
 							</div>
 							<div class="mypage_activity_row1_grade2 hoverA2-2 fl">
 								<div class="mypage_activity_row1_grade2_title"><h4>후원금액</h4></div>
-								<div class="mypage_activity_row1_grade2_count"><h2>4,444,444</h2><h5> 원</h5></div>
+								<div class="mypage_activity_row1_grade2_count"><h3><%= nf.format(buyer.getBuyerFunding()) %></h3><h5> 원</h5></div>
 							</div>
 							<div class="mypage_activity_row1_grade3 hoverA2-2 fl">
 								<div class="mypage_activity_row1_grade3_title"><h4>창작활동</h4></div>
-								<div class="mypage_activity_row1_grade3_count"><h2>2</h2><h5> 회</h5></div>
+								<div class="mypage_activity_row1_grade3_count"><h3><%= seller.getSellerCount() %></h3><h5> 회</h5></div>
 							</div>
 							<div class="mypage_activity_row1_grade4 hoverA2-2 fl">
 								<div class="mypage_activity_row1_grade4_title"><h4>창작금액</h4></div>
-								<div class="mypage_activity_row1_grade4_count"><h2>6,666,666</h2><h5> 원</h5></div>
+								<div class="mypage_activity_row1_grade4_count"><h3><%= nf.format(seller.getSellerFunding()) %></h3><h5> 원</h5></div>
 							</div>
 						</div>
 						<div class="mypage_activity_row2">

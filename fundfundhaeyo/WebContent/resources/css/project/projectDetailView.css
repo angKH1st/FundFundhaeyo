@@ -8,70 +8,137 @@
 /* 메인 영역 시작 */
 .project_detail_main{height: 88%;}
 .project_detail_main>div{width: 100%;}
-.project_detail_top{height: 37%;}
+.project_detail_top{height: 37%; padding: 40px;}
 .project_detail_blank{height: 3%;}
-.project_detail_content{height: 60%;}
+.project_detail_content{height: 60%; padding: 40px;}
 
 .project_detail_top>div{height: 100%;}
 .project_detail_top_left{width: 40%;}
-.project_detail_top_blank{width: 10%;}
-.project_detail_top_right{width: 50%;}
+.project_detail_top_blank{width: 5%;}
+.project_detail_top_right{width: 55%;}
 
 .project_detail_top_right>div{width: 100%;}
 .project_detail_top_category{height: 5%;}
-.project_detail_top_title{height: 10%;}
+.project_detail_top_title{height: 10%; border-bottom: 1px solid black;}
 .project_detail_top_overview{height: 45%;}
 .project_detail_top_info{height: 40%;}
 
+.project_detail_top_category>div{height: 100%;}
+.project_detail_top_category_col1{width: 20%;}
+.project_detail_top_category_col2{width: 60%;}
+.project_detail_top_category_col3{width: 20%; text-align: right;}
+
+.project_detail_top_title>div{height: 100%;}
+.project_detail_top_title_col1{width: 85%;}
+.project_detail_top_title_col2{width: 5%;}
+.project_detail_top_title_col3{width: 10%; padding-top: 15px;}
+
 .project_detail_top_overview>div{width: 100%;}
-.project_detail_top_overview_row1{height: 40%;}
-.project_detail_top_overview_row2{height: 30%;}
+.project_detail_top_overview_row1{height: 20%;}
+.project_detail_top_overview_row2{height: 50%;}
 .project_detail_top_overview_row3{height: 30%;}
 
-.project_detail_top_overview_row1>div{width: 100%;}
-.project_detail_top_overview_row1_title{height: 35%; padding-top: 10px;}
-.project_detail_top_overview_row1_content{height: 65%;}
-
-.project_detail_top_overview_row1_content>div{height: 100%;}
-.project_detail_top_overview_row1_content_col1{width: 40%;}
-.project_detail_top_overview_row1_content_col2{width: 10%; padding-top: 20px;}
-.project_detail_top_overview_row1_content_col3{width: 50%;}
+.project_detail_top_overview_row1>div{width: 100%; height: 100%;}
 
 .project_detail_top_overview_row2>div{width: 100%;}
-.project_detail_top_overview_row2_title{height: 35%; padding-top: 5px;}
+.project_detail_top_overview_row2_title{height: 35%; padding-top: 10px;}
 .project_detail_top_overview_row2_content{height: 65%;}
 
 .project_detail_top_overview_row2_content>div{height: 100%;}
-.project_detail_top_overview_row2_content_col1{width: 40%;}
-.project_detail_top_overview_row2_content_col2{width: 10%;}
-.project_detail_top_overview_row2_content_col3{width: 50%;}
+.project_detail_top_overview_row2_content_col1{width: 50%;}
+.project_detail_top_overview_row2_content_col2{width: 40%;}
+.project_detail_top_overview_row2_content_col3{width: 10%; text-align:right; padding-top: 20px;}
 
-.project_detail_top_overview_row3>div{width: 100%;}
-.project_detail_top_overview_row3_title{height: 35%; padding-top: 5px;}
-.project_detail_top_overview_row3_content{height: 65%;}
+.project_detail_top_overview_row3>div{width: 50%; height: 100%;}
 
-.project_detail_top_overview_row3_content>div{height: 100%;}
-.project_detail_top_overview_row3_content_col1{width: 40%;}
-.project_detail_top_overview_row3_content_col2{width: 10%;}
-.project_detail_top_overview_row3_content_col3{width: 50%;}
+.project_detail_top_overview_row3_col1>div{height: 100%;}
+.project_detail_top_overview_row3_col1_title{width: 75%; padding-top: 15px;}
+.project_detail_top_overview_row3_col1_content{width: 25%;}
+
+.project_detail_top_overview_row3_col2>div{height: 100%;}
+.project_detail_top_overview_row3_col2_title{width: 75%; padding: 15px 0 0 20px;}
+.project_detail_top_overview_row3_col2_content{width: 25%; text-align: right;}
+
+.project_detail_top_overview_row3_col2_content>div{height: 100%;}
+.project_detail_top_overview_row3_col2_content_col1{width: 40%;}
+.project_detail_top_overview_row3_col2_content_col2{width: 10%;}
+.project_detail_top_overview_row3_col2_content_col3{width: 50%;}
 
 .project_detail_top_info>div{width: 100%;}
 .project_detail_top_info_row1{height: 60%; padding: 10px 0; border-top: 0.5px solid lightgray;}
 .project_detail_top_info_row2{height: 40%; padding: 10px 0;}
 
 .project_detail_top_info_row2>div{height: 100%;}
-.project_detail_top_info_row2_btn1{width: 8%; text-align: center; padding: 8px; background-color: #f1f1f1;}
-.project_detail_top_info_row2_btn2{width: 8%; text-align: center; padding: 8px; margin: 0 5px;}
-.project_detail_top_info_row2_btn3{width: 38%; text-align: center; padding: 14px 20px 8px 20px; color: white; background-color: lightskyblue;}
+.project_detail_top_info_row2>div:hover{cursor: pointer;}
+.project_detail_top_info_row2_btn1{width: 11%; text-align: center; padding: 4px; background-color: #f1f1f1;}
+.project_detail_top_info_row2_btn2{width: 11%; text-align: center; padding: 4px; margin: 0 10px;}
+.project_detail_top_info_row2_btn3{width: 45%; text-align: center; margin-right: 10px; padding: 10px 20px 8px 20px; color: white; background-color: lightskyblue;}
 .project_detail_top_info_row2_btn3>a{text-decoration: none;}
-.project_detail_top_info_row2_btn3:hover{background-color: }
 .project_detail_top_info_row2_btn3>a:hover{text-decoration: none;}
-.project_detail_top_info_row2_blank{width: 40%;}
+.project_detail_top_info_row2_blank{width: 27%;}
+.project_detail_top_info_row2_blank>span{width: 50%; height: 100%; display: flex; justify-content: center; align-items: center; text-align: center;}
 
 .project_detail_top_info_row2_btn1>div, .project_detail_top_info_row2_btn2>div{width: 100%; height: 50%;} 
 
 .likesContainer{position: relative;}
 
 .fundingNow{font-size: 40px;}
-.fundingDday{font-size: 30px;}
+.fundingDday{font-size: 30px; color: skyblue;}
+
+.project_detail_content>div{height: 100%;}
+.project_detail_content_col1{width: 60%;}
+.project_detail_content_col2{width: 5%;}
+.project_detail_content_col3{width: 35%;}
+
+.project_detail_top_left>div{width: 100%; height: 100%;}
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 400px;
+}
+
+.slide-holder {
+    display: flex;
+    transition: transform 0.5s;
+}
+
+.slide {
+    min-width: 100%;
+    height: 400px;
+}
+
+.slide:not(:first-child) {display: none;}
+
+#pjBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2em;
+    color: white;
+    background: transparent;
+    border: none;
+}
+
+.prev {left: 10px;}
+.next {right: 10px;}
+
+.dots {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: lightgray;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.dot.active {background: gray;}
 /* 메인 영역 끝 */

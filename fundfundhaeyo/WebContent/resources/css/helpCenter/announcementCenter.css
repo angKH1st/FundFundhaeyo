@@ -1,19 +1,19 @@
 @charset "UTF-8";
 /* 기본 셋업 */
-.announcement_center_outer{width:100%; height: 1200px; padding: 0 350px;}
+.announcement_center_outer{width:100%; height: 1000px; padding: 0 350px;}
 .announcement_center_outer>div{width:100%;}
 .blank_top{height: 10%;}
 .blank_bottom{height: 5%;}
 
 /* 메인 영역 시작 */
-.announcement_center_main{height: 85%; border:1px solid blue;}
+.announcement_center_main{height: 85%;}
 .announcement_center_main>div{width: 100%;}
-.announcement_center_main_top{height: 7%;}
+.announcement_center_main_top{height: 10%;}
 .announcement_center_main_navi{height: 5%; border-bottom: 2px solid lightgray;}
-.announcement_center_main_select{height: 21%;}
-.announcement_center_main_content{height: 61%; padding: 50px;}
+.announcement_center_main_select{height: 1%;}
+.announcement_center_main_content{height: 81%; padding: 50px;}
 .announcement_center_main_bottom{
-	height: 6%; 
+	height: 4%; 
 	text-align: center;
 	display: flex;
     justify-content: center;
@@ -27,12 +27,28 @@
 .announcement_center_main_top_row2_bottom{width: 5%; margin: auto; border-top: 2px solid black;}
 
 .announcement_center_main_navi>div{width: 25%; height: 100%; line-height:170%; font-size: 25px; font-weight: 600; text-align: center;}
-.announcement_center_main_navi a{color: gray; text-decoration: none; display: block;}
-.announcement_center_main_navi a:hover {text-decoration: none; color: lightskyblue;}
+.announcement_center_main_navi a{color: black; text-decoration: none; display: block;}
+.announcement_center_main_navi div:hover, .announcement_center_main_navi a:hover {text-decoration: none; color: lightskyblue; border-bottom: 2px solid lightgray; background-color: #f3f3f3;}
 
 .announcement_list_area{width: 100%; height: 100%; border: 1px solid lightgray; text-align: center;}
-    
-.announcement_list_area>tbody>tr:hover{background-color: gray; cursor: pointer;}
+.announcement_list_area thead{background-color: #f3f3f3;}
+.announcement_list_area>tbody>tr:hover{background-color: #f3f3f3; cursor: pointer;}
+
+.no-border{
+	border: none !important;
+    user-select: none;
+    pointer-events: none;
+}
+
+.announcement_center_main_bottom button{
+	width: 30px;
+	border: none;
+	background-color: white;
+	margin: 0 3px;
+}
+
+.announcement_center_main_bottom button:hover{
+	font-weight: bold;
+}
 
 /* 메인 영역 끝 */
-div{border:0.5px solid red;}

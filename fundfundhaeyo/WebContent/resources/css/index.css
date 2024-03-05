@@ -102,8 +102,8 @@
 
 .ffh_frame1_top_col2>div, .ffh_frame2_top_col2>div{width: 100%; height: 50%;}
 .ffh_frame1_top_col2_row2>div, .ffh_frame2_top_col2_row2>div{height: 100%;}
-.ffh_frame1_top_col2_row2_left, .ffh_frame2_top_col2_row2_left{width: 70%;}
-.ffh_frame1_top_col2_row2_right, .ffh_frame2_top_col2_row2_right{width: 30%;}
+.ffh_frame1_top_col2_row2_left, .ffh_frame2_top_col2_row2_left{width: 60%;}
+.ffh_frame1_top_col2_row2_right, .ffh_frame2_top_col2_row2_right{width: 40%;}
 
 .ffh_frame1_body>div, .ffh_frame2_body>div{width: 18%; height: 50%;}
 

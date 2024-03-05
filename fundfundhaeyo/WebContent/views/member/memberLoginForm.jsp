@@ -20,8 +20,9 @@
 		        <div class="login-form-container shadow">
 		            <div class="login-form-left-side">
 		                <div class="top-logo-wrap">
-		                    
+		                    <a href="<%= contextPath %>"><img src="resources/image/logo2.png"></a>
 		                </div>
+		                <br><br>
 		                <h1 class="font_outer">개성이 모여 <br> 세상을 바꾸는 곳</h1>
 		                <p>아이디어를 가진 당신의 꿈을 현실로 만들어주는 <br> 크라우드펀딩 플랫폼</p>
 		            </div>

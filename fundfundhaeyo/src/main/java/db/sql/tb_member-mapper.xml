@@ -294,4 +294,44 @@
 		   AND LIKES_STATUS = 'Y'
 	</entry>
 	
+	<entry key="selectProjectLikesList">
+		SELECT *
+		  FROM (
+		        SELECT ROWNUM RNUM, E.*
+		          FROM (
+		                SELECT 
+		                       LIKES_PROJECT_NO
+		                     , PROJECT_TITLE
+		                     , ATTACHMENT_PATH || ATTACHMENT_UPDATE_NAME "TITLEIMG"
+		                     , TRUNC(SELLER_FUNDING / PROJECT_PRICE * 100) "FUNDING"
+		                     , PROJECT_END
+		                  FROM TB_LIKES
+		                  JOIN TB_PROJECT ON (LIKES_PROJECT_NO = PROJECT_NO)
+		                  JOIN TB_SELLER ON (LIKES_PROJECT_NO = SELLER_PROJECT_NO)
+		                  JOIN TB_ATTACHMENT ON (PROJECT_NO = ATTACHMENT_PROJECT_NO)
+		                 WHERE LIKES_USER_NO = ?
+		                   AND LIKES_STATUS = 'Y'
+		                 ORDER
+		                    BY PROJECT_NO DESC
+		                 ) E
+		        )
+		 WHERE RNUM BETWEEN ? AND ?
+	</entry>
+	
+	<entry key="selectMemberSellerList">
+		SELECT 
+		       COUNT(SELLER_PROJECT_NO) "COUNT"
+		     , SUM(SELLER_FUNDING) "FUNDING"
+		  FROM TB_SELLER
+		 WHERE SELLER_USER_NO = ?
+	</entry>
+	
+	<entry key="selectMemberBuyerList">
+		SELECT 
+		       COUNT(BUYER_PROJECT_NO) "COUNT"
+		     , SUM(BUYER_FUNDING) "FUNDING"
+		  FROM TB_BUYER
+		 WHERE BUYER_USER_NO = ?
+	</entry>
+	
 </properties>

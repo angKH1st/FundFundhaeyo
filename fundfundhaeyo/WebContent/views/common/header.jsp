@@ -1,4 +1,3 @@
-<%@page import="com.kh.semi1st.project.model.vo.PjCategory"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.kh.semi1st.member.model.vo.Member"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -52,7 +51,7 @@
                     <div class="ffh_header_center2">
                         <div class="ffh_header_center_left fl">
                             <div class="ffh_header_center_left1 fl"><a href="<%= contextPath %>"><div class="bg_image"></div></a></div>
-                            <div class="ffh_header_center_left2 fl"><a href="<%= contextPath %>" class="heada headtext texthover <%= request.getRequestURI().equals(contextPath) ? "active" : "" %>">홈<span class="bottom-bar"></span></a></div>
+                            <div class="ffh_header_center_left2 fl"><a href="<%= contextPath %>" class="heada headtext texthover <%= "fund".equals(request.getAttribute("currentPage")) ? "active" : "" %>">홈<span class="bottom-bar"></span></a></div>
                             <div class="ffh_header_center_left3 fl"><a href="<%= contextPath %>/all.pr" class="heada headtext texthover <%= "all".equals(request.getAttribute("currentPage")) ? "active" : "" %>">전체<span class="bottom-bar"></span></a></div>
                             <div class="ffh_header_center_left4 fl">
                             	<a href="<%= contextPath %>/category.pr" class="heada headtext texthover <%= "category".equals(request.getAttribute("currentPage")) ? "active" : "" %>">카테고리<span class="bottom-bar"></span></a>
@@ -105,7 +104,7 @@
                             <div class="ffh_header_center_right6 fl"><button class="btn" type=button onclick="moveToLogin();">로그인/회원가입</button></div>
                             <% }else { %>
                             <%-- 로그인 후 --%>
-                            <div class="ffh_header_center_right3 fl"><a href="<%= contextPath %>/moveToLikes.me" class="heada"><i class="fa-solid fa-heart fa-xl" style="color: #ff0000; line-height: 150%;"></i></a></div>
+                            <div class="ffh_header_center_right3 fl"><a href="<%= contextPath %>/moveToLikes.me?cpage=1" class="heada"><i class="fa-solid fa-heart fa-xl" style="color: #ff0000; line-height: 150%;"></i></a></div>
                             <div class="ffh_header_center_right4 fl"><a href="<%= contextPath %>/myNotice.me" class="heada"><i class="fa-regular fa-bell fa-xl" style="line-height: 150%;"></i></a></div>
                             <div class="ffh_header_center_right5 fl">
 	                            <div class="dropdown">

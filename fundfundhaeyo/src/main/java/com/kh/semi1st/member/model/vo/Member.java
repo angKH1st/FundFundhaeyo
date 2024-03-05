@@ -23,8 +23,45 @@ public class Member {
 	
 	private String userImg;
 	
-	public Member() {}
+	private int sellerCount;
+	private int sellerFunding;
+	private int buyerCount;
+	private int buyerFunding;
 	
+	public int getSellerCount() {
+		return sellerCount;
+	}
+
+	public void setSellerCount(int sellerCount) {
+		this.sellerCount = sellerCount;
+	}
+
+	public int getSellerFunding() {
+		return sellerFunding;
+	}
+
+	public void setSellerFunding(int sellerFunding) {
+		this.sellerFunding = sellerFunding;
+	}
+
+	public int getBuyerCount() {
+		return buyerCount;
+	}
+
+	public void setBuyerCount(int buyerCount) {
+		this.buyerCount = buyerCount;
+	}
+
+	public int getBuyerFunding() {
+		return buyerFunding;
+	}
+
+	public void setBuyerFunding(int buyerFunding) {
+		this.buyerFunding = buyerFunding;
+	}
+
+	public Member() {}
+
 	public Member(String userId, String userPwd, String userName, String userSsn, String userNickname, String userPhone,
 			String userEmail, String userAddress, String userMarketing) {
 		super();

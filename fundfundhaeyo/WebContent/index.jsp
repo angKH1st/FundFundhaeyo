@@ -1,3 +1,5 @@
+<%@page import="java.time.LocalDate"%>
+<%@page import="java.util.Random"%>
 <%@page import="com.kh.semi1st.member.model.service.MemberService"%>
 <%@page import="com.kh.semi1st.project.model.vo.Project"%>
 <%@page import="java.util.ArrayList"%>
@@ -35,27 +37,19 @@
 						<li data-target="#demo" data-slide-to="2"></li>
 					</ul>
 					<div class="carousel-inner">
-						<div class="carousel-item active">
-							<img src="resources/image/temp1.jpg" alt="TBU">
-							<div class="carousel-caption">
-							<h3>상품1 제목</h3>
-							<p>상품1 소개문구 간략히</p>
-							</div>   
-						</div>
-						<div class="carousel-item">
-							<img src="resources/image/temp2.jpg" alt="Chicago">
-							<div class="carousel-caption">
-							<h3>상품2 제목</h3>
-							<p>상품2 소개문구 간략히</p>
-							</div>   
-						</div>
-						<div class="carousel-item">
-							<img src="resources/image/temp3.jpg" alt="New York">
-							<div class="carousel-caption">
-							<h3>상품3 제목</h3>
-							<p>상품3 소개문구 간략히</p>
-							</div>   
-						</div>
+						<% ArrayList<Project> copyList = new ArrayList<>(randomList); %>
+						<% for(int i = 0; i < 3; i++){ %>
+							<% int randomIndex = new Random().nextInt(copyList.size()); %>
+							<% Project selectedProject = copyList.get(randomIndex); %>
+							<% copyList.remove(randomIndex); %>
+						<div class="carousel-item <%= (i == 0) ? "active" : "" %>" style="height: 300px; overflow: hidden;">
+					        <img src="<%= selectedProject.getProjectTitleImg() %>" style="width: 100%; height: 100%; object-fit: cover;">
+					        <div class="carousel-caption">
+					            <h3><%= selectedProject.getProjectTitle() %></h3>
+					            <p><%= selectedProject.getProjectOverview() %></p>
+					        </div>   
+					    </div>
+						<% } %>
 					</div>
 					<a class="carousel-control-prev" href="#demo" data-slide="prev">
 						<span class="carousel-control-prev-icon"></span>
@@ -73,7 +67,7 @@
 							<div class="ffh_content_top_left1_col2_row1"></div>
 							<div class="ffh_content_top_left1_col2_row2">
 								<div class="ffh_content_top_left1_col2_row2_col1 fl more_left_text"><%-- 여백 --%></div>
-								<div class="ffh_content_top_left1_col2_row2_col2 fl"><a href="<%= contextPath %>/all.pr"><button type="button" class="more_btn" style="background-color:white; margin-top: 15px;">더보기</button></a></div>
+								<div class="ffh_content_top_left1_col2_row2_col2 fl"><a href="<%= contextPath %>/all.pr"><button type="button" class="more_btn" style="background-color:white; margin-top: 15px; padding-right: 8px;">더보기</button></a></div>
 							</div>
 						</div>
 					</div>
@@ -134,7 +128,7 @@
 						<% } %>
 					</div>
 					<div class="ffh_content_top_right_row3">
-						<a href="<%= contextPath %>/rank.pr"><button style="width: 100%; height: 50%; border-radius: 10px; padding: 10px 30px;">인기 프로젝트 더보기</button></a>
+						<a href="<%= contextPath %>/rank.pr"><button class="shadow brlg" style="width: 100%; height: 50%; border-radius: 20px; background-color: white; padding: 10px 30px;">인기 프로젝트 더보기</button></a>
 					</div>
 				</div>
 			</div>
@@ -147,7 +141,7 @@
 						<div class="ffh_frame1_top_col2_row1"></div>
 						<div class="ffh_frame1_top_col2_row2">
 							<div class="ffh_frame1_top_col2_row2_left fl more_left_text"><%-- 여백 --%></div>
-							<div class="ffh_frame1_top_col2_row2_right fl"><a href="<%= contextPath %>/new.pr"><button type="button" class="more_btn" style="background-color:white; margin-top: 15px;">더보기</button></a></div>
+							<div class="ffh_frame1_top_col2_row2_right fl"><a href="<%= contextPath %>/new.pr"><button type="button" class="more_btn" style="background-color:white; margin-top: 15px; padding-right: 20px;">더보기</button></a></div>
 						</div>
 					</div>
 				</div>
@@ -182,7 +176,7 @@
 						<div class="ffh_frame2_top_col2_row1"></div>
 						<div class="ffh_frame2_top_col2_row2">
 							<div class="ffh_frame2_top_col2_row2_left fl more_left_text"><%-- 여백 --%></div>
-							<div class="ffh_frame2_top_col2_row2_right fl"><a href="<%= contextPath %>/deadline.pr"><button type="button" class="more_btn" style="background-color:white; margin-top: 15px;">더보기</button></a></div>
+							<div class="ffh_frame2_top_col2_row2_right fl"><a href="<%= contextPath %>/deadline.pr"><button type="button" class="more_btn" style="background-color:white; margin-top: 15px; padding-right: 20px;">더보기</button></a></div>
 						</div>
 					</div>
 				</div>
@@ -210,27 +204,8 @@
 			</div>
 		</div>
 		<br><br><br>
-		<div class="ffh_selfAdv" style="border: 1px solid red;">
-			광고
-			<br>
-			광고ㅂㅈㄷㅈㅂㄷㅈㅂㄷㅈㅂㄷㅂㅈㄷ
-			<br>
-			광고
-			<br>
-			광고
-			<br>
-			광고
-			<br>
-			광고
-			<br>
-			광고
-			<br>
-			광고
-			<br>
-			광고
-			<br>
-			광고
-			<br>
+		<div class="ffh_selfAdv">
+			<a href="<%= contextPath %>/moveToEnrollIntroduction.pr"><img src="resources/image/adv.png" width=1300 height=250></a>
 		</div>
 	</div>
 	

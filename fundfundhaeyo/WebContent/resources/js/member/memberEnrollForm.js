@@ -1,24 +1,21 @@
+var isValid = { // 유효성 검사 결과를 추적하는 객체
+    userId: false,
+    userPwd: false,
+    userPwdConfirm: false,
+    userName: false,
+    userSsn: false,
+    nickname: false,
+    phone: false,
+    email: false,
+    address: false,
+};
+
 function checkFormCompleteness() {
-	var allInputs = $('.allClearInput');
-	var allAlerts = $('.allClearAlert');
-	var allClear = true;
-
-	$.each(allInputs, function(index, input) {
-		if ($(input).val().length === 0) {
-			allClear = false;
-			return false;
-		}
-	});
-
-	$.each(allAlerts, function(index, alert) {
-		if ($(alert).text().length !== 0) {
-			allClear = false;
-			return false;
-		}
-	});
+	var allClear = Object.values(isValid).every(Boolean);
 
 	if (allClear) {
 		$('.enroll_form_submit_btn2').prop('disabled', false);
+		$('.enroll_form_submit_btn2').css('background-color', 'skyblue');
 	} else {
 		$('.enroll_form_submit_btn2').prop('disabled', true);
 	}
@@ -64,6 +61,7 @@ $(document).ready(function() {
 						inputIdBox.css('border', '1px solid blue');
 						inputIdBox.css('color', 'black');
 						idBox.text('');
+						isValid.userId = true;
 					}
 				},
 				error: function(error) {
@@ -94,7 +92,9 @@ $(document).ready(function() {
 		} else {
 			inputPwdBox.css('border', '1px solid blue');
 			pwdInspection.text('');
+			isValid.userPwd = true;
 		}
+		
 	});
 	/* 비밀번호 검사 끝 */
 
@@ -114,6 +114,7 @@ $(document).ready(function() {
 		} else {
 			inputPwdConfirmBox.css('border', '1px solid blue');
 			pwdConfirmInspection.text('');
+			isValid.userPwdConfirm = true;
 		}
 	});
 	/* 비밀번호 일치 검사 끝 */
@@ -134,7 +135,9 @@ $(document).ready(function() {
 		} else {
 			inputNameBox.css('border', '1px solid blue');
 			nameInspection.text('');
+			isValid.userName = true;
 		}
+		
 	});
 	/* 이름 검사 끝 */
 
@@ -154,7 +157,9 @@ $(document).ready(function() {
 		} else {
 			inputSsnBox.css('border', '1px solid blue');
 			ssnInspection.text('');
+			isValid.userSsn = true;		
 		}
+		
 	});
 	/* 주민등록번호 검사 끝 */
 
@@ -174,7 +179,9 @@ $(document).ready(function() {
 		} else {
 			inputNicknameBox.css('border', '1px solid blue');
 			nicknameInspection.text('');
+			isValid.nickname = true;
 		}
+		
 	});
 	/* 닉네임 검사 끝 */
 
@@ -194,10 +201,12 @@ $(document).ready(function() {
 		} else {
 			inputPhoneBox.css('border', '1px solid blue');
 			phoneInspection.text('');
+			isValid.phone = true;
 		}
+		
 	});
 	/* 전화번호 검사 끝 */
-
+	
 	/* 주소 검사 시작 */
 	$("input[name='address']").on('blur', function() {
 		var address = $(this).val();
@@ -212,7 +221,9 @@ $(document).ready(function() {
 		} else {
 			$(this).css('border', '1px solid blue');
 			$(".addressInspection").text('');
+			isValid.address = true;
 		}
+		checkFormCompleteness();
 	});
 	/* 주소 검사 끝 */
 
@@ -283,10 +294,12 @@ $(document).ready(function() {
 				}
 			}
 		}
-
+		
+		if (bodyRegEx.test(emailBody.val()) && headRegEx.test(emailHead.val())) {
+			isValid.email = true;
+		}
+		
 		checkFormCompleteness();
 	}
    /* 이메일 검사 끝 */
-
-
 });

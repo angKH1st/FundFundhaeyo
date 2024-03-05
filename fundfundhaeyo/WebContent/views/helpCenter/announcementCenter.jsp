@@ -24,7 +24,7 @@
 <body>
 	<%@ include file="../common/header.jsp" %>
 	
-	<div class="announcement_center_outer">
+	<div class="announcement_center_outer font_outer">
 		<div class="blank_top"><%-- 여백 --%></div>
 		
 		<div class="announcement_center_main">
@@ -43,9 +43,7 @@
 				<div class="btn-c fl"><a href="<%= contextPath %>/qna.hp?cpage=1">Q&A</a></div>
 				<div class="btn-d fl"><a href="<%= contextPath %>/guide.hp">펀딩 가이드</a></div>
 			</div>
-			<div class="announcement_center_main_select">
-				검색기능 넣던가 하자
-			</div>
+			<div class="announcement_center_main_select"><%-- 여백 --%></div>
 			<div class="announcement_center_main_content">
 				<table border=1 class="announcement_list_area">
 					<thead>
@@ -66,14 +64,35 @@
 						</tr>
 					<% }else{ %>
 						<%-- 공지사항이 있을 경우 --%>
-						<% for(Announcement v : list){ %>
-						<tr>
-							<td><%= v.getAnnouncementNo() %></td>
-							<td><%= v.getAnnouncementTitle() %></td>
-							<td><%= v.getAnnouncementWriter() %></td>
-							<td><%= v.getAnnouncementCount() %></td>
-							<td><%= v.getAnnouncementCreateDate() %></td>
-						</tr>
+						<% if(pi.getBoardLimit() > list.size()){ %>
+							<% for(Announcement v : list){ %>
+							<tr>
+								<td><%= v.getAnnouncementNo() %></td>
+								<td><%= v.getAnnouncementTitle() %></td>
+								<td><%= v.getAnnouncementWriter() %></td>
+								<td><%= v.getAnnouncementCount() %></td>
+								<td><%= v.getAnnouncementCreateDate() %></td>
+							</tr>
+							<% for(int i = 0; i < pi.getBoardLimit() - list.size(); i++){ %>
+							<tr class="no-border">
+								<td class="no-border">&nbsp;</td>
+								<td class="no-border">&nbsp;</td>
+								<td class="no-border">&nbsp;</td>
+								<td class="no-border">&nbsp;</td>
+								<td class="no-border">&nbsp;</td>
+							</tr>
+							<% } %>
+						<% } %>
+						<% }else{ %>
+							<% for(Announcement v : list){ %>
+							<tr>
+								<td><%= v.getAnnouncementNo() %></td>
+								<td><%= v.getAnnouncementTitle() %></td>
+								<td><%= v.getAnnouncementWriter() %></td>
+								<td><%= v.getAnnouncementCount() %></td>
+								<td><%= v.getAnnouncementCreateDate() %></td>
+							</tr>
+							<% } %>
 						<% } %>
 					<% } %>
 					
@@ -81,33 +100,28 @@
 				</table>
 			</div>
 			
-			<script>
-				$(function(){
-					$(".announcement_list_area>tbody>tr").click(function(){
-						location.href='<%= contextPath %>/announcementDetail.hp?aNo=' + $(this).children().eq(0).text();
-					});	
-				});
-			</script>
-			
 			<%-- 페이징바 --%>
 			<div class="announcement_center_main_bottom">
 				<% if(currentPage != 1){ %>
-            		<button onclick="location.href='<%= contextPath %>/announcement.hp?cpage=<%= currentPage-1 %>'">&lt;</button>
+            		<button type="button" onclick="location.href='<%= contextPath %>/announcement.hp?cpage=<%= currentPage-1 %>'">←</button>
+	        	<% }else{ %>
+	        		<button type="button" onclick="location.href='<%= contextPath %>/announcement.hp?cpage=<%= currentPage-1 %>'" disabled>←</button>
 	        	<% } %>
 	        	
 	            <% for(int p = startPage; p <= endPage; p++){ %>
 	            	<% if(p == currentPage){ %>
-	            		<button disabled><%= p %></button>
+	            		<button type="button" disabled><%= p %></button>
 	            	<% }else{ %>
-	            		<button onclick="location.href='<%= contextPath %>/announcement.hp?cpage=<%= p %>'"><%= p %></button>
+	            		<button type="button" onclick="location.href='<%= contextPath %>/announcement.hp?cpage=<%= p %>'"><%= p %></button>
 	            	<% } %>
 	            <% } %>
 	            
 	            <% if(currentPage != maxPage){ %>
-	            	<button onclick="location.href='<%= contextPath %>/announcement.hp?cpage=<%= currentPage+1 %>'">&gt;</button>
+	            	<button type="button" onclick="location.href='<%= contextPath %>/announcement.hp?cpage=<%= currentPage+1 %>'">→</button>
+	            <% }else{ %>
+	            	<button type="button" onclick="location.href='<%= contextPath %>/announcement.hp?cpage=<%= currentPage+1 %>'" disabled>→</button>
 	            <% } %>
 			</div>
-			
 	    </div>
 	    
 	    <div class="blank_bottom"><%-- 여백 --%></div>

@@ -14,6 +14,7 @@ import static com.kh.semi1st.common.JDBCTemplate.*;
 import com.kh.semi1st.common.model.vo.PageInfo;
 import com.kh.semi1st.member.model.vo.Attachment;
 import com.kh.semi1st.member.model.vo.Member;
+import com.kh.semi1st.project.model.vo.Project;
 
 public class MemberDao {
 	
@@ -684,4 +685,114 @@ public class MemberDao {
 		}
 		return result;
 	}
+	
+	/** 찜등록된 프로젝트를 조회해주는 메소드
+	 *  @param conn
+	 *  @param pi : 페이징 처리 객체
+	 *  @return list : 찜목록 리스트
+	 */
+	public ArrayList<Project> selectProjectLikesList(Connection conn, PageInfo pi, int userNo) {
+		ArrayList<Project> list = new ArrayList<Project>();
+		
+		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+		String sql = prop.getProperty("selectProjectLikesList");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			int startRow = (pi.getCurrentPage()-1) * pi.getBoardLimit() + 1;
+			int endRow = startRow + pi.getBoardLimit() - 1;
+			
+			pstmt.setInt(1, userNo);
+			pstmt.setInt(2, startRow);
+			pstmt.setInt(3, endRow);
+			
+			rset = pstmt.executeQuery();
+			
+			while(rset.next()) {
+				Project p = new Project();
+				p.setProjectNo(rset.getInt("likes_project_no"));
+				p.setProjectTitle(rset.getString("project_title"));
+				p.setProjectTitleImg(rset.getString("titleimg"));
+				p.setProjectFunding(rset.getInt("funding"));
+				p.setProjectEnd(rset.getDate("project_end"));
+				
+				list.add(p);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		return list;
+	}
+
+	/** 회원의 창작자 정보를 조회해주는 메소드
+	 *  @param conn
+	 *  @param userNo : 조회하고자 하는 회원의 번호
+	 *  @return m : 창작자 정보
+	 */
+	public Member selectMemberSellerList(Connection conn, int userNo) {
+		Member m = null;
+		
+		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+		String sql = prop.getProperty("selectMemberSellerList");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, userNo);
+			
+			rset = pstmt.executeQuery();
+			
+			if(rset.next()) {
+				m = new Member();
+				m.setSellerCount(rset.getInt("count"));
+				m.setSellerFunding(rset.getInt("funding"));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		return m;
+	}
+
+	/** 회원의 창작자 정보를 조회해주는 메소드
+	 *  @param conn
+	 *  @param userNo : 조회하고자 하는 회원의 번호
+	 *  @return m : 후원자 정보
+	 */
+	public Member selectMemberBuyerList(Connection conn, int userNo) {
+		Member m = null;
+		
+		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+		String sql = prop.getProperty("selectMemberBuyerList");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, userNo);
+			
+			rset = pstmt.executeQuery();
+			
+			if(rset.next()) {
+				m = new Member();
+				m.setBuyerCount(rset.getInt("count"));
+				m.setBuyerFunding(rset.getInt("funding"));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		return m;
+	}
+	
 }

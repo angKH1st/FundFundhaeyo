@@ -1,19 +1,19 @@
 @charset "UTF-8";
 /* 기본 셋업 */
-.faq_center_outer{width:100%; height: 1200px; padding: 0 350px;}
+.faq_center_outer{width:100%; height: 1000px; padding: 0 350px;}
 .faq_center_outer>div{width:100%;}
 .blank_top{height: 10%;}
 .blank_bottom{height: 5%;}
 
 /* 메인 영역 시작 */
-.faq_center_main{height: 85%; border:1px solid blue;}
+.faq_center_main{height: 85%;}
 .faq_center_main>div{width: 100%;}
-.faq_center_main_top{height: 7%;}
+.faq_center_main_top{height: 10%;}
 .faq_center_main_navi{height: 5%; border-bottom: 2px solid lightgray;}
-.faq_center_main_select{height: 21%;}
-.faq_center_main_content{height: 61%; padding: 50px;}
+.faq_center_main_select{height: 1%;}
+.faq_center_main_content{height: 81%; padding: 50px;}
 .faq_center_main_bottom{
-	height: 6%; 
+	height: 4%; 
 	text-align: center;
 	display: flex;
     justify-content: center;
@@ -27,8 +27,8 @@
 .faq_center_main_top_row2_bottom{width: 5%; margin: auto; border-top: 2px solid black;}
 
 .faq_center_main_navi>div{width: 25%; height: 100%; line-height:170%; font-size: 25px; font-weight: 600; text-align: center;}
-.faq_center_main_navi a{color: gray; text-decoration: none; display: block;}
-.faq_center_main_navi a:hover {text-decoration: none; color: lightskyblue;}
+.faq_center_main_navi a{color: black; text-decoration: none; display: block;}
+.faq_center_main_navi div:hover, .faq_center_main_navi a:hover {text-decoration: none; color: lightskyblue; border-bottom: 2px solid lightgray; background-color: #f3f3f3;}
 
 /* 메인 영역 끝 */
 div{border:0.5px solid red;}

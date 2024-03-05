@@ -16,7 +16,8 @@ function searchPwMember() {
 				$(".search-id-pw-input-container").css("visibility", "hidden");
 				$(".search-id-pw-btn-wrap").css("display", "none");
 
-				let value = "<div>당신의 비밀번호는 " + pw + "입니다.</div>";
+				let value = "<div class=\"br5 brlg\">&nbsp; <i class=\"fas fa-key\"></i>&nbsp;당신의 비밀번호는 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"percentage\">" + pw + "</span> 입니다.💜</div>"
+							+ "<br><br><br><div style=\"text-align:center;\"><button type=\"button\" onclick=location.href=\"/fund/moveToLogin.me\" class=\"blueBtn\">로그인으로</button></div>";
 
 				$(".search-id-pw-input-container").html(value);
 				$(".search-id-pw-input-container").css("visibility", "visible");

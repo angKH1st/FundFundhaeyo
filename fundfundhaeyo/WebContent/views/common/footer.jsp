@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>뻔뻔해요</title>
-<link rel="stylesheet" href="resources/css/footer.css">
+<link rel="stylesheet" href="resources/css/common/footer.css">
 </head>
 <body>
 	<div class="footer_outer" style="border-bottom: 1px solid lightgray;">
@@ -41,33 +41,23 @@
 		            </div>
 		        </div>
 		        <div class="ffh_footer_middle fl">
+		        	<br><br>
 		        	<div class="ffh_footer_middle_row1 font_sejong_outer">
 		        		<div class="ffh_footer_middle_row1_col1 fl">
-			            	<br><br><br><br><br><br><br><br>
+		        			<br><br>
 						</div>
 						<div class="ffh_footer_middle_row1_col2 fl">
-							<br><br>TBU<br><br><br><br><br><br>
+							대표자 : 김시연<br>
+							김재영, 어수지, 임정현<br>
 						</div>
 		        	</div>
+		        	<br><br><br><br>
 		        	<div class="ffh_footer_middle_row2 font_outer"><p>뻔뻔해요는 프로젝트의 당사자가 아니며, 직접적인 통신판매를 진행하지 않습니다. 프로젝트의 완수 및 선물제공의 책임은 해당 프로젝트의 창작자에게 있으며, 프로젝트와 관련하여 후원자와 발생하는 법적 분쟁에 대한 책임은 해당 창작자가 부담합니다.</p></div>
 		        	<div class="ffh_footer_middle_row3 font_outer"><p style="text-align: center;">Copyright © 2024 FundFundhaeyo Institute All Right Reserved</p></div>
 		        </div>
 		    </div>
 	    </div>
     </div>
-    
-    <script>
-    	<%-- 뻔뻔해요 소개 페이지 이동 --%>
-      	function moveToCompanyIntroduction(){
-      		location.href = "<%= request.getContextPath() %>/introduction.cp";
-      	}
-      	
-      	<%-- 고객센터 페이지 이동 --%>
-      	function moveToHelpCenter(){
-      		location.href = "<%= request.getContextPath() %>/announcement.hp?cpage=1";
-      	}
-    </script>
-    <%-- ============================ 푸터바 모달 시작 ============================ --%>
 
     <%-- 푸터바 모달1 : 이용약관 --%>
     <div id="modal1" class="modal">
@@ -150,7 +140,6 @@
                     <li>지적재산권 보호: 회원은 타인의 지적재산권을 존중하고 보호해야 합니다. 불법적인 소프트웨어 사용, 저작권 침해, 상표권 침해 등은 금지되며, 회원은 이를 준수해야 합니다.</li>
                 </ul>
 
-</p>
             <button class="close-btn-bottom" onclick="closeModal('#modal1')">닫기</button>
         </div>
     </div>
@@ -175,46 +164,9 @@
         </div>
     </div>
 
-    <script>
-        function openModal(modalId) {
-            const modal = document.querySelector(modalId);
-            modal.style.display = "flex";
-        }
-    
-        function closeModal(modalId) {
-            const modal = document.querySelector(modalId);
-            modal.style.display = "none";
-        }
-    
-        const btnOpenModal1 = document.querySelector('#btn-open-modal1');
-        const btnOpenModal2 = document.querySelector('#btn-open-modal2');
-        const btnOpenModal3 = document.querySelector('#btn-open-modal3');
-    
-        btnOpenModal1.addEventListener("click", () => openModal('#modal1'));
-        btnOpenModal2.addEventListener("click", () => openModal('#modal2'));
-        btnOpenModal3.addEventListener("click", () => openModal('#modal3'));
-    </script>
-    <%-- ============================ 푸터바 모달 끝 ============================ --%>
-    
     <%-- top 버튼 --%>
-    <button id="top-btn"> ▲ </button >
-    <script>
-        $(document).ready(function() { 
-        	<%-- Top 버튼 특정 스크롤높이에서만 보이기 / 숨기기 --%>
-            $(window).scroll(function(){
-                if($(this).scrollTop() > 100){
-                    $('#top-btn').fadeIn();
-                }else{
-                    $('#top-btn').fadeOut();
-                }
-            });
-
-            <%-- Top 버튼 클릭시 페이지 상단으로 이동 --%>
-            $('#top-btn').click(function(){
-                $('html, body').animate({scrollTop : 0}, 800);
-                return false;
-            });
-        })
-    </script>
+    <button type="button" id="top-btn"> <i class="fa-solid fa-arrow-up"></i> </button >
+    
+    <script src="resources/js/common/footer.js" rel="javascript"></script>
 </body>
 </html>

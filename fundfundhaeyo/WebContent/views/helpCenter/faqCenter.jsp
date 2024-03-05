@@ -30,12 +30,9 @@
 				<div class="btn-c fl"><a href="<%= contextPath %>/qna.hp?cpage=1">Q&A</a></div>
 				<div class="btn-d fl"><a href="<%= contextPath %>/guide.hp">펀딩 가이드</a></div>
 			</div>
-			<div class="faq_center_main_select">
-				여긴 어떻게 하지?
-			</div>
+			<div class="faq_center_main_select"><%-- 여백 --%></div>
 			<div class="faq_center_main_content">
 			</div>
-			
 	    </div>
 	    
 	    <div class="blank_bottom"><%-- 여백 --%></div>

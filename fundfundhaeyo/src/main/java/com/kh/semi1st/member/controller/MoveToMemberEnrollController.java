@@ -26,7 +26,6 @@ public class MoveToMemberEnrollController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//TBU
 		String marketing = request.getParameter("marketing");
 		request.setAttribute("marketing", marketing);
 		request.getRequestDispatcher("views/member/memberEnrollForm.jsp").forward(request, response);

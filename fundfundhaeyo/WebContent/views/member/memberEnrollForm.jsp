@@ -19,9 +19,8 @@
 		<div class="member_enroll_form_main">
 			<div class="enroll_form_outer shadow">
 				<h3>회원가입</h3>
-				<p>회원이 되어 다양한 펀딩에 참여해 보세요!</p>
-				
-				<br>
+				<p style="margin-bottom: 0;">회원이 되어 다양한 펀딩에 참여해 보세요!</p>
+				<p style="font-size: 12px;">모든 항목은 <span class="percentage">필수입력</span> 항목입니다.</p>
 				
 				<form id="enroll-form" action="<%= contextPath %>/insert.me" method="post">
 					<input type="hidden" name="marketing" value="<%= marketing %>">
@@ -107,14 +106,14 @@
 							<div class="enroll_input_frame_row1_col1 fl"><b>주소 *</b></div>
 							<div class="enroll_input_frame_row1_col2 fl addressInspection allClearAlert"></div>
 						</div>
-						<div class="enroll_input_frame_row2"><input class=".allClearInput" type="text" name="address" placeholder="주소" required></div>
+						<div class="enroll_input_frame_row2"><input class="allClearInput" type="text" name="address" placeholder="주소" required></div>
 					</div>
 					
 					<br><br>
 					
 					<div align="center" class="enroll_form_submit_btn">
-						<button type="button" class="enroll_form_submit_btn1 fl" style="margin-right: 16px;" onclick="location.href='<%= contextPath %>'">가입취소</button>
-		        		<button type="submit" class="enroll_form_submit_btn2 fl" disabled>가입하기</button>
+						<button type="button" class="enroll_form_submit_btn1 brlg shadow fl" style="margin-right: 16px;" onclick="location.href='<%= contextPath %>'">가입취소</button>
+		        		<button type="submit" class="enroll_form_submit_btn2 brlg shadow fl" disabled>가입하기</button>
 					</div>
 					
 				</form>

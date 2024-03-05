@@ -15,7 +15,7 @@ $(document).ready(function() {
         });
         /* 전체 동의 체크박스 상태에 따라 다음 버튼 활성화 업데이트 */
         nextButton.disabled = !isChecked;
-        nextButton.style.backgroundColor = isChecked ? 'blue' : 'gray';
+        nextButton.style.backgroundColor = isChecked ? 'lightskyblue' : 'gray';
     });
 
     checkboxes.forEach(function(checkbox) {
@@ -36,7 +36,7 @@ $(document).ready(function() {
             /* 모든 체크박스와 필수 체크박스 상태에 따라 전체 동의 체크박스와 다음 버튼 상태 업데이트 */
             allCheck.checked = allChecked;
             nextButton.disabled = !requiredAllChecked;
-            nextButton.style.backgroundColor = requiredAllChecked ? 'blue' : 'gray';
+            nextButton.style.backgroundColor = requiredAllChecked ? 'lightskyblue' : 'gray';
         });
     });
     

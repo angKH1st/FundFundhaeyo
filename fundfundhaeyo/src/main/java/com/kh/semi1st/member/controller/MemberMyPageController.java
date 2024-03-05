@@ -1,11 +1,16 @@
 package com.kh.semi1st.member.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.kh.semi1st.member.model.service.MemberService;
+import com.kh.semi1st.member.model.vo.Member;
 
 /**
  * Servlet implementation class MyPageController
@@ -26,6 +31,16 @@ public class MemberMyPageController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		int userNo = ((Member)request.getSession().getAttribute("loginUser")).getUserNo();
+		
+		MemberService ms = new MemberService();
+		
+		Member seller = ms.selectMemberSellerList(userNo);
+		Member buyer = ms.selectMemberBuyerList(userNo);
+		
+		request.setAttribute("seller", seller);
+		request.setAttribute("buyer", buyer);
+		
 		request.getRequestDispatcher("views/member/memberMypage.jsp").forward(request, response);
 	}
 

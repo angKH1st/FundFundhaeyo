@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 import static com.kh.semi1st.common.JDBCTemplate.*;
 
+import com.kh.semi1st.common.model.vo.PageInfo;
 import com.kh.semi1st.member.model.vo.Attachment;
 import com.kh.semi1st.project.model.dao.ProjectDao;
 import com.kh.semi1st.project.model.vo.PjCategory;

@@ -98,8 +98,8 @@
 					<div class="enroll_agreement_form_row6">
 						<div class="enroll_agreement_form_row6_row1"><%-- 여백 --%></div>
 						<div class="enroll_agreement_form_row6_row2">
-							<button type="button" class="enroll_agreement_form_row6_row2_btn1 fl" style="margin-right: 16px;" onclick="history.back();">이전</button>
-			        		<button type="submit" class="enroll_agreement_form_row6_row2_btn2 next-button fl">다음</button>
+							<button type="button" class="enroll_agreement_form_row6_row2_btn1 brlg shadow fl" style="margin-right: 16px;" onclick="history.back();">이전</button>
+			        		<button type="submit" class="enroll_agreement_form_row6_row2_btn2 brlg shadow next-button fl">다음</button>
 						</div>
 					</div>
 				</div>

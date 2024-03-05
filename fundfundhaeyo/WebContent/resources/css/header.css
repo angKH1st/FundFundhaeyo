@@ -158,20 +158,20 @@ html {overflow-y: scroll;}
 .ffh_header_center_left{width: 66%; height: 100%;}
 .ffh_header_center_right{width: 34%; height: 100%;}
 
-.ffh_header_center1{height: 50%;}
-.ffh_header_center2{height: 50%;}
+.ffh_header_center2{height: 100%;}
 
 .ffh_header_center_left>div, .ffh_header_center_right>div{
     height: 100%;
     text-align: center;
     font-weight: 600;
     line-height: 230%;
+    display: block;
 }
 
 .ffh_header_center_left1 a{
 	margin: 18px 0 0 10px;
     display: block;
-    width: 100%;
+    width: 90%;
     height: 100%;
     background-image: url(../image/logo.png);
     background-size: contain;

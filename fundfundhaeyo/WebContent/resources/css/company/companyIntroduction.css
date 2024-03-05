@@ -6,6 +6,6 @@
 .blank_bottom{height: 5%;}
 
 /* 메인 영역 시작 */
-.introduction_main{height: 80%; border:1px solid blue;}
+.introduction_main{height: 80%; padding: 30px;}
 
 /* 메인 영역 끝 */ 

@@ -9,6 +9,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Properties;
 
+import com.kh.semi1st.common.model.vo.PageInfo;
 import com.kh.semi1st.member.model.vo.Attachment;
 import com.kh.semi1st.project.model.vo.PjCategory;
 import com.kh.semi1st.project.model.vo.Project;
@@ -50,6 +51,7 @@ public class ProjectDao {
 				p.setProjectCategoryNo(rset.getInt("pj_category_no"));
 				p.setProjectCategoryName(rset.getString("pj_category_name"));
 				p.setProjectTitle(rset.getString("project_title"));
+				p.setProjectOverview(rset.getString("project_overview"));
 				p.setProjectTitleImg(rset.getString("titleimg"));
 				p.setProjectFunding(rset.getInt("funding"));
 				p.setProjectEnd(rset.getDate("project_end"));
@@ -93,6 +95,7 @@ public class ProjectDao {
 				p.setProjectCategoryNo(rset.getInt("pj_category_no"));
 				p.setProjectCategoryName(rset.getString("pj_category_name"));
 				p.setProjectTitle(rset.getString("project_title"));
+				p.setProjectOverview(rset.getString("project_overview"));
 				p.setProjectTitleImg(rset.getString("titleimg"));
 				p.setProjectFunding(rset.getInt("funding"));
 				p.setProjectEnd(rset.getDate("project_end"));
@@ -129,6 +132,7 @@ public class ProjectDao {
 				p.setProjectCategoryNo(rset.getInt("pj_category_no"));
 				p.setProjectCategoryName(rset.getString("pj_category_name"));
 				p.setProjectTitle(rset.getString("project_title"));
+				p.setProjectOverview(rset.getString("project_overview"));
 				p.setProjectTitleImg(rset.getString("titleimg"));
 				p.setProjectFunding(rset.getInt("funding"));
 				p.setProjectEnd(rset.getDate("project_end"));
@@ -172,6 +176,7 @@ public class ProjectDao {
 				p.setProjectCategoryNo(rset.getInt("pj_category_no"));
 				p.setProjectCategoryName(rset.getString("pj_category_name"));
 				p.setProjectTitle(rset.getString("project_title"));
+				p.setProjectOverview(rset.getString("project_overview"));
 				p.setProjectTitleImg(rset.getString("titleimg"));
 				p.setProjectFunding(rset.getInt("funding"));
 				p.setProjectEnd(rset.getDate("project_end"));
@@ -242,6 +247,7 @@ public class ProjectDao {
 				p.setProjectCategoryNo(rset.getInt("pj_category_no"));
 				p.setProjectCategoryName(rset.getString("pj_category_name"));
 				p.setProjectTitle(rset.getString("project_title"));
+				p.setProjectOverview(rset.getString("project_overview"));
 				p.setProjectTitleImg(rset.getString("titleimg"));
 				p.setProjectFunding(rset.getInt("funding"));
 				p.setProjectEnd(rset.getDate("project_end"));
@@ -288,6 +294,7 @@ public class ProjectDao {
 				p.setProjectCategoryNo(rset.getInt("pj_category_no"));
 				p.setProjectCategoryName(rset.getString("pj_category_name"));
 				p.setProjectTitle(rset.getString("project_title"));
+				p.setProjectOverview(rset.getString("project_overview"));
 				p.setProjectTitleImg(rset.getString("titleimg"));
 				p.setProjectFunding(rset.getInt("funding"));
 				p.setProjectEnd(rset.getDate("project_end"));

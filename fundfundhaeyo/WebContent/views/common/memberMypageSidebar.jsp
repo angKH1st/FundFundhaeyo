@@ -36,7 +36,7 @@
 		        <li>
 		            <a class="mypage_left_content-main-menu"><i class="fas fa-angle-up"></i> 나의 활동</a>
 		            <ul class="hidden">
-		                <li><a href="<%= request.getContextPath() %>/moveToLikes.me">찜 목록</a></li>
+		                <li><a href="<%= request.getContextPath() %>/moveToLikes.me?cpage=1">찜 목록</a></li>
 		                <li><a href="#">알림 목록</a></li>
 		                <li><a href="#">최근 본 프로젝트</a></li>
 		                <li><a href="#">채팅</a></li>
