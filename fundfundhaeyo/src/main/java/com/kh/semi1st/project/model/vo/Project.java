@@ -18,8 +18,18 @@ public class Project {
 	private Date projectPaymentSeller;
 	private String projectStatus;
 	
+	private int projectSellerFunding;
+	private int projectCategoryNo;
 	private String projectTitleImg;
 	private int projectFunding;
+	
+	public int getProjectSellerFunding() {
+		return projectSellerFunding;
+	}
+	
+	public void setProjectSellerFunding(int projectSellerFunding) {
+		this.projectSellerFunding = projectSellerFunding;
+	}
 	
 	public int getProjectFunding() {
 		return projectFunding;
@@ -72,6 +82,14 @@ public class Project {
 		this.projectStatus = projectStatus;
 	}
 
+	public int getProjectCategoryNo() {
+		return projectCategoryNo;
+	}
+	
+	public void setProjectCategoryNo(int projectCategoryNo) {
+		this.projectCategoryNo = projectCategoryNo;
+	}
+	
 	public String getProjectTitleImg() {
 		return projectTitleImg;
 	}

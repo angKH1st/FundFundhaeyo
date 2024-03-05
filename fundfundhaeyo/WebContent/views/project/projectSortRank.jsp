@@ -1,9 +1,15 @@
+<%@page import="java.sql.Date"%>
+<%@page import="java.time.temporal.ChronoUnit"%>
+<%@page import="java.time.LocalDate"%>
 <%@page import="com.kh.semi1st.project.model.vo.Project"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
 	ArrayList<Project> rankList = (ArrayList<Project>)request.getAttribute("rankList");
+
+	//현재 날짜
+	LocalDate now = LocalDate.now();
 %>
 <!DOCTYPE html>
 <html>
@@ -50,17 +56,17 @@
 							<div class="project_area_pr fl">
 							<br>
 								<div class="project_area_head prHoverContainer">
-									<a href="#"><img class="prHover" src="<%= rankList.get(i).getProjectTitleImg() %>" width="245" height="180"></a>
+									<a href="<%= contextPath %>/detail.pr?pno=<%= rankList.get(i).getProjectNo() %>"><img class="prHover" src="<%= rankList.get(i).getProjectTitleImg() %>" width="245" height="180"></a>
 									<% if(loginUser != null) { %>
 										<span class="likes" style="position: absolute; bottom: 10px; right: 10px; z-index: 10;" data-projectNo="<%= rankList.get(i).getProjectNo() %>"><i class="fa-solid fa-heart fa-xl"></i></span>
 									<% } %>
 								</div>
 								<div class="project_area_body">
 									<div class="project_area_body_row1">
-										<a href="#" class="pca"><%= rankList.get(i).getProjectCategoryName() %></a>
+										<a href="<%= contextPath %>/category.pr?cno=<%= rankList.get(i).getProjectCategoryNo() %>" class="pca"><%= rankList.get(i).getProjectCategoryName() %></a>
 									</div>
 									<div class="project_area_body_row2">
-										<a href="#"><strong class="ptitle"><%= rankList.get(i).getProjectTitle() %></strong></a>
+										<a href="<%= contextPath %>/detail.pr?pno=<%= rankList.get(i).getProjectNo() %>"><strong class="ptitle"><%= rankList.get(i).getProjectTitle() %></strong></a>
 									</div>
 									<div class="project_area_body_row3">
 										<div class="project_area_body_row3_col1 fl">
@@ -83,23 +89,29 @@
 						<div class="project_area_pr fl">
 						<br>
 							<div class="project_area_head prHoverContainer">
-								<a href="#"><img class="prHover" src="<%= rankList.get(i).getProjectTitleImg() %>" width="245" height="180"></a>
+								<a href="<%= contextPath %>/detail.pr?pno=<%= rankList.get(i).getProjectNo() %>"><img class="prHover" src="<%= rankList.get(i).getProjectTitleImg() %>" width="245" height="180"></a>
 								<% if(loginUser != null) { %>
 									<span class="likes" style="position: absolute; bottom: 10px; right: 10px; z-index: 10;" data-projectNo="<%= rankList.get(i).getProjectNo() %>"><i class="fa-solid fa-heart fa-xl"></i></span>
 								<% } %>
 							</div>
 							<div class="project_area_body">
 								<div class="project_area_body_row1">
-									<a href="#" class="pca"><%= rankList.get(i).getProjectCategoryName() %></a>
+									<a href="<%= contextPath %>/category.pr?cno=<%= rankList.get(i).getProjectCategoryNo() %>" class="pca"><%= rankList.get(i).getProjectCategoryName() %></a>
 								</div>
 								<div class="project_area_body_row2">
-									<a href="#"><strong class="ptitle"><%= rankList.get(i).getProjectTitle() %></strong></a>
+									<a href="<%= contextPath %>/detail.pr?pno=<%= rankList.get(i).getProjectNo() %>"><strong class="ptitle"><%= rankList.get(i).getProjectTitle() %></strong></a>
 								</div>
 								<div class="project_area_body_row3">
 									<div class="project_area_body_row3_col1 fl">
 										<span class="percentage"><%= rankList.get(i).getProjectFunding() %>% 달성</span>
 									</div>
-									<div class="project_area_body_row3_col2 fl"></div>
+									<div class="project_area_body_row3_col2 project-d-day-form fl">
+										<% if((long)(ChronoUnit.DAYS.between(now, ((Date)rankList.get(i).getProjectEnd()).toLocalDate())) == 0){ %>
+										<span class="project-d-day" style="color: red">오늘 마감!</span>
+										<% }else{ %>
+										<span class="project-d-day">D-<%= (long)(ChronoUnit.DAYS.between(now, ((Date)rankList.get(i).getProjectEnd()).toLocalDate())) %></span>
+										<% } %>
+									</div>
 								</div>
 								<div class="project_area_body_row4">
 									<div class="progress-bar-pr">
