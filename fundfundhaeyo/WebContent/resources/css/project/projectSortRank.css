@@ -31,19 +31,6 @@
 .project_area_body_row3_col1{width: 60%;}
 .project_area_body_row3_col2{width: 40%;}
 
-.progress-bar-pr {
-	height: 4px;
-	width: 100%;
-	display: flex; 
-	background-color: lightgray;
-}
-
-.progressA {
-	background-color: blue;
-	height: 100%;
-	box-sizing: border-box;
-}
-
 .project_sort_rank_right{
 	position: fixed;
     top: 150px;

@@ -208,4 +208,37 @@ html {overflow-y: scroll;}
 .dropdown:hover{cursor: pointer;}
 .ffh_header_center_right6{width: 31%; margin-top: 12px;}
 .btn:hover {color: lightskyblue !important;}
+
+/* 카테고리 */
+@keyframes slideDown {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.ffh_header_center_left4:hover .dropdown-category,
+.dropdown-category:hover {
+    display: block;
+    animation: slideDown 0.25s ease-out;
+}
+
+.dropdown-category {
+	padding: 50px 300px;
+	width: 2000px;
+	height: 250px;
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    top: 55px;
+    left: 0;
+    z-index: 0;
+    border-bottom: 1px solid lightgray;
+    background-color: white;
+}
+
 /* ============================ 헤드 끝 ============================ */

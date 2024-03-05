@@ -82,14 +82,14 @@
                 		<div class="ffh_content_top_left2_all fl">
 	                        <div class="ffh_content_top_left2_p1_row1 pr1"></div>
 	                        <div class="ffh_content_top_left2_p1_row2 prHoverContainer pr2">
-	                        	<a href="#"><img class="prHover" src="<%= randomList.get(i).getProjectTitleImg() %>" width="190" height="180"></a>
+	                        	<a href="<%= contextPath %>/detail.pr?pno=<%= randomList.get(i).getProjectNo() %>"><img class="prHover" src="<%= randomList.get(i).getProjectTitleImg() %>" width="190" height="180"></a>
 	                        	<% if(loginUser != null) { %>
 	                        		<span class="likes" style="position: absolute; bottom: 10px; right: 7px; z-index: 10;" data-projectNo="<%= randomList.get(i).getProjectNo() %>"><i class="fa-solid fa-heart fa-xl"></i></span>
 	                        	<% } %>
 	                        </div>
 	                        <div class="ffh_content_top_left2_p1_row3 pr3">
-	                        	<div class="pr3_r1"><a href="#" class="pca"><%= randomList.get(i).getProjectCategoryName() %></a></div>
-	                            <div class="pr3_r2"><a href="#"><strong class="ptitle"><%= randomList.get(i).getProjectTitle() %></strong></a></div>
+	                        	<div class="pr3_r1"><a href="<%= contextPath %>/category.pr?cno=<%= randomList.get(i).getProjectCategoryNo() %>" class="pca"><%= randomList.get(i).getProjectCategoryName() %></a></div>
+	                            <div class="pr3_r2"><a href="<%= contextPath %>/detail.pr?pno=<%= randomList.get(i).getProjectNo() %>"><strong class="ptitle"><%= randomList.get(i).getProjectTitle() %></strong></a></div>
 	                            <div class="pr3_r3">
 	                            	<div class="pr3_r3_col1 fl"><span class="percentage"><%= randomList.get(i).getProjectFunding() %>% 달성</span></div>
 	                            	<div class="pr3_r3_col2 fl"></div>
@@ -115,15 +115,15 @@
 							<div class="rk_r1"><%--여백--%></div>
 							<div class="rk_r2">
 								<div class="rk_col1 prHoverContainer fl">
-									<a href="#"><img src="<%= rankList.get(i).getProjectTitleImg() %>" width="100px" height="90px"></a>
+									<a href="<%= contextPath %>/detail.pr?pno=<%= rankList.get(i).getProjectNo() %>"><img src="<%= rankList.get(i).getProjectTitleImg() %>" width="100px" height="90px"></a>
 									<% if(loginUser != null) { %>
 		                        		<span class="likes" style="position: absolute; bottom: 4px; right: 15px; z-index: 10;" data-projectNo="<%= rankList.get(i).getProjectNo() %>"><i class="fa-solid fa-heart fa-lg"></i></span>
 		                        	<% } %>
 								</div>
 								<div class="rk_col2 fl">
 									<div class="rk_col2_row1 fl">
-										<div class="rk_col2_row1_col1 fl"><a href="#" class="pca"><%= rankList.get(i).getProjectCategoryName() %></a></div>
-										<div class="rk_col2_row1_col2 fl" style="text-align: right"><a href="#"><span class="percentage"><%= rankList.get(i).getProjectFunding() %>% 달성</span></a></div>
+										<div class="rk_col2_row1_col1 fl"><a href="<%= contextPath %>/category.pr?cno=<%= rankList.get(i).getProjectCategoryNo() %>" class="pca"><%= rankList.get(i).getProjectCategoryName() %></a></div>
+										<div class="rk_col2_row1_col2 fl" style="text-align: right"><a href="<%= contextPath %>/detail.pr?pno=<%= rankList.get(i).getProjectNo() %>"><span class="percentage"><%= rankList.get(i).getProjectFunding() %>% 달성</span></a></div>
 									</div>
 									<div class="rk_col2_row2 fl">
 										<div class="rk_col2_row2_row1"><a href="#"><strong class="ptitle"><%= rankList.get(i).getProjectTitle() %></strong></a></div>
@@ -156,14 +156,14 @@
 					<div class="ffh_frame2 fl">
                     	<div class="pr1"></div>
                         <div class="pr2 prHoverContainer">
-                        	<a href="#"><img class="prHover" src="<%= newList.get(i).getProjectTitleImg() %>" width="240" height="200"></a>
+                        	<a href="<%= contextPath %>/detail.pr?pno=<%= newList.get(i).getProjectNo() %>"><img class="prHover" src="<%= newList.get(i).getProjectTitleImg() %>" width="240" height="200"></a>
                         	<% if(loginUser != null) { %>
                         		<span class="likes" style="position: absolute; bottom: 10px; right: 10px; z-index: 10;" data-projectNo="<%= newList.get(i).getProjectNo() %>"><i class="fa-solid fa-heart fa-xl"></i></span>
                         	<% } %>
                         </div>
                         <div class="pr3">
-	                        <div class="pr3_r1"><a href="#" class="pca"><%= newList.get(i).getProjectCategoryName() %></a></div>
-	                        <div class="pr3_r2"><a href="#"><strong class="ptitle"><%= newList.get(i).getProjectTitle() %></strong></a></div>
+	                        <div class="pr3_r1"><a href="<%= contextPath %>/category.pr?cno=<%= newList.get(i).getProjectCategoryNo() %>" class="pca"><%= newList.get(i).getProjectCategoryName() %></a></div>
+	                        <div class="pr3_r2"><a href="<%= contextPath %>/detail.pr?pno=<%= newList.get(i).getProjectNo() %>"><strong class="ptitle"><%= newList.get(i).getProjectTitle() %></strong></a></div>
 	                        <div class="pr3_r3">
 	                        	<div class="pr3_r3_col1 fl"><span class="percentage"><%= newList.get(i).getProjectFunding() %>% 달성</span></div>
 	                        	<div class="pr3_r3_col2 fl"></div>
@@ -191,14 +191,14 @@
 					<div class="ffh_frame2 fl">
 						<div class="pr1"></div>
 						<div class="pr2  prHoverContainer">
-							<a href="#"><img class="prHover" src="<%= deadlineList.get(i).getProjectTitleImg() %>" width="240px" height="200px"></a>
+							<a href="<%= contextPath %>/detail.pr?pno=<%= deadlineList.get(i).getProjectNo() %>"><img class="prHover" src="<%= deadlineList.get(i).getProjectTitleImg() %>" width="240px" height="200px"></a>
 							<% if(loginUser != null) { %>
                         		<span class="likes" style="position: absolute; bottom: 10px; right: 10px; z-index: 10;" data-projectNo="<%= deadlineList.get(i).getProjectNo() %>"><i class="fa-solid fa-heart fa-xl"></i></span>
                         	<% } %>
 						</div>
 						<div class="pr3">
-							<div class="pr3_r1"><a href="#" class="pca"><%= deadlineList.get(i).getProjectCategoryName() %></a></div>
-							<div class="pr3_r2"><a href="#"><strong class="ptitle"><%= deadlineList.get(i).getProjectTitle() %></strong></a></div>
+							<div class="pr3_r1"><a href="<%= contextPath %>/category.pr?cno=<%= deadlineList.get(i).getProjectCategoryNo() %>" class="pca"><%= deadlineList.get(i).getProjectCategoryName() %></a></div>
+							<div class="pr3_r2"><a href="<%= contextPath %>/detail.pr?pno=<%= deadlineList.get(i).getProjectNo() %>"><strong class="ptitle"><%= deadlineList.get(i).getProjectTitle() %></strong></a></div>
 							<div class="pr3_r3">
 								<div class="pr3_r3_col1 fl"><span class="percentage"><%= deadlineList.get(i).getProjectFunding() %>% 달성</span></div>
 								<div class="pr3_r3_col2 fl"></div>

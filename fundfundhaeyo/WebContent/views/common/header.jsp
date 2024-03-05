@@ -1,3 +1,5 @@
+<%@page import="com.kh.semi1st.project.model.vo.PjCategory"%>
+<%@page import="java.util.ArrayList"%>
 <%@page import="com.kh.semi1st.member.model.vo.Member"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -52,7 +54,41 @@
                             <div class="ffh_header_center_left1 fl"><a href="<%= contextPath %>"><div class="bg_image"></div></a></div>
                             <div class="ffh_header_center_left2 fl"><a href="<%= contextPath %>" class="heada headtext texthover <%= request.getRequestURI().equals(contextPath) ? "active" : "" %>">홈<span class="bottom-bar"></span></a></div>
                             <div class="ffh_header_center_left3 fl"><a href="<%= contextPath %>/all.pr" class="heada headtext texthover <%= "all".equals(request.getAttribute("currentPage")) ? "active" : "" %>">전체<span class="bottom-bar"></span></a></div>
-                            <div class="ffh_header_center_left4 fl"><a href="<%= contextPath %>/category.pr" class="heada headtext texthover <%= "category".equals(request.getAttribute("currentPage")) ? "active" : "" %>">카테고리<span class="bottom-bar"></span></a></div>
+                            <div class="ffh_header_center_left4 fl">
+                            	<a href="<%= contextPath %>/category.pr" class="heada headtext texthover <%= "category".equals(request.getAttribute("currentPage")) ? "active" : "" %>">카테고리<span class="bottom-bar"></span></a>
+                            	<div class="dropdown-category" align=center>
+                            		<table>
+                            			<tr>
+                            				<td width=200><a class="texthover" href="category.pr?cno=10">공통</a></td>
+                            				<td width=200><a class="texthover" href="category.pr?cno=20">푸드</a></td>
+                            				<td width=200><a class="texthover" href="category.pr?cno=30">보드게임</a></td>
+                            				<td width=200><a class="texthover" href="category.pr?cno=40">캐릭터</a></td>
+                            				<td width=200><a class="texthover" href="category.pr?cno=50">향수</a></td>
+                            			</tr>
+                            			<tr>
+                            				<td width=200><a class="texthover" href="category.pr?cno=60">공연</a></td>
+                            				<td width=200><a class="texthover" href="category.pr?cno=70">게임</a></td>
+                            				<td width=200><a class="texthover" href="category.pr?cno=80">의류</a></td>
+                            				<td width=200><a class="texthover" href="category.pr?cno=90">웹툰</a></td>
+                            				<td width=200><a class="texthover" href="category.pr?cno=100">가전</a></td>
+                            			</tr>
+                            			<tr>
+                            				<td width=200><a class="texthover" href="category.pr?cno=110">잡화</a></td>
+                            				<td width=200><a class="texthover" href="category.pr?cno=120">사진</a></td>
+                            				<td width=200><a class="texthover" href="category.pr?cno=130">반려동물</a></td>
+                            				<td width=200><a class="texthover" href="category.pr?cno=140">주얼리</a></td>
+                            				<td width=200><a class="texthover" href="category.pr?cno=150">음악</a></td>
+                            			</tr>
+                            			<tr>
+                            				<td width=200><a class="texthover" href="category.pr?cno=160">스포츠</a></td>
+                            				<td width=200><a class="texthover" href="category.pr?cno=170">패션</a></td>
+                            				<td width=200><a class="texthover" href="category.pr?cno=180">키즈</a></td>
+                            				<td width=200><a class="texthover" href="category.pr?cno=190">가구</a></td>
+                            				<td width=200><a class="texthover" href="category.pr?cno=200">기타</a></td>
+                            			</tr>
+                            		</table>
+							    </div>
+                           	</div>
                             <div class="ffh_header_center_left5 fl"><a href="<%= contextPath %>/rank.pr" class="heada headtext texthover <%= "rank".equals(request.getAttribute("currentPage")) ? "active" : "" %>">인기<span class="bottom-bar"></span></a></div>
                             <div class="ffh_header_center_left6 fl"><a href="<%= contextPath %>/new.pr" class="heada headtext texthover <%= "new".equals(request.getAttribute("currentPage")) ? "active" : "" %>">신규<span class="bottom-bar"></span></a></div>
                             <div class="ffh_header_center_left7 fl"><a href="<%= contextPath %>/deadline.pr" class="heada headtext texthover <%= "deadline".equals(request.getAttribute("currentPage")) ? "active" : "" %>">마감임박<span class="bottom-bar"></span></a></div>
@@ -82,20 +118,12 @@
 							</div>
                             <div class="ffh_header_center_right6 fl headtext" style="text-align:right"><%= loginUser.getUserNickname() %> 님💙
                             <% } %>
-                        </div>
-                        <script>
-                        	function moveToLogin(){
-                        		location.href = "<%= contextPath %>/moveToLogin.me";
-                        	}
-                        	
-                        	function moveToSearch(){
-                        		location.href = "<%= contextPath %>/moveToSearch.pr";
-                        	}
-                        </script>
-                    </div>
-                </div>
-            </div>
-        </div>
+                        	</div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
     </div>
     
     <script src="resources/js/header.js"></script>

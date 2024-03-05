@@ -1,11 +1,17 @@
 package com.kh.semi1st.project.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.kh.semi1st.project.model.service.ProjectService;
+import com.kh.semi1st.project.model.vo.Project;
 
 /**
  * Servlet implementation class ProjectSortCategoryController
@@ -26,7 +32,35 @@ public class ProjectSortCategoryController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TBU
+		int option = 0;
+		int cno = 0;
+		
+		if(request.getParameter("option") != null) {
+			option = Integer.parseInt(request.getParameter("option"));
+		}
+		
+		if(request.getParameter("cno") != null) {
+			cno = Integer.parseInt(request.getParameter("cno"));
+		}
+
+		ArrayList<Project> categoryList = null;
+		
+		if (option == 0) {
+			if(cno == 0) {
+				categoryList = new ProjectService().selectThumbnailList();
+			}else {
+				categoryList = new ProjectService().selectCategoryThumbnailList(cno);
+			}
+		} else {
+			if(cno == 0) {
+				categoryList = new ProjectService().selectThumbnailListByOption(option);
+			}else {
+				categoryList = new ProjectService().selectCategoryThumbnailListByOption(option, cno);
+			}
+		}
+		
+	    request.setAttribute("categoryList", categoryList);
+	    
 		request.setAttribute("currentPage", "category");
 		request.getRequestDispatcher("views/project/projectSortCategory.jsp").forward(request, response);
 	}
