@@ -43,4 +43,41 @@
 		 WHERE ANNOUNCEMENT_STATUS = 'Y'
 	</entry>
 	
+	<entry key="increaseCount">
+		UPDATE 
+		       TB_ANNOUNCEMENT
+		   SET ANNOUNCEMENT_COUNT = ANNOUNCEMENT_COUNT + 1
+		 WHERE ANNOUNCEMENT_NO = ?
+		   AND ANNOUNCEMENT_STATUS = 'Y'
+	</entry>
+	
+	<entry key="selectAnnouncement">
+		SELECT 
+		       ANNOUNCEMENT_NO
+		     , ANNOUNCEMENT_TITLE
+		     , ANNOUNCEMENT_CONTENT
+		     , USER_NICKNAME
+		     , ANNOUNCEMENT_COUNT
+		     , ANNOUNCEMENT_CREATE_DATE
+		  FROM TB_ANNOUNCEMENT
+		  JOIN TB_MEMBER ON (USER_NO = ANNOUNCEMENT_WRITER)
+		 WHERE ANNOUNCEMENT_NO = ? 
+	</entry>
+	
+	<entry key="selectAnnouncementBefore">
+		SELECT 
+		       ANNOUNCEMENT_NO
+		     , ANNOUNCEMENT_TITLE
+		  FROM TB_ANNOUNCEMENT
+		 WHERE ANNOUNCEMENT_NO = ? - 1
+	</entry>
+	
+	<entry key="selectAnnouncementAfter">
+		SELECT 
+		       ANNOUNCEMENT_NO
+		     , ANNOUNCEMENT_TITLE
+		  FROM TB_ANNOUNCEMENT
+		 WHERE ANNOUNCEMENT_NO = ? + 1
+	</entry>
+	
 </properties>

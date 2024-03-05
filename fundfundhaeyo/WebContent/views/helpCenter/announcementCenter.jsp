@@ -81,6 +81,14 @@
 				</table>
 			</div>
 			
+			<script>
+				$(function(){
+					$(".announcement_list_area>tbody>tr").click(function(){
+						location.href='<%= contextPath %>/announcementDetail.hp?aNo=' + $(this).children().eq(0).text();
+					});	
+				});
+			</script>
+			
 			<%-- 페이징바 --%>
 			<div class="announcement_center_main_bottom">
 				<% if(currentPage != 1){ %>

@@ -125,5 +125,134 @@ public class AnnouncementDao {
 		
 		return listCount;
 	}
+	
+	/** 공지사항 조회시 조회수 증가
+	 * @param conn
+	 * @param announcementNo
+	 * @return
+	 */
+	public int increaseCount(Connection conn, int announcementNo) {
+		int result = 0;
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("increaseCount");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, announcementNo);
+			
+			result = pstmt.executeUpdate();
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		return result;
+	}
+	
 
+	/** 공지사항 상세조회
+	 * @param conn
+	 * @param announcementNo
+	 * @return
+	 */
+	public Announcement selectAnnouncement(Connection conn, int announcementNo) {
+		Announcement a = null;
+		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+		String sql = prop.getProperty("selectAnnouncement");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, announcementNo);
+			
+			rset = pstmt.executeQuery();
+			
+			if(rset.next()) {
+				a = new Announcement(rset.getInt("announcement_no"),
+						             rset.getString("announcement_title"),
+						             rset.getString("announcement_content"),
+						             rset.getString("user_nickname"),
+						             rset.getInt("announcement_count"),
+						             rset.getDate("announcement_create_date"));
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		return a;
+	}
+	
+	/** 공지사항 상세조회 이전버튼
+	 * @param conn
+	 * @param announcementNo
+	 * @return
+	 */
+	public Announcement selectAnnouncementBefore(Connection conn, int announcementNo) {
+		Announcement before = null;
+		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+		String sql = prop.getProperty("selectAnnouncementBefore");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, announcementNo);
+			
+			rset = pstmt.executeQuery();
+			
+			if(rset.next()) {
+				before = new Announcement(rset.getInt("announcement_no"),
+										  rset.getString("announcement_title")); 
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		return before;
+	}
+	
+	/** 공지사항 상세조회 다음버튼
+	 * @param conn
+	 * @param announcementNo
+	 * @return
+	 */
+	public Announcement selectAnnouncementAfter(Connection conn, int announcementNo) {
+		Announcement after = null;
+		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+		String sql = prop.getProperty("selectAnnouncementAfter");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, announcementNo);
+			
+			rset = pstmt.executeQuery();
+			
+			if(rset.next()) {
+				after = new Announcement(rset.getInt("announcement_no"),
+						 				 rset.getString("announcement_title"));
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		return after;
+	}
 }

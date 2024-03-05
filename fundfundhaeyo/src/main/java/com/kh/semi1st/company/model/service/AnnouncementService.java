@@ -51,8 +51,63 @@ public class AnnouncementService {
 		return listCount;
 	}
 
+	/** 공지사항 조회시 조회수 증가
+	 * @param announcementNo
+	 * @return
+	 */
+	public int increaseCount(int announcementNo) {
+		Connection conn = getConnection();
+		
+		int result = new AnnouncementDao().increaseCount(conn, announcementNo);
+		
+		if(result > 0) {
+			commit(conn);
+		}else {
+			rollback(conn);
+		}
+		
+		close(conn);
+		return result;
+	}
 	
-	
-	
+	/** 공지사항 상세조회
+	 * @param announcementNo
+	 * @return
+	 */
+	public Announcement selectAnnouncement(int announcementNo) {
+		Connection conn = getConnection();
+		
+		Announcement a = new AnnouncementDao().selectAnnouncement(conn, announcementNo);
+		
+		close(conn);
+		return a;
+	}
 
+	/** 공지사항 상세조회 이전버튼
+	 * @param announcementNo
+	 * @return
+	 */
+	public Announcement selectAnnouncementBefore(int announcementNo) {
+		Connection conn = getConnection();
+		
+		Announcement before = new AnnouncementDao().selectAnnouncementBefore(conn, announcementNo);
+		
+		close(conn);
+		return before;
+	}
+	
+	/** 공지사항 상세조회 다음버튼
+	 * @param announcementNo
+	 * @return
+	 */
+	public Announcement selectAnnouncementAfter(int announcementNo) {
+		Connection conn = getConnection();
+		
+		Announcement after = new AnnouncementDao().selectAnnouncementAfter(conn, announcementNo);
+		
+		close(conn);
+		return after;
+	}
+	
+	
 }

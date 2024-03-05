@@ -35,6 +35,27 @@ public class Announcement {
 		this.announcementCreateDate = announcementCreateDate;
 		this.announcementStatus = announcementStatus;
 	}
+	
+	
+
+	public Announcement(int announcementNo, String announcementTitle, String announcementContent,
+			String announcementWriter, int announcementCount, Date announcementCreateDate) {
+		super();
+		this.announcementNo = announcementNo;
+		this.announcementTitle = announcementTitle;
+		this.announcementContent = announcementContent;
+		this.announcementWriter = announcementWriter;
+		this.announcementCount = announcementCount;
+		this.announcementCreateDate = announcementCreateDate;
+	}
+	
+	
+
+	public Announcement(int announcementNo, String announcementTitle) {
+		super();
+		this.announcementNo = announcementNo;
+		this.announcementTitle = announcementTitle;
+	}
 
 	public int getAnnouncementNo() {
 		return announcementNo;
