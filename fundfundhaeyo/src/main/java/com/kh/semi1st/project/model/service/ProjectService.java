@@ -164,5 +164,44 @@ public class ProjectService {
 		
 		return result;
 	}
+	
+	/** 카테고리 번호 조회하는 메소드
+	 *  @param pjCno : 조회하고자 하는 카테고리명
+	 *  @return no : 조회된 카테고리 번호
+	 */
+	public int selectCategoryNo(String pjCno) {
+		Connection conn = getConnection();
+		
+		int no = new ProjectDao().selectCategoryNo(conn, pjCno);
+		
+		close(conn);
+		
+		return no;
+	}
+
+	/** 프로젝트 등록과 첨부파일 등록을 처리해주는 메소드
+	 *  @param p : 등록하고자 하는 프로젝트
+	 *  @param list : 첨부파일 리스트
+	 *  @return result : 처리 결과 (1 : 성공 / 0 : 실패)
+	 */
+	public int insertProject(Project p, ArrayList<Attachment> list) {
+		Connection conn = getConnection();
+		
+		int result1 = new ProjectDao().insertProject(conn, p);
+		
+		int result2 = new ProjectDao().insertAttachmentList(conn, p, list);
+		
+		if(result1 > 0 && result2 > 0) {
+			commit(conn);
+		}else {
+			rollback(conn);
+		}
+		
+		close(conn);
+		
+		return result1 * result2;
+	}
+
+	
 
 }

@@ -442,5 +442,72 @@ public class ProjectDao {
 		}
 		return result;
 	}
+	
+	/** 카테고리 번호 조회하는 메소드
+	 *  @param conn
+	 *  @param pjCno : 조회하고자 하는 카테고리명
+	 *  @return no : 조회된 카테고리 번호
+	 */
+	public int selectCategoryNo(Connection conn, String pjCno) {
+		int no = 0;
+		
+		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+		String sql = prop.getProperty("selectCategoryNo");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setString(1, pjCno);
+			
+			rset = pstmt.executeQuery();
+			
+			if(rset.next()) {
+				no = rset.getInt("pj_category_no");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		return no;
+	}
+
+	/** 프로젝트 등록과 첨부파일 등록을 처리해주는 메소드
+	 *  @param conn
+	 *  @param p : 등록하고자 하는 프로젝트
+	 *  @return result : 처리 결과 (1 : 성공 / 0 : 실패)
+	 */
+	public int insertProject(Connection conn, Project p) {
+		int result = 0;
+		
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("insertProject");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, Integer.parseInt(p.getProjectSeller()));
+			pstmt.setInt(2, p.getProjectCategoryNo());
+			pstmt.setString(3, p.getProjectOverview());
+			pstmt.setString(4, p.getProjectTitle());
+			pstmt.setString(5, p.getProjectContent());
+			pstmt.setString(6, p.getProjectTag());
+			pstmt.setInt(7, p.getProjectPrice());
+			pstmt.setDate(8, p.getProjectStart());
+			pstmt.setDate(9, p.getProjectEnd());
+			pstmt.setDate(10, p.getProjectPaymentBuyer());
+			pstmt.setDate(11, p.getProjectPaymentSeller());
+			
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		return result;
+	}
+
+	
 
 }

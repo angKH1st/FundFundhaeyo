@@ -311,6 +311,7 @@
 		                  JOIN TB_ATTACHMENT ON (PROJECT_NO = ATTACHMENT_PROJECT_NO)
 		                 WHERE LIKES_USER_NO = ?
 		                   AND LIKES_STATUS = 'Y'
+		                   AND ATTACHMENT_LEVEL = 1
 		                 ORDER
 		                    BY PROJECT_NO DESC
 		                 ) E

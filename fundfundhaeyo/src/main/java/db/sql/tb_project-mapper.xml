@@ -345,4 +345,10 @@
 		 WHERE LIKES_PROJECT_NO = ?
 	</entry>
 	
+	<entry key="selectCategoryNo">
+		SELECT PJ_CATEGORY_NO
+		  FROM TB_PJ_CATEGORY
+		 WHERE PJ_CATEGORY_NAME = ?
+	</entry>
+	
 </properties>

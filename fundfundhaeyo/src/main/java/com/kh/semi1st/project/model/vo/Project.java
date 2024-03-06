@@ -1,6 +1,6 @@
 package com.kh.semi1st.project.model.vo;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class Project {
 
