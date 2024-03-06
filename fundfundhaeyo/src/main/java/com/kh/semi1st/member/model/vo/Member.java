@@ -98,7 +98,19 @@ public class Member {
 		this.userStatus = userStatus;
 		this.userImg = userImg;
 	}
-	
+
+	public Member(String userId, String userPwd, String userName, String userSsn, String userNickname,
+			String userPhone, String userEmail, String userAddress) {
+		super();
+		this.userId = userId;
+		this.userPwd = userPwd;
+		this.userName = userName;
+		this.userSsn = userSsn;
+		this.userNickname = userNickname;
+		this.userPhone = userPhone;
+		this.userEmail = userEmail;
+		this.userAddress = userAddress;
+	}
 
 	public Member(String userId) {
 		super();

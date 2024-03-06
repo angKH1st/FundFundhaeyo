@@ -9,6 +9,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Properties;
 
+import javax.naming.spi.DirStateFactory.Result;
+
 import static com.kh.semi1st.common.JDBCTemplate.*;
 
 import com.kh.semi1st.common.model.vo.PageInfo;
@@ -794,5 +796,34 @@ public class MemberDao {
 		}
 		return m;
 	}
+	
+	public int enrollKakao(Connection conn, Member m) {
+		int result = 0;
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("enrollKakao");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setString(1, m.getUserId());
+			pstmt.setString(2, m.getUserPwd());
+			pstmt.setString(3, m.getUserName());
+			pstmt.setString(4, m.getUserSsn());
+			pstmt.setString(5, m.getUserNickname());
+			pstmt.setString(6, m.getUserPhone());
+			pstmt.setString(7, m.getUserEmail());
+			pstmt.setString(8, m.getUserAddress());
+			
+			result = pstmt.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		return result;
+		
+	}
+	
 	
 }
