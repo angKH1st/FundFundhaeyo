@@ -36,9 +36,9 @@ public class MemberLoginController extends HttpServlet {
 		String userPwd = request.getParameter("userPwd");
 		
 		Member loginUser = new MemberService().loginMember(userId, userPwd);
+		HttpSession session = request.getSession();
 		
 		if(loginUser != null) {
-			HttpSession session = request.getSession();
 			session.setAttribute("loginUser", loginUser);
 			
 			if(loginUser.getUserId().equals("admin")) {
@@ -47,7 +47,8 @@ public class MemberLoginController extends HttpServlet {
 				response.sendRedirect(request.getContextPath());
 			}
 		}else {
-			// 추후에 로그인 실패 에러 페이지 추가 TBU
+			session.setAttribute("alertMsg", "로그인정보가 일치하지 않습니다.");
+			response.sendRedirect(request.getContextPath() + "/moveToLogin.me");
 		}
 	}
 

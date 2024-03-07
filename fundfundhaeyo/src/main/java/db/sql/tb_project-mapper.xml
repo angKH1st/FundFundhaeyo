@@ -351,4 +351,60 @@
 		 WHERE PJ_CATEGORY_NAME = ?
 	</entry>
 	
+	<entry key="insertProject">
+		INSERT
+		  INTO TB_PROJECT
+		     (
+		       PROJECT_NO
+		     , PROJECT_SELLER
+		     , PROJECT_CATEGORY_NO
+		     , PROJECT_OVERVIEW
+		     , PROJECT_TITLE
+		     , PROJECT_CONTENT
+		     , PROJECT_TAG
+		     , PROJECT_PRICE
+		     , PROJECT_START
+		     , PROJECT_END
+		     , PROJECT_PAYMENT_BUYER
+		     , PROJECT_PAYMENT_SELLER
+		     )
+		VALUES
+		     (
+		       SEQ_PROJECT_NO.NEXTVAL
+		     , ?
+		     , ?
+		     , ?
+		     , ?
+		     , ?
+		     , ?
+		     , ?
+		     , ?
+		     , ?
+		     , ?
+		     , ?
+		     )
+	</entry>
+	
+	<entry key="insertAttachmentList">
+		INSERT
+		  INTO TB_ATTACHMENT
+		     (
+		       ATTACHMENT_NO
+		     , ATTACHMENT_PROJECT_NO
+		     , ATTACHMENT_ORIGIN_NAME
+		     , ATTACHMENT_UPDATE_NAME
+		     , ATTACHMENT_PATH
+		     , ATTACHMENT_LEVEL
+		     )
+		VALUES
+		     (
+		       SEQ_ATTACHMENT_NO.NEXTVAL
+		     , SEQ_PROJECT_NO.CURRVAL
+		     , ?
+		     , ?
+		     , ?
+		     , ?
+		     )
+	</entry>
+	
 </properties>

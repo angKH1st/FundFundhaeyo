@@ -354,6 +354,11 @@ public class ProjectDao {
 		return p;
 	}
 
+	/** 프로젝트 첨부파일 리스트조회하는 메소드
+	 *  @param conn
+	 *  @param pno : 조회하고자 하는 프로젝트 번호
+	 *  @return list : 조회된 첨부파일
+	 */
 	public ArrayList<Attachment> selectAttachmentList(Connection conn, int pno) {
 		ArrayList<Attachment> list = new ArrayList<Attachment>();
 		
@@ -473,7 +478,7 @@ public class ProjectDao {
 		return no;
 	}
 
-	/** 프로젝트 등록과 첨부파일 등록을 처리해주는 메소드
+	/** 프로젝트 등록을 처리해주는 메소드
 	 *  @param conn
 	 *  @param p : 등록하고자 하는 프로젝트
 	 *  @return result : 처리 결과 (1 : 성공 / 0 : 실패)
@@ -508,6 +513,34 @@ public class ProjectDao {
 		return result;
 	}
 
-	
+	/** 첨부파일 등록을 처리해주는 메소드
+	 *  @param conn
+	 *  @param p : 등록하고자 하는 프로젝트
+	 *  @param list : 첨부파일 리스트
+	 *  @return result : 처리 결과 (1 : 성공 / 0 : 실패)
+	 */
+	public int insertAttachmentList(Connection conn, Project p, ArrayList<Attachment> list) {
+		int result = 0;
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("insertAttachmentList");
+				
+		try {
+			for(Attachment at : list) {
+				pstmt = conn.prepareStatement(sql);
+				
+				pstmt.setString(1, at.getAttachmentOriginName());
+				pstmt.setString(2, at.getAttachmentUpdateName());
+				pstmt.setString(3, at.getAttachmentPath());
+				pstmt.setInt(4, at.getAttachmentLevel());
+				
+				result = pstmt.executeUpdate();
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		return result;
+	}
 
 }

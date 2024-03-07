@@ -29,8 +29,8 @@ public class MoveToEnrollProjectFinalFormController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
-		
-		String pjCno = request.getParameter("category");
+
+		String pjCno = request.getParameter("categoryName");
 	    String pjTitle = request.getParameter("pjTitle");
 	    String pjOverview = request.getParameter("pjOverview");
 	    String pjTag = request.getParameter("pjTag");

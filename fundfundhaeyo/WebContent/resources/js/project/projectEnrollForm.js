@@ -30,7 +30,8 @@ $(document).ready(function() {
 
 	$('.select-list li').click(function() {
 		var selected = $(this).text();
-		$('.select-button').text(selected)
+		$('.select-button').text(selected);
+		$('input[name="categoryName"]').val(selected);
 	});
 
 	$(document).click(function() {

@@ -35,6 +35,7 @@
 					    			<li><%= c.getPjCategoryName() %></li>
 					    		<% } %>
 					        </ul>
+					        <input type="hidden" name="categoryName">
 					    </div>
 					</div>
 					<div class="project_enroll_left_form">

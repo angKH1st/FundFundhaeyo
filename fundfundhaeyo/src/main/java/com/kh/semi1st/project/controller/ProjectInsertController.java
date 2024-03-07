@@ -44,7 +44,7 @@ public class ProjectInsertController extends HttpServlet {
 		if(ServletFileUpload.isMultipartContent(request)) {
 			int maxSize = 10 * 1024 * 1024;
 			
-			String savePath = request.getSession().getServletContext().getRealPath("/resources/thumbnail_upfiles/");
+			String savePath = request.getSession().getServletContext().getRealPath("/resources/project_upfiles/");
 			MultipartRequest multiRequest = new MultipartRequest(request, savePath, maxSize, "UTF-8", new MyFileRenamePolicy());
 
 			Project p = new Project();
@@ -57,14 +57,13 @@ public class ProjectInsertController extends HttpServlet {
 			p.setProjectPrice(Integer.parseInt(multiRequest.getParameter("pjPrice")));
 			p.setProjectContent(multiRequest.getParameter("pjContent"));
 			try {
-				p.setProjectStart(new SimpleDateFormat("yy/MM/dd").parse(multiRequest.getParameter("pjStart")));
-				p.setProjectEnd(new SimpleDateFormat("yy/MM/dd").parse(multiRequest.getParameter("pjEnd")));
-				p.setProjectPaymentBuyer(new SimpleDateFormat("yy/MM/dd").parse(multiRequest.getParameter("pjBuyerPayment")));
-				p.setProjectPaymentSeller(new SimpleDateFormat("yy/MM/dd").parse(multiRequest.getParameter("pjSellerPayment")));
+				p.setProjectStart(new java.sql.Date(new SimpleDateFormat("yyyy.MM.dd").parse(multiRequest.getParameter("pjStart")).getTime()));
+				p.setProjectEnd(new java.sql.Date(new SimpleDateFormat("yyyy.MM.dd").parse(multiRequest.getParameter("pjEnd")).getTime()));
+				p.setProjectPaymentBuyer(new java.sql.Date(new SimpleDateFormat("yyyy.MM.dd").parse(multiRequest.getParameter("pjPaymentBuyer")).getTime()));
+				p.setProjectPaymentSeller(new java.sql.Date(new SimpleDateFormat("yyyy.MM.dd").parse(multiRequest.getParameter("pjPaymentSeller")).getTime()));
 			} catch (ParseException e) {
 				e.printStackTrace();
 			}
-			
 			ArrayList<Attachment> list = new ArrayList<Attachment>();
 			
 			for(int i = 1; i <= 4; i++) {
