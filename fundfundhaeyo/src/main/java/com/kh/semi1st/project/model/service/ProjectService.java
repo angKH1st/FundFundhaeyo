@@ -202,6 +202,33 @@ public class ProjectService {
 		return result1 * result2;
 	}
 
+	/** 전체 프로젝트 숫자 조회
+	 *  @return listCount : 전체 프로젝트 숫자
+	 */
+	public int selectProjectListCount() {
+		Connection conn = getConnection();
+		
+		int listCount = new ProjectDao().selectProjectListCount(conn);
+		
+		close(conn);
+		
+		return listCount;
+	}
+
+	/** 프로젝트 제한 조회
+	 *  @param pi : 페이징 처리 객체
+	 *  @return list : 프로젝트 제한 list
+	 */
+	public ArrayList<Project> selectProjectList(PageInfo pi) {
+		Connection conn = getConnection();
+		
+		ArrayList<Project> list = new ProjectDao().selectProjectList(conn, pi);
+		
+		close(conn);
+		
+		return list;
+	}
+
 	
 
 }

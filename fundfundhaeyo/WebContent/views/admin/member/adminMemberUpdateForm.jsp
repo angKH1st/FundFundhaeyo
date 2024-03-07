@@ -35,9 +35,7 @@
 						<div class="adm-content-left-profile1">
 							<div class="adm-content-left-profile1-header adm-content-center-main-body-header">프로필 사진</div>
 							<div class="adm-content-left-profile1-body pd15">
-								<div class="adm-content-left-profile1-body-photo">
-									프사 넣기
-								</div>
+								<div class="adm-content-left-profile1-body-photo"></div>
 							</div>
 						</div>
 						<div class="adm-content-left-profile2">
@@ -54,7 +52,7 @@
 									</div>
 									<div class="adm-content-left-profile2-body-grade-row3">
 										<div class="adm-content-left-profile2-body-grade-row3-col1 hoverA2-2 fl">회원등급</div>
-										<div class="adm-content-left-profile2-body-grade-row3-col2 hoverA2-2 fl">내용 C</div>
+										<div class="adm-content-left-profile2-body-grade-row3-col2 hoverA2-2 fl"></div>
 									</div>
 									<div class="adm-content-left-profile2-body-grade-row4">
 										<div class="adm-content-left-profile2-body-grade-row4-col1 hoverA2-2 fl">회원상태</div>

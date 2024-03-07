@@ -20,7 +20,7 @@
 		<div class="blank_top"><%-- 여백 --%></div>
 		<div class="project_enroll_form_main shadow pd15">
 			<div class="project_enroll_form_main_title">
-				<div class="project_enroll_form_main_title_col1 fl"><span>프로젝트 등록하기</span></div>
+				<div class="project_enroll_form_main_title_col1 fl">프로젝트 등록하기</div>
 				<div class="project_enroll_form_main_title_col2 fl"><%-- 여백 --%></div>
 				<div class="project_enroll_form_main_title_col3 fl"><a class="greenBtn" href="<%= contextPath %>/guide.hp">등록 가이드</a></div>
 			</div>

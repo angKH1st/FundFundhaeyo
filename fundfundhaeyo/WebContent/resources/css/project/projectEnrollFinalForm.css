@@ -15,7 +15,7 @@
 .project_enroll_final_form_main_bottom{height: 10%; justify-content: center; align-items: center; display: flex;}
 
 .project_enroll_final_form_main_title>div{height: 100%;}
-.project_enroll_final_form_main_title_col1{width: 30%; padding-top: 13px; text-align: left; font-weight: bold; font-size: 30px;}
+.project_enroll_final_form_main_title_col1{width: 30%; padding-top: 13px; text-align: left; font-weight: bold; font-size: 25px;}
 .project_enroll_final_form_main_title_col2{width: 60%;}
 .project_enroll_final_form_main_title_col3{width: 10%; padding: 15px 0 0 30px;}
 .project_enroll_final_form_main_title_col3>a{text-decoration: none; justify-content: center; font-weight: bold; align-items: center; display: flex;}
@@ -27,35 +27,42 @@
 .project_enroll_final_form_main_top_right{width: 49%;}
 
 .project_enroll_final_form_main_top_left>div{width: 100%;}
-.project_enroll_final_form_row1{height: 5%;}
-.project_enroll_final_form_row2{height: 5%; margin: 20px 0;}
+.project_enroll_final_form_row1{height: 5%; border-bottom: 0.5px solid lightgray;}
+.project_enroll_final_form_row2{height: 5%;}
 .project_enroll_final_form_row3{height: 5%;}
-.project_enroll_final_form_row4{height: 5%; margin: 20px 0;}
+.project_enroll_final_form_row4{height: 5%;}
 .project_enroll_final_form_row5{height: 5%;}
 .project_enroll_final_form_row6{height: 10%; margin-top: 10px;}
 
 .project_enroll_final_form_row2>div, .project_enroll_final_form_row3>div, .project_enroll_final_form_row4>div, .project_enroll_final_form_row5>div{height: 100%;}
-.project_enroll_final_form_row1_col1, .project_enroll_final_form_row1_col3{width: 27%;}
-.project_enroll_final_form_row1_col2{width: 46%; text-align: right;}
+.project_enroll_final_form_row1_col1{width: 27%;}
+.project_enroll_final_form_row1_col2{width: 53%; text-align: right;}
+.project_enroll_final_form_row1_col3{width: 20%; font-size: 12px; font-weight: bold;}
 
-.project_enroll_final_form_row2_col1, .project_enroll_final_form_row2_col3{width: 27%;}
-.project_enroll_final_form_row2_col2{width: 46%;}
+.project_enroll_final_form_row2_col1{width: 27%;}
+.project_enroll_final_form_row2_col2{width: 53%; text-align: right;}
+.project_enroll_final_form_row2_col3{width: 20%;}
 
-.project_enroll_final_form_row3_col1, .project_enroll_final_form_row3_col3{width: 27%;}
-.project_enroll_final_form_row3_col2{width: 46%;}
+.project_enroll_final_form_row3_col1{width: 27%;}
+.project_enroll_final_form_row3_col2{width: 53%; text-align: right;}
+.project_enroll_final_form_row3_col3{width: 20%;}
 
-.project_enroll_final_form_row4_col1, .project_enroll_final_form_row4_col3{width: 27%;}
-.project_enroll_final_form_row4_col2{width: 46%;}
+.project_enroll_final_form_row4_col1{width: 27%;}
+.project_enroll_final_form_row4_col2{width: 53%; text-align: right;}
+.project_enroll_final_form_row4_col3{width: 20%;}
 
-.project_enroll_final_form_row5_col1, .project_enroll_final_form_row5_col3{width: 27%;}
-.project_enroll_final_form_row5_col2{width: 46%;}
+.project_enroll_final_form_row5_col1{width: 27%;}
+.project_enroll_final_form_row5_col2{width: 53%; text-align: right;}
+.project_enroll_final_form_row5_col3{width: 20%;}
+
+.projectDetails{display: none;}
 
 .project_enroll_final_form_row1_col2>button{width: 100%; height: 100%; background-color: white; border: none;}
-.project_enroll_final_form_main_top_left input{width: 60%; height: 100%; border: none; text-align: right;}
+.project_enroll_final_form_main_top_left input{width: 60%; height: 100%; font-size: 12px; font-weight: bold; border: none; text-align: center;}
 
 .project_enroll_final_form_row1_col3, .project_enroll_final_form_row2_col3, .project_enroll_final_form_row3_col3, .project_enroll_final_form_row4_col3, .project_enroll_final_form_row5_col3{text-align: right;}
 
-.project_enroll_anno{color: skyblue;}
+.project_enroll_anno{color: skyblue; text-align: right; font-size: 12px;}
 
 .project_enroll_final_title{font-weight: bold; padding-top: 10px;}
 
