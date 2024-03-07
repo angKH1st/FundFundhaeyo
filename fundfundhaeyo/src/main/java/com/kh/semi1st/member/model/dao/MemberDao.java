@@ -9,7 +9,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Properties;
 
-import javax.naming.spi.DirStateFactory.Result;
 
 import static com.kh.semi1st.common.JDBCTemplate.*;
 
@@ -797,6 +796,85 @@ public class MemberDao {
 		return m;
 	}
 	
+	public int loginKakao(Connection conn, String userId) {
+			int statusCount = 0;
+			
+			PreparedStatement pstmt = null;
+			ResultSet rset = null;
+			
+			String sql = prop.getProperty("loginKakao");
+			
+			try {
+				pstmt = conn.prepareStatement(sql);
+				
+				pstmt.setString(1, userId);
+				
+				rset = pstmt.executeQuery();
+				
+				if(rset.next()) {
+					statusCount = rset.getInt("count");
+				}
+				
+			} catch (SQLException e) {
+				e.printStackTrace();
+			} finally { 
+				close(rset);
+				close(pstmt);
+			}
+			
+			return statusCount;	
+	}
+	
+	public Member selectKakao(Connection conn, Member m) {
+		Member m1 = null;
+		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+		
+		String sql = prop.getProperty("selectKakao");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setString(1, m.getUserId());  
+			
+			// System.out.println(m); 있음
+			
+			rset = pstmt.executeQuery();
+			
+			if(rset.next()) {
+//				m1 = new Member();
+//				m1.setUserId("user_id");
+//				m1.setUserPwd("user_pwd");
+//				m1.setUserName("user_name");
+//				m1.setUserSsn("user_ssn");
+//				m1.setUserNickname("user_nickname");
+//				m1.setUserPhone("user_phone");
+//				m1.setUserEmail("user_email");
+//				m1.setUserAddress("user_address");
+				m1 = new Member(rset.getString("user_id"), 
+							   rset.getString("user_pwd"), 
+							   rset.getString("user_name"),
+							   rset.getString("user_ssn"),
+							   rset.getString("user_nickname"),
+							   rset.getString("user_phone"), 
+							   rset.getString("user_email"), 
+							   rset.getString("user_address"));	
+			}
+			
+			// System.out.println(m1); // null
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		// System.out.println(m1); null
+		return m1;
+		
+	}
+		
+	
 	public int enrollKakao(Connection conn, Member m) {
 		int result = 0;
 		PreparedStatement pstmt = null;
@@ -805,8 +883,12 @@ public class MemberDao {
 		try {
 			pstmt = conn.prepareStatement(sql);
 			
+			//System.out.println(m);
+			
 			pstmt.setString(1, m.getUserId());
+			//System.out.println(m.getUserId());
 			pstmt.setString(2, m.getUserPwd());
+			//System.out.println(m.getUserPwd());
 			pstmt.setString(3, m.getUserName());
 			pstmt.setString(4, m.getUserSsn());
 			pstmt.setString(5, m.getUserNickname());
@@ -824,6 +906,5 @@ public class MemberDao {
 		return result;
 		
 	}
-	
-	
+
 }

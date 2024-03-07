@@ -92,8 +92,9 @@
 					Kakao.API.request({
 						url: '/v2/user/me',
 						success: function (response) {
-							alert(JSON.stringify(response))
+							JSON.stringify(response)
 							
+						
 							$.ajax({
 					        	 url:'<%= contextPath %>/enrollKakao.me',
 					        	 data:{

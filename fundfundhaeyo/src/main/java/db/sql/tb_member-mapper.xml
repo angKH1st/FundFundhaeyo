@@ -334,7 +334,34 @@
 		 WHERE BUYER_USER_NO = ?
 	</entry>
 	
-	<entry key= "enrollKakao">
+	<entry key="loginKakao">
+		SELECT 
+		       COUNT(USER_STATUS) "COUNT"
+		  FROM TB_MEMBER
+		 WHERE USER_ID = ?
+		   AND USER_STATUS = 'Y'
+	</entry>
+	
+	<entry key="selectKakao">
+		SELECT
+		       USER_NO
+		     , USER_ID
+		     , USER_PWD
+		     , USER_NAME
+		     , USER_SSN
+		     , USER_NICKNAME
+		     , USER_PHONE
+		     , USER_EMAIL
+		     , USER_ADDRESS
+		     , USER_MODIFY_DATE
+		     , USER_TYPE
+		     , USER_STATUS
+		  FROM TB_MEMBER
+		 WHERE USER_ID = ?
+		   AND USER_STATUS = 'Y'
+	</entry>
+	
+	<entry key="enrollKakao">
 		INSERT 
 			  INTO TB_MEMBER
 			  (
