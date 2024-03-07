@@ -1,11 +1,43 @@
+<%@page import="java.sql.Date"%>
+<%@page import="com.kh.semi1st.helpCenter.model.vo.FAQ"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+	ArrayList<FAQ> list = (ArrayList<FAQ>)request.getAttribute("list");
+%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>뻔뻔해요</title>
 <link rel="stylesheet" href="resources/css/helpCenter/faqCenter.css">
+<style>
+	.guide{height: 700px; margin-top: 30px;}
+	.pj{
+		border: 1px solid  lightskyblue;
+		width: 350px;
+		height: 30px;
+		line-height: 30px;
+		cursor: pointer;
+		border-radius: 10px;
+	}
+	.pj:hover{background-color: lightskyblue;}
+
+	.content{
+		border: 1px solid light skyblue;
+		width: 300px;
+		height: 100px;
+		border-radius: 10px;
+		margin-top: 5px;
+		padding: 10px;
+		box-sizing: border-box;
+		display: none;
+		margin-bottom: 90px;
+		
+	}
+
+	div{border: 0;}
+</style>
 </head>
 <link rel="icon" href="data:;base64,iVBORw0KGgo=">
 <body>
@@ -32,7 +64,31 @@
 			</div>
 			<div class="faq_center_main_select"><%-- 여백 --%></div>
 			<div class="faq_center_main_content">
+				<h2 align="center">FAQ 게시판</h2>
+				<p>최근 수정일 : <%= list.get(0).getfAQModifyDate() %></p>
+				<div class="guide">
+					<% for(FAQ f : list) { %>
+					<h5 class="pj"><%= f.getfAQTitle() %> ></h5>
+					<p class="content">
+						<%= f.getfAQContent() %>
+					</p>
+					<% } %>
+				</div>
 			</div>
+
+			<script>
+				$(function(){
+					$(".pj").click(function(){
+						if($(this).next().css("display") == "none"){
+							$(this).siblings(".content").slideUp();
+							$(this).next().slideDown();
+						}else{
+							$(this).next().slideUp();
+						}
+					});
+				});
+			</script>
+			
 	    </div>
 	    
 	    <div class="blank_bottom"><%-- 여백 --%></div>

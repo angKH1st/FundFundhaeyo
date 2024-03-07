@@ -205,142 +205,142 @@ CREATE SEQUENCE SEQ_ANNOUNCEMENT_NO
 NOCACHE;
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '오픈! 뻔뻔해요!', '첫번째 공지 내용입니다.', 1, DEFAULT, '2024-02-22', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '오픈! 뻔뻔해요!', '뻔뻔해요는 크라우드 펀딩사이트로 이제 여러분을 찾아뵙습니다.', 1, DEFAULT, '2024-02-22', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '두번째 공지 제목입니다.', '두번째 공지 내용입니다.', 1, DEFAULT, '2024-02-22', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '프로젝트 업데이트: 목표 금액 달성에 한 발짝 더', '프로젝트 업데이트: 목표 금액 달성에 한 발짝 더! 우리는 이미 목표에 한 발짝 더 다가갔습니다. 이제 우리의 꿈을 이루기 위해 마지막 승부를 하고 있습니다. 계속해서 후원해 주시기 바랍니다!', 1, DEFAULT, '2024-02-22', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '세번째 공지 제목입니다.', '세번째 공지 내용입니다.', 1, DEFAULT, '2024-02-22', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '최종 기한 알림: 프로젝트 마감일이 얼마 남지 않았습니다', '최종 기한 알림: 프로젝트 마감일이 얼마 남지 않았습니다. 이번 기회를 놓치지 마세요! 프로젝트를 후원하여 우리의 목표를 달성하고 놀라운 보상을 받아보세요!', 1, DEFAULT, '2024-02-22', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '네번째 공지 제목입니다.', '네번째 공지 내용입니다.', 1, DEFAULT, '2024-02-23', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '주목: 세계적인 디자이너가 참여한 프로젝트 공개', '주목: 세계적인 디자이너가 참여한 프로젝트를 공개합니다. 지금 바로 후원하고 세계적인 디자이너의 작품을 보고 지원하세요!', 1, DEFAULT, '2024-02-23', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '다섯번째 공지 제목입니다.', '다섯번째 공지 내용입니다.', 1, DEFAULT, '2024-02-23', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '긴급 공지: 비상 상황으로 인한 프로젝트 일시 중단', '긴급 공지: 비상 상황으로 인한 프로젝트 일시 중단. 안전을 위해 프로젝트 진행을 일시 중단하게 되었습니다. 잠시 후에 다시 업데이트를 드리겠습니다. 양해 부탁드립니다.', 1, DEFAULT, '2024-02-23', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '여섯번째 공지 제목입니다.', '여섯번째 공지 내용입니다.', 1, DEFAULT, '2024-02-23', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '인기 프로젝트 알림: 커뮤니티가 주목하는 프로젝트', '인기 프로젝트 알림: 커뮤니티가 주목하는 프로젝트가 여기 있습니다! 더 많은 후원자들이 우리 프로젝트에 관심을 보이고 있습니다. 당신도 지금 바로 후원하세요!', 1, DEFAULT, '2024-02-23', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '일곱번째 공지 제목입니다.', '일곱번째 공지 내용입니다.', 1, DEFAULT, '2024-02-24', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '새로운 보상 추가: 후원자들을 위한 특별 혜택', '새로운 보상 추가: 후원자들을 위한 특별 혜택이 추가되었습니다. 지금 후원하고 특별 보상을 받아보세요!', 1, DEFAULT, '2024-02-24', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '여덟번째 공지 제목입니다.', '여덟번째 공지 내용입니다.', 1, DEFAULT, '2024-02-24', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '마감일 연장 안내: 프로젝트 기간이 연장되었습니다', '마감일 연장 안내: 프로젝트 기간이 연장되었습니다. 추가 기간 동안 후원이 가능합니다. 기회를 놓치지 마세요!', 1, DEFAULT, '2024-02-24', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '아홉번째 공지 제목입니다.', '아홉번째 공지 내용입니다.', 1, DEFAULT, '2024-02-25', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '미디어 소개: 프로젝트가 언론에 소개되었습니다', '미디어 소개: 프로젝트가 언론에 소개되었습니다. 우리 프로젝트에 대한 관심이 높아지고 있습니다. 함께 후원하고 더 많은 사람들에게 알리세요!', 1, DEFAULT, '2024-02-25', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '10 공지 제목입니다.', '10 공지 내용입니다.', 1, DEFAULT, '2024-02-25', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '프로젝트 승인 완료: 곧 후원이 시작됩니다', '프로젝트 승인 완료: 곧 후원이 시작됩니다. 우리의 프로젝트가 곧 시작될 예정입니다. 곧 더 많은 업데이트를 드리겠습니다. 기대해 주세요!', 1, DEFAULT, '2024-02-25', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '11 공지 제목입니다.', '11 공지 내용입니다.', 1, DEFAULT, '2024-02-25', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '프로젝트 성공 축하: 목표 금액 달성!', '프로젝트 성공 축하: 목표 금액을 달성하였습니다! 후원에 참여해 주신 모든 분들께 감사드립니다. 프로젝트가 성공적으로 마무리되었습니다.', 1, DEFAULT, '2024-02-25', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '12 공지 제목입니다.', '12 공지 내용입니다.', 1, DEFAULT, '2024-02-26', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '특별 이벤트 공지: 곧 진행될 후원 이벤트 안내', '특별 이벤트 공지: 곧 진행될 후원 이벤트에 관한 소식입니다. 함께 참여하여 특별 혜택을 누리세요!', 1, DEFAULT, '2024-02-26', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '13 공지 제목입니다.', '13 공지 내용입니다.', 1, DEFAULT, '2024-02-26', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '새로운 스트레칭 골: 후원자들을 위한 추가 보상', '새로운 스트레칭 골: 후원자들을 위한 추가 보상이 추가되었습니다. 지금 후원하고 더 많은 보상을 받아보세요!', 1, DEFAULT, '2024-02-26', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '14 공지 제목입니다.', '14 공지 내용입니다.', 1, DEFAULT, '2024-02-26', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '전체 금액 달성: 펀딩 성공으로 감사 인사', '전체 금액 달성: 펀딩 목표를 성공적으로 달성하였습니다! 모든 후원자들께 진심으로 감사드립니다.', 1, DEFAULT, '2024-02-26', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '15 공지 제목입니다.', '15 공지 내용입니다.', 1, DEFAULT, '2024-02-27', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '프로젝트 라이브: 지금 후원하세요!', '프로젝트 라이브: 이제 프로젝트가 활성화되었습니다! 지금 바로 후원하세요!', 1, DEFAULT, '2024-02-27', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '16 공지 제목입니다.', '16 공지 내용입니다.', 1, DEFAULT, '2024-02-27', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '프로젝트 업데이트: 목표 달성을 위한 최신 소식', '프로젝트 업데이트: 목표 달성을 위한 최신 소식을 공유합니다. 우리의 프로젝트가 계속해서 성장하고 있습니다. 함께해 주셔서 감사합니다!', 1, DEFAULT, '2024-02-27', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '17 공지 제목입니다.', '17 공지 내용입니다.', 1, DEFAULT, '2024-02-27', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '기부자 감사: 성공적인 펀딩에 감사드립니다', '기부자 감사: 성공적인 펀딩에 동참해 주셔서 감사드립니다. 함께 해서 정말 감사합니다!', 1, DEFAULT, '2024-02-27', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '18 공지 제목입니다.', '18 공지 내용입니다.', 1, DEFAULT, '2024-02-27', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '프로젝트 홍보: 소셜 미디어 캠페인 시작', '프로젝트 홍보: 소셜 미디어 캠페인이 시작되었습니다. 우리의 프로젝트를 소셜 미디어에서 공유하여 더 많은 사람들에게 알려주세요!', 1, DEFAULT, '2024-02-27', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '19 공지 제목입니다.', '19 공지 내용입니다.', 1, DEFAULT, '2024-02-28', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '비상 상황 대응: 후원자들에게 안내', '비상 상황 대응: 후원자들에게 안내합니다. 안전을 위해 프로젝트에 관한 중요한 업데이트를 드립니다. 자세한 내용은 공지를 확인해 주세요.', 1, DEFAULT, '2024-02-28', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '20 공지 제목입니다.', '20 공지 내용입니다.', 1, DEFAULT, '2024-02-28', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '특별 이벤트 알림: 한정 기간 동안 특별 혜택 제공', '특별 이벤트 알림: 한정 기간 동안 특별 혜택이 제공됩니다. 지금 바로 후원하고 혜택을 누리세요!', 1, DEFAULT, '2024-02-28', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '21 공지 제목입니다.', '21 공지 내용입니다.', 1, DEFAULT, '2024-03-01', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '새로운 후원 보상: 펀딩에 참여해 특별 보상 받으세요', '새로운 후원 보상: 펀딩에 참여하고 특별 보상을 받아보세요. 우리의 프로젝트를 후원하고 특별 보상을 누리세요!', 1, DEFAULT, '2024-03-01', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '22 공지 제목입니다.', '22 공지 내용입니다.', 1, DEFAULT, '2024-03-01', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '마감일 알림: 놓치지 마세요!', '마감일 알림: 마감일이 얼마 남지 않았습니다. 기회를 놓치지 마세요!', 1, DEFAULT, '2024-03-01', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '23 공지 제목입니다.', '23 공지 내용입니다.', 1, DEFAULT, '2024-03-01', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '목표 금액 달성: 미션 성공!', '목표 금액을 달성했습니다! 여러분의 지지와 후원 덕분에 우리의 미션이 성공적으로 완수되었습니다. 함께한 모든 분들께 깊은 감사의 말씀을 전합니다. 이제 프로젝트의 다음 단계에 진행할 차례입니다. 앞으로도 여러분의 관심과 지원을 부탁드립니다. 함께 해주셔서 감사합니다!', 1, DEFAULT, '2024-03-01', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '24 공지 제목입니다.', '24 공지 내용입니다.', 1, DEFAULT, '2024-03-02', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '프로젝트 시작: 지금 바로 후원하세요!', '프로젝트가 라이브로 오픈되었습니다! 이제 후원이 가능하니 지금 바로 참여하여 프로젝트의 성공을 돕고 보상을 받으세요!', 1, DEFAULT, '2024-03-02', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '25 공지 제목입니다.', '25 공지 내용입니다.', 1, DEFAULT, '2024-03-02', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '최종 마감일 연장: 추가 기간 동안 후원 가능', '최종 마감일이 연장되었습니다! 추가 기간 동안 후원이 가능하니 놓치지 마세요. 프로젝트에 참여하여 우리의 목표를 달성해 보세요.', 1, DEFAULT, '2024-03-02', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '26 공지 제목입니다.', '26 공지 내용입니다.', 1, DEFAULT, '2024-03-02', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '이달의 추천 프로젝트: 주목할 만한 프로젝트 소개', '이달의 추천 프로젝트를 소개합니다! 이 프로젝트는 주목할 만한 가치와 아이디어를 지니고 있어 추천하는 프로젝트입니다. 자세한 내용은 공지사항을 확인하세요.', 1, DEFAULT, '2024-03-02', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '27 공지 제목입니다.', '27 공지 내용입니다.', 1, DEFAULT, '2024-03-02', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '마지막 기회: 프로젝트 마감일이 가까워지고 있습니다', '마지막 기회입니다! 프로젝트 마감일이 가까워지고 있습니다. 이번 기회를 놓치지 마시고 지금 바로 후원하여 프로젝트를 성공시키세요!', 1, DEFAULT, '2024-03-02', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '28 공지 제목입니다.', '28 공지 내용입니다.', 1, DEFAULT, '2024-03-03', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '후원자 감사: 지지해 주셔서 감사합니다', '후원자 여러분께 감사드립니다! 여러분의 지지로 인해 프로젝트가 성공에 한 발짝 더 다가갑니다. 지속적인 관심과 후원에 진심으로 감사드립니다.', 1, DEFAULT, '2024-03-03', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '29 공지 제목입니다.', '29 공지 내용입니다.', 1, DEFAULT, '2024-03-03', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '비상 상황 업데이트: 진행 중인 문제 해결', '비상 상황에 대한 업데이트입니다. 진행 중인 문제에 대한 해결책을 마련 중이며, 최대한 빠른 시일 내에 문제를 해결하도록 노력하고 있습니다. 공지사항을 주시해 주세요.', 1, DEFAULT, '2024-03-03', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '30 공지 제목입니다.', '30 공지 내용입니다.', 1, DEFAULT, '2024-03-03', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '프로젝트 향후 계획: 추가 업데이트 및 개선 사항', '프로젝트의 향후 계획에 대한 업데이트입니다. 추가적인 업데이트와 개선 사항이 준비 중이니 기대해 주세요. 프로젝트의 발전을 위해 끊임없는 노력을 기울이겠습니다.', 1, DEFAULT, '2024-03-03', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '31 공지 제목입니다.', '31 공지 내용입니다.', 1, DEFAULT, '2024-03-03', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '이벤트 참가자 모집: 펀딩 행사에 참여하세요!', '이벤트 참가자를 모집합니다! 펀딩 행사에 참여하고 다양한 혜택을 누리세요. 프로젝트에 대한 관심과 지원에 감사드립니다.', 1, DEFAULT, '2024-03-03', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '32 공지 제목입니다.', '32 공지 내용입니다.', 1, DEFAULT, '2024-03-03', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '마지막 업데이트: 프로젝트 마감일 앞두고', '프로젝트가 종료되었습니다. 후원을 마감합니다. 프로젝트에 참여하여 지지해 주신 모든 분들께 감사의 말씀을 드립니다.', 1, DEFAULT, '2024-03-03', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '33 공지 제목입니다.', '33 공지 내용입니다.', 1, DEFAULT, '2024-03-04', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '신규 프로젝트 소개: 놓치지 마세요!', '신규 프로젝트를 소개합니다! 지금 바로 확인하여 후원에 참여하고 특별한 혜택을 누리세요. 프로젝트의 성공을 위해 여러분의 지원이 필요합니다.', 1, DEFAULT, '2024-03-04', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '34 공지 제목입니다.', '34 공지 내용입니다.', 1, DEFAULT, '2024-03-04', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '긴급 펀딩 요청: 대형 프로젝트 지원이 필요합니다', '긴급한 펀딩 요청입니다! 대형 프로젝트를 위한 지원이 필요합니다. 프로젝트의 성공을 위해 여러분의 도움이 필요합니다. 지금 바로 후원하여 우리의 목표를 달성해 주세요!', 1, DEFAULT, '2024-03-04', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '35 공지 제목입니다.', '35 공지 내용입니다.', 1, DEFAULT, '2024-03-04', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '프로젝트 성공: 펀딩 목표를 달성하다', '프로젝트가 성공적으로 마무리되었습니다! 펀딩 목표를 달성한 것을 축하합니다. 후원에 참여하여 지지해 주신 모든 분들께 감사드립니다.', 1, DEFAULT, '2024-03-04', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '36 공지 제목입니다.', '36 공지 내용입니다.', 1, DEFAULT, '2024-03-04', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '소식통: 펀딩 이벤트에 대한 최신 소식', '펀딩 이벤트에 관한 최신 소식을 전해드립니다! 프로젝트에 대한 업데이트와 행사 정보를 확인하여 프로젝트에 참여해 주세요. 지속적인 관심과 지원에 감사드립니다.', 1, DEFAULT, '2024-03-04', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '37 공지 제목입니다.', '37 공지 내용입니다.', 1, DEFAULT, '2024-03-05', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '후원자 혜택: 추가 보상 및 혜택 안내', '후원자들을 위한 추가 보상과 혜택을 안내합니다! 프로젝트에 후원하여 특별한 혜택을 누리세요. 여러분의 후원에 진심으로 감사드립니다.', 1, DEFAULT, '2024-03-05', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '38 공지 제목입니다.', '38 공지 내용입니다.', 1, DEFAULT, '2024-03-05', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '특별 이벤트 공지: 후원자를 위한 이벤트 안내', '특별한 이벤트를 안내합니다! 후원자들을 위한 특별한 이벤트에 참여하세요. 프로젝트의 성공을 위해 여러분의 지지가 필요합니다.', 1, DEFAULT, '2024-03-05', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '39 공지 제목입니다.', '39 공지 내용입니다.', 1, DEFAULT, '2024-03-05', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '이용자 경험 개선: 후원자 의견에 따른 개선 사항', '이용자 경험을 개선하기 위한 노력입니다! 후원자들의 의견을 반영하여 프로젝트를 더욱 개선하고자 합니다. 공지사항을 확인하여 의견을 공유해 주세요.', 1, DEFAULT, '2024-03-05', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '40 공지 제목입니다.', '40 공지 내용입니다.', 1, DEFAULT, '2024-03-05', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '마감일 임박: 빠르게 후원하세요!', '프로젝트 마감일이 임박했습니다! 지금 빠르게 후원하여 프로젝트의 성공을 도와주세요. 놓치지 마세요!', 1, DEFAULT, '2024-03-05', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '41 공지 제목입니다.', '41 공지 내용입니다.', 1, DEFAULT, '2024-03-06', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '최종 알림: 마지막 기회를 놓치지 마세요!', '마지막 알림입니다! 마지막 기회를 놓치지 마세요. 지금 바로 후원하여 프로젝트를 성공으로 이끄세요!', 1, DEFAULT, '2024-03-06', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '42 공지 제목입니다.', '42 공지 내용입니다.', 1, DEFAULT, '2024-03-06', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '긴급 프로젝트 업데이트: 문제 해결 중', '긴급한 프로젝트 업데이트입니다. 현재 문제를 해결 중에 있습니다. 문제를 해결하기 위해 최선을 다하고 있으며, 조속한 해결을 위해 노력하고 있습니다.', 1, DEFAULT, '2024-03-06', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '43 공지 제목입니다.', '43 공지 내용입니다.', 1, DEFAULT, '2024-03-06', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '특별 이벤트 참여 안내: 한정 기간 동안 참여하세요!', '한정 기간 동안 특별한 이벤트에 참여하세요! 프로젝트의 성공을 위해 여러분의 참여가 중요합니다. 자세한 내용은 공지사항을 확인하세요.', 1, DEFAULT, '2024-03-06', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '44 공지 제목입니다.', '44 공지 내용입니다.', 1, DEFAULT, '2024-03-06', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '마감일 연장: 추가 기간 동안 후원 가능', '프로젝트의 마감일이 연장되었습니다! 추가 기간 동안 후원이 가능하니 지금 바로 참여하여 프로젝트를 지원해주세요. 프로젝트의 성공을 위해 여러분의 지원이 필요합니다.', 1, DEFAULT, '2024-03-06', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '45 공지 제목입니다.', '45 공지 내용입니다.', 1, DEFAULT, '2024-03-06', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '사회 공헌 프로젝트 소개: 지금 후원하세요!', '사회 공헌 프로젝트를 소개합니다! 이번 프로젝트는 사회적 가치를 실현하기 위해 노력하는 프로젝트입니다. 지금 바로 후원하여 사회에 기여해주세요. 함께해요!', 1, DEFAULT, '2024-03-06', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '46 공지 제목입니다.', '46 공지 내용입니다.', 1, DEFAULT, '2024-03-07', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '새로운 프로젝트 발표: 지속가능한 에너지 기술 개발', '안녕하세요 후원자 여러분! 새로운 프로젝트를 발표합니다. 이번에는 지속 가능한 에너지 기술에 대한 혁신적인 아이디어를 제시하고자 합니다. 자세한 내용은 프로젝트 페이지에서 확인해주세요!', 1, DEFAULT, '2024-03-07', DEFAULT);
 --------------------------------------------------
 ----------------- NOTICE 알림 관련 -----------------	
 --------------------------------------------------

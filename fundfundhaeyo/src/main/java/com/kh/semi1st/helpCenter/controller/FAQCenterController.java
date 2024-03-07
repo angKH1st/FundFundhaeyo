@@ -1,11 +1,16 @@
 package com.kh.semi1st.helpCenter.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.kh.semi1st.helpCenter.model.service.FAQService;
+import com.kh.semi1st.helpCenter.model.vo.FAQ;
 
 /**
  * Servlet implementation class FAQCenterController
@@ -27,6 +32,9 @@ public class FAQCenterController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TBU
+		ArrayList<FAQ> list = new FAQService().selectFAQList();
+		
+		request.setAttribute("list", list);
 		request.getRequestDispatcher("views/helpCenter/faqCenter.jsp").forward(request, response);
 	}
 
