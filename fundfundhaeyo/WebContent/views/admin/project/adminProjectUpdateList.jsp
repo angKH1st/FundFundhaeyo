@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>뻔뻔해요</title>
-<link rel="stylesheet" href="resources/css/admin/project/adminProjectUpdateForm.css">
+<link rel="stylesheet" href="resources/css/admin/project/adminProjectUpdateList.css">
 </head>
 <link rel="icon" href="data:;base64,iVBORw0KGgo=">
 <body>
@@ -23,7 +23,7 @@
 	    </div>
 	    <div class="adm-content-center">
 	    	<div class="adm-content-center-top">
-	    		모든 프로젝트의 정보를 조회합니다.
+	    		모든 심사대상 프로젝트의 정보를 조회합니다.
 	    	</div>
 	    	<div class="adm-content-center-main">
 	    		<div class="adm-content-center-main-header">프로젝트조회</div>
