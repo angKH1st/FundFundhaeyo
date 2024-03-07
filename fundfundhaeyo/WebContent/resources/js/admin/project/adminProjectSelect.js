@@ -13,7 +13,7 @@ function loadPage(cpage) {
 			
 			var maxPage = pi.maxPage;
 			var startPage = pi.startPage;
-			var endPage = pi.endPage;
+			var endPage = pi.endPage; 
 			
 			const $pageDiv = $(".adm-content-center-main-body3-col3");
 			
