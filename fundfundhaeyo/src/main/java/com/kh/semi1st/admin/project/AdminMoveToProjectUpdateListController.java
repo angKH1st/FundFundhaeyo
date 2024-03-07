@@ -11,13 +11,13 @@ import javax.servlet.http.HttpServletResponse;
  * Servlet implementation class AdminMoveToProjectUpdateController
  */
 @WebServlet("/admMoveToUpdate.pr")
-public class AdminMoveToProjectUpdateController extends HttpServlet {
+public class AdminMoveToProjectUpdateListController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AdminMoveToProjectUpdateController() {
+    public AdminMoveToProjectUpdateListController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -26,7 +26,7 @@ public class AdminMoveToProjectUpdateController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("views/admin/project/adminProjectUpdateForm.jsp").forward(request, response);
+		request.getRequestDispatcher("views/admin/project/adminProjectUpdateList.jsp").forward(request, response);
 	}
 
 	/**
