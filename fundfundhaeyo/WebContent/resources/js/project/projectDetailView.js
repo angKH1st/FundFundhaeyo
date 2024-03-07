@@ -105,5 +105,4 @@ $(document).ready(function() {
 	});
 
 	var autoChange = setInterval(changeSlide, 5000);
-
 });

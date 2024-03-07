@@ -20,6 +20,14 @@
 <script type="text/javascript" src="resources/js/admin/common/adminHeader.js"></script>
 <script src="https://kit.fontawesome.com/4dc2c036ac.js" crossorigin="anonymous"></script>
 </head>
+<style>
+	<%-- 경북대진리체 --%>
+	@font-face {font-family: 'KNUTRUTHTTF';src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/KNUTRUTHTTF.woff2') format('woff2');font-weight: normal;font-style: normal;}
+	.font_outer{font-family: KNUTRUTHTTF;font-weight: normal;font-style: normal;}
+	<%-- 세종병원체 --%>
+	@font-face {font-family: 'SejonghospitalBold';src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/SejonghospitalBold.woff2') format('woff2');font-weight: 400;font-style: normal;}
+	.font_sejong_outer{font-family: SejonghospitalBold; font-weight: 400; font-style: normal;}	
+</style>
 <link rel="icon" href="data:;base64,iVBORw0KGgo=">
 <body>
 	<% if(alertMsg != null) { %>

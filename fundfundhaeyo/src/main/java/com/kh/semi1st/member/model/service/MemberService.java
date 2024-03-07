@@ -341,12 +341,9 @@ public class MemberService {
 		
 		Member m1 = new MemberDao().selectKakao(conn, m);
 		
-		// System.out.println(m); 있음
 		close(conn);
 		
 		return m1;
-		
-		
 	}
 	
 
@@ -354,9 +351,6 @@ public class MemberService {
 		Connection conn = getConnection();
 		
 		int result= new MemberDao().enrollKakao(conn, m);
-		
-		
-		//System.out.println(m);
 		
 		if(result > 0 ) {
 			commit(conn);
@@ -367,6 +361,35 @@ public class MemberService {
 		close(conn);
 		
 		return result;
+	}
+
+	/** 회원 번호로 검색
+	 *  @param searchId : 조회하고자 하는 회원 id
+	 *  @return m : 조회된 회원 객체 m
+	 */
+	public Member memberSearchNo(int searchNo) {
+		Connection conn = getConnection();
+		
+		Member m = new MemberDao().memberSearchNo(conn, searchNo);
+		
+		close(conn);
+		
+		return m;
+	}
+
+	/** 창작자의 진행중인 프로젝트를 조회
+	 *  @param pi : 페이징 처리 객체
+	 *  @param userNo : 조회하고자 하는 창작자
+	 *  @return list : 조회된 창작자의 진행중인 프로젝트
+	 */
+	public ArrayList<Project> selectMemberOngoingList(PageInfo pi, int userNo) {
+		Connection conn = getConnection();
+		
+		ArrayList<Project> list = new MemberDao().selectMemberOngoingList(conn, pi, userNo);
+		
+		close(conn);
+		
+		return list;
 	}
 	
 	

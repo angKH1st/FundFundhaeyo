@@ -27,7 +27,7 @@
 .adm-content-top-root-second{width: 2%;}
 
 .adm-content-center>div{width: 100%; border-radius: 5px; border: 0.5px solid lightgray; border-radius: 5px; background-color: white;}
-.adm-content-center-top{height: 5%; margin-bottom: 20px;}
+.adm-content-center-top{height: 5%; margin-bottom: 20px; padding: 9px 0 0 20px;}
 .adm-content-center-main{height: 95%;}
 
 .adm-content-center-main>div{width: 100%;}

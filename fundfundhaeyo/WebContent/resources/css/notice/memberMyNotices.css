@@ -1,0 +1,39 @@
+@charset "UTF-8";
+/* 기본 셋업 */
+.mypage_notices_Form_outer{width:100%; height: 1000px; padding: 0 300px; border: box-sizing;}
+.mypage_notices_Form_outer>div{width:100%;}
+.blank_top{height: 15%;}
+.blank_bottom{height: 5%;}
+
+/* 메인 영역 시작 */
+.mypage_notices_Form_main{height: 80%;}
+.mypage_notices_Form_main>div{height: 100%;}
+
+.mypage_notices_Form_left{width: 200px;}
+.mypage_notices_Form_right{width: 1101px; background-color: white;}
+
+.mypage_notices_Form_right>div{width: 100%;}
+.mypage_notices_Form_right_content1{height: 87%;}
+.mypage_notices_Form_right_content2{height: 12%;}
+
+.mypage_notices_Form_right_content1>div{width: 100%;}
+.mypage_notices_Form_right_root{height: 34px;}
+.mypage_notices_Form_right_title{height: 55px; padding-top: 7px;}
+.mypage_notices_Form_right_list{height: 84%;}
+
+.mypage_notices_Form_right_content2>div{width: 100%;}
+.mypage_notices_Form_right_title2{height: 20%; text-align: center;}
+.mypage_notices_Form_right_blank{height: 80%;}
+
+.mypage_notices_Form_right_title2 button{
+	width: 30px;
+	border: none;
+	background-color: white;
+	margin: 0 3px;
+}
+
+.mypage_notices_Form_right_title2 button:hover{
+	font-weight: bold;
+}
+
+/* 메인 영역 끝 */

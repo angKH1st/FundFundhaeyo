@@ -28,12 +28,12 @@
 	    		<div class="adm-content-center-main-header">회원정보조회</div>
 	    		<div class="adm-content-center-main-body">
 	    			<div class="adm-content-center-main-body1">
-	    				<div class="adm-content-center-main-body1-col1 fl">숫자박스</div>
-	    				<div class="adm-content-center-main-body1-col2 fl">entries per page</div>
+	    				<div class="adm-content-center-main-body1-col1 fl"><%-- numberBox --%></div>
+	    				<div class="adm-content-center-main-body1-col2 fl"><%-- entries per page --%></div>
 	    				<div class="adm-content-center-main-body1-col3 fl"><%-- 여백 --%></div>
 	    				<div class="adm-content-center-main-body1-col4 fl">
-	    					<div class="adm-content-center-main-body1-col4-searchInput fl"><input type="text" style="width: 100%; height: 100%;"></div>
-	    					<div class="adm-content-center-main-body1-col4-searchBtn fl"><a href="#"><i class="fa-solid fa-magnifying-glass fa-xl" style="width: 100%; height: 100%; line-height: 110%;"></i></a></div>
+	    					<div class="adm-content-center-main-body1-col4-searchInput fl"><input type="text" style="width: 100%; height: 100%; border: none; border-right: 0.5px solid lightgray;"></div>
+	    					<div class="adm-content-center-main-body1-col4-searchBtn fl"><a href="#"><i class="fa-solid fa-magnifying-glass fa-xl" style="width: 100%; height: 100%; color: black; padding: 3px 0 0 3px; line-height: 110%;"></i></a></div>
 	    				</div>
 	    			</div>
 	    			<div class="adm-content-center-main-body2">
@@ -45,12 +45,12 @@
 	    						<td style="width:120px;">이름</td>
 	    						<td style="width:120px;">아이디</td>
 	    						<td style="width:200px;">닉네임</td>
-	    						<td style="width:200px;">이메일</td>
+	    						<td style="width:240px;">이메일</td>
 	    						<td style="width:440px;">소개말</td>
 	    						<td style="width:140px;">회원가입일</td>
 	    						<td style="width:100px;">등급</td>
 	    						<td style="width:100px;">상태값</td>
-	    						<td style="width:200px;">수정</td>
+	    						<td style="width:160px;">수정</td>
 	    					</tr>
 	    				</thead>
 	    				<tbody>

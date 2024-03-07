@@ -26,7 +26,7 @@
 	    </div>
 	    <div class="adm-content-center">
 	    	<div class="adm-content-center-top">
-	    		top : TBU
+	    		회원정보를 조회 및 수정합니다.
 	    	</div>
 	    	<div class="adm-content-center-main">
 	    		<div class="adm-content-center-main-header">회원정보수정</div>
@@ -44,11 +44,11 @@
 								<div class="adm-content-left-profile2-body-grade">
 									<div class="adm-content-left-profile2-body-grade-row1">
 										<div class="adm-content-left-profile2-body-grade-row1-col1 hoverA2-2 fl">후원횟수</div>
-										<div class="adm-content-left-profile2-body-grade-row1-col2 hoverA2-2 fl">내용 A</div>
+										<div class="adm-content-left-profile2-body-grade-row1-col2 hoverA2-2 fl"></div>
 									</div>
 									<div class="adm-content-left-profile2-body-grade-row2">
 										<div class="adm-content-left-profile2-body-grade-row2-col1 hoverA2-2 fl">창작횟수</div>
-										<div class="adm-content-left-profile2-body-grade-row2-col2 hoverA2-2 fl">내용 B</div>
+										<div class="adm-content-left-profile2-body-grade-row2-col2 hoverA2-2 fl"></div>
 									</div>
 									<div class="adm-content-left-profile2-body-grade-row3">
 										<div class="adm-content-left-profile2-body-grade-row3-col1 hoverA2-2 fl">회원등급</div>

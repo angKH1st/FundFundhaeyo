@@ -229,6 +229,63 @@ public class ProjectService {
 		return list;
 	}
 
+	/** 심사 대상 프로젝트 제한 조회
+	 *  @param pi : 페이징 처리 객체
+	 *  @return list : 프로젝트 제한 list
+	 */
+	public ArrayList<Project> selectProjectUpdateList(PageInfo pi) {
+		Connection conn = getConnection();
+		
+		ArrayList<Project> list = new ProjectDao().selectProjectUpdateList(conn, pi);
+		
+		close(conn);
+		
+		return list;
+	}
+
+	/** 심사 대상 프로젝트 상세조회하는 메소드
+	 *  @param pno : 조회하고자 하는 프로젝트 번호
+	 *  @return p : 조회된 프로젝트
+	 */
+	public Project projectSearchNo(int searchNo) {
+		Connection conn = getConnection();
+		
+		Project p = new ProjectDao().projectSearchNo(conn, searchNo);
+		
+		close(conn);
+		
+		return p;
+	}
+
+	/** 프로젝트의 승인/반려를 처리하는 메소드
+	 *  @param projectNo : 승인/반려 하고자 하는 프로젝트의 no
+	 *  @param projectStatus : 해당 프로젝트의 승인/반려 상태값
+	 *  @param projectReason : 승인/반려 알림 내용
+	 *  @param projectPrice : 해당 프로젝트의 목표 금액
+	 *  @return result : 처리 결과 (1 = 성공 / 0 = 실패) 
+	 */
+	public int updateProjectBanAllow(int projectNo, String projectStatus, String projectReason, int projectPrice) {
+		Connection conn = getConnection();
+		
+		int projectSeller = Integer.parseInt(new ProjectDao().projectSearchNo(conn, projectNo).getProjectSeller());
+		
+		int result1 = new ProjectDao().updateProjectBanAllow(conn, projectNo, projectStatus);
+		int result2 = 1;
+		int result3 = 1;
+		if(projectStatus.equals("Y")){
+			result2 = new ProjectDao().insertProjectSellerList(conn, projectSeller, projectNo);
+			result3 = new ProjectDao().insertProjectOption(conn, projectNo, projectPrice);
+		}
+		int result4 = new ProjectDao().insertProjectBanAllowNotice(conn, projectSeller, projectReason);
 	
+		if(result1 > 0 && result2 > 0 && result3 > 0 && result4 > 0) {
+			commit(conn);
+		}else {
+			rollback(conn);
+		}
+		close(conn);
+	
+		return result1 * result2 * result3 * result4;
+	}
 
 }

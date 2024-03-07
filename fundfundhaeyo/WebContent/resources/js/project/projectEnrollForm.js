@@ -108,7 +108,7 @@ $(document).ready(function() {
 	/* 가격 검사 */
 	$('input[name="pjPrice"]').on('blur', function() {
 		var input = $(this).val();
-		if (input < 100000) {
+		if (input < 100000 || input > 200000000) {
 			$(this).css('border', '1px solid red');
 			$(this).parent().siblings().children('.project_enroll_inspection').text("목표금액은 최소 100,000 이상이어야 합니다.");
 			isValid.pjPrice = false;

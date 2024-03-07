@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class AdminMoveToProjectUpdateController
  */
-@WebServlet("/admMoveToUpdate.pr")
+@WebServlet("/admMoveToUpdateList.pr")
 public class AdminMoveToProjectUpdateListController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

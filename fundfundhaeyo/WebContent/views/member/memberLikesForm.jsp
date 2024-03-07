@@ -54,7 +54,7 @@
 										</div>
 										<div class="mypage_likes_project_title"><%= p.getProjectTitle() %></div>
 										<div class="mypage_likes_project_info">
-											<div class="mypage_likes_project_funding fl"><span class="percentage"><%= p.getProjectFunding() %>%</span></span></div>
+											<div class="mypage_likes_project_funding fl"><span class="percentage"><%= p.getProjectFunding() %>% 달성</span></div>
 											<div class="mypage_likes_project_dday fl">
 												<% if((long)(ChronoUnit.DAYS.between(now, ((Date)p.getProjectEnd()).toLocalDate())) == 0){ %>
 												<span class="project-d-day" style="color: red">오늘 마감!</span>

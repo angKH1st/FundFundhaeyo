@@ -40,7 +40,7 @@
 	<div class="project_detail_outer font_outer">
 		<div class="blank_top"><%-- 여백 --%></div>
 		<div class="project_detail_main">
-			<div class="project_detail_top">
+			<div class="project_detail_top shadow">
 				<div class="project_detail_top_left fl">
 					<div class="slider">
 					    <div class="slide-holder">
@@ -131,7 +131,11 @@
 								<div class="project_detail_top_info_row2_btn2_num">222</div>
 							</div>
 							<% if(loginUser != null) { %>
+								<% if((loginUser.getUserName()).equals(p.getProjectSeller())){ %>
 								<div class="project_detail_top_info_row2_btn3 br5 brlg fl"><a style="color: white;" href="<%= contextPath %>/moveToOrderForm.pr">이 프로젝트 후원하기</a></div>
+								<% }else{ %>
+								<div>dd</div>
+								<% } %>
 							<% }else { %>
 								<div class="project_detail_top_info_row2_btn3 br5 brlg fl" onclick="alertToLogin();">이 프로젝트 후원하기</div>
 							<% } %>

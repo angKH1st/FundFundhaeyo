@@ -11,42 +11,25 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-<style>
-	.outer{
-		width: 700px;
-		height: 700px;
-		margin: auto;
-		margin-top: 50px;
-	}
-	
-	.btn:hover{
-		cursor: pointer;
-		background-color: lightgray;
-	}
-
-	#list{
-		color: black;
-		text-decoration: none;
-	}
-	#list:hover{color: lightgray;}
-</style>
+<title>뻔뻔해요</title>
+<link rel="stylesheet" href="resources/css/helpCenter/announcementCenterDetail.css">
 </head>
+<link rel="icon" href="data:;base64,iVBORw0KGgo=">
 <body>
 	<%@ include file="../common/header.jsp" %>
 	
 	<div class="introduction_outer font_outer">
 	<div class="blank_top"><%-- 여백 --%></div>
+
+	<br><br><br><br>
 	
-	<div class="outer" align="center">
-        
-        <br>
+	<div class="outer shadow pd15" align="center">
         <h2 align="center">공지사항</h2>
         <br>
 		<hr>
 
 		<div class="tb">
-        <table id="detail-area" align="left" style="width: 700px;">
+        <table id="detail-area" align="left" style="width: 670px;">
             <tr>
                 <th style="font-size: 26px;" colspan="4"><%= a.getAnnouncementTitle() %></th>
             </tr>
@@ -57,7 +40,7 @@
 				<td colspan="4" align="right"><%= a.getAnnouncementWriter() %></td>
 			</tr>
             <tr>
-                <td colspan="4" style="padding-top: 15px;">
+                <td class="brlg br5 pd15" colspan="4">
                     <p style="height: 300px;"><%= a.getAnnouncementContent() %></p>
                 </td>
             </tr>
@@ -69,7 +52,7 @@
 				<% if(before != null) { %>
 				<td colspan="3" align="left" class="btn" onclick="before();"><%= before.getAnnouncementTitle() %></td>
 				<% }else { %>
-				<td colspan="3" align="left">이전글이 없습니다.</td>
+				<td colspan="3" align="left">&nbsp;&nbsp;&nbsp; 이전글이 없습니다.</td>
 				<% } %>
 			</tr>
 			<tr>
@@ -77,7 +60,7 @@
 				<% if(after != null && after.getAnnouncementTitle() != null) { %> 
 				<td colspan="2" align="left" class="btn" onclick="after();"><%= after.getAnnouncementTitle() %></td>
 				<% }else { %>
-				<td colspan="2" align="left">다음글이 없습니다.</td>
+				<td colspan="2" align="left">&nbsp;&nbsp;&nbsp; 다음글이 없습니다.</td>
 				<% } %>
 				<td align="right"><a id="list" href="<%= request.getContextPath() %>/announcement.hp?cpage=1">목록가기</a></td>
 			</tr>
@@ -87,9 +70,7 @@
 
         <br>
 		
-		
 		<script>
-			
 		function before(){
 			<% if(before != null) { %>
 			location.href = "<%= request.getContextPath() %>/announcementDetail.hp?aNo=<%= before.getAnnouncementNo() %>"; 
@@ -102,9 +83,11 @@
        		<% } %>
 		}
 		</script>
-		
-        
-		</div>
+		    
+	</div>
+	
+	<br><br><br>
+	
 	<div class="blank_bottom"><%-- 여백 --%></div>
     </div>
     

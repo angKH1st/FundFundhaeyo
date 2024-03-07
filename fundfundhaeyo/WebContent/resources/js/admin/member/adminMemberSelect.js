@@ -46,6 +46,14 @@ function loadPage(cpage) {
 			memberDiv.empty(); 		// 테이블을 비우기
 			
 			for(let i = 0; i < list.length; i++){
+				var temp;
+				switch(list[i].userStatus){
+					case 'Y' : temp = '사용중'; break;
+					case 'N' : temp = '탈퇴'; break;
+					case 'B' : temp = '차단'; break;
+					case 'A' : temp = '관리자'; break;
+				}
+				
 				memberDiv.append("<tr>"
 						     + "<td>" + ((currentPage - 1) * boardLimit + i + 1) + "</td>"
 						     + "<td>" + list[i].userNo + "</td>"
@@ -56,11 +64,10 @@ function loadPage(cpage) {
 						     + "<td>" + list[i].userProfile + "</td>"
 						     + "<td>" + list[i].userEnrollDate + "</td>"
 						     + "<td>" + list[i].userGrade + "</td>"
-						     + "<td>" + list[i].userStatus + "</td>"
+						     + "<td>" + temp + "</td>"
 						     + "<td>" + 
-						     	"<a href=\"admMoveToUpdate.me?searchId=" + list[i].userId + "\"><i class=\"hoverA2 fa-regular fa-pen-to-square fa-lg\"></i></a>" +
-						     	"<a href=\"#\"><i style=\"margin-left: 10px;\" class=\"hoverA2 fa-solid fa-ban fa-lg\"></i></a>" +
-					     	   "</td>"
+						     	"<a href=\"admMoveToUpdate.me?searchId=" + list[i].userId + "\"><i class=\"hoverA2 fa-regular fa-pen-to-square fa-lg\"></i></a>" 
+					     	 + "</td>"
 						     + "</tr>");
 			}
 			

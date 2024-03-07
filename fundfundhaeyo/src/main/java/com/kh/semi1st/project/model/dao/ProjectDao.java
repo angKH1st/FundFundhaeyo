@@ -620,4 +620,212 @@ public class ProjectDao {
 		return list;
 	}
 
+	/** 심사 대상 프로젝트 제한 조회
+	 *  @param conn
+	 *  @param pi : 페이징 처리 객체
+	 *  @return list : 프로젝트 제한 list
+	 */
+	public ArrayList<Project> selectProjectUpdateList(Connection conn, PageInfo pi) {
+		ArrayList<Project> list = new ArrayList<Project>();
+		
+		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+		
+		String sql = prop.getProperty("selectProjectUpdateList");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			int startRow = (pi.getCurrentPage()-1) * pi.getBoardLimit() + 1;
+			int endRow = startRow + pi.getBoardLimit() - 1;
+			
+			pstmt.setInt(1, startRow);
+			pstmt.setInt(2, endRow);
+			
+			rset = pstmt.executeQuery();
+			
+			while(rset.next()) {
+				Project p = new Project();
+				p.setProjectNo(rset.getInt("project_no"));
+				p.setProjectSeller(rset.getString("project_seller"));
+				p.setProjectCategoryName(rset.getString("pj_category_name"));
+				p.setProjectOverview(rset.getString("project_overview"));
+				p.setProjectTitle(rset.getString("project_title"));
+				p.setProjectContent(rset.getString("project_content"));
+				p.setProjectTag(rset.getString("project_tag"));
+				p.setProjectPrice(rset.getInt("project_price"));
+				p.setProjectStart(rset.getDate("project_start"));
+				p.setProjectEnd(rset.getDate("project_end"));
+				p.setProjectPaymentBuyer(rset.getDate("project_payment_buyer"));
+				p.setProjectPaymentSeller(rset.getDate("project_payment_seller"));
+				p.setProjectStatus(rset.getString("project_status"));
+				p.setProjectTitleImg(rset.getString("project_img"));
+				
+				list.add(p);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		return list;
+	}
+
+	/** 심사 대상 프로젝트 상세조회하는 메소드
+	 *  @param conn
+	 *  @return p : 조회된 프로젝트
+	 */
+	public Project projectSearchNo(Connection conn, int searchNo) {
+		Project p = null;
+		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+		String sql = prop.getProperty("projectSearchNo");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, searchNo);
+			
+			rset = pstmt.executeQuery();
+			
+			if(rset.next()) {
+				p = new Project();
+				p.setProjectNo(rset.getInt("project_no"));
+				p.setProjectSeller(rset.getString("project_seller"));
+				p.setProjectOverview(rset.getString("project_overview"));
+				p.setProjectTitle(rset.getString("project_title"));
+				p.setProjectContent(rset.getString("project_content"));
+				p.setProjectTag(rset.getString("project_tag"));
+				p.setProjectPrice(rset.getInt("project_price"));
+				p.setProjectStart(rset.getDate("project_start"));
+				p.setProjectEnd(rset.getDate("project_end"));
+				p.setProjectPaymentBuyer(rset.getDate("project_payment_buyer"));
+				p.setProjectPaymentSeller(rset.getDate("project_payment_seller"));
+				p.setProjectCategoryNo(rset.getInt("pj_category_no"));
+				p.setProjectCategoryName(rset.getString("pj_category_name"));
+				p.setProjectStatus(rset.getString("project_status"));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		return p;
+	}
+
+	/** 프로젝트의 승인/반려를 처리하는 메소드
+	 *  @param conn
+	 *  @param projectNo : 승인/반려하고자 하는 프로젝트의 no
+	 *  @param projectStatus : 해당 프로젝트의 승인/반려 상태값
+	 *  @return result : 처리 결과 (1 = 성공 / 0 = 실패) 
+	 */
+	public int updateProjectBanAllow(Connection conn, int projectNo, String projectStatus) {
+		int result = 0;
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("updateProjectBanAllow");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setString(1, projectStatus);
+			pstmt.setInt(2, projectNo);
+			
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		return result;
+	}
+
+	/** 프로젝트의 승인 후, 창작자 테이블에 삽입 처리하는 메소드
+	 *  @param conn
+	 *  @param userNo : 창작자 회원번호 
+	 *  @param projectNo : 창작 프로젝트 번호
+	 *  @return result : 처리 결과 (1 = 성공 / 0 = 실패)
+	 */
+	public int insertProjectSellerList(Connection conn, int userNo, int projectNo) {
+		int result = 0;
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("insertProjectSellerList");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, userNo);
+			pstmt.setInt(2, projectNo);
+			
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		return result;
+	}
+	
+	/** 프로젝트의 승인 후, 옵션 처리하는 메소드
+	 *  @param conn
+	 *  @param projectNo : 옵션 반영하고자 하는 프로젝트의 no
+	 *  @param projectPrice : 해당 프로젝트의 목표 금액
+	 *  @return result : 처리 결과 (1 = 성공 / 0 = 실패)
+	 */
+	public int insertProjectOption(Connection conn, int projectNo, int projectPrice) {
+		int result = 0;
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("insertProjectOption");
+		
+		int option1 = (int)(projectPrice * 0.1);
+		int option2 = (int)(projectPrice * 0.5);
+		int option3 = projectPrice;
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, projectNo);
+			pstmt.setInt(2, option1);
+			pstmt.setInt(3, option2);
+			pstmt.setInt(4, option3);
+			
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		return result;
+	}
+
+	/** 프로젝트의 승인/반려 후, 알림 처리하는 메소드
+	 *  @param conn
+	 *  @param projectSeller : 알림 수신자
+	 *  @param projectReason : 승인/반려 알림 내용
+	 *  @return result : 처리 결과 (1 = 성공 / 0 = 실패)
+	 */
+	public int insertProjectBanAllowNotice(Connection conn, int projectSeller, String projectReason) {
+		int result = 0;
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("insertProjectBanAllowNotice");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setString(1, projectReason);
+			pstmt.setInt(2, projectSeller);
+			
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		return result;
+	}
+
+	
+
+
 }

@@ -47,6 +47,14 @@ function loadPage(cpage) {
 			
 			
 			for(let i = 0; i < list.length; i++){
+				var temp;
+				switch(list[i].projectStatus){
+					case 'Y' : temp = '게시'; break;
+					case 'N' : temp = '비게시'; break;
+					case 'B' : temp = '반려'; break;
+					case 'E' : temp = '종료'; break;
+				}
+				
 				projectDiv.append("<tr>"
 						     + "<td>" + ((currentPage - 1) * boardLimit + i + 1) + "</td>"
 						     + "<td>" + list[i].projectNo + "</td>"
@@ -55,11 +63,11 @@ function loadPage(cpage) {
 						     + "<td>" + list[i].projectCategoryName + "</td>"
 						     + "<td>" + list[i].projectTag + "</td>"
 						     + "<td>" + list[i].projectTitle + "</td>"
-						     + "<td>" + list[i].projectPrice.toLocaleString() + "</td>"
+						     + "<td>" + list[i].projectPrice.toLocaleString() + "원</td>"
 						     + "<td>" + list[i].projectFunding.toLocaleString() + " %  </td>"
 						     + "<td>" + list[i].projectStart + "</td>"
 						     + "<td>" + list[i].projectEnd + "</td>"
-						     + "<td>" + list[i].projectStatus + "</td>"
+						     + "<td>" + temp + "</td>"
 						     + "</tr>");
 			}
 			

@@ -25,6 +25,6 @@ $(document).ready(function(){
 
 	$(".adm-sidebar-list > ul > li > a").click(function() {
 	    $(this).next().slideToggle('slow');
-	    $(this).children("i").toggleClass("fas fa-angle-up fas fa-angle-down");
+	    $(this).children("#tog").toggleClass("fas fa-angle-up fas fa-angle-down");
 	});
 });
