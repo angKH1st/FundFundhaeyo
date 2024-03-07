@@ -8,7 +8,6 @@ import com.kh.semi1st.common.model.vo.PageInfo;
 import com.kh.semi1st.member.model.dao.MemberDao;
 import com.kh.semi1st.member.model.vo.Attachment;
 import com.kh.semi1st.member.model.vo.Member;
-import com.kh.semi1st.project.model.dao.ProjectDao;
 import com.kh.semi1st.project.model.vo.Project;
 
 public class MemberService {
@@ -325,5 +324,51 @@ public class MemberService {
 		
 		return m;
 	}
+	
+	public int loginKakao(String userId) {
+		Connection conn = getConnection();
+		
+		int statusCount = new MemberDao().loginKakao(conn, userId);
+		
+		close(conn);
+		
+		return statusCount;
+		
+	}
+	
+	public Member selectKakao(Member m) {
+		Connection conn = getConnection();
+		
+		Member m1 = new MemberDao().selectKakao(conn, m);
+		
+		// System.out.println(m); 있음
+		close(conn);
+		
+		return m1;
+		
+		
+	}
+	
 
+	public int enrollKakao(Member m) {
+		Connection conn = getConnection();
+		
+		int result= new MemberDao().enrollKakao(conn, m);
+		
+		
+		//System.out.println(m);
+		
+		if(result > 0 ) {
+			commit(conn);
+		}else {
+			rollback(conn);
+		}
+		
+		close(conn);
+		
+		return result;
+	}
+	
+	
+	
 }
