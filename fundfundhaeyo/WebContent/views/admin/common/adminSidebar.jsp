@@ -33,8 +33,8 @@
 		        <li>
 		            <a class="adm-sidebar-main-menu"><i class="fas fa-angle-up"></i> 프로젝트 관리</a>
 		            <ul class="hidden">
-		                <li><a href="#">프로젝트 조회</a></li>
-		                <li><a href="#">프로젝트 심사</a></li>
+		                <li><a href="admSelect.pr">프로젝트 조회</a></li>
+		                <li><a href="admMoveToUpdate.pr">프로젝트 심사</a></li>
 		                <li><a href="#">펀딩금 집행</a></li>
 		                <li><a href="#">송장등록</a></li>
 		            </ul>

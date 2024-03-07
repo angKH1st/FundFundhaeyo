@@ -31,48 +31,45 @@
 		<div class="blank_top"><%-- 여백 --%></div>
 		<div class="project_enroll_final_form_main shadow pd15">
 			<div class="project_enroll_final_form_main_title">
-				<div class="project_enroll_final_form_main_title_col1 fl"><span>프로젝트 등록하기</span></div>
+				<div class="project_enroll_final_form_main_title_col1 fl">프로젝트 등록하기</div>
 				<div class="project_enroll_final_form_main_title_col2 fl"><%-- 여백 --%></div>
 				<div class="project_enroll_final_form_main_title_col3 fl"><a class="greenBtn" href="<%= contextPath %>/guide.hp">등록 가이드</a></div>
 			</div>
 			<div class="project_enroll_final_form_main_top">
 				<div class="project_enroll_final_form_main_top_left fl brlg br5 pd15">
 					<div class="project_enroll_final_form_row1">
-						<div class="project_enroll_final_form_row1_col1 fl">프로젝트 시작일 </div>
-						<div class="project_enroll_final_form_row1_col2 fl"><button id="open-datepicker">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 시작일을 골라주세요. →</button></div>
-						<div class="project_enroll_final_form_row1_col3 fl"><input class="blueBtn" type="text" id="datepicker" name="pjStart" value="시작일 입력" required readonly></div>
+						<div class="project_enroll_final_form_row1_col1 fl">프로젝트 시작일</div>
+						<div class="project_enroll_final_form_row1_col2 fl"><button id="open-datepicker" style="font-size: 12px; color: skyblue;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;시작일을 선택해주세요. →</button></div>
+						<div class="project_enroll_final_form_row1_col3 fl"><input class="blueBtn" type="text" id="datepicker" name="pjStart" value="시작일 선택" required readonly style="font-size: 12px;"></div>
 					</div>
+					<br>
 					<div class="project_enroll_final_form_row2">
-						<div class="project_enroll_final_form_row2_col1 fl">펀딩기간</div>
-						<div class="project_enroll_final_form_row2_col2 fl"><%-- 여백 --%></div>
+						<div class="project_enroll_final_form_row2_col1 fl projectDetails">프로젝트 기간</div>
+						<div class="project_enroll_final_form_row2_col2 fl"><span class="project_enroll_anno anno2"></span></div>
 						<div class="project_enroll_final_form_row2_col3 fl"><input class="pjPeriod" type="text" readonly></div>
-						<span class="project_enroll_anno anno2"></span>
 					</div>
 					<br>
 					<div class="project_enroll_final_form_row3">
-						<div class="project_enroll_final_form_row3_col1 fl">프로젝트 종료일</div>
-						<div class="project_enroll_final_form_row3_col2 fl"><%-- 여백 --%></div>
+						<div class="project_enroll_final_form_row3_col1 fl projectDetails">프로젝트 종료일</div>
+						<div class="project_enroll_final_form_row3_col2 fl"><span class="project_enroll_anno anno3"></span></div>
 						<div class="project_enroll_final_form_row3_col3 fl"><input class="pjEnd" type="text" name="pjEnd" readonly></div>
-						<span class="project_enroll_anno anno3"></span>
 					</div>
 					<br>
 					<div class="project_enroll_final_form_row4">
-						<div class="project_enroll_final_form_row4_col1 fl">후원자 결제 종료</div>
-						<div class="project_enroll_final_form_row4_col2 fl"><%-- 여백 --%></div>
+						<div class="project_enroll_final_form_row4_col1 fl projectDetails">후원자 결제 종료</div>
+						<div class="project_enroll_final_form_row4_col2 fl"><span class="project_enroll_anno anno4"></span></div>
 						<div class="project_enroll_final_form_row4_col3 fl"><input class="pjBuyerPayment" type="text" name="pjPaymentBuyer" readonly></div>
-						<span class="project_enroll_anno anno4"></span>
 					</div>
 					<br>
 					<div class="project_enroll_final_form_row5">
-						<div class="project_enroll_final_form_row5_col1 fl">창작자 정산일</div>
-						<div class="project_enroll_final_form_row5_col2 fl"><%-- 여백 --%></div>
+						<div class="project_enroll_final_form_row5_col1 fl projectDetails">창작자 정산일</div>
+						<div class="project_enroll_final_form_row5_col2 fl"><span class="project_enroll_anno anno5"></span></div>
 						<div class="project_enroll_final_form_row5_col3 fl"><input class="pjSellerPayment" type="text" name="pjPaymentSeller" readonly></div>
-						<span class="project_enroll_anno anno5"></span>
 					</div>
 					
 					<br><br>
 					
-					<div class="project_enroll_final_form_row6">
+					<div class="project_enroll_final_form_row6 projectDetails">
 						펀딩 일정 : 설정한 일시가 되면 펀딩이 자동 시작됩니다. 
 					</div>
 				</div>

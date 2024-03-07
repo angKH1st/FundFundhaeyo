@@ -1,6 +1,7 @@
 $(function() {
 	var datePicker = $("#datepicker").datepicker({
 		dateFormat: "yy.mm.dd",
+		minDate: 7,
 		onSelect: function(dateText) {
 			var startDate = new Date(dateText);
 			var endDate = new Date(startDate);
@@ -10,10 +11,13 @@ $(function() {
 			var sellerPaymentDate = new Date(buyerPaymentDate);
 			sellerPaymentDate.setDate(sellerPaymentDate.getDate() + 7);
 
+			$(".projectDetails").css("display", "block");
+
 			$(".pjPeriod").val("30 일").addClass('blueBtn');
 			$(".pjEnd").val($.datepicker.formatDate('yy.mm.dd', endDate)).addClass('blueBtn');
 			$(".pjBuyerPayment").val($.datepicker.formatDate('yy.mm.dd', buyerPaymentDate)).addClass('blueBtn');
 			$(".pjSellerPayment").val($.datepicker.formatDate('yy.mm.dd', sellerPaymentDate)).addClass('blueBtn');
+
 
 			$(".anno2").text("펀딩 기간은 30 일로 고정됩니다.");
 			$(".anno3").text("종료일 : 시작일로부터 30 일 후");

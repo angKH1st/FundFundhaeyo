@@ -16,12 +16,16 @@ function searchId(){
 			url:"admSearchId.me",
 			type:"get",
 			data:{searchId:$("#searchId").val()},
-			success: function(m){
+			success: function(members){
+				var m = members.m;
+				var sm = members.sm;
+				var bm = members.bm;
 				if(m == undefined){
 					alert('존재하지 않는 회원입니다.');
 					$("#searchId").val("");				
 				}else{
 					/* 인적사항 */
+					$(".adm-content-left-profile1-body-photo").html("<img width=200 height=200 src=\""+ m.userImg +"\">");
 					$(".adm-info-userNo-input").text(m.userNo);
 					$(".adm-info-userId-input").text(m.userId);
 					$(".adm-info-userPwd-input").text(m.userPwd);
@@ -41,8 +45,9 @@ function searchId(){
 					$(".adm-info-userEnrollDate-input").text(m.userEnrollDate);
 					
 					/* 실적 */
+					$(".adm-content-left-profile2-body-grade-row1-col2").text(bm.userGrade);
+					$(".adm-content-left-profile2-body-grade-row2-col2").text(sm.userGrade);
 					$(".adm-content-left-profile2-body-grade-row3-col2").text(m.userGrade);
-					
 					let us = $(".adm-content-left-profile2-body-grade-row4-col2");
 					switch(m.userStatus){
 						case 'Y' : us.text("사용중"); break;
@@ -93,7 +98,7 @@ function banAllow(userStatus){
 			}
 			searchId();
 		}, error: function(result){
-			console.log("실패 : " + result);
+			alert('실패하였습니다.')
 		}
 	})
 }

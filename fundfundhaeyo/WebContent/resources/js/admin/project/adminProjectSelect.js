@@ -1,6 +1,6 @@
 function loadPage(cpage) {
 	  $.ajax({
-	    url: "admSelectList.me",
+	    url: "admSelectList.pr",
 	    type: "GET",
 	    data: {cpage:cpage},
 	    success: function(map){
@@ -41,33 +41,32 @@ function loadPage(cpage) {
 			
 			const list = map.list; 	// 응답으로 받은 JSON 객체에서 list를 추출
 			
-			const memberDiv = $(".adm-content-center-main-body2 tbody");
+			const projectDiv = $(".adm-content-center-main-body2 tbody");
 			
-			memberDiv.empty(); 		// 테이블을 비우기
+			projectDiv.empty(); 		// 테이블을 비우기
+			
 			
 			for(let i = 0; i < list.length; i++){
-				memberDiv.append("<tr>"
+				projectDiv.append("<tr>"
 						     + "<td>" + ((currentPage - 1) * boardLimit + i + 1) + "</td>"
-						     + "<td>" + list[i].userNo + "</td>"
-						     + "<td>" + list[i].userName + "</td>"
-						     + "<td>" + list[i].userId + "</td>"
-						     + "<td>" + list[i].userNickname + "</td>"
-						     + "<td>" + list[i].userEmail + "</td>"
-						     + "<td>" + list[i].userProfile + "</td>"
-						     + "<td>" + list[i].userEnrollDate + "</td>"
-						     + "<td>" + list[i].userGrade + "</td>"
-						     + "<td>" + list[i].userStatus + "</td>"
-						     + "<td>" + 
-						     	"<a href=\"admMoveToUpdate.me?searchId=" + list[i].userId + "\"><i class=\"hoverA2 fa-regular fa-pen-to-square fa-lg\"></i></a>" +
-						     	"<a href=\"#\"><i style=\"margin-left: 10px;\" class=\"hoverA2 fa-solid fa-ban fa-lg\"></i></a>" +
-					     	   "</td>"
+						     + "<td>" + list[i].projectNo + "</td>"
+						     + "<td><img width=50 height=50 src=\"" + list[i].projectTitleImg + "\"></td>"
+						     + "<td>" + list[i].projectSeller + "</td>"
+						     + "<td>" + list[i].projectCategoryName + "</td>"
+						     + "<td>" + list[i].projectTag + "</td>"
+						     + "<td>" + list[i].projectTitle + "</td>"
+						     + "<td>" + list[i].projectPrice.toLocaleString() + "</td>"
+						     + "<td>" + list[i].projectFunding.toLocaleString() + " %  </td>"
+						     + "<td>" + list[i].projectStart + "</td>"
+						     + "<td>" + list[i].projectEnd + "</td>"
+						     + "<td>" + list[i].projectStatus + "</td>"
 						     + "</tr>");
 			}
 			
 			// 페이지 엔트리
-			$(".adm-content-center-main-body3-col1-startPoint").text((currentPage - 1) * boardLimit + 1); 	// 시작 회원 #			
-			$(".adm-content-center-main-body3-col1-endPoint").text((currentPage - 1) * boardLimit + 1 + list.length - 1);			// 끝 회원 #
-			$(".adm-content-center-main-body3-col1-totalPoint").text(listCount + 1); 						// 총 회원 수
+			$(".adm-content-center-main-body3-col1-startPoint").text((currentPage - 1) * boardLimit + 1); 	// 시작 프로젝트 #			
+			$(".adm-content-center-main-body3-col1-endPoint").text((currentPage - 1) * boardLimit + 1 + list.length - 1);			// 끝 프로젝트 #
+			$(".adm-content-center-main-body3-col1-totalPoint").text(listCount + 1); 						// 총 프로젝트 수
 			
 			cpage = currentPage;
 	    },
@@ -86,4 +85,3 @@ $(document).on("click", ".page-num", function(e){
 	var cpage = $(this).data("page");
 	loadPage(cpage);
 });
-
