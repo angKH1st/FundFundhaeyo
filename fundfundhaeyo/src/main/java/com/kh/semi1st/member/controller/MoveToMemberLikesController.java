@@ -44,7 +44,7 @@ public class MoveToMemberLikesController extends HttpServlet {
 		int startPage;   // 페이징바의 시작 수
 		int endPage;	 // 페이징바의 끝 수
 		
-		listCount = new AnnouncementService().selectAnnouncementListCount();
+		listCount = new ProjectService().selectProjectListCount();
 		currentPage = Integer.parseInt(request.getParameter("cpage"));
 		pageLimit = 5;
 		boardLimit = 8;

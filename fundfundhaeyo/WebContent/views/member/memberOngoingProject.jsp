@@ -71,24 +71,24 @@
 					<div class="mypage_ongoing_Form_right_content2 pd15">
 						<div class="mypage_ongoing_Form_right_title2">
 						<% if(currentPage != 1){ %>
-			            		<button type="button" onclick="location.href='<%= contextPath %>/ongoingProject.me?cpage=<%= currentPage-1 %>'">←</button>
-				        	<% }else{ %>
-				        		<button type="button" onclick="location.href='<%= contextPath %>/ongoingProject.me?cpage=<%= currentPage-1 %>'" disabled>←</button>
-				        	<% } %>
-				        	
-				            <% for(int p = startPage; p <= endPage; p++){ %>
-				            	<% if(p == currentPage){ %>
-				            		<button type="button" disabled><%= p %></button>
-				            	<% }else{ %>
-				            		<button type="button" onclick="location.href='<%= contextPath %>/ongoingProject.me?cpage=<%= p %>'"><%= p %></button>
-				            	<% } %>
-				            <% } %>
-				            
-				            <% if(currentPage != maxPage){ %>
-				            	<button type="button" onclick="location.href='<%= contextPath %>/ongoingProject.me?cpage=<%= currentPage+1 %>'">→</button>
-				            <% }else{ %>
-				            	<button type="button" onclick="location.href='<%= contextPath %>/ongoingProject.me?cpage=<%= currentPage+1 %>'" disabled>→</button>
-				            <% } %>
+		            		<button type="button" onclick="location.href='<%= contextPath %>/ongoingProject.me?cpage=<%= currentPage-1 %>'">←</button>
+			        	<% }else{ %>
+			        		<button type="button" onclick="location.href='<%= contextPath %>/ongoingProject.me?cpage=<%= currentPage-1 %>'" disabled>←</button>
+			        	<% } %>
+			        	
+			            <% for(int p = startPage; p <= endPage; p++){ %>
+			            	<% if(p == currentPage){ %>
+			            		<button type="button" disabled><%= p %></button>
+			            	<% }else{ %>
+			            		<button type="button" onclick="location.href='<%= contextPath %>/ongoingProject.me?cpage=<%= p %>'"><%= p %></button>
+			            	<% } %>
+			            <% } %>
+			            
+			            <% if(currentPage != maxPage){ %>
+			            	<button type="button" onclick="location.href='<%= contextPath %>/ongoingProject.me?cpage=<%= currentPage+1 %>'">→</button>
+			            <% }else{ %>
+			            	<button type="button" onclick="location.href='<%= contextPath %>/ongoingProject.me?cpage=<%= currentPage+1 %>'" disabled>→</button>
+			            <% } %>
 						</div>
 						<div class="mypage_ongoing_Form_right_blank"></div>
 					</div>

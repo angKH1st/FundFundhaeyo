@@ -10,9 +10,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.kh.semi1st.common.model.vo.PageInfo;
-import com.kh.semi1st.company.model.service.AnnouncementService;
 import com.kh.semi1st.member.model.service.MemberService;
 import com.kh.semi1st.member.model.vo.Member;
+import com.kh.semi1st.project.model.service.ProjectService;
 import com.kh.semi1st.project.model.vo.Project;
 
 /**
@@ -43,7 +43,9 @@ public class MemberSelectOngoingProjectController extends HttpServlet {
 		int startPage;   // 페이징바의 시작 수
 		int endPage;	 // 페이징바의 끝 수
 		
-		listCount = new AnnouncementService().selectAnnouncementListCount();
+		int userNo = ((Member)request.getSession().getAttribute("loginUser")).getUserNo();
+		
+		listCount = new ProjectService().selectOngoingProjectListCount(userNo);
 		currentPage = Integer.parseInt(request.getParameter("cpage"));
 		pageLimit = 5;
 		boardLimit = 8;
@@ -54,8 +56,6 @@ public class MemberSelectOngoingProjectController extends HttpServlet {
 		if(endPage > maxPage) {
 			endPage = maxPage;
 		}
-		
-		int userNo = ((Member)request.getSession().getAttribute("loginUser")).getUserNo();
 		
 		PageInfo pi = new PageInfo(listCount, currentPage, pageLimit, boardLimit, maxPage, startPage, endPage);
 		ArrayList<Project> list = new MemberService().selectMemberOngoingList(pi, userNo);

@@ -1009,4 +1009,58 @@ public class MemberDao {
 		return list;
 	}
 
+	/** 창작자의 진행중인 프로젝트를 조회
+	 *  @param conn
+	 *  @param pi : 페이징 처리 객체
+	 *  @param userNo : 조회하고자 하는 창작자
+	 *  @return list : 조회된 창작자의 진행중인 프로젝트
+	 */
+	public ArrayList<Project> selectMemberBanList(Connection conn, PageInfo pi, int userNo) {
+		ArrayList<Project> list = new ArrayList<Project>();
+		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+		
+		String sql = prop.getProperty("selectMemberBanList");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			int startRow = (pi.getCurrentPage()-1) * pi.getBoardLimit() + 1;
+			int endRow = startRow + pi.getBoardLimit() - 1;
+			
+			pstmt.setInt(1, userNo);
+			pstmt.setInt(2, startRow);
+			pstmt.setInt(3, endRow);
+			
+			rset = pstmt.executeQuery();
+			
+			while(rset.next()) {
+				Project p = new Project();
+				p.setProjectNo(rset.getInt("project_no"));
+				p.setProjectSeller(rset.getString("project_seller"));
+				p.setProjectCategoryName(rset.getString("pj_category_name"));
+				p.setProjectOverview(rset.getString("project_overview"));
+				p.setProjectTitle(rset.getString("project_title"));
+				p.setProjectContent(rset.getString("project_content"));
+				p.setProjectTag(rset.getString("project_tag"));
+				p.setProjectPrice(rset.getInt("project_price"));
+				p.setProjectStart(rset.getDate("project_start"));
+				p.setProjectEnd(rset.getDate("project_end"));
+				p.setProjectPaymentBuyer(rset.getDate("project_payment_buyer"));
+				p.setProjectPaymentSeller(rset.getDate("project_payment_seller"));
+				p.setProjectStatus(rset.getString("project_status"));
+				p.setProjectTitleImg(rset.getString("project_img"));
+				p.setProjectFunding(rset.getInt("funding"));
+				
+				list.add(p);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		return list;
+	}
+
 }

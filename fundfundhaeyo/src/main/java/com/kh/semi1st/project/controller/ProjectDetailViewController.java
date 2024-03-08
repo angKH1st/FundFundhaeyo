@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.kh.semi1st.member.model.vo.Attachment;
+import com.kh.semi1st.member.model.vo.Member;
 import com.kh.semi1st.project.model.service.ProjectService;
 import com.kh.semi1st.project.model.vo.Project;
 
@@ -42,7 +43,7 @@ public class ProjectDetailViewController extends HttpServlet {
 			int buyer = ps.selectProjectBuyer(pno);
 			int liker = ps.selectProjectLiker(pno);
 			ArrayList<Attachment> list = ps.selectAttachmentList(pno);
-			
+
 			request.setAttribute("p", p);
 			request.setAttribute("buyer", buyer);
 			request.setAttribute("liker", liker);

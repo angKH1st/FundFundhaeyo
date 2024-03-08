@@ -391,6 +391,21 @@ public class MemberService {
 		
 		return list;
 	}
+
+	/** 창작자의 반려된 프로젝트를 조회
+	 *  @param pi : 페이징 처리 객체
+	 *  @param userNo : 조회하고자 하는 창작자
+	 *  @return list : 조회된 창작자의 반려된 프로젝트
+	 */
+	public ArrayList<Project> selectMemberBanList(PageInfo pi, int userNo) {
+		Connection conn = getConnection();
+		
+		ArrayList<Project> list = new MemberDao().selectMemberBanList(conn, pi, userNo);
+		
+		close(conn);
+		
+		return list;
+	}
 	
 	
 	

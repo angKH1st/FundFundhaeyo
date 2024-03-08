@@ -12,6 +12,9 @@
 	Project p = (Project)request.getAttribute("p");
 	ArrayList<Attachment> list = (ArrayList<Attachment>)request.getAttribute("list");
 
+	String ln = (String)request.getAttribute("ln");
+	String pn = (String)request.getAttribute("pn");
+	
 	// 후원한 사람 수
 	int buyer = (int)request.getAttribute("buyer");
 	// 찜한 사람 수
@@ -114,7 +117,7 @@
 							<% if(loginUser != null) { %>
 							<div class="project_detail_top_info_row2_btn1 br5 brlg fl">
 								<div class="project_detail_top_info_row2_btn1_icon likesContainer">
-	                        		<span class="likes" style="position: absolute; bottom: -6px; right: 10px; z-index: 10;" data-projectNo="<%= p.getProjectNo() %>"><i class="fa-solid fa-heart fa-lg"></i></span>
+	                        		<span class="likes" style="position: absolute; bottom: -6px; right: 20px; z-index: 10;" data-projectNo="<%= p.getProjectNo() %>"><i class="fa-solid fa-heart fa-lg"></i></span>
 								</div>
 								<div class="project_detail_top_info_row2_btn1_num"><%= liker %></div>
 							</div>
@@ -131,10 +134,9 @@
 								<div class="project_detail_top_info_row2_btn2_num">222</div>
 							</div>
 							<% if(loginUser != null) { %>
-								<% if((loginUser.getUserName()).equals(p.getProjectSeller())){ %>
-								<div class="project_detail_top_info_row2_btn3 br5 brlg fl"><a style="color: white;" href="<%= contextPath %>/moveToOrderForm.pr">이 프로젝트 후원하기</a></div>
+								<% if(loginUser.getUserNo() == Integer.parseInt(p.getProjectSeller())){ %>
 								<% }else{ %>
-								<div>dd</div>
+								<div class="project_detail_top_info_row2_btn3 br5 brlg fl"><a style="color: white;" href="<%= contextPath %>/moveToOrderForm.pr">이 프로젝트 후원하기</a></div>
 								<% } %>
 							<% }else { %>
 								<div class="project_detail_top_info_row2_btn3 br5 brlg fl" onclick="alertToLogin();">이 프로젝트 후원하기</div>

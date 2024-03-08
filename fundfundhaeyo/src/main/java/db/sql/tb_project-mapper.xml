@@ -566,4 +566,12 @@
 			 )
 	</entry>
 	
+	<entry key="selectOngoingProjectListCount">
+		SELECT
+		       COUNT(*) count
+		  FROM TB_PROJECT
+		 WHERE PROJECT_STATUS = 'Y'
+		   AND PROJECT_SELLER = ?
+	</entry>
+	
 </properties>

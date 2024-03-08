@@ -825,7 +825,31 @@ public class ProjectDao {
 		return result;
 	}
 
-	
+	/** 전체 진행중인 프로젝트 숫자 조회
+	 *  @param conn
+	 *  @return listCount : 전체 프로젝트 숫자
+	 */
+	public int selectOngoingProjectListCount(Connection conn, int userNo) {
+		int listCount = 0;
+		
+		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+		String sql = prop.getProperty("selectOngoingProjectListCount");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+
+			pstmt.setInt(1, userNo);
+			
+			rset = pstmt.executeQuery();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		return listCount;
+	}
 
 
 }

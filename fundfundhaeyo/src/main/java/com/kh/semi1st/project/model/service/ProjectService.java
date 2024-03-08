@@ -287,5 +287,18 @@ public class ProjectService {
 	
 		return result1 * result2 * result3 * result4;
 	}
+	
+	/** 전체 진행중인 프로젝트 숫자 조회
+	 *  @return listCount : 전체 프로젝트 숫자
+	 */
+	public int selectOngoingProjectListCount(int userNo) {
+		Connection conn = getConnection();
+		
+		int listCount = new ProjectDao().selectOngoingProjectListCount(conn, userNo);
+		
+		close(conn);
+		
+		return listCount;
+	}
 
 }
