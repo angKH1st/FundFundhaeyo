@@ -376,6 +376,21 @@ public class MemberService {
 		
 		return m;
 	}
+	
+	/** 창작자의 심사중인 프로젝트를 조회
+	 *  @param pi : 페이징 처리 객체
+	 *  @param userNo : 조회하고자 하는 창작자
+	 *  @return list : 조회된 창작자의 심사중인 프로젝트
+	 */
+	public ArrayList<Project> selectMemberTestingList(PageInfo pi, int userNo) {
+		Connection conn = getConnection();
+		
+		ArrayList<Project> list = new MemberDao().selectMemberTestingList(conn, pi, userNo);
+		
+		close(conn);
+		
+		return list;
+	}
 
 	/** 창작자의 진행중인 프로젝트를 조회
 	 *  @param pi : 페이징 처리 객체

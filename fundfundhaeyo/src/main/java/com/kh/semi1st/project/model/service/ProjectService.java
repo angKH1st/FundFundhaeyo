@@ -8,6 +8,7 @@ import static com.kh.semi1st.common.JDBCTemplate.*;
 import com.kh.semi1st.common.model.vo.PageInfo;
 import com.kh.semi1st.member.model.vo.Attachment;
 import com.kh.semi1st.project.model.dao.ProjectDao;
+import com.kh.semi1st.project.model.vo.Chat;
 import com.kh.semi1st.project.model.vo.PjCategory;
 import com.kh.semi1st.project.model.vo.Project;
 
@@ -288,8 +289,23 @@ public class ProjectService {
 		return result1 * result2 * result3 * result4;
 	}
 	
+	/** 전체 심사중인 프로젝트 숫자 조회
+	 * @param userNo : 조회하고자 하는 회원의 no
+	 *  @return listCount : 해당 회원의 프로젝트 숫자
+	 */
+	public int selectTestingProjectListCount(int userNo) {
+		Connection conn = getConnection();
+		
+		int listCount = new ProjectDao().selectTestingProjectListCount(conn, userNo);
+		
+		close(conn);
+		
+		return listCount;
+	}
+	
 	/** 전체 진행중인 프로젝트 숫자 조회
-	 *  @return listCount : 전체 프로젝트 숫자
+	 *  @param userNo : 조회하고자 하는 회원의 no
+	 *  @return listCount : 해당 회원의 프로젝트 숫자
 	 */
 	public int selectOngoingProjectListCount(int userNo) {
 		Connection conn = getConnection();
@@ -299,6 +315,119 @@ public class ProjectService {
 		close(conn);
 		
 		return listCount;
+	}
+	
+	/** 전체 반려된 프로젝트 숫자 조회
+	 *  @param userNo : 조회하고자 하는 회원의 no
+	 *  @return listCount : 해당 회원의 프로젝트 숫자
+	 */
+	public int selectBanProjectListCount(int userNo) {
+		Connection conn = getConnection();
+		
+		int listCount = new ProjectDao().selectBanProjectListCount(conn, userNo);
+		
+		close(conn);
+		
+		return listCount;
+	}
+
+	/** 채팅 삽입을 처리해주는 메소드
+	 *  @param c : 채팅 객체 c
+	 *  @return result : 처리 결과 (1 = 성공 / 0 = 실패) 
+	 */
+	public int insertProjectChat(Chat c) {
+		Connection conn = getConnection();
+		
+		int result = new ProjectDao().insertProjectChat(conn, c);
+		
+		if(result > 0) {
+			commit(conn);
+		}else {
+			rollback(conn);
+		}
+		
+		close(conn);
+		
+		return result;
+	}
+	
+	/** 프로젝트의 채팅 리스트를 조회해주는 메소드
+	 *  @param projectNo : 조회하고자 하는 프로젝트 no
+	 *  @return list : 채팅 리스트
+	 */
+	public ArrayList<Chat> selectChatList(int projectNo){
+		Connection conn = getConnection();
+		
+		ArrayList<Chat> list = new ProjectDao().selectChatList(conn, projectNo);
+		
+		close(conn);
+		
+		return list;
+	}
+	
+	/** 프로젝트의 옵션 정보와 결제 정보가 일치하는지 검사해주는 메소드
+	 *  @param pno : 조회하고자 하는 프로젝트 no
+	 *  @param amount : 결제 금액
+	 *  @return result : 조회 결과 (1 = 일치 / 0 = 불일치) 
+	 */
+	public int selectProjectOption(int pno, int amount) {
+		Connection conn = getConnection();
+		
+		int result = new ProjectDao().selectProjectOption(conn, pno, amount);
+		
+		close(conn);
+		
+		return result;
+	}
+
+	/** 프로젝트 후원자 정보를 추가해주는 메소드
+	 *  @param userNo : 추가하고자 하는 회원 번호
+	 *  @param pno : 추가하고자 하는 프로젝트 번호
+	 *  @param amount : 추가하고자 하는 후원 금액
+	 *  @return result : 처리 결과 (1 = 성공 / 0 = 실패) 
+	 */
+	public int insertProjectBuyer(int userNo, int pno, int amount) {
+		Connection conn = getConnection();
+		
+		int result = new ProjectDao().insertProjectBuyer(conn, userNo, pno, amount);
+		
+		if(result > 0) {
+			commit(conn);
+		}else {
+			rollback(conn);
+		}
+		
+		close(conn);
+		
+		return result;
+	}
+
+	/** 프로젝트 창작자 정보를 추가해주는 메소드
+	 *  @param sno : 추가하고자 하는 회원 번호
+	 *  @param pno : 추가하고자 하는 프로젝트 번호
+	 *  @param amount : 추가하고자 하는 실시간 모금액
+	 *  @return result : 처리 결과 (1 = 성공 / 0 = 실패) 
+	 */
+	public int updateProjectSeller(int sno, int pno, int amount) {
+		Connection conn = getConnection();
+		
+		int resultO = new ProjectDao().selectProjectSeller(conn, sno, pno);
+		
+		int result = 0;
+		
+		if(resultO == 0) {
+			result = new ProjectDao().insertProjectSeller(conn, sno, pno, amount);
+		}else {
+			result = new ProjectDao().updateProjectSeller(conn, sno, pno, amount);
+		}
+		
+		if(result > 0) {
+			commit(conn);
+		}else {
+			rollback(conn);
+		}
+		
+		return result;
 	}
 
 }

@@ -6,6 +6,90 @@ function alertToLogin() {
 	}
 }
 
+$(function() {
+	if($("#loginUserName").val() != null){
+	selectChatList();
+
+	setInterval(selectChatList, 1000); // 1초에 한번씩 채팅목록 조회
+	}else{
+		$(".project_detail_chat_middle").html("로그인 후 이용 가능합니다.");
+	}
+})
+
+function insertChat() {
+	$.ajax({
+		url: "chatInsert.pr",
+		data: {
+			chatInput: $("#chatInput").val(),
+			projectNo: $("#projectNo").val()
+	        },
+		type: "post",
+		success: function(result) {
+			if (result > 0) { // 채팅 작성 성공 => 갱신된 댓글 리스트 조회
+				selectChatList();
+				$("#chatInput").val("");
+			}
+		}, error: function() {
+			console.log("채팅 작성 실패");
+		}
+	})
+}
+
+function selectChatList() {
+	$.ajax({
+		url: "chatList.pr",
+		data: {
+			projectNo: $("#projectNo").val()
+		},
+		success: function(list) {
+			let value = "";
+
+			if(list.length > 0){
+				for (let i = 0; i < list.length; i++) {
+					if(list[i].chatWriter != $("#loginUserName").val()){
+						/* 작성자 본인이 아닐 경우 */
+						value += "<div class=\"project_detail_chat_middle_list\">"
+							   + "<div class=\"project_chat_notMy\">"
+							   + "<div class=\"project_chat_notMy_col1 fl\">"
+							   + "<div class=\"project_chat_notMy_col1_row1\"><img width=30 height=30 src=\"" + list[i].chatWriterImg + "\"></div>"
+							   + "<div class=\"project_chat_notMy_col1_row2\">" + list[i].chatWriter + "</div>"
+							   + "</div>"
+							   + "<div class=\"project_chat_notMy_col2 fl\">"
+							   + "<div class=\"project_chat_notMy_col2_row1\">" + list[i].chatCreateDate + "</div>"
+							   + "<div class=\"project_chat_notMy_col2_row2\">" + list[i].chatContent + "</div>"
+							   + "</div>"
+							   + "<div class=\"project_chat_notMy_col3 fl\">"
+							   + "<i class=\"fa-solid fa-exclamation fa-lg\"></i>"
+							   + "</div>"
+							   + "</div>"
+							   + "</div>"
+					}else{
+						/* 작성자 본인일 경우 */
+						value += "<div class=\"project_detail_chat_middle_list\">"
+							   + "<div class=\"project_chat_my\">"
+							   + "<div class=\"project_chat_my_col1 fl\">"
+							   + "<div class=\"project_chat_my_col1_row1\">" + list[i].chatCreateDate + "</div>"
+							   + "<div class=\"project_chat_my_col1_row2\">" + list[i].chatContent + "</div>"
+							   + "</div>"
+							   + "<div class=\"project_chat_my_col2 fl\">"
+							   + "<div class=\"project_chat_my_col2_row1\"><img width=30 height=30 src=\"" + list[i].chatWriterImg + "\"></div>"
+							   + "<div class=\"project_chat_my_col2_row2\">" + "나" + "</div>"
+							   + "</div>"
+							   + "</div>"
+							   + "</div>"
+					}
+				}
+			}else{
+				value += "<div class=\"project_detail_chat_middle_none\">채팅 내역이 없습니다.<br>창작자와의 채팅을 시작해보세요!</div>"
+			}
+			
+			$(".project_detail_chat_middle").html(value);
+		}, error: function() {
+			console.log("채팅 조회 실패");
+		}
+	});
+}
+
 $(document).ready(function() {
 	// 페이지가 로드되었을 때 각 프로젝트에 대한 '좋아요' 상태를 조회
 	$('.likes').each(function() {

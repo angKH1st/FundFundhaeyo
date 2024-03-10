@@ -18,9 +18,10 @@
 		  JOIN TB_SELLER ON (PROJECT_NO = SELLER_PROJECT_NO)
 		 WHERE PROJECT_STATUS = 'Y'
 		   AND ATTACHMENT_LEVEL = 1
+		   AND SYSDATE BETWEEN PROJECT_START AND PROJECT_END
 		 ORDER
 		    BY PROJECT_START
-		     , PROJECT_NO DESC
+		     , PROJECT_NO
 	</entry>
 	
 	<entry key="selectThumbnailListByOptionA">
@@ -42,9 +43,10 @@
 				  JOIN TB_SELLER ON (PROJECT_NO = SELLER_PROJECT_NO)
 				 WHERE PROJECT_STATUS = 'Y'
 				   AND ATTACHMENT_LEVEL = 1
+				   AND SYSDATE BETWEEN PROJECT_START AND PROJECT_END
 				 ORDER
 				    BY PROJECT_START
-				     , PROJECT_NO DESC
+				     , PROJECT_NO
 		        )
 		 WHERE FUNDING <= 50
 		 ]]>
@@ -68,9 +70,10 @@
 				  JOIN TB_SELLER ON (PROJECT_NO = SELLER_PROJECT_NO)
 				 WHERE PROJECT_STATUS = 'Y'
 				   AND ATTACHMENT_LEVEL = 1
+				   AND SYSDATE BETWEEN PROJECT_START AND PROJECT_END
 				 ORDER
 				    BY PROJECT_START
-				     , PROJECT_NO DESC
+				     , PROJECT_NO
 		        )
 		 WHERE FUNDING BETWEEN 50 AND 100
 	</entry>
@@ -93,9 +96,10 @@
 				  JOIN TB_SELLER ON (PROJECT_NO = SELLER_PROJECT_NO)
 				 WHERE PROJECT_STATUS = 'Y'
 				   AND ATTACHMENT_LEVEL = 1
+				   AND SYSDATE BETWEEN PROJECT_START AND PROJECT_END
 				 ORDER
 				    BY PROJECT_START
-				     , PROJECT_NO DESC
+				     , PROJECT_NO
 		        )
 		 WHERE FUNDING >= 100
 	</entry>
@@ -116,6 +120,7 @@
 		  JOIN TB_SELLER ON (PROJECT_NO = SELLER_PROJECT_NO)
 		 WHERE PROJECT_STATUS = 'Y'
 		   AND ATTACHMENT_LEVEL = 1
+		   AND SYSDATE BETWEEN PROJECT_START AND PROJECT_END
 		 ORDER
 		    BY FUNDING DESC
 	</entry>
@@ -139,6 +144,7 @@
 				  JOIN TB_SELLER ON (PROJECT_NO = SELLER_PROJECT_NO)
 				 WHERE PROJECT_STATUS = 'Y'
 				   AND ATTACHMENT_LEVEL = 1
+				   AND SYSDATE BETWEEN PROJECT_START AND PROJECT_END
 				 ORDER
 				    BY FUNDING DESC
 		        )
@@ -164,6 +170,7 @@
 				  JOIN TB_SELLER ON (PROJECT_NO = SELLER_PROJECT_NO)
 				 WHERE PROJECT_STATUS = 'Y'
 				   AND ATTACHMENT_LEVEL = 1
+				   AND SYSDATE BETWEEN PROJECT_START AND PROJECT_END
 				 ORDER
 				    BY FUNDING DESC
 		        )
@@ -188,6 +195,7 @@
 				  JOIN TB_SELLER ON (PROJECT_NO = SELLER_PROJECT_NO)
 				 WHERE PROJECT_STATUS = 'Y'
 				   AND ATTACHMENT_LEVEL = 1
+				   AND SYSDATE BETWEEN PROJECT_START AND PROJECT_END
 				 ORDER
 				    BY FUNDING DESC
 		        )
@@ -218,9 +226,10 @@
 		 WHERE PROJECT_STATUS = 'Y'
 		   AND ATTACHMENT_LEVEL = 1
            AND PJ_CATEGORY_NO = ?
+           AND SYSDATE BETWEEN PROJECT_START AND PROJECT_END
 		 ORDER
 		    BY PROJECT_START
-		     , PROJECT_NO DESC
+		     , PROJECT_NO
 	</entry>
 	
 	<entry key="selectCategoryThumbnailListByOptionA">
@@ -243,6 +252,7 @@
 				 WHERE PROJECT_STATUS = 'Y'
 				   AND ATTACHMENT_LEVEL = 1
 				   AND PJ_CATEGORY_NO = ?
+				   AND SYSDATE BETWEEN PROJECT_START AND PROJECT_END
 				 ORDER
 				    BY FUNDING DESC
 		        )
@@ -269,6 +279,7 @@
 				 WHERE PROJECT_STATUS = 'Y'
 				   AND ATTACHMENT_LEVEL = 1
 				   AND PJ_CATEGORY_NO = ?
+				   AND SYSDATE BETWEEN PROJECT_START AND PROJECT_END
 				 ORDER
 				    BY FUNDING DESC
 		        )
@@ -294,6 +305,7 @@
 				 WHERE PROJECT_STATUS = 'Y'
 				   AND ATTACHMENT_LEVEL = 1
 				   AND PJ_CATEGORY_NO = ?
+				   AND SYSDATE BETWEEN PROJECT_START AND PROJECT_END
 				 ORDER
 				    BY FUNDING DESC
 		        )
@@ -322,6 +334,7 @@
 		  JOIN TB_SELLER ON (PROJECT_NO = SELLER_PROJECT_NO)
 		 WHERE PROJECT_STATUS = 'Y'
 		   AND PROJECT_NO = ?
+		   AND SYSDATE BETWEEN PROJECT_START AND PROJECT_END
 	</entry>
 	
 	<entry key="selectAttachmentList">
@@ -412,6 +425,7 @@
 		       COUNT(*) count
 		  FROM TB_PROJECT
 		 WHERE PROJECT_STATUS = 'Y'
+		   AND SYSDATE BETWEEN PROJECT_START AND PROJECT_END
 	</entry>
 	
 	<entry key="selectProjectList">
@@ -442,6 +456,7 @@
 						  JOIN TB_ATTACHMENT ON (PROJECT_NO = ATTACHMENT_PROJECT_NO)
 						 WHERE ATTACHMENT_LEVEL = 1
 						   AND PROJECT_STATUS = 'Y'
+						   AND SYSDATE BETWEEN PROJECT_START AND PROJECT_END
 						 ORDER
 						    BY PROJECT_NO DESC
 		                 ) E 
@@ -553,17 +568,31 @@
 		       OPTION_NO
 		     , OPTION_PROJECT_NO
 		     , OPTION_AMOUNT1
+		     , OPTION_REWARD1
 		     , OPTION_AMOUNT2
+		     , OPTION_REWARD2
 		     , OPTION_AMOUNT3
+		     , OPTION_REWARD3
 		     )
 		VALUES
 			 (
 			   SEQ_OPTION_NO.NEXTVAL
 			 , ?
 			 , ?
+			 , 1
 			 , ?
+			 , 2
 			 , ?
+			 , 3
 			 )
+	</entry>
+	
+	<entry key="selectTestingProjectListCount">
+		SELECT
+		       COUNT(*) count
+		  FROM TB_PROJECT
+		 WHERE PROJECT_STATUS = 'N'
+		   AND PROJECT_SELLER = ?
 	</entry>
 	
 	<entry key="selectOngoingProjectListCount">
@@ -572,6 +601,103 @@
 		  FROM TB_PROJECT
 		 WHERE PROJECT_STATUS = 'Y'
 		   AND PROJECT_SELLER = ?
+		   AND SYSDATE BETWEEN PROJECT_START AND PROJECT_END
+	</entry>
+	
+	<entry key="selectBanProjectListCount">
+		SELECT
+		       COUNT(*) count
+		  FROM TB_PROJECT
+		 WHERE PROJECT_STATUS = 'B'
+		   AND PROJECT_SELLER = ?
+	</entry>
+	
+	<entry key="insertProjectChat">
+		INSERT
+		  INTO TB_CHAT
+		  (
+		    CHAT_NO
+		  , CHAT_CONTENT
+		  , CHAT_PROJECT_NO
+		  , CHAT_WRITER
+		  )
+		VALUES
+		  (
+		    SEQ_CHAT_NO.NEXTVAL
+		  , ?
+		  , ?
+		  , ?
+		  )
+	</entry>
+	
+	<entry key="selectChatList">
+		SELECT
+		       CHAT_NO
+		     , CHAT_CONTENT
+		     , USER_NAME "CHAT_WRITER"
+		     , TO_CHAR(CHAT_CREATE_DATE, 'YY/MM/DD HH:MI') "CHAT_CREATE_DATE"
+             , ATTACHMENT_PATH || ATTACHMENT_UPDATE_NAME "USER_IMG"
+		  FROM TB_CHAT
+		  JOIN TB_MEMBER ON (USER_NO = CHAT_WRITER)
+          JOIN TB_ATTACHMENT ON (ATTACHMENT_NO = CHAT_WRITER)
+		 WHERE CHAT_STATUS = 'Y'
+		   AND CHAT_PROJECT_NO = ?
+		 ORDER
+		    BY CHAT_NO
+	</entry>
+	
+	<entry key="selectProjectOption">
+		SELECT COUNT(*) "COUNT"
+		  FROM TB_FUNDING_OPTION
+		 WHERE OPTION_PROJECT_NO = ?
+		   AND ? IN (OPTION_AMOUNT1, OPTION_AMOUNT2, OPTION_AMOUNT3)
+	</entry>
+	
+	<entry key="insertProjectBuyer">
+		INSERT
+		  INTO TB_BUYER
+		     (
+		       BUYER_USER_NO
+		     , BUYER_PROJECT_NO
+		     , BUYER_FUNDING
+		     )
+		VALUES
+		     (
+		       ?
+		     , ?
+		     , ?
+		     )
+	</entry>
+	
+	<entry key="selectProjectSeller">
+		SELECT
+		       COUNT(*) "COUNT"
+		  FROM TB_SELLER
+		 WHERE SELLER_USER_NO = ?
+		   AND SELLER_PROJECT_NO = ?
+	</entry>
+	
+	<entry key="insertProjectSeller">
+		INSERT
+		  INTO TB_SELLER
+		     (
+		       SELLER_USER_NO
+		     , SELLER_PROJECT_NO
+		     , SELLER_FUNDING
+		     )
+		VALUES
+		     (
+		       ?
+		     , ?
+		     , ?
+     )
+	</entry>
+	
+	<entry key="updateProjectSeller">
+		UPDATE TB_SELLER
+		   SET SELLER_FUNDING = SELLER_FUNDING + ?
+		 WHERE SELLER_USER_NO = ?
+		   AND SELLER_PROJECT_NO = ?
 	</entry>
 	
 </properties>

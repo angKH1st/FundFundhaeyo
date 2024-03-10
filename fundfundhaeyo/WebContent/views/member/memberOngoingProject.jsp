@@ -45,27 +45,27 @@
 						<div class="mypage_ongoing_Form_right_title"><h3>진행중인 프로젝트</h3></div>
 						<div class="mypage_ongoing_Form_right_list brlg br5 pd15">
 						<% if(list.size() == 0){ %>
-								진행중인 창작 프로젝트가 없습니다.
-							<% }else{ %>
-								<% for(Project p : list){ %>
-									<div onclick=location.href="<%= contextPath %>/detail.pr?pno=<%= p.getProjectNo() %>" class="mypage_ongoing_Form_right_list_project prHoverContainer fl brlg br5">
-										<div class="mypage_ongoing_project_img prHover">
-											<img src="<%= p.getProjectTitleImg() %>" width=200 height=150>
-										</div>
-										<div class="mypage_ongoing_project_title"><%= p.getProjectTitle() %></div>
-										<div class="mypage_ongoing_project_info">
-											<div class="mypage_ongoing_project_funding fl"><span class="percentage"><%= p.getProjectFunding() %>% 달성</span></div>
-											<div class="mypage_ongoing_project_dday fl">
-												<% if((long)(ChronoUnit.DAYS.between(now, ((Date)p.getProjectEnd()).toLocalDate())) == 0){ %>
-												<span class="project-d-day" style="color: red">오늘 마감!</span>
-												<% }else{ %>
-												<span class="project-d-day">D-<%= (long)(ChronoUnit.DAYS.between(now, ((Date)p.getProjectEnd()).toLocalDate())) %></span>
-												<% } %>
-											</div>
+							진행중인 창작 프로젝트가 없습니다.
+						<% }else{ %>
+							<% for(Project p : list){ %>
+								<div onclick=location.href="<%= contextPath %>/detail.pr?pno=<%= p.getProjectNo() %>" class="mypage_ongoing_Form_right_list_project prHoverContainer fl brlg br5">
+									<div class="mypage_ongoing_project_img prHover">
+										<img src="<%= p.getProjectTitleImg() %>" width=200 height=150>
+									</div>
+									<div class="mypage_ongoing_project_title"><%= p.getProjectTitle() %></div>
+									<div class="mypage_ongoing_project_info">
+										<div class="mypage_ongoing_project_funding fl"><span class="percentage"><%= p.getProjectFunding() %>% 달성</span></div>
+										<div class="mypage_ongoing_project_dday fl">
+											<% if((long)(ChronoUnit.DAYS.between(now, ((Date)p.getProjectEnd()).toLocalDate())) == 0){ %>
+											<span class="project-d-day" style="color: red">오늘 마감!</span>
+											<% }else{ %>
+											<span class="project-d-day">D-<%= (long)(ChronoUnit.DAYS.between(now, ((Date)p.getProjectEnd()).toLocalDate())) %></span>
+											<% } %>
 										</div>
 									</div>
-								<% } %>
+								</div>
 							<% } %>
+						<% } %>
 						</div>
 					</div>
 					<div class="mypage_ongoing_Form_right_content2 pd15">

@@ -52,7 +52,7 @@
 								조회 결과가 없습니다.
 							</div>
 						<% }else{ %>
-							<% for(int i = 0; i < deadlineList.size(); i++) { %>
+							<% for(int i = deadlineList.size() - 1; i >= 0; i--) { %>
 							<div class="project_area_pr fl">
 							<br>
 								<div class="project_area_head prHoverContainer">
@@ -85,7 +85,7 @@
 							<div style="height: 548px;"></div>
 						<% } %>
 					<% }else{ %>
-						<% for(int i = 0; i < deadlineList.size(); i++) { %>
+						<% for(int i = deadlineList.size() - 1; i >= 0; i--) { %>
 						<div class="project_area_pr fl">
 						<br>
 							<div class="project_area_head prHoverContainer">

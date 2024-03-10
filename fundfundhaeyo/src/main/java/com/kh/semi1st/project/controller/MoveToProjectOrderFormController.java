@@ -9,23 +9,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.kh.semi1st.member.model.service.MemberService;
 import com.kh.semi1st.member.model.vo.Attachment;
-import com.kh.semi1st.member.model.vo.Member;
 import com.kh.semi1st.project.model.service.ProjectService;
 import com.kh.semi1st.project.model.vo.Project;
 
 /**
- * Servlet implementation class ProjectDetailViewController
+ * Servlet implementation class MoveToProjectOrderFormController
  */
-@WebServlet("/detail.pr")
-public class ProjectDetailViewController extends HttpServlet {
+@WebServlet("/moveToOrderForm.pr")
+public class MoveToProjectOrderFormController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ProjectDetailViewController() {
+    public MoveToProjectOrderFormController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -39,25 +37,12 @@ public class ProjectDetailViewController extends HttpServlet {
 		ProjectService ps = new ProjectService();
 		
 		Project p = ps.selectProject(pno);
+		ArrayList<Attachment> list = ps.selectAttachmentList(pno);
 		
-		if(p != null) {
-			int buyer = ps.selectProjectBuyer(pno);
-			int liker = ps.selectProjectLiker(pno);
-			ArrayList<Attachment> list = ps.selectAttachmentList(pno);
-			Member sellerCount = new MemberService().selectMemberSellerList(Integer.parseInt(p.getProjectSeller()));
-			Member seller = new MemberService().memberSearchNo(Integer.parseInt(p.getProjectSeller()));
-			
-			request.setAttribute("p", p);
-			request.setAttribute("buyer", buyer);
-			request.setAttribute("liker", liker);
-			request.setAttribute("list", list);
-			request.setAttribute("sellerCount", sellerCount);
-			request.setAttribute("seller", seller);
-			request.getRequestDispatcher("views/project/projectDetailView.jsp").forward(request, response);
-		}else {
-			
-		}
+		request.setAttribute("p", p);
+		request.setAttribute("list", list);
 		
+		request.getRequestDispatcher("views/project/projectOrderForm.jsp").forward(request, response);
 	}
 
 	/**

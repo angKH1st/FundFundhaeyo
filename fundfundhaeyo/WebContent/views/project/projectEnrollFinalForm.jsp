@@ -67,10 +67,43 @@
 						<div class="project_enroll_final_form_row5_col3 fl"><input class="pjSellerPayment" type="text" name="pjPaymentSeller" readonly></div>
 					</div>
 					
-					<br><br>
+					<br>
 					
 					<div class="project_enroll_final_form_row6 projectDetails">
 						펀딩 일정 : 설정한 일시가 되면 펀딩이 자동 시작됩니다. 
+					</div>
+					
+					<hr class="projectDetails">
+					
+					<br>
+					
+					<div class="projectDetails" style="text-align: center;"><span>🎁 옵션 안내 🎁</span></div>
+					
+					<br>
+					
+					<div class="project_option projectDetails brlg br5">
+						<table>
+							<thead>
+								<tr style="background-color: lightskyblue;">
+									<td width=500 align=center>옵션 기준</td>
+									<td width=1000 align=center>옵션 내용</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>옵션1. 펀딩금액의 10%</td>
+									<td align=right><span>상품 1개</span></td>
+								</tr>
+								<tr>
+									<td>옵션2. 펀딩금액의 50%</td>
+									<td align=right><span>상품 3개</span></td>
+								</tr>
+								<tr>
+									<td>옵션3. 펀딩금액의 100%</td>
+									<td align=right><span>상품 5개 + 선물 포장</span></td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
 				</div>
 				<div class="project_enroll_final_form_main_top_blank fl"></div>
@@ -82,12 +115,16 @@
 		                    <td></td>
 		                    <td></td>
 		                </tr>
+		                <tr><td colspan=4><span class="percentage">대표이미지는 필수 요소입니다.</span></td></tr>
+		                <tr><td colspan=4><br></td></tr>
+		                <tr><td colspan=4><br></td></tr>
 		                <tr>
 		                    <th>상세이미지</th>
 		                    <td><img id="contentImg1" width="150" height="120" onclick="chooseFile(2);"></td>
 		                    <td><img id="contentImg2" width="150" height="120" onclick="chooseFile(3);"></td>
 		                    <td><img id="contentImg3" width="150" height="120" onclick="chooseFile(4);"></td>
 		                </tr>
+		                <tr><td colspan=4><span class="percentage">상세이미지는 최대 3장까지 등록 가능합니다.</span></td></tr>
 		            </table>
 		            
 		            <div id="file-area" style="display:none">

@@ -43,7 +43,9 @@ public class MemberSelectBanProjectController extends HttpServlet {
 		int startPage;   // 페이징바의 시작 수
 		int endPage;	 // 페이징바의 끝 수
 		
-		listCount = new ProjectService().selectProjectListCount();
+		int userNo = ((Member)request.getSession().getAttribute("loginUser")).getUserNo();
+		
+		listCount = new ProjectService().selectBanProjectListCount(userNo);
 		currentPage = Integer.parseInt(request.getParameter("cpage"));
 		pageLimit = 5;
 		boardLimit = 8;
@@ -54,8 +56,6 @@ public class MemberSelectBanProjectController extends HttpServlet {
 		if(endPage > maxPage) {
 			endPage = maxPage;
 		}
-		
-		int userNo = ((Member)request.getSession().getAttribute("loginUser")).getUserNo();
 		
 		PageInfo pi = new PageInfo(listCount, currentPage, pageLimit, boardLimit, maxPage, startPage, endPage);
 		ArrayList<Project> list = new MemberService().selectMemberBanList(pi, userNo);

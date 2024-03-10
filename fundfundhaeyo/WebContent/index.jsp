@@ -146,7 +146,7 @@
 					</div>
 				</div>
 				<div class="ffh_frame1_body fl">
-					<% for(int i = newList.size() - 10; i < newList.size(); i++) { %>
+					<% for(int i = newList.size()-1; i >= newList.size()-10; i--) { %>
 					<div class="ffh_frame2 fl">
                     	<div class="pr1"></div>
                         <div class="pr2 prHoverContainer">
@@ -181,7 +181,7 @@
 					</div>
 				</div>
 				<div class="ffh_frame2_body fl">
-					<% for(int i = deadlineList.size() - 10; i < deadlineList.size(); i++) { %>
+					<% for(int i = deadlineList.size() - 1; i >= deadlineList.size()-10; i--) { %>
 					<div class="ffh_frame2 fl">
 						<div class="pr1"></div>
 						<div class="pr2  prHoverContainer">

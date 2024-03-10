@@ -3,14 +3,17 @@ package com.kh.semi1st.project.model.dao;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Properties;
 
 import com.kh.semi1st.common.model.vo.PageInfo;
 import com.kh.semi1st.member.model.vo.Attachment;
+import com.kh.semi1st.project.model.vo.Chat;
 import com.kh.semi1st.project.model.vo.PjCategory;
 import com.kh.semi1st.project.model.vo.Project;
 
@@ -391,6 +394,11 @@ public class ProjectDao {
 		return list;
 	}
 
+	/** 프로젝트 후원자 수를 조회하는 메소드
+	 *  @param conn
+	 *  @param pno : 조회하고자 하는 프로젝트 번호
+	 *  @return result : 해당 프로젝트의 후원자들의 수
+	 */
 	public int selectProjectBuyer(Connection conn, int pno) {
 		int result = 0;
 		
@@ -824,10 +832,38 @@ public class ProjectDao {
 		}
 		return result;
 	}
+	
+	/** 전체 심사중인 프로젝트 숫자 조회
+	 *  @param conn
+	 *  @param userNo : 조회하고자 하는 회원의 no
+	 *  @return listCount : 해당 회원의 심사중인 프로젝트 숫자
+	 */
+	public int selectTestingProjectListCount(Connection conn, int userNo) {
+		int listCount = 0;
+		
+		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+		String sql = prop.getProperty("selectTestingProjectListCount");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+
+			pstmt.setInt(1, userNo);
+			
+			rset = pstmt.executeQuery();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		return listCount;
+	}
 
 	/** 전체 진행중인 프로젝트 숫자 조회
 	 *  @param conn
-	 *  @return listCount : 전체 프로젝트 숫자
+	 *  @param userNo : 조회하고자 하는 회원의 no
+	 *  @return listCount : 해당 회원의 진행중인 프로젝트 숫자
 	 */
 	public int selectOngoingProjectListCount(Connection conn, int userNo) {
 		int listCount = 0;
@@ -850,6 +886,250 @@ public class ProjectDao {
 		}
 		return listCount;
 	}
+	
+	/** 전체 반려된 프로젝트 숫자 조회
+	 *  @param conn
+	 *  @param userNo : 조회하고자 하는 회원의 no
+	 *  @return listCount : 해당 회원의 반려된 프로젝트 숫자
+	 */
+	public int selectBanProjectListCount(Connection conn, int userNo) {
+		int listCount = 0;
+		
+		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+		String sql = prop.getProperty("selectBanProjectListCount");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
 
+			pstmt.setInt(1, userNo);
+			
+			rset = pstmt.executeQuery();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		return listCount;
+	}
+
+	/** 채팅 삽입을 처리해주는 메소드
+	 *  @param conn
+	 *  @param c : 채팅 객체 c
+	 *  @return result : 처리 결과 (1 = 성공 / 0 = 실패) 
+	 */
+	public int insertProjectChat(Connection conn, Chat c) {
+		int result = 0;
+		
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("insertProjectChat");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setString(1, c.getChatContent());
+			pstmt.setInt(2, c.getChatProjectNo());
+			pstmt.setInt(3, Integer.parseInt(c.getChatWriter()));
+			
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		return result;
+	}
+
+	/** 프로젝트의 채팅 리스트를 조회해주는 메소드
+	 *  @param conn
+	 *  @param projectNo : 조회하고자 하는 프로젝트 no
+	 *  @return list : 채팅 리스트
+	 */
+	public ArrayList<Chat> selectChatList(Connection conn, int projectNo) {
+		ArrayList<Chat> list = new ArrayList<Chat>();
+		
+		ResultSet rset = null;
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("selectChatList");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, projectNo);
+			
+			rset = pstmt.executeQuery();
+			
+			while(rset.next()) {
+				Chat c = new Chat();
+				c.setChatNo(rset.getInt("chat_no"));
+				c.setChatContent(rset.getString("chat_content"));
+				c.setChatWriter(rset.getString("chat_writer"));
+				c.setChatCreateDate(rset.getString("chat_create_date"));
+				c.setChatWriterImg(rset.getString("user_img"));
+				
+				list.add(c);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		return list;
+	}
+
+	/** 프로젝트의 옵션 정보와 결제 정보가 일치하는지 검사해주는 메소드
+	 *  @param conn
+	 *  @param pno : 조회하고자 하는 프로젝트 no
+	 *  @param amount : 결제 금액
+	 *  @return result : 조회 결과 (1 = 일치 / 0 = 불일치) 
+	 */
+	public int selectProjectOption(Connection conn, int pno, int amount) {
+		int result = 0;
+		
+		ResultSet rset = null;
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("selectProjectOption");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, pno);
+			pstmt.setInt(2, amount);
+			
+			rset = pstmt.executeQuery();
+			
+			if(rset.next()) {
+				result = rset.getInt("count");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		return result;
+	}
+
+	/** 프로젝트 후원자 정보를 추가해주는 메소드
+	 *  @param conn
+	 *  @param userNo : 추가하고자 하는 회원 번호
+	 *  @param pno : 추가하고자 하는 프로젝트 번호
+	 *  @param amount : 추가하고자 하는 후원 금액
+	 *  @return result : 처리 결과 (1 = 성공 / 0 = 실패) 
+	 */
+	public int insertProjectBuyer(Connection conn, int userNo, int pno, int amount) {
+		int result = 0;
+		
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("insertProjectBuyer");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, userNo);
+			pstmt.setInt(2, pno);
+			pstmt.setInt(3, amount);
+			
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		return 0;
+	}
+
+	/** 프로젝트의 실시간 모금액 여부를 조회해주는 메소드
+	 *  @param conn
+	 *  @param sno : 조회하고자 하는 회원 번호
+	 *  @param pno : 조회하고자 하는 프로젝트 번호
+	 *  @return result : 조회 결과 (1 = 기존 update 필요 / 0 = 신규 insert 필요) 
+	 */
+	public int selectProjectSeller(Connection conn, int sno, int pno) {
+		int result = 0;
+		
+		ResultSet rset = null;
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("selectProjectSeller");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, sno);
+			pstmt.setInt(2, pno);
+			
+			rset = pstmt.executeQuery();
+			
+			if(rset.next()) {
+				result = rset.getInt("count");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		return result;
+	}
+
+	/** 프로젝트 창작자 정보를 추가 해주는 메소드
+	 *  @param conn
+	 *  @param sno : 추가하고자 하는 회원 번호
+	 *  @param pno : 추가하고자 하는 프로젝트 번호
+	 *  @param amount : 추가하고자 하는 실시간 모금액
+	 *  @return : 처리 결과 (1 = 성공 / 0 = 실패) 
+	 */
+	public int insertProjectSeller(Connection conn, int sno, int pno, int amount) {
+		int result = 0;
+		
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("insertProjectSeller");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, sno);
+			pstmt.setInt(2, pno);
+			pstmt.setInt(3, amount);
+			
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		return 0;
+	}
+
+	/** 프로젝트 창작자 정보를 업데이트 해주는 메소드
+	 *  @param conn
+	 *  @param sno : 추가하고자 하는 회원 번호
+	 *  @param pno : 추가하고자 하는 프로젝트 번호
+	 *  @param amount : 추가하고자 하는 실시간 모금액
+	 *  @return : 처리 결과 (1 = 성공 / 0 = 실패) 
+	 */
+	public int updateProjectSeller(Connection conn, int sno, int pno, int amount) {
+		int result = 0;
+		
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("updateProjectSeller");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, amount);
+			pstmt.setInt(2, sno);
+			pstmt.setInt(3, pno);
+			
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		return 0;
+	}
 
 }
