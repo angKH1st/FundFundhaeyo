@@ -59,11 +59,11 @@
 							<div class="project_order_content_gift_row1">
 								<div class="project_order_content_gift_row1_col1 fl">선물 옵션</div>
 								<div class="project_order_content_gift_row1_col2 fl">
-									<input type="radio" id="optionAmount1" name="group1" value="<%= (int)(p.getProjectPrice() * 0.1) %>" checked>
+									<input type="radio" id="1" name="group1" value="<%= (int)(p.getProjectPrice() * 0.1) %>" checked>
 								    <label for="option1">옵션1. 상품 1개</label>
-								    <input type="radio" id="optionAmount2" name="group1" value="<%= (int)(p.getProjectPrice() * 0.5) %>">
+								    <input type="radio" id="2" name="group1" value="<%= (int)(p.getProjectPrice() * 0.5) %>">
 								    <label for="option2">옵션2. 상품 3개</label>
-								    <input type="radio" id="optionAmount3" name="group1" value="<%= p.getProjectPrice() %>">
+								    <input type="radio" id="3" name="group1" value="<%= p.getProjectPrice() %>">
 								    <label for="option3">옵션3. 상품 5개 + 선물 포장</label>
 								</div>
 							</div>

@@ -12,7 +12,7 @@ import com.kh.semi1st.project.model.service.ProjectService;
 /**
  * Servlet implementation class InsertMemberOrderController
  */
-@WebServlet("/paySuccess.me")
+@WebServlet("/insertOrder.me")
 public class InsertMemberOrderController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -35,7 +35,8 @@ public class InsertMemberOrderController extends HttpServlet {
 		int pno = Integer.parseInt(request.getParameter("pno"));
 		int sno = Integer.parseInt(request.getParameter("sno"));
 		int amount = Integer.parseInt(request.getParameter("amount"));
-		String optionAmount = request.getParameter("option");
+		int option = Integer.parseInt(request.getParameter("option"));
+		int method = Integer.parseInt(request.getParameter("method"));
 		
 		int result = 0;
 		
@@ -44,8 +45,9 @@ public class InsertMemberOrderController extends HttpServlet {
 		if(resultOption == 1) {
 			int resultB = new ProjectService().insertProjectBuyer(userNo, pno, amount);
 			int resultS = new ProjectService().updateProjectSeller(sno, pno, amount);
+			int resultOp = new ProjectService().insertProjectOrderPayment(userNo, pno, option, ordId, amount, method);
 			
-			result = resultB * resultS;
+			result = resultB * resultS * resultOp;
 		}
 		
 		response.setContentType("text/html; charset=UTF-8");

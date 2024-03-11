@@ -700,4 +700,48 @@
 		   AND SELLER_PROJECT_NO = ?
 	</entry>
 	
+	<entry key="insertProjectOrder">
+		INSERT
+		  INTO TB_ORDER
+		     (
+		       ORDER_NO
+		     , ORDER_USER_NO
+		     , ORDER_PROJECT_NO
+		     , ORDER_OPTION_NO
+		     , ORDER_STATUS
+		     , ORDER_PAYMENT_NO
+		     )
+		VALUES
+		     (
+		       SEQ_ORDER_NO.NEXTVAL
+		     , ?
+		     , ?
+		     , ?
+		     , 'Y'
+		     , ?
+		     )
+	</entry>
+	
+	<entry key="insertProjectPayment">
+		INSERT
+		  INTO TB_PAYMENT
+		     (
+		       PAYMENT_NO
+		     , PAYMENT_USER_NO
+		     , PAYMENT_PROJECT_NO
+		     , PAYMENT_AMOUNT
+		     , PAYMENT_METHOD
+		     , PAYMENT_STATUS
+		     )
+		VALUES
+		     (
+		       ?
+		     , ?
+		     , ?
+		     , ?
+		     , ?
+		     , 'Y'
+		     )
+	</entry>
+	
 </properties>

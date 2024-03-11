@@ -1038,7 +1038,7 @@ public class ProjectDao {
 		} finally {
 			close(pstmt);
 		}
-		return 0;
+		return result;
 	}
 
 	/** 프로젝트의 실시간 모금액 여부를 조회해주는 메소드
@@ -1100,7 +1100,7 @@ public class ProjectDao {
 		} finally {
 			close(pstmt);
 		}
-		return 0;
+		return result;
 	}
 
 	/** 프로젝트 창작자 정보를 업데이트 해주는 메소드
@@ -1129,7 +1129,71 @@ public class ProjectDao {
 		} finally {
 			close(pstmt);
 		}
-		return 0;
+		return result;
+	}
+
+	/** 주문 정보를 추가해주는 메소드
+	 *  @param conn
+	 *  @param userNo : 추가하고자 하는 회원 번호
+	 *  @param pno : 추가하고자 하는 프로젝트 번호
+	 *  @param option : 선택한 옵션
+	 *  @param ordId : 주문 결제 번호
+	 *  @return result : 처리 결과 (1 = 성공 / 0 = 실패)
+	 */
+	public int insertProjectOrder(Connection conn, int userNo, int pno, int option, String ordId) {
+		int result = 0;
+		
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("insertProjectOrder");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, userNo);
+			pstmt.setInt(2, pno);
+			pstmt.setInt(3, option);
+			pstmt.setString(4, ordId);
+			
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		return result;
+	}
+
+	/** 주문 및 결제 정보를 추가해주는 메소드
+	 *  @param conn
+	 *  @param userNo : 추가하고자 하는 회원 번호
+	 *  @param pno : 추가하고자 하는 프로젝트 번호
+	 *  @param amount : 결제 금액
+	 *  @param method : 결제 수단 (1 = 카카오페이)
+	 *  @param ordId : 주문 결제 번호
+	 *  @return result : 처리 결과 (1 = 성공 / 0 = 실패)
+	 */
+	public int insertProjectPayment(Connection conn, int userNo, int pno, int amount, int method, String ordId) {
+		int result = 0;
+		
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("insertProjectPayment");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setString(1, ordId);
+			pstmt.setInt(2, userNo);
+			pstmt.setInt(3, pno);
+			pstmt.setInt(4, amount);
+			pstmt.setInt(5, method);
+			
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		return result;
 	}
 
 }

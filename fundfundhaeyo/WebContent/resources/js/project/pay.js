@@ -44,7 +44,7 @@ $(document).ready(function(){
 				// 결제 성공 시 로직
 				$.ajax({
 					type: "post",
-					url: "paySuccess.me",
+					url: "insertOrder.me",
 					data: {
 						pno: $("#pno").val(),
 						uno: $("#uno").val(),
@@ -52,7 +52,8 @@ $(document).ready(function(){
 						merchant_uid: response.merchant_uid,
 						name: response.buyer_name,
 						amount: response.paid_amount,
-						option: selectedOption
+						option: selectedOption,
+						method: 1
 					},
 					success: function(result){
 						if(result == 1){

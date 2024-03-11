@@ -430,4 +430,28 @@ public class ProjectService {
 		return result;
 	}
 
+	/** 주문 및 결제 정보를 추가해주는 메소드
+	 *  @param userNo : 추가하고자 하는 회원 번호
+	 *  @param pno : 추가하고자 하는 프로젝트 번호
+	 *  @param option : 선택한 옵션
+	 *  @param ordId : 주문 결제 번호
+	 *  @param amount : 결제 금액
+	 *  @param method : 결제 수단 (1 = 카카오페이)
+	 *  @return result : 처리 결과 (1 = 성공 / 0 = 실패) 
+	 */
+	public int insertProjectOrderPayment(int userNo, int pno, int option, String ordId, int amount, int method) {
+		Connection conn = getConnection();
+		
+		int result1 = new ProjectDao().insertProjectOrder(conn, userNo, pno, option, ordId);
+		int result2 = new ProjectDao().insertProjectPayment(conn, userNo, pno, amount, method, ordId);
+		
+		if(result1 > 0 && result2 > 0) {
+			commit(conn);
+		}else {
+			rollback(conn);
+		}
+		
+		return result1 * result2;
+	}
+
 }
