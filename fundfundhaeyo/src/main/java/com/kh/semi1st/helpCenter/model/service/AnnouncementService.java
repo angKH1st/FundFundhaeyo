@@ -1,9 +1,6 @@
 package com.kh.semi1st.helpCenter.model.service;
 
-import static com.kh.semi1st.common.JDBCTemplate.close;
-import static com.kh.semi1st.common.JDBCTemplate.commit;
-import static com.kh.semi1st.common.JDBCTemplate.getConnection;
-import static com.kh.semi1st.common.JDBCTemplate.rollback;
+import static com.kh.semi1st.common.JDBCTemplate.*;
 
 import java.sql.Connection;
 import java.util.ArrayList;

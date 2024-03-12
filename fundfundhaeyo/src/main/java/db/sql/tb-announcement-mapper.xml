@@ -79,5 +79,4 @@
 		  FROM TB_ANNOUNCEMENT
 		 WHERE ANNOUNCEMENT_NO = ? + 1
 	</entry>
-	
 </properties>

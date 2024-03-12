@@ -1,29 +1,26 @@
 package com.kh.semi1st.project.controller;
 
 import java.io.IOException;
-import java.util.ArrayList;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.kh.semi1st.member.model.service.MemberService;
+import com.google.gson.Gson;
 import com.kh.semi1st.project.model.service.ProjectService;
-import com.kh.semi1st.project.model.vo.Project;
 
 /**
- * Servlet implementation class ProjectSearchController
+ * Servlet implementation class selectProjectShareCountController
  */
-@WebServlet("/searchPage.pr")
-public class ProjectSearchController extends HttpServlet {
+@WebServlet("/selectShareCount.pr")
+public class selectProjectShareCountController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ProjectSearchController() {
+    public selectProjectShareCountController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -32,16 +29,11 @@ public class ProjectSearchController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setCharacterEncoding("utf-8");
+		int projectNo = Integer.parseInt(request.getParameter("projectNo"));
+		int share = new ProjectService().selectProjectShareCount(projectNo);
 		
-		String keyword = request.getParameter("keyword");
-			
-		ArrayList<Project> list = new ProjectService().searchPageList(keyword);
-		
-		request.setAttribute("list", list);
-		request.getRequestDispatcher("views/project/projectSearchView.jsp").forward(request, response);
-
-		
+		response.setContentType("application/json; charset=UTF-8");
+        new Gson().toJson(share, response.getWriter());
 	}
 
 	/**

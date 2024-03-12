@@ -1190,13 +1190,17 @@ public class ProjectDao {
 		return result;
 	}
 	
-	
+	/** 프로젝트 검색해주는 메소드 
+	 *  @param conn
+	 *  @param keyword : 검색하고자 하는 키워드
+	 *  @return list : 검색된 프로젝트
+	 */
 	public ArrayList<Project> searchPageList(Connection conn, String keyword) {
 		ArrayList<Project> list = new ArrayList<Project>();
 		PreparedStatement pstmt = null;
 		ResultSet rset = null;
 			
-		String sql = prop.getProperty("searchPage");
+		String sql = prop.getProperty("searchPageList");
 		
 		try {
 			pstmt = conn.prepareStatement(sql); 
@@ -1214,6 +1218,7 @@ public class ProjectDao {
 				
 				pr.setProjectFunding(rset.getInt("funding"));
 				pr.setProjectCategoryName(rset.getString("pj_category_name"));
+				pr.setProjectCategoryNo(rset.getInt("pj_category_no"));
 				pr.setProjectNo(rset.getInt("project_no"));
 				pr.setProjectTitle(rset.getString("project_title"));
 				pr.setProjectContent(rset.getString("project_content"));
@@ -1225,7 +1230,6 @@ public class ProjectDao {
 			}
 
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
 			close(rset);
@@ -1234,6 +1238,86 @@ public class ProjectDao {
 		return list;
 		
 	}
+
+	/** 프로젝트의 공유 횟수를 조회해주는 메소드
+	 *  @param conn
+	 *  @param projectNo : 조회하고자 하는 프로젝트 번호
+	 *  @return result : 공유 횟수 조회 결과
+	 */
+	public int selectProjectShareCount(Connection conn, int projectNo) {
+		int result = 0;
+		
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("selectProjectShareCount");
+		ResultSet rset = null;
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, projectNo);
+			
+			rset = pstmt.executeQuery();
+			
+			if(rset.next()) {
+				result = rset.getInt("count");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		return result;
+	}
 	
+	/** 프로젝트의 공유 횟수를 추가해주는 메소드
+	 *  @param conn
+	 *  @param projectNo : 증가하고자 하는 프로젝트 번호
+	 *  @return result : 처리 결과 (1 = 성공 / 0 = 실패)
+	 */
+	public int insertProjectShareCount(Connection conn, int projectNo) {
+		int result = 0;
+		
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("insertProjectShareCount");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, projectNo);
+			
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		return result;
+	}
+
+	/** 프로젝트의 공유 횟수를 업데이트해주는 메소드
+	 *  @param conn
+	 *  @param projectNo : 증가하고자 하는 프로젝트 번호
+	 *  @return result : 처리 결과 (1 = 성공 / 0 = 실패)
+	 */
+	public int updateProjectShareCount(Connection conn, int projectNo) {
+		int result = 0;
+		
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("updateProjectShareCount");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, projectNo);
+			
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		return result;
+	}
 
 }

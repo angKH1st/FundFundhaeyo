@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="selectQNAListCount">
+		SELECT
+		       COUNT(*) count
+		  FROM TB_QNA
+		 WHERE QNA_STATUS = 'Y'
+	</entry>
+
+	<entry key="selectQNALimitList">
+		SELECT *
+		  FROM (
+		        SELECT ROWNUM RNUM, E.*
+		          FROM (
+		                SELECT
+						       QNA_NO
+						     , USER_NICKNAME
+						     , QNA_TITLE
+						     , QNA_CONTENT
+						     , QNA_COUNT
+						     , QNA_CREATE_DATE
+						     , QNA_MODIFY_DATE
+						     , QNA_ANSWER_STATUS
+						  FROM TB_QNA
+						  JOIN TB_MEMBER ON (USER_NO = QNA_WRITER)
+						 WHERE QNA_STATUS = 'Y'
+						 ORDER
+						    BY QNA_NO DESC
+		                 ) E 
+		       ) 
+		 WHERE RNUM BETWEEN ? AND ?
+	</entry>
+	
+	<entry key="increaseQNACount">
+		UPDATE 
+		       TB_QNA
+		   SET QNA_COUNT = QNA_COUNT + 1
+		 WHERE QNA_NO = ?
+		   AND QNA_STATUS = 'Y'
+	</entry>
+</properties>

@@ -108,7 +108,7 @@
 								</tr>
 								<tr>
 									<td>결제</td>
-									<td>목표금액 달성시 <%= df.format(p.getProjectPaymentBuyer()) %> 에 결제 진행</td>
+									<td><%= df.format(p.getProjectPaymentBuyer()) %> 까지 결제 진행</td>
 								</tr>
 							</table>
 						</div>
@@ -128,9 +128,9 @@
 								<div class="project_detail_top_info_row2_btn1_num"><%= liker %></div>
 							</div>
 							<% } %>
-							<div class="project_detail_top_info_row2_btn2 br5 brlg fl">
+							<div class="project_detail_top_info_row2_btn2 br5 brlg fl share" data-projectNo="<%= p.getProjectNo() %>" onclick="sharePage();">
 								<div class="project_detail_top_info_row2_btn2_icon"><i class="fa-solid fa-share-nodes"></i></div>
-								<div class="project_detail_top_info_row2_btn2_num">222</div>
+								<div class="project_detail_top_info_row2_btn2_num shareCnt"></div>
 							</div>
 							<% if(loginUser != null) { %>
 								<% if(loginUser.getUserNo() != Integer.parseInt(p.getProjectSeller())){ %>

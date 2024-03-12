@@ -44,7 +44,7 @@ public class AnnouncementCenterController extends HttpServlet {
 		listCount = new AnnouncementService().selectAnnouncementListCount();
 		currentPage = Integer.parseInt(request.getParameter("cpage"));
 		pageLimit = 5;
-		boardLimit = 15;
+		boardLimit = 10;
 		
 		maxPage = (int)Math.ceil((double)listCount / boardLimit);
 		startPage = ((currentPage - 1) / pageLimit) * pageLimit + 1;

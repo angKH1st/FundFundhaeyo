@@ -452,9 +452,9 @@ public class ProjectService {
 		return result1 * result2;
 	}
 	
-	/** 검색 
-	 * @param m
-	 * @return
+	/** 프로젝트 검색해주는 메소드 
+	 *  @param keyword : 검색하고자 하는 키워드
+	 *  @return list : 검색된 프로젝트
 	 */
 	public ArrayList<Project> searchPageList(String keyword) {
 		Connection conn = getConnection();
@@ -464,6 +464,41 @@ public class ProjectService {
 		close(conn);
 		
 		return list;
+	}
+
+	/** 프로젝트의 공유 횟수를 조회해주는 메소드
+	 *  @param projectNo : 조회하고자 하는 프로젝트 번호
+	 *  @return result : 공유 횟수 조회 결과
+	 */
+	public int selectProjectShareCount(int projectNo) {
+		Connection conn = getConnection();
+		
+		int result = new ProjectDao().selectProjectShareCount(conn, projectNo);
+		
+		close(conn);
+		
+		return result;
+	}
+
+	/** 프로젝트의 공유 횟수를 증가해주는 메소드
+	 *  @param projectNo : 증가하고자 하는 프로젝트 번호
+	 *  @return result : 처리 결과 (1 = 성공 / 0 = 실패)
+	 */
+	public int updateProjectShareCount(int projectNo) {
+		Connection conn = getConnection();
+		
+		int result = 0;
+		
+		int nowCnt = new ProjectDao().selectProjectShareCount(conn, projectNo);
+		if(nowCnt == 0) {
+			result = new ProjectDao().insertProjectShareCount(conn, projectNo);
+		}else {
+			result = new ProjectDao().updateProjectShareCount(conn, projectNo);
+		}
+		
+		close(conn);
+		
+		return result;
 	}
 
 }

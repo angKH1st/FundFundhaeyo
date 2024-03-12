@@ -42,7 +42,6 @@
 		                <li><a href="<%= request.getContextPath() %>/moveToLikes.me?cpage=1">찜 목록</a></li>
 		                <li><a href="<%= request.getContextPath() %>/moveToMemberNotices.no?cpage=1&type=1">알림 목록</a></li>
 		                <li><a href="#">최근 본 프로젝트</a></li>
-		                <li><a href="#">채팅</a></li>
 		                <li><a href="#">Q&A</a></li>
 		            </ul>
 		        </li>

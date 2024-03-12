@@ -12,7 +12,7 @@ $(function() {
 
 	setInterval(selectChatList, 1000); // 1초에 한번씩 채팅목록 조회
 	}else{
-		$(".project_detail_chat_middle").html("로그인 후 이용 가능합니다.");
+		$(".project_detail_chat_middle").html("<div class=\"project_detail_chat_middle_none\">로그인 후 이용 가능합니다.</div>");
 	}
 })
 
@@ -25,12 +25,12 @@ function insertChat() {
 	        },
 		type: "post",
 		success: function(result) {
-			if (result > 0) { // 채팅 작성 성공 => 갱신된 댓글 리스트 조회
+			if (result > 0) { // 채팅 작성 성공 => 갱신된 채팅 리스트 조회
 				selectChatList();
 				$("#chatInput").val("");
 			}
 		}, error: function() {
-			console.log("채팅 작성 실패");
+			alert("채팅 작성에 실패했습니다.");
 		}
 	})
 }
@@ -90,8 +90,64 @@ function selectChatList() {
 	});
 }
 
+function sharePage(){
+	const shareObject = {
+		title: "뻔뻔해요 상품 페이지 입니다. 지금 후원에 참여하세요! 😘",
+		text: "뻔뻔해요 상품 페이지 입니다. 지금 후원에 참여하세요! 😘",
+		url: window.location.href
+	};
+	
+	if(navigator.share){
+		navigator
+		.share(shareObject)
+		.then(() => {
+		})
+		.catch((error) => {
+			alert('공유하기 실패')
+		})
+	}else{
+		alert('페이지 공유를 지원하지 않습니다.')
+	}
+}
+
 $(document).ready(function() {
-	// 페이지가 로드되었을 때 각 프로젝트에 대한 '좋아요' 상태를 조회
+	// 페이지가 로드되었을 때 프로젝트에 대한 '공유' 횟수를 조회
+	$('.share').each(function(){
+		var $this = $(this);
+		var $thisCnt = $(".shareCnt");
+		var projectNo = $this.data('projectno')
+		
+		$.ajax({
+			url: '/fund/selectShareCount.pr',
+			type: 'GET',
+			data: {
+				projectNo: projectNo
+			},
+			success: function(share){
+				$thisCnt.text(share);
+			}
+		})
+	})
+	
+	// '공유' 버튼을 클릭했을 때 '공유' 상태를 업데이트
+	$(document).on("click", ".share", function() {
+		var $this = $(this);
+		var $thisCnt = $(".shareCnt");
+		var projectNo = $this.data("projectno");
+		
+		$.ajax({
+			url: '/fund/updateShareCount.pr',
+			type: 'GET',
+			data: {
+				projectNo: projectNo
+			},
+			success: function(share){
+				$thisCnt.text(share);
+			}
+		})
+	});
+	
+	// 페이지가 로드되었을 때 프로젝트에 대한 '좋아요' 상태를 조회
 	$('.likes').each(function() {
 		var $this = $(this);
 		var projectNo = $this.data('projectno');

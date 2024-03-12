@@ -73,6 +73,7 @@
 								<td><%= v.getAnnouncementCount() %></td>
 								<td><%= v.getAnnouncementCreateDate() %></td>
 							</tr>
+							<% } %>
 							<% for(int i = 0; i < pi.getBoardLimit() - list.size(); i++){ %>
 							<tr class="no-border">
 								<td class="no-border">&nbsp;</td>
@@ -82,7 +83,6 @@
 								<td class="no-border">&nbsp;</td>
 							</tr>
 							<% } %>
-						<% } %>
 						<% }else{ %>
 							<% for(Announcement v : list){ %>
 							<tr>
@@ -99,9 +99,6 @@
 					</tbody>					
 				</table>
 			</div>
-			
-			
-			
 			
 			<%-- 페이징바 --%>
 			<div class="announcement_center_main_bottom">

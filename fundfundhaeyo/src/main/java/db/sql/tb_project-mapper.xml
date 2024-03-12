@@ -744,7 +744,7 @@
 		     )
 	</entry>
 	
-	<entry key="searchPage">
+	<entry key="searchPageList">
 		SELECT
 			   PROJECT_NO
 		     , PROJECT_TITLE
@@ -754,6 +754,7 @@
 		     , ATTACHMENT_PATH || ATTACHMENT_UPDATE_NAME "PROJECT_IMG"
 		     , TRUNC(SELLER_FUNDING / PROJECT_PRICE * 100) "FUNDING"
 		     , PJ_CATEGORY_NAME 
+		     , PJ_CATEGORY_NO
 		  FROM TB_PROJECT
 		  JOIN TB_ATTACHMENT ON (PROJECT_NO = ATTACHMENT_PROJECT_NO)
 		  JOIN TB_SELLER ON (PROJECT_NO = SELLER_PROJECT_NO)
@@ -765,6 +766,33 @@
 		    OR PROJECT_TAG LIKE '%' ||?|| '%'
 		    )
 		   AND PROJECT_STATUS = 'Y'
+	</entry>
+	
+	<entry key="selectProjectShareCount">
+		SELECT
+		       SHARE_COUNT "COUNT"
+		  FROM TB_SHARE
+		 WHERE SHARE_PROJECT_NO = ?
+	</entry>
+	
+	<entry key="updateProjectShareCount">
+		UPDATE TB_SHARE
+		   SET SHARE_COUNT = SHARE_COUNT + 1
+		 WHERE SHARE_PROJECT_NO = ?
+	</entry>
+	
+	<entry key="insertProjectShareCount">
+		INSERT
+		  INTO TB_SHARE
+		     (
+		       SHARE_PROJECT_NO
+		     , SHARE_COUNT
+		     )
+		VALUES
+		     (
+		       ?
+		     , 1
+		     )
 	</entry>
 	
 </properties>
