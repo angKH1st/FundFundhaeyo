@@ -1,4 +1,6 @@
-package com.kh.semi1st.company.model.dao;
+package com.kh.semi1st.helpCenter.model.dao;
+
+import static com.kh.semi1st.common.JDBCTemplate.close;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -9,14 +11,13 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Properties;
 
-import static com.kh.semi1st.common.JDBCTemplate.*;
-
 import com.kh.semi1st.common.model.vo.PageInfo;
-import com.kh.semi1st.company.model.vo.Announcement;
+import com.kh.semi1st.helpCenter.model.dao.AnnouncementDao;
+import com.kh.semi1st.helpCenter.model.vo.Announcement;
 
 public class AnnouncementDao {
-
-	private Properties prop = new Properties();
+	
+private Properties prop = new Properties();
 	
 	public AnnouncementDao() {
 		try {
@@ -52,7 +53,6 @@ public class AnnouncementDao {
 			close(rset);
 			close(pstmt);
 		}
-		
 		return list;
 	}
 	
@@ -93,7 +93,6 @@ public class AnnouncementDao {
 			close(rset);
 			close(pstmt);
 		}
-		
 		return list;
 	}
 
@@ -122,14 +121,13 @@ public class AnnouncementDao {
 			close(rset);
 			close(pstmt);
 		}
-		
 		return listCount;
 	}
 	
 	/** 공지사항 조회시 조회수 증가
-	 * @param conn
-	 * @param announcementNo
-	 * @return
+	 *  @param conn
+	 *  @param announcementNo
+	 *  @return
 	 */
 	public int increaseCount(Connection conn, int announcementNo) {
 		int result = 0;
@@ -142,9 +140,7 @@ public class AnnouncementDao {
 			pstmt.setInt(1, announcementNo);
 			
 			result = pstmt.executeUpdate();
-			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
 			close(pstmt);
@@ -154,9 +150,9 @@ public class AnnouncementDao {
 	
 
 	/** 공지사항 상세조회
-	 * @param conn
-	 * @param announcementNo
-	 * @return
+	 *  @param conn
+	 *  @param announcementNo
+	 *  @return
 	 */
 	public Announcement selectAnnouncement(Connection conn, int announcementNo) {
 		Announcement a = null;
@@ -179,9 +175,7 @@ public class AnnouncementDao {
 						             rset.getInt("announcement_count"),
 						             rset.getDate("announcement_create_date"));
 			}
-			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
 			close(rset);
@@ -191,9 +185,9 @@ public class AnnouncementDao {
 	}
 	
 	/** 공지사항 상세조회 이전버튼
-	 * @param conn
-	 * @param announcementNo
-	 * @return
+	 *  @param conn
+	 *  @param announcementNo
+	 *  @return
 	 */
 	public Announcement selectAnnouncementBefore(Connection conn, int announcementNo) {
 		Announcement before = null;
@@ -212,9 +206,7 @@ public class AnnouncementDao {
 				before = new Announcement(rset.getInt("announcement_no"),
 										  rset.getString("announcement_title")); 
 			}
-			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
 			close(rset);
@@ -224,9 +216,9 @@ public class AnnouncementDao {
 	}
 	
 	/** 공지사항 상세조회 다음버튼
-	 * @param conn
-	 * @param announcementNo
-	 * @return
+	 *  @param conn
+	 *  @param announcementNo
+	 *  @return
 	 */
 	public Announcement selectAnnouncementAfter(Connection conn, int announcementNo) {
 		Announcement after = null;
@@ -245,9 +237,7 @@ public class AnnouncementDao {
 				after = new Announcement(rset.getInt("announcement_no"),
 						 				 rset.getString("announcement_title"));
 			}
-			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
 			close(rset);
@@ -255,4 +245,5 @@ public class AnnouncementDao {
 		}
 		return after;
 	}
+
 }

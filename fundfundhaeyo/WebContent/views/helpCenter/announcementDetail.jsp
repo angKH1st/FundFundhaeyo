@@ -1,4 +1,4 @@
-<%@page import="com.kh.semi1st.company.model.vo.Announcement"%>
+<%@page import="com.kh.semi1st.helpCenter.model.vo.Announcement"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%

@@ -3,16 +3,16 @@ package com.kh.semi1st.project.model.dao;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Properties;
 
 import com.kh.semi1st.common.model.vo.PageInfo;
 import com.kh.semi1st.member.model.vo.Attachment;
+import com.kh.semi1st.member.model.vo.Order;
+import com.kh.semi1st.member.model.vo.Payment;
 import com.kh.semi1st.project.model.vo.Chat;
 import com.kh.semi1st.project.model.vo.PjCategory;
 import com.kh.semi1st.project.model.vo.Project;
@@ -1134,13 +1134,10 @@ public class ProjectDao {
 
 	/** 주문 정보를 추가해주는 메소드
 	 *  @param conn
-	 *  @param userNo : 추가하고자 하는 회원 번호
-	 *  @param pno : 추가하고자 하는 프로젝트 번호
-	 *  @param option : 선택한 옵션
-	 *  @param ordId : 주문 결제 번호
+	 *  @param order : 주문 정보
 	 *  @return result : 처리 결과 (1 = 성공 / 0 = 실패)
 	 */
-	public int insertProjectOrder(Connection conn, int userNo, int pno, int option, String ordId) {
+	public int insertProjectOrder(Connection conn, Order o) {
 		int result = 0;
 		
 		PreparedStatement pstmt = null;
@@ -1149,10 +1146,10 @@ public class ProjectDao {
 		try {
 			pstmt = conn.prepareStatement(sql);
 			
-			pstmt.setInt(1, userNo);
-			pstmt.setInt(2, pno);
-			pstmt.setInt(3, option);
-			pstmt.setString(4, ordId);
+			pstmt.setInt(1, o.getOrderUserNo());
+			pstmt.setInt(2, o.getOrderProjectNo());
+			pstmt.setInt(3, o.getOrderOptionNo());
+			pstmt.setString(4, o.getOrderPaymentNo());
 			
 			result = pstmt.executeUpdate();
 		} catch (SQLException e) {
@@ -1165,14 +1162,11 @@ public class ProjectDao {
 
 	/** 주문 및 결제 정보를 추가해주는 메소드
 	 *  @param conn
-	 *  @param userNo : 추가하고자 하는 회원 번호
-	 *  @param pno : 추가하고자 하는 프로젝트 번호
-	 *  @param amount : 결제 금액
-	 *  @param method : 결제 수단 (1 = 카카오페이)
-	 *  @param ordId : 주문 결제 번호
+	 *  @param o : 주문 정보
+	 *  @param p : 결제 정보
 	 *  @return result : 처리 결과 (1 = 성공 / 0 = 실패)
 	 */
-	public int insertProjectPayment(Connection conn, int userNo, int pno, int amount, int method, String ordId) {
+	public int insertProjectPayment(Connection conn, Order o, Payment p) {
 		int result = 0;
 		
 		PreparedStatement pstmt = null;
@@ -1181,11 +1175,11 @@ public class ProjectDao {
 		try {
 			pstmt = conn.prepareStatement(sql);
 			
-			pstmt.setString(1, ordId);
-			pstmt.setInt(2, userNo);
-			pstmt.setInt(3, pno);
-			pstmt.setInt(4, amount);
-			pstmt.setInt(5, method);
+			pstmt.setString(1, o.getOrderPaymentNo());
+			pstmt.setInt(2, o.getOrderUserNo());
+			pstmt.setInt(3, o.getOrderProjectNo());
+			pstmt.setInt(4, p.getPaymentAmount());
+			pstmt.setInt(5, p.getPaymentMethod());
 			
 			result = pstmt.executeUpdate();
 		} catch (SQLException e) {

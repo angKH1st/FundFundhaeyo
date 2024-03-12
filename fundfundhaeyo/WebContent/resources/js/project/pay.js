@@ -8,6 +8,7 @@ $(document).ready(function(){
 	var numericValue = parseInt(totalPriceText.replace(/[^0-9]/g, ''), 10);
 	var projectName = $(".project_order_top_col2_row2").text();
 	var selectedOption;
+	var method;
 	
 	$("input[name='group1']").eq(0).prop("checked", true).trigger("change");
     selectedOption = $("input[name='group1']:checked").attr('id');
@@ -35,8 +36,10 @@ $(document).ready(function(){
         
         if(selectedPaymentMethod === "kakaopay") {
 			params.pg = "kakaopay.TC0ONETIME";
-		} else if(selectedPaymentMethod === "naverpay") {
-			params.pg = "naverpay";
+			method = 1;
+		} else if(selectedPaymentMethod === "tosspay") {
+			params.pg = "tosspayments.tosstest";
+			method = 2;
 		}
 		
 		IMP.request_pay(params, function(response) {
@@ -53,7 +56,7 @@ $(document).ready(function(){
 						name: response.buyer_name,
 						amount: response.paid_amount,
 						option: selectedOption,
-						method: 1
+						method: method
 					},
 					success: function(result){
 						if(result == 1){
@@ -75,6 +78,7 @@ $(document).ready(function(){
 	payButton.on("click", onClickPay);
 });
 
+/* 결제 ID 생성용 */
 function generateMerchantUID() {
 	const now = new Date();
 	const year = now.getFullYear();

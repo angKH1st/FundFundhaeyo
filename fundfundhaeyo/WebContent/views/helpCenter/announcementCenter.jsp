@@ -1,5 +1,5 @@
 <%@page import="com.kh.semi1st.common.model.vo.*"%>
-<%@page import="com.kh.semi1st.company.model.vo.*"%>
+<%@page import="com.kh.semi1st.helpCenter.model.vo.*"%>
 <%@page import="java.util.*"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>

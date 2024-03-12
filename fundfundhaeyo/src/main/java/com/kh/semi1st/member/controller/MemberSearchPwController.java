@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.kh.semi1st.member.model.service.MemberService;
-import com.kh.semi1st.member.model.vo.Member;
 
 /**
  * Servlet implementation class MemberSearchPwController

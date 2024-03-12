@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.kh.semi1st.member.model.vo.Order;
+import com.kh.semi1st.member.model.vo.Payment;
 import com.kh.semi1st.project.model.service.ProjectService;
 
 /**
@@ -38,6 +40,9 @@ public class InsertMemberOrderController extends HttpServlet {
 		int option = Integer.parseInt(request.getParameter("option"));
 		int method = Integer.parseInt(request.getParameter("method"));
 		
+		Order o = new Order(userNo, pno, option, ordId);
+		Payment p = new Payment(ordId, userNo, pno, amount, method);
+		
 		int result = 0;
 		
 		int resultOption = new ProjectService().selectProjectOption(pno, amount);
@@ -45,7 +50,7 @@ public class InsertMemberOrderController extends HttpServlet {
 		if(resultOption == 1) {
 			int resultB = new ProjectService().insertProjectBuyer(userNo, pno, amount);
 			int resultS = new ProjectService().updateProjectSeller(sno, pno, amount);
-			int resultOp = new ProjectService().insertProjectOrderPayment(userNo, pno, option, ordId, amount, method);
+			int resultOp = new ProjectService().insertProjectOrderPayment(o, p);
 			
 			result = resultB * resultS * resultOp;
 		}

@@ -10,12 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.json.simple.JSONArray;
-
 import com.google.gson.Gson;
 import com.kh.semi1st.common.model.vo.PageInfo;
-import com.kh.semi1st.company.model.service.AnnouncementService;
-import com.kh.semi1st.company.model.vo.Announcement;
 import com.kh.semi1st.member.model.service.MemberService;
 import com.kh.semi1st.member.model.vo.Member;
 

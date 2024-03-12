@@ -1,7 +1,6 @@
 package com.kh.semi1st.member.controller;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,9 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.google.gson.Gson;
 import com.kh.semi1st.member.model.service.MemberService;
-import com.kh.semi1st.member.model.vo.Member;
 
 /**
  * Servlet implementation class MemberSearchIdController

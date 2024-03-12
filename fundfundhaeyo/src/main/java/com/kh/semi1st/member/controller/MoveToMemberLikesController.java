@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.kh.semi1st.common.model.vo.PageInfo;
-import com.kh.semi1st.company.model.service.AnnouncementService;
 import com.kh.semi1st.member.model.service.MemberService;
 import com.kh.semi1st.member.model.vo.Member;
 import com.kh.semi1st.project.model.service.ProjectService;

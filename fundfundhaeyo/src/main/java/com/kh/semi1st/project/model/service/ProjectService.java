@@ -7,6 +7,8 @@ import static com.kh.semi1st.common.JDBCTemplate.*;
 
 import com.kh.semi1st.common.model.vo.PageInfo;
 import com.kh.semi1st.member.model.vo.Attachment;
+import com.kh.semi1st.member.model.vo.Order;
+import com.kh.semi1st.member.model.vo.Payment;
 import com.kh.semi1st.project.model.dao.ProjectDao;
 import com.kh.semi1st.project.model.vo.Chat;
 import com.kh.semi1st.project.model.vo.PjCategory;
@@ -431,19 +433,15 @@ public class ProjectService {
 	}
 
 	/** 주문 및 결제 정보를 추가해주는 메소드
-	 *  @param userNo : 추가하고자 하는 회원 번호
-	 *  @param pno : 추가하고자 하는 프로젝트 번호
-	 *  @param option : 선택한 옵션
-	 *  @param ordId : 주문 결제 번호
-	 *  @param amount : 결제 금액
-	 *  @param method : 결제 수단 (1 = 카카오페이)
+	 *  @param o : 주문 정보
+	 *  @param p : 결제 정보
 	 *  @return result : 처리 결과 (1 = 성공 / 0 = 실패) 
 	 */
-	public int insertProjectOrderPayment(int userNo, int pno, int option, String ordId, int amount, int method) {
+	public int insertProjectOrderPayment(Order o, Payment p) {
 		Connection conn = getConnection();
 		
-		int result1 = new ProjectDao().insertProjectOrder(conn, userNo, pno, option, ordId);
-		int result2 = new ProjectDao().insertProjectPayment(conn, userNo, pno, amount, method, ordId);
+		int result1 = new ProjectDao().insertProjectPayment(conn, o, p);
+		int result2 = new ProjectDao().insertProjectOrder(conn, o);
 		
 		if(result1 > 0 && result2 > 0) {
 			commit(conn);

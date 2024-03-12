@@ -7,8 +7,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.kh.semi1st.company.model.service.AnnouncementService;
-import com.kh.semi1st.company.model.vo.Announcement;
+import com.kh.semi1st.helpCenter.model.service.AnnouncementService;
+import com.kh.semi1st.helpCenter.model.vo.Announcement;
+
 
 /**
  * Servlet implementation class AnnouncementDetailController

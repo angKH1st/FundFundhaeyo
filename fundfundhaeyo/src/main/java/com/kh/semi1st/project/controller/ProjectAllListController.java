@@ -11,10 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.google.gson.Gson;
-import com.kh.semi1st.member.model.vo.Member;
 import com.kh.semi1st.project.model.service.ProjectService;
-import com.kh.semi1st.project.model.vo.PjCategory;
 import com.kh.semi1st.project.model.vo.Project;
 
 /**

@@ -1,9 +1,9 @@
-package com.kh.semi1st.company.model.vo;
+package com.kh.semi1st.helpCenter.model.vo;
 
 import java.sql.Date;
 
 public class Announcement {
-	
+
 	private int announcementNo;
 	private String announcementTitle;
 	private String announcementContent;

@@ -26,7 +26,6 @@ public class MoveToEnrollProjectIntroductionFormController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TBU
 		request.getRequestDispatcher("views/project/projectEnrollIntroductionForm.jsp").forward(request, response);
 	}
 
