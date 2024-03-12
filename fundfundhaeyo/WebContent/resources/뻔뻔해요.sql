@@ -394,34 +394,34 @@ CREATE SEQUENCE SEQ_FAQ_NO
 NOCACHE;
 
 INSERT INTO TB_FAQ
-VALUES (SEQ_FAQ_NO.NEXTVAL, '첫번째 자주묻는질문 제목입니다.', '첫번째 자주묻는질문 내용입니다.', 1, DEFAULT, '2024-02-22', '2024-02-22', DEFAULT);
+VALUES (SEQ_FAQ_NO.NEXTVAL, '회원 정보 변경은 어떻게 하나요?', '마이페이지 내 회원정보수정에서 닉네임, 이메일, 연락처 등을 언제든 변경할 수 있어요.', 1, DEFAULT, '2024-02-22', '2024-02-22', DEFAULT);
 
 INSERT INTO TB_FAQ
-VALUES (SEQ_FAQ_NO.NEXTVAL, '두번째 자주묻는질문 제목입니다.', '두번째 자주묻는질문 내용입니다.', 1, DEFAULT, '2024-02-22', '2024-02-22', DEFAULT);
+VALUES (SEQ_FAQ_NO.NEXTVAL, '참여한 펀딩은 어떻게 확인하나요?', '마이페이지 내 나의 후원에서 확인할 수 있어요.', 1, DEFAULT, '2024-02-22', '2024-02-22', DEFAULT);
 
 INSERT INTO TB_FAQ
-VALUES (SEQ_FAQ_NO.NEXTVAL, '세번째 자주묻는질문 제목입니다.', '세번째 자주묻는질문 내용입니다.', 1, DEFAULT, '2024-02-22', '2024-02-22', DEFAULT);
+VALUES (SEQ_FAQ_NO.NEXTVAL, '배송은 언제 시작되나요?', '프로젝트가 종료되고 결제완료 후 발송하기에 즉시 배송되지 않습니다. 창작자의 사정으로 인해 발송이 지연될 수도 있습니다.', 1, DEFAULT, '2024-02-22', '2024-02-22', DEFAULT);
 
 INSERT INTO TB_FAQ
-VALUES (SEQ_FAQ_NO.NEXTVAL, '네번째 자주묻는질문 제목입니다.', '네번째 자주묻는질문 내용입니다.', 1, DEFAULT, '2024-02-22', '2024-02-22', DEFAULT);
+VALUES (SEQ_FAQ_NO.NEXTVAL, '창작자와 어떻게 소통할 수 있나요?', '공개채팅을 통해 소통할 수 있습니다. 상세 페이지 내 공개채팅을 이용해주세요!', 1, DEFAULT, '2024-02-22', '2024-02-22', DEFAULT);
 
 INSERT INTO TB_FAQ
-VALUES (SEQ_FAQ_NO.NEXTVAL, '다섯번째 자주묻는질문 제목입니다.', '다섯번째 자주묻는질문 내용입니다.', 1, DEFAULT, '2024-02-22', '2024-02-22', DEFAULT);
+VALUES (SEQ_FAQ_NO.NEXTVAL, '결제 기한이 어떻게 되나요?', '펀딩 종료일로부터 1주일 이내입니다.', 1, DEFAULT, '2024-02-22', '2024-02-22', DEFAULT);
 
 INSERT INTO TB_FAQ
-VALUES (SEQ_FAQ_NO.NEXTVAL, '여섯번째 자주묻는질문 제목입니다.', '여섯번째 자주묻는질문 내용입니다.', 1, DEFAULT, '2024-02-22', '2024-02-22', DEFAULT);
+VALUES (SEQ_FAQ_NO.NEXTVAL, '펀딩 등록은 바로 가능한가요?', '심사를 거쳐, 통과한 프로젝트만 등록이 진행됩니다.', 1, DEFAULT, '2024-02-22', '2024-02-22', DEFAULT);
 
 INSERT INTO TB_FAQ
-VALUES (SEQ_FAQ_NO.NEXTVAL, '일곱번째 자주묻는질문 제목입니다.', '일곱번째 자주묻는질문 내용입니다.', 1, DEFAULT, '2024-02-22', '2024-02-22', DEFAULT);
+VALUES (SEQ_FAQ_NO.NEXTVAL, '전체 프로젝트 탭의 노출기준은 어떻게 되나요?', '전체 프로젝트 탭의 기준은 랜덤 노출입니다.', 1, DEFAULT, '2024-02-22', '2024-02-22', DEFAULT);
 
 INSERT INTO TB_FAQ
-VALUES (SEQ_FAQ_NO.NEXTVAL, '여덟번째 자주묻는질문 제목입니다.', '여덟번째 자주묻는질문 내용입니다.', 1, DEFAULT, '2024-02-22', '2024-02-22', DEFAULT);
+VALUES (SEQ_FAQ_NO.NEXTVAL, '찜하기는 무엇인가요?', '마음에 드는 프로젝트를 찜해둘 수 있는 기능입니다. 마이페이지 내 나의 활동에서 찜한 목록을 확인 가능합니다.', 1, DEFAULT, '2024-02-22', '2024-02-22', DEFAULT);
 
 INSERT INTO TB_FAQ
-VALUES (SEQ_FAQ_NO.NEXTVAL, '아홉번째 자주묻는질문 제목입니다.', '아홉번째 자주묻는질문 내용입니다.', 1, DEFAULT, '2024-02-22', '2024-02-22', DEFAULT);
+VALUES (SEQ_FAQ_NO.NEXTVAL, '프로필 사진을 변경하고 싶어요', '마이페이지 내 회원정보변경에서 사진을 변경할 수 있습니다.', 1, DEFAULT, '2024-02-22', '2024-02-22', DEFAULT);
 
 INSERT INTO TB_FAQ
-VALUES (SEQ_FAQ_NO.NEXTVAL, '열번째 자주묻는질문 제목입니다.', '열번째 자주묻는질문 내용입니다.', 1, DEFAULT, '2024-02-22', '2024-02-22', DEFAULT);
+VALUES (SEQ_FAQ_NO.NEXTVAL, '결제수단은 어떻게 될까요?', '카카오페이와 토스페이 등을 지원합니다.', 1, DEFAULT, '2024-02-22', '2024-02-22', DEFAULT);
 --------------------------------------------------
 ----------------- PJ_CATEGORY 관련 ----------------	
 --------------------------------------------------
