@@ -1189,5 +1189,51 @@ public class ProjectDao {
 		}
 		return result;
 	}
+	
+	
+	public ArrayList<Project> searchPageList(Connection conn, String keyword) {
+		ArrayList<Project> list = new ArrayList<Project>();
+		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+			
+		String sql = prop.getProperty("searchPage");
+		
+		try {
+			pstmt = conn.prepareStatement(sql); 
+			
+			pstmt.setString(1, keyword);
+			pstmt.setString(2, keyword);
+			pstmt.setString(3, keyword);
+			pstmt.setString(4, keyword);
+			
+			
+			rset = pstmt.executeQuery();
+
+			while(rset.next()) {
+				Project pr = new Project();
+				
+				pr.setProjectFunding(rset.getInt("funding"));
+				pr.setProjectCategoryName(rset.getString("pj_category_name"));
+				pr.setProjectNo(rset.getInt("project_no"));
+				pr.setProjectTitle(rset.getString("project_title"));
+				pr.setProjectContent(rset.getString("project_content"));
+				pr.setProjectOverview(rset.getString("project_overview"));
+				pr.setProjectTag(rset.getString("project_tag"));	
+				pr.setProjectTitleImg(rset.getString("project_img"));
+						
+				list.add(pr);
+			}
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		return list;
+		
+	}
+	
 
 }

@@ -451,5 +451,19 @@ public class ProjectService {
 		
 		return result1 * result2;
 	}
+	
+	/** 검색 
+	 * @param m
+	 * @return
+	 */
+	public ArrayList<Project> searchPageList(String keyword) {
+		Connection conn = getConnection();
+		
+		ArrayList<Project> list = new ProjectDao().searchPageList(conn, keyword);
+		
+		close(conn);
+		
+		return list;
+	}
 
 }

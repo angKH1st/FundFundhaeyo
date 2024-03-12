@@ -5,7 +5,13 @@
 .blank_top{height: 15%;}
 .blank_bottom{height: 5%;}
 
+.project_search_view_outer{width:2000px; height: auto; padding: 0 300px; margin: 100px}
+.project_search_outer>div{width:100%;}
+
+
 /* 메인 영역 시작 */
 .project_search_main{height: 80%; border:1px solid blue;}
+
+.project_search_view_main{height: 800px; border:1px solid blue;}
 
 /* 메인 영역 끝 */

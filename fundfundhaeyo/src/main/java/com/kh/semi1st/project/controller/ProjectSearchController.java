@@ -1,23 +1,29 @@
 package com.kh.semi1st.project.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.kh.semi1st.member.model.service.MemberService;
+import com.kh.semi1st.project.model.service.ProjectService;
+import com.kh.semi1st.project.model.vo.Project;
+
 /**
- * Servlet implementation class MoveToProjectSearchController
+ * Servlet implementation class ProjectSearchController
  */
-@WebServlet("/moveToSearch.pr")
-public class MoveToProjectSearchController extends HttpServlet {
+@WebServlet("/searchPage.pr")
+public class ProjectSearchController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public MoveToProjectSearchController() {
+    public ProjectSearchController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -25,14 +31,20 @@ public class MoveToProjectSearchController extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	/**
-	 * 메인에서 검색 버튼 클릭 시 검색창으로 이동
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("views/project/projectSearch.jsp").forward(request, response);
+		request.setCharacterEncoding("utf-8");
+		
+		String keyword = request.getParameter("keyword");
+			
+		
+		ArrayList<Project> list = new ProjectService().searchPageList(keyword);
+		
+		
+		request.setAttribute("list", list);
+		request.getRequestDispatcher("views/project/projectSearchView.jsp").forward(request, response);
 
+		
 	}
-
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)

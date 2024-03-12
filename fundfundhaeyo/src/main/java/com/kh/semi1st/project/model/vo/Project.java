@@ -81,6 +81,16 @@ public class Project {
 		this.projectPaymentSeller = projectPaymentSeller;
 		this.projectStatus = projectStatus;
 	}
+	
+	
+
+	public Project(String projectOverview, String projectTitle, String projectContent, String projectTag) {
+		super();
+		this.projectOverview = projectOverview;
+		this.projectTitle = projectTitle;
+		this.projectContent = projectContent;
+		this.projectTag = projectTag;
+	}
 
 	public int getProjectCategoryNo() {
 		return projectCategoryNo;
