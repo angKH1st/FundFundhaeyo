@@ -38,7 +38,7 @@ $(document).ready(function(){
 			params.pg = "kakaopay.TC0ONETIME";
 			method = 1;
 		} else if(selectedPaymentMethod === "tosspay") {
-			params.pg = "tosspayments.tosstest";
+			params.pg = "tosspay";
 			method = 2;
 		}
 		
