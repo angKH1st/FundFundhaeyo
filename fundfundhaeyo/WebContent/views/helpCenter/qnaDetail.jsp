@@ -1,5 +1,11 @@
+<%@page import="com.kh.semi1st.helpCenter.model.vo.Attachment"%>
+<%@page import="com.kh.semi1st.helpCenter.model.vo.QNA"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+	QNA q = (QNA)request.getAttribute("q");
+	Attachment at = (Attachment)request.getAttribute("at");
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,8 +38,28 @@
 			</div>
 			<div class="qna_detail_main_select"><%-- 여백 --%></div>
 			<div class="qna_detail_main_content">
-			<div class="text-right">
-			</div>
+				<div class="qna_detail_main_content_inside shadow brlg br5">
+					<br>
+					<div style="height: 29px; text-align: center;">Q&A</div>
+					<div class="qna_detail_main_content_title">
+						<div class="qna_detail_title_area_title centerXY fl">제목</div>
+						<div class="qna_detail_title_area_input fl"><input type="text" name="title" value="<%= q.getQnaTitle() %>" readonly></div>
+					</div>
+					<div class="qna_detail_main_content_middle">
+						<div class="qna_detail_middle_area_title centerXY fl">내용</div>
+						<div class="qna_detail_middle_area_input fl"><textarea rows="7" cols="78" name="content" style="resize: none;" readonly><%= q.getQnaContent() %></textarea></div>
+					</div>
+					<div class="qna_detail_main_content_bottom">
+						<div class="qna_detail_main_bottom_area_title centerXY fl">첨부파일</div>
+						<div class="qna_detail_main_bottom_area_title fl"><input type="file" name="upfile"></div>
+					</div>
+					<br><br><br><br>
+					
+					<div class="qna_detail_main_content_btn centerXY">
+						<div class="qna_detail_main_content_btn1 fl"><button type="submit">작성하기</button></div>
+						<div class="qna_detail_main_content_btn2 fl"><button type="reset">취소</button></div>
+					</div>
+				</div>
 			</div>
 			
 			<div class="qna_detail_main_bottom">

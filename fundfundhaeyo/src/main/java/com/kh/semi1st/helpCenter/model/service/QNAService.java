@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 import com.kh.semi1st.common.model.vo.PageInfo;
 import com.kh.semi1st.helpCenter.model.vo.QNA;
-import com.kh.semi1st.member.model.vo.Attachment;
+import com.kh.semi1st.helpCenter.model.vo.Attachment;
 import com.kh.semi1st.helpCenter.model.dao.QNADao;
 
 public class QNAService {

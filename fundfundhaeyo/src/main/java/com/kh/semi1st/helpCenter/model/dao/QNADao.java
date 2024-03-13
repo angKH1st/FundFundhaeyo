@@ -13,7 +13,7 @@ import java.util.Properties;
 
 import com.kh.semi1st.common.model.vo.PageInfo;
 import com.kh.semi1st.helpCenter.model.vo.QNA;
-import com.kh.semi1st.member.model.vo.Attachment;
+import com.kh.semi1st.helpCenter.model.vo.Attachment;
 
 public class QNADao {
 	
@@ -85,7 +85,6 @@ private Properties prop = new Properties();
 				q.setQnaWriter(rset.getString("user_nickname"));
 				q.setQnaTitle(rset.getString("qna_title"));
 				q.setQnaContent(rset.getString("qna_content"));
-				q.setQnaCount(rset.getInt("qna_count"));
 				q.setQnaCreateDate(rset.getDate("qna_create_date"));
 				q.setQnaModifyDate(rset.getDate("qna_modify_date"));
 				q.setQnaAnswerStatus(rset.getString("qna_answer_status"));
@@ -215,7 +214,7 @@ private Properties prop = new Properties();
 				at = new Attachment();
 				at.setAttachmentNo(rset.getInt("attachment_no"));
 				at.setAttachmentOriginName(rset.getString("attachment_origin_name"));
-				at.setAttachmentUpdateName(rset.getString("update_name"));
+				at.setAttachmentUpdateName(rset.getString("attachment_update_name"));
 				at.setAttachmentPath(rset.getString("attachment_path"));
 			}
 		} catch (SQLException e) {

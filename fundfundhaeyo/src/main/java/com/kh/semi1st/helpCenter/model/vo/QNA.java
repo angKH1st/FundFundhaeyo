@@ -8,7 +8,6 @@ public class QNA {
 	private String qnaWriter;
 	private String qnaTitle;
 	private String qnaContent;
-	private int qnaCount;
 	private Date qnaCreateDate;
 	private Date qnaModifyDate;
 	private String qnaAnswerStatus;
@@ -16,14 +15,13 @@ public class QNA {
 	
 	public QNA() {}
 
-	public QNA(int qnaNo, String qnaWriter, String qnaTitle, String qnaContent, int qnaCount, Date qnaCreateDate,
-			Date qnaModifyDate, String qnaAnswerStatus, String qnaStatus) {
+	public QNA(int qnaNo, String qnaWriter, String qnaTitle, String qnaContent, Date qnaCreateDate, Date qnaModifyDate,
+			String qnaAnswerStatus, String qnaStatus) {
 		super();
 		this.qnaNo = qnaNo;
 		this.qnaWriter = qnaWriter;
 		this.qnaTitle = qnaTitle;
 		this.qnaContent = qnaContent;
-		this.qnaCount = qnaCount;
 		this.qnaCreateDate = qnaCreateDate;
 		this.qnaModifyDate = qnaModifyDate;
 		this.qnaAnswerStatus = qnaAnswerStatus;
@@ -62,14 +60,6 @@ public class QNA {
 		this.qnaContent = qnaContent;
 	}
 
-	public int getQnaCount() {
-		return qnaCount;
-	}
-
-	public void setQnaCount(int qnaCount) {
-		this.qnaCount = qnaCount;
-	}
-
 	public Date getQnaCreateDate() {
 		return qnaCreateDate;
 	}
@@ -105,7 +95,7 @@ public class QNA {
 	@Override
 	public String toString() {
 		return "QNA [qnaNo=" + qnaNo + ", qnaWriter=" + qnaWriter + ", qnaTitle=" + qnaTitle + ", qnaContent="
-				+ qnaContent + ", qnaCount=" + qnaCount + ", qnaCreateDate=" + qnaCreateDate + ", qnaModifyDate="
-				+ qnaModifyDate + ", qnaAnswerStatus=" + qnaAnswerStatus + ", qnaStatus=" + qnaStatus + "]";
+				+ qnaContent + ", qnaCreateDate=" + qnaCreateDate + ", qnaModifyDate=" + qnaModifyDate
+				+ ", qnaAnswerStatus=" + qnaAnswerStatus + ", qnaStatus=" + qnaStatus + "]";
 	}
 }

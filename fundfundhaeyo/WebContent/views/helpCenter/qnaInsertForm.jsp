@@ -57,7 +57,6 @@
 				</div>
 			</div>
 			
-			<%-- 페이징바 --%>
 			<div class="qna_insert_form_bottom">
 			</div>
 	    </div>

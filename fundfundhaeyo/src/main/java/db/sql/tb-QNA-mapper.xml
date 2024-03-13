@@ -18,7 +18,6 @@
 						     , USER_NICKNAME
 						     , QNA_TITLE
 						     , QNA_CONTENT
-						     , QNA_COUNT
 						     , QNA_CREATE_DATE
 						     , QNA_MODIFY_DATE
 						     , QNA_ANSWER_STATUS
@@ -85,6 +84,16 @@
 		  JOIN TB_MEMBER ON (USER_NO = QNA_WRITER)
 		 WHERE QNA_STATUS = 'Y'
 		   AND QNA_NO = ?
+	</entry>
+	
+	<entry key="selectAttachment">
+		SELECT
+		       ATTACHMENT_NO
+		     , ATTACHMENT_ORIGIN_NAME
+		     , ATTACHMENT_UPDATE_NAME
+		     , ATTACHMENT_PATH
+		  FROM TB_ATTACHMENT
+		 WHERE ATTACHMENT_QNA_NO = ?
 	</entry>
 	
 </properties>

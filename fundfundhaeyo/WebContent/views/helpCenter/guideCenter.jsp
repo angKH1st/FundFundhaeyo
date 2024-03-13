@@ -26,7 +26,7 @@
 			<div class="guide_center_main_navi">
 				<div class="btn-a fl"><a href="<%= contextPath %>/announcement.hp?cpage=1">공지사항</a></div>
 				<div class="btn-b fl"><a href="<%= contextPath %>/faq.hp">FAQ</a></div>
-				<div class="btn-c fl"><a href="<%= contextPath %>/qna.hp">Q&A</a></div>
+				<div class="btn-c fl"><a href="<%= contextPath %>/qna.hp?cpage=1">Q&A</a></div>
 				<div class="btn-d fl"><a style="color: skyblue;">펀딩 가이드</a></div>
 			</div>
 			<div class="guide_center_main_select"><%-- 여백 --%></div>

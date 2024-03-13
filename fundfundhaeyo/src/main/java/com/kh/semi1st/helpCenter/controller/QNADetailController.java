@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.kh.semi1st.helpCenter.model.service.QNAService;
 import com.kh.semi1st.helpCenter.model.vo.QNA;
-import com.kh.semi1st.member.model.vo.Attachment;
+import com.kh.semi1st.helpCenter.model.vo.Attachment;
 
 /**
  * Servlet implementation class QNADetailController
@@ -30,7 +30,7 @@ public class QNADetailController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		int qNo = Integer.parseInt(request.getParameter("qno"));
+		int qNo = Integer.parseInt(request.getParameter("qNo"));
 		
 		QNA q = new QNAService().selectQNA(qNo);
 		Attachment at = new QNAService().selectAttachment(qNo);
@@ -38,7 +38,7 @@ public class QNADetailController extends HttpServlet {
 		request.setAttribute("q", q);
 		request.setAttribute("at", at);
 
-		request.getRequestDispatcher("views/qna/qnaDetail.jsp").forward(request, response);
+		request.getRequestDispatcher("views/helpCenter/qnaDetail.jsp").forward(request, response);
 	}
 
 	/**
