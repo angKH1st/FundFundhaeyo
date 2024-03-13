@@ -32,11 +32,59 @@
 		 WHERE RNUM BETWEEN ? AND ?
 	</entry>
 	
-	<entry key="increaseQNACount">
-		UPDATE 
-		       TB_QNA
-		   SET QNA_COUNT = QNA_COUNT + 1
-		 WHERE QNA_NO = ?
-		   AND QNA_STATUS = 'Y'
+	<entry key="insertQNA">
+		INSERT
+		  INTO TB_QNA
+		     (
+		       QNA_NO
+		     , QNA_WRITER
+		     , QNA_TITLE
+		     , QNA_CONTENT
+		     )
+		VALUES
+		     (
+		       SEQ_QNA_NO.NEXTVAL
+		     , ?
+		     , ?
+		     , ?
+		     )
 	</entry>
+	
+	<entry key="insertAttachment">
+		INSERT
+		  INTO TB_ATTACHMENT
+		     (
+		       ATTACHMENT_NO
+		     , ATTACHMENT_QNA_NO
+		     , ATTACHMENT_ORIGIN_NAME
+		     , ATTACHMENT_UPDATE_NAME
+		     , ATTACHMENT_PATH
+		     , ATTACHMENT_LEVEL
+		     )
+		VALUES
+		     (
+		       SEQ_ATTACHMENT_NO.NEXTVAL
+		     , SEQ_QNA_NO.CURRVAL
+		     , ?
+		     , ?
+		     , ?
+		     , 1
+		     )
+	</entry>
+	
+	<entry key="selectQNA">
+		SELECT
+		       QNA_NO
+		     , USER_NICKNAME
+		     , QNA_TITLE
+		     , QNA_CONTENT
+		     , QNA_CREATE_DATE
+		     , QNA_MODIFY_DATE
+		     , QNA_ANSWER_STATUS
+		  FROM TB_QNA
+		  JOIN TB_MEMBER ON (USER_NO = QNA_WRITER)
+		 WHERE QNA_STATUS = 'Y'
+		   AND QNA_NO = ?
+	</entry>
+	
 </properties>

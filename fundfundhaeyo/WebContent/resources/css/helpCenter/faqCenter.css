@@ -8,9 +8,9 @@
 /* 메인 영역 시작 */
 .faq_center_main{height: 85%;}
 .faq_center_main>div{width: 100%;}
-.faq_center_main_top{height: 10%;}
-.faq_center_main_navi{height: 5%; border-bottom: 2px solid lightgray;}
-.faq_center_main_select{height: 1%;}
+.faq_center_main_top{height: 85px;}
+.faq_center_main_navi{height: 42.5px;}
+.faq_center_main_select{height: 8.5px;}
 .faq_center_main_content{height: 81%; padding: 50px;}
 .faq_center_main_bottom{
 	height: 4%; 
@@ -28,7 +28,7 @@
 
 .faq_center_main_navi>div{width: 25%; height: 100%; line-height:170%; font-size: 25px; font-weight: 600; text-align: center;}
 .faq_center_main_navi a{color: black; text-decoration: none; display: block;}
-.faq_center_main_navi div:hover, .faq_center_main_navi a:hover {text-decoration: none; color: lightskyblue; border-bottom: 2px solid lightgray; background-color: #f3f3f3;}
+.faq_center_main_navi div:hover, .faq_center_main_navi a:hover {text-decoration: none; color: lightskyblue;}
 
 .guide{height: 700px; margin-top: 30px;}
 .pj{

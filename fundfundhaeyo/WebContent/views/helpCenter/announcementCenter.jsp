@@ -45,6 +45,7 @@
 			</div>
 			<div class="announcement_center_main_select"><%-- 여백 --%></div>
 			<div class="announcement_center_main_content">
+			<div style="height: 29px;"><%-- 여백 --%></div>
 				<table border=1 class="announcement_list_area">
 					<thead>
 						<tr>

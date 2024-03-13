@@ -36,7 +36,6 @@
 			</div>
 			<div class="faq_center_main_select"><%-- 여백 --%></div>
 			<div class="faq_center_main_content">
-				<p>최근 수정일 : <%= list.get(0).getfAQModifyDate() %></p>
 				<div class="guide">
 					<% for(FAQ f : list) { %>
 					<h5 class="pj shadow">❓ <%= f.getfAQTitle() %></h5>

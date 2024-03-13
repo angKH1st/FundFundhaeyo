@@ -44,13 +44,20 @@
 			</div>
 			<div class="qna_center_main_select"><%-- 여백 --%></div>
 			<div class="qna_center_main_content">
+			<div class="text-right">
+				<% if(loginUser != null){ %>
+			    <a class="enrollQnaBtn" href="moveToInsertQna.hp">글쓰기</a>
+			    <% }else{ %>
+			    <a class="enrollQnaBtn" onclick="alertToLogin();">글쓰기</a>
+			    <% } %>
+			</div>
 				<table border=1 class="qna_list_area">
 					<thead>
 						<tr>
 		                    <th width="100">글번호</th>
 		                    <th>글제목</th>
+		                    <th width="100">진행상태</th>
 		                    <th width="100">작성자</th>
-		                    <th width="100">조회수</th>
 		                    <th width="130">작성일</th>
                 		</tr>
 					</thead>
@@ -59,7 +66,7 @@
 					<%-- QNA가 없을 경우 --%>
 					<% if(list.isEmpty()){ %>
 						<tr>
-							<td colspan="5">존재하는 QNA가 없습니다.</td>
+							<td colspan="6">존재하는 QNA가 없습니다.</td>
 						</tr>
 					<% }else{ %>
 						<%-- QNA가 있을 경우 --%>
@@ -68,8 +75,12 @@
 							<tr>
 								<td><%= v.getQnaNo() %></td>
 								<td><%= v.getQnaTitle() %></td>
+								<% if(v.getQnaAnswerStatus().equals("Y")){ %>
+								<td>답변완료</td>
+								<% }else{ %>
+								<td>답변대기</td>
+								<% } %>
 								<td><%= v.getQnaWriter() %></td>
-								<td><%= v.getQnaCount() %></td>
 								<td><%= v.getQnaCreateDate() %></td>
 							</tr>
 							<% } %>
@@ -87,8 +98,12 @@
 							<tr>
 								<td><%= v.getQnaNo() %></td>
 								<td><%= v.getQnaTitle() %></td>
+								<% if(v.getQnaAnswerStatus().equals("Y")){ %>
+								<td>답변완료</td>
+								<% }else{ %>
+								<td>답변대기</td>
+								<% } %>
 								<td><%= v.getQnaWriter() %></td>
-								<td><%= v.getQnaCount() %></td>
 								<td><%= v.getQnaCreateDate() %></td>
 							</tr>
 							<% } %>

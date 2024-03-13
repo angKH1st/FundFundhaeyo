@@ -7,6 +7,7 @@ import java.util.ArrayList;
 
 import com.kh.semi1st.common.model.vo.PageInfo;
 import com.kh.semi1st.helpCenter.model.vo.QNA;
+import com.kh.semi1st.member.model.vo.Attachment;
 import com.kh.semi1st.helpCenter.model.dao.QNADao;
 
 public class QNAService {
@@ -37,5 +38,60 @@ public class QNAService {
 		
 		return list;
 	}
+
+	/** QNA 등록을 처리해주는 메소드
+	 *  @param q : 등록하고자 하는 QNA
+	 *  @param at : 등록하고자 하는 첨부파일
+	 *  @return result : 처리 결과 (1 = 성공 / 0 = 실패) 
+	 */
+	public int insertQNA(QNA q, Attachment at) {
+		Connection conn = getConnection();
+		
+		int result1 = new QNADao().insertQNA(conn, q);
+		int result2 = 1;
+		
+		if(at != null) {
+			result2 = new QNADao().insertAttachment(conn, at);
+		}
+		
+		if(result1 > 0 && result2 > 0) {
+			commit(conn);
+		}else {
+			rollback(conn);
+		}
+		
+		close(conn);
+				
+		return result1 * result2;
+	}
+
+	/** QNA 상세조회를 처리해주는 메소드
+	 *  @param qNo : 조회하고자 하는 QNA no
+	 *  @return q : 조회된 QNA
+	 */
+	public QNA selectQNA(int qNo) {
+		Connection conn = getConnection();
+		
+		QNA q = new QNADao().selectQNA(conn, qNo);
+		
+		close(conn);
+		
+		return q;
+	}
+
+	/** QNA 첨부파일을 조회해주는 메소드
+	 *  @param qNo : 조회하고자 하는 QNA no
+	 *  @return at : 조회된 첨부파일
+	 */
+	public Attachment selectAttachment(int qNo) {
+		Connection conn = getConnection();
+		
+		Attachment at = new QNADao().selectAttachment(conn, qNo);
+		
+		close(conn);
+		
+		return at;
+	}
+
 
 }
