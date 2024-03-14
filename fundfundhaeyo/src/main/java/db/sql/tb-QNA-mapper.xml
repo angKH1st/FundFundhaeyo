@@ -96,4 +96,10 @@
 		 WHERE ATTACHMENT_QNA_NO = ?
 	</entry>
 	
+	<entry key="deleteQNA">
+		UPDATE TB_QNA
+		   SET QNA_STATUS = 'N'
+		 WHERE QNA_NO = ?
+	</entry>
+	
 </properties>

@@ -93,5 +93,19 @@ public class QNAService {
 		return at;
 	}
 
+	/** QNA 삭제해주는 메소드
+	 *  @param qNo : 삭제하고자 하는 QNA no
+	 *  @return result : 처리 결과 (1 = 성공 / 0 = 실패) 
+	 */
+	public int deleteQNA(int qNo) {
+		Connection conn = getConnection();
+		
+		int result = new QNADao().deleteQNA(conn, qNo);
+		
+		close(conn);
+		
+		return result;
+	}
+
 
 }

@@ -225,4 +225,29 @@ private Properties prop = new Properties();
 		}
 		return at;
 	}
+
+	/** QNA 삭제해주는 메소드
+	 *  @param conn
+	 *  @param qNo : 삭제하고자 하는 QNA no
+	 *  @return result : 처리 결과 (1 = 성공 / 0 = 실패) 
+	 */
+	public int deleteQNA(Connection conn, int qNo) {
+		int result = 0;
+		
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("deleteQNA");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, qNo);
+			
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		return result;
+	}
 }

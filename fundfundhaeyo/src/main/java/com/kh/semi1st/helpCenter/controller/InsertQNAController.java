@@ -13,7 +13,7 @@ import org.apache.tomcat.util.http.fileupload.servlet.ServletFileUpload;
 import com.kh.semi1st.common.MyFileRenamePolicy;
 import com.kh.semi1st.helpCenter.model.service.QNAService;
 import com.kh.semi1st.helpCenter.model.vo.QNA;
-import com.kh.semi1st.member.model.vo.Attachment;
+import com.kh.semi1st.helpCenter.model.vo.Attachment;
 import com.oreilly.servlet.MultipartRequest;
 
 /**

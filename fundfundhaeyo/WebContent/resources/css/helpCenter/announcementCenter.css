@@ -27,8 +27,8 @@
 .announcement_center_main_top_row2_bottom{width: 5%; margin: auto; border-top: 2px solid black;}
 
 .announcement_center_main_navi>div{width: 25%; height: 100%; line-height:170%; font-size: 25px; font-weight: 600; text-align: center;}
-.announcement_center_main_navi a{color: black; text-decoration: none; display: block;}
-.announcement_center_main_navi div:hover, .announcement_center_main_navi a:hover {text-decoration: none; color: lightskyblue;}
+.announcement_center_main_navi a{color: black; text-decoration: none; display: block; transition: transform 0.3s ease-in-out;}
+.announcement_center_main_navi div:hover, .announcement_center_main_navi a:hover {text-decoration: none; color: lightskyblue; transform: scale(1.1);}
 
 .announcement_list_area{width: 100%; height: 100%; border: none; text-align: center;}
 .announcement_list_area thead{height: 47px; border-top: 1px solid black;}
