@@ -250,4 +250,84 @@ private Properties prop = new Properties();
 		}
 		return result;
 	}
+
+	/** QNA 수정해주는 메소드
+	 *  @param conn
+	 *  @param q : 수정하고자 하는 QNA
+	 *  @return result : 처리 결과 (1 = 성공 / 0 = 실패) 
+	 */
+	public int updateQNA(Connection conn, QNA q) {
+		int result = 0;
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("updateQNA");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setString(1, q.getQnaTitle());
+			pstmt.setString(2, q.getQnaContent());
+			pstmt.setInt(3, q.getQnaNo());
+			
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		return result;
+	}
+
+	/** QNA 첨부파일 업데이트해주는 메소드
+	 *  @param conn
+	 *  @param at : 업데이트하고자 하는 첨부파일
+	 *  @return result : 처리 결과 (1 = 성공 / 0 = 실패) 
+	 */
+	public int updateAttachment(Connection conn, Attachment at) {
+		int result = 0;
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("updateAttachment");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setString(1, at.getAttachmentOriginName());
+			pstmt.setString(2, at.getAttachmentUpdateName());
+			pstmt.setString(3, at.getAttachmentPath());
+			pstmt.setInt(4, at.getAttachmentNo());
+			
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		return result;
+	}
+
+	/** QNA 첨부파일 등록해주는 메소드
+	 *  @param conn
+	 *  @param at : 업데이트하고자 하는 첨부파일
+	 *  @return result : 처리 결과 (1 = 성공 / 0 = 실패) 
+	 */
+	public int insertNewAttachment(Connection conn, Attachment at) {
+		int result = 0;
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("insertNewAttachment");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, at.getAttachmentQnaNo());
+			pstmt.setString(2, at.getAttachmentOriginName());
+			pstmt.setString(3, at.getAttachmentUpdateName());
+			pstmt.setString(4, at.getAttachmentPath());
+			
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		return result;
+	}
 }

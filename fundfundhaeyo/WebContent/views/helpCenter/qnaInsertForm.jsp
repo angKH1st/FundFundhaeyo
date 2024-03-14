@@ -39,18 +39,21 @@
 						<div class="qna_title_area_title centerXY fl">제목</div>
 						<div class="qna_title_area_input fl"><input type="text" name="title" required></div>
 					</div>
+					<div class="qna_insert_form_content_file">
+						<div class="qna_file_area_title centerXY fl">첨부파일</div>
+						<div class="qna_file_area_input fl"><input type="file" name="upfile"></div>
+					</div>
 					<div class="qna_insert_form_content_middle">
 						<div class="qna_middle_area_title centerXY fl">내용</div>
-						<div class="qna_middle_area_input fl"><textarea rows="7" cols="55" name="content" style="resize: none;" required></textarea></div>
+						<div class="qna_middle_area_input fl"><textarea rows="8" cols="97" name="content" required></textarea></div>
 					</div>
-					<div class="qna_insert_form_content_bottom">
-						<div class="qna_bottom_area_title centerXY fl">첨부파일</div>
-						<div class="qna_bottom_area_title fl"><input type="file" name="upfile"></div>
-					</div>
+					<div class="qna_insert_form_content_blank"></div>
+					<div class="qna_insert_form_content_bottom"></div>
 					<input type="hidden" name="userNo" value="<%= loginUser.getUserNo() %>">
 					<br><br><br><br>
 					
 					<div class="qna_insert_form_content_btn centerXY">
+						<div class="qna_insert_form_content-btn0 fl"><button type="button" onclick="back();">목록가기</button></div>
 						<div class="qna_insert_form_content_btn1 fl"><button type="submit">작성하기</button></div>
 						<div class="qna_insert_form_content_btn2 fl"><button type="reset">취소</button></div>
 					</div>

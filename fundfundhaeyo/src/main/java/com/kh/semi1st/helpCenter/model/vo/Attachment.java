@@ -5,7 +5,7 @@ import java.sql.Date;
 public class Attachment {
 	
 	private int attachmentNo;
-	private int attachmentUserNo;
+	private int attachmentQnaNo;
 	private String attachmentOriginName;
 	private String attachmentUpdateName;
 	private String attachmentPath;
@@ -15,11 +15,11 @@ public class Attachment {
 	
 	public Attachment() {}
 
-	public Attachment(int attachmentNo, int attachmentUserNo, String attachmentOriginName, String attachmentUpdateName,
+	public Attachment(int attachmentNo, int attachmentQnaNo, String attachmentOriginName, String attachmentUpdateName,
 			String attachmentPath, Date attachmentUploadDate, int attachmentLevel, String attachmentStatus) {
 		super();
 		this.attachmentNo = attachmentNo;
-		this.attachmentUserNo = attachmentUserNo;
+		this.attachmentQnaNo = attachmentQnaNo;
 		this.attachmentOriginName = attachmentOriginName;
 		this.attachmentUpdateName = attachmentUpdateName;
 		this.attachmentPath = attachmentPath;
@@ -36,12 +36,12 @@ public class Attachment {
 		this.attachmentNo = attachmentNo;
 	}
 
-	public int getAttachmentUserNo() {
-		return attachmentUserNo;
+	public int getAttachmentQnaNo() {
+		return attachmentQnaNo;
 	}
 
-	public void setAttachmentUserNo(int attachmentUserNo) {
-		this.attachmentUserNo = attachmentUserNo;
+	public void setAttachmentQnaNo(int attachmentQnaNo) {
+		this.attachmentQnaNo = attachmentQnaNo;
 	}
 
 	public String getAttachmentOriginName() {
@@ -94,7 +94,7 @@ public class Attachment {
 
 	@Override
 	public String toString() {
-		return "Attachment [attachmentNo=" + attachmentNo + ", attachmentUserNo=" + attachmentUserNo
+		return "Attachment [attachmentNo=" + attachmentNo + ", attachmentQnaNo=" + attachmentQnaNo
 				+ ", attachmentOriginName=" + attachmentOriginName + ", attachmentUpdateName=" + attachmentUpdateName
 				+ ", attachmentPath=" + attachmentPath + ", attachmentUploadDate=" + attachmentUploadDate
 				+ ", attachmentLevel=" + attachmentLevel + ", attachmentStatus=" + attachmentStatus + "]";

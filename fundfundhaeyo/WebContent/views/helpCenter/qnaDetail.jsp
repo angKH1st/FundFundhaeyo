@@ -58,7 +58,7 @@
 						</div>
 					</div>
 					<div class="qna_detail_main_content_middle">
-						<div class="qna_detail_middle_area_title fl">내용</div>
+						<div class="qna_detail_middle_area_title centerXY fl">내용</div>
 						<div class="qna_detail_middle_area_input fl"><span><%= q.getQnaContent() %></span></div>
 					</div>
 					<div class="qna_detail_main_content_blank"></div>

@@ -35,7 +35,7 @@
 
 .qna_detail_main_content_inside>div{width: 100%;}
 .qna_detail_main_content_title{height: 10%; padding: 0 80px;}
-.qna_detail_main_content_middle{height: 40%; padding: 10px 80px 0 80px;}
+.qna_detail_main_content_middle{height: 40%; padding: 0 80px;}
 .qna_detail_main_content_bottom{height: 10%; padding: 0 80px;}
 .qna_detail_main_content_blank{height: 10%;}
 .qna_detail_main_content_reply{height: 10%; padding: 0 80px;}
@@ -51,13 +51,15 @@
 .qna_detail_title_area_writer_input>input{width: 80.5%; height: 80%; border: none;}
 
 .qna_detail_main_content_middle>div{height: 100%; border-bottom: 0.5px solid lightgray;}
-.qna_detail_middle_area_title{width: 12.5%; text-align: center;}
-.qna_detail_middle_area_input{width: 87.5%; padding-left: 15px;}
+.qna_detail_middle_area_title{width: 12.5%; text-align: center; background-color: #f3f3f3;}
+.qna_detail_middle_area_input{width: 87.5%; padding: 10px 0 0 15px;}
 .qna_detail_title_area_input>textarea{width: 80.5%; border: none; padding-top: 5px;}
 
 .qna_detail_main_content_bottom>div{height: 100%; border-bottom: 0.5px solid lightgray;}
 .qna_detail_main_bottom_area_title{width: 12.5%; background-color: #f3f3f3;}
 .qna_detail_main_bottom_area_input{width: 87.5%; padding: 13px 0 0 15px;}
+.qna_detail_main_bottom_area_input>a{color: black;}
+.qna_detail_main_bottom_area_input>a:hover{text-decoration: none; color: black;}
 
 .qna_detail_main_content_reply>div{height: 100%;}
 .qna_detail_main_content_reply_title{width: 12.5%;}

@@ -102,4 +102,42 @@
 		 WHERE QNA_NO = ?
 	</entry>
 	
+	<entry key="updateQNA">
+		UPDATE TB_QNA
+		   SET QNA_TITLE = ?
+		     , QNA_CONTENT = ?
+		 WHERE QNA_NO = ?
+	</entry>
+	
+	<entry key="updateAttachment">
+		UPDATE
+			   TB_ATTACHMENT
+		   SET ATTACHMENT_ORIGIN_NAME = ?
+		     , ATTACHMENT_UPDATE_NAME = ?
+		     , ATTACHMENT_PATH = ?
+		 WHERE ATTACHMENT_NO = ?
+	</entry>
+	
+	<entry key="insertNewAttachment">
+		INSERT
+		  INTO TB_ATTACHMENT
+		     (
+		       ATTACHMENT_NO
+		     , ATTACHMENT_QNA_NO
+		     , ATTACHMENT_ORIGIN_NAME
+		     , ATTACHMENT_UPDATE_NAME
+		     , ATTACHMENT_PATH
+		     , ATTACHMENT_LEVEL
+		     )
+		VALUES
+		     (
+		       SEQ_ATTACHMENT_NO.NEXTVAL
+		     , ?
+		     , ?
+		     , ?
+		     , ?
+		     , 1
+		     )
+	</entry>
+	
 </properties>

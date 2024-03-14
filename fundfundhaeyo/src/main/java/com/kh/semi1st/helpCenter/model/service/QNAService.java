@@ -107,5 +107,35 @@ public class QNAService {
 		return result;
 	}
 
+	/** QNA 수정해주는 메소드
+	 *  @param q : 수정하고자 하는 QNA
+	 *  @param at : 수정하고자 하는 첨부파일
+	 *  @return result : 처리 결과 (1 = 성공 / 0 = 실패) 
+	 */
+	public int updateQNA(QNA q, Attachment at) {
+		Connection conn = getConnection();
+		
+		int result1 = new QNADao().updateQNA(conn, q);
+		
+		int result2 = 1;
+		if(at != null) {
+			if(at.getAttachmentNo() != 0) {
+				result2 = new QNADao().updateAttachment(conn, at);
+			}else {
+				result2 = new QNADao().insertNewAttachment(conn, at);
+			}
+		}
+
+		if(result1 > 0 && result2 > 0) {
+			commit(conn);
+		}else {
+			rollback(conn);
+		}
+		
+		close(conn);
+				
+		return result1 * result2;
+	}
+
 
 }

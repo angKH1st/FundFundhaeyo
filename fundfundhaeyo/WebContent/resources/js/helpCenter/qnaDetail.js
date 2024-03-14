@@ -7,3 +7,7 @@ function deleteQna() {
 		location.href = "/fund/deleteQna.hp?qNo=" + $("#qNo").val();
 	}
 }
+
+function moveToUpdate(){
+	location.href = "/fund/moveToUpdateQna.hp?qNo=" + $("#qNo").val();
+}
