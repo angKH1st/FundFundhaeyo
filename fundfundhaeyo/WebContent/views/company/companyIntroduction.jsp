@@ -1,72 +1,142 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>뻔뻔해요</title>
-<link rel="stylesheet" href="resources/css/company/companyIntroduction.css">
-</head>
-<link rel="icon" href="data:;base64,iVBORw0KGgo=">
-<body>
-	<%@ include file="../common/header.jsp" %>
-	
-	<div class="introduction_outer font_outer">
-		<div class="blank_top"><%-- 여백 --%></div>
-		
-		<div class="introduction_main brlg br5 shadow">
-			
-			<div class="title">
-				<h1>뻔뻔해요</h1>
-			</div>
-			<br><br><br>
+  <head>
+    <meta charset="UTF-8" />
+    <title>뻔뻔해요</title>
+    <link
+      rel="stylesheet"
+      href="resources/css/company/companyIntroduction.css"
+    />
+    <style>
+      .memberIntroduce {
+        width: 800px; /* 테이블의 전체 너비를 확보 */
+        border-collapse: separate; /* 테이블 셀 경계를 분리함 */
+        border-spacing: 20px;
+      }
+      .memberIntroduce td a:hover {
+        color: skyblue; /* 호버 시 바뀌길 원하는 색상으로 변경 */
+      }
+      .memberIntroduce td {
+        height: 60px;
+        padding: 20px; /* 셀 안의 내용과 테두리 간 여백 설정 */
+        text-align: center;
+        border-radius: 15px;
+        border-color: rgb(140, 140, 140);
+        border: 1px solid gray;
+      }
+      .memberIntroduce a {
+        font-display: none;
+        text-decoration: none;
+        color: gray;
+        padding-left: 10px;
+      }
+      .memberIntroduce > h4 {
+        margin: 0px;
+      }
+    </style>
+  </head>
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+  <body>
+    <%@ include file="../common/header.jsp" %>
 
-			<div class="content">
-				<table>
-					<tr>
-						<td>
-							<p>
-							아이디어를 가진 당신의 꿈을 현실로 만들어주는 크라우드펀딩 플랫폼, <br>
-							이제 아이디어가 현실로 이루어지지 못하는 아쉬움은 없습니다. <br><br>
-							
-							창의적인 아이디어가 즐비하고, 그 아이디어를 실현하고자 하는 열정이 넘치지만, 이를 현실로 만들기 <br> 
-							위한 자금이 부족하다는 아쉬움을 느낄 때가 많습니다. 이러한 아쉬움을 해소하고, 누구나 자신의 <br> 
-							아이디어를 실현할 수 있는 기회를 제공하기 위한 크라우드펀딩 사이트입니다. <br><br>
-		
-							FundFundhaeyo (뻔뻔해요)는 아이디어를 가진 사람들이 자금을 모집하고, 다양한 사람들이 <br> 
-							그 아이디어를 후원하며 함께 만들어가는 공간입니다. 사용자 친화적인 인터페이스로 사용자들이 <br> 
-							쉽고 편리하게 프로젝트를 등록하고, 찾아볼 수 있습니다. <br><br>
-		
-							또한, Q&A와 리뷰 기능을 활용하여 창작자와 후원자간의 소통이 가능하여 프로젝트를 더욱 <br> 
-							발전시킬 수 있는 기회도 제공합니다. 이렇게 함께 만들어가는 과정 속에서 창의력이 새로운 가치를 창출하고, <br> 
-							그 가치가 사회에 기여하게 되는 순환 구조를 만들어 나가고자 합니다. <br><br>
-		
-							이렇게 우리의 크라우드펀딩 사이트 FundFundhaeyo (뻔뻔해요)는 아이디어를 가진 모든 사람들이 <br> 
-							자신의 꿈을 펼칠 수 있는 장을 제공합니다. 더 이상 아이디어가 현실로 이루어지지 못하는 아쉬움은 없습니다. <br> 
-							우리의 목표는 창의적인 아이디어와 열정이 모여 새로운 가치를 창출하는 크라우드펀딩 커뮤니티를 만드는 것입니다.
-							</p>
-						</td>
-						<td colspan=2>
-							<img src="resources/image/logo.gif" width="400" height="500">
-						</td>
-					</tr>
-				</table>
-				<table>
-					<tr>
-						<td width=100>김재영</td>
-						<td width=100>어수지</td>
-						<td width=100>임정현</td>
-					</tr>
-				</table>
-			</div>
+    <div class="introduction_outer font_outer">
+      <div class="blank_top"><%-- 여백 --%></div>
 
-	    </div>
-	    
-	    <div class="blank_bottom"><%-- 여백 --%></div>
+      <div class="introduction_main brlg br5 shadow">
+        <div class="title">
+          <h1>뻔뻔해요</h1>
+        </div>
+        <br /><br /><br />
+
+        <div class="content">
+          <table>
+            <tr>
+              <td>
+                <p>
+                  아이디어를 가진 당신의 꿈을 현실로 만들어주는 크라우드펀딩
+                  플랫폼, <br />
+                  이제 아이디어가 현실로 이루어지지 못하는 아쉬움은 없습니다.
+                  <br /><br />
+
+                  창의적인 아이디어가 즐비하고, 그 아이디어를 실현하고자 하는
+                  열정이 넘치지만, 이를 현실로 만들기 <br />
+                  위한 자금이 부족하다는 아쉬움을 느낄 때가 많습니다. 이러한
+                  아쉬움을 해소하고, 누구나 자신의 <br />
+                  아이디어를 실현할 수 있는 기회를 제공하기 위한 크라우드펀딩
+                  사이트입니다. <br /><br />
+
+                  FundFundhaeyo (뻔뻔해요)는 아이디어를 가진 사람들이 자금을
+                  모집하고, 다양한 사람들이 <br />
+                  그 아이디어를 후원하며 함께 만들어가는 공간입니다. 사용자
+                  친화적인 인터페이스로 사용자들이 <br />
+                  쉽고 편리하게 프로젝트를 등록하고, 찾아볼 수 있습니다.
+                  <br /><br />
+
+                  또한, Q&A와 리뷰 기능을 활용하여 창작자와 후원자간의 소통이
+                  가능하여 프로젝트를 더욱 <br />
+                  발전시킬 수 있는 기회도 제공합니다. 이렇게 함께 만들어가는
+                  과정 속에서 창의력이 새로운 가치를 창출하고, <br />
+                  그 가치가 사회에 기여하게 되는 순환 구조를 만들어 나가고자
+                  합니다. <br /><br />
+
+                  이렇게 우리의 크라우드펀딩 사이트 FundFundhaeyo (뻔뻔해요)는
+                  아이디어를 가진 모든 사람들이 <br />
+                  자신의 꿈을 펼칠 수 있는 장을 제공합니다. 더 이상 아이디어가
+                  현실로 이루어지지 못하는 아쉬움은 없습니다. <br />
+                  우리의 목표는 창의적인 아이디어와 열정이 모여 새로운 가치를
+                  창출하는 크라우드펀딩 커뮤니티를 만드는 것입니다.
+                </p>
+              </td>
+              <td colspan="2">
+                <img src="resources/image/logo.gif" width="400" height="500" />
+              </td>
+            </tr>
+          </table>
+          <table class="memberIntroduce">
+            <h5>멤버 깃허브</h5>
+            <tr>
+              <td>
+                <i class="fa-brands fa-github fa-2xl"></i>
+                <a
+                  href="https://github.com/NanoKim"
+                  style="text-decoration: none"
+                  >김재영</a
+                >
+              </td>
+              <td>
+                <i class="fa-brands fa-github fa-2xl"></i>
+                <a
+                  href="https://github.com/Suuujii"
+                  style="text-decoration: none"
+                >
+                  어수지</a
+                >
+              </td>
+
+              <td>
+                <i class="fa-brands fa-github fa-2xl"></i>
+                <a
+                  href="https://github.com/angKH1st"
+                  style="text-decoration: none"
+                >
+                  뻔뻔해요</a
+                >
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="blank_bottom"><%-- 여백 --%></div>
     </div>
-    
-	<%@ include file="../common/footer.jsp" %>
-	
-	<script src="resources/js/company/companyIntroduction.js" rel="javascript"></script>
-</body>
+
+    <%@ include file="../common/footer.jsp" %>
+
+    <script
+      src="resources/js/company/companyIntroduction.js"
+      rel="javascript"
+    ></script>
+  </body>
 </html>
