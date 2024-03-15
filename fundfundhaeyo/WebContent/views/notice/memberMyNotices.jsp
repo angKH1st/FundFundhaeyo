@@ -38,14 +38,17 @@
 								<button type="button">Q&A</button> 
 							</div>
 							<div class="notices_notices_area">
-								<div class="notices_area_left fl"></div>
-								<div class="notices_area_right fl">
-									<div class="notices_area_right_row1">
-										<div class="notices_area_right_row1_title fl"></div>
-										<div class="notices_area_right_row1_blank fl"></div>
-										<div class="notices_area_right_row1_date fl"></div>
+								<div class="notices_obj">
+									<div class="notices_area_left fl"></div>
+									<div class="notices_area_blank fl"></div>
+									<div class="notices_area_right fl">
+										<div class="notices_area_right_row1">
+											<div class="notices_area_right_row1_title fl"></div>
+											<div class="notices_area_right_row1_blank fl"></div>
+											<div class="notices_area_right_row1_date fl"></div>
+										</div>
+										<div class="notices_area_right_row2"></div>
 									</div>
-									<div class="notices_area_right_row2"></div>
 								</div>
 							</div>
 						</div>
