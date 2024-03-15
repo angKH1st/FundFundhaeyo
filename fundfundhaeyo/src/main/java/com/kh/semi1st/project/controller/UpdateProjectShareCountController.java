@@ -11,16 +11,16 @@ import com.google.gson.Gson;
 import com.kh.semi1st.project.model.service.ProjectService;
 
 /**
- * Servlet implementation class selectProjectShareCountController
+ * Servlet implementation class increaseProjectShareCountController
  */
-@WebServlet("/selectShareCount.pr")
-public class selectProjectShareCountController extends HttpServlet {
+@WebServlet("/updateShareCount.pr")
+public class UpdateProjectShareCountController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public selectProjectShareCountController() {
+    public UpdateProjectShareCountController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -30,7 +30,11 @@ public class selectProjectShareCountController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		int projectNo = Integer.parseInt(request.getParameter("projectNo"));
-		int share = new ProjectService().selectProjectShareCount(projectNo);
+		int share = new ProjectService().updateProjectShareCount(projectNo);
+		
+		if(share > 0) {
+			share = new ProjectService().selectProjectShareCount(projectNo);
+		}
 		
 		response.setContentType("application/json; charset=UTF-8");
         new Gson().toJson(share, response.getWriter());

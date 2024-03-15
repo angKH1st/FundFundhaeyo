@@ -21,7 +21,9 @@ html {overflow-y: scroll;}
 .texthover:hover{color: lightskyblue;}
 .fl{float: left;}
 .ptitle{color: black;}
-.pca{text-decoration: none; color: #007bff;}
+.ptitle:hover{text-decoration: none; color: black;}
+.pca{text-decoration: none; color: rgb(58, 58, 58); font-size: 12px; padding: 5px 0;}
+.pca:hover{text-decoration: none; color: rgb(58, 58, 58);}
 .percentage{font-size: 13px; font-weight: 600; color: blue;}
 .hoverA{text-decoration: none; color: white;}
 .hoverA:hover{font-weight: bold;}

@@ -54,3 +54,6 @@ $(document).ready(function() {
 	});
 });
 
+function detail(sno){
+	location.href="detail.pr?pno=" + sno;
+}

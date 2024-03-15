@@ -107,4 +107,5 @@
 
 .ffh_frame1_body>div, .ffh_frame2_body>div{width: 18%; height: 50%;}
 
+.carousel-item:hover{cursor: pointer;}
 /* ============================ 바디 끝 ============================ */

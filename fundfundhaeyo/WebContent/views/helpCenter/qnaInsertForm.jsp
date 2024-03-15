@@ -45,7 +45,7 @@
 					</div>
 					<div class="qna_insert_form_content_middle">
 						<div class="qna_middle_area_title centerXY fl">내용</div>
-						<div class="qna_middle_area_input fl"><textarea rows="8" cols="97" name="content" required></textarea></div>
+						<div class="qna_middle_area_input fl"><textarea rows="7.5" cols="97" name="content" required></textarea></div>
 					</div>
 					<div class="qna_insert_form_content_blank"></div>
 					<div class="qna_insert_form_content_bottom"></div>

@@ -71,7 +71,7 @@
 						<div class="project_detail_top_category_col3 fl"><span><%= p.getProjectTag() %></span></div>
 					</div>
 					<div class="project_detail_top_title">
-						<div class="project_detail_top_title_col1 fl"><h2><%= p.getProjectOverview() %></h2></div>
+						<div class="project_detail_top_title_col1 fl"><h3><%= p.getProjectOverview() %></h3></div>
 						<div class="project_detail_top_title_col2 fl"><%-- 여백 --%></div>
 						<div class="project_detail_top_title_col3 fl"></div>
 					</div>
@@ -198,7 +198,7 @@
 					<div class="project_detail_chat_bottom pd15">
 						<div class="project_detail_chat_bottom_col1 fl"><i class="fa-solid fa-message fa-lg"></i></div>
 						<div class="project_detail_chat_bottom_col2 fl">
-							<input type="text" class="brlg" id="chatInput" name="chatInput" placeholder="메세지를 입력하세요.">
+							<input type="text" class="brlg" id="chatInput" name="chatInput" maxlength=53 placeholder="메세지를 입력하세요.">
 							<input type="hidden" id="projectNo" value="<%= p.getProjectNo() %>">
 						</div>
 						<% if(loginUser != null){ %>

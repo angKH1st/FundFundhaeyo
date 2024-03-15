@@ -13,27 +13,31 @@
 .mypage_notices_Form_right{width: 1101px; background-color: white;}
 
 .mypage_notices_Form_right>div{width: 100%;}
-.mypage_notices_Form_right_content1{height: 87%;}
-.mypage_notices_Form_right_content2{height: 12%;}
+.mypage_notices_Form_right_content1{height: 100%;}
 
 .mypage_notices_Form_right_content1>div{width: 100%;}
 .mypage_notices_Form_right_root{height: 34px;}
 .mypage_notices_Form_right_title{height: 55px; padding-top: 7px;}
 .mypage_notices_Form_right_list{height: 84%;}
 
-.mypage_notices_Form_right_content2>div{width: 100%;}
-.mypage_notices_Form_right_title2{height: 20%; text-align: center;}
-.mypage_notices_Form_right_blank{height: 80%;}
+.mypage_notices_Form_right_list>div{width: 100%;}
+.notices_btn_area{height: 10%; padding: 17px 0 0 10px; border-bottom: 0.5px solid lightgray;}
+.notices_notices_area{height: 90%;}
 
-.mypage_notices_Form_right_title2 button{
-	width: 30px;
-	border: none;
-	background-color: white;
-	margin: 0 3px;
-}
+.notices_btn_area button{background-color: white; border:none;}
 
-.mypage_notices_Form_right_title2 button:hover{
-	font-weight: bold;
-}
+.notices_notices_area>div{height: 20%;}
+.notices_area_left{width: 10%;}
+.notices_area_right{width: 90%;}
+
+.notices_area_right>div{width: 100%;}
+.notices_area_right_row1{height: 30%;}
+.notices_area_right_row2{height: 70%;}
+
+.notices_area_right_row1>div{height: 100%;}
+.notices_area_right_row1_title{width: 30%;}
+.notices_area_right_row1_blank{width: 50%;}
+.notices_area_right_row1_date{width: 20%;}
 
 /* 메인 영역 끝 */
+.mypage_notices_Form_right_list div{border: 0.5px solid skyblue;}

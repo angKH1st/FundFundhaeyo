@@ -42,8 +42,8 @@
 							<% int randomIndex = new Random().nextInt(copyList.size()); %>
 							<% Project selectedProject = copyList.get(randomIndex); %>
 							<% copyList.remove(randomIndex); %>
-						<div class="carousel-item <%= (i == 0) ? "active" : "" %>" style="height: 300px; overflow: hidden;">
-					        <img src="<%= selectedProject.getProjectTitleImg() %>" style="width: 100%; height: 100%; object-fit: cover;">
+						<div class="carousel-item <%= (i == 0) ? "active" : "" %>" style="height: 300px; overflow: hidden;" onclick="detail('<%= selectedProject.getProjectNo() %>');">
+				        	<img src="<%= selectedProject.getProjectTitleImg() %>" style="width: 100%; height: 100%; object-fit: cover;">
 					        <div class="carousel-caption">
 					            <h3><%= selectedProject.getProjectTitle() %></h3>
 					            <p><%= selectedProject.getProjectOverview() %></p>

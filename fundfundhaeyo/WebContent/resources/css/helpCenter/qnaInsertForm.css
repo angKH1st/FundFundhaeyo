@@ -44,6 +44,7 @@
 .qna_title_area_title{width: 12.5%; background-color: #f3f3f3;}
 .qna_title_area_input{width: 87.5%; padding-left: 5px;}
 .qna_title_area_input>input{width: 100%; height: 100%; border: none;}
+.qna_title_area_input>input:focus{outline: none;}
 
 .qna_insert_form_content_file>div{height: 100%; border-top: 0.5px solid lightgray; border-bottom: 0.5px solid lightgray;}
 .qna_file_area_title{width: 12.5%; background-color: #f3f3f3;}
@@ -53,6 +54,7 @@
 .qna_middle_area_title{width: 12.5%; background-color: #f3f3f3}
 .qna_middle_area_input{width: 87.5%; padding-left: 5px;}
 .qna_middle_area_input>textarea{width: 100%; border: none; resize: none;}
+.qna_middle_area_input>textarea:focus{outline: none;}
 
 .qna_insert_form_content_bottom>div{height: 100%;}
 .qna_bottom_area_title{width: 25%;}

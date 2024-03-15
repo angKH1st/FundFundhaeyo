@@ -33,7 +33,8 @@
 
 .mypage_activity_row1_grade2, .mypage_activity_row1_grade3, .mypage_activity_row1_grade4{border-left: 0.5px solid lightgray;}
 .mypage_activity_row1_grade1_title, .mypage_activity_row1_grade2_title, .mypage_activity_row1_grade3_title, .mypage_activity_row1_grade4_title{padding-top: 35px;}
-.mypage_activity_row1_grade1_count, .mypage_activity_row1_grade2_count, .mypage_activity_row1_grade3_count, .mypage_activity_row1_grade4_count{padding-top: 15px;}
+.mypage_activity_row1_grade1_count, .mypage_activity_row1_grade2_count, .mypage_activity_row1_grade3_count, .mypage_activity_row1_grade4_count{padding-top: 15px; transition: transform 0.3s ease-in-out;}
+.mypage_activity_row1_grade1_count:hover, .mypage_activity_row1_grade2_count:hover, .mypage_activity_row1_grade3_count:hover, .mypage_activity_row1_grade4_count:hover {transform: scale(1.1);}
 
 .mypage_activity_row2>div{padding-top: 20px;}
 .mypage_activity_row2_grade2, .mypage_activity_row2_grade3, .mypage_activity_row2_grade4{border-left: 0.5px solid lightgray;}
