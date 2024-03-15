@@ -422,6 +422,24 @@ public class MemberService {
 		return list;
 	}
 	
+	public Member updatePwdMember(int userNo, String userId, String userPwd, String updatePwd) {
+		Connection conn = getConnection();
+		int result = new MemberDao().updatePwdMember(conn, userId, userPwd, updatePwd);
+		
+		Member updateMem = null;
+		if(result > 0) {
+			commit(conn);
+			updateMem = new MemberDao().selectMember(conn, userNo);
+		}else {
+			rollback(conn);
+		}
+		
+		close(conn);
+		
+		return updateMem;
+	
+	}
+	
 	
 	
 }

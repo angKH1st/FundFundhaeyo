@@ -524,4 +524,12 @@
 		 WHERE RNUM BETWEEN ? AND ?
 	</entry>
 	
+	<entry key="updatePwdMember">
+		UPDATE TB_MEMBER
+		   SET USER_PWD = ?
+			 , USER_MODIFY_DATE = SYSDATE
+		 WHERE USER_ID = ?
+		   AND USER_PWD = ?
+	</entry>
+	
 </properties>
