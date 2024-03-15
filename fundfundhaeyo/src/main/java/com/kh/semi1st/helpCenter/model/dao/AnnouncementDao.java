@@ -21,7 +21,7 @@ private Properties prop = new Properties();
 	
 	public AnnouncementDao() {
 		try {
-			prop.loadFromXML(new FileInputStream(AnnouncementDao.class.getResource("/db/sql/tb-announcement-mapper.xml").getPath()));
+			prop.loadFromXML(new FileInputStream(AnnouncementDao.class.getResource("/db/sql/tb_announcement-mapper.xml").getPath()));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

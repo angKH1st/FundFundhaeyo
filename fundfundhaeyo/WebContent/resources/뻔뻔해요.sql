@@ -205,22 +205,46 @@ CREATE SEQUENCE SEQ_ANNOUNCEMENT_NO
 NOCACHE;
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '오픈! 뻔뻔해요!', '뻔뻔해요는 크라우드 펀딩사이트로 이제 여러분을 찾아뵙습니다.', 1, DEFAULT, '2024-02-22', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '오픈! 뻔뻔해요!', '안녕하세요. 뻔뻔해요 입니다.? 뻔뻔해요는 크라우드 펀딩사이트로 이제 여러분을 찾아뵙습니다.', 1, DEFAULT, '2024-02-22', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '프로젝트 업데이트: 목표 금액 달성에 한 발짝 더', '프로젝트 업데이트: 목표 금액 달성에 한 발짝 더! 우리는 이미 목표에 한 발짝 더 다가갔습니다. 이제 우리의 꿈을 이루기 위해 마지막 승부를 하고 있습니다. 계속해서 후원해 주시기 바랍니다!', 1, DEFAULT, '2024-02-22', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '프로젝트 업데이트: 목표 금액 달성에 한 발짝 더', '안녕하세요. 뻔뻔해요 입니다.? 프로젝트 업데이트: 목표 금액 달성에 한 발짝 더! 우리는 이미 목표에 한 발짝 더 다가갔습니다. 이제 우리의 꿈을 이루기 위해 마지막 승부를 하고 있습니다. 계속해서 후원해 주시기 바랍니다!', 1, DEFAULT, '2024-02-22', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '기부자 감사: 성공적인 펀딩에 감사드립니다', '기부자 감사: 성공적인 펀딩에 동참해 주셔서 감사드립니다. 함께 해서 정말 감사합니다!', 1, DEFAULT, '2024-02-27', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '서비스 개선', '안녕하세요. 뻔뻔해요 입니다.? 익일 새벽 3시부터 약 1시간 동안 서비스 개선을 위한 점검이 있을 예정입니다.', 1, DEFAULT, '2024-02-22', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '후원자 감사: 지지해 주셔서 감사합니다', '후원자 여러분께 감사드립니다! 여러분의 지지로 인해 프로젝트가 성공에 한 발짝 더 다가갑니다. 지속적인 관심과 후원에 진심으로 감사드립니다.', 1, DEFAULT, '2024-03-03', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '기부자 감사: 성공적인 펀딩에 감사드립니다', '안녕하세요. 뻔뻔해요 입니다.? 기부자 감사: 성공적인 펀딩에 동참해 주셔서 감사드립니다. 함께 해서 정말 감사합니다!', 1, DEFAULT, '2024-02-27', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '프로젝트 향후 계획: 추가 업데이트 및 개선 사항', '프로젝트의 향후 계획에 대한 업데이트입니다. 추가적인 업데이트와 개선 사항이 준비 중이니 기대해 주세요. 프로젝트의 발전을 위해 끊임없는 노력을 기울이겠습니다.', 1, DEFAULT, '2024-03-03', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '서비스 개선', '안녕하세요. 뻔뻔해요 입니다.? 익일 새벽 3시부터 약 1시간 동안 서비스 개선을 위한 점검이 있을 예정입니다.', 1, DEFAULT, '2024-02-27', DEFAULT);
 
 INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '이용자 경험 개선: 후원자 의견에 따른 개선 사항', '이용자 경험을 개선하기 위한 노력입니다! 후원자들의 의견을 반영하여 프로젝트를 더욱 개선하고자 합니다. 공지사항을 확인하여 의견을 공유해 주세요.', 1, DEFAULT, '2024-03-05', DEFAULT);
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '후원자 감사: 지지해 주셔서 감사합니다', '안녕하세요. 뻔뻔해요 입니다.? 후원자 여러분께 감사드립니다! 여러분의 지지로 인해 프로젝트가 성공에 한 발짝 더 다가갑니다. 지속적인 관심과 후원에 진심으로 감사드립니다.', 1, DEFAULT, '2024-03-03', DEFAULT);
+
+INSERT INTO TB_ANNOUNCEMENT
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '프로젝트 향후 계획: 추가 업데이트 및 개선 사항', '안녕하세요. 뻔뻔해요 입니다.? 프로젝트의 향후 계획에 대한 업데이트입니다. 추가적인 업데이트와 개선 사항이 준비 중이니 기대해 주세요. 프로젝트의 발전을 위해 끊임없는 노력을 기울이겠습니다.', 1, DEFAULT, '2024-03-03', DEFAULT);
+
+INSERT INTO TB_ANNOUNCEMENT
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '서비스 개선', '안녕하세요. 뻔뻔해요 입니다.? 익일 새벽 3시부터 약 1시간 동안 서비스 개선을 위한 점검이 있을 예정입니다.', 1, DEFAULT, '2024-03-03', DEFAULT);
+
+INSERT INTO TB_ANNOUNCEMENT
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '이용자 경험 개선: 후원자 의견에 따른 개선 사항', '안녕하세요. 뻔뻔해요 입니다.? 이용자 경험을 개선하기 위한 노력입니다! 후원자들의 의견을 반영하여 프로젝트를 더욱 개선하고자 합니다. 공지사항을 확인하여 의견을 공유해 주세요.', 1, DEFAULT, '2024-03-05', DEFAULT);
+
+INSERT INTO TB_ANNOUNCEMENT
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '창작자 여러분의 참여를 기다립니다.', '안녕하세요. 뻔뻔해요 입니다.? 창작자 여러분! 펀딩 체험단을 운영하며, 공개예정 프로젝트를 효과적으로 홍보하고, 체험단 후원자들의 다채로운 리뷰 콘텐츠를 확보해 보세요!', 1, DEFAULT, '2024-03-05', DEFAULT);
+
+INSERT INTO TB_ANNOUNCEMENT
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '서비스 개선', '안녕하세요. 뻔뻔해요 입니다.? 익일 새벽 3시부터 약 1시간 동안 서비스 개선을 위한 점검이 있을 예정입니다.', 1, DEFAULT, '2024-03-05', DEFAULT);
+
+INSERT INTO TB_ANNOUNCEMENT
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '전분야 창작자 대규모 모집', '안녕하세요. 뻔뻔해요 입니다.? 창작자 여러분! 프로젝트를 준비중인 창작자라면 뻔뻔해요 펀딩에 참여해보세요! 일정에 맞춰서 프로젝트를 준비하면 다양한 프로모션 혜택을 받을 수 있습니다.', 1, DEFAULT, '2024-03-05', DEFAULT);
+
+INSERT INTO TB_ANNOUNCEMENT
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '카카오페이 3/7 은행/증권사 시스템 점검 안내', '안녕하세요. 뻔뻔해요 입니다.? 2024년 2월 네이버페이 은행/증권사 시스템 점검 일정 안내드립니다. 점검 중인 은행/증권사의 일부 결제 서비스가 일시 중지됩니다.', 1, DEFAULT, '2024-03-07', DEFAULT);
+
+INSERT INTO TB_ANNOUNCEMENT
+VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '서비스 개선', '안녕하세요. 뻔뻔해요 입니다.? 익일 새벽 3시부터 약 1시간 동안 서비스 개선을 위한 점검이 있을 예정입니다.', 1, DEFAULT, '2024-03-08', DEFAULT);
 --------------------------------------------------
 ----------------- NOTICE 알림 관련 -----------------	
 --------------------------------------------------
@@ -247,6 +271,48 @@ COMMENT ON COLUMN TB_NOTICE.NOTICE_RECEIVER_NO IS '알림 수신자';
 
 CREATE SEQUENCE SEQ_NOTICE_NO
 NOCACHE;
+
+INSERT INTO TB_NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, NOTICE_WRITER, NOTICE_CREATE_DATE, NOTICE_TYPE)
+VALUES (SEQ_NOTICE_NO.NEXTVAL, '공지사항', '안녕하세요. 뻔뻔해요 입니다.? 뻔뻔해요는 크라우드 펀딩사이트로 이제 여러분을 찾아뵙습니다.', 1, '2024-02-22', 1);
+
+INSERT INTO TB_NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, NOTICE_WRITER, NOTICE_CREATE_DATE, NOTICE_TYPE)
+VALUES (SEQ_NOTICE_NO.NEXTVAL, '공지사항', '안녕하세요. 뻔뻔해요 입니다.? 프로젝트 업데이트: 목표 금액 달성에 한 발짝 더! 우리는 이미 목표에 한 발짝 더 다가갔습니다. 이제 우리의 꿈을 이루기 위해 마지막 승부를 하고 있습니다. 계속해서 후원해 주시기 바랍니다!', 1, '2024-02-22', 1);
+
+INSERT INTO TB_NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, NOTICE_WRITER, NOTICE_CREATE_DATE, NOTICE_TYPE)
+VALUES (SEQ_NOTICE_NO.NEXTVAL, '공지사항', '안녕하세요. 뻔뻔해요 입니다.? 익일 새벽 3시부터 약 1시간 동안 서비스 개선을 위한 점검이 있을 예정입니다.', 1, '2024-02-22', 1);
+
+INSERT INTO TB_NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, NOTICE_WRITER, NOTICE_CREATE_DATE, NOTICE_TYPE)
+VALUES (SEQ_NOTICE_NO.NEXTVAL, '공지사항', '안녕하세요. 뻔뻔해요 입니다.? 기부자 감사: 성공적인 펀딩에 동참해 주셔서 감사드립니다. 함께 해서 정말 감사합니다!', 1, '2024-02-27', 1);
+
+INSERT INTO TB_NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, NOTICE_WRITER, NOTICE_CREATE_DATE, NOTICE_TYPE)
+VALUES (SEQ_NOTICE_NO.NEXTVAL, '공지사항', '안녕하세요. 뻔뻔해요 입니다.? 익일 새벽 3시부터 약 1시간 동안 서비스 개선을 위한 점검이 있을 예정입니다.', 1, '2024-02-27', 1);
+
+INSERT INTO TB_NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, NOTICE_WRITER, NOTICE_CREATE_DATE, NOTICE_TYPE)
+VALUES (SEQ_NOTICE_NO.NEXTVAL, '공지사항', '안녕하세요. 뻔뻔해요 입니다.? 후원자 여러분께 감사드립니다! 여러분의 지지로 인해 프로젝트가 성공에 한 발짝 더 다가갑니다. 지속적인 관심과 후원에 진심으로 감사드립니다.', 1, '2024-03-03', 1);
+
+INSERT INTO TB_NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, NOTICE_WRITER, NOTICE_CREATE_DATE, NOTICE_TYPE)
+VALUES (SEQ_NOTICE_NO.NEXTVAL, '공지사항', '안녕하세요. 뻔뻔해요 입니다.? 프로젝트의 향후 계획에 대한 업데이트입니다. 추가적인 업데이트와 개선 사항이 준비 중이니 기대해 주세요. 프로젝트의 발전을 위해 끊임없는 노력을 기울이겠습니다.', 1, '2024-03-03', 1);
+
+INSERT INTO TB_NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, NOTICE_WRITER, NOTICE_CREATE_DATE, NOTICE_TYPE)
+VALUES (SEQ_NOTICE_NO.NEXTVAL, '공지사항', '안녕하세요. 뻔뻔해요 입니다.? 익일 새벽 3시부터 약 1시간 동안 서비스 개선을 위한 점검이 있을 예정입니다.', 1, '2024-03-03', 1);
+
+INSERT INTO TB_NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, NOTICE_WRITER, NOTICE_CREATE_DATE, NOTICE_TYPE)
+VALUES (SEQ_NOTICE_NO.NEXTVAL, '공지사항', '안녕하세요. 뻔뻔해요 입니다.? 이용자 경험을 개선하기 위한 노력입니다! 후원자들의 의견을 반영하여 프로젝트를 더욱 개선하고자 합니다. 공지사항을 확인하여 의견을 공유해 주세요.', 1, '2024-03-05', 1);
+
+INSERT INTO TB_NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, NOTICE_WRITER, NOTICE_CREATE_DATE, NOTICE_TYPE)
+VALUES (SEQ_NOTICE_NO.NEXTVAL, '공지사항', '안녕하세요. 뻔뻔해요 입니다.? 창작자 여러분! 펀딩 체험단을 운영하며, 공개예정 프로젝트를 효과적으로 홍보하고, 체험단 후원자들의 다채로운 리뷰 콘텐츠를 확보해 보세요!', 1, '2024-03-05', 1);
+
+INSERT INTO TB_NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, NOTICE_WRITER, NOTICE_CREATE_DATE, NOTICE_TYPE)
+VALUES (SEQ_NOTICE_NO.NEXTVAL, '공지사항', '안녕하세요. 뻔뻔해요 입니다.? 익일 새벽 3시부터 약 1시간 동안 서비스 개선을 위한 점검이 있을 예정입니다.', 1, '2024-03-05', 1);
+
+INSERT INTO TB_NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, NOTICE_WRITER, NOTICE_CREATE_DATE, NOTICE_TYPE)
+VALUES (SEQ_NOTICE_NO.NEXTVAL, '공지사항', '안녕하세요. 뻔뻔해요 입니다.? 창작자 여러분! 프로젝트를 준비중인 창작자라면 뻔뻔해요 펀딩에 참여해보세요! 일정에 맞춰서 프로젝트를 준비하면 다양한 프로모션 혜택을 받을 수 있습니다.', 1, '2024-03-05', 1);
+
+INSERT INTO TB_NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, NOTICE_WRITER, NOTICE_CREATE_DATE, NOTICE_TYPE)
+VALUES (SEQ_NOTICE_NO.NEXTVAL, '공지사항', '안녕하세요. 뻔뻔해요 입니다.? 2024년 2월 네이버페이 은행/증권사 시스템 점검 일정 안내드립니다. 점검 중인 은행/증권사의 일부 결제 서비스가 일시 중지됩니다.', 1, '2024-03-07', 1);
+
+INSERT INTO TB_NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, NOTICE_WRITER, NOTICE_CREATE_DATE, NOTICE_TYPE)
+VALUES (SEQ_NOTICE_NO.NEXTVAL, '공지사항', '안녕하세요. 뻔뻔해요 입니다.? 익일 새벽 3시부터 약 1시간 동안 서비스 개선을 위한 점검이 있을 예정입니다.', 1, '2024-03-08', 1);
 --------------------------------------------------
 ----------------- FAQ 게시판 관련 ------------------	
 --------------------------------------------------

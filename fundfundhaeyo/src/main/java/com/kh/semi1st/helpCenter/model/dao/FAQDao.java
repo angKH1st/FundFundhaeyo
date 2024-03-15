@@ -19,7 +19,7 @@ public class FAQDao {
 	
 	public FAQDao() {
 		try {
-			prop.loadFromXML(new FileInputStream(FAQDao.class.getResource("/db/sql/tb-FAQ-mapper.xml").getPath()));
+			prop.loadFromXML(new FileInputStream(FAQDao.class.getResource("/db/sql/tb_FAQ-mapper.xml").getPath()));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
