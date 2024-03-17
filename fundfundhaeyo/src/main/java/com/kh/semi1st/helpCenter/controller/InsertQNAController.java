@@ -71,10 +71,8 @@ public class InsertQNAController extends HttpServlet {
 				if(at != null) {
 					new File(savePath + at.getAttachmentUpdateName()).delete();
 				}
-				/*
-				request.setAttribute("errorMsg", "실패");
-				request.getRequestDispatcher("views/common/errorPage.jsp").forward(request, response);
-				*/
+				request.setAttribute("errorMsg", "Q&A 작성에 실패하였습니다.");
+				request.getRequestDispatcher("views/common/errorPage500.jsp").forward(request, response);
 			}
 			
 		}

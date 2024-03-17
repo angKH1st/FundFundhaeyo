@@ -33,17 +33,17 @@
 								<br><br>
 			                    <div class="delete-input-wrap input-id">
 			                        <i class="fas fa-key"></i>
-			                        <input placeholder="비밀번호" type="password" name="userPwd">
+			                        <input placeholder="비밀번호" type="password" name="userPwd" required>
 			                    </div>
 			                    <div class="delete-input-wrap input-password">
 			                        <i class="fas fa-key"></i>
-			                        <input placeholder="비밀번호 확인" type="password" name="userPwdCheck">
+			                        <input placeholder="비밀번호 확인" type="password" name="userPwdCheck" required>
 			                    </div>
 			                </div>
 			                <div class="delete-btn-wrap">
 			                	<input type="hidden" name="userId" value="<%= loginUser.getUserId() %>">
 			                	<br><br>
-			                    <button class="delete-btn"  type="submit">확인</button>
+			                    <button class="delete-btn" type="submit">확인</button>
 			                    <a href="<%= contextPath %>/moveToSearchId.me">아이디/비밀번호 찾기</a>
 			                    <br><br>
 			                </div>

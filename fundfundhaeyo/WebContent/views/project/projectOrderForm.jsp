@@ -38,7 +38,7 @@
 		<div class="blank_top"><%-- 여백 --%></div>
 		<div class="project_order_main">
 			<div class="project_order_top">
-				<div class="project_order_top_col1 fl"><img width=100% height=100% src="<%= contextPath %>/<%= list.get(0).getAttachmentPath() + list.get(0).getAttachmentUpdateName() %>"></div>
+				<div class="project_order_top_col1 fl"><img class="br10" width=100% height=100% src="<%= contextPath %>/<%= list.get(0).getAttachmentPath() + list.get(0).getAttachmentUpdateName() %>"></div>
 				<div class="project_order_top_col2 fl">
 					<div class="project_order_top_col2_row1"><%= p.getProjectCategoryName() %></div>
 					<div class="project_order_top_col2_row2"><%= p.getProjectTitle() %></div>
@@ -104,8 +104,10 @@
 					<div class="project_order_content_col1_row5">
 						<div class="project_order_content_col1_row5_title">결제수단</div>
 						<div class="project_order_content_col1_row5_content brlg br5">
+							<%--
 							<input type="radio" id="pay1" name="group2" value="naverpay" checked>
 						    <label for="pay1">네이버페이</label>
+						     --%>
 						    <input type="radio" id="pay2" name="group2" value="tosspay">
 						    <label for="pay2">토스페이</label>
 						    <input type="radio" id="pay3" name="group2" value="kakaopay">

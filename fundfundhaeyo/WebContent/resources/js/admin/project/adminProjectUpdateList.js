@@ -50,7 +50,7 @@ function loadPage(cpage) {
 					var temp;
 					switch(list[i].projectStatus){
 						case 'Y' : temp = '게시'; break;
-						case 'N' : temp = '비게시'; break;
+						case 'N' : temp = '승인 대기'; break;
 						case 'B' : temp = '반려'; break;
 					}
 					

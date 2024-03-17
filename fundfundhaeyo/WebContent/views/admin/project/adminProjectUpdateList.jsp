@@ -11,7 +11,7 @@
 <body>
 	<%@ include file="../common/adminHeader.jsp" %>
 	
-    <div class="adm-content">
+    <div class="adm-content font_outer">
 	    <div class="adm-content-top">
 	    	<div class="adm-content-top-title fl"><h1>프로젝트조회</h1></div>
 	    	<div class="adm-content-top-blank fl"></div>

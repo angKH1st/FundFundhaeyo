@@ -3,7 +3,7 @@
 .adm-content {
     position: relative;  /* 추가 */
     width: calc(100% - 70px);  /* 컨텐츠의 초기 너비를 사이드바의 너비에 맞게 설정 */
-    height: 1500px;
+    height: auto;
     padding: 20px;
     left: 70px;  /* 헤더의 초기 위치를 사이드바의 너비에 맞게 설정 */
     top: 55px;
@@ -27,11 +27,64 @@
 .adm-content-top-root-second{width: 2%;}
 
 .adm-content-center>div{width: 100%; border-radius: 5px; border: 0.5px solid lightgray; border-radius: 5px; background-color: white;}
-.adm-content-center-top{height: 5%; margin-bottom: 20px;}
+.adm-content-center-top{height: 5%; margin-bottom: 20px; padding: 9px 0 0 20px;}
 .adm-content-center-main{height: 95%;}
 
 .adm-content-center-main>div{width: 100%;}
 .adm-content-center-main-header{height: 5%; background-color: #f8f9fa; border-bottom: 0.5px solid lightgray; padding: 8px 0 0 17px;}
 .adm-content-center-main-body{height: 95%; padding: 15px;}
 
-div{border: 1px solid red;}
+.adm-content-center-main-body>div{width: 100%;}
+.adm-content-center-main-body1{height: 5%;}
+.adm-content-center-main-body2{height: 83%; margin: 20px 0;}
+.adm-content-center-main-body3{height: 5%;}
+
+.adm-content-center-main-body1>div{height: 100%;}
+.adm-content-center-main-body1-col1{width: 6%;}
+.adm-content-center-main-body1-col2{width: 10%;}
+.adm-content-center-main-body1-col3{width: 70%;}
+.adm-content-center-main-body1-col4{width: 14%; border-radius: 5px; border: 0.5px solid lightgray;}
+
+.adm-content-center-main-body1-col4>div{height: 100%;}
+.adm-content-center-main-body1-col4-searchInput{width: 88%;}
+.adm-content-center-main-body1-col4-searchBtn{width: 12%;}
+
+.adm-content-center-main-body2 table{border-spacing: 0;}
+.adm-content-center-main-body2 tr{height: 49.5px;}
+.adm-content-center-main-body2 thead th{padding-left: 10px; background-color: #f5f5f5; font-weight: bold}
+.adm-content-center-main-body2 tbody td{padding-left: 10px;}
+.adm-content-center-main-body2 tbody {
+    border-collapse: collapse;
+} 
+
+.adm-content-center-main-body2 thead tr th {
+	border-top: 1px solid black;
+    border-bottom: 0.5px solid lightgray;
+}
+
+.adm-content-center-main-body2 tbody tr td {
+    border-bottom: 0.5px solid lightgray;
+}
+.adm-content-center-main-body2 tbody tr:hover{background-color: #f5f5f5;}
+
+.adm-content-center-main-body3>div{height: 100%;}
+.adm-content-center-main-body3-col1{width: 15%;}
+.adm-content-center-main-body3-col2{width: 65%;}
+.adm-content-center-main-body3-col3{width: 20%; text-align: right;}
+
+.page-button{cursor: pointer; background-color: white; border: none;}
+.page-button, .page-button.disabled{width: 30px; height: 30px;}
+
+.center{text-align: center;}
+
+.adm-content-center-main-body3-col3 button{
+	width: 30px;
+	border: none;
+	background-color: white;
+	margin: 0 3px;
+}
+
+.adm-content-center-main-body3-col3 button:hover{
+	font-weight: bold;
+	cursor: pointer;
+}

@@ -13,8 +13,8 @@
 .mypage_right{width: 1101px; background-color: white;}
 
 .mypage_right>div{width: 100%;}
-.mypage_right_content1{height: 57%;}
-.mypage_right_content2{height: 42%; margin-top: 10px;}
+.mypage_right_content1{height: 50%;}
+.mypage_right_content2{height: 49%; margin-top: 10px;}
 
 .mypage_right_content1>div{width: 100%;}
 .mypage_right_root{height: 34px;}
@@ -22,11 +22,9 @@
 .mypage_right_activity{height: 79%;}
 
 .mypage_right_activity>div{width: 100%;}
-.mypage_activity_row1{height: 80%;}
-.mypage_activity_row2{height: 20%; border-top: 0.5px solid lightgray;}
+.mypage_activity_row1{height: 100%;}
 
 .mypage_activity_row1>div{height: 100%; width: 25%; text-align: center; padding: 40px;}
-.mypage_activity_row2>div{height: 100%; width: 25%; text-align: center;}
 
 .mypage_activity_row1>div>div{width: 100%; height: 50%;}
 .mypage_activity_row1>div>div>h3, .mypage_activity_row1>div>div>h5{display: inline;}
@@ -36,11 +34,23 @@
 .mypage_activity_row1_grade1_count, .mypage_activity_row1_grade2_count, .mypage_activity_row1_grade3_count, .mypage_activity_row1_grade4_count{padding-top: 15px; transition: transform 0.3s ease-in-out;}
 .mypage_activity_row1_grade1_count:hover, .mypage_activity_row1_grade2_count:hover, .mypage_activity_row1_grade3_count:hover, .mypage_activity_row1_grade4_count:hover {transform: scale(1.1);}
 
-.mypage_activity_row2>div{padding-top: 20px;}
-.mypage_activity_row2_grade2, .mypage_activity_row2_grade3, .mypage_activity_row2_grade4{border-left: 0.5px solid lightgray;}
-
 .mypage_right_content2>div{width: 100%;}
 .mypage_right_title2{height: 15%; padding-top: 7px;}
-.mypage_right_TBD{height: 80%;}
+.mypage_right_my{height: 80%;}
+
+.mypage_right_my>div{height: 100%; transition: transform 0.3s ease-in-out; text-align: center;}
+.mypage_right_my_left{width: 59%; margin-right: 20px;}
+.mypage_right_my_right{width: 39%;}
+
+.mypage_right_my h3, .mypage_right_my h5{display: inline;}
+
+.mypage_right_my_left>div{width: 49%; height: 100%; padding-top: 65px;}
+.mypage_right_my_left_likes{color: white; background-color: #8abb4d; margin-right: 10px; transition: transform 0.3s ease-in-out;}
+.mypage_right_my_left_likes:hover{cursor: pointer; transform: scale(1.05);}
+.mypage_right_my_left_grade{color: white; background-color: #1bdf8b; transition: transform 0.3s ease-in-out;}
+.mypage_right_my_left_grade:hover{cursor: pointer; transform: scale(1.05);}
+
+.mypage_right_my_right>div{width: 100%; height: 100%; padding-top: 130px; color: white; background-color: #00c4c4; transition: transform 0.3s ease-in-out;}
+.mypage_right_my_right>div:hover{cursor: pointer; transform: scale(1.05);}
 
 /* 메인 영역 끝 */

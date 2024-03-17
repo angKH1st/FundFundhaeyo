@@ -28,8 +28,8 @@
 .ffh_content>div{width: 100%;}
 .ffh_content_adv{height: 12%;}
 .ffh_content_top{height: 28%; margin-top: 60px;}
-.ffh_frame1_form, .ffh_frame2_form{height: 30%; margin: 25px 0; border: 1px solid lightgray; border-radius: 5px; padding: 0 10px 10px 20px;}
-.ffh_frame1, .ffh_frame2 {margin: 0 12px;}
+.ffh_frame1_form, .ffh_frame2_form{height: 30%; margin: 25px 0; border-top: 0.5px solid lightgray;}
+.ffh_frame1, .ffh_frame2 {margin: 0 6px;}
 
 /* adv */
 .ffh_content_adv img{width: 100%;}
@@ -59,7 +59,7 @@
 .ffh_content_top_left1_col2_row2_col2{width: 40%;}
 
 /* 바디 1번 좌측 바디 */
-.ffh_content_top_left2>div{width: 21%; height: 50%; margin: 0 16px;}
+.ffh_content_top_left2>div{width: 24%; height: 50%; margin: 0 4px;}
 .ffh_content_top_left2>div>div{width: 100%;}
 .pr3_r3>div{height: 100%;}
 
@@ -76,8 +76,8 @@
 
 /* 바디 1번 우측 바디 */
 .ffh_content_top_right_row2>div{width: 100%; height: 20%;}
-.rk_r1{height: 25%;}
-.rk_r2{height: 75%;}
+.rk_r1{height: 15%;}
+.rk_r2{height: 85%;}
 .rk_r2>div{height: 100%}
 
 .rk_col1{width: 30%;}
@@ -105,7 +105,7 @@
 .ffh_frame1_top_col2_row2_left, .ffh_frame2_top_col2_row2_left{width: 60%;}
 .ffh_frame1_top_col2_row2_right, .ffh_frame2_top_col2_row2_right{width: 40%;}
 
-.ffh_frame1_body>div, .ffh_frame2_body>div{width: 18%; height: 50%;}
+.ffh_frame1_body>div, .ffh_frame2_body>div{width: 248px; height: 50%;}
 
 .carousel-item:hover{cursor: pointer;}
 /* ============================ 바디 끝 ============================ */

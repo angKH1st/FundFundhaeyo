@@ -1,4 +1,4 @@
-package com.kh.semi1st.admin.helpCenter;
+package com.kh.semi1st.admin.helpCenter.controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -7,17 +7,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.kh.semi1st.helpCenter.model.service.AnnouncementService;
+
 /**
- * Servlet implementation class AdminQnaCenterController
+ * Servlet implementation class AdminEnrollAnnouncementCenterController
  */
-@WebServlet("/admQna.hp")
-public class AdminQnaCenterController extends HttpServlet {
+@WebServlet("/admEnrollAnnouncement.hp")
+public class AdminEnrollAnnouncementCenterController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AdminQnaCenterController() {
+    public AdminEnrollAnnouncementCenterController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -26,7 +28,14 @@ public class AdminQnaCenterController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("views/admin/helpCenter/adminQnaCenter.jsp").forward(request, response);
+		String title = request.getParameter("title");
+		String content = request.getParameter("content");
+		
+		int result = new AnnouncementService().insertAnnouncement(title, content);
+		
+		if(result > 0) {
+			request.getRequestDispatcher("admAnnouncement.hp?cpage=1").forward(request, response);
+		}
 	}
 
 	/**

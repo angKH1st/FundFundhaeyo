@@ -83,9 +83,11 @@ private Properties prop = new Properties();
 			while(rset.next()) {
 				list.add(new Announcement(rset.getInt("announcement_no"),
 									      rset.getString("announcement_title"),
+									      rset.getString("announcement_content"),
 									      rset.getString("user_nickname"),
 									      rset.getInt("announcement_count"),
-									      rset.getDate("announcement_create_date")));
+									      rset.getDate("announcement_create_date"),
+										  rset.getString("announcement_status")));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -149,10 +151,9 @@ private Properties prop = new Properties();
 	}
 	
 
-	/** 공지사항 상세조회
-	 *  @param conn
-	 *  @param announcementNo
-	 *  @return
+	/** 공지사항 상세조회해주는 메소드
+	 *  @param aNo : 조회하고자 하는 공지사항의 번호
+	 *  @return list : 조회된 공지사항
 	 */
 	public Announcement selectAnnouncement(Connection conn, int announcementNo) {
 		Announcement a = null;
@@ -173,7 +174,8 @@ private Properties prop = new Properties();
 						             rset.getString("announcement_content"),
 						             rset.getString("user_nickname"),
 						             rset.getInt("announcement_count"),
-						             rset.getDate("announcement_create_date"));
+						             rset.getDate("announcement_create_date"),
+						             rset.getString("announcement_status"));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -244,6 +246,134 @@ private Properties prop = new Properties();
 			close(pstmt);
 		}
 		return after;
+	}
+
+	/** 공지사항을 작성 처리해주는 메소드
+	 *  @param conn
+	 *  @param title : 공지사항 제목
+	 *  @param content : 공지사항 내용
+	 *  @return result : 처리 결과 (1 = 성공 / 0 = 실패) 
+	 */
+	public int insertAnnouncement(Connection conn, String title, String content) {
+		int result = 0;
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("insertAnnouncement");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setString(1, title);
+			pstmt.setString(2, content);
+			
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		return result;
+	}
+
+	/** 공지사항 작성 후, 알림을 삽입해주는 메소드
+	 *  @param conn
+	 *  @return result : 처리 결과 (1 = 성공 / 0 = 실패) 
+	 */
+	public int insertAnnouncementNotice(Connection conn, String content) {
+		int result = 0;
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("insertAnnouncementNotice");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setString(1, content);
+			
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		
+		return result;
+	}
+
+	/** 공지사항을 수정 처리해주는 메소드
+	 *  @param conn
+	 *  @param aNo : 수정하고자 하는 공지사항 번호
+	 *  @param title : 수정하고자 하는 공지사항 제목
+	 *  @param content : 수정하고자 하는 공지사항 내용
+	 *  @return result : 처리 결과 (1 = 성공 / 0 = 실패)
+	 */
+	public int updateAnnouncement(Connection conn, int aNo, String title, String content) {
+		int result = 0;
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("updateAnnouncement");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setString(1, title);
+			pstmt.setString(2, content);
+			pstmt.setInt(3, aNo);
+			
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		return result;
+	}
+	
+	/** 공지사항 수정 후, 알림 수정 처리해주는 메소드
+	 *  @param conn
+	 *  @param aNo : 수정하고자 하는 공지사항 번호
+	 *  @param content : 수정하고자 하는 공지사항 내용
+	 *  @return result : 처리 결과 (1 = 성공 / 0 = 실패)
+	 */
+	public int updateAnnouncementNotice(Connection conn, int aNo, String content) {
+		int result = 0;
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("updateAnnouncementNotice");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setString(1, content);
+			pstmt.setInt(2, aNo);
+			
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		return result;
+	}
+
+	/** 공지사항을 삭제 처리해주는 메소드
+	 *  @param conn
+	 *  @param aNo : 삭제하고자 하는 공지사항 번호
+	 *  @return result : 처리 결과 (1 = 성공 / 0 = 실패)
+	 */
+	public int deleteAnnouncement(Connection conn, int aNo) {
+		int result = 0;
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("deleteAnnouncement");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, aNo);
+			
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		return result;
 	}
 
 }

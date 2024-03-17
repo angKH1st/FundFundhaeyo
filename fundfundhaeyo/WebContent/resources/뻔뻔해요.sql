@@ -15,12 +15,12 @@ DROP TABLE TB_ATTACHMENT;
 DROP TABLE TB_LIKES;
 DROP TABLE TB_REPORT;
 DROP TABLE TB_CHAT;
+DROP TABLE TB_NOTICE;
 DROP TABLE TB_PROJECT;
 DROP TABLE TB_QNA;
 DROP TABLE TB_RP_CATEGORY;
 DROP TABLE TB_PJ_CATEGORY;
 DROP TABLE TB_FAQ;
-DROP TABLE TB_NOTICE;
 DROP TABLE TB_ANNOUNCEMENT;
 DROP TABLE TB_MEMBER;
 
@@ -81,104 +81,39 @@ COMMENT ON COLUMN TB_MEMBER.USER_STATUS IS '회원 상태값 (Y : 사용중 / N : 탈퇴 /
 CREATE SEQUENCE SEQ_USER_NO
 NOCACHE;
 
-INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'admin', '1234', '관리자', '950814-1234567', '관리자', '010-1234-5678', 'admin@kh.or.kr', '서울시 강남구 역삼동', '관리자입니다', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'A');
-
-INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user01', 'pass01', '박보형', '900212-232141', '뽀', '010-8460-1245', 'tt012@kh.or.kr', '서울시 강동구 천호동', '저는 너무 귀여워요', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
-
-INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user02', 'pass02', '윈텨', '010101-2213456', '앙', '010-0157-2354', 'win1@kh.or.kr', '서울시 양천구 목동', '힘들다', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
-
-INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user03', 'pass03', '진새연', '940215-2224131', '파스타', '010-1218-1884', 'lll010@kh.or.kr', '서울시 강서구', '로제 파스타 먹고 싶어요', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
-
-INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user04', 'pass04', '햐니', '010101-2141231', '뉴진스', '010-4747-4151', 'qw1eqw@kh.or.kr', '서울시 강북구', '뉴진스 하입보이요', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
-
-INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user05', 'pass05', '김새론', '930814-2212164', '사탕', '010-0977-6456', 'zv3b@kh.or.kr', '서울시 강동구', '글쎄요', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
-
-INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user06', 'pass06', '홍두식', '881201-1227812', '졸린사람', '010-6542-1815', 'mmf34@kh.or.kr', '서울시 강동구', '안녕하세요', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
-
-INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user07', 'pass07', '김돌개', '010511-1231214', '일반인', '010-6661-8142', 'dd1517@kh.or.kr', '서울시 서초구 서초동', 'ㅎㅇ요', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
-
-INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user08', 'pass08', '박정찰', '050103-1112125', '양념반', '010-8842-7151', 'qeqw111@kh.or.kr', '서울시 서초구 서초동', '아 몰랑', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
-
-INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user09', 'pass09', '최연두', '931210-2262141', '메론맛딸기', '010-8445-6456', 'mnmd2@kh.or.kr', '서울시 강동구', '잠 온다', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
-
-INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user10', 'pass10', '하주연', '870501-2223154', '열받는사람', '010-1234-8124', 'uqeqweq@kh.or.kr', '서울시 강동구', '집 가고 싶다', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
-
-INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user11', 'pass11', '김주황', '990101-2141231', 'bj지망생', '010-4312-1917', 'ubbd2@kh.or.kr', '서울시 강서구', '배고파요', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
-
-INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user12', 'pass12', '박팔두', '030923-1231511', '도깨비', '010-0123-6456', 'rewab@kh.or.kr', '서울시 강동구', '언제까지', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
-
-INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user13', 'pass13', '최지훈', '971012-1221811', '청바지가잘어울리는', '010-1234-6456', 'asee@kh.or.kr', '서울시 강동구', '으아아악', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
-
-INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user14', 'pass14', '이딸기', '871108-2141231', '깃털', '010-1234-6456', 'usewer@kh.or.kr', '서울시 강남구 역삼동', '잘 부탁드립니다', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
-
-INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user15', 'pass15', '김태현', '950814-2234561', 'Lovely킴', '010-3456-7890', 'urewim@kh.or.kr', '서울시 강남구', '반갑습니다, 김태현입니다.', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
-
-INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user16', 'pass16', '이민수', '671001-1234562', 'Handsomely', '010-4567-8901', 'user16lee@kh.or.kr', '경기도 수원시', '안녕하세요, 이민수입니다.', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
-
-INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user17', 'pass17', '박보겸', '000106-1234563', 'Sweet박', '010-5678-9012', 'uspark@kh.or.kr', '서울시 서초구', '박보겸입니다. 잘 부탁드려요!', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
-
-INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user18', 'pass18', '전지헌', '901203-2234564', 'Beautiful전', '010-6789-0123', 'ujeon@kh.or.kr', '부산시 해운대구', '전지헌입니다. 만나서 반가워요!', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
-
-INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user19', 'pass19', '송중길', '970518-1234565', 'Cool송', '010-7890-1234', 's19song@kh.or.kr', '대구시 중구', '안녕하세요, 송중길입니다.', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
-
-INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user20', 'pass20', '수진', '980113-2234566', 'Cute수', '010-8901-2345', 'zzzsuzy@kh.or.kr', '광주시 서구', '수진짱입니다. 잘 부탁드립니다!', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
-
-INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user21', 'pass21', '윤아린', '910901-2245789', 'Shine윤', '010-9123-4567', 'user21yoon@kh.or.kr', '인천시 중구', '윤아린입니다. 잘 부탁드립니다!', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
-
-INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user22', 'pass22', '조인셩', '821102-1356891', 'Bright조', '010-0234-5678', 'user22cho@kh.or.kr', '대전시 중구', '안녕하세요, 인성이 대단합니다.', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
-
-INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user23', 'pass23', '한효쥬', '031017-2467912', 'Lovely한', '010-1345-6789', 'user23han@kh.or.kr', '울산시 남구', '한효주입니다. 만나서 반가워요!', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
-
-INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user24', 'pass24', '고소빈', '940316-2578123', 'Beautiful고', '010-2456-7890', 'user24ko@kh.or.kr', '경상북도 포항시', '고소 부탁드립니다!', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
-
-INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user25', 'pass25', '박시준', '951211-1689234', 'Cool박', '010-3567-8901', 'user25park@kh.or.kr', '전라북도 전주시', '반갑습니다, Cool박입니다.', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
-
-INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user26', 'pass26', '김교은', '960517-2791345', 'Sweet김', '010-4678-9012', 'user26kim@kh.or.kr', '경상남도 창원시', '김교은입니다. 만나서 반가워요!', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
-
-INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user27', 'pass27', '김현주', '901204-2114631', 'Shine', '010-9108-5670', 'khyun27@kh.or.kr', '경기도 수원시', '김현주입니다. 만나서 반가워요!', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
-
-INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user28', 'pass28', '송현기', '970519-1212168', '송송송', '010-1910-6781', 'shsong28@kh.or.kr', '대구시 남구', '안녕하세요, 송현기입니다.', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
-
-INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user29', 'pass29', '수지비', '980114-2201316', 'Cute수비', '010-0061-7892', 'suzib29@kh.or.kr', '광주시 남구', '수지비입니다. 잘 부탁드립니다!', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
-
-INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user30', 'pass30', '윤아리', '910902-2212570', 'Shine윤', '010-7431-8903', 'yar30@kh.or.kr', '인천시 동구', '윤아리입니다. 잘 부탁드립니다!', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
-
-INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user31', 'pass31', '임하리', '980114-2214176', '알빠누', '010-1314-7112', 'ang1515@kh.or.kr', '경기도 수원시', '많은 참여 예정', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
-
-INSERT INTO TB_MEMBER
-VALUES (SEQ_USER_NO.NEXTVAL, 'user32', 'pass32', '윤하예', '870117-2211050', '배고픈사람', '010-8171-0904', 'vest1013@kh.or.kr', '광주시 남구', '처음 가입했어요', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'admin', '1234', '관리자', '950814-1234567', '관리자', '010-1234-5678', 'admin@kh.or.kr', '서울시 강남구 역삼동', '관리자입니다', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'A');
+INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'user01', 'pass01', '박보형', '900212-232141', '뽀', '010-8460-1245', 'tt012@kh.or.kr', '서울시 강동구 천호동', '저는 너무 귀여워요', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'user02', 'pass02', '윈텨', '010101-2213456', '앙', '010-0157-2354', 'win1@kh.or.kr', '서울시 양천구 목동', '힘들다', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'user03', 'pass03', '진새연', '940215-2224131', '파스타', '010-1218-1884', 'lll010@kh.or.kr', '서울시 강서구', '로제 파스타 먹고 싶어요', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'user04', 'pass04', '햐니', '010101-2141231', '뉴진스', '010-4747-4151', 'qw1eqw@kh.or.kr', '서울시 강북구', '뉴진스 하입보이요', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'user05', 'pass05', '김새론', '930814-2212164', '사탕', '010-0977-6456', 'zv3b@kh.or.kr', '서울시 강동구', '글쎄요', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'user06', 'pass06', '홍두식', '881201-1227812', '졸린사람', '010-6542-1815', 'mmf34@kh.or.kr', '서울시 강동구', '안녕하세요', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'user07', 'pass07', '김돌개', '010511-1231214', '일반인', '010-6661-8142', 'dd1517@kh.or.kr', '서울시 서초구 서초동', 'ㅎㅇ요', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'user08', 'pass08', '박정찰', '050103-1112125', '양념반', '010-8842-7151', 'qeqw111@kh.or.kr', '서울시 서초구 서초동', '아 몰랑', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'user09', 'pass09', '최연두', '931210-2262141', '메론맛딸기', '010-8445-6456', 'mnmd2@kh.or.kr', '서울시 강동구', '잠 온다', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'user10', 'pass10', '하주연', '870501-2223154', '열받는사람', '010-1234-8124', 'uqeqweq@kh.or.kr', '서울시 강동구', '집 가고 싶다', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'user11', 'pass11', '김주황', '990101-2141231', 'bj지망생', '010-4312-1917', 'ubbd2@kh.or.kr', '서울시 강서구', '배고파요', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'user12', 'pass12', '박팔두', '030923-1231511', '도깨비', '010-0123-6456', 'rewab@kh.or.kr', '서울시 강동구', '언제까지', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'user13', 'pass13', '최지훈', '971012-1221811', '청바지가잘어울리는', '010-1234-6456', 'asee@kh.or.kr', '서울시 강동구', '으아아악', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'user14', 'pass14', '이딸기', '871108-2141231', '깃털', '010-1234-6456', 'usewer@kh.or.kr', '서울시 강남구 역삼동', '잘 부탁드립니다', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'user15', 'pass15', '김태현', '950814-2234561', 'Lovely킴', '010-3456-7890', 'urewim@kh.or.kr', '서울시 강남구', '반갑습니다, 김태현입니다.', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'user16', 'pass16', '이민수', '671001-1234562', 'Handsomely', '010-4567-8901', 'user16lee@kh.or.kr', '경기도 수원시', '안녕하세요, 이민수입니다.', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'user17', 'pass17', '박보겸', '000106-1234563', 'Sweet박', '010-5678-9012', 'uspark@kh.or.kr', '서울시 서초구', '박보겸입니다. 잘 부탁드려요!', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'user18', 'pass18', '전지헌', '901203-2234564', 'Beautiful전', '010-6789-0123', 'ujeon@kh.or.kr', '부산시 해운대구', '전지헌입니다. 만나서 반가워요!', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'user19', 'pass19', '송중길', '970518-1234565', 'Cool송', '010-7890-1234', 's19song@kh.or.kr', '대구시 중구', '안녕하세요, 송중길입니다.', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'user20', 'pass20', '수진', '980113-2234566', 'Cute수', '010-8901-2345', 'zzzsuzy@kh.or.kr', '광주시 서구', '수진짱입니다. 잘 부탁드립니다!', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'user21', 'pass21', '윤아린', '910901-2245789', 'Shine윤', '010-9123-4567', 'user21yoon@kh.or.kr', '인천시 중구', '윤아린입니다. 잘 부탁드립니다!', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'user22', 'pass22', '조인셩', '821102-1356891', 'Bright조', '010-0234-5678', 'user22cho@kh.or.kr', '대전시 중구', '안녕하세요, 인성이 대단합니다.', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'user23', 'pass23', '한효쥬', '031017-2467912', 'Lovely한', '010-1345-6789', 'user23han@kh.or.kr', '울산시 남구', '한효주입니다. 만나서 반가워요!', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'user24', 'pass24', '고소빈', '940316-2578123', 'Beautiful고', '010-2456-7890', 'user24ko@kh.or.kr', '경상북도 포항시', '고소 부탁드립니다!', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'user25', 'pass25', '박시준', '951211-1689234', 'Cool박', '010-3567-8901', 'user25park@kh.or.kr', '전라북도 전주시', '반갑습니다, Cool박입니다.', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'user26', 'pass26', '김교은', '960517-2791345', 'Sweet김', '010-4678-9012', 'user26kim@kh.or.kr', '경상남도 창원시', '김교은입니다. 만나서 반가워요!', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'user27', 'pass27', '김현주', '901204-2114631', 'Shine', '010-9108-5670', 'khyun27@kh.or.kr', '경기도 수원시', '김현주입니다. 만나서 반가워요!', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'user28', 'pass28', '송현기', '970519-1212168', '송송송', '010-1910-6781', 'shsong28@kh.or.kr', '대구시 남구', '안녕하세요, 송현기입니다.', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'user29', 'pass29', '수지비', '980114-2201316', 'Cute수비', '010-0061-7892', 'suzib29@kh.or.kr', '광주시 남구', '수지비입니다. 잘 부탁드립니다!', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'user30', 'pass30', '윤아리', '910902-2212570', 'Shine윤', '010-7431-8903', 'yar30@kh.or.kr', '인천시 동구', '윤아리입니다. 잘 부탁드립니다!', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'user31', 'pass31', '임하리', '980114-2214176', '알빠누', '010-1314-7112', 'ang1515@kh.or.kr', '경기도 수원시', '많은 참여 예정', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'user32', 'pass32', '윤하예', '870117-2211050', '배고픈사람', '010-8171-0904', 'vest1013@kh.or.kr', '광주시 남구', '처음 가입했어요', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
 --------------------------------------------------
 -------------- ANNOUNCEMENT 관련 ------------------	
 --------------------------------------------------
@@ -204,115 +139,20 @@ COMMENT ON COLUMN TB_ANNOUNCEMENT.ANNOUNCEMENT_STATUS IS '공지 상태값 (Y : 게시 
 CREATE SEQUENCE SEQ_ANNOUNCEMENT_NO
 NOCACHE;
 
-INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '오픈! 뻔뻔해요!', '안녕하세요. 뻔뻔해요 입니다.? 뻔뻔해요는 크라우드 펀딩사이트로 이제 여러분을 찾아뵙습니다.', 1, DEFAULT, '2024-02-22', DEFAULT);
-
-INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '프로젝트 업데이트: 목표 금액 달성에 한 발짝 더', '안녕하세요. 뻔뻔해요 입니다.? 프로젝트 업데이트: 목표 금액 달성에 한 발짝 더! 우리는 이미 목표에 한 발짝 더 다가갔습니다. 이제 우리의 꿈을 이루기 위해 마지막 승부를 하고 있습니다. 계속해서 후원해 주시기 바랍니다!', 1, DEFAULT, '2024-02-22', DEFAULT);
-
-INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '서비스 개선', '안녕하세요. 뻔뻔해요 입니다.? 익일 새벽 3시부터 약 1시간 동안 서비스 개선을 위한 점검이 있을 예정입니다.', 1, DEFAULT, '2024-02-22', DEFAULT);
-
-INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '기부자 감사: 성공적인 펀딩에 감사드립니다', '안녕하세요. 뻔뻔해요 입니다.? 기부자 감사: 성공적인 펀딩에 동참해 주셔서 감사드립니다. 함께 해서 정말 감사합니다!', 1, DEFAULT, '2024-02-27', DEFAULT);
-
-INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '서비스 개선', '안녕하세요. 뻔뻔해요 입니다.? 익일 새벽 3시부터 약 1시간 동안 서비스 개선을 위한 점검이 있을 예정입니다.', 1, DEFAULT, '2024-02-27', DEFAULT);
-
-INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '후원자 감사: 지지해 주셔서 감사합니다', '안녕하세요. 뻔뻔해요 입니다.? 후원자 여러분께 감사드립니다! 여러분의 지지로 인해 프로젝트가 성공에 한 발짝 더 다가갑니다. 지속적인 관심과 후원에 진심으로 감사드립니다.', 1, DEFAULT, '2024-03-03', DEFAULT);
-
-INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '프로젝트 향후 계획: 추가 업데이트 및 개선 사항', '안녕하세요. 뻔뻔해요 입니다.? 프로젝트의 향후 계획에 대한 업데이트입니다. 추가적인 업데이트와 개선 사항이 준비 중이니 기대해 주세요. 프로젝트의 발전을 위해 끊임없는 노력을 기울이겠습니다.', 1, DEFAULT, '2024-03-03', DEFAULT);
-
-INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '서비스 개선', '안녕하세요. 뻔뻔해요 입니다.? 익일 새벽 3시부터 약 1시간 동안 서비스 개선을 위한 점검이 있을 예정입니다.', 1, DEFAULT, '2024-03-03', DEFAULT);
-
-INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '이용자 경험 개선: 후원자 의견에 따른 개선 사항', '안녕하세요. 뻔뻔해요 입니다.? 이용자 경험을 개선하기 위한 노력입니다! 후원자들의 의견을 반영하여 프로젝트를 더욱 개선하고자 합니다. 공지사항을 확인하여 의견을 공유해 주세요.', 1, DEFAULT, '2024-03-05', DEFAULT);
-
-INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '창작자 여러분의 참여를 기다립니다.', '안녕하세요. 뻔뻔해요 입니다.? 창작자 여러분! 펀딩 체험단을 운영하며, 공개예정 프로젝트를 효과적으로 홍보하고, 체험단 후원자들의 다채로운 리뷰 콘텐츠를 확보해 보세요!', 1, DEFAULT, '2024-03-05', DEFAULT);
-
-INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '서비스 개선', '안녕하세요. 뻔뻔해요 입니다.? 익일 새벽 3시부터 약 1시간 동안 서비스 개선을 위한 점검이 있을 예정입니다.', 1, DEFAULT, '2024-03-05', DEFAULT);
-
-INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '전분야 창작자 대규모 모집', '안녕하세요. 뻔뻔해요 입니다.? 창작자 여러분! 프로젝트를 준비중인 창작자라면 뻔뻔해요 펀딩에 참여해보세요! 일정에 맞춰서 프로젝트를 준비하면 다양한 프로모션 혜택을 받을 수 있습니다.', 1, DEFAULT, '2024-03-05', DEFAULT);
-
-INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '카카오페이 3/7 은행/증권사 시스템 점검 안내', '안녕하세요. 뻔뻔해요 입니다.? 2024년 2월 네이버페이 은행/증권사 시스템 점검 일정 안내드립니다. 점검 중인 은행/증권사의 일부 결제 서비스가 일시 중지됩니다.', 1, DEFAULT, '2024-03-07', DEFAULT);
-
-INSERT INTO TB_ANNOUNCEMENT
-VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '서비스 개선', '안녕하세요. 뻔뻔해요 입니다.? 익일 새벽 3시부터 약 1시간 동안 서비스 개선을 위한 점검이 있을 예정입니다.', 1, DEFAULT, '2024-03-08', DEFAULT);
---------------------------------------------------
------------------ NOTICE 알림 관련 -----------------	
---------------------------------------------------
-CREATE TABLE TB_NOTICE (
-    NOTICE_NO NUMBER CONSTRAINT NOTICE_NO_PK PRIMARY KEY,
-    NOTICE_TITLE VARCHAR2(100) CONSTRAINT NOTICE_TITLE_NN NOT NULL,
-    NOTICE_CONTENT VARCHAR2(4000) CONSTRAINT NOTICE_CONTENT_NN NOT NULL,
-    NOTICE_WRITER NUMBER CONSTRAINT NOTICE_WRITER_NN NOT NULL,
-    NOTICE_CREATE_DATE DATE DEFAULT SYSDATE CONSTRAINT NOTICE_CREATE_DATE_NN NOT NULL,
-    NOTICE_TYPE NUMBER DEFAULT 1 CONSTRAINT NOTICE_TYPE_CK CHECK (NOTICE_TYPE IN(1, 2, 3)),
-    NOTICE_STATUS VARCHAR2(1) DEFAULT 'N' CONSTRAINT NOTICE_STATUS_CK CHECK (NOTICE_STATUS IN('Y', 'N')),
-    NOTICE_RECEIVER_NO NUMBER,
-    CONSTRAINT NOTICE_WRITER_FK FOREIGN KEY(NOTICE_WRITER) REFERENCES TB_MEMBER(USER_NO)
-);
-
-COMMENT ON COLUMN TB_NOTICE.NOTICE_NO IS '알림 번호';
-COMMENT ON COLUMN TB_NOTICE.NOTICE_TITLE IS '알림 제목';
-COMMENT ON COLUMN TB_NOTICE.NOTICE_CONTENT IS '알림 내용';
-COMMENT ON COLUMN TB_NOTICE.NOTICE_WRITER IS '알림 작성자회원번호';
-COMMENT ON COLUMN TB_NOTICE.NOTICE_CREATE_DATE IS '알림 작성일';
-COMMENT ON COLUMN TB_NOTICE.NOTICE_TYPE IS '알림 유형 (1 : 일반 공지 / 2 : 프로젝트 알림 / 3 : QNA 알림)';
-COMMENT ON COLUMN TB_NOTICE.NOTICE_STATUS IS '알림 상태값 (Y : 읽음 / N : 안읽음)';
-COMMENT ON COLUMN TB_NOTICE.NOTICE_RECEIVER_NO IS '알림 수신자';
-
-CREATE SEQUENCE SEQ_NOTICE_NO
-NOCACHE;
-
-INSERT INTO TB_NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, NOTICE_WRITER, NOTICE_CREATE_DATE, NOTICE_TYPE)
-VALUES (SEQ_NOTICE_NO.NEXTVAL, '공지사항', '안녕하세요. 뻔뻔해요 입니다.? 뻔뻔해요는 크라우드 펀딩사이트로 이제 여러분을 찾아뵙습니다.', 1, '2024-02-22', 1);
-
-INSERT INTO TB_NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, NOTICE_WRITER, NOTICE_CREATE_DATE, NOTICE_TYPE)
-VALUES (SEQ_NOTICE_NO.NEXTVAL, '공지사항', '안녕하세요. 뻔뻔해요 입니다.? 프로젝트 업데이트: 목표 금액 달성에 한 발짝 더! 우리는 이미 목표에 한 발짝 더 다가갔습니다. 이제 우리의 꿈을 이루기 위해 마지막 승부를 하고 있습니다. 계속해서 후원해 주시기 바랍니다!', 1, '2024-02-22', 1);
-
-INSERT INTO TB_NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, NOTICE_WRITER, NOTICE_CREATE_DATE, NOTICE_TYPE)
-VALUES (SEQ_NOTICE_NO.NEXTVAL, '공지사항', '안녕하세요. 뻔뻔해요 입니다.? 익일 새벽 3시부터 약 1시간 동안 서비스 개선을 위한 점검이 있을 예정입니다.', 1, '2024-02-22', 1);
-
-INSERT INTO TB_NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, NOTICE_WRITER, NOTICE_CREATE_DATE, NOTICE_TYPE)
-VALUES (SEQ_NOTICE_NO.NEXTVAL, '공지사항', '안녕하세요. 뻔뻔해요 입니다.? 기부자 감사: 성공적인 펀딩에 동참해 주셔서 감사드립니다. 함께 해서 정말 감사합니다!', 1, '2024-02-27', 1);
-
-INSERT INTO TB_NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, NOTICE_WRITER, NOTICE_CREATE_DATE, NOTICE_TYPE)
-VALUES (SEQ_NOTICE_NO.NEXTVAL, '공지사항', '안녕하세요. 뻔뻔해요 입니다.? 익일 새벽 3시부터 약 1시간 동안 서비스 개선을 위한 점검이 있을 예정입니다.', 1, '2024-02-27', 1);
-
-INSERT INTO TB_NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, NOTICE_WRITER, NOTICE_CREATE_DATE, NOTICE_TYPE)
-VALUES (SEQ_NOTICE_NO.NEXTVAL, '공지사항', '안녕하세요. 뻔뻔해요 입니다.? 후원자 여러분께 감사드립니다! 여러분의 지지로 인해 프로젝트가 성공에 한 발짝 더 다가갑니다. 지속적인 관심과 후원에 진심으로 감사드립니다.', 1, '2024-03-03', 1);
-
-INSERT INTO TB_NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, NOTICE_WRITER, NOTICE_CREATE_DATE, NOTICE_TYPE)
-VALUES (SEQ_NOTICE_NO.NEXTVAL, '공지사항', '안녕하세요. 뻔뻔해요 입니다.? 프로젝트의 향후 계획에 대한 업데이트입니다. 추가적인 업데이트와 개선 사항이 준비 중이니 기대해 주세요. 프로젝트의 발전을 위해 끊임없는 노력을 기울이겠습니다.', 1, '2024-03-03', 1);
-
-INSERT INTO TB_NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, NOTICE_WRITER, NOTICE_CREATE_DATE, NOTICE_TYPE)
-VALUES (SEQ_NOTICE_NO.NEXTVAL, '공지사항', '안녕하세요. 뻔뻔해요 입니다.? 익일 새벽 3시부터 약 1시간 동안 서비스 개선을 위한 점검이 있을 예정입니다.', 1, '2024-03-03', 1);
-
-INSERT INTO TB_NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, NOTICE_WRITER, NOTICE_CREATE_DATE, NOTICE_TYPE)
-VALUES (SEQ_NOTICE_NO.NEXTVAL, '공지사항', '안녕하세요. 뻔뻔해요 입니다.? 이용자 경험을 개선하기 위한 노력입니다! 후원자들의 의견을 반영하여 프로젝트를 더욱 개선하고자 합니다. 공지사항을 확인하여 의견을 공유해 주세요.', 1, '2024-03-05', 1);
-
-INSERT INTO TB_NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, NOTICE_WRITER, NOTICE_CREATE_DATE, NOTICE_TYPE)
-VALUES (SEQ_NOTICE_NO.NEXTVAL, '공지사항', '안녕하세요. 뻔뻔해요 입니다.? 창작자 여러분! 펀딩 체험단을 운영하며, 공개예정 프로젝트를 효과적으로 홍보하고, 체험단 후원자들의 다채로운 리뷰 콘텐츠를 확보해 보세요!', 1, '2024-03-05', 1);
-
-INSERT INTO TB_NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, NOTICE_WRITER, NOTICE_CREATE_DATE, NOTICE_TYPE)
-VALUES (SEQ_NOTICE_NO.NEXTVAL, '공지사항', '안녕하세요. 뻔뻔해요 입니다.? 익일 새벽 3시부터 약 1시간 동안 서비스 개선을 위한 점검이 있을 예정입니다.', 1, '2024-03-05', 1);
-
-INSERT INTO TB_NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, NOTICE_WRITER, NOTICE_CREATE_DATE, NOTICE_TYPE)
-VALUES (SEQ_NOTICE_NO.NEXTVAL, '공지사항', '안녕하세요. 뻔뻔해요 입니다.? 창작자 여러분! 프로젝트를 준비중인 창작자라면 뻔뻔해요 펀딩에 참여해보세요! 일정에 맞춰서 프로젝트를 준비하면 다양한 프로모션 혜택을 받을 수 있습니다.', 1, '2024-03-05', 1);
-
-INSERT INTO TB_NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, NOTICE_WRITER, NOTICE_CREATE_DATE, NOTICE_TYPE)
-VALUES (SEQ_NOTICE_NO.NEXTVAL, '공지사항', '안녕하세요. 뻔뻔해요 입니다.? 2024년 2월 네이버페이 은행/증권사 시스템 점검 일정 안내드립니다. 점검 중인 은행/증권사의 일부 결제 서비스가 일시 중지됩니다.', 1, '2024-03-07', 1);
-
-INSERT INTO TB_NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, NOTICE_WRITER, NOTICE_CREATE_DATE, NOTICE_TYPE)
-VALUES (SEQ_NOTICE_NO.NEXTVAL, '공지사항', '안녕하세요. 뻔뻔해요 입니다.? 익일 새벽 3시부터 약 1시간 동안 서비스 개선을 위한 점검이 있을 예정입니다.', 1, '2024-03-08', 1);
+INSERT INTO TB_ANNOUNCEMENT VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '오픈! 뻔뻔해요!', '안녕하세요. 뻔뻔해요 입니다. 뻔뻔해요는 크라우드 펀딩사이트로 이제 여러분을 찾아뵙습니다.', 1, DEFAULT, '2024-02-22', DEFAULT);
+INSERT INTO TB_ANNOUNCEMENT VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '프로젝트 업데이트: 목표 금액 달성에 한 발짝 더', '안녕하세요. 뻔뻔해요 입니다. 프로젝트 업데이트: 목표 금액 달성에 한 발짝 더! 우리는 이미 목표에 한 발짝 더 다가갔습니다. 이제 우리의 꿈을 이루기 위해 마지막 승부를 하고 있습니다. 계속해서 후원해 주시기 바랍니다!', 1, DEFAULT, '2024-02-22', DEFAULT);
+INSERT INTO TB_ANNOUNCEMENT VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '서비스 개선', '안녕하세요. 뻔뻔해요 입니다. 익일 새벽 3시부터 약 1시간 동안 서비스 개선을 위한 점검이 있을 예정입니다.', 1, DEFAULT, '2024-02-22', DEFAULT);
+INSERT INTO TB_ANNOUNCEMENT VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '기부자 감사: 성공적인 펀딩에 감사드립니다', '안녕하세요. 뻔뻔해요 입니다. 기부자 감사: 성공적인 펀딩에 동참해 주셔서 감사드립니다. 함께 해서 정말 감사합니다!', 1, DEFAULT, '2024-02-27', DEFAULT);
+INSERT INTO TB_ANNOUNCEMENT VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '서비스 개선', '안녕하세요. 뻔뻔해요 입니다. 익일 새벽 3시부터 약 1시간 동안 서비스 개선을 위한 점검이 있을 예정입니다.', 1, DEFAULT, '2024-02-27', DEFAULT);
+INSERT INTO TB_ANNOUNCEMENT VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '후원자 감사: 지지해 주셔서 감사합니다', '안녕하세요. 뻔뻔해요 입니다. 후원자 여러분께 감사드립니다! 여러분의 지지로 인해 프로젝트가 성공에 한 발짝 더 다가갑니다. 지속적인 관심과 후원에 진심으로 감사드립니다.', 1, DEFAULT, '2024-03-03', DEFAULT);
+INSERT INTO TB_ANNOUNCEMENT VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '프로젝트 향후 계획: 추가 업데이트 및 개선 사항', '안녕하세요. 뻔뻔해요 입니다. 프로젝트의 향후 계획에 대한 업데이트입니다. 추가적인 업데이트와 개선 사항이 준비 중이니 기대해 주세요. 프로젝트의 발전을 위해 끊임없는 노력을 기울이겠습니다.', 1, DEFAULT, '2024-03-03', DEFAULT);
+INSERT INTO TB_ANNOUNCEMENT VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '서비스 개선', '안녕하세요. 뻔뻔해요 입니다. 익일 새벽 3시부터 약 1시간 동안 서비스 개선을 위한 점검이 있을 예정입니다.', 1, DEFAULT, '2024-03-03', DEFAULT);
+INSERT INTO TB_ANNOUNCEMENT VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '이용자 경험 개선: 후원자 의견에 따른 개선 사항', '안녕하세요. 뻔뻔해요 입니다. 이용자 경험을 개선하기 위한 노력입니다! 후원자들의 의견을 반영하여 프로젝트를 더욱 개선하고자 합니다. 공지사항을 확인하여 의견을 공유해 주세요.', 1, DEFAULT, '2024-03-05', DEFAULT);
+INSERT INTO TB_ANNOUNCEMENT VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '창작자 여러분의 참여를 기다립니다.', '안녕하세요. 뻔뻔해요 입니다. 창작자 여러분! 펀딩 체험단을 운영하며, 공개예정 프로젝트를 효과적으로 홍보하고, 체험단 후원자들의 다채로운 리뷰 콘텐츠를 확보해 보세요!', 1, DEFAULT, '2024-03-05', DEFAULT);
+INSERT INTO TB_ANNOUNCEMENT VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '서비스 개선', '안녕하세요. 뻔뻔해요 입니다. 익일 새벽 3시부터 약 1시간 동안 서비스 개선을 위한 점검이 있을 예정입니다.', 1, DEFAULT, '2024-03-05', DEFAULT);
+INSERT INTO TB_ANNOUNCEMENT VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '전분야 창작자 대규모 모집', '안녕하세요. 뻔뻔해요 입니다. 창작자 여러분! 프로젝트를 준비중인 창작자라면 뻔뻔해요 펀딩에 참여해보세요! 일정에 맞춰서 프로젝트를 준비하면 다양한 프로모션 혜택을 받을 수 있습니다.', 1, DEFAULT, '2024-03-05', DEFAULT);
+INSERT INTO TB_ANNOUNCEMENT VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '카카오페이 3/7 은행/증권사 시스템 점검 안내', '안녕하세요. 뻔뻔해요 입니다. 2024년 2월 네이버페이 은행/증권사 시스템 점검 일정 안내드립니다. 점검 중인 은행/증권사의 일부 결제 서비스가 일시 중지됩니다.', 1, DEFAULT, '2024-03-07', DEFAULT);
+INSERT INTO TB_ANNOUNCEMENT VALUES (SEQ_ANNOUNCEMENT_NO.NEXTVAL, '서비스 개선', '안녕하세요. 뻔뻔해요 입니다. 익일 새벽 3시부터 약 1시간 동안 서비스 개선을 위한 점검이 있을 예정입니다.', 1, DEFAULT, '2024-03-08', DEFAULT);
 --------------------------------------------------
 ----------------- FAQ 게시판 관련 ------------------	
 --------------------------------------------------
@@ -478,7 +318,7 @@ CREATE TABLE TB_PROJECT (
     PROJECT_END DATE CONSTRAINT PROJECT_END_NN NOT NULL,
     PROJECT_PAYMENT_BUYER DATE CONSTRAINT PROJECT_PAYMENT_BUYER_NN NOT NULL,
     PROJECT_PAYMENT_SELLER DATE CONSTRAINT PROJECT_PAYMENT_SELLER_NN NOT NULL,
-    PROJECT_STATUS VARCHAR2(1) DEFAULT 'N' CONSTRAINT PROJECT_STATUS_CK CHECK(PROJECT_STATUS IN('Y', 'N', 'B', 'E')),
+    PROJECT_STATUS VARCHAR2(1) DEFAULT 'N' CONSTRAINT PROJECT_STATUS_CK CHECK(PROJECT_STATUS IN('Y', 'N', 'W', 'B', 'E')),
     CONSTRAINT PROJECT_SELLER_FK FOREIGN KEY (PROJECT_SELLER) REFERENCES TB_MEMBER(USER_NO),
     CONSTRAINT PROJECT_CATEGORY_NO_FK FOREIGN KEY (PROJECT_CATEGORY_NO) REFERENCES TB_PJ_CATEGORY(PJ_CATEGORY_NO)
 );
@@ -495,7 +335,7 @@ COMMENT ON COLUMN TB_PROJECT.PROJECT_START IS '펀딩 프로젝트 시작일';
 COMMENT ON COLUMN TB_PROJECT.PROJECT_END IS '펀딩 프로젝트 종료일';
 COMMENT ON COLUMN TB_PROJECT.PROJECT_PAYMENT_BUYER IS '펀딩 프로젝트 후원자결제기한';
 COMMENT ON COLUMN TB_PROJECT.PROJECT_PAYMENT_SELLER IS '펀딩 프로젝트 창작자정산일';
-COMMENT ON COLUMN TB_PROJECT.PROJECT_STATUS IS '펀딩 프로젝트 상태값 (Y : 게시 / N : 비게시 / B : 반려 / E : 종료)';
+COMMENT ON COLUMN TB_PROJECT.PROJECT_STATUS IS '펀딩 프로젝트 상태값 (Y : 게시 / N : 비게시 / W : 게시 대기 / B : 반려 / E : 종료)';
 
 CREATE SEQUENCE SEQ_PROJECT_NO
 START WITH 1000
@@ -723,6 +563,83 @@ VALUES(SEQ_PROJECT_NO.NEXTVAL, 12, 140, '다이아몬드를 대체할 모이사나이트' , '다
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
 VALUES(SEQ_PROJECT_NO.NEXTVAL, 13, 140, '살고싶은 삶을 성취할 수 있도록 지지하고 도와주는 원석' , '악몽을 걸러주는 드림캐쳐 목걸이', '착용할수록 내 몸에 맞게 에이징 되는 금속 스털링 실버로 제작', '#목걸이', 800000, '2024-02-28', '2024-03-30', '2024-04-06', '2024-04-13', 'Y');
 --------------------------------------------------
+----------------- NOTICE 알림 관련 -----------------	
+--------------------------------------------------
+CREATE TABLE TB_NOTICE (
+    NOTICE_NO NUMBER CONSTRAINT NOTICE_NO_PK PRIMARY KEY,
+    NOTICE_TITLE VARCHAR2(100) CONSTRAINT NOTICE_TITLE_NN NOT NULL,
+    NOTICE_CONTENT VARCHAR2(4000) CONSTRAINT NOTICE_CONTENT_NN NOT NULL,
+    NOTICE_WRITER NUMBER CONSTRAINT NOTICE_WRITER_NN NOT NULL,
+    NOTICE_CREATE_DATE DATE DEFAULT SYSDATE CONSTRAINT NOTICE_CREATE_DATE_NN NOT NULL,
+    NOTICE_TYPE NUMBER DEFAULT 1 CONSTRAINT NOTICE_TYPE_CK CHECK (NOTICE_TYPE IN(1, 2, 3)),
+    NOTICE_STATUS VARCHAR2(1) DEFAULT 'N' CONSTRAINT NOTICE_STATUS_CK CHECK (NOTICE_STATUS IN('Y', 'N')),
+    NOTICE_RECEIVER_NO NUMBER,
+    NOTICE_ANNOUNCEMENT_NO NUMBER,
+    NOTICE_PROJECT_NO NUMBER,
+    NOTICE_QNA_NO NUMBER,
+    CONSTRAINT NOTICE_WRITER_FK FOREIGN KEY(NOTICE_WRITER) REFERENCES TB_MEMBER(USER_NO),
+    CONSTRAINT NOTICE_ANNOUNCEMENT_NO_FK FOREIGN KEY(NOTICE_ANNOUNCEMENT_NO) REFERENCES TB_ANNOUNCEMENT(ANNOUNCEMENT_NO),
+    CONSTRAINT NOTICE_PROJECT_NO_FK FOREIGN KEY(NOTICE_PROJECT_NO) REFERENCES TB_PROJECT(PROJECT_NO),
+    CONSTRAINT NOTICE_QNA_NO_FK FOREIGN KEY(NOTICE_QNA_NO) REFERENCES TB_QNA(QNA_NO)
+);
+
+COMMENT ON COLUMN TB_NOTICE.NOTICE_NO IS '알림 번호';
+COMMENT ON COLUMN TB_NOTICE.NOTICE_TITLE IS '알림 제목';
+COMMENT ON COLUMN TB_NOTICE.NOTICE_CONTENT IS '알림 내용';
+COMMENT ON COLUMN TB_NOTICE.NOTICE_WRITER IS '알림 작성자회원번호';
+COMMENT ON COLUMN TB_NOTICE.NOTICE_CREATE_DATE IS '알림 작성일';
+COMMENT ON COLUMN TB_NOTICE.NOTICE_TYPE IS '알림 유형 (1 : 일반 공지 / 2 : 프로젝트 알림 / 3 : QNA 알림)';
+COMMENT ON COLUMN TB_NOTICE.NOTICE_STATUS IS '알림 상태값 (Y : 읽음 / N : 안읽음)';
+COMMENT ON COLUMN TB_NOTICE.NOTICE_RECEIVER_NO IS '알림 수신자';
+COMMENT ON COLUMN TB_NOTICE.NOTICE_ANNOUNCEMENT_NO IS '알림 참조글 (공지)';
+COMMENT ON COLUMN TB_NOTICE.NOTICE_PROJECT_NO IS '알림 참조글 (프로젝트)';
+COMMENT ON COLUMN TB_NOTICE.NOTICE_QNA_NO IS '알림 참조글 (QNA)';
+
+CREATE SEQUENCE SEQ_NOTICE_NO
+NOCACHE;
+
+INSERT INTO TB_NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, NOTICE_WRITER, NOTICE_CREATE_DATE, NOTICE_TYPE, NOTICE_ANNOUNCEMENT_NO)
+VALUES (SEQ_NOTICE_NO.NEXTVAL, '공지사항', '안녕하세요. 뻔뻔해요 입니다. 뻔뻔해요는 크라우드 펀딩사이트로 이제 여러분을 찾아뵙습니다.', 1, '2024-02-22', 1, 1);
+
+INSERT INTO TB_NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, NOTICE_WRITER, NOTICE_CREATE_DATE, NOTICE_TYPE, NOTICE_ANNOUNCEMENT_NO)
+VALUES (SEQ_NOTICE_NO.NEXTVAL, '공지사항', '안녕하세요. 뻔뻔해요 입니다. 프로젝트 업데이트: 목표 금액 달성에 한 발짝 더! 우리는 이미 목표에 한 발짝 더 다가갔습니다. 이제 우리의 꿈을 이루기 위해 마지막 승부를 하고 있습니다. 계속해서 후원해 주시기 바랍니다!', 1, '2024-02-22', 1, 2);
+
+INSERT INTO TB_NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, NOTICE_WRITER, NOTICE_CREATE_DATE, NOTICE_TYPE, NOTICE_ANNOUNCEMENT_NO)
+VALUES (SEQ_NOTICE_NO.NEXTVAL, '공지사항', '안녕하세요. 뻔뻔해요 입니다. 익일 새벽 3시부터 약 1시간 동안 서비스 개선을 위한 점검이 있을 예정입니다.', 1, '2024-02-22', 1, 3);
+
+INSERT INTO TB_NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, NOTICE_WRITER, NOTICE_CREATE_DATE, NOTICE_TYPE, NOTICE_ANNOUNCEMENT_NO)
+VALUES (SEQ_NOTICE_NO.NEXTVAL, '공지사항', '안녕하세요. 뻔뻔해요 입니다. 기부자 감사: 성공적인 펀딩에 동참해 주셔서 감사드립니다. 함께 해서 정말 감사합니다!', 1, '2024-02-27', 1, 4);
+
+INSERT INTO TB_NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, NOTICE_WRITER, NOTICE_CREATE_DATE, NOTICE_TYPE, NOTICE_ANNOUNCEMENT_NO)
+VALUES (SEQ_NOTICE_NO.NEXTVAL, '공지사항', '안녕하세요. 뻔뻔해요 입니다. 익일 새벽 3시부터 약 1시간 동안 서비스 개선을 위한 점검이 있을 예정입니다.', 1, '2024-02-27', 1, 5);
+
+INSERT INTO TB_NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, NOTICE_WRITER, NOTICE_CREATE_DATE, NOTICE_TYPE, NOTICE_ANNOUNCEMENT_NO)
+VALUES (SEQ_NOTICE_NO.NEXTVAL, '공지사항', '안녕하세요. 뻔뻔해요 입니다. 후원자 여러분께 감사드립니다! 여러분의 지지로 인해 프로젝트가 성공에 한 발짝 더 다가갑니다. 지속적인 관심과 후원에 진심으로 감사드립니다.', 1, '2024-03-03', 1, 6);
+
+INSERT INTO TB_NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, NOTICE_WRITER, NOTICE_CREATE_DATE, NOTICE_TYPE, NOTICE_ANNOUNCEMENT_NO)
+VALUES (SEQ_NOTICE_NO.NEXTVAL, '공지사항', '안녕하세요. 뻔뻔해요 입니다. 프로젝트의 향후 계획에 대한 업데이트입니다. 추가적인 업데이트와 개선 사항이 준비 중이니 기대해 주세요. 프로젝트의 발전을 위해 끊임없는 노력을 기울이겠습니다.', 1, '2024-03-03', 1, 7);
+
+INSERT INTO TB_NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, NOTICE_WRITER, NOTICE_CREATE_DATE, NOTICE_TYPE, NOTICE_ANNOUNCEMENT_NO)
+VALUES (SEQ_NOTICE_NO.NEXTVAL, '공지사항', '안녕하세요. 뻔뻔해요 입니다. 익일 새벽 3시부터 약 1시간 동안 서비스 개선을 위한 점검이 있을 예정입니다.', 1, '2024-03-03', 1, 8);
+
+INSERT INTO TB_NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, NOTICE_WRITER, NOTICE_CREATE_DATE, NOTICE_TYPE, NOTICE_ANNOUNCEMENT_NO)
+VALUES (SEQ_NOTICE_NO.NEXTVAL, '공지사항', '안녕하세요. 뻔뻔해요 입니다. 이용자 경험을 개선하기 위한 노력입니다! 후원자들의 의견을 반영하여 프로젝트를 더욱 개선하고자 합니다. 공지사항을 확인하여 의견을 공유해 주세요.', 1, '2024-03-05', 1, 9);
+
+INSERT INTO TB_NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, NOTICE_WRITER, NOTICE_CREATE_DATE, NOTICE_TYPE, NOTICE_ANNOUNCEMENT_NO)
+VALUES (SEQ_NOTICE_NO.NEXTVAL, '공지사항', '안녕하세요. 뻔뻔해요 입니다. 창작자 여러분! 펀딩 체험단을 운영하며, 공개예정 프로젝트를 효과적으로 홍보하고, 체험단 후원자들의 다채로운 리뷰 콘텐츠를 확보해 보세요!', 1, '2024-03-05', 1, 10);
+
+INSERT INTO TB_NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, NOTICE_WRITER, NOTICE_CREATE_DATE, NOTICE_TYPE, NOTICE_ANNOUNCEMENT_NO)
+VALUES (SEQ_NOTICE_NO.NEXTVAL, '공지사항', '안녕하세요. 뻔뻔해요 입니다. 익일 새벽 3시부터 약 1시간 동안 서비스 개선을 위한 점검이 있을 예정입니다.', 1, '2024-03-05', 1, 11);
+
+INSERT INTO TB_NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, NOTICE_WRITER, NOTICE_CREATE_DATE, NOTICE_TYPE, NOTICE_ANNOUNCEMENT_NO)
+VALUES (SEQ_NOTICE_NO.NEXTVAL, '공지사항', '안녕하세요. 뻔뻔해요 입니다. 창작자 여러분! 프로젝트를 준비중인 창작자라면 뻔뻔해요 펀딩에 참여해보세요! 일정에 맞춰서 프로젝트를 준비하면 다양한 프로모션 혜택을 받을 수 있습니다.', 1, '2024-03-05', 1, 12);
+
+INSERT INTO TB_NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, NOTICE_WRITER, NOTICE_CREATE_DATE, NOTICE_TYPE, NOTICE_ANNOUNCEMENT_NO)
+VALUES (SEQ_NOTICE_NO.NEXTVAL, '공지사항', '안녕하세요. 뻔뻔해요 입니다. 2024년 2월 네이버페이 은행/증권사 시스템 점검 일정 안내드립니다. 점검 중인 은행/증권사의 일부 결제 서비스가 일시 중지됩니다.', 1, '2024-03-07', 1, 13);
+
+INSERT INTO TB_NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, NOTICE_WRITER, NOTICE_CREATE_DATE, NOTICE_TYPE, NOTICE_ANNOUNCEMENT_NO)
+VALUES (SEQ_NOTICE_NO.NEXTVAL, '공지사항', '안녕하세요. 뻔뻔해요 입니다. 익일 새벽 3시부터 약 1시간 동안 서비스 개선을 위한 점검이 있을 예정입니다.', 1, '2024-03-08', 1, 14);
+--------------------------------------------------
 ------------------ CHAT 관련 ----------------------	
 --------------------------------------------------
 CREATE TABLE TB_CHAT (
@@ -835,26 +752,13 @@ COMMENT ON COLUMN TB_LIKES.LIKES_STATUS IS '찜 상태값 (Y : 찜 / N : 찜 해제)';
 CREATE SEQUENCE SEQ_LIKES_NO
 NOCACHE;
 
-INSERT INTO TB_LIKES(LIKES_USER_NO, LIKES_PROJECT_NO, LIKES_CREATE_DATE, LIKES_STATUS) 
-VALUES(2, 1007, '2024-02-26', 'Y');
-
-INSERT INTO TB_LIKES(LIKES_USER_NO, LIKES_PROJECT_NO, LIKES_CREATE_DATE, LIKES_STATUS) 
-VALUES(2, 1008, '2024-02-26', 'Y');
-
-INSERT INTO TB_LIKES(LIKES_USER_NO, LIKES_PROJECT_NO, LIKES_CREATE_DATE, LIKES_STATUS) 
-VALUES(4, 1009, '2024-02-27', 'Y');
-
-INSERT INTO TB_LIKES(LIKES_USER_NO, LIKES_PROJECT_NO, LIKES_CREATE_DATE, LIKES_STATUS) 
-VALUES(3, 1010, '2024-02-27', 'Y');
-
-INSERT INTO TB_LIKES(LIKES_USER_NO, LIKES_PROJECT_NO, LIKES_CREATE_DATE, LIKES_STATUS) 
-VALUES(2, 1011, '2024-02-28', 'Y');
-
-INSERT INTO TB_LIKES(LIKES_USER_NO, LIKES_PROJECT_NO, LIKES_CREATE_DATE, LIKES_STATUS) 
-VALUES(2, 1012, '2024-03-01', 'Y');
-
-INSERT INTO TB_LIKES(LIKES_USER_NO, LIKES_PROJECT_NO, LIKES_CREATE_DATE, LIKES_STATUS) 
-VALUES(2, 1013, '2024-03-01', 'Y');
+INSERT INTO TB_LIKES(LIKES_USER_NO, LIKES_PROJECT_NO, LIKES_CREATE_DATE, LIKES_STATUS) VALUES(2, 1007, '2024-02-26', 'Y');
+INSERT INTO TB_LIKES(LIKES_USER_NO, LIKES_PROJECT_NO, LIKES_CREATE_DATE, LIKES_STATUS) VALUES(2, 1008, '2024-02-26', 'Y');
+INSERT INTO TB_LIKES(LIKES_USER_NO, LIKES_PROJECT_NO, LIKES_CREATE_DATE, LIKES_STATUS) VALUES(4, 1009, '2024-02-27', 'Y');
+INSERT INTO TB_LIKES(LIKES_USER_NO, LIKES_PROJECT_NO, LIKES_CREATE_DATE, LIKES_STATUS) VALUES(3, 1010, '2024-02-27', 'Y');
+INSERT INTO TB_LIKES(LIKES_USER_NO, LIKES_PROJECT_NO, LIKES_CREATE_DATE, LIKES_STATUS) VALUES(2, 1011, '2024-02-28', 'Y');
+INSERT INTO TB_LIKES(LIKES_USER_NO, LIKES_PROJECT_NO, LIKES_CREATE_DATE, LIKES_STATUS) VALUES(2, 1012, '2024-03-01', 'Y');
+INSERT INTO TB_LIKES(LIKES_USER_NO, LIKES_PROJECT_NO, LIKES_CREATE_DATE, LIKES_STATUS) VALUES(2, 1013, '2024-03-01', 'Y');
 --------------------------------------------------
 ----------------- ATTACHMENT 관련 -----------------	
 --------------------------------------------------

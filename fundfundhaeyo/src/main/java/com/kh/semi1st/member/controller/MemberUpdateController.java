@@ -39,16 +39,12 @@ public class MemberUpdateController extends HttpServlet {
 		request.setCharacterEncoding("utf-8");
 		
 		if(ServletFileUpload.isMultipartContent(request)) {
-			// 전송용량제한
 			int maxSize = 10 * 1024 * 1024;
 			
-			// 저장시킬 폴더의 물리적인 경로
 			String savePath = request.getSession().getServletContext().getRealPath("/resources/member_upfiles/");
 			
-			// 전달된 파일 업로드
 			MultipartRequest multiRequest = new MultipartRequest(request, savePath, maxSize, "UTF-8", new MyFileRenamePolicy());
 			
-			// Member Update
 			Member m = new Member();
 			m.setUserNo(Integer.parseInt(multiRequest.getParameter("userNo")));
 			m.setUserPhone(multiRequest.getParameter("userPhone"));
@@ -62,7 +58,6 @@ public class MemberUpdateController extends HttpServlet {
 			
 			String key = "file";
 			if(multiRequest.getOriginalFileName(key) != null) {
-				// 첨파가 존재할 경우
 				at = new Attachment();
 				at.setAttachmentOriginName(multiRequest.getOriginalFileName(key));
 				at.setAttachmentUpdateName(multiRequest.getFilesystemName(key));
@@ -74,7 +69,6 @@ public class MemberUpdateController extends HttpServlet {
 				}else {
 					at.setAttachmentUserNo(m.getUserNo());
 				}
-				
 				at.setAttachmentNo(Integer.parseInt(multiRequest.getParameter("attachmentOriginNo")));
 			}
 			
@@ -90,7 +84,7 @@ public class MemberUpdateController extends HttpServlet {
 				response.sendRedirect(request.getContextPath() + "/moveToUpdate.me");
 			}else {
 				request.getSession().setAttribute("errorMsg", "변경에 실패하였습니다.");
-				//request.getRequestDispatcher("views/common/errorPage.jsp").forward(request, response);
+				request.getRequestDispatcher("views/common/errorPage500.jsp").forward(request, response);
 			}
 		}
 	}

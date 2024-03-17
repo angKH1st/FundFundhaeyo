@@ -5,6 +5,7 @@
 <%
 	Member seller = (Member)request.getAttribute("seller"); 
 	Member buyer = (Member)request.getAttribute("buyer"); 
+	int likes = (int)request.getAttribute("likes");
 	
 	// 원화 처리
 	NumberFormat nf = NumberFormat.getInstance(Locale.KOREA);
@@ -52,25 +53,25 @@
 								<div class="mypage_activity_row1_grade4_count"><h3><%= nf.format(seller.getSellerFunding()) %></h3><h5> 원</h5></div>
 							</div>
 						</div>
-						<div class="mypage_activity_row2">
-							<div class="mypage_activity_row2_grade1 bglg fl">
-								<a href="#">???</a>
-							</div>
-							<div class="mypage_activity_row2_grade2 bglg fl">
-								<a href="#">???</a>
-							</div>
-							<div class="mypage_activity_row2_grade3 bglg fl">
-								<a href="#">???</a>
-							</div>
-							<div class="mypage_activity_row2_grade4 bglg fl">
-								<a href="#">???</a>
-							</div>
-						</div>
 					</div>
 				</div>
 				<div class="mypage_right_content2 pd15">
-					<div class="mypage_right_title2"><h3>제목</h3></div>
-					<div class="mypage_right_TBD brlg br5">TBD 클래스이름 고쳐야함</div>
+					<div class="mypage_right_title2"><h3>나의활동</h3></div>
+					<div class="mypage_right_my">
+						<div class="mypage_right_my_left fl">
+							<div class="mypage_right_my_left_likes br10 fl" onclick="moveToLikes();">
+								<div class="mypage_activity_row1_grade1_title"><h4>찜목록 💜</h4></div>
+								<div class="mypage_activity_row1_grade1_count"><h3><%= likes %></h3><h5> 개</h5></div>
+							</div>
+							<div class="mypage_right_my_left_grade br10 fl">
+								<div class="mypage_activity_row1_grade1_title"><h4>등급 💜</h4></div>
+								<div class="mypage_activity_row1_grade1_count"><h3><%= loginUser.getUserGrade() %></h3><h5> 급</h5></div>
+							</div>
+						</div>
+						<div class="mypage_right_my_right br10 fl">
+							<div class="mypage_activity_row1_grade1_count br10" onclick="moveToEnrollProject();"><h3>프로젝트 시작하기</h3></div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

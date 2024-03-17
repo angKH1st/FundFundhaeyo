@@ -23,8 +23,10 @@
 		                SELECT
 		                       ANNOUNCEMENT_NO
 		                     , ANNOUNCEMENT_TITLE
+		                     , ANNOUNCEMENT_CONTENT
 		                     , USER_NICKNAME
 		                     , ANNOUNCEMENT_COUNT
+		                     , ANNOUNCEMENT_STATUS
 		                     , ANNOUNCEMENT_CREATE_DATE
 		                  FROM TB_ANNOUNCEMENT
 		                  JOIN TB_MEMBER ON (USER_NO = ANNOUNCEMENT_WRITER)
@@ -59,6 +61,7 @@
 		     , USER_NICKNAME
 		     , ANNOUNCEMENT_COUNT
 		     , ANNOUNCEMENT_CREATE_DATE
+		     , ANNOUNCEMENT_STATUS
 		  FROM TB_ANNOUNCEMENT
 		  JOIN TB_MEMBER ON (USER_NO = ANNOUNCEMENT_WRITER)
 		 WHERE ANNOUNCEMENT_NO = ? 
@@ -79,4 +82,62 @@
 		  FROM TB_ANNOUNCEMENT
 		 WHERE ANNOUNCEMENT_NO = ? + 1
 	</entry>
+	
+	<entry key="insertAnnouncement">
+		INSERT
+		  INTO TB_ANNOUNCEMENT
+		     (
+		       ANNOUNCEMENT_NO
+		     , ANNOUNCEMENT_TITLE
+		     , ANNOUNCEMENT_CONTENT
+		     , ANNOUNCEMENT_WRITER
+		     )
+		VALUES
+			 (
+			   SEQ_ANNOUNCEMENT_NO.NEXTVAL
+			 , ?
+			 , ?
+			 , 1
+			 )
+	</entry>
+	
+	<entry key="insertAnnouncementNotice">
+		INSERT
+		  INTO TB_NOTICE
+		     (
+		       NOTICE_NO
+		     , NOTICE_TITLE
+		     , NOTICE_CONTENT
+		     , NOTICE_WRITER
+		     , NOTICE_ANNOUNCEMENT_NO
+		     )
+		VALUES
+			 (
+			   SEQ_NOTICE_NO.NEXTVAL
+			 , '공지사항'
+			 , ?
+			 , 1
+			 , SEQ_ANNOUNCEMENT_NO.CURRVAL
+			 )
+	</entry>
+	
+	<entry key="updateAnnouncement">
+		UPDATE TB_ANNOUNCEMENT
+		   SET ANNOUNCEMENT_TITLE = ?
+		     , ANNOUNCEMENT_CONTENT = ?
+		 WHERE ANNOUNCEMENT_NO = ?
+	</entry>
+	
+	<entry key="updateAnnouncementNotice">
+		UPDATE TB_NOTICE
+		   SET NOTICE_CONTENT = ?
+		 WHERE NOTICE_ANNOUNCEMENT_NO = ?
+	</entry>
+	
+	<entry key="deleteAnnouncement">
+		UPDATE TB_ANNOUNCEMENT
+		   SET ANNOUNCEMENT_STATUS = 'N'
+		 WHERE ANNOUNCEMENT_NO = ?
+	</entry>
+	
 </properties>

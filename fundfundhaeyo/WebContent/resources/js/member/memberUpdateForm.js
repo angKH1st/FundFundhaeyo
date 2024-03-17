@@ -15,25 +15,44 @@ $(document).ready(function() {
 	$('.profileBtn').click(function() {
 		$('#profileInput').focus();
 	});
+	$('.mypage_update_Form_right_pwdBtn').on('click', function() {
+		$('.mypage_update_Form_right').hide();
+	});
 });
 
-function uploadMemberProfile(){
+var observer = new MutationObserver(function(mutations) {
+	mutations.forEach(function(mutationRecord) {
+		var styleAttribute = mutationRecord.target.getAttribute('style');
+		if (styleAttribute.includes('display: none')) {
+			$('.mypage_update_Form_right').show();
+		}
+	});
+});
+
+var target = document.querySelector('.modal');
+observer.observe(target, { attributes: true, attributeFilter: ['style'] });
+
+function uploadMemberProfile() {
 	$("#file").click();
 }
 
-function loadImg(inputFile){
-	if (inputFile.files.length == 1) { // 파일이 선택된 경우 : 파일 읽어들여 미리보기
-		// 파일을 읽어들일 수 있는 FileReader 객체 생성
+function loadImg(inputFile) {
+	if (inputFile.files.length == 1) {
 		const reader = new FileReader();
 
-		// 파일을 읽어들이는 메소드
 		reader.readAsDataURL(inputFile.files[0]);
 
-		// 해당 파일 읽어들이기가 완료됐을 때 실행할 함수 정의
 		reader.onload = function(e) {
 			$("#profileImg").attr("src", e.target.result);
 		}
-	} else { // 선택된 파일이 취소된 경우 : 미리보기 삭제
+	} else {
 		$("#profileImg").attr("src", null);
+	}
+}
+
+function validatePwd() {
+	if ($("input[name=updatePwd]").val() != $("input[name=checkPwd]").val()) {
+		alert("변경할 비밀번호가 일치하지 않습니다.");
+		return false;
 	}
 }

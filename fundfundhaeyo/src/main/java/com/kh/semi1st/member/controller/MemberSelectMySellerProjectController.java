@@ -1,8 +1,7 @@
-package com.kh.semi1st.admin.project;
+package com.kh.semi1st.member.controller;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,22 +9,22 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.google.gson.Gson;
 import com.kh.semi1st.common.model.vo.PageInfo;
-import com.kh.semi1st.project.model.service.ProjectService;
+import com.kh.semi1st.member.model.service.MemberService;
+import com.kh.semi1st.member.model.vo.Member;
 import com.kh.semi1st.project.model.vo.Project;
 
 /**
- * Servlet implementation class AdminProjectSelectListController
+ * Servlet implementation class MemberSelectMySellerProjectController
  */
-@WebServlet("/admSelectList.pr")
-public class AdminProjectSelectListController extends HttpServlet {
+@WebServlet("/myProject.me")
+public class MemberSelectMySellerProjectController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AdminProjectSelectListController() {
+    public MemberSelectMySellerProjectController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -43,10 +42,12 @@ public class AdminProjectSelectListController extends HttpServlet {
 		int startPage;   // 페이징바의 시작 수
 		int endPage;	 // 페이징바의 끝 수
 		
-		listCount = new ProjectService().selectProjectListCount();
+		int userNo = ((Member)request.getSession().getAttribute("loginUser")).getUserNo();
+		
+		listCount = new MemberService().selectMySellerProjectCount(userNo);
 		currentPage = Integer.parseInt(request.getParameter("cpage"));
 		pageLimit = 5;
-		boardLimit = 10;
+		boardLimit = 8;
 		
 		maxPage = (int)Math.ceil((double)listCount / boardLimit);
 		startPage = ((currentPage - 1) / pageLimit) * pageLimit + 1;
@@ -56,17 +57,12 @@ public class AdminProjectSelectListController extends HttpServlet {
 		}
 		
 		PageInfo pi = new PageInfo(listCount, currentPage, pageLimit, boardLimit, maxPage, startPage, endPage);
-		ArrayList<Project> list = new ProjectService().selectProjectList(pi);
+		ArrayList<Project> list = new MemberService().selectMySellerProjectList(pi, userNo);
 		
-		HashMap<String, Object> map = new HashMap<>();
-		map.put("pi", pi);
-		map.put("list", list);
-
-		Gson gson = new Gson();
-		String json = gson.toJson(map);
+		request.setAttribute("pi", pi);
+		request.setAttribute("list", list);
 		
-		response.setContentType("application/json; charset=UTF-8");
-		response.getWriter().write(json);
+		request.getRequestDispatcher("views/member/memberMySellerProject.jsp").forward(request, response);
 	}
 
 	/**

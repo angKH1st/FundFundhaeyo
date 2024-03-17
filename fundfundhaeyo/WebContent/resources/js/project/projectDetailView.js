@@ -17,22 +17,26 @@ $(function() {
 })
 
 function insertChat() {
-	$.ajax({
-		url: "chatInsert.pr",
-		data: {
-			chatInput: $("#chatInput").val(),
-			projectNo: $("#projectNo").val()
-	        },
-		type: "post",
-		success: function(result) {
-			if (result > 0) { // 채팅 작성 성공 => 갱신된 채팅 리스트 조회
-				selectChatList();
-				$("#chatInput").val("");
+	if($("#chatInput").val() != ""){
+		$.ajax({
+			url: "chatInsert.pr",
+			data: {
+				chatInput: $("#chatInput").val(),
+				projectNo: $("#projectNo").val()
+		        },
+			type: "post",
+			success: function(result) {
+				if (result > 0) { // 채팅 작성 성공 => 갱신된 채팅 리스트 조회
+					selectChatList();
+					$("#chatInput").val("");
+				}
+			}, error: function() {
+				alert("채팅 작성에 실패했습니다.");
 			}
-		}, error: function() {
-			alert("채팅 작성에 실패했습니다.");
-		}
-	})
+		})
+	}else{
+		alert('메세지를 입력해주세요.')		
+	}
 }
 
 function selectChatList() {
@@ -80,7 +84,7 @@ function selectChatList() {
 					}
 				}
 			}else{
-				value += "<div class=\"project_detail_chat_middle_none\">채팅 내역이 없습니다.<br>창작자와의 채팅을 시작해보세요!</div>"
+				value += "<div class=\"project_detail_chat_middle_none\">채팅 내역이 없습니다.<br>채팅을 시작해보세요!</div>"
 			}
 			
 			$(".project_detail_chat_middle").html(value);

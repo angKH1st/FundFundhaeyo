@@ -332,9 +332,7 @@
 		  FROM TB_PROJECT
 		  JOIN TB_PJ_CATEGORY ON (PROJECT_CATEGORY_NO = PJ_CATEGORY_NO)
 		  JOIN TB_SELLER ON (PROJECT_NO = SELLER_PROJECT_NO)
-		 WHERE PROJECT_STATUS = 'Y'
 		   AND PROJECT_NO = ?
-		   AND SYSDATE BETWEEN PROJECT_START AND PROJECT_END
 	</entry>
 	
 	<entry key="selectAttachmentList">
@@ -426,6 +424,17 @@
 		  FROM TB_PROJECT
 		 WHERE PROJECT_STATUS = 'Y'
 		   AND SYSDATE BETWEEN PROJECT_START AND PROJECT_END
+	</entry>
+	
+	<entry key="selectProjectLikesListCount">
+		SELECT
+		       COUNT(*) count
+		  FROM TB_PROJECT
+		  JOIN TB_LIKES ON (LIKES_PROJECT_NO = PROJECT_NO)
+		  JOIN TB_MEMBER ON (LIKES_USER_NO = USER_NO)
+		 WHERE PROJECT_STATUS = 'Y'
+		   AND SYSDATE BETWEEN PROJECT_START AND PROJECT_END
+		   AND USER_NO = ?
 	</entry>
 	
 	<entry key="selectProjectList">
@@ -549,6 +558,7 @@
 		     , NOTICE_WRITER
 		     , NOTICE_TYPE
 		     , NOTICE_RECEIVER_NO
+		     , NOTICE_PROJECT_NO
 		     )
 		VALUES
 			 (
@@ -557,6 +567,7 @@
 			 , ?
 			 , 1
 			 , 2
+			 , ?
 			 , ?
 			 )
 	</entry>
@@ -793,6 +804,30 @@
 		       ?
 		     , 1
 		     )
+	</entry>
+	
+	<entry key="insertProjectNotice">
+		INSERT
+		  INTO TB_NOTICE
+		     (
+		       NOTICE_NO
+		     , NOTICE_TITLE
+		     , NOTICE_CONTENT
+		     , NOTICE_WRITER
+		     , NOTICE_TYPE
+		     , NOTICE_RECEIVER_NO
+		     , NOTICE_PROJECT_NO
+		     )
+		VALUES
+			 (
+			   SEQ_NOTICE_NO.NEXTVAL
+			 , '프로젝트 등록 신청'
+			 , '프로젝트 등록에 대한 신청 접수가 성공적으로 완료되었습니다. 추후 결과를 안내 드리겠습니다.'
+			 , 1
+			 , 2
+			 , ?
+			 , SEQ_PROJECT_NO.CURRVAL
+			 )
 	</entry>
 	
 </properties>

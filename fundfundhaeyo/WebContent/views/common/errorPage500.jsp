@@ -44,7 +44,7 @@ pageEncoding="UTF-8"%>
     
     <script>
       function goToHomaPage() {
-        location.href = "http://localhost:8111/fund/";
+        location.href = "/fund/";
       }
     </script>
     

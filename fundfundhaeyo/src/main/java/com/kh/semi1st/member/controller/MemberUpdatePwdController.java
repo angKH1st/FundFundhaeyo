@@ -30,26 +30,21 @@ public class MemberUpdatePwdController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
 		int userNo = ((Member)request.getSession().getAttribute("loginUser")).getUserNo();
 		String userId = request.getParameter("userId");
 		String userPwd = request.getParameter("userPwd");
 		String updatePwd = request.getParameter("updatePwd");
 		
-		System.out.println(userNo); // 안탐
-		System.out.println(userId); // 안탐
-		
 		Member updateMem = new MemberService().updatePwdMember(userNo, userId, userPwd, updatePwd);
 		HttpSession session = request.getSession();
-		if(updateMem == null) { // 실패
+		if(updateMem == null) {
 			session.setAttribute("alertMsg", "비밀번호 변경에 실패했습니다!");
-		}else { // 성공
+		}else {
 			session.setAttribute("alertMsg", "성공적으로 비밀번호가 변경되었습니다.");
 			session.setAttribute("loginUser", updateMem);
 		}
 		
 		response.sendRedirect(request.getContextPath() + "/moveToUpdate.me");
-		
 	}
 
 	/**

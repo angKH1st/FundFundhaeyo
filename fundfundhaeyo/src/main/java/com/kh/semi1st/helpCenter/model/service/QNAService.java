@@ -49,12 +49,13 @@ public class QNAService {
 		
 		int result1 = new QNADao().insertQNA(conn, q);
 		int result2 = 1;
+		int result3 = new QNADao().insertQNANotice(conn, q);
 		
 		if(at != null) {
 			result2 = new QNADao().insertAttachment(conn, at);
 		}
 		
-		if(result1 > 0 && result2 > 0) {
+		if(result1 > 0 && result2 > 0 && result3 > 0) {
 			commit(conn);
 		}else {
 			rollback(conn);
@@ -62,7 +63,7 @@ public class QNAService {
 		
 		close(conn);
 				
-		return result1 * result2;
+		return result1 * result2 * result3;
 	}
 
 	/** QNA 상세조회를 처리해주는 메소드

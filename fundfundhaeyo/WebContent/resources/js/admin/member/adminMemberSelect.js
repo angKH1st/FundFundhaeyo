@@ -55,17 +55,18 @@ function loadPage(cpage) {
 				}
 				
 				memberDiv.append("<tr>"
-						     + "<td>" + ((currentPage - 1) * boardLimit + i + 1) + "</td>"
-						     + "<td>" + list[i].userNo + "</td>"
-						     + "<td>" + list[i].userName + "</td>"
-						     + "<td>" + list[i].userId + "</td>"
+						     + "<td class=\"center\">" + ((currentPage - 1) * boardLimit + i + 1) + "</td>"
+						     + "<td class=\"center\">" + list[i].userNo + "</td>"
+						     + "<td class=\"center\"><img width=30 src=\"" + list[i].userImg + "\"></td>"
+						     + "<td class=\"center\">" + list[i].userName + "</td>"
+						     + "<td class=\"center\">" + list[i].userId + "</td>"
 						     + "<td>" + list[i].userNickname + "</td>"
 						     + "<td>" + list[i].userEmail + "</td>"
 						     + "<td>" + list[i].userProfile + "</td>"
-						     + "<td>" + list[i].userEnrollDate + "</td>"
-						     + "<td>" + list[i].userGrade + "</td>"
-						     + "<td>" + temp + "</td>"
-						     + "<td>" + 
+						     + "<td class=\"center\">" + list[i].userEnrollDate + "</td>"
+						     + "<td class=\"center\">" + list[i].userGrade + "</td>"
+						     + "<td class=\"center\">" + temp + "</td>"
+						     + "<td class=\"center\">" + 
 						     	"<a href=\"admMoveToUpdate.me?searchId=" + list[i].userId + "\"><i class=\"hoverA2 fa-regular fa-pen-to-square fa-lg\"></i></a>" 
 					     	 + "</td>"
 						     + "</tr>");

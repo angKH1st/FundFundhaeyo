@@ -56,7 +56,7 @@
 							<div class="project_area_pr fl">
 							<br>
 								<div class="project_area_head prHoverContainer">
-									<a href="<%= contextPath %>/detail.pr?pno=<%= randomList.get(i).getProjectNo() %>"><img class="prHover" src="<%= randomList.get(i).getProjectTitleImg() %>" width="245" height="180"></a>
+									<a href="<%= contextPath %>/detail.pr?pno=<%= randomList.get(i).getProjectNo() %>"><img class="prHover br10" src="<%= randomList.get(i).getProjectTitleImg() %>" width="255" height="180"></a>
 									<% if(loginUser != null) { %>
 										<span class="likes" style="position: absolute; bottom: 10px; right: 10px; z-index: 10;" data-projectNo="<%= randomList.get(i).getProjectNo() %>"><i class="fa-solid fa-heart fa-xl"></i></span>
 									<% } %>
@@ -95,7 +95,7 @@
 						<div class="project_area_pr fl">
 						<br>
 							<div class="project_area_head prHoverContainer">
-								<a href="<%= contextPath %>/detail.pr?pno=<%= randomList.get(i).getProjectNo() %>"><img class="prHover" src="<%= randomList.get(i).getProjectTitleImg() %>" width="245" height="180"></a>
+								<a href="<%= contextPath %>/detail.pr?pno=<%= randomList.get(i).getProjectNo() %>"><img class="prHover br10" src="<%= randomList.get(i).getProjectTitleImg() %>" width="255" height="180"></a>
 								<% if(loginUser != null) { %>
 									<span class="likes" style="position: absolute; bottom: 10px; right: 10px; z-index: 10;" data-projectNo="<%= randomList.get(i).getProjectNo() %>"><i class="fa-solid fa-heart fa-xl"></i></span>
 								<% } %>

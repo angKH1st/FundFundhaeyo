@@ -45,17 +45,19 @@ function loadPage(cpage) {
 			
 			projectDiv.empty(); 		// 테이블을 비우기
 			
+			let tCode;
 			
 			for(let i = 0; i < list.length; i++){
 				var temp;
 				switch(list[i].projectStatus){
 					case 'Y' : temp = '게시'; break;
-					case 'N' : temp = '비게시'; break;
+					case 'N' : temp = '심사 대기'; break;
+					case 'W' : temp = '게시 대기'; break;
 					case 'B' : temp = '반려'; break;
 					case 'E' : temp = '종료'; break;
 				}
 				
-				projectDiv.append("<tr>"
+				tCode += "<tr>"
 						     + "<td>" + ((currentPage - 1) * boardLimit + i + 1) + "</td>"
 						     + "<td>" + list[i].projectNo + "</td>"
 						     + "<td><img width=50 height=50 src=\"" + list[i].projectTitleImg + "\"></td>"
@@ -68,8 +70,9 @@ function loadPage(cpage) {
 						     + "<td>" + list[i].projectStart + "</td>"
 						     + "<td>" + list[i].projectEnd + "</td>"
 						     + "<td>" + temp + "</td>"
-						     + "</tr>");
+						     + "</tr>";
 			}
+			projectDiv.html(tCode);
 			
 			// 페이지 엔트리
 			$(".adm-content-center-main-body3-col1-startPoint").text((currentPage - 1) * boardLimit + 1); 	// 시작 프로젝트 #			

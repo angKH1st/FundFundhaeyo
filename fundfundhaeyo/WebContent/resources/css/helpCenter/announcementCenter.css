@@ -1,11 +1,9 @@
 @charset "UTF-8";
-/* 기본 셋업 */
 .announcement_center_outer{width:100%; height: 1000px; padding: 0 350px;}
 .announcement_center_outer>div{width:100%;}
 .blank_top{height: 10%;}
 .blank_bottom{height: 1%;}
 
-/* 메인 영역 시작 */
 .announcement_center_main{height: 65%;}
 .announcement_center_main>div{width: 100%;}
 .announcement_center_main_top{height: 85px;}
@@ -60,6 +58,3 @@
 .announcement_center_main_bottom button:hover{
 	font-weight: bold;
 }
-
-
-/* 메인 영역 끝 */

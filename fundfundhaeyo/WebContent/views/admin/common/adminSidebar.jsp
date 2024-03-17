@@ -33,9 +33,9 @@
 		        <li>
 		            <a class="adm-sidebar-main-menu"><i class="thumbI fa-brands fa-product-hunt fa-2xl"></i> 프로젝트 관리 <i id="tog" class="fas fa-angle-up"></i></a>
 		            <ul class="hidden">
-		                <li><a href="admSelect.pr"><i class="thumbI fa-brands fa-product-hunt fa-2xl"></i>프로젝트 조회</a></li>
-		                <li><a href="admMoveToUpdateList.pr"><i class="thumbI fa-brands fa-product-hunt fa-2xl"></i>프로젝트 심사 조회</a></li>
-		                <li><a href="admMoveToUpdateForm.pr?searchNo=0"><i class="thumbI fa-brands fa-product-hunt fa-2xl"></i>프로젝트 심사</a></li>
+		                <li><a href="admSelect.pr"><i class="thumbI fa-brands fa-product-hunt fa-2xl"></i> 프로젝트 조회</a></li>
+		                <li><a href="admMoveToUpdateList.pr"><i class="thumbI fa-brands fa-product-hunt fa-2xl"></i> 프로젝트 심사 조회</a></li>
+		                <li><a href="admMoveToUpdateForm.pr?searchNo=0"><i class="thumbI fa-brands fa-product-hunt fa-2xl"></i> 프로젝트 심사</a></li>
 		                <li><a href="#"><i class="thumbI fa-solid fa-credit-card fa-2xl"></i> 펀딩금 집행</a></li>
 		                <li><a href="#"><i class="thumbI fa-brands fa-usps fa-2xl"></i> 송장등록</a></li>
 		            </ul>
@@ -43,7 +43,9 @@
 		        <li>
 		            <a class="adm-sidebar-main-menu"><i class="thumbI fa-solid fa-person-military-pointing fa-2xl"></i> 고객지원 관리 <i id="tog" class="fas fa-angle-up"></i></a>
 		            <ul class="hidden">
-		                <li><a href="admAnnouncement.hp"><i class="thumbI fa-solid fa-microphone fa-2xl"></i> 공지사항</a></li>
+		                <li><a href="admAnnouncement.hp?cpage=1"><i class="thumbI fa-solid fa-microphone fa-2xl"></i> 공지사항 조회</a></li>
+		                <li><a href="admMoveToUpdateAnnouncementForm.hp?aNo=0"><i class="thumbI fa-solid fa-microphone fa-2xl"></i> 공지사항 수정</a></li>
+		                <li><a href="admMoveToEnrollAnnouncementForm.hp"><i class="thumbI fa-solid fa-microphone fa-2xl"></i> 공지사항 작성</a></li>
 		                <li><a href="admFaq.hp"><i class="thumbI fa-solid fa-circle-question fa-2xl"></i> FAQ</a></li>
 		                <li><a href="admQna.hp"><i class="thumbI fa-solid fa-comments fa-2xl"></i> Q&A</a></li>
 		            </ul>

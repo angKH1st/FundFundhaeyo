@@ -1,4 +1,4 @@
-package com.kh.semi1st.admin.project;
+package com.kh.semi1st.admin.project.controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class AdminMoveToProjectUpdateController
+ * Servlet implementation class AdminMoveToProjectUpdateListController
  */
 @WebServlet("/admMoveToUpdateList.pr")
 public class AdminMoveToProjectUpdateListController extends HttpServlet {

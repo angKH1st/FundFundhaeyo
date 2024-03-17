@@ -71,9 +71,9 @@ public class AnnouncementService {
 		return result;
 	}
 	
-	/** 공지사항 상세조회
-	 *  @param announcementNo
-	 *  @return
+	/** 공지사항 상세조회해주는 메소드
+	 *  @param aNo : 조회하고자 하는 공지사항의 번호
+	 *  @return list : 조회된 공지사항
 	 */
 	public Announcement selectAnnouncement(int announcementNo) {
 		Connection conn = getConnection();
@@ -111,6 +111,71 @@ public class AnnouncementService {
 		close(conn);
 		
 		return after;
+	}
+
+	/** 공지사항을 작성 처리해주는 메소드
+	 *  @param title : 공지사항 제목
+	 *  @param content : 공지사항 내용
+	 *  @return result : 처리 결과 (1 = 성공 / 0 = 실패) 
+	 */
+	public int insertAnnouncement(String title, String content) {
+		Connection conn = getConnection();
+		
+		int result1 = new AnnouncementDao().insertAnnouncement(conn, title, content);
+		int result2 = new AnnouncementDao().insertAnnouncementNotice(conn, content);
+		
+		if(result1 > 0 && result2 > 0) {
+			commit(conn);
+		}else {
+			rollback(conn);
+		}
+		
+		close(conn);
+		
+		return result1 * result2;
+	}
+
+	/** 공지사항을 수정 처리해주는 메소드
+	 *  @param aNo : 수정하고자 하는 공지사항 번호
+	 *  @param title : 수정하고자 하는 공지사항 제목
+	 *  @param content : 수정하고자 하는 공지사항 내용
+	 *  @return result : 처리 결과 (1 = 성공 / 0 = 실패)
+	 */
+	public int updateAnnouncement(int aNo, String title, String content) {
+		Connection conn = getConnection();
+		
+		int result1 = new AnnouncementDao().updateAnnouncement(conn, aNo, title, content);
+		int result2 = new AnnouncementDao().updateAnnouncementNotice(conn, aNo, content);
+		
+		if(result1 > 0 && result2 > 0) {
+			commit(conn);
+		}else {
+			rollback(conn);
+		}
+		
+		close(conn);
+		
+		return result1 * result2;
+	}
+	
+	/** 공지사항을 삭제 처리해주는 메소드
+	 *  @param aNo : 삭제하고자 하는 공지사항 번호
+	 *  @return result : 처리 결과 (1 = 성공 / 0 = 실패)
+	 */
+	public int deleteAnnouncement(int aNo) {
+		Connection conn = getConnection();
+		
+		int result = new AnnouncementDao().deleteAnnouncement(conn, aNo);
+		
+		if(result > 0) {
+			commit(conn);
+		}else {
+			rollback(conn);
+		}
+		
+		close(conn);
+		
+		return result;
 	}
 	
 }

@@ -66,31 +66,36 @@
 .project_order_info_name_title{width: 15%; padding-top: 8px;}
 .project_order_info_name_input{width: 85%;}
 .project_order_info_name_input>input{width: 100%; border: 0; padding-top: 10px;}
+.project_order_info_name_input>input:focus{border: none; outline: none;}
 
 .project_order_info_ssn>div{height: 100%;}
 .project_order_info_ssn_title{width: 15%; padding-top: 8px;}
 .project_order_info_ssn_input{width: 85%;}
 .project_order_info_ssn_input>input{width: 100%; border: 0; padding-top: 10px;}
+.project_order_info_ssn_input>input:focus{border: none; outline: none;}
 
 .project_order_info_phone>div{height: 100%;}
 .project_order_info_phone_title{width: 15%; padding-top: 8px;}
 .project_order_info_phone_input{width: 85%;}
 .project_order_info_phone_input>input{width: 100%; border: 0; padding-top: 10px;}
+.project_order_info_phone_input>input:focus{border: none; outline: none;}
 
 .project_order_info_email>div{height: 100%;}
 .project_order_info_email_title{width: 15%; padding-top: 8px;}
 .project_order_info_email_input{width: 85%;}
 .project_order_info_email_input>input{width: 100%; border: 0; padding-top: 10px;}
+.project_order_info_email_input>input:focus{border: none; outline: none;}
 
 .project_order_info_address>div{height: 100%;}
 .project_order_info_address_title{width: 15%; padding-top: 8px;}
 .project_order_info_address_input{width: 85%;}
 .project_order_info_address_input>input{width: 100%; border: 0; padding-top: 10px;}
+.project_order_info_address_input>input:focus{border: none; outline: none;}
 
 .project_order_content_col1_row5>div{width: 100%;}
 .project_order_content_col1_row5_title{height: 35%; padding: 3px 0 0 5px; font-size: 20px;}
 .project_order_content_col1_row5_content{height: 65%; padding: 25px 0 0 15px;}
-#pay2, #pay3{margin-left: 30px;}
+#pay3{margin-left: 30px;}
 
 .project_order_content_col3>div{width: 100%;}
 .project_order_content_col3_row1{height: 18%;}

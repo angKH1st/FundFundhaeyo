@@ -191,10 +191,10 @@ public class ProjectService {
 		Connection conn = getConnection();
 		
 		int result1 = new ProjectDao().insertProject(conn, p);
-		
 		int result2 = new ProjectDao().insertAttachmentList(conn, p, list);
+		int result3 = new ProjectDao().insertProjectNotice(conn, p);
 		
-		if(result1 > 0 && result2 > 0) {
+		if(result1 > 0 && result2 > 0 && result3 > 0) {
 			commit(conn);
 		}else {
 			rollback(conn);
@@ -202,7 +202,7 @@ public class ProjectService {
 		
 		close(conn);
 		
-		return result1 * result2;
+		return result1 * result2 * result3;
 	}
 
 	/** 전체 프로젝트 숫자 조회
@@ -212,6 +212,20 @@ public class ProjectService {
 		Connection conn = getConnection();
 		
 		int listCount = new ProjectDao().selectProjectListCount(conn);
+		
+		close(conn);
+		
+		return listCount;
+	}
+	
+	/** 전체 찜 한 프로젝트 숫자 조회
+	 *  @param userNo : 찜 한 회원 번호
+	 *  @return listCount : 전체 프로젝트 숫자
+	 */
+	public int selectProjectLikesListCount(int userNo) {
+		Connection conn = getConnection();
+		
+		int listCount = new ProjectDao().selectProjectLikesListCount(conn, userNo);
 		
 		close(conn);
 		
@@ -275,11 +289,11 @@ public class ProjectService {
 		int result1 = new ProjectDao().updateProjectBanAllow(conn, projectNo, projectStatus);
 		int result2 = 1;
 		int result3 = 1;
-		if(projectStatus.equals("Y")){
+		if(projectStatus.equals("W")){
 			result2 = new ProjectDao().insertProjectSellerList(conn, projectSeller, projectNo);
 			result3 = new ProjectDao().insertProjectOption(conn, projectNo, projectPrice);
 		}
-		int result4 = new ProjectDao().insertProjectBanAllowNotice(conn, projectSeller, projectReason);
+		int result4 = new ProjectDao().insertProjectBanAllowNotice(conn, projectSeller, projectReason, projectNo);
 	
 		if(result1 > 0 && result2 > 0 && result3 > 0 && result4 > 0) {
 			commit(conn);

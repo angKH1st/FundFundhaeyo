@@ -84,7 +84,7 @@
 				            	<% } %>
 				            <% } %>
 				            
-				            <% if(currentPage != maxPage){ %>
+				            <% if(currentPage != maxPage && maxPage != 0){ %>
 				            	<button type="button" onclick="location.href='<%= contextPath %>/moveToLikes.me?cpage=<%= currentPage+1 %>'">→</button>
 				            <% }else{ %>
 				            	<button type="button" onclick="location.href='<%= contextPath %>/moveToLikes.me?cpage=<%= currentPage+1 %>'" disabled>→</button>

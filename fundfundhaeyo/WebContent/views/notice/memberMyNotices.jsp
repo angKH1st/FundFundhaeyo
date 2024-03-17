@@ -1,8 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<% 
-	int type = (int)request.getAttribute("type"); 
-%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,13 +27,12 @@
 						</div>
 						<div class="mypage_notices_Form_right_title"><h3>알림</h3></div>
 						<div class="mypage_notices_Form_right_list brlg br5">
-						<input type="hidden" id="type" value="<%= type %>">
 							<div class="notices_btn_area">
 								<div class="notices_btn fl">
-									<button type="button">전체</button> | 
-									<button type="button">일반</button> |
-									<button type="button">프로젝트</button> |
-									<button type="button">Q&A</button>
+									<button type="button" class="current nBtn0" onclick="selectNotice(0, this);">전체</button> | 
+									<button type="button" class="nBtn1" onclick="selectNotice(1, this);">공지사항</button> |
+									<button type="button" class="nBtn2" onclick="selectNotice(2, this);">프로젝트</button> |
+									<button type="button" class="nBtn3" onclick="selectNotice(3, this);">Q&A</button>
 								</div> 
 								<div class="notices_cnt fl">
 									dd

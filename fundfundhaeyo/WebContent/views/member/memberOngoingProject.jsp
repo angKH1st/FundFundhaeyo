@@ -50,7 +50,7 @@
 							<% for(Project p : list){ %>
 								<div onclick=location.href="<%= contextPath %>/detail.pr?pno=<%= p.getProjectNo() %>" class="mypage_ongoing_Form_right_list_project prHoverContainer fl brlg br5">
 									<div class="mypage_ongoing_project_img prHover">
-										<img src="<%= p.getProjectTitleImg() %>" width=200 height=150>
+										<img class="br10" src="<%= p.getProjectTitleImg() %>" width=200 height=150>
 									</div>
 									<div class="mypage_ongoing_project_title"><%= p.getProjectTitle() %></div>
 									<div class="mypage_ongoing_project_info">
@@ -84,7 +84,7 @@
 			            	<% } %>
 			            <% } %>
 			            
-			            <% if(currentPage != maxPage){ %>
+			            <% if(currentPage != maxPage && maxPage != 0){ %>
 			            	<button type="button" onclick="location.href='<%= contextPath %>/ongoingProject.me?cpage=<%= currentPage+1 %>'">→</button>
 			            <% }else{ %>
 			            	<button type="button" onclick="location.href='<%= contextPath %>/ongoingProject.me?cpage=<%= currentPage+1 %>'" disabled>→</button>

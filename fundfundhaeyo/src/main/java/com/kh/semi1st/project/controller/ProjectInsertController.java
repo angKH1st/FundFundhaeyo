@@ -90,7 +90,7 @@ public class ProjectInsertController extends HttpServlet {
 				response.sendRedirect(request.getContextPath());
 			}else {
 				request.getSession().setAttribute("errorMsg", "등록신청에 실패하였습니다.");
-				// request.getRequestDispatcher("views/common/errorPage.jsp").forward(request, response);
+				request.getRequestDispatcher("views/common/errorPage500.jsp").forward(request, response);
 			}
 		}
 	}

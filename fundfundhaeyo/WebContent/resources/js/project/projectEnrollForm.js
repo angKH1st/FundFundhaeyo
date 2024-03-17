@@ -22,7 +22,7 @@ function checkFormCompleteness() {
 
 $(document).ready(function() {
 	checkFormCompleteness();
-	
+
 	$('.select-box').click(function(event) {
 		event.stopPropagation();
 		$('.select-list').slideToggle('fast');
@@ -42,7 +42,7 @@ $(document).ready(function() {
 	$('.select-box').on('click', 'li', function() {
 		$('.select-box').removeClass('redBorder').addClass('blueBorder');
 		isValid.pjCategory = true;
-		
+
 		checkFormCompleteness();
 	});
 	$('.select-box').on('click', function() {
@@ -50,7 +50,7 @@ $(document).ready(function() {
 			$('.select-box').removeClass('blueBorder').addClass('redBorder');
 			isValid.pjCategory = false;
 		}
-		
+
 		checkFormCompleteness();
 	});
 
@@ -59,15 +59,15 @@ $(document).ready(function() {
 		var input = $(this).val();
 		var reg = /^[a-zA-Z0-9가-힣!@#$%^&*()_+|<>?:{}\s]{1,20}$/;
 		if (!reg.test(input)) {
-			$(this).css('border', '1px solid red')
+			$(this).css('border-bottom', '0.5px solid red')
 			$(this).parent().siblings().children('.project_enroll_inspection').text("한글, 숫자, 특수문자 조합 20자 이하로 입력해주세요.");
 			isValid.pjTitle = false;
 		} else {
-			$(this).css('border', '1px solid blue');
+			$(this).css('border-bottom', '0.5px solid blue');
 			$(this).parent().siblings().children('.project_enroll_inspection').text("");
 			isValid.pjTitle = true;
 		}
-		
+
 		checkFormCompleteness();
 	});
 
@@ -76,15 +76,15 @@ $(document).ready(function() {
 		var input = $(this).val();
 		var reg = /^[a-zA-Z0-9가-힣!@#$%^&*()_+|<>?:{}\s]{1,20}$/;
 		if (!reg.test(input)) {
-			$(this).css('border', '1px solid red');
+			$(this).css('border-bottom', '0.5px solid red');
 			$(this).parent().siblings().children('.project_enroll_inspection').text("한글, 숫자, 특수문자 조합 20자 이하로 입력해주세요.");
 			isValid.pjOverview = false;
 		} else {
-			$(this).css('border', '1px solid blue');
+			$(this).css('border-bottom', '0.5px solid blue');
 			$(this).parent().siblings().children('.project_enroll_inspection').text("");
 			isValid.pjOverview = true;
 		}
-		
+
 		checkFormCompleteness();
 	});
 
@@ -93,15 +93,15 @@ $(document).ready(function() {
 		var input = $(this).val();
 		var reg = /^#[a-zA-Z0-9가-힣!@#$%^&*()_+|<>?:{}]{1,14}$/;
 		if (!reg.test(input)) {
-			$(this).css('border', '1px solid red');
+			$(this).css('border-bottom', '0.5px solid red');
 			$(this).parent().siblings().children('.project_enroll_inspection').text("#으로 시작, 한글, 숫자, 특수문자 조합 15자 이하로 입력해주세요.");
 			isValid.pjTag = false;
 		} else {
-			$(this).css('border', '1px solid blue');
+			$(this).css('border-bottom', '0.5px solid blue');
 			$(this).parent().siblings().children('.project_enroll_inspection').text("");
 			isValid.pjTag = true;
 		}
-		
+
 		checkFormCompleteness();
 	});
 
@@ -109,15 +109,15 @@ $(document).ready(function() {
 	$('input[name="pjPrice"]').on('blur', function() {
 		var input = $(this).val();
 		if (input < 100000 || input > 200000000) {
-			$(this).css('border', '1px solid red');
-			$(this).parent().siblings().children('.project_enroll_inspection').text("목표금액은 최소 100,000 이상이어야 합니다.");
+			$(this).css('border-bottom', '0.5px solid red');
+			$(this).parent().siblings().children('.project_enroll_inspection').text("목표금액 범위는 100,000 원 ~ 200,000,000 원이어야 합니다.");
 			isValid.pjPrice = false;
 		} else {
-			$(this).css('border', '1px solid blue');
+			$(this).css('border-bottom', '0.5px solid blue');
 			$(this).parent().siblings().children('.project_enroll_inspection').text("");
 			isValid.pjPrice = true;
 		}
-		
+
 		checkFormCompleteness();
 	});
 
@@ -126,15 +126,15 @@ $(document).ready(function() {
 		var input = $(this).val();
 		var reg = /^[a-zA-Z0-9가-힣!@#$%^&*()_+|<>?:{}\s]{1,100}$/;
 		if (!reg.test(input)) {
-			$(this).css('border', '1px solid red');
+			$(this).css('border', '0.5px solid red');
 			$(this).parent().siblings().children('.project_enroll_inspection').text("한글, 숫자, 특수문자 조합으로 100자 이하로 입력해주세요.");
 			isValid.pjContent = false;
 		} else {
-			$(this).css('border', '1px solid blue');
+			$(this).css('border', '0.5px solid blue');
 			$(this).parent().siblings().children('.project_enroll_inspection').text("");
 			isValid.pjContent = true;
 		}
-		
+
 		checkFormCompleteness();
 	});
 
@@ -155,7 +155,13 @@ $(document).ready(function() {
 		$('.project_enroll_right_tax_row2_col2').text(cardFee.toLocaleString() + '원');
 		$('.project_enroll_right_tax_row3_col2').text(basicFee.toLocaleString() + '원');
 		$('.project_enroll_price_bottom_col2 span').text(finalAmount.toLocaleString());
-		
+
 		checkFormCompleteness();
+	});
+
+	$("#pjPrice").on("input", function() {
+		var value = $(this).val();
+		var formattedValue = value.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+		$("#pjPriceCopy").val(formattedValue + " 원");
 	});
 });

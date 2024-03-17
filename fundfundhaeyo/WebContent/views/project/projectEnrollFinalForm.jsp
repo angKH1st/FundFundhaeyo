@@ -109,22 +109,22 @@
 				<div class="project_enroll_final_form_main_top_blank fl"></div>
 				<div class="project_enroll_final_form_main_top_right fl brlg br5 pd15">
 					<table align="center">
+						<tr><td colspan=3>대표이미지</td></tr>
 		                <tr>
-		                    <th width=100>대표이미지</th>
-		                    <td><img id="titleImg" width="150" height="120" onclick="chooseFile(1);"></td>
-		                    <td></td>
-		                    <td></td>
+		                    <td width=180><img class="brlg br10" id="titleImg" width="180" height="120" onclick="chooseFile(1);"></td>
+		                    <td width=180></td>
+		                    <td width=180></td>
 		                </tr>
-		                <tr><td colspan=4><span class="percentage">대표이미지는 필수 요소입니다.</span></td></tr>
-		                <tr><td colspan=4><br></td></tr>
-		                <tr><td colspan=4><br></td></tr>
+		                <tr><td colspan=3><span class="percentage">대표이미지는 필수 요소입니다.</span></td></tr>
+		                <tr><td colspan=3><br></td></tr>
+		                <tr><td colspan=3><br></td></tr>
+		                <tr><td colspan=3>상세이미지</td></tr>
 		                <tr>
-		                    <th>상세이미지</th>
-		                    <td><img id="contentImg1" width="150" height="120" onclick="chooseFile(2);"></td>
-		                    <td><img id="contentImg2" width="150" height="120" onclick="chooseFile(3);"></td>
-		                    <td><img id="contentImg3" width="150" height="120" onclick="chooseFile(4);"></td>
+		                    <td><img class="brlg br10" id="contentImg1" width="180" height="120" onclick="chooseFile(2);"></td>
+		                    <td><img class="brlg br10" id="contentImg2" width="180" height="120" onclick="chooseFile(3);"></td>
+		                    <td><img class="brlg br10" id="contentImg3" width="180" height="120" onclick="chooseFile(4);"></td>
 		                </tr>
-		                <tr><td colspan=4><span class="percentage">상세이미지는 최대 3장까지 등록 가능합니다.</span></td></tr>
+		                <tr><td colspan=3><span class="percentage">상세이미지는 최대 3장까지 등록 가능합니다.</span></td></tr>
 		            </table>
 		            
 		            <div id="file-area" style="display:none">
@@ -137,7 +137,7 @@
 			</div>
 			<div class="project_enroll_final_form_main_blank"><%-- 여백 --%></div>
 			<div class="project_enroll_final_form_main_bottom">
-				<button type="button" class="project_enroll_final_form_btn1 brlg shadow fl" style="margin-right: 16px;" onclick="location.href='<%= contextPath %>'">취소</button>
+				<button type="button" class="project_enroll_final_form_btn1 brlg shadow fl" style="margin-right: 16px; background-color: #f3f3f3;" onclick="location.href='<%= contextPath %>'">취소</button>
         		<button type="submit" class="project_enroll_final_form_btn2 brlg shadow fl" onclick="location.href='<%= contextPath %>/moveToEnrollFinal.pr'" disabled>다음</button>
 			</div>
 	    </div>

@@ -36,9 +36,11 @@ public class MemberMyPageController extends HttpServlet {
 		
 		Member seller = ms.selectMemberSellerList(userNo);
 		Member buyer = ms.selectMemberBuyerList(userNo);
+		int likes = ms.selectMemberLikesProjectCount(userNo);
 		
 		request.setAttribute("seller", seller);
 		request.setAttribute("buyer", buyer);
+		request.setAttribute("likes", likes);
 		
 		request.getRequestDispatcher("views/member/memberMypage.jsp").forward(request, response);
 	}

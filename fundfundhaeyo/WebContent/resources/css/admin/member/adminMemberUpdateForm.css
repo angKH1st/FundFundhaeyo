@@ -82,11 +82,11 @@
 .adm-info-userNickname-title, .adm-info-userPhone-title, .adm-info-userEmail-title, .adm-info-userAddress-title, .adm-info-userMarketing-title{width: 35%; border-right: 0.5px solid lightgray;} 
 .adm-info-userNickname-input, .adm-info-userPhone-input, .adm-info-userEmail-input, .adm-info-userAddress-input, .adm-info-userMarketing-input{width: 65%;} 
 
-
 .adm-info-col3-row1>div{height: 100%;}
 .adm-info-col3-row1-searchId-title{width: 40%; padding: 9px;}
 .adm-info-col3-row1-searchId-input{width: 53%;}
-.adm-info-col3-row1-searchId-input>input{width: 100%; height: 100%; padding-left: 10px;}
+.adm-info-col3-row1-searchId-input>input{width: 100%; height: 100%; padding-left: 10px; border: none; border-bottom: 0.5px solid lightgray;}
+.adm-info-col3-row1-searchId-input>input:focus{outline: none; border:none;}
 .adm-info-col3-row1-searchId-btn{width: 7%;}
 
 .adm-info-col3-row2{margin: 15px 0;}

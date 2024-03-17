@@ -44,11 +44,11 @@
 							<% for(Project p : list){ %>
 								<div onclick=location.href="<%= contextPath %>/detail.pr?pno=<%= p.getProjectNo() %>" class="mypage_ongoing_Form_right_list_project prHoverContainer fl brlg br5">
 									<div class="mypage_ongoing_project_img prHover">
-										<img src="<%= p.getProjectTitleImg() %>" width=200 height=150>
+										<img class="br10" src="<%= p.getProjectTitleImg() %>" width=200 height=150>
 									</div>
 									<div class="mypage_ongoing_project_title"><%= p.getProjectTitle() %></div>
 									<div class="mypage_ongoing_project_info">
-										<div class="mypage_ongoing_project_funding fl"><span class="percentage" style="color: red;">심사중</span></div>
+										<div class="mypage_ongoing_project_funding fl"><span class="percentage" style="color: red;">ss</span></div>
 										<div class="mypage_ongoing_project_dday fl">
 										</div>
 									</div>

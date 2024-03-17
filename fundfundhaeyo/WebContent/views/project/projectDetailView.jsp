@@ -49,9 +49,9 @@
 				<div class="project_detail_top_left fl">
 					<div class="slider">
 					    <div class="slide-holder">
-					    	<img class="slide" src="<%= contextPath %>/<%= list.get(0).getAttachmentPath() + list.get(0).getAttachmentUpdateName() %>">
+					    	<img class="slide br10" src="<%= contextPath %>/<%= list.get(0).getAttachmentPath() + list.get(0).getAttachmentUpdateName() %>">
 					        <% for(int i = 1; i < list.size(); i++){ %>
-					        	<img class="slide" src="<%= contextPath %>/<%= list.get(i).getAttachmentPath() + list.get(i).getAttachmentUpdateName() %>">
+					        	<img class="slide br10" src="<%= contextPath %>/<%= list.get(i).getAttachmentPath() + list.get(i).getAttachmentUpdateName() %>">
 					        <% } %>
 					    </div>
 					    <button id="pjBtn" type="button" class="prev">&lt;</button>
@@ -66,9 +66,8 @@
 				<div class="project_detail_top_blank fl"><%-- 여백 --%></div>
 				<div class="project_detail_top_right fl">
 					<div class="project_detail_top_category">
-						<div class="project_detail_top_category_col1 fl"><span><a href="<%= contextPath %>/category.pr?cno=<%= p.getProjectCategoryNo() %>"><%= p.getProjectCategoryName() %></a></span></div>
-						<div class="project_detail_top_category_col2 fl"><%-- 여백 --%></div>
-						<div class="project_detail_top_category_col3 fl"><span><%= p.getProjectTag() %></span></div>
+						<div class="project_detail_top_category_col1 fl"><span><a class="ca" href="<%= contextPath %>/category.pr?cno=<%= p.getProjectCategoryNo() %>"><%= p.getProjectCategoryName() %></a></span></div>
+						<div class="project_detail_top_category_col2 fl"><span><%= p.getProjectTag() %></span></div>
 					</div>
 					<div class="project_detail_top_title">
 						<div class="project_detail_top_title_col1 fl"><h3><%= p.getProjectOverview() %></h3></div>
@@ -80,18 +79,23 @@
 							<div class="project_detail_top_overview_row1_title">모인금액</div>
 							<div class="project_detail_top_overview_row1_content">
 								<div class="project_detail_top_overview_row1_content_col1 fl"><span class="fundingNow"><%= nf.format(p.getProjectSellerFunding()) %></span>원</div>
-								<div class="project_detail_top_overview_row1_content_col2 fl"></div>
-								<div class="project_detail_top_overview_row1_content_col3 fl"><span style="font-size: 20px;" class="percentage"><%= p.getProjectFunding() %>%</span></div>
+								<div class="project_detail_top_overview_row1_content_col2 fl"><span style="font-size: 15px;" class="percentage"><%= p.getProjectFunding() %>% 달성</span></div>
 							</div>
 						</div>
 						<div class="project_detail_top_overview_row2">
-							<div class="project_detail_top_overview_row2_col1 fl">
-								<div class="project_detail_top_overview_row2_col1_title fl">남은시간</div>
-								<div class="project_detail_top_overview_row2_col1_content fl"><span class="fundingDday"><%= (long)(ChronoUnit.DAYS.between(now, ((Date)p.getProjectEnd()).toLocalDate())) %></span>일</div>
-							</div>
-							<div class="project_detail_top_overview_row2_col2 fl">
+							<div class="project_detail_top_overview_row2_col2">
 								<div class="project_detail_top_overview_row2_col2_title fl">후원자</div>
-								<div class="project_detail_top_overview_row2_col2_content fl"><span class="fundingDday"><%= buyer %></span>명</div>
+								<div class="project_detail_top_overview_row2_col2_content fl"><div class="fundingDday fl"><%= buyer %></div><div class="nText fl">명</div></div>
+							</div>
+							<div class="project_detail_top_overview_row2_col1">
+								<div class="project_detail_top_overview_row2_col1_title fl">남은시간</div>
+								<div class="project_detail_top_overview_row2_col1_content fl">
+									<% if((long)(ChronoUnit.DAYS.between(now, ((Date)p.getProjectEnd()).toLocalDate())) < 0) { %>
+									<div class="fundingDday">해당 프로젝트는 종료되었습니다.</div>
+									<% }else { %>
+									<div class="fundingDday fl"><%= (long)(ChronoUnit.DAYS.between(now, ((Date)p.getProjectEnd()).toLocalDate())) %></div><div class="nText fl">일</div>
+									<% } %>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -139,7 +143,11 @@
 							<% }else { %>
 								<div class="project_detail_top_info_row2_btn3 br5 brlg fl" onclick="alertToLogin();">이 프로젝트 후원하기</div>
 							<% } %>
-							<div class="project_detail_top_info_row2_blank fl"><span class="blueBtn" style="padding: 3px;">D - <%= (long)(ChronoUnit.DAYS.between(now, ((Date)p.getProjectEnd()).toLocalDate())) %></span></div>
+							<div class="project_detail_top_info_row2_blank fl">
+								<% if((long)(ChronoUnit.DAYS.between(now, ((Date)p.getProjectEnd()).toLocalDate())) >= 0){ %>
+								<span class="blueBtn" style="padding: 3px;">D - <%= (long)(ChronoUnit.DAYS.between(now, ((Date)p.getProjectEnd()).toLocalDate())) %></span>
+								<% } %>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -147,14 +155,14 @@
 			<div class="project_detail_blank"><div><%-- 여백 --%></div></div>
 			<div class="project_detail_content">
 				<div class="project_detail_content_col1 fl">
-					<div class="project_detail_content_col1_row1 brlg br5">
+					<div class="project_detail_content_col1_row1">
 						<div class="project_detail_content_project_title">상세설명</div>
-						<div class="project_detail_content_project_content"><%= p.getProjectTitle() %></div>
+						<div class="project_detail_content_project_content brlg br5"><%= p.getProjectTitle() %></div>
 					</div>
 					<div class="project_detail_content_col1_row2"><%-- 여백 --%></div>
-					<div class="project_detail_content_col1_row3 brlg br5">
+					<div class="project_detail_content_col1_row3">
 						<div class="project_detail_content_project_seller_title">창작자 정보</div>
-						<div class="project_detail_content_project_seller_content">
+						<div class="project_detail_content_project_seller_content brlg br5">
 							<div class="project_seller_info_row1">
 								<div class="project_seller_info_row1_img fl centerXY"><img width=50 height=50 src="<%= contextPath %>/<%= seller.getUserImg() %>"></div>
 								<div class="project_seller_info_row1_text fl">
@@ -169,18 +177,18 @@
 						</div>
 					</div>
 					<div class="project_detail_content_col1_row4"><%-- 여백 --%></div>
-					<div class="project_detail_content_col1_row5 brlg br5">
-						<div class="project_option_title centerXY">🎁 펀딩 옵션 🎁</div>
-						<div class="project_option_content pd15">
-							<div class="project_option_content_row1 brlg br5">
+					<div class="project_detail_content_col1_row5">
+						<div class="project_option_title">🎁 펀딩 옵션 🎁</div>
+						<div class="project_option_content brlg br5 pd15">
+							<div class="project_option_content_row1">
 								<div class="project_option_content-row1_col1 centerXY fl">옵션 1. <%= nf.format((int)(p.getProjectPrice() * 0.1)) %> 원</div>
 								<div class="project_option_content-row1_col2 centerXY fl">상품 1개</div>
 							</div>
-							<div class="project_option_content_row2 brlg br5">
+							<div class="project_option_content_row2">
 								<div class="project_option_content-row2_col1 centerXY fl">옵션 2. <%= nf.format((int)(p.getProjectPrice() * 0.5)) %> 원</div>
 								<div class="project_option_content-row2_col2 centerXY fl">상품 3개</div>
 							</div>
-							<div class="project_option_content_row3 brlg br5">
+							<div class="project_option_content_row3">
 								<div class="project_option_content-row2_col1 centerXY fl">옵션 3. <%= nf.format(p.getProjectPrice()) %> 원</div>
 								<div class="project_option_content-row2_col2 centerXY fl">상품 5개 + 선물 포장</div>
 							</div>
@@ -198,13 +206,21 @@
 					<div class="project_detail_chat_bottom pd15">
 						<div class="project_detail_chat_bottom_col1 fl"><i class="fa-solid fa-message fa-lg"></i></div>
 						<div class="project_detail_chat_bottom_col2 fl">
-							<input type="text" class="brlg" id="chatInput" name="chatInput" maxlength=53 placeholder="메세지를 입력하세요.">
+							<% if((long)(ChronoUnit.DAYS.between(now, ((Date)p.getProjectEnd()).toLocalDate())) >= 0){ %>
+							<input type="text" class="brlg br10" id="chatInput" name="chatInput" maxlength=53 placeholder="메세지를 입력하세요.">
+							<% }else { %>
+							<input type="text" class="brlg br10" id="chatInput" name="chatInput" value="해당 프로젝트는 종료되었습니다." readonly>
+							<% } %>
 							<input type="hidden" id="projectNo" value="<%= p.getProjectNo() %>">
 						</div>
 						<% if(loginUser != null){ %>
-						<div class="project_detail_chat_bottom_col3 fl"><button class="brlg" type="button" onclick="insertChat();">전송</button></div>
+							<% if((long)(ChronoUnit.DAYS.between(now, ((Date)p.getProjectEnd()).toLocalDate())) >= 0){ %>
+							<div class="project_detail_chat_bottom_col3 fl"><button type="button" onclick="insertChat();">전송</button></div>
+							<% }else { %>
+							<div class="project_detail_chat_bottom_col3 fl"><button type="button" disabled>전송</button></div>
+							<% } %>
 						<% }else { %>
-						<div class="project_detail_chat_bottom_col3 fl"><button class="brlg" type="button" onclick="alertToLogin();">전송</button></div>
+						<div class="project_detail_chat_bottom_col3 fl"><button type="button" onclick="alertToLogin();">전송</button></div>
 						<% } %>
 					</div>
 				</div>

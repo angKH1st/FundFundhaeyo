@@ -10,7 +10,7 @@
 <body>
 	<%@ include file="../common/adminHeader.jsp" %>
 	
-    <div class="adm-content">
+    <div class="adm-content font_outer">
 	    <div class="adm-content-top">
 	    	<div class="adm-content-top-title fl"><h1>회원정보조회</h1></div>
 	    	<div class="adm-content-top-blank fl"></div>
@@ -40,17 +40,18 @@
 	    				<table>
 	    				<thead>
 	    					<tr>
-	    						<td style="width:40px;">#</td>
-	    						<td style="width:100px;">회원번호</td>
-	    						<td style="width:120px;">이름</td>
-	    						<td style="width:120px;">아이디</td>
-	    						<td style="width:200px;">닉네임</td>
-	    						<td style="width:240px;">이메일</td>
-	    						<td style="width:440px;">소개말</td>
-	    						<td style="width:140px;">회원가입일</td>
-	    						<td style="width:100px;">등급</td>
-	    						<td style="width:100px;">상태값</td>
-	    						<td style="width:160px;">수정</td>
+	    						<th style="width:40px;">#</th>
+	    						<th style="width:100px;">회원번호</th>
+	    						<th style="width:60px;">이미지</th>
+	    						<th style="width:120px;">이름</th>
+	    						<th style="width:120px;">아이디</th>
+	    						<th style="width:200px;">닉네임</th>
+	    						<th style="width:240px;">이메일</th>
+	    						<th style="width:550px;">소개말</th>
+	    						<th style="width:140px;">회원가입일</th>
+	    						<th style="width:100px;">등급</th>
+	    						<th style="width:100px;">상태값</th>
+	    						<th style="width:60px;">수정</th>
 	    					</tr>
 	    				</thead>
 	    				<tbody>

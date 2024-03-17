@@ -1,4 +1,4 @@
-package com.kh.semi1st.admin.helpCenter;
+package com.kh.semi1st.admin.project.controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -8,16 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class AdminFAQCenterController
+ * Servlet implementation class AdminProjectSelectController
  */
-@WebServlet("/admFaq.hp")
-public class AdminFAQCenterController extends HttpServlet {
+@WebServlet("/admSelect.pr")
+public class AdminProjectSelectController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AdminFAQCenterController() {
+    public AdminProjectSelectController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -26,7 +26,7 @@ public class AdminFAQCenterController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("views/admin/helpCenter/adminFaqCenter.jsp").forward(request, response);
+		request.getRequestDispatcher("views/admin/project/adminProjectSelect.jsp").forward(request, response);
 	}
 
 	/**

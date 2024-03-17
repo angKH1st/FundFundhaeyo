@@ -14,7 +14,7 @@
 <body>
 	<%@ include file="../common/adminHeader.jsp" %>
 	
-    <div class="adm-content">
+    <div class="adm-content font_outer">
 	    <div class="adm-content-top">
 	    	<div class="adm-content-top-title fl"><h1>회원정보수정</h1></div>
 	    	<div class="adm-content-top-blank fl"></div>
@@ -112,16 +112,16 @@
 										</div>
 									</div>
 									<div class="adm-content-right-profile1-body-info-col3 pd15 fl">
-										<div class="adm-info-col3-row1 br5 brlg">
+										<div class="adm-info-col3-row1">
 											<div class="adm-info-col3-row1-searchId-title fl">수정할 회원의 ID 입력</div>
 											<% if(searchId != null) { %>
-											<div class="adm-info-col3-row1-searchId-input fl"><input class="brlg" type="text" id="searchId" value="<%= searchId %>"></div>
+											<div class="adm-info-col3-row1-searchId-input fl"><input type="text" id="searchId" value="<%= searchId %>"></div>
 											<script>var autoSearch = true;</script>
 											<% }else{ %>
-											<div class="adm-info-col3-row1-searchId-input fl"><input class="brlg" type="text" id="searchId"></div>
+											<div class="adm-info-col3-row1-searchId-input fl"><input type="text" id="searchId"></div>
 											<script>var autoSearch = false;</script>
 											<% } %>
-											<div class="adm-info-col3-row1-searchId-btn br5 brlg fl"><a onclick="searchId();" ><i class="fa-solid fa-magnifying-glass fa-xl hoverA3" style="width: 100%; height: 100%; margin-left: 5px; line-height: 150%;"></i></a></div>
+											<div class="adm-info-col3-row1-searchId-btn fl"><a onclick="searchId();" ><i class="fa-solid fa-magnifying-glass fa-xl hoverA3" style="width: 100%; height: 100%; margin-left: 5px; line-height: 150%;"></i></a></div>
 										</div>
 										<div class="adm-info-col3-row2 brlg br5">
 											<div class="adm-info-userProfile-title bglg">소개말</div>

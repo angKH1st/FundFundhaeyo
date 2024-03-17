@@ -30,14 +30,15 @@
 .project_enroll_left_form_row1>div{height: 100%;}
 .project_enroll_title{width: 40%; padding-top: 15px; font-size: 12px; font-weight: bold;}
 .project_enroll_inspection{width: 60%;}
-.project_enroll_left_form_row2>input{width: 100%; height: 100%; border-radius: 5px;}
+.project_enroll_left_form_row2 input{width: 100%; height: 100%; border: none; border-bottom: 0.5px solid lightgray;}
+.project_enroll_left_form_row2 input:focus{border: none; outline: none; border-bottom: 0.5px solid lightgray;}
 .project_enroll_left_form_row2>textarea{width: 100%; height: 200%; resize: none; border-radius: 5px;}
 
 .pjContainer {display: flex; height: 10%;}
-.pjContainer>div{width: 50%; height: 80%;}
-.category{padding-top: 15px; font-size: 12px; font-weight: bold;}
-.select-box {position: relative;}
-.select-button {width: 100%; height: 100%; background-color: #f3f3f3;}
+.pjContainer>div{height: 80%;}
+.category{width: 65%; padding-top: 15px; font-size: 12px; font-weight: bold;}
+.select-box {width: 35%; position: relative;}
+.select-button {width: 100%; height: 100%; background-color: white; border: none; border-bottom: 0.5px solid lightgray;}
 .select-list {
   display: none;
   position: absolute;
@@ -48,23 +49,30 @@
   overflow-y: auto;
 }
 .select-list li {padding: 8px; background-color: white;}
-.select-list li:hover {background-color: #f3f3f3;}
+.select-list li:hover {background-color: #f3f3f3; cursor: pointer;}
 
-.redBorder {border: 1px solid red;}
-.blueBorder {border: 1px solid blue;}
+.redBorder {border-bottom: 0.5px solid red;}
+.blueBorder {border-bottom: 0.5px solid blue;}
+.project_enroll_right_price *{font-size: 14px; font-weight: bold;}
 
 .project_enroll_form_main_top_right>div{width: 100%; height: 50%;}
-.project_enroll_right_price>div{width: 100%;}
 
 .project_enroll_right_price_form{height: 40%;}
 .project_enroll_right_tax_form{height: 50%;}
 
-.project_enroll_right_price *{font-size: 14px; font-weight: bold;}
+.project_enroll_right_price_form>div{width: 100%; height: 50%;}
+
 .project_enroll_right_price>div{width: 100%;}
-.project_enroll_price_top_row1{height: 20%; padding-top: 5px; font-size: 12px; font-weight: bold;}
-.project_enroll_price_top_row2{height: 40%;}
-.project_enroll_price_top_row2>input{width: 100%; height: 100%; text-align: right; padding-right: 10px;}
-.project_enroll_price_top_row3{height: 40%;}
+
+.project_enroll_price_top_row1{height: 40%;}
+.project_enroll_price_top_row1>div{height: 100%;}
+.project_enroll_price_top_row1_col1{width: 15%;}
+.project_enroll_price_top_row1_col2{width: 85%;}
+.project_enroll_price_top_row1_col2>input{width: 100%; height: 100%; text-align: right; padding-right: 10px; border: none;}
+.project_enroll_price_top_row1_col2>input:focus{border: none; outline: none;}
+.project_enroll_left_form_row2 textarea:focus{border: none; outline: none; border: 0.5px solid lightgray;}
+
+.project_enroll_price_top_row2{height: 60%;}
 
 .project_enroll_price_bottom>div{height: 100%;}
 .project_enroll_price_bottom_col1{width: 60%;}

@@ -5,7 +5,7 @@ $(document).ready(function(){
 });
 
 function resetUpdate() {
-    location.reload();  // 페이지 새로고침
+    location.reload();
 };
 
 function searchNo(){
@@ -92,7 +92,8 @@ function searchNo(){
 					let us = $(".adm-content-left-area2-body-grade-row4-col2");
 					switch(p.projectStatus){
 						case 'Y' : us.text("게시"); break;
-						case 'N' : us.text("비게시"); break;
+						case 'N' : us.text("심사 대기"); break;
+						case 'W' : us.text("게시 대기"); break;
 						case 'B' : us.text("반려"); break;
 					}
 					
@@ -101,8 +102,8 @@ function searchNo(){
 						$('.adm-ban-btn').prop('disabled', false);     // 반려 버튼 활성화
 						$('.adm-ban-btn').css('color', "red");
 						$('.adm-ban-btn').addClass('hoverA3');
-	        			$('.adm-allow-btn').prop('disabled', false);   // 승인 버튼 비활성화
-						$('.adm-allow-btn').css('color', "gray");
+	        			$('.adm-allow-btn').prop('disabled', false);   // 승인 버튼 활성화
+						$('.adm-allow-btn').css('color', "blue");
 						$('.adm-allow-btn').removeClass('hoverA3');
 	        			break;
 	        			case 'B' :
@@ -123,24 +124,28 @@ function searchNo(){
 }
 
 function banAllow(projectStatus){
-	$.ajax({
-		url:"admUpdateBanAllow.pr",
-		type:"get",
-		data:{
-			projectStatus:projectStatus,
-			projectNo:$(".adm-info-projectNo-input").text(),
-			projectReason:$(".reason").val(),
-			projectPrice:$(".projectPrice").val()
-		},
-		success: function(result){
-			if(projectStatus == 'Y'){
-				alert('프로젝트 심사 승인되었습니다.')
-			}else if(projectStatus == 'B'){
-				alert('프로젝트 심사 반려되었습니다.')
+	if($(".reason").val() == ""){
+		alert('알림 내용을 기입해주세요.')
+	}else{
+		$.ajax({
+			url:"admUpdateBanAllow.pr",
+			type:"get",
+			data:{
+				projectStatus:projectStatus,
+				projectNo:$(".adm-info-projectNo-input").text(),
+				projectReason:$(".reason").val(),
+				projectPrice:$(".projectPrice").val()
+			},
+			success: function(result){
+				if(projectStatus == 'W'){
+					alert('프로젝트 심사 승인되었습니다.')
+				}else if(projectStatus == 'B'){
+					alert('프로젝트 심사 반려되었습니다.')
+				}
+				location.href='/fund/admSelect.pr';
+			}, error: function(result){
+				alert('실패하였습니다.')
 			}
-			location.href='/fund/admSelect.pr';
-		}, error: function(result){
-			alert('실패하였습니다.')
-		}
-	})
+		})
+	}
 }

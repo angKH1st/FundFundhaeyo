@@ -10,11 +10,16 @@ public class Notice {
 	private int noticeType;
 	private String noticeStatus;
 	private int noticeReceiverNo;
+	private int noticeAnnouncementNo;
+	private int noticeProjectNo;
+	private int noticeQnaNo;
+	private String noticeImg;
 	
 	public Notice () {}
 
 	public Notice(int noticeNo, String noticeTitle, String noticeContent, String noticeWriter, String noticeCreateDate,
-			int noticeType, String noticeStatus, int noticeReceiverNo) {
+			int noticeType, String noticeStatus, int noticeReceiverNo, int noticeAnnouncementNo, int noticeProjectNo,
+			int noticeQnaNo, String noticeImg) {
 		super();
 		this.noticeNo = noticeNo;
 		this.noticeTitle = noticeTitle;
@@ -24,6 +29,10 @@ public class Notice {
 		this.noticeType = noticeType;
 		this.noticeStatus = noticeStatus;
 		this.noticeReceiverNo = noticeReceiverNo;
+		this.noticeAnnouncementNo = noticeAnnouncementNo;
+		this.noticeProjectNo = noticeProjectNo;
+		this.noticeQnaNo = noticeQnaNo;
+		this.noticeImg = noticeImg;
 	}
 
 	public int getNoticeNo() {
@@ -90,10 +99,44 @@ public class Notice {
 		this.noticeReceiverNo = noticeReceiverNo;
 	}
 
+	public int getNoticeAnnouncementNo() {
+		return noticeAnnouncementNo;
+	}
+
+	public void setNoticeAnnouncementNo(int noticeAnnouncementNo) {
+		this.noticeAnnouncementNo = noticeAnnouncementNo;
+	}
+
+	public int getNoticeProjectNo() {
+		return noticeProjectNo;
+	}
+
+	public void setNoticeProjectNo(int noticeProjectNo) {
+		this.noticeProjectNo = noticeProjectNo;
+	}
+
+	public int getNoticeQnaNo() {
+		return noticeQnaNo;
+	}
+
+	public void setNoticeQnaNo(int noticeQnaNo) {
+		this.noticeQnaNo = noticeQnaNo;
+	}
+
+	public String getNoticeImg() {
+		return noticeImg;
+	}
+
+	public void setNoticeImg(String noticeImg) {
+		this.noticeImg = noticeImg;
+	}
+
 	@Override
 	public String toString() {
 		return "Notice [noticeNo=" + noticeNo + ", noticeTitle=" + noticeTitle + ", noticeContent=" + noticeContent
 				+ ", noticeWriter=" + noticeWriter + ", noticeCreateDate=" + noticeCreateDate + ", noticeType="
-				+ noticeType + ", noticeStatus=" + noticeStatus + ", noticeReceiverNo=" + noticeReceiverNo + "]";
+				+ noticeType + ", noticeStatus=" + noticeStatus + ", noticeReceiverNo=" + noticeReceiverNo
+				+ ", noticeAnnouncementNo=" + noticeAnnouncementNo + ", noticeProjectNo=" + noticeProjectNo
+				+ ", noticeQnaNo=" + noticeQnaNo + ", noticeImg=" + noticeImg + "]";
 	}
 }

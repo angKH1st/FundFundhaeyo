@@ -11,7 +11,7 @@
 <body>
 	<%@ include file="../common/adminHeader.jsp" %>
 	
-    <div class="adm-content">
+    <div class="adm-content font_outer">
 	    <div class="adm-content-top">
 	    	<div class="adm-content-top-title fl"><h1>프로젝트조회</h1></div>
 	    	<div class="adm-content-top-blank fl"></div>
@@ -41,18 +41,18 @@
 	    				<table>
 	    				<thead>
 	    					<tr>
-	    						<td style="width:40px;">#</td>
-	    						<td style="width:120px;">프로젝트번호</td>
-	    						<td style="width:80px;">이미지</td>
-	    						<td style="width:120px;">창작자</td>
-	    						<td style="width:120px;">카테고리</td>
-	    						<td style="width:220px;">태그</td>
-	    						<td style="width:430px;">제목</td>
-	    						<td style="width:150px;">목표금액</td>
-	    						<td style="width:120px;">펀딩률</td>
-	    						<td style="width:130px;">시작일</td>
-	    						<td style="width:130px;">종료일</td>
-	    						<td style="width:100px;">상태</td>
+	    						<th style="width:40px;">#</th>
+	    						<th style="width:120px;">프로젝트번호</th>
+	    						<th style="width:80px;">이미지</th>
+	    						<th style="width:120px;">창작자</th>
+	    						<th style="width:120px;">카테고리</th>
+	    						<th style="width:220px;">태그</th>
+	    						<th style="width:430px;">제목</th>
+	    						<th style="width:150px;">목표금액</th>
+	    						<th style="width:120px;">펀딩률</th>
+	    						<th style="width:130px;">시작일</th>
+	    						<th style="width:130px;">종료일</th>
+	    						<th style="width:100px;">상태</th>
 	    					</tr>
 	    				</thead>
 	    				<tbody>

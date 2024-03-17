@@ -23,7 +23,7 @@ $(document).ready(function(){
 		var selectedPaymentMethod = $('input[name="group2"]:checked').val();
 		
         var params = {
-            pay_method: "card",
+			pay_method: "card",
             amount: numericValue,
             name: projectName,
             merchant_uid: generateMerchantUID(),

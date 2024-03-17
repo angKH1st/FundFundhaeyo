@@ -1,4 +1,4 @@
-package com.kh.semi1st.admin.project;
+package com.kh.semi1st.admin.project.controller;
 
 import java.io.IOException;
 import java.util.ArrayList;

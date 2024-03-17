@@ -140,4 +140,28 @@
 		     )
 	</entry>
 	
+	<entry key="insertQNANotice">
+		INSERT
+		  INTO TB_NOTICE
+		     (
+		       NOTICE_NO
+		     , NOTICE_TITLE
+		     , NOTICE_CONTENT
+		     , NOTICE_WRITER
+		     , NOTICE_TYPE
+		     , NOTICE_RECEIVER_NO
+		     , NOTICE_QNA_NO
+		     )
+		VALUES
+			 (
+			   SEQ_NOTICE_NO.NEXTVAL
+			 , 'Q&amp;A 등록'
+			 , 'Q&amp;A 등록이 성공적으로 완료되었습니다. 추후 답변을 안내 드리겠습니다.'
+			 , 1
+			 , 3
+			 , ?
+			 , SEQ_QNA_NO.CURRVAL
+			 )
+	</entry>
+	
 </properties>

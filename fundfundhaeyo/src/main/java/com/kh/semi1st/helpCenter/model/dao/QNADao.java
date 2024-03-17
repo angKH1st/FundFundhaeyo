@@ -330,4 +330,28 @@ private Properties prop = new Properties();
 		}
 		return result;
 	}
+
+	/** QNA 작성 후 알림 삽입해주는 메소드
+	 *  @param conn
+	 *  @param q : 작성한 QNA
+	 *  @return result : 처리 결과 (1 = 성공 / 0 = 실패) 
+	 */
+	public int insertQNANotice(Connection conn, QNA q) {
+		int result = 0;
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("insertQNANotice");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, Integer.parseInt(q.getQnaWriter()));
+			
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		return result;
+	}
 }

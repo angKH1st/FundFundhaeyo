@@ -17,8 +17,11 @@
 		</div>
 		<div class="mypage_left_content listHover">
 			<ul>
+				<li>
+		            <a href="<%= request.getContextPath() %>/mypage.me" class="mypage_left_content-main-menu">마이페이지</a>
+		        </li>
 		        <li>
-		            <a class="mypage_left_content-main-menu"><i class="fas fa-angle-up"></i> 나의 후원</a>
+		            <a class="mypage_left_content-main-menu">나의 후원 <i class="fas fa-angle-up"></i></a>
 		            <ul class="hidden">
 		                <li><a href="<%= request.getContextPath() %>/attendProject.me?cpage=1">후원한 프로젝트</a></li>
 		                <li><a href="#">뭘 넣을까</a></li>
@@ -26,34 +29,32 @@
 		            </ul>
 		        </li>
 		        <li>
-		            <a class="mypage_left_content-main-menu"><i class="fas fa-angle-up"></i> 나의 창작</a>
+		            <a class="mypage_left_content-main-menu">나의 창작 <i class="fas fa-angle-up"></i></a>
 		            <ul class="hidden">
-		                <li><a href="<%= request.getContextPath() %>/testingProject.me?cpage=1">심사중인 프로젝트</a></li>
+		                <li><a href="<%= request.getContextPath() %>/myProject.me?cpage=1">나의 창작 프로젝트</a></li>
+		                
+		                <li><a href="<%= request.getContextPath() %>/testingProject.me?cpage=1">심사요청한 프로젝트</a></li>
 		                <li><a href="<%= request.getContextPath() %>/ongoingProject.me?cpage=1">진행중인 프로젝트</a></li>
-		                <li><a href="<%= request.getContextPath() %>/banProject.me?cpage=1">반려된 프로젝트</a></li>
+		                <li><a href="<%= request.getContextPath() %>/banProject.me?cpage=1">반려된 프로젝트 없앨거임</a></li>
 		                <li><a href="<%= request.getContextPath() %>/endProject.me?cpage=1">종료된 프로젝트</a></li>
 		                <li><a href="#">송장</a></li>
 		                <li><a href="#">수익</a></li>
 		            </ul>
 		        </li>
 		        <li>
-		            <a class="mypage_left_content-main-menu"><i class="fas fa-angle-up"></i> 나의 활동</a>
+		            <a class="mypage_left_content-main-menu">나의 활동 <i class="fas fa-angle-up"></i></a>
 		            <ul class="hidden">
 		                <li><a href="<%= request.getContextPath() %>/moveToLikes.me?cpage=1">찜 목록</a></li>
-		                <li><a href="<%= request.getContextPath() %>/moveToMemberNotices.no?type=0">알림 목록</a></li>
+		                <li><a href="<%= request.getContextPath() %>/MemberNotices.no">알림 목록</a></li>
 		                <li><a href="#">최근 본 프로젝트</a></li>
-		                <li><a href="#">Q&A</a></li>
 		            </ul>
 		        </li>
 		        <li>
-		            <a class="mypage_left_content-main-menu"><i class="fas fa-angle-up"></i> 회원 정보</a>
+		            <a class="mypage_left_content-main-menu">회원 정보 <i class="fas fa-angle-up"></i></a>
 		            <ul class="hidden">
 		                <li><a href="<%= request.getContextPath() %>/moveToUpdate.me">회원정보수정</a></li>
 		                <li><a href="<%= request.getContextPath() %>/moveToDelete.me">회원탈퇴</a></li>
 		            </ul>
-		        </li>
-		        <li>
-		            <a href="#" class="mypage_left_content-main-menu">단일 메뉴</a>
 		        </li>
 		    </ul>
 		</div>

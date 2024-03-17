@@ -30,7 +30,6 @@ public class AnnouncementDetailController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
 		int announcementNo = Integer.parseInt(request.getParameter("aNo"));
 		
 		int result = new AnnouncementService().increaseCount(announcementNo);
@@ -47,7 +46,7 @@ public class AnnouncementDetailController extends HttpServlet {
 			request.setAttribute("count", count);
 			request.getRequestDispatcher("views/helpCenter/announcementDetail.jsp").forward(request, response);
 		}else {
-			// 에러페이지
+			request.getRequestDispatcher("views/common/errorPage404.jsp").forward(request, response);
 		}
 	}
 

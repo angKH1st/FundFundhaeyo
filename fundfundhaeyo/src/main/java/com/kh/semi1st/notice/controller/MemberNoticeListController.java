@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.json.simple.JSONArray;
 
 import com.google.gson.Gson;
+import com.kh.semi1st.member.model.vo.Member;
 import com.kh.semi1st.notice.model.service.NoticeService;
 import com.kh.semi1st.notice.model.vo.Notice;
 
@@ -34,9 +35,10 @@ public class MemberNoticeListController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		int userNo = ((Member)(request.getSession().getAttribute("loginUser"))).getUserNo();
 		int type = Integer.parseInt(request.getParameter("type"));
 		
-		ArrayList<Notice> list = new NoticeService().selectMemberNoticeList(type); 
+		ArrayList<Notice> list = new NoticeService().selectMemberNoticeList(userNo, type); 
 		JSONArray jArr = new JSONArray(); 	
 		
 		response.setContentType("application/json; charset=utf-8");

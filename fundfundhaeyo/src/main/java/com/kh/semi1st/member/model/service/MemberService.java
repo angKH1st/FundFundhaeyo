@@ -424,6 +424,7 @@ public class MemberService {
 	
 	public Member updatePwdMember(int userNo, String userId, String userPwd, String updatePwd) {
 		Connection conn = getConnection();
+		
 		int result = new MemberDao().updatePwdMember(conn, userId, userPwd, updatePwd);
 		
 		Member updateMem = null;
@@ -437,7 +438,49 @@ public class MemberService {
 		close(conn);
 		
 		return updateMem;
-	
+	}
+
+	/** 회원의 찜목록 숫자를 조회해주는 메소드
+	 *  @param userNo : 조회하고자 하는 회원 번호
+	 *  @return result : 조회된 찜목록 숫자
+	 */
+	public int selectMemberLikesProjectCount(int userNo) {
+		Connection conn = getConnection();
+		
+		int result = new MemberDao().selectMemberLikesProjectCount(conn, userNo);
+		
+		close(conn);
+		
+		return result;
+	}
+
+	/** 창작한 프로젝트 숫자를 조회해주는 메소드
+	 *  @param userNo : 조회하고자 하는 창작자
+	 *  @return result : 조회된 창작 프로젝트 숫자 
+	 */
+	public int selectMySellerProjectCount(int userNo) {
+		Connection conn = getConnection();
+		
+		int result = new MemberDao().selectMySellerProjectCount(conn, userNo);
+		
+		close(conn);
+		
+		return result;
+	}
+
+	/** 창작한 프로젝트를 조회해주는 메소드
+	 *  @param pi : 페이징 처리 객체
+	 *  @param userNo : 조회하고자 하는 창작자
+	 *  @return list : 조회된 창작 프로젝트
+	 */
+	public ArrayList<Project> selectMySellerProjectList(PageInfo pi, int userNo) {
+		Connection conn = getConnection();
+		
+		ArrayList<Project> list = new MemberDao().selectMySellerProjectList(conn, pi, userNo);
+		
+		close(conn);
+		
+		return list;
 	}
 	
 	

@@ -574,6 +574,33 @@ public class ProjectDao {
 		}
 		return listCount;
 	}
+	
+	/** 전체 찜 한 프로젝트 숫자 조회
+	 *  @param conn
+	 *  @param userNo : 찜 한 회원 번호
+	 *  @return listCount : 전체 프로젝트 숫자
+	 */
+	public int selectProjectLikesListCount(Connection conn, int userNo) {
+		int listCount = 0;
+		
+		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+		String sql = prop.getProperty("selectProjectLikesListCount");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+
+			pstmt.setInt(1, userNo);
+			
+			rset = pstmt.executeQuery();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		return listCount;
+	}
 
 	/** 프로젝트 제한 조회
 	 *  @param conn
@@ -813,7 +840,7 @@ public class ProjectDao {
 	 *  @param projectReason : 승인/반려 알림 내용
 	 *  @return result : 처리 결과 (1 = 성공 / 0 = 실패)
 	 */
-	public int insertProjectBanAllowNotice(Connection conn, int projectSeller, String projectReason) {
+	public int insertProjectBanAllowNotice(Connection conn, int projectSeller, String projectReason, int projectNo) {
 		int result = 0;
 		PreparedStatement pstmt = null;
 		String sql = prop.getProperty("insertProjectBanAllowNotice");
@@ -823,6 +850,7 @@ public class ProjectDao {
 			
 			pstmt.setString(1, projectReason);
 			pstmt.setInt(2, projectSeller);
+			pstmt.setInt(3, projectNo);
 			
 			result = pstmt.executeUpdate();
 		} catch (SQLException e) {
@@ -1310,6 +1338,31 @@ public class ProjectDao {
 			pstmt = conn.prepareStatement(sql);
 			
 			pstmt.setInt(1, projectNo);
+			
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		return result;
+	}
+
+	/** 프로젝트의 등록 신청 후, 알림 처리하는 메소드
+	 *  @param conn
+	 *  @param p : 등록 신청한 프로젝트
+	 *  @return result : 처리 결과 (1 = 성공 / 0 = 실패)
+	 */
+	public int insertProjectNotice(Connection conn, Project p) {
+		int result = 0;
+		
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("insertProjectNotice");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, Integer.parseInt(p.getProjectSeller()));
 			
 			result = pstmt.executeUpdate();
 		} catch (SQLException e) {

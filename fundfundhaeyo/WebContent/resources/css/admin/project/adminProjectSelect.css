@@ -14,7 +14,7 @@
 
 .adm-content>div{width: 100%;}
 .adm-content-top{height: 55px; margin-bottom: 20px;}
-.adm-content-center{height: 800px; margin-bottom: 80px;}
+.adm-content-center{height: 880px; margin-bottom: 80px;}
 
 .adm-content-top>div{height: 100%;}
 .adm-content-top-title{width: 20%;}
@@ -51,14 +51,17 @@
 
 .adm-content-center-main-body2 table{border-spacing: 0;}
 .adm-content-center-main-body2 tr{height: 49.5px;}
-.adm-content-center-main-body2 thead td{padding-left: 10px; background-color: #f5f5f5; font-weight: bold}
+.adm-content-center-main-body2 thead th{padding-left: 10px; background-color: #f5f5f5; font-weight: bold}
 .adm-content-center-main-body2 tbody td{padding-left: 10px;}
 .adm-content-center-main-body2 tbody {
     border-collapse: collapse;
 } 
-
+.adm-content-center-main-body2 thead tr th {
+    border-top: 1px solid black;
+    border-bottom: 0.5px solid lightgray;
+}
 .adm-content-center-main-body2 tbody tr td {
-    border-top: 0.5px solid lightgray;
+    border-bottom: 0.5px solid lightgray;
 }
 .adm-content-center-main-body2 tbody tr:hover{background-color: #f5f5f5;}
 

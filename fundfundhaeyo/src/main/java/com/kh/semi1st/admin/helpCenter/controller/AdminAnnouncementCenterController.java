@@ -1,8 +1,7 @@
-package com.kh.semi1st.admin.project;
+package com.kh.semi1st.admin.helpCenter.controller;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,22 +9,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.google.gson.Gson;
 import com.kh.semi1st.common.model.vo.PageInfo;
-import com.kh.semi1st.project.model.service.ProjectService;
-import com.kh.semi1st.project.model.vo.Project;
+import com.kh.semi1st.helpCenter.model.service.AnnouncementService;
+import com.kh.semi1st.helpCenter.model.vo.Announcement;
 
 /**
- * Servlet implementation class AdminProjectUpdateListController
+ * Servlet implementation class AdminAnnouncementCenterController
  */
-@WebServlet("/admUpdateList.pr")
-public class AdminProjectUpdateListController extends HttpServlet {
+@WebServlet("/admAnnouncement.hp")
+public class AdminAnnouncementCenterController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AdminProjectUpdateListController() {
+    public AdminAnnouncementCenterController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -43,7 +41,7 @@ public class AdminProjectUpdateListController extends HttpServlet {
 		int startPage;   // 페이징바의 시작 수
 		int endPage;	 // 페이징바의 끝 수
 		
-		listCount = new ProjectService().selectProjectListCount();
+		listCount = new AnnouncementService().selectAnnouncementListCount();
 		currentPage = Integer.parseInt(request.getParameter("cpage"));
 		pageLimit = 5;
 		boardLimit = 10;
@@ -56,17 +54,12 @@ public class AdminProjectUpdateListController extends HttpServlet {
 		}
 		
 		PageInfo pi = new PageInfo(listCount, currentPage, pageLimit, boardLimit, maxPage, startPage, endPage);
-		ArrayList<Project> list = new ProjectService().selectProjectUpdateList(pi);
+		ArrayList<Announcement> list = new AnnouncementService().selectAnnouncementLimitList(pi);
 		
-		HashMap<String, Object> map = new HashMap<>();
-		map.put("pi", pi);
-		map.put("list", list);
-
-		Gson gson = new Gson();
-		String json = gson.toJson(map);
+		request.setAttribute("pi", pi);
+		request.setAttribute("list", list);
 		
-		response.setContentType("application/json; charset=UTF-8");
-		response.getWriter().write(json);
+		request.getRequestDispatcher("views/admin/helpCenter/adminAnnouncementCenter.jsp").forward(request, response);
 	}
 
 	/**

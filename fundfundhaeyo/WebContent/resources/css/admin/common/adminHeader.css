@@ -18,6 +18,13 @@
 .br5{border-radius: 5px;}
 .brlg{border: 0.5px solid lightgray;}
 .bglg{background-color: #f5f5f5;}
+.centerXY{display: flex; justify-content: center; align-items: center;  text-align: center;}
+
+.shadow{
+    -webkit-box-shadow: 27px 43px 43px -26px rgba(89,89,89,0.39);
+    -moz-box-shadow: 27px 43px 43px -26px rgba(89,89,89,0.39);
+    box-shadow: 27px 43px 43px -26px rgba(89,89,89,0.39);
+}
 
 .adm-header {
     width: calc(100% - 70px);  /* 헤더의 초기 너비를 사이드바의 너비에 맞게 설정 */

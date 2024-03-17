@@ -1,4 +1,4 @@
-package com.kh.semi1st.admin.project;
+package com.kh.semi1st.admin.helpCenter.controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -7,19 +7,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.kh.semi1st.project.model.service.ProjectService;
+import com.kh.semi1st.helpCenter.model.service.AnnouncementService;
+import com.kh.semi1st.helpCenter.model.vo.Announcement;
 
 /**
- * Servlet implementation class AdminProjectBanAllowUpdateController
+ * Servlet implementation class AdminMoveToUpdateAnnouncementFormController
  */
-@WebServlet("/admUpdateBanAllow.pr")
-public class AdminProjectBanAllowUpdateController extends HttpServlet {
+@WebServlet("/admMoveToUpdateAnnouncementForm.hp")
+public class AdminMoveToUpdateAnnouncementFormController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AdminProjectBanAllowUpdateController() {
+    public AdminMoveToUpdateAnnouncementFormController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -28,19 +29,20 @@ public class AdminProjectBanAllowUpdateController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		int projectNo = Integer.parseInt(request.getParameter("projectNo"));
-		String projectStatus = request.getParameter("projectStatus"); 
-		String projectReason = null;
-		int projectPrice = Integer.parseInt(request.getParameter("projectPrice"));
+		int aNo = 0;
+		if(request.getParameter("aNo") != null) {
+			aNo = Integer.parseInt(request.getParameter("aNo"));
+		}
+		Announcement a = null;
 		
-		if(request.getParameter("projectReason") != null) {
-			projectReason = request.getParameter("projectReason");
+		if(aNo != 0) {
+			a = new AnnouncementService().selectAnnouncement(aNo);
 		}
 		
-		int result = new ProjectService().updateProjectBanAllow(projectNo, projectStatus, projectReason, projectPrice);
-		
-		response.setContentType("text/html; charset=UTF-8");
-		response.getWriter().print(result);
+		if(a != null) {
+			request.setAttribute("a", a);
+		}
+		request.getRequestDispatcher("views/admin/helpCenter/adminUpdateAnnouncementForm.jsp").forward(request, response);
 	}
 
 	/**

@@ -76,9 +76,9 @@
                 		<div class="ffh_content_top_left2_all fl">
 	                        <div class="ffh_content_top_left2_p1_row1 pr1"></div>
 	                        <div class="ffh_content_top_left2_p1_row2 prHoverContainer pr2">
-	                        	<a href="<%= contextPath %>/detail.pr?pno=<%= randomList.get(i).getProjectNo() %>"><img class="prHover" src="<%= randomList.get(i).getProjectTitleImg() %>" width="190" height="180"></a>
+	                        	<a href="<%= contextPath %>/detail.pr?pno=<%= randomList.get(i).getProjectNo() %>"><img class="prHover br10" src="<%= randomList.get(i).getProjectTitleImg() %>" width="200" height="180"></a>
 	                        	<% if(loginUser != null) { %>
-	                        		<span class="likes" style="position: absolute; bottom: 10px; right: 7px; z-index: 10;" data-projectNo="<%= randomList.get(i).getProjectNo() %>"><i class="fa-solid fa-heart fa-xl"></i></span>
+	                        		<span class="likes" style="position: absolute; bottom: 10px; right: 12px; z-index: 10;" data-projectNo="<%= randomList.get(i).getProjectNo() %>"><i class="fa-solid fa-heart fa-xl"></i></span>
 	                        	<% } %>
 	                        </div>
 	                        <div class="ffh_content_top_left2_p1_row3 pr3">
@@ -109,7 +109,7 @@
 							<div class="rk_r1"><%--여백--%></div>
 							<div class="rk_r2">
 								<div class="rk_col1 prHoverContainer fl">
-									<a href="<%= contextPath %>/detail.pr?pno=<%= rankList.get(i).getProjectNo() %>"><img src="<%= rankList.get(i).getProjectTitleImg() %>" width="100px" height="90px"></a>
+									<a href="<%= contextPath %>/detail.pr?pno=<%= rankList.get(i).getProjectNo() %>"><img class="br10" src="<%= rankList.get(i).getProjectTitleImg() %>" width="100px" height="85px"></a>
 									<% if(loginUser != null) { %>
 		                        		<span class="likes" style="position: absolute; bottom: 4px; right: 15px; z-index: 10;" data-projectNo="<%= rankList.get(i).getProjectNo() %>"><i class="fa-solid fa-heart fa-lg"></i></span>
 		                        	<% } %>
@@ -141,7 +141,7 @@
 						<div class="ffh_frame1_top_col2_row1"></div>
 						<div class="ffh_frame1_top_col2_row2">
 							<div class="ffh_frame1_top_col2_row2_left fl more_left_text"><%-- 여백 --%></div>
-							<div class="ffh_frame1_top_col2_row2_right fl"><a href="<%= contextPath %>/new.pr"><button type="button" class="more_btn" style="background-color:white; margin-top: 15px; padding-right: 20px;">더보기</button></a></div>
+							<div class="ffh_frame1_top_col2_row2_right fl"><a href="<%= contextPath %>/new.pr"><button type="button" class="more_btn" style="background-color:white; margin-top: 15px; padding-right: 10px;">더보기</button></a></div>
 						</div>
 					</div>
 				</div>
@@ -150,7 +150,7 @@
 					<div class="ffh_frame2 fl">
                     	<div class="pr1"></div>
                         <div class="pr2 prHoverContainer">
-                        	<a href="<%= contextPath %>/detail.pr?pno=<%= newList.get(i).getProjectNo() %>"><img class="prHover" src="<%= newList.get(i).getProjectTitleImg() %>" width="240" height="200"></a>
+                        	<a href="<%= contextPath %>/detail.pr?pno=<%= newList.get(i).getProjectNo() %>"><img class="prHover br10" src="<%= newList.get(i).getProjectTitleImg() %>" width="248" height="200"></a>
                         	<% if(loginUser != null) { %>
                         		<span class="likes" style="position: absolute; bottom: 10px; right: 10px; z-index: 10;" data-projectNo="<%= newList.get(i).getProjectNo() %>"><i class="fa-solid fa-heart fa-xl"></i></span>
                         	<% } %>
@@ -176,7 +176,7 @@
 						<div class="ffh_frame2_top_col2_row1"></div>
 						<div class="ffh_frame2_top_col2_row2">
 							<div class="ffh_frame2_top_col2_row2_left fl more_left_text"><%-- 여백 --%></div>
-							<div class="ffh_frame2_top_col2_row2_right fl"><a href="<%= contextPath %>/deadline.pr"><button type="button" class="more_btn" style="background-color:white; margin-top: 15px; padding-right: 20px;">더보기</button></a></div>
+							<div class="ffh_frame2_top_col2_row2_right fl"><a href="<%= contextPath %>/deadline.pr"><button type="button" class="more_btn" style="background-color:white; margin-top: 15px; padding-right: 10px;">더보기</button></a></div>
 						</div>
 					</div>
 				</div>
@@ -184,8 +184,8 @@
 					<% for(int i = deadlineList.size() - 1; i >= deadlineList.size()-10; i--) { %>
 					<div class="ffh_frame2 fl">
 						<div class="pr1"></div>
-						<div class="pr2  prHoverContainer">
-							<a href="<%= contextPath %>/detail.pr?pno=<%= deadlineList.get(i).getProjectNo() %>"><img class="prHover" src="<%= deadlineList.get(i).getProjectTitleImg() %>" width="240px" height="200px"></a>
+						<div class="pr2 prHoverContainer">
+							<a href="<%= contextPath %>/detail.pr?pno=<%= deadlineList.get(i).getProjectNo() %>"><img class="prHover br10" src="<%= deadlineList.get(i).getProjectTitleImg() %>" width="248px" height="200px"></a>
 							<% if(loginUser != null) { %>
                         		<span class="likes" style="position: absolute; bottom: 10px; right: 10px; z-index: 10;" data-projectNo="<%= deadlineList.get(i).getProjectNo() %>"><i class="fa-solid fa-heart fa-xl"></i></span>
                         	<% } %>

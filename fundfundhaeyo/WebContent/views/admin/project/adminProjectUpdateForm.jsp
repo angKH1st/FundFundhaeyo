@@ -144,12 +144,12 @@
 							</div>
 						</div>
 						<div class="adm-content-right-area2">
-							<div class="adm-content-right-area2-header adm-content-center-main-body-header">반려사유</div>
-							<div class="adm-content-right-area2-body pd15"><input class="reason" type="text" style="width: 100%; height: 100%;"></div>
+							<div class="adm-content-right-area2-header adm-content-center-main-body-header">심사내용</div>
+							<div class="adm-content-right-area2-body pd15"><input class="reason" type="text" style="width: 100%; height: 100%;" required></div>
 						</div>
 						<div class="adm-content-right-area3">
 							<button type="button" class="adm-ban-allow-reset br5 brlg" onclick="resetUpdate();">초기화</button>
-							<button type="button" class="adm-allow-btn br5 brlg" disabled onclick="banAllow('Y');">승인</button>
+							<button type="button" class="adm-allow-btn br5 brlg" disabled onclick="banAllow('W');">승인</button>
 							<button type="button" class="adm-ban-btn br5 brlg" disabled onclick="banAllow('B');">반려</button>
 						</div>
 					</div>

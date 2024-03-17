@@ -29,7 +29,7 @@
 					<div class="pjContainer">
 						<div class="category">프로젝트 카테고리</div>
 						<div class="select-box">
-					    <button type="button" class="select-button brlg br5">카테고리를 선택해주세요</button>
+					    	<button type="button" class="select-button">카테고리를 선택해주세요</button>
 					    	<ul class="select-list">
 					    		<% for(PjCategory c : list){ %>
 					    			<li><%= c.getPjCategoryName() %></li>
@@ -71,7 +71,7 @@
 							<div class="project_enroll_inspection fl"></div>
 						</div>
 						<div class="project_enroll_left_form_row2 br5">
-							<input type="number" placeholder="목표금액은 최소 100,000 이상, 숫자만 입력" name="pjPrice" required>
+							<input type="number" id="pjPrice" placeholder="목표금액 범위는 100,000원 ~ 200,000,000원, 숫자만 입력" name="pjPrice" required>
 						</div>
 					</div>
 					<div class="project_enroll_left_form">
@@ -80,7 +80,7 @@
 							<div class="project_enroll_inspection fl"></div>
 						</div>
 						<div class="project_enroll_left_form_row2 br5">
-							<textarea placeholder="한글, 숫자, 특수문자 조합으로 100자 이하로 입력" name="pjContent" required></textarea>
+							<textarea class="brlg br5" placeholder="한글, 숫자, 특수문자 조합으로 100자 이하로 입력" name="pjContent" required></textarea>
 						</div>
 					</div>
 				</div>
@@ -89,9 +89,11 @@
 					<div class="project_enroll_right_price brlg br5 pd15">
 						<div class="project_enroll_right_price_form">
 							<div class="project_enroll_right_price">
-								<div class="project_enroll_price_top_row1">목표금액</div>
-								<div class="project_enroll_price_top_row2"><input placeholder="원" readonly></div>
-								<div class="project_enroll_price_top_row3"><br><%-- 여백 --%></div>
+								<div class="project_enroll_price_top_row1">
+									<div class="project_enroll_price_top_row1_col1 fl">목표금액</div>
+									<div class="project_enroll_price_top_row1_col2 fl"><input placeholder="0 원" id="pjPriceCopy" readonly></div>
+								</div>
+								<div class="project_enroll_price_top_row2"><br><br><%-- 여백 --%></div>
 							</div>
 							<div class="project_enroll_price_bottom">
 								<div class="project_enroll_price_bottom_col1 fl">목표 금액 달성 시 예상 수령액</div>
@@ -100,16 +102,17 @@
 						</div>
 						<div class="project_enroll_right_tax_form">
 							<div class="project_enroll_right_tax_row1">
+							<br>
 								<div class="project_enroll_right_tax_row1_col1 fl">총 수수료</div>
-								<div class="project_enroll_right_tax_row1_col2 fl">0원</div>
+								<div class="project_enroll_right_tax_row1_col2 fl">0 원</div>
 							</div>
 							<div class="project_enroll_right_tax_row2">
 								<div class="project_enroll_right_tax_row2_col1 fl">결제대행 수수료 (총 결제 성공 금액의 3% + VAT)</div>
-								<div class="project_enroll_right_tax_row2_col2 fl">0원</div>
+								<div class="project_enroll_right_tax_row2_col2 fl">0 원</div>
 							</div>
 							<div class="project_enroll_right_tax_row3">
 								<div class="project_enroll_right_tax_row3_col1 fl">기본 수수료 (총 결제 성공 금액의 5% + VAT)</div>
-								<div class="project_enroll_right_tax_row3_col2 fl">0원</div>
+								<div class="project_enroll_right_tax_row3_col2 fl">0 원</div>
 							</div>
 						</div>
 						<%-- test --%>
@@ -119,7 +122,7 @@
 			</div>
 			<div class="project_enroll_form_main_blank"><%-- 여백 --%></div>
 			<div class="project_enroll_form_main_bottom">
-				<button type="button" class="project_enroll_form_btn1 brlg shadow fl" style="margin-right: 16px;" onclick="location.href='<%= contextPath %>'">취소</button>
+				<button type="button" class="project_enroll_form_btn1 brlg shadow fl" style="margin-right: 16px; background-color: #f3f3f3;" onclick="location.href='<%= contextPath %>'">취소</button>
         		<button type="submit" class="project_enroll_form_btn2 brlg shadow fl" disabled>다음</button>
 			</div>
 	    </div>

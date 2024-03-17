@@ -23,7 +23,7 @@ public class Announcement {
 		this.announcementCount = announcementCount;
 		this.announcementCreateDate = announcementCreateDate;
 	}
-
+	
 	public Announcement(int announcementNo, String announcementTitle, String announcementContent,
 			String announcementWriter, int announcementCount, Date announcementCreateDate, String announcementStatus) {
 		super();
@@ -35,8 +35,6 @@ public class Announcement {
 		this.announcementCreateDate = announcementCreateDate;
 		this.announcementStatus = announcementStatus;
 	}
-	
-	
 
 	public Announcement(int announcementNo, String announcementTitle, String announcementContent,
 			String announcementWriter, int announcementCount, Date announcementCreateDate) {
@@ -49,8 +47,6 @@ public class Announcement {
 		this.announcementCreateDate = announcementCreateDate;
 	}
 	
-	
-
 	public Announcement(int announcementNo, String announcementTitle) {
 		super();
 		this.announcementNo = announcementNo;

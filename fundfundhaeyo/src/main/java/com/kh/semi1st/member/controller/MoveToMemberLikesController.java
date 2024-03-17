@@ -43,7 +43,8 @@ public class MoveToMemberLikesController extends HttpServlet {
 		int startPage;   // 페이징바의 시작 수
 		int endPage;	 // 페이징바의 끝 수
 		
-		listCount = new ProjectService().selectProjectListCount();
+		int userNo = ((Member)request.getSession().getAttribute("loginUser")).getUserNo();
+		listCount = new ProjectService().selectProjectLikesListCount(userNo);
 		currentPage = Integer.parseInt(request.getParameter("cpage"));
 		pageLimit = 5;
 		boardLimit = 8;
@@ -55,7 +56,6 @@ public class MoveToMemberLikesController extends HttpServlet {
 			endPage = maxPage;
 		}
 		
-		int userNo = ((Member)request.getSession().getAttribute("loginUser")).getUserNo();
 		
 		PageInfo pi = new PageInfo(listCount, currentPage, pageLimit, boardLimit, maxPage, startPage, endPage);
 		ArrayList<Project> list = new MemberService().selectProjectLikesList(pi, userNo);

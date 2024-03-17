@@ -105,7 +105,7 @@
                             <% }else { %>
                             <%-- 로그인 후 --%>
                             <div class="ffh_header_center_right3 fl"><a href="<%= contextPath %>/moveToLikes.me?cpage=1" class="heada"><i class="fa-solid fa-heart fa-xl" style="color: #ff0000; line-height: 150%;"></i></a></div>
-                            <div class="ffh_header_center_right4 fl"><a href="<%= contextPath %>/moveToMemberNotices.no?type=0" class="heada"><i class="fa-regular fa-bell fa-xl" style="line-height: 150%;"></i></a></div>
+                            <div class="ffh_header_center_right4 fl"><a href="<%= contextPath %>/MemberNotices.no" class="heada"><i class="fa-regular fa-bell fa-xl" style="line-height: 150%;"></i></a></div>
                             <div class="ffh_header_center_right5 fl">
 	                            <div class="dropdown">
 								    <a class="heada dropdown-toggle" data-toggle="dropdown"><i class="fa-solid fa-user fa-lg" style="line-height: 190%;"></i></a>
