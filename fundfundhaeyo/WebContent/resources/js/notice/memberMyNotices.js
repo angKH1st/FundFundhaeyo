@@ -71,7 +71,7 @@ function moveElement(index, ref) {
 	switch (type) {
 		case 1: loc = "/fund/announcementDetail.hp?aNo=" + ref; break;
 		case 2: loc = "/fund/testingProject.me?cpage=1"; break;
-		case 3: loc = "/fund/qnaDetail.hp?qNo=" + ref; break;
+		case 3: loc = "/fund/qna.hp?cpage=1"; break;
 	}
 	location.href = loc;
 }

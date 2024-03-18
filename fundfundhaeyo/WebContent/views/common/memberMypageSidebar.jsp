@@ -32,11 +32,6 @@
 		            <a class="mypage_left_content-main-menu">나의 창작 <i class="fas fa-angle-up"></i></a>
 		            <ul class="hidden">
 		                <li><a href="<%= request.getContextPath() %>/myProject.me?cpage=1">나의 창작 프로젝트</a></li>
-		                
-		                <li><a href="<%= request.getContextPath() %>/testingProject.me?cpage=1">심사요청한 프로젝트</a></li>
-		                <li><a href="<%= request.getContextPath() %>/ongoingProject.me?cpage=1">진행중인 프로젝트</a></li>
-		                <li><a href="<%= request.getContextPath() %>/banProject.me?cpage=1">반려된 프로젝트 없앨거임</a></li>
-		                <li><a href="<%= request.getContextPath() %>/endProject.me?cpage=1">종료된 프로젝트</a></li>
 		                <li><a href="#">송장</a></li>
 		                <li><a href="#">수익</a></li>
 		            </ul>

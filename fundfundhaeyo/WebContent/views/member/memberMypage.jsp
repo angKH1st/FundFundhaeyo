@@ -59,11 +59,11 @@
 					<div class="mypage_right_title2"><h3>나의활동</h3></div>
 					<div class="mypage_right_my">
 						<div class="mypage_right_my_left fl">
-							<div class="mypage_right_my_left_likes br10 fl" onclick="moveToLikes();">
+							<div class="mypage_right_my_left_likes brlg br10 fl" onclick="moveToLikes();">
 								<div class="mypage_activity_row1_grade1_title"><h4>찜목록 💜</h4></div>
 								<div class="mypage_activity_row1_grade1_count"><h3><%= likes %></h3><h5> 개</h5></div>
 							</div>
-							<div class="mypage_right_my_left_grade br10 fl">
+							<div class="mypage_right_my_left_grade brlg br10 fl">
 								<div class="mypage_activity_row1_grade1_title"><h4>등급 💜</h4></div>
 								<div class="mypage_activity_row1_grade1_count"><h3><%= loginUser.getUserGrade() %></h3><h5> 급</h5></div>
 							</div>

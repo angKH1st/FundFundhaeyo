@@ -7,6 +7,7 @@ import java.util.ArrayList;
 
 import com.kh.semi1st.common.model.vo.PageInfo;
 import com.kh.semi1st.helpCenter.model.vo.QNA;
+import com.kh.semi1st.helpCenter.model.vo.Reply;
 import com.kh.semi1st.helpCenter.model.vo.Attachment;
 import com.kh.semi1st.helpCenter.model.dao.QNADao;
 
@@ -101,11 +102,23 @@ public class QNAService {
 	public int deleteQNA(int qNo) {
 		Connection conn = getConnection();
 		
-		int result = new QNADao().deleteQNA(conn, qNo);
+		int result1 = 1;
 		
+		Reply r = new QNADao().selectQNAReply(conn, qNo);
+		if(r != null) {
+			result1 = new QNADao().deleteReply(conn, qNo);
+		}
+		
+		int result2 = new QNADao().deleteQNA(conn, qNo);
+		
+		if(result1 > 0 && result2 > 0) {
+			commit(conn);
+		}else {
+			rollback(conn);
+		}
 		close(conn);
 		
-		return result;
+		return result1 * result2;
 	}
 
 	/** QNA 수정해주는 메소드
@@ -138,5 +151,104 @@ public class QNAService {
 		return result1 * result2;
 	}
 
+	/** QNA 게시글 내 답변이 있는지 조회해주는 메소드
+	 *  @param qNo : 조회하고자 하는 QNA
+	 *  @return r : 조회된 답변
+	 */
+	public Reply selectQNAReply(int qNo) {
+		Connection conn = getConnection();
+		
+		Reply r = new QNADao().selectQNAReply(conn, qNo);
+		
+		close(conn);
+		
+		return r;
+	}
+
+	/** QNA 관리자 강제 삭제해주는 메소드
+	 *  @param qNo : 삭제하고자 하는 QNA no
+	 *  @return result : 처리 결과 (1 = 성공 / 0 = 실패) 
+	 */
+	public int deleteForcedQNA(int qNo) {
+		Connection conn = getConnection();
+		QNA q = new QNADao().selectQNA(conn, qNo);
+		
+		int result1 = new QNADao().deleteQNA(conn, qNo);
+		int result2 = new QNADao().deleteQNANotice(conn, q);
+		
+		if(result1 > 0 && result2 > 0) {
+			commit(conn);
+		}else {
+			rollback(conn);
+		}
+		close(conn);
+		
+		return result1 * result2;
+	}
+
+	/** QNA 게시글 내 답변 삭제해주는 메소드
+	 *  @param qNo : 답변 삭제하고자 하는 QNA no
+	 *  @return result : 처리 결과 (1 = 성공 / 0 = 실패)
+	 */
+	public int deleteReply(int qNo) {
+		Connection conn = getConnection();
+		QNA q = new QNADao().selectQNA(conn, qNo);
+		
+		int result1 = new QNADao().deleteReply(conn, qNo);
+		int result2 = new QNADao().deleteReplyNotice(conn, q);
+		int result3 = new QNADao().updateQNAStatusR(conn, q, "N");
+		
+		if(result1 > 0 && result2 > 0 && result3 > 0) {
+			commit(conn);
+		}else {
+			rollback(conn);
+		}
+		close(conn);
+		
+		return result1 * result2 * result3;
+	}
+
+	/** QNA 게시글 내 답변 업데이트해주는 메소드
+	 *  @param qNo : 답변 업데이트하고자 하는 QNA no
+	 *  @param answer : 업데이트하고자 하는 답변
+	 *  @return result : 처리 결과 (1 = 성공 / 0 = 실패)
+	 */
+	public int updateReply(int qNo, String answer) {
+		Connection conn = getConnection();
+		
+		int result = new QNADao().updateReply(conn, qNo, answer);
+		
+		if(result > 0) {
+			commit(conn);
+		}else {
+			rollback(conn);
+		}
+		close(conn);
+		
+		return result;
+	}
+
+	/** QNA 게시글 내 답변 삽입해주는 메소드
+	 *  @param qNo : 답변 삽입하고자 하는 QNA no
+	 *  @param answer : 삽입하고자 하는 답변
+	 *  @return result : 처리 결과 (1 = 성공 / 0 = 실패)
+	 */
+	public int insertReply(int qNo, String answer) {
+		Connection conn = getConnection();
+		QNA q = new QNADao().selectQNA(conn, qNo);
+		
+		int result1 = new QNADao().insertReply(conn, qNo, answer);
+		int result2 = new QNADao().insertReplyNotice(conn, q, answer);
+		int result3 = new QNADao().updateQNAStatusR(conn, q, "Y");
+		
+		if(result1 > 0 && result2 > 0 && result3 > 0) {
+			commit(conn);
+		}else {
+			rollback(conn);
+		}
+		close(conn);
+		
+		return result1 * result2 * result3;
+	}
 
 }

@@ -14,12 +14,9 @@
 	<div class="project_search_outer font_outer">
 		<div class="blank_top"><%-- 여백 --%></div>
 		<div class="project_search_main">
-				<div class="search_area" id="search_area">
-					<img src="resources/image/icons8-search-50.png" style="height: 40px;">
-					<input type="text" id="keyword" name="keyword" placeholder=" 검색어를 입력해주세요" style="font-size: 20px;">
-				</div>
-				 <div class="search_area_btn" id="search_area_btn">
-					<button onclick="search_btn();" class="btn btn-primary">검색</button>			
+				<div class="search_area update-input-wrap input-id fl" id="search_area">
+                    <input class="fl" type="text" id="keyword" name="keyword" placeholder="검색어를 입력해주세요" style="font-size: 20px;" required>
+					<button class="fl" onclick="search_btn();"><i class="fas fa-search"></i></button>			
 				</div>
 			<br><br><br>
 	    </div>

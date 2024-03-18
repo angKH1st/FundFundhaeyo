@@ -46,8 +46,9 @@
 		                <li><a href="admAnnouncement.hp?cpage=1"><i class="thumbI fa-solid fa-microphone fa-2xl"></i> 공지사항 조회</a></li>
 		                <li><a href="admMoveToUpdateAnnouncementForm.hp?aNo=0"><i class="thumbI fa-solid fa-microphone fa-2xl"></i> 공지사항 수정</a></li>
 		                <li><a href="admMoveToEnrollAnnouncementForm.hp"><i class="thumbI fa-solid fa-microphone fa-2xl"></i> 공지사항 작성</a></li>
-		                <li><a href="admFaq.hp"><i class="thumbI fa-solid fa-circle-question fa-2xl"></i> FAQ</a></li>
-		                <li><a href="admQna.hp"><i class="thumbI fa-solid fa-comments fa-2xl"></i> Q&A</a></li>
+		                <li><a href="admQna.hp?cpage=1"><i class="thumbI fa-solid fa-comments fa-2xl"></i> Q&A 조회</a></li>
+		                <li><a href="admMoveToUpdateQnaForm.hp"><i class="thumbI fa-solid fa-comments fa-2xl"></i> Q&A 답변</a></li>
+		                <li><a href="admFaq.hp"><i class="thumbI fa-solid fa-circle-question fa-2xl"></i> 지울거임</a></li>
 		            </ul>
 		        </li>
 		        <li>

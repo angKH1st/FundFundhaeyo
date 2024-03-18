@@ -6,6 +6,7 @@ public class QNA {
 	
 	private int qnaNo;
 	private String qnaWriter;
+	private int qnaWriterNo;
 	private String qnaTitle;
 	private String qnaContent;
 	private Date qnaCreateDate;
@@ -20,6 +21,28 @@ public class QNA {
 		super();
 		this.qnaNo = qnaNo;
 		this.qnaWriter = qnaWriter;
+		this.qnaTitle = qnaTitle;
+		this.qnaContent = qnaContent;
+		this.qnaCreateDate = qnaCreateDate;
+		this.qnaModifyDate = qnaModifyDate;
+		this.qnaAnswerStatus = qnaAnswerStatus;
+		this.qnaStatus = qnaStatus;
+	}
+
+	public int getQnaWriterNo() {
+		return qnaWriterNo;
+	}
+
+	public void setQnaWriterNo(int qnaWriterNo) {
+		this.qnaWriterNo = qnaWriterNo;
+	}
+
+	public QNA(int qnaNo, String qnaWriter, int qnaWriterNo, String qnaTitle, String qnaContent, Date qnaCreateDate,
+			Date qnaModifyDate, String qnaAnswerStatus, String qnaStatus) {
+		super();
+		this.qnaNo = qnaNo;
+		this.qnaWriter = qnaWriter;
+		this.qnaWriterNo = qnaWriterNo;
 		this.qnaTitle = qnaTitle;
 		this.qnaContent = qnaContent;
 		this.qnaCreateDate = qnaCreateDate;

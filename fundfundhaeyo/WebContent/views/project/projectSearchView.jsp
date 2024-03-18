@@ -35,7 +35,7 @@ language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 					<div class="project_area_pr fl">
 					<br>
 						<div class="project_area_head prHoverContainer">
-							<a href="<%= contextPath %>/detail.pr?pno=<%= list.get(0).getProjectNo() %>"><img class="prHover" src="<%= list.get(0).getProjectTitleImg() %>" width="245" height="180"></a>
+							<a href="<%= contextPath %>/detail.pr?pno=<%= list.get(0).getProjectNo() %>"><img class="prHover br10" src="<%= list.get(0).getProjectTitleImg() %>" width="245" height="180"></a>
 						</div>
 						<div class="project_area_body">
 							<div class="project_area_body_row1">
