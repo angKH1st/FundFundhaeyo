@@ -8,33 +8,22 @@ pageEncoding="UTF-8"%>
     <link
       rel="stylesheet"
       href="resources/css/company/companyIntroduction.css"
+      rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
     />
+    <script src="/jquery-3.6.0.min.js"></script>
     <style>
-      .memberIntroduce {
-        width: 800px; /* 테이블의 전체 너비를 확보 */
-        border-collapse: separate; /* 테이블 셀 경계를 분리함 */
-        border-spacing: 20px;
-      }
-      .memberIntroduce td a:hover {
-        color: skyblue; /* 호버 시 바뀌길 원하는 색상으로 변경 */
-      }
-      .memberIntroduce td {
-        height: 60px;
-        padding: 20px; /* 셀 안의 내용과 테두리 간 여백 설정 */
-        text-align: center;
-        border-radius: 15px;
-        border-color: rgb(140, 140, 140);
-        border: 1px solid gray;
-      }
-      .memberIntroduce a {
-        font-display: none;
-        text-decoration: none;
-        color: gray;
-        padding-left: 10px;
-      }
-      .memberIntroduce > h4 {
-        margin: 0px;
-      }
+      * { box-sizing: border-box; }
+      a { text-decoration: none; }
+      #headerWrap { position: absolute; width: 1100px; height: 80px; border: 1px solid gray; border-radius: 10px;}
+      #gnbWrap { height: 100%; }
+      #gnbWrap ul { display: flex; align-items: center; justify-content: space-around; height: 100%; list-style-type: none;}
+      #gnbWrap .gnb > li { width: 20%; height: 110px; text-align: center; text-decoration: none; margin-right: 10px;}
+      #gnbWrap .gnb > li >  a:hover {color: skyblue;}
+      #gnbWrap .gnb > li > a { display: block; font-size: 20px; font-weight: 600; color: black; padding: 43px 10px; text-decoration: none;}
+      .sub-wrap { display: none; position: absolute; top:80px; left: 0; width: 100%; background-color: skyblue; overflow: hidden; border-radius: 10px;}
+      .sub-wrap > ul { max-width: 900px; width: 100%; margin: 0 auto; }
+      .sub-wrap > ul > li > a { display: block; padding: 21px 12px; color: #fff; font-size: 18px; font-weight: bold; opacity: .5; transition: all .3s; -webkit-transition: all .3s; -moz-transition: all .3s; -ms-transition: all .3s; -o-transition: all .3s; }
+      .sub-wrap > ul > li > a:hover { opacity: 1; text-decoration: none;}
     </style>
   </head>
   <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
@@ -94,40 +83,56 @@ pageEncoding="UTF-8"%>
               </td>
             </tr>
           </table>
-          <table class="memberIntroduce">
-            <h5>멤버 깃허브</h5>
-            <tr>
-              <td>
-                <i class="fa-brands fa-github fa-2xl"></i>
-                <a
-                  href="https://github.com/NanoKim"
-                  style="text-decoration: none"
-                  >김재영</a
-                >
-              </td>
-              <td>
-                <i class="fa-brands fa-github fa-2xl"></i>
-                <a
-                  href="https://github.com/Suuujii"
-                  style="text-decoration: none"
-                >
-                  어수지</a
-                >
-              </td>
-
-              <td>
-                <i class="fa-brands fa-github fa-2xl"></i>
-                <a
-                  href="https://github.com/angKH1st"
-                  style="text-decoration: none"
-                >
-                  뻔뻔해요</a
-                >
-              </td>
-            </tr>
-          </table>
+          <h5>맴버 깃허브 & 노션</h5>
+          <header id="headerWrap">
+            <nav id="gnbWrap">
+              <ul class="gnb">
+                <li>
+                  <a href="">김재영</a>
+                  <div class="sub-wrap">
+                    <ul>
+                      <li><a href="https://github.com/NanoKim">깃허브</a></li>
+                      <li><a href="https://simple-impala-444.notion.site/System-out-print-NanoKim-fe3040183c5a459cb14b6abff5977fd0">노션</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <a href="">어수지</a>
+                  <div class="sub-wrap">
+                    <ul>
+                      <li><a href="https://github.com/Suuujii">깃허브</a></li>
+                      <li><a href="https://www.notion.so/0bb3297fd8f54aec8c7a08eca6103e35?v=1aada94f39684bff90c70bc58d973a51">노션</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <a href="">뻔뻔해요</a>
+                  <div class="sub-wrap">
+                    <ul>
+                      <li><a href="https://github.com/angKH1st">깃허브</a></li>
+                      <li><a href="https://autumn-tithonia-b02.notion.site/FundFundhaeyo-9f4a1fd055464a6985ea2d9424e0d857">노션</a></li>
+                    </ul>
+                  </div>
+                </li>
         </div>
       </div>
+
+
+
+
+     
+        <script type="text/javascript">
+          $(function(){
+            $('.gnb > li').on('mouseover', function(){
+              $('.sub-wrap').stop().slideUp(200)
+                    $(this).children('.sub-wrap').stop().slideDown(200)
+            });
+
+            $('.gnb > li').on('mouseleave', function(){
+              $(this).children('.sub-wrap').stop().slideUp(200)
+            });
+          });
+        </script>
 
       <div class="blank_bottom"><%-- 여백 --%></div>
     </div>
