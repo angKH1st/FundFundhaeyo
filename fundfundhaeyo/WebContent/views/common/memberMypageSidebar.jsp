@@ -24,7 +24,7 @@
 		            <a class="mypage_left_content-main-menu">나의 후원 <i class="fas fa-angle-up"></i></a>
 		            <ul class="hidden">
 		                <li><a href="<%= request.getContextPath() %>/attendProject.me?cpage=1">후원한 프로젝트</a></li>
-		                <li><a href="#">뭘 넣을까</a></li>
+		                <li><a href="#">주문내역</a></li>
 		                <li><a href="#">뭘 넣을까</a></li>
 		            </ul>
 		        </li>

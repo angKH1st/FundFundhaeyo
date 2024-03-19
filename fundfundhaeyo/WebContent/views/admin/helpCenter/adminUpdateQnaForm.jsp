@@ -44,7 +44,7 @@
 	    		Q&A 답변을 등록, 수정합니다.
 	    	</div>
 	    	<div class="adm-content-center-main">
-	    		<div class="adm-content-center-main-header">QNA답변</div>
+	    		<div class="adm-content-center-main-header">Q&A답변</div>
 	    		<div class="adm-content-center-main-body">
 	    			<div class="adm-content-center-main-body fl">
 	    				<div class="adm-content-center-main-body-top">
@@ -102,6 +102,7 @@
 				    			</div>
 				    			<div class="adm-content-center-main-body-row3 centerXY">
 				    				<input type="hidden" name="actionType" id="actionType" value="">
+				    				<input type="hidden" id="qnaAnswerStatus" value="<%= q.getQnaAnswerStatus() %>">
 				    				<% if(q != null){ %>
 					    				<input type="hidden" name="qNo" id="qNo" value="<%= q.getQnaNo() %>">
 					    				<button type="submit" id="submitBtn" disabled>제출</button>

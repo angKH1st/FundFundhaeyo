@@ -58,18 +58,18 @@ function loadPage(cpage) {
 				}
 				
 				tCode += "<tr>"
-						     + "<td>" + ((currentPage - 1) * boardLimit + i + 1) + "</td>"
-						     + "<td>" + list[i].projectNo + "</td>"
-						     + "<td><img width=50 height=50 src=\"" + list[i].projectTitleImg + "\"></td>"
-						     + "<td>" + list[i].projectSeller + "</td>"
-						     + "<td>" + list[i].projectCategoryName + "</td>"
-						     + "<td>" + list[i].projectTag + "</td>"
+						     + "<td class=\"center\">" + ((currentPage - 1) * boardLimit + i + 1) + "</td>"
+						     + "<td class=\"center\">" + list[i].projectNo + "</td>"
+						     + "<td class=\"center\"><img class=\"circleImg\" width=50 height=50 src=\"" + list[i].projectTitleImg + "\"></td>"
+						     + "<td class=\"center\">" + list[i].projectSeller + "</td>"
+						     + "<td class=\"center\">" + list[i].projectCategoryName + "</td>"
+						     + "<td class=\"center\">" + list[i].projectTag + "</td>"
 						     + "<td>" + list[i].projectTitle + "</td>"
-						     + "<td>" + list[i].projectPrice.toLocaleString() + "원</td>"
-						     + "<td>" + list[i].projectFunding.toLocaleString() + " %  </td>"
+						     + "<td class=\"center\">" + list[i].projectPrice.toLocaleString() + "원</td>"
+						     + "<td class=\"center\">" + list[i].projectFunding.toLocaleString() + " %  </td>"
 						     + "<td>" + list[i].projectStart + "</td>"
 						     + "<td>" + list[i].projectEnd + "</td>"
-						     + "<td>" + temp + "</td>"
+						     + "<td class=\"center\">" + temp + "</td>"
 						     + "</tr>";
 			}
 			projectDiv.html(tCode);

@@ -10,12 +10,16 @@ $(document).ready(function() {
 	function checkInputs() {
 		if ($('[name="answer"]').val().trim() !== '') {
 			$('#submitBtn').prop('disabled', false);
-			$('#deleteAnswerBtn').prop('disabled', false);
 			$('#resetBtn').prop('disabled', false);
+			if($("#qnaAnswerStatus").val() === "Y"){
+				$('#deleteAnswerBtn').prop('disabled', false);
+			}
 		} else {
 			$('#submitBtn').prop('disabled', true);
-			$('#deleteAnswerBtn').prop('disabled', true);
 			$('#resetBtn').prop('disabled', true);
+			if($("#qnaAnswerStatus").val() === "Y"){
+				$('#deleteAnswerBtn').prop('disabled', true);
+			}
 		}
 	}
 

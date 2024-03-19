@@ -11,8 +11,10 @@
 }
 
 .project_search_view_main{
-	height: 750px;
+	height: 550px;
+	overflow: scroll;
 }
+.project_search_view_main::-webkit-scrollbar {display:none;}
 
 .tbody_main td {
 	height: 300px;

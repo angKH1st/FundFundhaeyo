@@ -756,7 +756,7 @@
 	</entry>
 	
 	<entry key="searchPageList">
-		SELECT
+		SELECT DISTINCT
 			   PROJECT_NO
 		     , PROJECT_TITLE
 		     , PROJECT_CONTENT
@@ -777,6 +777,7 @@
 		    OR PROJECT_TAG LIKE '%' ||?|| '%'
 		    )
 		   AND PROJECT_STATUS = 'Y'
+		   AND ATTACHMENT_LEVEL = 1
 	</entry>
 	
 	<entry key="selectProjectShareCount">
