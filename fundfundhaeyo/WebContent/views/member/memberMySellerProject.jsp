@@ -46,7 +46,7 @@
 						<div class="mypage_my_seller_Form_right_title"><h3>나의 창작 프로젝트</h3></div>
 						<div class="mypage_my_seller_Form_right_list brlg br5 pd15">
 						<% if(list.size() == 0){ %>
-							창작 프로젝트가 없습니다.
+							창작한 프로젝트가 없습니다.
 						<% }else{ %>
 							<% for(Project p : list){ %>
 								<%
@@ -59,7 +59,15 @@
 									case "E" : status = "종료"; break;
 									}
 								%>
-								<div onclick=location.href="<%= contextPath %>/detail.pr?pno=<%= p.getProjectNo() %>" class="mypage_ongoing_Form_right_list_project prHoverContainer fl brlg br5">
+								<% if(p.getProjectStatus().equals("Y") || p.getProjectStatus().equals("E")){ %>
+								<div onclick="moveToDetail(<%= p.getProjectNo() %>);" class="mypage_ongoing_Form_right_list_project prHoverContainer fl brlg br5">
+								<% }else if(p.getProjectStatus().equals("N")){ %>
+								<div onclick="alertP(1);" class="mypage_ongoing_Form_right_list_project prHoverContainer fl brlg br5">
+								<% }else if(p.getProjectStatus().equals("B")){ %>
+								<div onclick="alertP(2);" class="mypage_ongoing_Form_right_list_project prHoverContainer fl brlg br5">
+								<% }else if(p.getProjectStatus().equals("W")){ %>
+								<div onclick="alertP(3);" class="mypage_ongoing_Form_right_list_project prHoverContainer fl brlg br5">
+								<% } %>
 									<div class="mypage_ongoing_project_img prHover">
 										<img class="br10" src="<%= p.getProjectTitleImg() %>" width=200 height=150>
 									</div>

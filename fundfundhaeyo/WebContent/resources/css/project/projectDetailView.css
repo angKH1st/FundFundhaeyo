@@ -73,10 +73,12 @@
 .project_detail_top_info_row2_btn3:hover {transform: scale(1.1);}
 .project_detail_top_info_row2_btn3>a{text-decoration: none;}
 .project_detail_top_info_row2_btn3>a:hover{text-decoration: none;}
-.project_detail_top_info_row2_blank{width: 27%;}
-.project_detail_top_info_row2_blank>span{width: 50%; height: 100%; display: flex; justify-content: center; align-items: center; text-align: center;}
+.project_detail_top_info_row2_btn4{width: 11%; text-align: center; padding: 4px; background-color: white; margin: 0 10px 0 0; transition: transform 0.3s ease-in-out;}
+.project_detail_top_info_row2_btn4:hover {transform: scale(1.1);}
+.project_detail_top_info_row2_blank{width: 14%;}
+.project_detail_top_info_row2_blank>span{width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; text-align: center;}
 
-.project_detail_top_info_row2_btn1>div, .project_detail_top_info_row2_btn2>div{width: 100%; height: 50%;} 
+.project_detail_top_info_row2_btn1>div, .project_detail_top_info_row2_btn2>div, .project_detail_top_info_row2_btn4>div{width: 100%; height: 50%;} 
 
 .likesContainer{position: relative;}
 

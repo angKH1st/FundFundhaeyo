@@ -1,3 +1,4 @@
+<%@page import="com.kh.semi1st.member.model.vo.Member"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -13,7 +14,12 @@
 <body>
 	<div class="mypage_left_area fl">
 		<div class="mypage_left_top" align="center">
-			프사
+			<% if((Member)(request.getSession().getAttribute("loginUser")) != null){ %>
+			<br>
+			<img width=100 height=100 class="br10" src="<%= ((Member)(request.getSession().getAttribute("loginUser"))).getUserImg() %>">
+			<br><br>
+			<%= ((Member)(request.getSession().getAttribute("loginUser"))).getUserNickname() %> 님 💙  
+			<% } %>
 		</div>
 		<div class="mypage_left_content listHover">
 			<ul>

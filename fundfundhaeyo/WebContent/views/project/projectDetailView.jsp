@@ -136,12 +136,16 @@
 								<div class="project_detail_top_info_row2_btn2_icon"><i class="fa-solid fa-share-nodes"></i></div>
 								<div class="project_detail_top_info_row2_btn2_num shareCnt"></div>
 							</div>
+							<div class="project_detail_top_info_row2_btn4 br5 brlg fl clap" data-projectNo="<%= p.getProjectNo() %>" onclick="clapPage();">
+								<div class="project_detail_top_info_row2_btn4_icon"><i class="fa-solid fa-hands-clapping fa-sm"></i></div>
+								<div class="project_detail_top_info_row2_btn4_num clapCnt"></div>
+							</div>
 							<% if(loginUser != null) { %>
 								<% if(loginUser.getUserNo() != Integer.parseInt(p.getProjectSeller())){ %>
-								<div class="project_detail_top_info_row2_btn3 br5 brlg fl"><a style="color: white;" href="<%= contextPath %>/moveToOrderForm.pr?pno=<%= p.getProjectNo() %>">이 프로젝트 후원하기</a></div>
+								<div class="project_detail_top_info_row2_btn3 br5 brlg fl"><a style="color: white;" href="<%= contextPath %>/moveToOrderForm.pr?pno=<%= p.getProjectNo() %>">프로젝트 후원하기</a></div>
 								<% } %>
 							<% }else { %>
-								<div class="project_detail_top_info_row2_btn3 br5 brlg fl" onclick="alertToLogin();">이 프로젝트 후원하기</div>
+								<div class="project_detail_top_info_row2_btn3 br5 brlg fl" onclick="alertToLogin();">프로젝트 후원하기</div>
 							<% } %>
 							<div class="project_detail_top_info_row2_blank fl">
 								<% if((long)(ChronoUnit.DAYS.between(now, ((Date)p.getProjectEnd()).toLocalDate())) >= 0){ %>

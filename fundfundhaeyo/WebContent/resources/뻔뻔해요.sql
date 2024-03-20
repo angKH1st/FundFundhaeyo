@@ -3,6 +3,7 @@
 -- GRANT CONNECT, RESOURCE TO FFHY;
 
 ---------------------- 삭제 ----------------------
+DROP TABLE TB_CLAP;
 DROP TABLE TB_SHARE;
 DROP TABLE TB_DELIVERY;
 DROP TABLE TB_ORDER;
@@ -2607,7 +2608,6 @@ COMMENT ON COLUMN TB_DELIVERY.DELIVERY_END IS '배송 도착일';
 
 CREATE SEQUENCE SEQ_DELIVERY_NO
 NOCACHE;
-
 --------------------------------------------------
 ------------------ SHARE 관련 ---------------------	
 --------------------------------------------------
@@ -2619,6 +2619,16 @@ CREATE TABLE TB_SHARE (
 
 COMMENT ON COLUMN TB_SHARE.SHARE_PROJECT_NO IS '공유 프로젝트 번호';
 COMMENT ON COLUMN TB_SHARE.SHARE_COUNT IS '공유 횟수';
+--------------------------------------------------
+------------------- CLAP 관련 ---------------------	
+--------------------------------------------------
+CREATE TABLE TB_CLAP (
+    CLAP_PROJECT_NO NUMBER CONSTRAINT CLAP_PROJECT_NO_NN NOT NULL,
+    CLAP_COUNT NUMBER DEFAULT 0,
+    CONSTRAINT CLAP_PROJECT_NO_FK FOREIGN KEY (CLAP_PROJECT_NO) REFERENCES TB_PROJECT(PROJECT_NO)
+);
 
+COMMENT ON COLUMN TB_CLAP.CLAP_PROJECT_NO IS '박수 프로젝트 번호';
+COMMENT ON COLUMN TB_CLAP.CLAP_COUNT IS '박수 횟수';
 
 COMMIT;

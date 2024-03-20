@@ -1252,5 +1252,88 @@ public class MemberDao {
 		return list;
 	}
 	
+	/** 후원한 프로젝트 숫자를 조회해주는 메소드
+	 *  @param conn
+	 *  @param userNo : 조회하고자 하는 후원자
+	 *  @return result : 조회된 후원 프로젝트 숫자 
+	 */
+	public int selectMyBuyerProjectCount(Connection conn, int userNo) {
+		int result = 0;
+		ResultSet rset = null;
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("selectMyBuyerProjectCount");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, userNo);
+			
+			rset = pstmt.executeQuery();
+			
+			if(rset.next()) {
+				result = rset.getInt("count");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		return result;
+	}
+
+	/** 후원한 프로젝트를 조회해주는 메소드
+	 *  @param conn
+	 *  @param pi : 페이징 처리 객체
+	 *  @param userNo : 조회하고자 하는 후원자
+	 *  @return list : 조회된 후원 프로젝트
+	 */
+	public ArrayList<Project> selectMyBuyerProjectList(Connection conn, PageInfo pi, int userNo) {
+		ArrayList<Project> list = new ArrayList<Project>();
+		ResultSet rset = null;
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("selectMyBuyerProjectList");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			int startRow = (pi.getCurrentPage()-1) * pi.getBoardLimit() + 1;
+			int endRow = startRow + pi.getBoardLimit() - 1;
+			
+			pstmt.setInt(1, userNo);
+			pstmt.setInt(2, startRow);
+			pstmt.setInt(3, endRow);
+			
+			rset = pstmt.executeQuery();
+			
+			while(rset.next()) {
+				Project p = new Project();
+				p.setProjectNo(rset.getInt("project_no"));
+				p.setProjectSeller(rset.getString("project_seller"));
+				p.setProjectCategoryName(rset.getString("pj_category_name"));
+				p.setProjectOverview(rset.getString("project_overview"));
+				p.setProjectTitle(rset.getString("project_title"));
+				p.setProjectContent(rset.getString("project_content"));
+				p.setProjectTag(rset.getString("project_tag"));
+				p.setProjectPrice(rset.getInt("project_price"));
+				p.setProjectStart(rset.getDate("project_start"));
+				p.setProjectEnd(rset.getDate("project_end"));
+				p.setProjectPaymentBuyer(rset.getDate("project_payment_buyer"));
+				p.setProjectPaymentSeller(rset.getDate("project_payment_seller"));
+				p.setProjectStatus(rset.getString("project_status"));
+				p.setProjectFunding(rset.getInt("funding"));
+				p.setProjectTitleImg(rset.getString("project_img"));
+				
+				list.add(p);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		return list;
+	}
+	
 
 }

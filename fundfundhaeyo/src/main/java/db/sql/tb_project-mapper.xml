@@ -831,4 +831,31 @@
 			 )
 	</entry>
 	
+	<entry key="selectProjectClapCount">
+		SELECT
+		       CLAP_COUNT "COUNT"
+		  FROM TB_CLAP
+		 WHERE CLAP_PROJECT_NO = ?
+	</entry>
+	
+	<entry key="updateProjectClapCount">
+		UPDATE TB_CLAP
+		   SET CLAP_COUNT = CLAP_COUNT + 1
+		 WHERE CLAP_PROJECT_NO = ?
+	</entry>
+	
+	<entry key="insertProjectClapCount">
+		INSERT
+		  INTO TB_CLAP
+		     (
+		       CLAP_PROJECT_NO
+		     , CLAP_COUNT
+		     )
+		VALUES
+		     (
+		       ?
+		     , 1
+		     )
+	</entry>
+	
 </properties>

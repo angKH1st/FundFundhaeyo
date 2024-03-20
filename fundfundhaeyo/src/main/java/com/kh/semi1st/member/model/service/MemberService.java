@@ -483,6 +483,34 @@ public class MemberService {
 		return list;
 	}
 	
+	/** 후원한 프로젝트 숫자를 조회해주는 메소드
+	 *  @param userNo : 조회하고자 하는 후원자
+	 *  @return result : 조회된 후원 프로젝트 숫자 
+	 */
+	public int selectMyBuyerProjectCount(int userNo) {
+		Connection conn = getConnection();
+		
+		int result = new MemberDao().selectMyBuyerProjectCount(conn, userNo);
+		
+		close(conn);
+		
+		return result;
+	}
 	
+	/** 후원한 프로젝트를 조회해주는 메소드
+	 *  @param pi : 페이징 처리 객체
+	 *  @param userNo : 후원하고자 하는 후원자
+	 *  @return list : 조회된 후원 프로젝트
+	 */
+	public ArrayList<Project> selectMyBuyerProjectList(PageInfo pi, int userNo) {
+		Connection conn = getConnection();
+		
+		ArrayList<Project> list = new MemberDao().selectMyBuyerProjectList(conn, pi, userNo);
+		
+		close(conn);
+		
+		return list;
+	}
+
 	
 }

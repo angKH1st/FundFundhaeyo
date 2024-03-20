@@ -151,6 +151,42 @@ $(document).ready(function() {
 		})
 	});
 	
+	// 페이지가 로드되었을 때 프로젝트에 대한 '박수' 횟수를 조회
+	$('.clap').each(function(){
+		var $this = $(this);
+		var $thisCnt = $(".clapCnt");
+		var projectNo = $this.data('projectno')
+		
+		$.ajax({
+			url: '/fund/selectClapCount.pr',
+			type: 'GET',
+			data: {
+				projectNo: projectNo
+			},
+			success: function(clap){
+				$thisCnt.text(clap);
+			}
+		})
+	})
+	
+	// '박수' 버튼을 클릭했을 때 '박수' 상태를 업데이트
+	$(document).on("click", ".clap", function() {
+		var $this = $(this);
+		var $thisCnt = $(".clapCnt");
+		var projectNo = $this.data("projectno");
+		
+		$.ajax({
+			url: '/fund/updateClapCount.pr',
+			type: 'GET',
+			data: {
+				projectNo: projectNo
+			},
+			success: function(clap){
+				$thisCnt.text(clap);
+			}
+		})
+	});
+	
 	// 페이지가 로드되었을 때 프로젝트에 대한 '좋아요' 상태를 조회
 	$('.likes').each(function() {
 		var $this = $(this);
