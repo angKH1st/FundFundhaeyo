@@ -356,6 +356,42 @@ public class ProjectDao {
 		}
 		return p;
 	}
+	
+	/** 프로젝트 상세조회하는 메소드
+	 *  @param conn
+	 *  @return p : 조회된 프로젝트
+	 */
+	public Project selectRecentProject(Connection conn, int pno) {
+		Project p = null;
+		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+		String sql = prop.getProperty("selectRecentProject");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, pno);
+			
+			rset = pstmt.executeQuery();
+			
+			if(rset.next()) {
+				p = new Project();
+				p.setProjectNo(rset.getInt("project_no"));
+				p.setProjectOverview(rset.getString("project_overview"));
+				p.setProjectTitle(rset.getString("project_title"));
+				p.setProjectTag(rset.getString("project_tag"));
+				p.setProjectCategoryName(rset.getString("pj_category_name"));
+				p.setProjectFunding(rset.getInt("funding"));
+				p.setProjectTitleImg(rset.getString("project_img"));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		return p;
+	}
 
 	/** 프로젝트 첨부파일 리스트조회하는 메소드
 	 *  @param conn
@@ -551,9 +587,9 @@ public class ProjectDao {
 		return result;
 	}
 
-	/** 전체 프로젝트 숫자 조회
+	/** 전체 진행중인 프로젝트 숫자 조회
 	 *  @param conn
-	 *  @return listCount : 전체 프로젝트 숫자
+	 *  @return listCount : 전체 진행중인 프로젝트 숫자
 	 */
 	public int selectProjectListCount(Connection conn) {
 		int listCount = 0;
@@ -561,6 +597,90 @@ public class ProjectDao {
 		PreparedStatement pstmt = null;
 		ResultSet rset = null;
 		String sql = prop.getProperty("selectProjectListCount");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+
+			rset = pstmt.executeQuery();
+			
+			if(rset.next()) {
+				listCount = rset.getInt("count");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		return listCount;
+	}
+	
+	/** 전체 프로젝트 숫자 조회
+	 *  @param conn
+	 *  @return listCount : 전체 프로젝트 숫자
+	 */
+	public int selectProjectAllListCount(Connection conn) {
+		int listCount = 0;
+		
+		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+		String sql = prop.getProperty("selectProjectAllListCount");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+
+			rset = pstmt.executeQuery();
+			
+			if(rset.next()) {
+				listCount = rset.getInt("count");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		return listCount;
+	}
+	
+	/** 전체 종료한 프로젝트 숫자 조회
+	 *  @param conn
+	 *  @return listCount : 전체 종료한 프로젝트 숫자
+	 */
+	public int selectProjectEndListCount(Connection conn) {
+		int listCount = 0;
+		
+		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+		String sql = prop.getProperty("selectProjectEndListCount");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+
+			rset = pstmt.executeQuery();
+			
+			if(rset.next()) {
+				listCount = rset.getInt("count");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		return listCount;
+	}
+	
+	/** 전체 심사 대상 프로젝트 숫자 조회
+	 *  @param conn
+	 *  @return listCount : 전체 심사 대상 프로젝트 숫자
+	 */
+	public int selectProjectUpdateListCount(Connection conn) {
+		int listCount = 0;
+		
+		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+		String sql = prop.getProperty("selectProjectUpdateListCount");
 		
 		try {
 			pstmt = conn.prepareStatement(sql);
@@ -1436,7 +1556,6 @@ public class ProjectDao {
 	 */
 	public int insertProjectNotice(Connection conn, Project p) {
 		int result = 0;
-		
 		PreparedStatement pstmt = null;
 		String sql = prop.getProperty("insertProjectNotice");
 		
@@ -1446,6 +1565,32 @@ public class ProjectDao {
 			pstmt.setInt(1, Integer.parseInt(p.getProjectSeller()));
 			
 			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		return result;
+	}
+
+	/** 전체 펀딩 누계액을 조회해주는 메소드
+	 *  @param conn
+	 *  @return result : 조회된 펀딩 누계액
+	 */
+	public int selectTotalProjectFunding(Connection conn) {
+		int result = 0;
+		ResultSet rset = null;
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("selectTotalProjectFunding");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			rset = pstmt.executeQuery();
+			
+			if(rset.next()) {
+				result = rset.getInt("sum");
+			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {

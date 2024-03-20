@@ -12,14 +12,21 @@
 <title>뻔뻔해요</title>
 <link rel="stylesheet" href="resources/css/memberProjectSidebar.css">
 </head>
+<link rel="icon" href="data:;base64,iVBORw0KGgo=">
 <body>
-
-<h4 align="center";>최근 본 상품목록</h4><br>
-
+	<h4 align="center";>최근 본 상품목록</h4>
+	<hr>
 	<%
 		// 쿠키 가져오기
-		Cookie[] cookies = request.getCookies();
+		Cookie[] cookies = null;
+		if((Member)(request.getSession().getAttribute("loginUser")) != null){
+			cookies = request.getCookies();
+		}
 	
+		if(cookies != null){
+	%>
+		<div class="member_pr_form">
+	<%	
 		for(Cookie c : cookies) {
 			if(c.getName().contains("recent_products")) {
 				
@@ -27,28 +34,21 @@
 				
 				String[] products = value.split("/");
 				
-				for(int i = 0; i < products.length; i++) { // 향상된 for문 대신 일반 for문 사용
+				for(int i = 0; i < products.length; i++) {
 		            String product = products[i];
 		            if (!product.equals("")) { // 빈 문자열이 아닌 경우에만 출력
-		%>
-		                <input type="text" name="p<%= i+1 %>" value="<%= product %>"><br>
-		<%	
-		           }
-		          
-		        }     			
-// 				String name = c.getName();	
-// 				out.print("글번호" + ":" + value + "<br>");
+	%>
+               	<input type="hidden" id="count" value="<%= products.length %>">
+               	<input type="hidden" id="p<%= i %>" value="<%= product %>">
+	<%	
+			           }
+			        }     			
+				}
 			}
 		}
-	
 	%>
-		
-<%-- 		<% for(int i = 0 ; i < cookies.length; i++){ %> --%>
-<%-- 		<input type="text" value=<%= (String)URLDecoder.decode(cookies[i].getValue(), "UTF-8") %>>  --%>
-<%-- 		<% } %> --%>
+		</div>	
 	
-
-	
-<%-- 	<%@ include file="../common/memberProjectSidebar.jsp" %> --%>
+	<script src="resources/js/memberProjectSide.js"></script>
 </body>
 </html>

@@ -626,4 +626,45 @@
 		 WHERE RNUM BETWEEN ? AND ?
 	</entry>
 	
+	<entry key="selectBestBuyerList">
+		<![CDATA[
+		SELECT
+		       *
+		  FROM (SELECT
+		               BUYER_USER_NO
+		             , USER_NICKNAME
+		             , SUM(BUYER_FUNDING) BUYER_FUNDING
+		             , ATTACHMENT_PATH || ATTACHMENT_UPDATE_NAME "USER_IMG"
+		          FROM TB_BUYER
+		          JOIN TB_MEMBER ON (BUYER_USER_NO = USER_NO)
+		          JOIN TB_ATTACHMENT ON (USER_NO = ATTACHMENT_USER_NO)
+		         GROUP
+		            BY BUYER_USER_NO, USER_NICKNAME, ATTACHMENT_PATH || ATTACHMENT_UPDATE_NAME
+		         ORDER
+		            BY BUYER_FUNDING DESC) E
+		 WHERE ROWNUM < 6
+		 ]]>
+	</entry>
+	
+	<entry key="selectBestSellerList">
+		<![CDATA[
+		SELECT
+		       *
+		  FROM (SELECT
+		               SELLER_USER_NO
+		             , USER_NICKNAME
+		             , COUNT(SELLER_FUNDING) COUNT
+		             , SUM(SELLER_FUNDING) SELLER_FUNDING
+		             , ATTACHMENT_PATH || ATTACHMENT_UPDATE_NAME "USER_IMG"
+		          FROM TB_SELLER
+		          JOIN TB_MEMBER ON (SELLER_USER_NO = USER_NO)
+		    	  JOIN TB_ATTACHMENT ON (USER_NO = ATTACHMENT_USER_NO)
+		         GROUP
+		            BY SELLER_USER_NO, USER_NICKNAME, ATTACHMENT_PATH || ATTACHMENT_UPDATE_NAME
+		         ORDER
+		            BY SELLER_FUNDING DESC) E
+		 WHERE ROWNUM < 6
+		 ]]>
+	</entry>
+	
 </properties>

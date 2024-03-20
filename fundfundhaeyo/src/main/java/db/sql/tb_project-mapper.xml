@@ -335,6 +335,23 @@
 		   AND PROJECT_NO = ?
 	</entry>
 	
+	<entry key="selectRecentProject">
+		SELECT
+		       PROJECT_NO
+		     , PROJECT_OVERVIEW
+		     , PROJECT_TITLE
+		     , PROJECT_TAG
+		     , PJ_CATEGORY_NAME
+		     , TRUNC(SELLER_FUNDING / PROJECT_PRICE * 100) "FUNDING"
+		     , ATTACHMENT_PATH || ATTACHMENT_UPDATE_NAME "PROJECT_IMG"
+		  FROM TB_PROJECT
+		  JOIN TB_PJ_CATEGORY ON (PROJECT_CATEGORY_NO = PJ_CATEGORY_NO)
+		  JOIN TB_SELLER ON (PROJECT_NO = SELLER_PROJECT_NO)
+		  JOIN TB_ATTACHMENT ON (PROJECT_NO = ATTACHMENT_PROJECT_NO)
+		 WHERE ATTACHMENT_LEVEL = 1
+		   AND PROJECT_NO = ?
+	</entry>
+	
 	<entry key="selectAttachmentList">
 		SELECT
 		       ATTACHMENT_NO
@@ -423,6 +440,27 @@
 		       COUNT(*) count
 		  FROM TB_PROJECT
 		 WHERE PROJECT_STATUS = 'Y'
+		   AND SYSDATE BETWEEN PROJECT_START AND PROJECT_END
+	</entry>
+
+	<entry key="selectProjectAllListCount">
+		SELECT
+		       COUNT(*) count
+		  FROM TB_PROJECT
+	</entry>
+	
+	<entry key="selectProjectEndListCount">
+		SELECT
+		       COUNT(*) count
+		  FROM TB_PROJECT
+		 WHERE PROJECT_STATUS = 'E'
+	</entry>
+	
+	<entry key="selectProjectUpdateListCount">
+		SELECT
+		       COUNT(*) count
+		  FROM TB_PROJECT
+		 WHERE PROJECT_STATUS = 'N'
 		   AND SYSDATE BETWEEN PROJECT_START AND PROJECT_END
 	</entry>
 	
@@ -856,6 +894,12 @@
 		       ?
 		     , 1
 		     )
+	</entry>
+	
+	<entry key="selectTotalProjectFunding">
+		SELECT
+		       SUM(SELLER_FUNDING) "SUM"
+		  FROM TB_SELLER
 	</entry>
 	
 </properties>

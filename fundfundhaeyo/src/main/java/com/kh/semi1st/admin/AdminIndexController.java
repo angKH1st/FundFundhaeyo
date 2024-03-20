@@ -1,6 +1,8 @@
 package com.kh.semi1st.admin;
 
 import java.io.IOException;
+import java.util.ArrayList;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -8,7 +10,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.kh.semi1st.member.model.service.MemberService;
 import com.kh.semi1st.member.model.vo.Member;
+import com.kh.semi1st.project.model.service.ProjectService;
 
 /**
  * Servlet implementation class AdminIndexController
@@ -33,9 +37,27 @@ public class AdminIndexController extends HttpServlet {
 	    Member loginUser = (Member) session.getAttribute("loginUser");
 		
 	    if(loginUser != null && loginUser.getUserId().equals("admin")) {
+	    	int mCount = new MemberService().selectMemberListCount();
+	    	int aCount = new ProjectService().selectProjectAllListCount();
+	    	int pCount = new ProjectService().selectProjectListCount();
+	    	int nCount = new ProjectService().selectProjectUpdateListCount();
+	    	int fMoney = new ProjectService().selectTotalProjectFunding();
+	    	
+	    	ArrayList<Member> bList = new MemberService().selectBestBuyerList();
+	    	ArrayList<Member> sList = new MemberService().selectBestSellerList();
+	    	
+	    	request.setAttribute("mCount", mCount);
+	    	request.setAttribute("aCount", aCount);
+	    	request.setAttribute("pCount", pCount);
+	    	request.setAttribute("nCount", nCount);
+	    	request.setAttribute("fMoney", fMoney);
+	    	
+	    	request.setAttribute("bList", bList);
+	    	request.setAttribute("sList", sList);
+	    	
 	    	request.getRequestDispatcher("views/admin/adminIndex.jsp").forward(request, response);
 	    }else {
-	    	// 로그인 정보가 없거나, 관리자가 아닌 경우 처리
+	    	request.getRequestDispatcher("views/admin/errorPage404.jsp").forward(request, response);
 	    }
 	}
 

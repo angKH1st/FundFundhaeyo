@@ -512,5 +512,31 @@ public class MemberService {
 		return list;
 	}
 
+	/** 가장 후원을 많이 한 회원 순으로 조회해주는 메소드
+	 *  @return list : 조회된 후원왕 리스트
+	 */
+	public ArrayList<Member> selectBestBuyerList() {
+		Connection conn = getConnection();
+		
+		ArrayList<Member> list = new MemberDao().selectBestBuyerList(conn);
+				
+		close(conn);
+			
+		return list;
+	}
+	
+	/** 가장 창작을 많이 한 회원 순으로 조회해주는 메소드
+	 *  @return list : 조회된 창작왕 리스트
+	 */
+	public ArrayList<Member> selectBestSellerList() {
+		Connection conn = getConnection();
+		
+		ArrayList<Member> list = new MemberDao().selectBestSellerList(conn);
+				
+		close(conn);
+			
+		return list;
+	}
+
 	
 }

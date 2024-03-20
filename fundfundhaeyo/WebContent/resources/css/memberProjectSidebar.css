@@ -1,3 +1,14 @@
 @charset "UTF-8";
 
 .member_pr_form{width: 100%; height: 100%;}
+.member_pr_form>div{width: 100%; height: 65px; margin: 19px 0; transition: transform 0.3s ease-in-out;}
+.member_pr_form>div:hover{transform: scale(1.1); cursor: pointer;}
+
+.member_pr_recent>div{height: 100%;}
+.pr_img{width: 25%;}
+.pr_blank{width: 3%;}
+.pr_content{width: 72%;}
+
+.pr_content>div{width: 100%;}
+.pr_content_title{height: 30%;}
+.pr_content_overview{height: 70%;}

@@ -1334,6 +1334,71 @@ public class MemberDao {
 		}
 		return list;
 	}
+
+	/** 가장 후원을 많이 한 회원 순으로 조회해주는 메소드
+	 *  @param conn
+	 *  @return list : 조회된 후원왕 리스트
+	 */
+	public ArrayList<Member> selectBestBuyerList(Connection conn) {
+		ArrayList<Member> list = new ArrayList<Member>();
+		ResultSet rset = null;
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("selectBestBuyerList");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			rset = pstmt.executeQuery();
+			
+			while(rset.next()) {
+				Member m = new Member();
+				m.setUserNo(rset.getInt("buyer_user_no"));
+				m.setUserNickname(rset.getString("user_nickname"));
+				m.setBuyerCount(rset.getInt("count"));
+				m.setBuyerFunding(rset.getInt("buyer_funding"));
+				
+				list.add(m);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		return list;
+	}
 	
+	/** 가장 후원을 많이 한 회원 순으로 조회해주는 메소드
+	 *  @param conn
+	 *  @return list : 조회된 후원왕 리스트
+	 */
+	public ArrayList<Member> selectBestSellerList(Connection conn) {
+		ArrayList<Member> list = new ArrayList<Member>();
+		ResultSet rset = null;
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("selectBestSellerList");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			rset = pstmt.executeQuery();
+			
+			while(rset.next()) {
+				Member m = new Member();
+				m.setUserNo(rset.getInt("buyer_user_no"));
+				m.setUserNickname(rset.getString("user_nickname"));
+				m.setBuyerCount(rset.getInt("count"));
+				m.setBuyerFunding(rset.getInt("buyer_funding"));
+				
+				list.add(m);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		return list;
+	}
 
 }

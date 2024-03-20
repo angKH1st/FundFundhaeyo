@@ -35,7 +35,6 @@
 									<button type="button" class="nBtn3" onclick="selectNotice(3, this);">Q&A</button>
 								</div> 
 								<div class="notices_cnt fl">
-									dd
 								</div>
 							</div>
 							<div class="notices_notices_area">

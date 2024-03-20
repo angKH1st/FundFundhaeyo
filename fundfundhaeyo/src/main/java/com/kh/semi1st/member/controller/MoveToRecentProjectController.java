@@ -1,4 +1,4 @@
-package com.kh.semi1st.notice.controller;
+package com.kh.semi1st.member.controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -8,16 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class MoveToMemberNoticeController
+ * Servlet implementation class MoveToRecentProjectController
  */
-@WebServlet("/memberNotices.no")
-public class MoveToMemberNoticeController extends HttpServlet {
+@WebServlet("/moveToRecentProject.me")
+public class MoveToRecentProjectController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public MoveToMemberNoticeController() {
+    public MoveToRecentProjectController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -26,7 +26,7 @@ public class MoveToMemberNoticeController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("views/notice/memberMyNotices.jsp").forward(request, response);
+		request.getRequestDispatcher("views/member/memberRecentProject.jsp").forward(request, response);
 	}
 
 	/**

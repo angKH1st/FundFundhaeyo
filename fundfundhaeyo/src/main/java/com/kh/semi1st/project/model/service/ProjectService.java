@@ -125,6 +125,20 @@ public class ProjectService {
 		
 		return p;
 	}
+	
+	/** 최근 클릭한 프로젝트 조회하는 메소드
+	 *  @param pno : 조회하고자 하는 프로젝트 번호
+	 *  @return p : 조회된 프로젝트
+	 */
+	public Project selectRecentProject(int pno) {
+		Connection conn = getConnection();
+		
+		Project p = new ProjectDao().selectRecentProject(conn, pno);
+		
+		close(conn);
+		
+		return p;
+	}
 
 	/** 프로젝트 첨부파일 리스트조회하는 메소드
 	 *  @param pno : 조회하고자 하는 프로젝트 번호
@@ -205,13 +219,52 @@ public class ProjectService {
 		return result1 * result2 * result3;
 	}
 
-	/** 전체 프로젝트 숫자 조회
-	 *  @return listCount : 전체 프로젝트 숫자
+	/** 전체 진행중인 프로젝트 숫자 조회
+	 *  @return listCount : 전체 진행중인 프로젝트 숫자
 	 */
 	public int selectProjectListCount() {
 		Connection conn = getConnection();
 		
 		int listCount = new ProjectDao().selectProjectListCount(conn);
+		
+		close(conn);
+		
+		return listCount;
+	}
+	
+	/** 전체 프로젝트 숫자 조회
+	 *  @return listCount : 전체 프로젝트 숫자
+	 */
+	public int selectProjectAllListCount() {
+		Connection conn = getConnection();
+		
+		int listCount = new ProjectDao().selectProjectAllListCount(conn);
+		
+		close(conn);
+		
+		return listCount;
+	}
+	
+	/** 전체 종료한 프로젝트 숫자 조회
+	 *  @return listCount : 전체 종료한 프로젝트 숫자
+	 */
+	public int selectProjectEndListCount() {
+		Connection conn = getConnection();
+		
+		int listCount = new ProjectDao().selectProjectEndListCount(conn);
+		
+		close(conn);
+		
+		return listCount;
+	}
+	
+	/** 전체 심사 대상 프로젝트 숫자 조회
+	 *  @return listCount : 전체 심사 대상 프로젝트 숫자
+	 */
+	public int selectProjectUpdateListCount() {
+		Connection conn = getConnection();
+		
+		int listCount = new ProjectDao().selectProjectUpdateListCount(conn);
 		
 		close(conn);
 		
@@ -544,6 +597,19 @@ public class ProjectService {
 		}else {
 			result = new ProjectDao().updateProjectClapCount(conn, projectNo);
 		}
+		
+		close(conn);
+		
+		return result;
+	}
+
+	/** 전체 펀딩 누계액을 조회해주는 메소드
+	 *  @return result : 조회된 펀딩 누계액
+	 */
+	public int selectTotalProjectFunding() {
+		Connection conn = getConnection();
+		
+		int result = new ProjectDao().selectTotalProjectFunding(conn);
 		
 		close(conn);
 		

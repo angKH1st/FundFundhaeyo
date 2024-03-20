@@ -233,10 +233,9 @@
 	    <div class="blank_bottom"><%-- 여백 --%></div>
     </div>
 	
-	<script src="resources/memberProjectSidebar.js"></script>
-	
 	<%@ include file="../common/footer.jsp" %>
 	
+	<script src="resources/js/memberProjectSidebar.js"></script>
 	<script src="resources/js/project/projectDetailView.js"></script>
 </body>
 </html>
