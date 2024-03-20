@@ -903,33 +903,46 @@
 	</entry>
 	
 	<entry key="selectBestCategoryList">
-		SELECT 
-		       PJ_CATEGORY_NAME
-		     , SUM(SELLER_FUNDING) "PJ_FUNDING"
-		  FROM TB_PROJECT
-		  JOIN TB_PJ_CATEGORY ON (PROJECT_CATEGORY_NO = PJ_CATEGORY_NO)
-		  JOIN TB_SELLER ON (SELLER_PROJECT_NO = PROJECT_NO)
-		 GROUP
-		    BY PJ_CATEGORY_NAME
+	<![CDATA[
+		SELECT
+		       *
+		  FROM (
+		        SELECT 
+		                       PJ_CATEGORY_NAME
+		                     , SUM(SELLER_FUNDING) "PJ_FUNDING"
+		                  FROM TB_PROJECT
+		                  JOIN TB_PJ_CATEGORY ON (PROJECT_CATEGORY_NO = PJ_CATEGORY_NO)
+		                  JOIN TB_SELLER ON (SELLER_PROJECT_NO = PROJECT_NO)
+		                 GROUP
+		                    BY PJ_CATEGORY_NAME) E
+		 WHERE ROWNUM < 6
+	 ]]>
 	</entry>
 	
-	<entry key="">
+	<entry key="selectProjectPaymentList">
 	<![CDATA[
-		SELECT *
-		  FROM
-		        (SELECT
+		SELECT 
+		       *
+		  FROM (
+		  		SELECT
 		               PAYMENT_NO
-		             , PAYMENT_USER_NO
-		             , PAYMENT_PROJECT_NO
+		             , USER_NICKNAME
+		             , PROJECT_TITLE
 		             , PAYMENT_AMOUNT
 		             , PAYMENT_METHOD
 		             , PAYMENT_STATUS
-		             , PAYMENT_DATE
+		             , TO_CHAR(PAYMENT_DATE, 'YYYY.MM.DD') "PAYMENT_DATE"
+                     , ATTACHMENT_PATH || ATTACHMENT_UPDATE_NAME "PROJECT_IMG"
 		          FROM TB_PAYMENT
-		         ORDER
-		            BY PAYMENT_DATE DESC) E
+                  JOIN TB_MEMBER ON (USER_NO = PAYMENT_USER_NO)
+                  JOIN TB_PROJECT ON (PROJECT_NO = PAYMENT_PROJECT_NO)
+                  JOIN TB_ATTACHMENT ON (PROJECT_NO = ATTACHMENT_PROJECT_NO)
+				 WHERE ATTACHMENT_LEVEL = 1
+                 ORDER
+                    BY PAYMENT_DATE DESC
+                ) E
 		 WHERE ROWNUM < 11
-		 ]]>
+	 ]]>
 	</entry>
 	
 </properties>

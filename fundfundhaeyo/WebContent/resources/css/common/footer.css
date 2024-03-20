@@ -11,8 +11,8 @@
 .ffh_footer_top_left{width: 46%;}
 .ffh_footer_top_left *:hover{color: lightskyblue;}
 .ffh_footer_top_left a:hover{cursor: pointer;}
-.ffh_footer_top_middle{width: 27%;}
-.ffh_footer_top_right{width: 27%;}
+.ffh_footer_top_middle{width: 430px;}
+.ffh_footer_top_right{width: 270px;}
 
 /* 푸터_top a 전체 */
 .ffh_footer_top a{

@@ -64,7 +64,7 @@ public class AdminIndexController extends HttpServlet {
 	    	
 	    	request.getRequestDispatcher("views/admin/adminIndex.jsp").forward(request, response);
 	    }else {
-	    	request.getRequestDispatcher("views/admin/errorPage404.jsp").forward(request, response);
+	    	request.getRequestDispatcher("views/common/errorPage404.jsp").forward(request, response);
 	    }
 	}
 

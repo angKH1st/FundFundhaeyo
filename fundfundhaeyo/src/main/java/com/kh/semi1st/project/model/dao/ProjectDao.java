@@ -1648,12 +1648,13 @@ public class ProjectDao {
 			while(rset.next()) {
 				Payment p = new Payment();
 				p.setPaymentNo(rset.getString("payment_no"));
-				p.setPaymentUserNo(rset.getInt("payment_user_no"));
-				p.setPaymentProjectNo(rset.getInt("payment_project_no"));
+				p.setPaymentUserNickname(rset.getString("user_nickname"));
+				p.setPaymentProjectName(rset.getString("project_title"));
 				p.setPaymentAmount(rset.getInt("payment_amount"));
 				p.setPaymentMethod(rset.getInt("payment_method"));
 				p.setPaymentStatus(rset.getString("payment_status"));
 				p.setPaymentDate(rset.getString("payment_date"));
+				p.setPaymentProjectImg(rset.getString("project_img"));
 				
 				list.add(p);
 			}

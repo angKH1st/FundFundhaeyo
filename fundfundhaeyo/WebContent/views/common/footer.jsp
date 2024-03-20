@@ -34,12 +34,10 @@
                       </div>
                   </div>
                   <div class="ffh_footer_top_middle fl">
-                  <%-- 여백(추후 공유 링크) --%>
                     <p></p>
                   </div>
                   <div class="ffh_footer_top_right fl">       
                         <%-- 여백 --%>     
-
                     <div>
                        <a href="https://www.facebook.com/">
                         <i class="fa-brands fa-facebook fa-xl"></i>                       

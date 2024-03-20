@@ -1,3 +1,4 @@
+<%@page import="com.kh.semi1st.member.model.vo.Payment"%>
 <%@page import="com.kh.semi1st.project.model.vo.PjCategory"%>
 <%@page import="java.util.Locale"%>
 <%@page import="java.text.NumberFormat"%>
@@ -14,6 +15,7 @@
 	ArrayList<Member> bList = (ArrayList<Member>)request.getAttribute("bList");
 	ArrayList<Member> sList = (ArrayList<Member>)request.getAttribute("sList");
 	ArrayList<PjCategory> ctList = (ArrayList<PjCategory>)request.getAttribute("ctList");
+	ArrayList<Payment> payList = (ArrayList<Payment>)request.getAttribute("payList");
 	
 	// 원화 처리
 	NumberFormat nf = NumberFormat.getInstance(Locale.KOREA);
@@ -43,7 +45,7 @@
 	    <div class="adm-content-center">
 	    	<div class="adm-content-center-count">
 	    		<div class="adm-content-center-count-col1 fl">
-	    			<div class="adm-content-center-count-col1-inside brlg br5">
+	    			<div class="adm-content-center-count-col1-inside br5">
 		    			<div class="adm-content-center-count-col1-title">
 		    				<div class="aI fl"><i class="fa-solid fa-user fa-2xl fl"></i></div>
 		    				<div class="aTitle fl">&nbsp; 전체 회원 수</div>
@@ -52,36 +54,36 @@
 	    			</div>
 	    		</div>
 	    		<div class="adm-content-center-count-col2 fl">
-	    			<div class="adm-content-center-count-col2-inside brlg br5">
+	    			<div class="adm-content-center-count-col2-inside br5">
 		    			<div class="adm-content-center-count-col2-title">
-		    				<div class="aI fl"><i class="fa-solid fa-user fa-2xl fl"></i></div>
+		    				<div class="aI fl"><i class="fa-solid fa-earth-americas fa-2xl fl"></i></div>
 		    				<div class="aTitle fl">&nbsp; 전체 프로젝트</div>
 	    				</div>
 		    			<div class="adm-content-center-count-col2-input"><%= aCount %></div>
 	    			</div>
 	    		</div>
 	    		<div class="adm-content-center-count-col3 fl">
-	    			<div class="adm-content-center-count-col3-inside brlg br5">
+	    			<div class="adm-content-center-count-col3-inside br5">
 		    			<div class="adm-content-center-count-col3-title">
-		    				<div class="aI fl"><i class="fa-solid fa-user fa-2xl fl"></i></div>
+		    				<div class="aI fl"><i class="fa-solid fa-person-running fa-2xl fl"></i></div>
 		    				<div class="aTitle fl">&nbsp; 게시중인 프로젝트</div>
 	    				</div>
 		    			<div class="adm-content-center-count-col3-input"><%= pCount %></div>
 	    			</div>
 	    		</div>
 	    		<div class="adm-content-center-count-col4 fl">
-	    			<div class="adm-content-center-count-col4-inside brlg br5">
+	    			<div class="adm-content-center-count-col4-inside br5">
 		    			<div class="adm-content-center-count-col4-title">
-		    				<div class="aI fl"><i class="fa-solid fa-credit-card fa-2xl fl"></i></div>
+		    				<div class="aI fl"><i class="fa-solid fa-gavel fa-2xl fl"></i></div>
 		    				<div class="aTitle fl">&nbsp; 프로젝트 심사요청</div>
 	    				</div>
 		    			<div class="adm-content-center-count-col4-input"><%= nCount %></div>
 	    			</div>
 	    		</div>
 	    		<div class="adm-content-center-count-col5 fl">
-	    			<div class="adm-content-center-count-col5-inside brlg br5">
+	    			<div class="adm-content-center-count-col5-inside br5">
 		    			<div class="adm-content-center-count-col5-title">
-		    				<div class="aI fl"><i class="fa-solid fa-user fa-2xl fl"></i></div>
+		    				<div class="aI fl"><i class="fa-solid fa-credit-card fa-2xl fl"></i></div>
 		    				<div class="aTitle fl">&nbsp; 펀딩금 누계</div>
 	    				</div>
 		    			<div class="adm-content-center-count-col5-input"><%= nf.format(fMoney) %></div>
@@ -105,7 +107,7 @@
 	    						<% for(Member s : sList){ %>
 	    						<div class="adm-best-in">
 	    							<div class="adm-best-crown centerXY fl"><i class="fa-solid fa-crown fa-xl"></i></div>
-	    							<div class="adm-best-img centerXY fl"><img width=50 height=50 src="<%= s.getUserImg() %>"></div>
+	    							<div class="adm-best-img centerXY fl"><img width=30 height=30 src="<%= s.getUserImg() %>"></div>
 	    							<div class="adm-best-name fl"><%= s.getUserNickname() %></div>
 	    							<div class="adm-best-count centerXY fl"><%= s.getSellerCount() %> 회 창작</div>
 	    							<div class="adm-best-price centerXY fl"><%= nf.format(s.getSellerFunding()) %> 원 펀딩</div>
@@ -121,7 +123,7 @@
 	    						<% for(Member b : bList){ %>
 	    						<div class="adm-best-in">
 	    							<div class="adm-best-crown centerXY fl"><i class="fa-solid fa-crown fa-xl"></i></div>
-	    							<div class="adm-best-img centerXY fl"><img width=50 height=50 src="<%= b.getUserImg() %>"></div>
+	    							<div class="adm-best-img centerXY fl"><img width=30 height=30 src="<%= b.getUserImg() %>"></div>
 	    							<div class="adm-best-name fl"><%= b.getUserNickname() %></div>
 	    							<div class="adm-best-count centerXY fl"><%= b.getBuyerCount() %> 회 후원</div>
 	    							<div class="adm-best-price centerXY fl"><%= nf.format(b.getBuyerFunding()) %> 원 펀딩</div>
@@ -135,7 +137,42 @@
 	    			<div class="adm-content-center-text-ord-title centerXY">주문현황</div>
 	    			<div class="adm-content-center-text-ord-input pd15">
 	    				<div class="adm-content-center-text-ord-input-outline brlg br5">
-	    					dd
+	    					<div class="order_form pd15 brBottom">
+	    						<div class="order_no fl">주문번호</div>
+	    						<div class="order_name fl">주문자</div>
+	    						<div class="order_img fl"></div>
+	    						<div class="order_project fl">프로젝트</div>
+	    						<div class="order_price fl">금액</div>
+	    						<div class="order_method fl">결제수단</div>
+	    						<div class="order_status fl">상태</div>
+	    						<div class="order_date fl">결제일</div>
+	    					</div>
+	    					<% for(Payment p : payList){ %>
+	    					<%
+	    					   String method = "";
+	    					   String status = "";
+	    					   if(p.getPaymentStatus().equals("Y")){
+	    						   status = "결제완료";
+	    					   }else{
+	    						   status = "미결제";
+	    					   }
+	    					   if(p.getPaymentMethod() == 1){
+	    						   method = "카카오페이";
+	    					   }else if(p.getPaymentMethod() == 2){
+	    						   method = "토스페이";
+	    					   }
+	    					%>
+	    					<div class="order_form pd15">
+	    						<div class="order_no fl"><%= p.getPaymentNo() %></div>
+	    						<div class="order_name fl"><%= p.getPaymentUserNickname() %></div>
+	    						<div class="order_img fl"><img class="circleImg" width=20 height=20 src="<%= p.getPaymentProjectImg() %>"></div>
+	    						<div class="order_project fl"><%= p.getPaymentProjectName() %></div>
+	    						<div class="order_price fl"><%= p.getPaymentAmount() %></div>
+	    						<div class="order_method fl"><%= method %></div>
+	    						<div class="order_status fl"><%= status %></div>
+	    						<div class="order_date fl"><%= p.getPaymentDate() %></div>
+	    					</div>
+	    					<% } %>
 	    				</div>
 	    			</div>
 	    		</div>

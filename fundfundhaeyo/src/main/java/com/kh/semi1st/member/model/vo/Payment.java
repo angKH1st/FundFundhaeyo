@@ -11,6 +11,64 @@ public class Payment {
 	private int paymentMethod;
 	private String paymentStatus;
 	private String paymentDate;
+	
+	private String paymentUserNickname;
+	private String paymentProjectName;
+	private String paymentProjectImg;
+	
+	public String getPaymentProjectImg() {
+		return paymentProjectImg;
+	}
+
+	public void setPaymentProjectImg(String paymentProjectImg) {
+		this.paymentProjectImg = paymentProjectImg;
+	}
+
+	public Payment(String paymentNo, int paymentUserNo, int paymentProjectNo, int paymentAmount, int paymentMethod,
+			String paymentStatus, String paymentDate, String paymentUserNickname, String paymentProjectName,
+			String paymentProjectImg) {
+		super();
+		this.paymentNo = paymentNo;
+		this.paymentUserNo = paymentUserNo;
+		this.paymentProjectNo = paymentProjectNo;
+		this.paymentAmount = paymentAmount;
+		this.paymentMethod = paymentMethod;
+		this.paymentStatus = paymentStatus;
+		this.paymentDate = paymentDate;
+		this.paymentUserNickname = paymentUserNickname;
+		this.paymentProjectName = paymentProjectName;
+		this.paymentProjectImg = paymentProjectImg;
+	}
+
+	public String getPaymentUserNickname() {
+		return paymentUserNickname;
+	}
+
+	public void setPaymentUserNickname(String paymentUserNickname) {
+		this.paymentUserNickname = paymentUserNickname;
+	}
+
+	public String getPaymentProjectName() {
+		return paymentProjectName;
+	}
+
+	public void setPaymentProjectName(String paymentProjectName) {
+		this.paymentProjectName = paymentProjectName;
+	}
+
+	public Payment(String paymentNo, int paymentUserNo, int paymentProjectNo, int paymentAmount, int paymentMethod,
+			String paymentStatus, String paymentDate, String paymentUserNickname, String paymentProjectName) {
+		super();
+		this.paymentNo = paymentNo;
+		this.paymentUserNo = paymentUserNo;
+		this.paymentProjectNo = paymentProjectNo;
+		this.paymentAmount = paymentAmount;
+		this.paymentMethod = paymentMethod;
+		this.paymentStatus = paymentStatus;
+		this.paymentDate = paymentDate;
+		this.paymentUserNickname = paymentUserNickname;
+		this.paymentProjectName = paymentProjectName;
+	}
 
 	public Payment () {}
 
