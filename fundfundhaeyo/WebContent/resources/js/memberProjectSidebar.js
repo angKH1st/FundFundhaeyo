@@ -1,4 +1,3 @@
-/* TBU */
 function onPageLoad() {
   var url = window.location.href; // http://localhost:8111/fund/detail.pr?pno=
   var pno = getpnoFromURL(url);
