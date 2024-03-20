@@ -57,7 +57,7 @@ function loadPage(cpage) {
 				memberDiv.append("<tr>"
 						     + "<td class=\"center\">" + ((currentPage - 1) * boardLimit + i + 1) + "</td>"
 						     + "<td class=\"center\">" + list[i].userNo + "</td>"
-						     + "<td class=\"center\"><img width=30 src=\"" + list[i].userImg + "\"></td>"
+						     + "<td class=\"center\"><img class=\"circleImg\" width=30 src=\"" + list[i].userImg + "\"></td>"
 						     + "<td class=\"center\">" + list[i].userName + "</td>"
 						     + "<td class=\"center\">" + list[i].userId + "</td>"
 						     + "<td>" + list[i].userNickname + "</td>"

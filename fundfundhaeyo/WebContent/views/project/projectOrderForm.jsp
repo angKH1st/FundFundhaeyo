@@ -108,7 +108,7 @@
 							<input type="radio" id="pay1" name="group2" value="naverpay" checked>
 						    <label for="pay1">네이버페이</label>
 						     --%>
-						    <input type="radio" id="pay2" name="group2" value="tosspay">
+						    <input type="radio" id="pay2" name="group2" value="tosspay" checked>
 						    <label for="pay2">토스페이</label>
 						    <input type="radio" id="pay3" name="group2" value="kakaopay">
 						    <label for="pay3">카카오페이</label>

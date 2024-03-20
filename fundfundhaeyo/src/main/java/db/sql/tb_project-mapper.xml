@@ -756,7 +756,7 @@
 	</entry>
 	
 	<entry key="searchPageList">
-		SELECT
+		SELECT DISTINCT
 			   PROJECT_NO
 		     , PROJECT_TITLE
 		     , PROJECT_CONTENT
@@ -777,6 +777,7 @@
 		    OR PROJECT_TAG LIKE '%' ||?|| '%'
 		    )
 		   AND PROJECT_STATUS = 'Y'
+		   AND ATTACHMENT_LEVEL = 1
 	</entry>
 	
 	<entry key="selectProjectShareCount">
@@ -828,6 +829,33 @@
 			 , ?
 			 , SEQ_PROJECT_NO.CURRVAL
 			 )
+	</entry>
+	
+	<entry key="selectProjectClapCount">
+		SELECT
+		       CLAP_COUNT "COUNT"
+		  FROM TB_CLAP
+		 WHERE CLAP_PROJECT_NO = ?
+	</entry>
+	
+	<entry key="updateProjectClapCount">
+		UPDATE TB_CLAP
+		   SET CLAP_COUNT = CLAP_COUNT + 1
+		 WHERE CLAP_PROJECT_NO = ?
+	</entry>
+	
+	<entry key="insertProjectClapCount">
+		INSERT
+		  INTO TB_CLAP
+		     (
+		       CLAP_PROJECT_NO
+		     , CLAP_COUNT
+		     )
+		VALUES
+		     (
+		       ?
+		     , 1
+		     )
 	</entry>
 	
 </properties>

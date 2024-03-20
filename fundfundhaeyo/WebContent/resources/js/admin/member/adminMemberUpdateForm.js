@@ -25,7 +25,7 @@ function searchId(){
 					$("#searchId").val("");				
 				}else{
 					/* 인적사항 */
-					$(".adm-content-left-profile1-body-photo").html("<img width=200 height=200 src=\""+ m.userImg +"\">");
+					$(".adm-content-left-profile1-body-photo").html("<img class=\"circleImg\" width=200 height=200 src=\""+ m.userImg +"\">");
 					$(".adm-info-userNo-input").text(m.userNo);
 					$(".adm-info-userId-input").text(m.userId);
 					$(".adm-info-userPwd-input").text(m.userPwd);

@@ -582,4 +582,48 @@
 		 WHERE RNUM BETWEEN ? AND ?
 	</entry>
 	
+	<entry key="selectMyBuyerProjectCount">
+		SELECT
+		       COUNT(*) count
+		  FROM TB_BUYER
+		 WHERE BUYER_USER_NO = ?
+	</entry>
+	
+	<entry key="selectMyBuyerProjectList">
+		SELECT *
+		  FROM (
+		        SELECT ROWNUM RNUM, E.*
+		          FROM (
+		                SELECT
+						       PROJECT_NO
+						     , USER_NAME "PROJECT_SELLER"
+						     , PJ_CATEGORY_NAME
+						     , PROJECT_OVERVIEW
+						     , PROJECT_TITLE
+						     , PROJECT_CONTENT
+						     , PROJECT_TAG
+						     , PROJECT_PRICE
+						     , PROJECT_START
+						     , PROJECT_END
+						     , PROJECT_PAYMENT_BUYER
+						     , PROJECT_PAYMENT_SELLER
+						     , PROJECT_STATUS
+                             , TRUNC(SELLER_FUNDING / PROJECT_PRICE * 100) "FUNDING"
+						     , ATTACHMENT_PATH || ATTACHMENT_UPDATE_NAME "PROJECT_IMG"
+						  FROM TB_PROJECT
+                          LEFT
+                          JOIN TB_SELLER ON (PROJECT_NO = SELLER_PROJECT_NO)
+						  JOIN TB_MEMBER ON (USER_NO = PROJECT_SELLER)
+						  JOIN TB_PJ_CATEGORY ON (PROJECT_CATEGORY_NO = PJ_CATEGORY_NO)
+						  JOIN TB_ATTACHMENT ON (PROJECT_NO = ATTACHMENT_PROJECT_NO)
+                          JOIN TB_BUYER ON (BUYER_PROJECT_NO = PROJECT_NO)
+						 WHERE ATTACHMENT_LEVEL = 1
+                           AND BUYER_USER_NO = ?
+						 ORDER
+						    BY PROJECT_NO DESC
+		                 ) E 
+		       ) 
+		 WHERE RNUM BETWEEN ? AND ?
+	</entry>
+	
 </properties>

@@ -1347,6 +1347,87 @@ public class ProjectDao {
 		}
 		return result;
 	}
+	
+	/** 프로젝트의 박수 횟수를 조회해주는 메소드
+	 *  @param conn
+	 *  @param projectNo : 조회하고자 하는 프로젝트 번호
+	 *  @return result : 박수 횟수 조회 결과
+	 */
+	public int selectProjectClapCount(Connection conn, int projectNo) {
+		int result = 0;
+		
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("selectProjectClapCount");
+		ResultSet rset = null;
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, projectNo);
+			
+			rset = pstmt.executeQuery();
+			
+			if(rset.next()) {
+				result = rset.getInt("count");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		return result;
+	}
+	
+	/** 프로젝트의 박수 횟수를 추가해주는 메소드
+	 *  @param conn
+	 *  @param projectNo : 증가하고자 하는 프로젝트 번호
+	 *  @return result : 처리 결과 (1 = 성공 / 0 = 실패)
+	 */
+	public int insertProjectClapCount(Connection conn, int projectNo) {
+		int result = 0;
+		
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("insertProjectClapCount");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, projectNo);
+			
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		return result;
+	}
+
+	/** 프로젝트의 박수 횟수를 업데이트해주는 메소드
+	 *  @param conn
+	 *  @param projectNo : 증가하고자 하는 프로젝트 번호
+	 *  @return result : 처리 결과 (1 = 성공 / 0 = 실패)
+	 */
+	public int updateProjectClapCount(Connection conn, int projectNo) {
+		int result = 0;
+		
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("updateProjectClapCount");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, projectNo);
+			
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		return result;
+	}
 
 	/** 프로젝트의 등록 신청 후, 알림 처리하는 메소드
 	 *  @param conn

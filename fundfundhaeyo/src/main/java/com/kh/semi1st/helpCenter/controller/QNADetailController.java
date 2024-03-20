@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.kh.semi1st.helpCenter.model.service.QNAService;
 import com.kh.semi1st.helpCenter.model.vo.QNA;
+import com.kh.semi1st.helpCenter.model.vo.Reply;
 import com.kh.semi1st.helpCenter.model.vo.Attachment;
 
 /**
@@ -34,6 +35,11 @@ public class QNADetailController extends HttpServlet {
 		
 		QNA q = new QNAService().selectQNA(qNo);
 		Attachment at = new QNAService().selectAttachment(qNo);
+		
+		if(q.getQnaAnswerStatus().equals("Y")) {
+			Reply r = new QNAService().selectQNAReply(qNo);
+			request.setAttribute("r", r);
+		}
 		
 		request.setAttribute("q", q);
 		request.setAttribute("at", at);

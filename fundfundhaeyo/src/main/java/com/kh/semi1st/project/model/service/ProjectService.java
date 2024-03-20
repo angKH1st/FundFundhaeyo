@@ -514,5 +514,40 @@ public class ProjectService {
 		
 		return result;
 	}
+	
+	/** 프로젝트의 박수 횟수를 조회해주는 메소드
+	 *  @param projectNo : 조회하고자 하는 프로젝트 번호
+	 *  @return result : 박수 횟수 조회 결과
+	 */
+	public int selectProjectClapCount(int projectNo) {
+		Connection conn = getConnection();
+		
+		int result = new ProjectDao().selectProjectClapCount(conn, projectNo);
+		
+		close(conn);
+		
+		return result;
+	}
+
+	/** 프로젝트의 박수 횟수를 증가해주는 메소드
+	 *  @param projectNo : 증가하고자 하는 프로젝트 번호
+	 *  @return result : 처리 결과 (1 = 성공 / 0 = 실패)
+	 */
+	public int updateProjectClapCount(int projectNo) {
+		Connection conn = getConnection();
+		
+		int result = 0;
+		
+		int nowCnt = new ProjectDao().selectProjectClapCount(conn, projectNo);
+		if(nowCnt == 0) {
+			result = new ProjectDao().insertProjectClapCount(conn, projectNo);
+		}else {
+			result = new ProjectDao().updateProjectClapCount(conn, projectNo);
+		}
+		
+		close(conn);
+		
+		return result;
+	}
 
 }

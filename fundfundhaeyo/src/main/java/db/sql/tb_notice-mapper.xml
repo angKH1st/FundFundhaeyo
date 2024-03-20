@@ -46,7 +46,7 @@
 		   
 		 UNION 
 		   
-		SELECT
+		SELECT DISTINCT
 		       NOTICE_NO
 		     , NOTICE_TITLE
 		     , NOTICE_CONTENT
@@ -113,7 +113,7 @@
 	</entry>
 	
 	<entry key="selectMemberNoticeQNAList">
-		SELECT
+		SELECT DISTINCT
 		       NOTICE_NO
 		     , NOTICE_TITLE
 		     , NOTICE_CONTENT

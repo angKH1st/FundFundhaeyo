@@ -27,7 +27,6 @@
 		            <ul class="hidden">
 		                <li><a href="admSelect.me"><i class="thumbI fa-regular fa-user fa-2xl"></i> 회원정보조회 </a></li>
 		                <li><a href="admMoveToUpdate.me"><i class="thumbI fa-regular fa-user fa-2xl"></i> 회원정보수정 </a></li>
-		                <li><a href="#"><i class="thumbI fa-regular fa-user fa-2xl"></i> 등급별 리워드 </a></li>
 		            </ul>
 		        </li>
 		        <li>

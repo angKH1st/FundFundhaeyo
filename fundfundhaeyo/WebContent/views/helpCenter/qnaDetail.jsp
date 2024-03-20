@@ -1,3 +1,4 @@
+<%@page import="com.kh.semi1st.helpCenter.model.vo.Reply"%>
 <%@page import="com.kh.semi1st.helpCenter.model.vo.Attachment"%>
 <%@page import="com.kh.semi1st.helpCenter.model.vo.QNA"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -5,6 +6,12 @@
 <%
 	QNA q = (QNA)request.getAttribute("q");
 	Attachment at = (Attachment)request.getAttribute("at");
+	Reply r = null;
+	
+	if((Reply)request.getAttribute("r") != null){
+		r = (Reply)request.getAttribute("r");
+	}
+	
 %>
 <!DOCTYPE html>
 <html>
@@ -64,7 +71,13 @@
 					<div class="qna_detail_main_content_blank"></div>
 					<div class="qna_detail_main_content_reply">
 						<div class="qna_detail_main_content_reply_title centerXY fl">답변</div>
-						<div class="qna_detail_main_content_reply_input fl"><span>아직 답변이 등록되지 않았습니다.</span></div>
+						<div class="qna_detail_main_content_reply_input fl">
+							<% if(r != null){ %>
+							<span><%= r.getReplyContent() %></span>
+							<% }else { %>
+							<span>아직 답변이 등록되지 않았습니다.</span>
+							<% } %>
+						</div>
 					</div>
 					
 					<br><br><br><br>
