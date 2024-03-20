@@ -616,4 +616,30 @@ public class ProjectService {
 		return result;
 	}
 
+	/** 전체 카테고리별 통계를 조회해주는 메소드
+	 *  @return list : 조회된 카테고리별 통계
+	 */
+	public ArrayList<PjCategory> selectBestCategoryList() {
+		Connection conn = getConnection();
+		
+		ArrayList<PjCategory> list = new ProjectDao().selectBestCategoryList(conn);
+		
+		close(conn);
+		
+		return list;
+	}
+
+	/** 결제내역을 조회해주는 메소드
+	 *  @return list : 조회된 결제내역
+	 */
+	public ArrayList<Payment> selectProjectPaymentList() {
+		Connection conn = getConnection();
+		
+		ArrayList<Payment> list = new ProjectDao().selectProjectPaymentList(conn);
+		
+		close(conn);
+		
+		return list;
+	}
+
 }

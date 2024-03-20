@@ -1,6 +1,4 @@
-package com.kh.semi1st.member.model.vo;
-
-import java.sql.Date;
+package com.kh.semi1st.project.model.vo;
 
 public class Payment {
 	
@@ -11,8 +9,8 @@ public class Payment {
 	private int paymentMethod;
 	private String paymentStatus;
 	private String paymentDate;
-
-	public Payment () {}
+	
+	public Payment() {}
 
 	public Payment(String paymentNo, int paymentUserNo, int paymentProjectNo, int paymentAmount, int paymentMethod,
 			String paymentStatus, String paymentDate) {

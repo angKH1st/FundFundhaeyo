@@ -1599,4 +1599,71 @@ public class ProjectDao {
 		return result;
 	}
 
+	/** 전체 카테고리별 통계를 조회해주는 메소드
+	 *  @param conn
+	 *  @return list : 조회된 카테고리별 통계
+	 */
+	public ArrayList<PjCategory> selectBestCategoryList(Connection conn) {
+		ArrayList<PjCategory> list = new ArrayList<PjCategory>();
+		ResultSet rset = null;
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("selectBestCategoryList");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			rset = pstmt.executeQuery();
+			
+			while(rset.next()) {
+				PjCategory pc = new PjCategory();
+				pc.setPjCategoryName(rset.getString("pj_category_name"));
+				pc.setPjFunding(rset.getInt("pj_funding"));
+				
+				list.add(pc);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		return list;
+	}
+
+	/** 결제내역을 조회해주는 메소드
+	 *  @param conn
+	 *  @return list : 조회된 결제내역
+	 */
+	public ArrayList<Payment> selectProjectPaymentList(Connection conn) {
+		ArrayList<Payment> list = new ArrayList<Payment>();
+		ResultSet rset = null;
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("selectProjectPaymentList");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			rset = pstmt.executeQuery();
+			
+			while(rset.next()) {
+				Payment p = new Payment();
+				p.setPaymentNo(rset.getString("payment_no"));
+				p.setPaymentUserNo(rset.getInt("payment_user_no"));
+				p.setPaymentProjectNo(rset.getInt("payment_project_no"));
+				p.setPaymentAmount(rset.getInt("payment_amount"));
+				p.setPaymentMethod(rset.getInt("payment_method"));
+				p.setPaymentStatus(rset.getString("payment_status"));
+				p.setPaymentDate(rset.getString("payment_date"));
+				
+				list.add(p);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		return list;
+	}
+
 }

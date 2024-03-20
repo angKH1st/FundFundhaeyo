@@ -902,4 +902,34 @@
 		  FROM TB_SELLER
 	</entry>
 	
+	<entry key="selectBestCategoryList">
+		SELECT 
+		       PJ_CATEGORY_NAME
+		     , SUM(SELLER_FUNDING) "PJ_FUNDING"
+		  FROM TB_PROJECT
+		  JOIN TB_PJ_CATEGORY ON (PROJECT_CATEGORY_NO = PJ_CATEGORY_NO)
+		  JOIN TB_SELLER ON (SELLER_PROJECT_NO = PROJECT_NO)
+		 GROUP
+		    BY PJ_CATEGORY_NAME
+	</entry>
+	
+	<entry key="">
+	<![CDATA[
+		SELECT *
+		  FROM
+		        (SELECT
+		               PAYMENT_NO
+		             , PAYMENT_USER_NO
+		             , PAYMENT_PROJECT_NO
+		             , PAYMENT_AMOUNT
+		             , PAYMENT_METHOD
+		             , PAYMENT_STATUS
+		             , PAYMENT_DATE
+		          FROM TB_PAYMENT
+		         ORDER
+		            BY PAYMENT_DATE DESC) E
+		 WHERE ROWNUM < 11
+		 ]]>
+	</entry>
+	
 </properties>

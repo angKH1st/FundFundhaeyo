@@ -1,36 +1,26 @@
 google.charts.load('current', { 'packages': ['corechart'] });
-
 google.charts.setOnLoadCallback(drawChart);
 
 function drawChart() {
-    var data = google.visualization.arrayToDataTable([
-        ['Element', 'Density'],
-        ['Copper', 8.94],
-        ['Silver', 10.49],
-        ['Gold', 19.30],
-        ['Platinum', 21.45],
-        ['Copper', 8.94],
-        ['Silver', 10.49],
-        ['Gold', 19.30],
-        ['Platinum', 21.45],
-        ['Copper', 8.94],
-        ['Silver', 10.49],
-        ['Gold', 19.30],
-        ['Platinum', 21.45],
-        ['Copper', 8.94],
-        ['Silver', 10.49],
-        ['Gold', 19.30],
-        ['Platinum', 21.45],
-        ['Copper', 8.94],
-        ['Silver', 10.49],
-        ['Gold', 19.30],
-        ['Platinum', 21.45]
-    ]);
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'Category');
+    data.addColumn('number', 'Funding');
+
+    var pjNames = document.getElementsByClassName('pjName');
+    var pjFundings = document.getElementsByClassName('pjFunding');
+
+    for (var i = 0; i < pjNames.length; i++) {
+        var name = pjNames[i].value;
+        var funding = parseFloat(pjFundings[i].value);
+        if (!isNaN(funding)) {
+            data.addRow([name, funding]);
+        }
+    }
 
     var options = {
-        'title': '카테고리별 펀딩금 비율',
-        'width': 427,
-        'height': 373
+        title: '카테고리별 펀딩금 비율',
+        width: 427,
+        height: 373
     };
 
     var chart = new google.visualization.PieChart(document.getElementById('chart_div'));

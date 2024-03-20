@@ -13,6 +13,8 @@ import javax.servlet.http.HttpSession;
 import com.kh.semi1st.member.model.service.MemberService;
 import com.kh.semi1st.member.model.vo.Member;
 import com.kh.semi1st.project.model.service.ProjectService;
+import com.kh.semi1st.project.model.vo.Payment;
+import com.kh.semi1st.project.model.vo.PjCategory;
 
 /**
  * Servlet implementation class AdminIndexController
@@ -45,6 +47,9 @@ public class AdminIndexController extends HttpServlet {
 	    	
 	    	ArrayList<Member> bList = new MemberService().selectBestBuyerList();
 	    	ArrayList<Member> sList = new MemberService().selectBestSellerList();
+	    	ArrayList<PjCategory> ctList = new ProjectService().selectBestCategoryList();
+	    	
+	    	ArrayList<com.kh.semi1st.member.model.vo.Payment> payList = new ProjectService().selectProjectPaymentList();
 	    	
 	    	request.setAttribute("mCount", mCount);
 	    	request.setAttribute("aCount", aCount);
@@ -54,6 +59,8 @@ public class AdminIndexController extends HttpServlet {
 	    	
 	    	request.setAttribute("bList", bList);
 	    	request.setAttribute("sList", sList);
+	    	request.setAttribute("ctList", ctList);
+	    	request.setAttribute("payList", payList);
 	    	
 	    	request.getRequestDispatcher("views/admin/adminIndex.jsp").forward(request, response);
 	    }else {

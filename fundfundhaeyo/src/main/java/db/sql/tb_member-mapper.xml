@@ -634,6 +634,7 @@
 		               BUYER_USER_NO
 		             , USER_NICKNAME
 		             , SUM(BUYER_FUNDING) BUYER_FUNDING
+                     , COUNT(*) "COUNT"
 		             , ATTACHMENT_PATH || ATTACHMENT_UPDATE_NAME "USER_IMG"
 		          FROM TB_BUYER
 		          JOIN TB_MEMBER ON (BUYER_USER_NO = USER_NO)
@@ -653,8 +654,8 @@
 		  FROM (SELECT
 		               SELLER_USER_NO
 		             , USER_NICKNAME
-		             , COUNT(SELLER_FUNDING) COUNT
 		             , SUM(SELLER_FUNDING) SELLER_FUNDING
+		             , COUNT(SELLER_FUNDING) "COUNT"
 		             , ATTACHMENT_PATH || ATTACHMENT_UPDATE_NAME "USER_IMG"
 		          FROM TB_SELLER
 		          JOIN TB_MEMBER ON (SELLER_USER_NO = USER_NO)

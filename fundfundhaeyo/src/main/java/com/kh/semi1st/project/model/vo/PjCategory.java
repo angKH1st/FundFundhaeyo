@@ -4,8 +4,24 @@ public class PjCategory {
 	
 	private int pjCategoryNo;
 	private String pjCategoryName;
+	private int pjFunding;
 	
 	public PjCategory() {}
+	
+	public int getPjFunding() {
+		return pjFunding;
+	}
+
+	public void setPjFunding(int pjFunding) {
+		this.pjFunding = pjFunding;
+	}
+
+	public PjCategory(int pjCategoryNo, String pjCategoryName, int pjFunding) {
+		super();
+		this.pjCategoryNo = pjCategoryNo;
+		this.pjCategoryName = pjCategoryName;
+		this.pjFunding = pjFunding;
+	}
 
 	public PjCategory(int pjCategoryNo, String pjCategoryName) {
 		super();

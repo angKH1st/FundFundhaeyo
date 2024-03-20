@@ -1354,8 +1354,9 @@ public class MemberDao {
 				Member m = new Member();
 				m.setUserNo(rset.getInt("buyer_user_no"));
 				m.setUserNickname(rset.getString("user_nickname"));
-				m.setBuyerCount(rset.getInt("count"));
 				m.setBuyerFunding(rset.getInt("buyer_funding"));
+				m.setBuyerCount(rset.getInt("count"));
+				m.setUserImg(rset.getString("user_img"));
 				
 				list.add(m);
 			}
@@ -1385,10 +1386,11 @@ public class MemberDao {
 			
 			while(rset.next()) {
 				Member m = new Member();
-				m.setUserNo(rset.getInt("buyer_user_no"));
+				m.setUserNo(rset.getInt("seller_user_no"));
 				m.setUserNickname(rset.getString("user_nickname"));
-				m.setBuyerCount(rset.getInt("count"));
-				m.setBuyerFunding(rset.getInt("buyer_funding"));
+				m.setSellerFunding(rset.getInt("seller_funding"));
+				m.setSellerCount(rset.getInt("count"));
+				m.setUserImg(rset.getString("user_img"));
 				
 				list.add(m);
 			}

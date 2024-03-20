@@ -81,11 +81,17 @@
 .adm-content-center-text-cal-best-input{height: 87%;}
 
 .adm-content-center-text-cal-best-input>div{width: 100%; height: 100%;}
-.adm-content-center-text-cal-best-input>div>div{width: 100%; height: 20%;}
+.adm-content-center-text-cal-best-input>div>div{width: 100%; height: 20%; border-bottom: 0.5px solid lightgray;}
+
+.adm-best-img{width: 8%; padding-top: 4px;}
+.adm-best-name{width: 20%; padding: 19px 0 0 10px;}
+.adm-best-count{width: 20%; padding-top: 19px;}
+.adm-best-price{width: 30%; padding-top: 19px;}
+.adm-best-crown{width: 10%; padding-top: 29px;}
 
 .adm-content-center-text-ord>div{width: 100%;}
 .adm-content-center-text-ord-title{height: 12%; margin-bottom: 13px;}
 .adm-content-center-text-ord-input{height: 83%;}
 
-
+.adm-content-center-text-ord-input>div{width: 100%; height: 100%;}
 
