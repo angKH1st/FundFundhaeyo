@@ -8,55 +8,81 @@
 <link rel="stylesheet" href="resources/css/common/footer.css">
 </head>
 <body>
-	<div class="footer_outer" style="border-bottom: 1px solid lightgray;">
+   <div class="footer_outer" style="border-bottom: 1px solid lightgray;">
         <%-- 전체 레이아웃 --%>
         <div class="ffh_wrap">
-			<div class="ffh_footer">
-		        <div class="ffh_footer_top fl" style="margin-top: 10px">
-		            <div class="ffh_footer_top_left fl font_outer">
-		                <div class="ffh_footer_top_left1 fl">
-		                    <a onclick="moveToCompanyIntroduction();">뻔뻔해요</a>
-		                </div>
-		                <div class="ffh_footer_top_left2 fl">
-		                    <%-- 이용약관 모달 --%>
-		                    <button id="btn-open-modal1" class="btn-open-modal">이용약관</button>
-		                </div>
-		                <div class="ffh_footer_top_left3 fl">
-		                    <%-- 개인정보처리방침 모달 --%>
-		                    <button id="btn-open-modal2" class="btn-open-modal">개인정보처리방침</button>
-		                </div>
-		                <div class="ffh_footer_top_left4 fl">
-		                    <%-- 프로젝트 등록 심사 기준 모달 --%>
-		                    <button id="btn-open-modal3" class="btn-open-modal">프로젝트 등록 심사 기준</button>
-		                </div>
-		                <div class="ffh_footer_top_left5 fl">
-		                	<a onclick="moveToHelpCenter();">고객지원</a>
-		                </div>
-		            </div>
-		            <div class="ffh_footer_top_middle fl">
-		            <%-- 여백(추후 공유 링크) --%>
-		            </div>
-		            <div class="ffh_footer_top_right fl">
-		            <%-- 여백 --%>
-		            </div>
-		        </div>
-		        <div class="ffh_footer_middle fl">
-		        	<br><br>
-		        	<div class="ffh_footer_middle_row1 font_sejong_outer">
-		        		<div class="ffh_footer_middle_row1_col1 fl">
-		        			<br><br>
-						</div>
-						<div class="ffh_footer_middle_row1_col2 fl">
-							대표자 : 김시연<br>
-							김재영, 어수지, 임정현<br>
-						</div>
-		        	</div>
-		        	<br><br><br><br>
-		        	<div class="ffh_footer_middle_row2 font_outer"><p>뻔뻔해요는 프로젝트의 당사자가 아니며, 직접적인 통신판매를 진행하지 않습니다. 프로젝트의 완수 및 선물제공의 책임은 해당 프로젝트의 창작자에게 있으며, 프로젝트와 관련하여 후원자와 발생하는 법적 분쟁에 대한 책임은 해당 창작자가 부담합니다.</p></div>
-		        	<div class="ffh_footer_middle_row3 font_outer"><p style="text-align: center;">Copyright © 2024 FundFundhaeyo Institute All Right Reserved</p></div>
-		        </div>
-		    </div>
-	    </div>
+         <div class="ffh_footer">
+              <div class="ffh_footer_top fl" style="margin-top: 10px">
+                  <div class="ffh_footer_top_left fl font_outer">
+                      <div class="ffh_footer_top_left1 fl">
+                          <a onclick="moveToCompanyIntroduction();">뻔뻔해요</a>
+                      </div>
+                      <div class="ffh_footer_top_left2 fl">
+                          <%-- 이용약관 모달 --%>
+                          <button id="btn-open-modal1" class="btn-open-modal">이용약관</button>
+                      </div>
+                      <div class="ffh_footer_top_left3 fl">
+                          <%-- 개인정보처리방침 모달 --%>
+                          <button id="btn-open-modal2" class="btn-open-modal">개인정보처리방침</button>
+                      </div>
+                      <div class="ffh_footer_top_left4 fl">
+                          <%-- 프로젝트 등록 심사 기준 모달 --%>
+                          <button id="btn-open-modal3" class="btn-open-modal">프로젝트 등록 심사 기준</button>
+                      </div>
+                      <div class="ffh_footer_top_left5 fl">
+                         <a onclick="moveToHelpCenter();">고객지원</a>
+                      </div>
+                  </div>
+                  <div class="ffh_footer_top_middle fl">
+                  <%-- 여백(추후 공유 링크) --%>
+                    <p></p>
+                  </div>
+                  <div class="ffh_footer_top_right fl">       
+                        <%-- 여백 --%>     
+
+                    <div>
+                       <a href="https://www.facebook.com/">
+                        <i class="fa-brands fa-facebook fa-xl"></i>                       
+                    </a>
+                    </div>
+                    <div>
+                        <a href="https://twitter.com/?lang=ko">
+                            <i class="fa-brands fa-twitter fa-xl"></i>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://www.instagram.com/">
+                            <i class="fa-brands fa-instagram fa-xl"></i>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://www.youtube.com/">
+                            <i class="fa-brands fa-youtube fa-xl"></i>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://www.kakaocorp.com/page/service/service/KakaoTalk">
+                            <i class="fa-solid fa-comment fa-xl"></i>
+                        </a>
+                    </div>
+
+                  </div>
+
+              </div>
+              <div class="ffh_footer_middle fl">
+                 <br><br>
+                 <div class="ffh_footer_middle_row1 font_sejong_outer">
+                    <div class="ffh_footer_middle_row1_col1 fl">
+                  </div>
+                  <div class="ffh_footer_middle_row1_col2 fl">
+                  </div>
+                 </div>
+                 <br>
+                 <div class="ffh_footer_middle_row2 font_outer"><p style="text-align: center;">뻔뻔해요는 프로젝트의 당사자가 아니며, 직접적인 통신판매를 진행하지 않습니다. 프로젝트의 완수 및 선물제공의 책임은 해당 프로젝트의 창작자에게 있으며, 프로젝트와 관련하여 후원자와 발생하는 법적 분쟁에 대한 책임은 해당 창작자가 부담합니다.</p></div>
+                 <div class="ffh_footer_middle_row3 font_outer"><p style="text-align: center;">Copyright © 2024 FundFundhaeyo Institute All Right Reserved</p></div>
+              </div>
+          </div>
+       </div>
     </div>
 
     <%-- 푸터바 모달1 : 이용약관 --%>
@@ -65,7 +91,7 @@
             <h2 class="modal_title">이용약관</h2>
             <span class="close-btn" onclick="closeModal('#modal1')">×</span>
             <p align="left">
-                시행일 : 2024.02.22 <br>
+                시행일 : 2024.03.15 <br>
                 <ol align="left">
                     <li>
                         <h6>총칙</h6>
@@ -82,8 +108,8 @@
                 </ol>
                 
                 <hr>
-                <h3 align="left">1. 총칙</h3> <br><br>
-                <h5 align="left">제 1조 목적</h5>
+                <h3 align="left">1. 총칙</h3> <br>
+                <h5 align="left">제 1조 목적</h5><br>
                 <p align="left">
                 이 총칙은 회사의 조직, 운영, 인사 관리, 업무 처리 등에 관한 기본 원칙을 정함으로써 <br> 회사의 지속적인 발전과 직원들의 복지 증진을 목적으로 합니다.
                 </p>
@@ -110,7 +136,7 @@
                 </ul> <br>
 
                 <h3 align="left">3. 회원정보의 보호 및 관리</h3> <br><br>
-                <h5 align="left">제 4조 개인정보보호 및 의무</h5>
+                <h5 align="left">제 4조 개인정보보호 및 의무</h5><br>
                 <ul align="left">
                     <li>개인정보 수집 및 이용 동의: 회원정보를 수집할 때는 해당 정보의 수집 목적과 이용 방법을 명확히 알려주고, 회원들로부터 동의를 받아야 합니다. 이는 개인정보보호법 등 관련 법령에서 규정하는 내용입니다.</li><br>
                     <li>보안 조치: 회원정보를 안전하게 보호하기 위해 보안 시스템을 구축하고 유지해야 합니다. 이는 데이터 암호화, 접근 제어, 네트워크 보안 등 다양한 보안 조치를 포함합니다.</li><br>
@@ -119,7 +145,7 @@
                 </ul> <br>
 
                 <h3 align="left">4. 기타</h3> <br><br>
-                <h5 align="left">제 5조 회사의 의무</h5>
+                <h5 align="left">제 5조 회사의 의무</h5><br>
                 <ul align="left">
                     <li>법적 의무: 회사는 관련 법규와 규정을 준수해야 합니다. 이는 국가의 법률, 세금법, 노동법, 소비자 보호법 등 다양한 법적 규정을 포함합니다. 회사는 이러한 법적 의무를 준수하고, 법적 요구를 충족 <br> 시켜야 합니다.</li> <br>
                     <li>고객 서비스 의무: 회사는 고객에게 제품이나 서비스를 제공함으로써 고객에 대한  의무를 가집니다. 이는 고객의 요구를 듣고 이에 대한 적절한 대응을 해야 하며, 제품 또는 서비스의 품질을 유지하고 <br> 개선해야 합니다.</li> <br>
@@ -129,7 +155,7 @@
                     <li>품질 보증 의무: 회사는 제품 <br> 이나 서비스의 품질을 보장해야 합니다. 이는 고객에게 효과적인 제품이나 서비스를 제공하고, 만족스러운 사용자 경험을 제공하는 것을 의미합니다.</li>
                 </ul> <br>
 
-                <h5 align="left">제 6조 회원의 의무</h5>
+                <h5 align="left">제 6조 회원의 의무</h5><br>
                 <ul align="left">
                     <li>규칙 및 정책 준수: 회원은 해당 조직이나 시스템의 규칙과 정책을 준수해야 합니다. 이는 서비스 이용 방법, 행동 강령, 커뮤니티 가이드라인 등을 포함합니다.</li> <br>
                     <li>정보 제공 및 업데이트: 회원은 필요한 경우 자신의 정보를 정확하게 제공하고 업데이트해야 합니다. 특히, 연락처 정보나 계정 관련 정보가 변경될 경우 이를 즉시 업데이트해야 합니다.</li> <br>
@@ -150,11 +176,11 @@
             <h2 class="modal_title">개인정보처리방침</h2>
             <span class="close-btn" onclick="closeModal('#modal2')">×</span>
             <p align="left">
-                시행일 : 2024.02.22 <br>
+                시행일 : 2024.03.15 <br>
             <ol align="left"> <br>
                 <h4 align="left">제1조 의의</h4>       
-				<p>개인정보처리방침은 회사가 이용자의 개인정보를 수집, 이용, 제공하는 것을 이용자의 동의를 받아 이행하며,
-				이를 통해 정보통신망법을 준수하여 이용자의 개인정보 자기결정권을 보장합니다. 개인정보처리방침은 다음과 같은 내용을 포함합니다
+            <p>개인정보처리방침은 회사가 이용자의 개인정보를 수집, 이용, 제공하는 것을 이용자의 동의를 받아 이행하며,
+            이를 통해 정보통신망법을 준수하여 이용자의 개인정보 자기결정권을 보장합니다. 개인정보처리방침은 다음과 같은 내용을 포함합니다
                 </p><br>
                 
                 <h4 align="left">제 2조 개인정보 수집범위 및 방법</h4>
@@ -187,7 +213,8 @@
                 </ul> <br>
                 
                 <h4 align="left">제5조 개인정보의 공유</h4>
-                <p>개인정보의 제3자 제공은 해당 정보를 제공받는 자가 그 업무처리 및 이익을 위해 사용하는 것을 의미합니다. 회사는 기본적으로 이용자의 개인정보를 외부에 제공하지 않습니다. 다만, 아래 경우에는 예외적으로 제공될 수 있습니다:</p>
+                <p>개인정보의 제3자 제공은 해당 정보를 제공받는 자가 그 업무처리 및 이익을 위해 사용하는 것을 의미합니다. 
+                회사는 기본적으로 이용자의 개인정보를 외부에 제공하지 않습니다. 다만, 아래 경우에는 예외적으로 제공될 수 있습니다:</p>
                 <b>개인정보 공유</b>
                 <ol>
                     <li>제3자 제공은 동의, 법률 요구, 공공기관 요청, 급박한 위험 해소, 요금 정산 등 필요 시.</li>
@@ -206,141 +233,141 @@
                 </ol><br>
                 <b>개인정보 보관기간</b>
                 <ol>
-                    <li>부정이용 및 거래기록: 5년</li>
-                    <li>성인인증기록: 1년 (주류판매 신고를 위한 경우 2년)</li>
-                    <li>법령에 따른 보관 의무:
+                    <li>부정이용 및 거래기록: 5년</li><br>
+                    <li>성인인증기록: 1년 (주류판매 신고를 위한 경우 2년)</li><br>
+                    <li>법령에 따른 보관 의무:<br>
                         <ol>
-                        <li>표시/광고 기록: 6개월</li>
-                        <li>계약 또는 청약철회 기록: 5년</li>
-                        <li>대금결제 및 재화 공급 기록: 5년</li>
-                        <li>소비자 불만/분쟁처리 기록: 3년</li>
-                        <li>신용정보 이용/보호 기록: 3년</li>
-                        <li>통신비밀보호 기록: 3개월</li>
-                        <li>본인 확인 기록: 6개월</li>
+                        <li>표시/광고 기록: 6개월</li><br>
+                        <li>계약 또는 청약철회 기록: 5년</li><br>
+                        <li>대금결제 및 재화 공급 기록: 5년</li><br>
+                        <li>소비자 불만/분쟁처리 기록: 3년</li><br>
+                        <li>신용정보 이용/보호 기록: 3년</li><br>
+                        <li>통신비밀보호 기록: 3개월</li><br>
+                        <li>본인 확인 기록: 6개월</li><br>
                     </ol>
                     </li>
                 </ol><br>
-                <b>개인정보 파기 방법</b>
+                <b>개인정보 파기 방법</b><br>
                 <ol>
-                    <li>전자적 파일: 안전하게 삭제</li>
+                    <li>전자적 파일: 안전하게 삭제</li><br>
                     <li>출력물 등: 분쇄하거나 소각하여 재생 불가능하도록 처리</li>
-                </ol><br>
+                </ol><br><br>
 
                 <h4 align="left">제7조 회원의 권리와 그 행사방법</h4>
                 <p>회원은 개인정보를 조회하거나 수정할 수 있습니다. 또한 언제든지 회원 탈퇴를 통해 개인정보의 수집 및 동의를 철회할 수 있습니다. 
-                    개인정보의 열람, 정정, 삭제, 처리정지 등의 권리는 서면, 전화, 이메일을 통해 행사할 수 있으며, 요청 시에는 지체 없이 처리됩니다.</p> <br>
+                    개인정보의 열람, 정정, 삭제, 처리정지 등의 권리는 서면, 전화, 이메일을 통해 행사할 수 있으며, 요청 시에는 지체 없이 처리됩니다.</p> <br><br>
 
                 <h4 align="left">제8조 개인정보 자동수집 장치의 설치·운영 및 그 거부에 관한 사항</h4>
                 <p>회사는 쿠키를 사용하여 개인화된 서비스를 제공하며, 회원은 쿠키 설치에 대한 선택을 할 수 있습니다. 또한 웹로그 분석과 ADID/IDFA 수집을 통해 서비스를 분석하고 맞춤화합니다.
                     회원은 Google Analytics 등 외부 웹로그분석 도구의 데이터 수집을 거부할 수 있습니다.
-                    ADID/IDFA는 광고를 최적화하고 맞춤화하기 위해 수집되며, 사용자는 설정을 통해 데이터 수집을 거부할 수 있습니다.</p><br>
+                    ADID/IDFA는 광고를 최적화하고 맞춤화하기 위해 수집되며, 사용자는 설정을 통해 데이터 수집을 거부할 수 있습니다.</p><br><br>
                 
                 <h4 align="left">제9조 개인정보의 관리적 보호대책</h4>
                 <p>회사는 개인정보를 보호하기 위해 보안조치를 시행하고 직원 교육을 실시합니다.
-                    개인정보 관리책임자를 두어 개인정보와 관련된 문의사항을 처리하고 있습니다.</p><br>
+                    개인정보 관리책임자를 두어 개인정보와 관련된 문의사항을 처리하고 있습니다.</p><br><br>
                 
                 <h4 align="left">제10조 개인정보 관리책임자</h4>
-                <p>회원의 개인정보 관련 문의사항은 개인정보관리책임자에게 연락할 수 있으며, 관련 기관에도 신고 및 상담이 가능합니다.</p>
+                <p>회원의 개인정보 관련 문의사항은 개인정보관리책임자에게 연락할 수 있으며, 관련 기관에도 신고 및 상담이 가능합니다.</p><br><br>
 
                 <h4 align="left">제11조 개인정보처리방침의 개정과 공지:</h4>
                 <p>본 방침은 2024년 03월 15일부터 시행됩니다. 변경사항은 홈페이지를 통해 공지되며, 필요 시 이용자 동의를 다시 받을 수 있습니다.</p>
-				<br>
-	 			<button style="display:block; margin: 0 auto;" class="close-btn-bottom" onclick="closeModal('#modal2')">닫기</button>
-	        </div>
-	    </div>
-				
-	    <%-- 푸터바 모달3 : 프로젝트 등록 심사 기준 --%>
-	    <div id="modal3" class="modal">
-	        <div class="modal_body">
-	            <h2>프로젝트 등록 심사 기준</h2>
-	            <span class="close-btn" onclick="closeModal('#modal3')">×</span>
-	            <p align="left">
-	                시행일 : 2024.02.22 <br>
-	            <ol align="left"> <br>
-	            <h4 align="left">제1조 목적</h4>
-	            <p>
-	                뻔뻔해요에서 진행되는 모든 프로젝트는 이용약관에 따라, 모금상의 신뢰와 안전을 위해 공개되기 전에 
-	                뻔뻔해요 심사팀(이하 ‘관리자’)의 심사를 거칩니다. 이 기준은 창작자가 작성한 프로젝트를 관리자가 
-	                심사하는 ‘심사’ 절차상 승인 및 반려 요건을 규정하기 위해 작성되었습니다.
-	            </p><br>
-	
-	            <h4 align="left">제2조 용어의 정의</h4>
-	            <p>① 이 기준에서 사용하는 용어의 뜻은 다음과 같습니다.</p>
-	                <ol>
-	                    <li>‘심사’란 창작자의 프로젝트를 운영자가 검수·심사하여 승인 또는 반려하는 것을 말합니다.</li>
-	                    <li>‘승인’이란 프로젝트가 심사를 통과하여 모금을 진행할 수 있게 된 상태를 뜻합니다.</li>
-	                    <li>‘반려’란 프로젝트가 심사 기준에 맞지 않아 모금을 진행할 수 없다고 판단하는 것을 뜻합니다.</li>
-	                    <li>'프로젝트'란 기존에 없던 작품, 제품, 디지털 콘텐츠, 활동, 행사 등을 제작하고 실현시키기 위한 활동을 뜻합니다.</li>
-	                </ol>
-	            <p>② 본 기준에서는 본 조에서 정한 용어가 우선적으로 적용되며, 본 조에서 정의되지 않은 용어는 뻔뻔해요 이용약관 및 관련 법령·관습에 따릅니다.</p>
-	            <br>
-	
-	            <h4 align="left">제3조 심사 절차</h4>
-	            <ol>
-	                <li>창작자는 프로젝트를 올리고 심사를 요청해야 심사가 진행됩니다.</li>
-	                <li>프로젝트가 모두 작성되지 않거나 보완이 필요한 경우 심사가 반려될 수 있습니다.</li>
-	                <li>관리자는 제출된 내용을 심사하여 수정이 필요하거나 반려할 수 있으며, 반려 사유는 공개되지 않습니다.</li>
-	                <li>관리자와 창작자 간의 소통은 창작자 이메일로 이루어지며, 이메일 소통이 불가능한 경우 심사가 진행되지 않습니다.</li>
-	                <li>창작자가 심사 요건을 위배하거나 사실을 숨기면 심사 승인이 취소될 수 있습니다.</li>
-	            </ol><br>
-	
-	            <h4 align="left">제4조 프로젝트 모금 목적</h4>
-	            <ol>
-	                <li>프로젝트는 명확한 목표를 달성하기 위한 자금 모금을 목적으로 합니다. 
-	                    이를 위해서는 완료 기준과 예상 결과물이 분명히 제시되어야 합니다.</li>
-	                <li>기존의 제품·콘텐츠를 추가 제작하거나 단순히 복제, 소분, 재포장하여 제공하기 위한 프로젝트는 진행할 수 없습니다.</li>
-	                <li>후원금의 일부 또는 전체를 제3자에게 전달하거나 물품을 구매하여 기부하는 프로젝트는 허용되지 않습니다.</li>
-	            </ol><br>
-	
-	            <h4 align="left">제5조 예산 및 제작·전달 계획</h4>
-	            <ol>
-	                <li>예산은 프로젝트와 무관한 목적으로 기재해서는 안 됩니다.</li>
-	                <li>현재 프로젝트의 진행 상황을 정확히 기재해야 하며, 결과물이 아직 만들어지지 않았다고 오해될 수 있는 내용은 사용하지 말아야 합니다.</li>
-	                <li>관리자는 가제품·샘플 제작 여부를 확인할 수 있습니다.</li>
-	                <li>예상되는 결과물의 사양, 견본 이미지, 영상 등을 상세히 설명하여 후원자가 내용을 이해할 수 있어야 합니다.</li>
-	                <li>후원자에게 선물 전달 방법을 명시해야 하며, 후원금 외의 비용이나 타 서비스 가입, 개인 정보를 요구해서는 안 됩니다.</li>
-	                <li>선물은 후원자의 결제가 완료된 이후에 전달되어야 합니다.</li>
-	                <li>프로젝트의 불확실한 사항이나 위험 요소를 고지하고, 발생할 경우 대처 방안을 기재해야 합니다.</li>
-	                <li>선물 전달 과정에서 발생하는 파손이나 불량에 대한 기준과 대처 방안을 기재해야 하며, 선물 형태에 따라 양도 정책 등을 명시해야 합니다.</li>
-	            </ol><br>
-	
-	            <h4 align="left">제6조 창작자 신뢰도</h4>
-	            <ol>
-	                <li>프로젝트를 진행하는 창작자는 개인 또는 사업자여야 하며, 관련 인증 및 서류를 제출해야 합니다.</li>
-	                <li>공동 기획이나 제작·관리하는 경우 등록된 창작자가 모든 책임을 지며, 참여 범위를 분명하게 기재해야 합니다.</li>
-	                <li>이전 프로젝트의 성사 여부나 분쟁 등이 새 프로젝트에 영향을 줄 수 있습니다.</li>
-	                <li>프로젝트에 대한 중대한 논란이나 법적 분쟁, 약관 위반 등이 있는 경우 새로운 프로젝트 진행이 제한됩니다.</li>
-	                <li>동일한 목적의 모금을 여러 플랫폼(국내, 해외 무관)에서 진행하거나 외부 모금(계좌 입금 유도 등)을 병행할 수 없습니다.</li>
-	            </ol><br>
-	
-	            <h4 align="left">제7조 선물 제공 불가 항목</h4>
-	            <b> 아래 선물들은 텀블벅의 취지, 커뮤니티의 안전, 현행법 준수를 위해 제공할 수 없습니다.</b>
-	            <ul>
-	                <li>시중에 판매·유통되었던 제품·콘텐츠 (단, 창작자가 이전에 제작한 제품·콘텐츠를 새 프로젝트 선물에 부수적으로 구성하는 것은 허용)</li>
-	                <li>수익성 항목 (현금, 주식, 지분, 복권, 사이버머니, 상품권 등)</li>
-	                <li>추첨을 통해서만 선물을 받을 수 있는 자격</li>
-	                <li>무기류, 군복 및 군용장구, 경찰 제복 및 장비, 라이터 등 위험 품목</li>
-	            </ul><br>
-	
-	            <h4 align="left">제8조 카테고리·품목별 확인 사항</h4>
-	            <p>프로젝트의 카테고리 및 제공 선물의 품목에 따라 운영자가 사이트에 
-	                고지한 카테고리·품목별 확인 사항을 충족해야 합니다.</p> <br>
-	            
-	            <h4 align="left">제9조 콘텐츠 준수 사항</h4>
-	            <ol>
-	                <li>뻔뻔해요 커뮤니티 운영원칙에 어긋나는 콘텐츠가 포함된 프로젝트는 진행할 수 없습니다.</li>
-	                <li>프로젝트에 사용된 이미지나 텍스트는 텀블벅이 정한 스타일 가이드를 준수해야 합니다. 이에 어긋나는 내용은 관리자가 수정을 요청할 수 있습니다.</li>
-	                <li>'판매', '구매', '기부' 등의 용어는 펀딩의 취지와 일치해야 합니다.</li>
-	            </ol><br>
-	
-	            <h4 align="left">제10조 후원자 개인 정보 보호</h4>
-	            <ol>
-	                <li>후원자와의 소통은 뻔뻔해요 커뮤니티와 메시지 기능을 사용해야 하며, 외부 채널을 주된 문의처로 사용해서는 안 됩니다.</li>
-	                <li>후원자의 배송정보와 연락처는 뻔뻔해요 시스템을 통해 제공된 정보만을 사용해야 하며, 별도로 정보를 수집해서는 안 됩니다.</li>
-	            </ol><br>
-	            <button style="display:block; margin: 0 auto;" class="close-btn-bottom" onclick="closeModal('#modal3')">닫기</button>
-	        </div>
-	    </div>
+            <br>
+             <button style="display:block; margin: 0 auto;" class="close-btn-bottom" onclick="closeModal('#modal2')">닫기</button>
+           </div>
+       </div>
+            
+       <%-- 푸터바 모달3 : 프로젝트 등록 심사 기준 --%>
+       <div id="modal3" class="modal">
+           <div class="modal_body">
+               <h2>프로젝트 등록 심사 기준</h2>
+               <span class="close-btn" onclick="closeModal('#modal3')">×</span>
+               <p align="left">
+                   시행일 : 2024.03.15 <br>
+               <ol align="left"> <br>
+               <h4 align="left">제1조 목적</h4>
+               <p>
+                   펀드펀드에서 진행되는 모든 프로젝트는 이용약관에 따라, 모금상의 신뢰와 안전을 위해 공개되기 전에 
+                   펀드펀드 심사팀(이하 ‘관리자’)의 심사를 거칩니다. 이 기준은 창작자가 작성한 프로젝트를 관리자가 
+                   심사하는 ‘심사’ 절차상 승인 및 반려 요건을 규정하기 위해 작성되었습니다.
+               </p><br>
+   
+               <h4 align="left">제2조 용어의 정의</h4>
+               <p>① 이 기준에서 사용하는 용어의 뜻은 다음과 같습니다.</p>
+                   <ol>
+                       <li>‘심사’란 창작자의 프로젝트를 운영자가 검수·심사하여 승인 또는 반려하는 것을 말합니다.</li>
+                       <li>‘승인’이란 프로젝트가 심사를 통과하여 모금을 진행할 수 있게 된 상태를 뜻합니다.</li>
+                       <li>‘반려’란 프로젝트가 심사 기준에 맞지 않아 모금을 진행할 수 없다고 판단하는 것을 뜻합니다.</li>
+                       <li>'프로젝트'란 기존에 없던 작품, 제품, 디지털 콘텐츠, 활동, 행사 등을 제작하고 실현시키기 위한 활동을 뜻합니다.</li>
+                   </ol>
+               <p>② 본 기준에서는 본 조에서 정한 용어가 우선적으로 적용되며, 본 조에서 정의되지 않은 용어는 펀드펀드 이용약관 및 관련 법령·관습에 따릅니다.</p>
+               <br>
+   
+               <h4 align="left">제3조 심사 절차</h4>
+               <ol>
+                   <li>창작자는 프로젝트를 올리고 심사를 요청해야 심사가 진행됩니다.</li>
+                   <li>프로젝트가 모두 작성되지 않거나 보완이 필요한 경우 심사가 반려될 수 있습니다.</li>
+                   <li>관리자는 제출된 내용을 심사하여 수정이 필요하거나 반려할 수 있으며, 반려 사유는 공개되지 않습니다.</li>
+                   <li>관리자와 창작자 간의 소통은 창작자 이메일로 이루어지며, 이메일 소통이 불가능한 경우 심사가 진행되지 않습니다.</li>
+                   <li>창작자가 심사 요건을 위배하거나 사실을 숨기면 심사 승인이 취소될 수 있습니다.</li>
+               </ol><br>
+   
+               <h4 align="left">제4조 프로젝트 모금 목적</h4>
+               <ol>
+                   <li>프로젝트는 명확한 목표를 달성하기 위한 자금 모금을 목적으로 합니다. 
+                       이를 위해서는 완료 기준과 예상 결과물이 분명히 제시되어야 합니다.</li>
+                   <li>기존의 제품·콘텐츠를 추가 제작하거나 단순히 복제, 소분, 재포장하여 제공하기 위한 프로젝트는 진행할 수 없습니다.</li>
+                   <li>후원금의 일부 또는 전체를 제3자에게 전달하거나 물품을 구매하여 기부하는 프로젝트는 허용되지 않습니다.</li>
+               </ol><br>
+   
+               <h4 align="left">제5조 예산 및 제작·전달 계획</h4>
+               <ol>
+                   <li>예산은 프로젝트와 무관한 목적으로 기재해서는 안 됩니다.</li>
+                   <li>현재 프로젝트의 진행 상황을 정확히 기재해야 하며, 결과물이 아직 만들어지지 않았다고 오해될 수 있는 내용은 사용하지 말아야 합니다.</li>
+                   <li>관리자는 가제품·샘플 제작 여부를 확인할 수 있습니다.</li>
+                   <li>예상되는 결과물의 사양, 견본 이미지, 영상 등을 상세히 설명하여 후원자가 내용을 이해할 수 있어야 합니다.</li>
+                   <li>후원자에게 선물 전달 방법을 명시해야 하며, 후원금 외의 비용이나 타 서비스 가입, 개인 정보를 요구해서는 안 됩니다.</li>
+                   <li>선물은 후원자의 결제가 완료된 이후에 전달되어야 합니다.</li>
+                   <li>프로젝트의 불확실한 사항이나 위험 요소를 고지하고, 발생할 경우 대처 방안을 기재해야 합니다.</li>
+                   <li>선물 전달 과정에서 발생하는 파손이나 불량에 대한 기준과 대처 방안을 기재해야 하며, 선물 형태에 따라 양도 정책 등을 명시해야 합니다.</li>
+               </ol><br>
+   
+               <h4 align="left">제6조 창작자 신뢰도</h4>
+               <ol>
+                   <li>프로젝트를 진행하는 창작자는 개인 또는 사업자여야 하며, 관련 인증 및 서류를 제출해야 합니다.</li>
+                   <li>공동 기획이나 제작·관리하는 경우 등록된 창작자가 모든 책임을 지며, 참여 범위를 분명하게 기재해야 합니다.</li>
+                   <li>이전 프로젝트의 성사 여부나 분쟁 등이 새 프로젝트에 영향을 줄 수 있습니다.</li>
+                   <li>프로젝트에 대한 중대한 논란이나 법적 분쟁, 약관 위반 등이 있는 경우 새로운 프로젝트 진행이 제한됩니다.</li>
+                   <li>동일한 목적의 모금을 여러 플랫폼(국내, 해외 무관)에서 진행하거나 외부 모금(계좌 입금 유도 등)을 병행할 수 없습니다.</li>
+               </ol><br>
+   
+               <h4 align="left">제7조 선물 제공 불가 항목</h4>
+               <b> 아래 선물들은 텀블벅의 취지, 커뮤니티의 안전, 현행법 준수를 위해 제공할 수 없습니다.</b>
+               <ul>
+                   <li>시중에 판매·유통되었던 제품·콘텐츠 (단, 창작자가 이전에 제작한 제품·콘텐츠를 새 프로젝트 선물에 부수적으로 구성하는 것은 허용)</li>
+                   <li>수익성 항목 (현금, 주식, 지분, 복권, 사이버머니, 상품권 등)</li>
+                   <li>추첨을 통해서만 선물을 받을 수 있는 자격</li>
+                   <li>무기류, 군복 및 군용장구, 경찰 제복 및 장비, 라이터 등 위험 품목</li>
+               </ul><br>
+   
+               <h4 align="left">제8조 카테고리·품목별 확인 사항</h4>
+               <p>프로젝트의 카테고리 및 제공 선물의 품목에 따라 운영자가 사이트에 
+                   고지한 카테고리·품목별 확인 사항을 충족해야 합니다.</p> <br>
+               
+               <h4 align="left">제9조 콘텐츠 준수 사항</h4>
+               <ol>
+                   <li>펀드펀드 커뮤니티 운영원칙에 어긋나는 콘텐츠가 포함된 프로젝트는 진행할 수 없습니다.</li>
+                   <li>프로젝트에 사용된 이미지나 텍스트는 텀블벅이 정한 스타일 가이드를 준수해야 합니다. 이에 어긋나는 내용은 관리자가 수정을 요청할 수 있습니다.</li>
+                   <li>'판매', '구매', '기부' 등의 용어는 펀딩의 취지와 일치해야 합니다.</li>
+               </ol><br>
+   
+               <h4 align="left">제10조 후원자 개인 정보 보호</h4>
+               <ol>
+                   <li>후원자와의 소통은 펀드펀드 커뮤니티와 메시지 기능을 사용해야 하며, 외부 채널을 주된 문의처로 사용해서는 안 됩니다.</li>
+                   <li>후원자의 배송정보와 연락처는 펀드펀드 시스템을 통해 제공된 정보만을 사용해야 하며, 별도로 정보를 수집해서는 안 됩니다.</li>
+               </ol><br>
+               <button style="display:block; margin: 0 auto;" class="close-btn-bottom" onclick="closeModal('#modal3')">닫기</button>
+           </div>
+       </div>
 
     <%-- top 버튼 --%>
     <button type="button" id="top-btn"> <i class="fa-solid fa-arrow-up"></i> </button >

@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* ============================ 푸터 시작 ============================ */
 /* 화면고정 */
-.footer_outer{min-width: 1669px; height: 250px; background-color:rgb(245,245,245);}
+.footer_outer{min-width: 1669px; height: 200px; background-color:rgb(245,245,245);}
 
 .ffh_footer>div{width: 100%;}
 .ffh_footer_top{height: 40%;}
@@ -32,6 +32,11 @@
 .ffh_footer_top_left3{width: 25%;}
 .ffh_footer_top_left4{width: 30%;}
 .ffh_footer_top_left5{width: 15%; text-align: center;}
+
+/*푸터바 오른쪽 소셜*/
+.ffh_footer_top_right {display: flex; flex-direction: row;}
+
+.social-icon {margin-right: 10px;}
 
 /* ============================ 푸터 모달 시작 ============================ */
 .modal_title{font-family: 'KNUTRUTHTTF', sans-serif;}
@@ -102,7 +107,6 @@
 .ffh_footer_middle_row1_col1{
     display: block;
     width: 25%;
-    background-image: url(../../image/logo2.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -115,6 +119,7 @@
 .p1>p{width: 50%; height: 100%;}
 .p2{height: 20%; padding: 5px 15px;}
 .p3{height: 20%;}
+
 /* ============================ 푸터 끝 ============================ */
 #top-btn { 
     display: none; 
