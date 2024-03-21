@@ -60,3 +60,15 @@ function drawChart() {
     var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
     chart.draw(data, options);
 }
+
+function moveAllMemberList(){
+	location.href="/fund/admSelect.me";
+}
+
+function moveAllProjectList(){
+	location.href="/fund/admSelect.pr";
+}
+
+function moveTestProjectList(){
+	location.href="/fund/admMoveToUpdateList.pr";
+}

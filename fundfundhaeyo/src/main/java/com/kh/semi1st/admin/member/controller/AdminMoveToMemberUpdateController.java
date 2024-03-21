@@ -1,4 +1,4 @@
-package com.kh.semi1st.admin.member;
+package com.kh.semi1st.admin.member.controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -8,16 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class AdminMoveToMemberSelectController
+ * Servlet implementation class AdminMoveToMemberUpdateController
  */
-@WebServlet("/admSelect.me")
-public class AdminMemberSelectController extends HttpServlet {
+@WebServlet("/admMoveToUpdate.me")
+public class AdminMoveToMemberUpdateController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AdminMemberSelectController() {
+    public AdminMoveToMemberUpdateController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -26,7 +26,13 @@ public class AdminMemberSelectController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("views/admin/member/adminMemberSelect.jsp").forward(request, response);
+		String searchId = request.getParameter("searchId"); 
+		
+		if(searchId != null) {
+			request.setAttribute("searchId", searchId);
+		}
+		
+		request.getRequestDispatcher("views/admin/member/adminMemberUpdateForm.jsp").forward(request, response);
 	}
 
 	/**

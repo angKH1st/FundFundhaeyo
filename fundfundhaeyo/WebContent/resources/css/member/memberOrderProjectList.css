@@ -1,0 +1,84 @@
+@charset "UTF-8";
+/* 기본 셋업 */
+.mypage_order_Form_outer{width:100%; height: 1000px; padding: 0 300px; border: box-sizing;}
+.mypage_order_Form_outer>div{width:100%;}
+.blank_top{height: 15%;}
+.blank_bottom{height: 5%;}
+
+/* 메인 영역 시작 */
+.mypage_order_Form_main{height: 80%;}
+.mypage_order_Form_main>div{height: 100%;}
+
+.mypage_order_Form_left{width: 200px;}
+.mypage_order_Form_right{width: 1101px; background-color: white;}
+
+.mypage_order_Form_right>div{width: 100%;}
+.mypage_order_Form_right_content1{height: 100%;}
+
+.mypage_order_Form_right_content1>div{width: 100%;}
+.mypage_order_Form_right_root{height: 34px;}
+.mypage_order_Form_right_title{height: 55px; padding-top: 7px;}
+.mypage_order_Form_right_list{height: 84%;}
+
+.mypage_order_Form_right_list>div{width: 100%;}
+.mypage_order_Form_right_list_inside{height: 90%;}
+.order_bottom_area{height: 10%; margin-top: 20px;}
+
+.mypage_order_Form_right_list>div>div{width: 100%;}
+.order_btn_area{height: 10%; border-bottom: 0.5px solid lightgray;}
+.order_btn_area>div{height: 100%;}
+.order_btn{width: 30%; padding: 17px 0 0 10px;}
+.order_cnt{width: 70%; text-align: right; padding: 17px 10px 0 0;}
+.order_order_area{height: 90%; overflow: auto;}
+.order_order_area::-webkit-scrollbar {display:none;}
+
+.order_order_area>div{width: 100%; height: 50px;}
+.order_thing>div{height: 100%; border-top: 0.5px solid lightgray;}
+.order_index{width: 5%;}
+.order_img{width: 5%;}
+.order_project{width: 30%;}
+.order_amount{width: 15%;}
+.order_method{width: 25%;}
+.order_status{width: 10%;}
+.order_date{width: 10%;}
+
+.order_index_top{width: 5%;}
+.order_img_top{width: 35%;}
+.order_amount_top{width: 15%; padding-left: 55px;}
+.order_method_top{width: 25%;}
+.order_status_top{width: 10%;}
+.order_date_top{width: 10%;}
+
+.order_btn_area button{background-color: white; border:none;}
+
+.order_order_area>div{width: 100%; transition: transform 0.3s ease-in-out;}
+.order_order_area>div:hover{cursor: pointer; transform: scale(1.01);}
+.order_obj>div{height: 100%; border-bottom: 0.5px solid lightgray;}
+.order_area_left{width: 12%;}
+.order_area_blank{width:2%;}
+.order_area_right{width: 86%;}
+
+.order_area_right>div{width: 100%;}
+.order_area_right_row1{height: 30%; padding-top: 5px;}
+.order_area_right_row2{height: 70%; padding: 2px 5px 0 0;}
+
+.order_area_right_row1>div{height: 100%; padding-top: 1px;}
+.order_area_right_row1_title{width: 17%; text-align: center; text-align: left;}
+.order_area_right_row1_title>span{border-bottom: 2px solid black;}
+.order_area_right_row1_blank{width: 63%;}
+.order_area_right_row1_date{width: 20%; text-align: right; padding-right: 10px;}
+
+.noNotices{margin-top: 230px;}
+.current{color: skyblue;}
+
+.order_bottom_area button{
+	width: 30px;
+	border: none;
+	background-color: white;
+	margin: 0 3px;
+}
+
+.order_bottom_area button:hover{
+	font-weight: bold;
+}
+/* 메인 영역 끝 */

@@ -15,3 +15,7 @@ $(document).ready(function() {
         }
     }
 });
+
+function moveToAnnouncement() {
+	location.href = "/fund/admAnnouncement.hp?cpage=1";
+}

@@ -103,6 +103,7 @@
 				    			<div class="adm-content-center-main-body-row3 centerXY">
 				    				<input type="hidden" name="actionType" id="actionType" value="">
 				    				<input type="hidden" id="qnaAnswerStatus" value="<%= q.getQnaAnswerStatus() %>">
+				    					<button type="button" onclick="moveToQNA();">목록으로</button>
 				    				<% if(q != null){ %>
 					    				<input type="hidden" name="qNo" id="qNo" value="<%= q.getQnaNo() %>">
 					    				<button type="submit" id="submitBtn" disabled>제출</button>

@@ -45,7 +45,7 @@
 						<div class="mypage_likes_Form_right_title"><h3>찜목록</h3></div>
 						<div class="mypage_likes_Form_right_list brlg br5 pd15">
 							<% if(list.size() == 0){ %>
-								찜한 프로젝트가 없습니다.
+								<div class="centerXY" style="padding-top: 270px;">찜한 프로젝트가 없습니다.</div>
 							<% }else{ %>
 								<% for(Project p : list){ %>
 									<div onclick=location.href="<%= contextPath %>/detail.pr?pno=<%= p.getProjectNo() %>" class="mypage_likes_Form_right_list_project prHoverContainer fl brlg br5">

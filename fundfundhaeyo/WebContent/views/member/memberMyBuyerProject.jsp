@@ -41,12 +41,12 @@
 						<div class="mypage_my_buyer_Form_right_root">
 							<span><a href="<%= request.getContextPath() %>/mypage.me">Home</a></span>
 							<span> > </span>
-							<span>나의후원</span>
+							<span>나의 후원</span>
 						</div>
-						<div class="mypage_my_buyer_Form_right_title"><h3>나의 후원 프로젝트</h3></div>
+						<div class="mypage_my_buyer_Form_right_title"><h3>후원한 프로젝트</h3></div>
 						<div class="mypage_my_buyer_Form_right_list brlg br5 pd15">
 						<% if(list.size() == 0){ %>
-							후원한 프로젝트가 없습니다.
+							<div class="centerXY" style="padding-top: 270px;">후원한 프로젝트가 없습니다.</div>
 						<% }else{ %>
 							<% for(Project p : list){ %>
 								<%

@@ -63,6 +63,7 @@
 				    				<% } %>
 				    			</div>
 				    			<div class="adm-content-center-main-body-row3 centerXY">
+				    				<button type="button" onclick="moveToAnnouncement();">목록으로</button>
 				    				<input type="hidden" name="actionType" id="actionType" value="">
 				    				<% if(a != null){ %>
 				    				<input type="hidden" name="aNo" id="aNo" value="<%= a.getAnnouncementNo() %>">

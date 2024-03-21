@@ -48,7 +48,6 @@ public class AdminIndexController extends HttpServlet {
 	    	ArrayList<Member> bList = new MemberService().selectBestBuyerList();
 	    	ArrayList<Member> sList = new MemberService().selectBestSellerList();
 	    	ArrayList<PjCategory> ctList = new ProjectService().selectBestCategoryList();
-	    	
 	    	ArrayList<com.kh.semi1st.member.model.vo.Payment> payList = new ProjectService().selectProjectPaymentList();
 	    	
 	    	request.setAttribute("mCount", mCount);

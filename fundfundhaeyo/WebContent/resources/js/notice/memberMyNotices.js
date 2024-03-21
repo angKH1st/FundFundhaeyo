@@ -1,5 +1,9 @@
 $(document).ready(function() {
 	selectNotice(0, $('.nBtn0'));
+	
+	setInterval(function() {
+        selectNotice(0, $('.nBtn0'));
+    }, 5000);
 })
 
 function selectNotice(index, clickedElement) {

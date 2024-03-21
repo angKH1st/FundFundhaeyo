@@ -60,7 +60,7 @@ function loadPage(cpage) {
 				tCode += "<tr>"
 						     + "<td class=\"center\">" + ((currentPage - 1) * boardLimit + i + 1) + "</td>"
 						     + "<td class=\"center\">" + list[i].projectNo + "</td>"
-						     + "<td class=\"center\"><img class=\"circleImg\" width=50 height=50 src=\"" + list[i].projectTitleImg + "\"></td>"
+						     + "<td class=\"center\"><img style=\"margin-top: 5px;\" class=\"circleImg\" width=45 height=45 src=\"" + list[i].projectTitleImg + "\"></td>"
 						     + "<td class=\"center\">" + list[i].projectSeller + "</td>"
 						     + "<td class=\"center\">" + list[i].projectCategoryName + "</td>"
 						     + "<td class=\"center\">" + list[i].projectTag + "</td>"
@@ -77,7 +77,7 @@ function loadPage(cpage) {
 			// 페이지 엔트리
 			$(".adm-content-center-main-body3-col1-startPoint").text((currentPage - 1) * boardLimit + 1); 	// 시작 프로젝트 #			
 			$(".adm-content-center-main-body3-col1-endPoint").text((currentPage - 1) * boardLimit + 1 + list.length - 1);			// 끝 프로젝트 #
-			$(".adm-content-center-main-body3-col1-totalPoint").text(listCount + 1); 						// 총 프로젝트 수
+			$(".adm-content-center-main-body3-col1-totalPoint").text(listCount); 						// 총 프로젝트 수
 			
 			cpage = currentPage;
 	    },

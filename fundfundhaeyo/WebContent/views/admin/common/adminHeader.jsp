@@ -37,7 +37,7 @@
 		<% session.removeAttribute("alertMsg"); %>
 	<% } %>
 	
-	<div class="adm-header">
+	<div class="adm-header font_outer">
 		<div class="adm-header-left fl">
 			<div class="adm-header-left-col1 fl">
 				<button id="sidebarToggle"><i class="fa-solid fa-bars fa-xl"></i></button>
@@ -46,7 +46,7 @@
 				<a href="<%= contextPath %>" class="hoverA">Home</a>
 			</div>
 			<div class="adm-header-left-col3 fl">
-				<%-- 여백 --%>
+				<a href="/fund/logout.me" class="hoverA2">로그아웃</a>
 			</div>
 		</div>
 		<div class="adm-header-center fl">
@@ -57,10 +57,12 @@
 			<div class="adm-header-right-col2 fl"></div>
 			<div class="adm-header-right-col3 fl"></div>
 			<div class="adm-header-right-col4 fl">
+				<%--
 				<div class="notification">
 					<a href="#"><i class="fa-regular fa-bell fa-xl" style="line-height: 150%;"></i></a>
 					<span class="badge">3</span> 
 				</div>
+				--%>
 			</div>
 			<div class="adm-header-right-col5 fl"></div>
 		</div>

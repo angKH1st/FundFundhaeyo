@@ -1,4 +1,4 @@
-package com.kh.semi1st.admin.project.controller;
+package com.kh.semi1st.admin.member.controller;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -12,20 +12,20 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.google.gson.Gson;
 import com.kh.semi1st.common.model.vo.PageInfo;
-import com.kh.semi1st.project.model.service.ProjectService;
-import com.kh.semi1st.project.model.vo.Project;
+import com.kh.semi1st.member.model.service.MemberService;
+import com.kh.semi1st.member.model.vo.Member;
 
 /**
- * Servlet implementation class AdminProjectUpdateListController
+ * Servlet implementation class AdminMemberSelectListController
  */
-@WebServlet("/admUpdateList.pr")
-public class AdminProjectUpdateListController extends HttpServlet {
+@WebServlet("/admSelectList.me")
+public class AdminMemberSelectListController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AdminProjectUpdateListController() {
+    public AdminMemberSelectListController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -43,7 +43,7 @@ public class AdminProjectUpdateListController extends HttpServlet {
 		int startPage;   // 페이징바의 시작 수
 		int endPage;	 // 페이징바의 끝 수
 		
-		listCount = new ProjectService().selectAllTestingProjectListCount();
+		listCount = new MemberService().selectMemberListCount();
 		currentPage = Integer.parseInt(request.getParameter("cpage"));
 		pageLimit = 5;
 		boardLimit = 10;
@@ -56,7 +56,7 @@ public class AdminProjectUpdateListController extends HttpServlet {
 		}
 		
 		PageInfo pi = new PageInfo(listCount, currentPage, pageLimit, boardLimit, maxPage, startPage, endPage);
-		ArrayList<Project> list = new ProjectService().selectProjectUpdateList(pi);
+		ArrayList<Member> list = new MemberService().selectMemberList(pi);
 		
 		HashMap<String, Object> map = new HashMap<>();
 		map.put("pi", pi);

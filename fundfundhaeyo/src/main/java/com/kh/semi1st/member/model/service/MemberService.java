@@ -8,6 +8,8 @@ import com.kh.semi1st.common.model.vo.PageInfo;
 import com.kh.semi1st.member.model.dao.MemberDao;
 import com.kh.semi1st.member.model.vo.Attachment;
 import com.kh.semi1st.member.model.vo.Member;
+import com.kh.semi1st.member.model.vo.Payment;
+import com.kh.semi1st.member.model.vo.Seller;
 import com.kh.semi1st.project.model.vo.Project;
 
 public class MemberService {
@@ -536,6 +538,105 @@ public class MemberService {
 		close(conn);
 			
 		return list;
+	}
+
+	/** 전체 회원의 결제 내역 숫자를 조회해주는 메소드
+	 *  @return result : 조회된 결제 내역 리스트
+	 */
+	public int selectMemberPaymentListCount() {
+		Connection conn = getConnection();
+		
+		int result = new MemberDao().selectMemberPaymentListCount(conn);
+		
+		close(conn);
+		
+		return result;
+	}
+
+	/** 전체 회원의 결제 내역을 조회해주는 메소드
+	 * 	@param pi : 페이징 처리 객체
+	 *  @return list : 조회된 결제 내역
+	 */
+	public ArrayList<Payment> selectMemberPaymentList(PageInfo pi) {
+		Connection conn = getConnection();
+		
+		ArrayList<Payment> list = new MemberDao().selectMemberPaymentList(conn, pi);
+		
+		close(conn);
+		
+		return list;
+	}
+	
+	/** 회원의 결제 내역 숫자를 조회해주는 메소드
+	 *  @param userNo : 조회하고자 하는 회원 번호
+	 *  @return result : 조회된 결제 내역 리스트
+	 */
+	public int selectMemberMyPaymentListCount(int userNo) {
+		Connection conn = getConnection();
+		
+		int result = new MemberDao().selectMemberMyPaymentListCount(conn, userNo);
+		
+		close(conn);
+		
+		return result;
+	}
+
+	/** 회원의 결제 내역을 조회해주는 메소드
+	 * 	@param pi : 페이징 처리 객체
+	 * 	@param userNo : 조회하고자 하는 회원 번호
+	 *  @return list : 조회된 결제 내역
+	 */
+	public ArrayList<Payment> selectMemberMyPaymentList(PageInfo pi, int userNo) {
+		Connection conn = getConnection();
+		
+		ArrayList<Payment> list = new MemberDao().selectMemberMyPaymentList(conn, pi, userNo);
+		
+		close(conn);
+		
+		return list;
+	}
+	
+	/** 회원의 펀딩 수익 내역 숫자를 조회해주는 메소드
+	 *  @param userNo : 조회하고자 하는 회원 번호
+	 *  @return result : 조회된 펀딩 수익 내역 리스트
+	 */
+	public int selectMemberMyFundingListCount(int userNo) {
+		Connection conn = getConnection();
+		
+		int result = new MemberDao().selectMemberMyFundingListCount(conn, userNo);
+		
+		close(conn);
+		
+		return result;
+	}
+
+	/** 회원의 펀딩 수익 내역을 조회해주는 메소드
+	 * 	@param pi : 페이징 처리 객체
+	 * 	@param userNo : 조회하고자 하는 회원 번호
+	 *  @return list : 조회된 펀딩 수익 내역
+	 */
+	public ArrayList<Seller> selectMemberMyFundingList(PageInfo pi, int userNo) {
+		Connection conn = getConnection();
+		
+		ArrayList<Seller> list = new MemberDao().selectMemberMyFundingList(conn, pi, userNo);
+		
+		close(conn);
+		
+		return list;
+	}
+
+	/** 회원의 받은 박수 수를 조회해주는 메소드
+	 *  @param userNo : 조회하고자 하는 회원 번호
+	 *  @return result : 조회된 회원 박수 숫자
+	 */
+	public int selectMemberClapProjectCount(int userNo) {
+		Connection conn = getConnection();
+		
+		int result = new MemberDao().selectMemberClapProjectCount(conn, userNo);
+				
+		close(conn);
+		
+		return result;
 	}
 
 	

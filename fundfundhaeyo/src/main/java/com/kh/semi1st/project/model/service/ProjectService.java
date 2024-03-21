@@ -642,4 +642,17 @@ public class ProjectService {
 		return list;
 	}
 
+	/** 승인 대기중인 프로젝트의 숫자를 전체 조회해주는 메소드
+	 *  @return result : 조회된 승인 대기중인 프로젝트의 숫자
+	 */
+	public int selectAllTestingProjectListCount() {
+		Connection conn = getConnection();
+		
+		int result = new ProjectDao().selectAllTestingProjectListCount(conn);
+		
+		close(conn);
+		
+		return result;
+	}
+
 }

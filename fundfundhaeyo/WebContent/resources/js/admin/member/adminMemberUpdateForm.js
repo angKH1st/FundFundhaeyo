@@ -102,3 +102,7 @@ function banAllow(userStatus){
 		}
 	})
 }
+
+function moveToList(){
+	location.href = "/fund/admSelect.me";
+}

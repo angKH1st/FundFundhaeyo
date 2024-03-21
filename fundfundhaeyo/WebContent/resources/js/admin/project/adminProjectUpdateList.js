@@ -55,7 +55,7 @@ function loadPage(cpage) {
 					}
 					
 					projectDiv.append("<tr>"
-							     + "<td class=\"center\"> + ((currentPage - 1) * boardLimit + i + 1) + </td>"
+							     + "<td class=\"center\">" + ((currentPage - 1) * boardLimit + i + 1) + "</td>"
 							     + "<td class=\"center\">" + list[i].projectNo + "</td>"
 							     + "<td class=\"center\"><img class=\"circleImg\" width=50 height=50 src=\"" + list[i].projectTitleImg + "\"></td>"
 							     + "<td class=\"center\">" + list[i].projectSeller + "</td>"

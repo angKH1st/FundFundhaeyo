@@ -17,7 +17,7 @@
 			<div class="adm-sidebar-admin-logo fl"><h3><a href="<%= request.getContextPath() %>" class="hoverA"><img src="resources/image/logo2.png" width="130px"></a></h3></div>
 		</div>
 		<div class="adm-sidebar-user">
-			<div class="adm-sidebar-user-profile fl"></div>
+			<div class="adm-sidebar-user-profile centerXY fl"><i class="fa-solid fa-user-tie"></i></div>
 			<div class="adm-sidebar-user-nickname fl"><h4><%= ((Member)session.getAttribute("loginUser")).getUserId() %></h4></div>
 		</div>
 		<div class="adm-sidebar-list listHover">
@@ -35,7 +35,6 @@
 		                <li><a href="admSelect.pr"><i class="thumbI fa-brands fa-product-hunt fa-2xl"></i> 프로젝트 조회</a></li>
 		                <li><a href="admMoveToUpdateList.pr"><i class="thumbI fa-brands fa-product-hunt fa-2xl"></i> 프로젝트 심사 조회</a></li>
 		                <li><a href="admMoveToUpdateForm.pr?searchNo=0"><i class="thumbI fa-brands fa-product-hunt fa-2xl"></i> 프로젝트 심사</a></li>
-		                <li><a href="#"><i class="thumbI fa-solid fa-credit-card fa-2xl"></i> 펀딩금 집행</a></li>
 		                <li><a href="#"><i class="thumbI fa-brands fa-usps fa-2xl"></i> 송장등록</a></li>
 		            </ul>
 		        </li>
@@ -49,6 +48,9 @@
 		                <li><a href="admMoveToUpdateQnaForm.hp"><i class="thumbI fa-solid fa-comments fa-2xl"></i> Q&A 답변</a></li>
 		                <li><a href="admFaq.hp"><i class="thumbI fa-solid fa-circle-question fa-2xl"></i> 지울거임</a></li>
 		            </ul>
+		        </li>
+		        <li>
+		            <a href="admSelectPayment.me?cpage=1" class="adm-sidebar-main-menu"><i class="thumbI fa-solid fa-coins fa-2xl"></i> 결제 관리</a>
 		        </li>
 		        <li>
 		            <a class="adm-sidebar-main-menu"><i class="thumbI fa-solid fa-coins fa-2xl"></i> 수익 관리</a>

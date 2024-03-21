@@ -140,9 +140,10 @@
 							<div class="adm-content-right-profile2-body pd15"></div>
 						</div>
 						<div class="adm-content-right-profile3">
-							<button type="button" class="adm-ban-allow-reset br5 brlg" onclick="resetUpdate();">초기화</button>
-							<button type="button" class="adm-ban-btn br5 brlg" disabled onclick="banAllow('B');">차단</button>
-							<button type="button" class="adm-allow-btn br5 brlg" disabled onclick="banAllow('Y');">차단해제</button>
+							<button style="background-color: white;" type="button" onclick="moveToList();">목록으로</button>
+							<button style="background-color: white;" type="button" class="adm-ban-allow-reset" onclick="resetUpdate();">초기화</button>
+							<button style="background-color: white;" type="button" class="adm-ban-btn" disabled onclick="banAllow('B');">차단</button>
+							<button style="background-color: white;" type="button" class="adm-allow-btn" disabled onclick="banAllow('Y');">차단해제</button>
 						</div>
 					</div>	    		
 	    		</div>

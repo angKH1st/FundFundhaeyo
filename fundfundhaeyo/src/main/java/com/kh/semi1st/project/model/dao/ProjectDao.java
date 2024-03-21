@@ -1667,4 +1667,31 @@ public class ProjectDao {
 		return list;
 	}
 
+	/** 승인 대기중인 프로젝트의 숫자를 전체 조회해주는 메소드
+	 *  @param conn
+	 *  @return result : 조회된 승인 대기중인 프로젝트의 숫자
+	 */
+	public int selectAllTestingProjectListCount(Connection conn) {
+		int result = 0;
+		ResultSet rset = null;
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("selectAllTestingProjectListCount");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			rset = pstmt.executeQuery();
+			
+			if(rset.next()) {
+				result = rset.getInt("count");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		return result;
+	}
+
 }

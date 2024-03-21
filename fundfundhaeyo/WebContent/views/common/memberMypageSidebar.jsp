@@ -30,16 +30,14 @@
 		            <a class="mypage_left_content-main-menu">나의 후원 <i class="fas fa-angle-up"></i></a>
 		            <ul class="hidden">
 		                <li><a href="<%= request.getContextPath() %>/attendProject.me?cpage=1">후원한 프로젝트</a></li>
-		                <li><a href="#">주문내역</a></li>
-		                <li><a href="#">뭘 넣을까</a></li>
+		                <li><a href="<%= request.getContextPath() %>/orderProject.me?cpage=1">후원 결제내역</a></li>
 		            </ul>
 		        </li>
 		        <li>
 		            <a class="mypage_left_content-main-menu">나의 창작 <i class="fas fa-angle-up"></i></a>
 		            <ul class="hidden">
-		                <li><a href="<%= request.getContextPath() %>/myProject.me?cpage=1">나의 창작 프로젝트</a></li>
-		                <li><a href="#">송장</a></li>
-		                <li><a href="#">수익</a></li>
+		                <li><a href="<%= request.getContextPath() %>/myProject.me?cpage=1">창작한 프로젝트</a></li>
+		                <li><a href="<%= request.getContextPath() %>/fundingProject.me?cpage=1">창작 수익</a></li>
 		            </ul>
 		        </li>
 		        <li>

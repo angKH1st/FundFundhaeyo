@@ -30,11 +30,12 @@
 .adm-content-center-count{height: 20%; margin-bottom: 20px;}
 .adm-content-center-text{height: 80%;}
 
-.adm-content-center-count>div{width: 20%; height: 100%;}
+.adm-content-center-count>div{width: 20%; height: 100%; transition: transform 0.3s ease-in-out;}
 .aI{width: 10%; padding-top: 25px;}
 .aTitle{width: 90%; font-size: 27px; padding: 10px 10px 10px 0;}
 
 .adm-content-center-count-col1{padding: 15px 5.5px 15px 0;}
+.adm-content-center-count-col1:hover{cursor: pointer; transform: scale(1.05);}
 .adm-content-center-count-col1>div{width: 100%; height: 100%; background-color: #dc3545;}
 .adm-content-center-count-col1-inside>div{width: 100%; padding-left: 12px;}
 .adm-content-center-count-col1-title{height: 45%; padding-top: 5px;}
@@ -42,6 +43,7 @@
 .adm-content-center-count-col1-title>div{height: 100%;}
 
 .adm-content-center-count-col2{padding: 15px 5.5px 15px 5.5px;}
+.adm-content-center-count-col2:hover{cursor: pointer; transform: scale(1.05);}
 .adm-content-center-count-col2>div{width: 100%; height: 100%; background-color: #ffc107;}
 .adm-content-center-count-col2-inside>div{width: 100%; padding-left: 12px;}
 .adm-content-center-count-col2-title{height: 45%; padding-top: 5px;}
@@ -49,6 +51,7 @@
 .adm-content-center-count-col2-title>div{height: 100%;}
 
 .adm-content-center-count-col3{padding: 15px 5.5px 15px 5.5px;}
+.adm-content-center-count-col3:hover{cursor: pointer; transform: scale(1.05);}
 .adm-content-center-count-col3>div{width: 100%; height: 100%; background-color: #28a745;}
 .adm-content-center-count-col3-inside>div{width: 100%; padding-left: 12px;}
 .adm-content-center-count-col3-title{height: 45%; padding-top: 5px;}
@@ -56,6 +59,7 @@
 .adm-content-center-count-col3-title>div{height: 100%;}
 
 .adm-content-center-count-col4{padding: 15px 5.5px 15px 5.5px;}
+.adm-content-center-count-col4:hover{cursor: pointer; transform: scale(1.05);}
 .adm-content-center-count-col4>div{width: 100%; height: 100%; background-color: #17a2b8;}
 .adm-content-center-count-col4-inside>div{width: 100%; padding-left: 12px;}
 .adm-content-center-count-col4-title{height: 45%; padding-top: 5px;}
@@ -63,6 +67,7 @@
 .adm-content-center-count-col4-title>div{height: 100%;}
 
 .adm-content-center-count-col5{padding: 15px 5.5px 15px 5.5px;}
+.adm-content-center-count-col5:hover{cursor: pointer; transform: scale(1.05);}
 .adm-content-center-count-col5>div{width: 100%; height: 100%; background-color: #6f5493;}
 .adm-content-center-count-col5-inside>div{width: 100%; padding-left: 12px;}
 .adm-content-center-count-col5-title{height: 45%; padding-top: 5px;}
@@ -77,6 +82,7 @@
 .adm-content-center-text-cal-graph{width: 24%; margin-right: 20px;}
 .adm-content-center-text-cal-graph>div{width: 100%; height: 100%;}
 .adm-content-center-text-cal-seller, .adm-content-center-text-cal-buyer{width: 37%; background-color: white;}
+.adm-content-center-text-cal-seller{margin-right: 10px;}
 .adm-content-center-text-cal-best-title{height: 10%; padding-top: 14px;}
 .adm-content-center-text-cal-best-input{height: 87%;}
 

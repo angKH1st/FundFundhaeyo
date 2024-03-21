@@ -18,6 +18,6 @@ function githubFFHY(){
 	location.href="https://github.com/angKH1st/FundFundhaeyo";
 }
 
-function githubFFHY(){
+function notionFFHY(){
 	location.href="https://autumn-tithonia-b02.notion.site/FundFundhaeyo-9f4a1fd055464a6985ea2d9424e0d857?pvs=4";
 }

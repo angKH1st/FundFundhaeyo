@@ -15,6 +15,8 @@ import static com.kh.semi1st.common.JDBCTemplate.*;
 import com.kh.semi1st.common.model.vo.PageInfo;
 import com.kh.semi1st.member.model.vo.Attachment;
 import com.kh.semi1st.member.model.vo.Member;
+import com.kh.semi1st.member.model.vo.Payment;
+import com.kh.semi1st.member.model.vo.Seller;
 import com.kh.semi1st.project.model.vo.Project;
 
 public class MemberDao {
@@ -1401,6 +1403,258 @@ public class MemberDao {
 			close(pstmt);
 		}
 		return list;
+	}
+
+	/** 전체 회원의 결제 내역 숫자를 조회해주는 메소드
+	 *  @param conn
+	 *  @return result : 조회된 결제 내역 리스트
+	 */
+	public int selectMemberPaymentListCount(Connection conn) {
+		int result = 0;
+		ResultSet rset = null;
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("selectMemberPaymentListCount");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			rset = pstmt.executeQuery();
+			
+			if(rset.next()) {
+				result = rset.getInt("count");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		return result;
+	}
+
+	/** 전체 회원의 결제 내역을 조회해주는 메소드
+	 *  @param conn
+	 *  @param pi : 페이징 처리 객체
+	 *  @return list : 조회된 결제 내역
+	 */
+	public ArrayList<Payment> selectMemberPaymentList(Connection conn, PageInfo pi) {
+		ArrayList<Payment> list = new ArrayList<Payment>();
+		ResultSet rset = null;
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("selectMemberPaymentList");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			int startRow = (pi.getCurrentPage()-1) * pi.getBoardLimit() + 1;
+			int endRow = startRow + pi.getBoardLimit() - 1;
+			
+			pstmt.setInt(1, startRow);
+			pstmt.setInt(2, endRow);
+			
+			rset = pstmt.executeQuery();
+			
+			while(rset.next()) {
+				Payment p = new Payment();
+				p.setPaymentNo(rset.getString("payment_no"));
+				p.setPaymentUserNickname(rset.getString("user_name"));
+				p.setPaymentProjectName(rset.getString("project_title"));
+				p.setPaymentAmount(rset.getInt("payment_amount"));
+				p.setPaymentMethod(rset.getInt("payment_method"));
+				p.setPaymentStatus(rset.getString("payment_status"));
+				p.setPaymentDate(rset.getString("payment_date"));
+				p.setPaymentProjectImg(rset.getString("project_img"));
+				
+				list.add(p);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		return list;
+	}
+	
+	/** 회원의 결제 내역 숫자를 조회해주는 메소드
+	 *  @param conn
+	 *  @param userNo : 조회하고자 하는 회원 번호
+	 *  @return result : 조회된 결제 내역 리스트
+	 */
+	public int selectMemberMyPaymentListCount(Connection conn, int userNo) {
+		int result = 0;
+		ResultSet rset = null;
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("selectMemberMyPaymentListCount");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, userNo);
+			
+			rset = pstmt.executeQuery();
+			
+			if(rset.next()) {
+				result = rset.getInt("count");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		return result;
+	}
+
+	/** 회원들의 결제 내역을 조회해주는 메소드
+	 *  @param conn
+	 *  @param pi : 페이징 처리 객체
+	 *  @param userNo : 조회하고자 하는 회원 번호
+	 *  @return list : 조회된 결제 내역
+	 */
+	public ArrayList<Payment> selectMemberMyPaymentList(Connection conn, PageInfo pi, int userNo) {
+		ArrayList<Payment> list = new ArrayList<Payment>();
+		ResultSet rset = null;
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("selectMemberMyPaymentList");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			int startRow = (pi.getCurrentPage()-1) * pi.getBoardLimit() + 1;
+			int endRow = startRow + pi.getBoardLimit() - 1;
+			
+			pstmt.setInt(1, userNo);
+			pstmt.setInt(2, startRow);
+			pstmt.setInt(3, endRow);
+			
+			rset = pstmt.executeQuery();
+			
+			while(rset.next()) {
+				Payment p = new Payment();
+				p.setPaymentNo(rset.getString("payment_no"));
+				p.setPaymentUserNickname(rset.getString("user_name"));
+				p.setPaymentProjectName(rset.getString("project_title"));
+				p.setPaymentAmount(rset.getInt("payment_amount"));
+				p.setPaymentMethod(rset.getInt("payment_method"));
+				p.setPaymentStatus(rset.getString("payment_status"));
+				p.setPaymentDate(rset.getString("payment_date"));
+				p.setPaymentProjectImg(rset.getString("project_img"));
+				
+				list.add(p);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		return list;
+	}
+	
+	/** 회원의 펀딩 수익 내역 숫자를 조회해주는 메소드
+	 *  @param conn
+	 *  @param userNo : 조회하고자 하는 회원 번호
+	 *  @return result : 조회된 펀딩 수익 내역 리스트
+	 */
+	public int selectMemberMyFundingListCount(Connection conn, int userNo) {
+		int result = 0;
+		ResultSet rset = null;
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("selectMemberMyFundingListCount");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, userNo);
+			
+			rset = pstmt.executeQuery();
+			
+			if(rset.next()) {
+				result = rset.getInt("count");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		return result;
+	}
+
+	/** 회원의 펀딩 수익 내역을 조회해주는 메소드
+	 *  @param conn
+	 *  @param pi : 페이징 처리 객체
+	 *  @param userNo : 조회하고자 하는 회원 번호
+	 *  @return list : 조회된 펀딩 수익 내역
+	 */
+	public ArrayList<Seller> selectMemberMyFundingList(Connection conn, PageInfo pi, int userNo) {
+		ArrayList<Seller> list = new ArrayList<Seller>();
+		ResultSet rset = null;
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("selectMemberMyFundingList");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			int startRow = (pi.getCurrentPage()-1) * pi.getBoardLimit() + 1;
+			int endRow = startRow + pi.getBoardLimit() - 1;
+			
+			pstmt.setInt(1, userNo);
+			pstmt.setInt(2, startRow);
+			pstmt.setInt(3, endRow);
+			
+			rset = pstmt.executeQuery();
+			
+			while(rset.next()) {
+				Seller s = new Seller(rset.getInt("seller_user_no")
+									, rset.getInt("seller_project_no")
+									, rset.getString("pj_category_name")
+									, rset.getString("project_tag")
+									, rset.getString("project_title")
+									, rset.getInt("project_price")
+									, rset.getInt("seller_funding")
+									, rset.getInt("funding")
+									, rset.getString("project_img"));
+				list.add(s);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		return list;
+	}
+
+	/** 회원의 받은 박수 수를 조회해주는 메소드
+	 *  @param conn
+	 *  @param userNo : 조회하고자 하는 회원 번호
+	 *  @return result : 조회된 회원 박수 숫자
+	 */ 
+	public int selectMemberClapProjectCount(Connection conn, int userNo) {
+		int result = 0;
+		ResultSet rset = null;
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("selectMemberClapProjectCount");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, userNo);
+			
+			rset = pstmt.executeQuery();
+			
+			if(rset.next()) {
+				result = rset.getInt("count");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		return result;
 	}
 
 }

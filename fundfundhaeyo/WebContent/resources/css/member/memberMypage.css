@@ -13,8 +13,9 @@
 .mypage_right{width: 1101px; background-color: white;}
 
 .mypage_right>div{width: 100%;}
-.mypage_right_content1{height: 50%;}
-.mypage_right_content2{height: 49%; margin-top: 10px;}
+.mypage_right_content1{height: 45%;}
+.mypage_right_content2{height: 20%; margin-top: 15px;}
+.mypage_right_content3{height: 20%; margin-top: 15px;}
 
 .mypage_right_content1>div{width: 100%;}
 .mypage_right_root{height: 34px;}
@@ -30,27 +31,30 @@
 .mypage_activity_row1>div>div>h3, .mypage_activity_row1>div>div>h5{display: inline;}
 
 .mypage_activity_row1_grade2, .mypage_activity_row1_grade3, .mypage_activity_row1_grade4{border-left: 0.5px solid lightgray;}
-.mypage_activity_row1_grade1_title, .mypage_activity_row1_grade2_title, .mypage_activity_row1_grade3_title, .mypage_activity_row1_grade4_title{padding-top: 35px;}
-.mypage_activity_row1_grade1_count, .mypage_activity_row1_grade2_count, .mypage_activity_row1_grade3_count, .mypage_activity_row1_grade4_count{padding-top: 15px; transition: transform 0.3s ease-in-out;}
+.mypage_activity_row1_grade1_title, .mypage_activity_row1_grade2_title, .mypage_activity_row1_grade3_title, .mypage_activity_row1_grade4_title{width: 20%; padding-top: 5px;}
+.mypage_activity_row1_grade1_count, .mypage_activity_row1_grade2_count, .mypage_activity_row1_grade3_count, .mypage_activity_row1_grade4_count{transition: transform 0.3s ease-in-out;}
 .mypage_activity_row1_grade1_count:hover, .mypage_activity_row1_grade2_count:hover, .mypage_activity_row1_grade3_count:hover, .mypage_activity_row1_grade4_count:hover {transform: scale(1.1);}
+.mypage_count{width: 60%; text-align: right; padding: 20px 10px 0 0;}
+.mypage_title{width: 40%; text-align: left;}
 
 .mypage_right_content2>div{width: 100%;}
-.mypage_right_title2{height: 15%; padding-top: 7px;}
-.mypage_right_my{height: 80%;}
+.mypage_right_title2{height: 15%; margin-bottom: 20px;}
+.mypage_right_my{height: 85%;}
 
 .mypage_right_my>div{height: 100%; transition: transform 0.3s ease-in-out; text-align: center;}
-.mypage_right_my_left{width: 59%; margin-right: 20px;}
-.mypage_right_my_right{width: 39%;}
+.mypage_right_my_left{width: 50%;}
+.mypage_right_my_right{width: 50%;}
 
 .mypage_right_my h3, .mypage_right_my h5{display: inline;}
 
-.mypage_right_my_left>div{width: 49%; height: 100%; padding-top: 65px;}
-.mypage_right_my_left_likes{color: black; background-color: white; margin-right: 10px; transition: transform 0.3s ease-in-out;}
+.mypage_right_my_left>div{width: 100%; height: 50%;}
+.mypage_right_my_left_likes{color: black; background-color: white; transition: transform 0.3s ease-in-out;}
 .mypage_right_my_left_likes:hover{cursor: pointer; transform: scale(1.05);}
 .mypage_right_my_left_grade{color: black; background-color: white; transition: transform 0.3s ease-in-out;}
 .mypage_right_my_left_grade:hover{cursor: pointer; transform: scale(1.05);}
 
-.mypage_right_my_right>div{width: 100%; height: 100%; padding-top: 130px; color: white; background-color: #00c4c4; transition: transform 0.3s ease-in-out;}
+.mypage_right_my_right>div{width: 100%; height: 100%; color: white; background-color: #00c4c4; transition: transform 0.3s ease-in-out;}
 .mypage_right_my_right>div:hover{cursor: pointer; transform: scale(1.05);}
 
+.bb5{border-bottom: 0.5px solid lightgray;}
 /* 메인 영역 끝 */

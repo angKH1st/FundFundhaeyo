@@ -55,3 +55,7 @@ $(document).ready(function() {
 		}
 	});
 });
+
+function moveToQNA(){
+	location.href = "/fund/admQna.hp?cpage=1";
+}

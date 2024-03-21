@@ -7,9 +7,9 @@ $(function() {
 			var endDate = new Date(startDate);
 			endDate.setDate(endDate.getDate() + 30);
 			var buyerPaymentDate = new Date(endDate);
-			buyerPaymentDate.setDate(buyerPaymentDate.getDate() + 7);
+			buyerPaymentDate.setDate(buyerPaymentDate.getDate());
 			var sellerPaymentDate = new Date(buyerPaymentDate);
-			sellerPaymentDate.setDate(sellerPaymentDate.getDate() + 7);
+			sellerPaymentDate.setDate(sellerPaymentDate.getDate() + 14);
 
 			$(".projectDetails").css("display", "block");
 
@@ -21,7 +21,7 @@ $(function() {
 
 			$(".anno2").text("펀딩 기간은 30 일로 고정됩니다.");
 			$(".anno3").text("종료일 : 시작일로부터 30 일 후");
-			$(".anno4").text("후원자 결제 종료 : 종료일로부터 7 일 후");
+			$(".anno4").text("후원자 결제 종료 : 종료일과 동일");
 			$(".anno5").text("창작자 정산 : 후원자 결제일로부터 7 일 후");
 
 			checkFormValidation();

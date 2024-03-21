@@ -33,8 +33,10 @@
 	    				<div class="adm-content-center-main-body1-col2 fl"><%-- entries per page --%></div>
 	    				<div class="adm-content-center-main-body1-col3 fl"><%-- 여백 --%></div>
 	    				<div class="adm-content-center-main-body1-col4 fl">
+	    					<%--
 	    					<div class="adm-content-center-main-body1-col4-searchInput fl"><input type="text" style="width: 100%; height: 100%; border: none; border-right: 0.5px solid lightgray;"></div>
 	    					<div class="adm-content-center-main-body1-col4-searchBtn fl"><a href="#"><i class="fa-solid fa-magnifying-glass fa-xl" style="width: 100%; height: 100%; color: black; padding: 3px 0 0 3px; line-height: 110%;"></i></a></div>
+	    					 --%>
 	    				</div>
 	    			</div>
 	    			<div class="adm-content-center-main-body2">

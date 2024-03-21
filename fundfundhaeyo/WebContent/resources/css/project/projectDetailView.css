@@ -28,7 +28,7 @@
 .project_detail_top_category_col2{width: 20%;}
 
 .project_detail_top_title>div{height: 100%;}
-.project_detail_top_title_col1{width: 85%;}
+.project_detail_top_title_col1{width: 85%; padding-top: 5px;}
 .project_detail_top_title_col2{width: 5%;}
 .project_detail_top_title_col3{width: 10%; padding-top: 15px;}
 

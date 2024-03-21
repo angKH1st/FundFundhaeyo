@@ -40,6 +40,7 @@
 			    				<div class="adm-announcement-content-input fl"><textarea name="content" required></textarea></div>
 			    			</div>
 			    			<div class="adm-content-center-main-body-row3 centerXY">
+			    				<button type="button" onclick="moveToAnnouncement();">목록으로</button>
 			    				<button type="submit" disabled>제출</button>
 			    				<button type="reset">초기화</button>
 			    			</div>

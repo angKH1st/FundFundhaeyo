@@ -1,8 +1,7 @@
-package com.kh.semi1st.admin.member;
+package com.kh.semi1st.member.controller;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,22 +9,22 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.google.gson.Gson;
 import com.kh.semi1st.common.model.vo.PageInfo;
 import com.kh.semi1st.member.model.service.MemberService;
 import com.kh.semi1st.member.model.vo.Member;
+import com.kh.semi1st.member.model.vo.Payment;
 
 /**
- * Servlet implementation class AdminMemberSelectController
+ * Servlet implementation class MemberSelectOrderProjectListController
  */
-@WebServlet("/admSelectList.me")
-public class AdminMemberSelectListController extends HttpServlet {
+@WebServlet("/orderProject.me")
+public class MemberSelectOrderProjectListController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AdminMemberSelectListController() {
+    public MemberSelectOrderProjectListController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -43,7 +42,8 @@ public class AdminMemberSelectListController extends HttpServlet {
 		int startPage;   // 페이징바의 시작 수
 		int endPage;	 // 페이징바의 끝 수
 		
-		listCount = new MemberService().selectMemberListCount();
+		int userNo = ((Member)(request.getSession().getAttribute("loginUser"))).getUserNo();
+		listCount = new MemberService().selectMemberMyPaymentListCount(userNo);
 		currentPage = Integer.parseInt(request.getParameter("cpage"));
 		pageLimit = 5;
 		boardLimit = 10;
@@ -56,17 +56,12 @@ public class AdminMemberSelectListController extends HttpServlet {
 		}
 		
 		PageInfo pi = new PageInfo(listCount, currentPage, pageLimit, boardLimit, maxPage, startPage, endPage);
-		ArrayList<Member> list = new MemberService().selectMemberList(pi);
+		ArrayList<Payment> list = new MemberService().selectMemberMyPaymentList(pi, userNo); 
 		
-		HashMap<String, Object> map = new HashMap<>();
-		map.put("pi", pi);
-		map.put("list", list);
-
-		Gson gson = new Gson();
-		String json = gson.toJson(map);
+		request.setAttribute("pi", pi);
+		request.setAttribute("list", list);
 		
-		response.setContentType("application/json; charset=UTF-8");
-		response.getWriter().write(json);
+		request.getRequestDispatcher("views/member/memberOrderProjectList.jsp").forward(request, response);
 	}
 
 	/**

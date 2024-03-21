@@ -41,12 +41,12 @@
 						<div class="mypage_my_seller_Form_right_root">
 							<span><a href="<%= request.getContextPath() %>/mypage.me">Home</a></span>
 							<span> > </span>
-							<span>나의창작</span>
+							<span>나의 창작</span>
 						</div>
-						<div class="mypage_my_seller_Form_right_title"><h3>나의 창작 프로젝트</h3></div>
+						<div class="mypage_my_seller_Form_right_title"><h3>창작한 프로젝트</h3></div>
 						<div class="mypage_my_seller_Form_right_list brlg br5 pd15">
 						<% if(list.size() == 0){ %>
-							창작한 프로젝트가 없습니다.
+							<div class="centerXY" style="padding-top: 270px;">창작한 프로젝트가 없습니다.</div>
 						<% }else{ %>
 							<% for(Project p : list){ %>
 								<%

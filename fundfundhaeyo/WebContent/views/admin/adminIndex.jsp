@@ -44,7 +44,7 @@
 	    </div>
 	    <div class="adm-content-center">
 	    	<div class="adm-content-center-count">
-	    		<div class="adm-content-center-count-col1 fl">
+	    		<div class="adm-content-center-count-col1 fl" onclick="moveAllMemberList();">
 	    			<div class="adm-content-center-count-col1-inside br5">
 		    			<div class="adm-content-center-count-col1-title">
 		    				<div class="aI fl"><i class="fa-solid fa-user fa-2xl fl"></i></div>
@@ -53,7 +53,7 @@
 		    			<div class="adm-content-center-count-col1-input"><%= mCount %></div>
 	    			</div>
 	    		</div>
-	    		<div class="adm-content-center-count-col2 fl">
+	    		<div class="adm-content-center-count-col2 fl" onclick="moveAllProjectList();">
 	    			<div class="adm-content-center-count-col2-inside br5">
 		    			<div class="adm-content-center-count-col2-title">
 		    				<div class="aI fl"><i class="fa-solid fa-earth-americas fa-2xl fl"></i></div>
@@ -62,7 +62,7 @@
 		    			<div class="adm-content-center-count-col2-input"><%= aCount %></div>
 	    			</div>
 	    		</div>
-	    		<div class="adm-content-center-count-col3 fl">
+	    		<div class="adm-content-center-count-col3 fl" onclick="moveAllProjectList();">
 	    			<div class="adm-content-center-count-col3-inside br5">
 		    			<div class="adm-content-center-count-col3-title">
 		    				<div class="aI fl"><i class="fa-solid fa-person-running fa-2xl fl"></i></div>
@@ -71,7 +71,7 @@
 		    			<div class="adm-content-center-count-col3-input"><%= pCount %></div>
 	    			</div>
 	    		</div>
-	    		<div class="adm-content-center-count-col4 fl">
+	    		<div class="adm-content-center-count-col4 fl" onclick="moveTestProjectList();">
 	    			<div class="adm-content-center-count-col4-inside br5">
 		    			<div class="adm-content-center-count-col4-title">
 		    				<div class="aI fl"><i class="fa-solid fa-gavel fa-2xl fl"></i></div>

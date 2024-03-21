@@ -1,4 +1,4 @@
-package com.kh.semi1st.admin.member;
+package com.kh.semi1st.admin.member.controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;

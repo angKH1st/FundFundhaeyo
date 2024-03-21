@@ -945,4 +945,11 @@
 	 ]]>
 	</entry>
 	
+	<entry key="selectAllTestingProjectListCount">
+		SELECT
+		       COUNT(*) "COUNT"
+		  FROM TB_PROJECT
+		 WHERE PROJECT_STATUS = 'N'
+	</entry>
+	
 </properties>

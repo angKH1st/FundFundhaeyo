@@ -33,7 +33,7 @@
 	    		<div class="adm-content-center-main-body pd15">
 	    			<div class="adm-content-center-main-body-left pd15 fl">
 						<div class="adm-content-left-area1">
-							<div class="adm-content-left-area1-header adm-content-center-main-body-header">사진</div>
+							<div class="adm-content-left-area1-header adm-content-center-main-body-header">프로젝트 사진</div>
 							<div class="adm-content-left-area1-body pd15">
 								<div class="adm-content-left-area1-body-photo">
 									<div class="slider">
@@ -120,16 +120,16 @@
 										</div>
 									</div>
 									<div class="adm-content-right-area1-body-info-col3 pd15 fl">
-										<div class="adm-info-col3-row1 br5 brlg">
+										<div class="adm-info-col3-row1">
 											<div class="adm-info-col3-row1-searchNo-title fl">심사할 프로젝트의 번호</div>
 											<% if(searchNo != 0) { %>
-											<div class="adm-info-col3-row1-searchNo-input fl"><input class="brlg" type="text" id="searchNo" value="<%= searchNo %>"></div>
+											<div class="adm-info-col3-row1-searchNo-input fl"><input type="text" id="searchNo" value="<%= searchNo %>"></div>
 											<script>var autoSearch = true;</script>
 											<% }else{ %>
-											<div class="adm-info-col3-row1-searchNo-input fl"><input class="brlg" type="text" id="searchNo"></div>
+											<div class="adm-info-col3-row1-searchNo-input fl"><input type="text" id="searchNo"></div>
 											<script>var autoSearch = false;</script>
 											<% } %>
-											<div class="adm-info-col3-row1-searchNo-btn br5 brlg fl"><a onclick="searchNo();" ><i class="fa-solid fa-magnifying-glass fa-xl hoverA3" style="width: 100%; height: 100%; margin-left: 5px; line-height: 150%;"></i></a></div>
+											<div class="adm-info-col3-row1-searchNo-btn fl"><a onclick="searchNo();" ><i class="fa-solid fa-magnifying-glass fa-xl hoverA3" style="width: 100%; height: 100%; margin-left: 5px; line-height: 150%;"></i></a></div>
 										</div>
 										<div class="adm-info-col3-row2 brlg br5">
 											<div class="adm-info-projectContent-title bglg">내용</div>

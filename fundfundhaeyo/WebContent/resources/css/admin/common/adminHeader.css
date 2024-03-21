@@ -39,14 +39,14 @@
 }
 
 .adm-header>div{height: 100%;}
-.adm-header-left{width: 10%;}
-.adm-header-center{width: 75%;}
+.adm-header-left{width: 11%;}
+.adm-header-center{width: 74%;}
 .adm-header-right{width: 15%;}
 
 .adm-header-left>div{height: 100%;}
 .adm-header-left-col1{width: 35%;}
-.adm-header-left-col2{width: 35%;}
-.adm-header-left-col3{width: 30%;}
+.adm-header-left-col2{width: 30%;}
+.adm-header-left-col3{width: 35%; padding-top: 17px;}
 
 #sidebarToggle {
     display: flex;

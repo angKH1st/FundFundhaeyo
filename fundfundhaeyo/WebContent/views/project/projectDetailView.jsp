@@ -70,7 +70,7 @@
 						<div class="project_detail_top_category_col2 fl"><span><%= p.getProjectTag() %></span></div>
 					</div>
 					<div class="project_detail_top_title">
-						<div class="project_detail_top_title_col1 fl"><h3><%= p.getProjectOverview() %></h3></div>
+						<div class="project_detail_top_title_col1 fl"><h4><%= p.getProjectOverview() %></h4></div>
 						<div class="project_detail_top_title_col2 fl"><%-- 여백 --%></div>
 						<div class="project_detail_top_title_col3 fl"></div>
 					</div>

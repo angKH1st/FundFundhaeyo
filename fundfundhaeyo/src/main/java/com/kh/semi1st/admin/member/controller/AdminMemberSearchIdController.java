@@ -1,4 +1,4 @@
-package com.kh.semi1st.admin.member;
+package com.kh.semi1st.admin.member.controller;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -32,7 +32,7 @@ public class AdminMemberSearchIdController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String searchId = request.getParameter("searchId");
+String searchId = request.getParameter("searchId");
 		
 		Member m = new MemberService().memberSearchId(searchId);
 		Member sm = new MemberService().selectMemberSellerList(m.getUserNo());
