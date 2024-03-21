@@ -44,7 +44,7 @@
                     </a>
                     </div>
                     <div>
-                        <a href="https://twitter.com/?lang=ko">
+                        <a href="https://twitter.com/FUNDFFHY">
                             <i class="fa-brands fa-twitter fa-xl"></i>
                         </a>
                     </div>
@@ -59,7 +59,7 @@
                         </a>
                     </div>
                     <div>
-                        <a href="https://www.kakaocorp.com/page/service/service/KakaoTalk">
+                        <a href="https://open.kakao.com/o/sNRtMchg">
                             <i class="fa-solid fa-comment fa-xl"></i>
                         </a>
                     </div>
