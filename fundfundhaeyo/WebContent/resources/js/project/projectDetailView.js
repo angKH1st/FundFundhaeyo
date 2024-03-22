@@ -63,7 +63,7 @@ function selectChatList() {
 							   + "<div class=\"project_chat_notMy_col2_row2\">" + list[i].chatContent + "</div>"
 							   + "</div>"
 							   + "<div class=\"project_chat_notMy_col3 fl\">"
-							   + "<i class=\"fa-solid fa-exclamation fa-lg\"></i>"
+							   + "<i class=\"fa-solid fa-face-smile fa-xs\"></i>"
 							   + "</div>"
 							   + "</div>"
 							   + "</div>"
