@@ -16,6 +16,15 @@ public class Payment {
 	private String paymentProjectName;
 	private String paymentProjectImg;
 	
+	public Payment(String paymentNo, int paymentUserNo, int paymentProjectNo, int paymentAmount, int paymentMethod) {
+		super();
+		this.paymentNo = paymentNo;
+		this.paymentUserNo = paymentUserNo;
+		this.paymentProjectNo = paymentProjectNo;
+		this.paymentAmount = paymentAmount;
+		this.paymentMethod = paymentMethod;
+	}
+
 	public String getPaymentProjectImg() {
 		return paymentProjectImg;
 	}

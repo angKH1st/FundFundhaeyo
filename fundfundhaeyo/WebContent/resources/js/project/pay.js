@@ -59,7 +59,7 @@ $(document).ready(function(){
 						method: method
 					},
 					success: function(result){
-						if(result === 1){
+						if(result > 0){
 							alert("결제가 성공적으로 완료되었습니다.");
 							location.href="/fund/orderProject.me?cpage=1"
 						}else{
@@ -75,7 +75,6 @@ $(document).ready(function(){
 			}
 		});
     };
-	
 	payButton.on("click", onClickPay);
 });
 
