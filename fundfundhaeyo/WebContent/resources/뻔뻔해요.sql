@@ -495,7 +495,7 @@ INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_
 VALUES(SEQ_PROJECT_NO.NEXTVAL, 7, 120, '제주도 바다 패브릭 포스터' , '제주도를 추억하는 방식 패브릭 포스터', '육지에서는 느끼지 못한 감성들을 담아봤습니다.', '#제주바다', 300000, '2024-02-27', '2024-03-29', '2024-03-29', '2024-04-12', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 8, 120, '북미,남미,유럽 등 여행하며 찍은 지평선이 담긴 엽서북' , '여행 중 만난 지평선 연결 엽서북', '사진밖으로 연결되는 세계 각지의 순간을 함께', '#지평선' , 800000, '2024-02-27', '2024-03-29', '2024-03-29', '2024-04-12', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 8, 120, '유럽 여행하며 찍은 엽서북' , '여행 중 만난 지평선 연결 엽서북', '사진밖으로 연결되는 세계 각지의 순간을 함께', '#지평선' , 800000, '2024-02-27', '2024-03-29', '2024-03-29', '2024-04-12', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
 VALUES(SEQ_PROJECT_NO.NEXTVAL, 9, 120, '야생화 엽서북' , '야생화 엽서북', '엽서에 이름, 학명, 문장을 적어서 어디 풍경인지 알 수 있어요', '#꽃', 300000, '2024-02-27', '2024-03-29', '2024-03-29', '2024-04-12', 'Y');
@@ -528,7 +528,7 @@ INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_
 VALUES(SEQ_PROJECT_NO.NEXTVAL, 16, 130, '놀이와 치석제거를 한번에' , '놀이부터 치석제거까지 1석2조 장난감', '천연고무로 만든 강아지 노즈워크 장난감', '#강아지 장난감', 800000, '2024-02-28', '2024-03-30', '2024-03-30', '2024-04-13', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 17, 130, '세상에 단 하나뿐인 고양이 츄르짜개' , '마지막까지 츄릅 고양이 전용 츄르짜개', '우리 집 고양이의 이름이 각인된 고양이 츄르짜개' || CHR(10) || CHR(10) ||
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 17, 130, '세상 하나뿐인 고양이 츄르짜개' , '마지막까지 츄릅 고양이 전용 츄르짜개', '우리 집 고양이의 이름이 각인된 고양이 츄르짜개' || CHR(10) || CHR(10) ||
 '다들 츄르를 줄 때 항상 남아서 손으로 여러번 짜주는게 불편하고, 가끔 손을 무는 고양이도 있고, 손에 츄르가 묻어서 번거로운걸 경험하셨을거라 생각합니다.'  || CHR(10) || CHR(10) ||
 '그래서 제작 해봤습니다! 한손으로도 줄 수 있는 츄르 짜개 세상에 단 하나뿐인, 우리 고양이 전용 츄르짜개를 선물해봐요', '#고양이 츄르짜개', 400000, '2024-02-28', '2024-03-30', '2024-03-30', '2024-04-13', 'Y');
 
@@ -548,7 +548,7 @@ INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_
 VALUES(SEQ_PROJECT_NO.NEXTVAL, 12, 140, '다이아몬드를 대체할 모이사나이트' , '다이아몬드를 대체할 모이사나이트', '다이아몬드와 비슷하지만 더 친환경적인', '#모이사나이트', 400000, '2024-02-28', '2024-03-30', '2024-03-30', '2024-04-13', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 13, 140, '살고싶은 삶을 성취할 수 있도록 지지하고 도와주는 원석' , '악몽을 걸러주는 드림캐쳐 목걸이', '착용할수록 내 몸에 맞게 에이징 되는 금속 스털링 실버로 제작', '#목걸이', 800000, '2024-02-28', '2024-03-30', '2024-03-30', '2024-04-13', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 13, 140, '살고싶은 삶을 성취할 수 있는 원석' , '악몽을 걸러주는 드림캐쳐 목걸이', '착용할수록 내 몸에 맞게 에이징 되는 금속 스털링 실버로 제작', '#목걸이', 800000, '2024-02-28', '2024-03-30', '2024-03-30', '2024-04-13', 'Y');
 --------------------------------------------------
 ----------------- NOTICE 알림 관련 -----------------	
 --------------------------------------------------
