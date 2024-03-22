@@ -100,6 +100,8 @@
 
 .adm-content-right-area2-header{height: 17%;}
 .adm-content-right-area2-body{height: 83%;}
+.adm-content-right-area2-body>input{border: none; outline: none;}
+.adm-content-right-area2-body:focus{border: none;}
 
 .adm-content-right-area3{text-align:right; margin-top: 30px;}
 .adm-content-right-area3>button{width: 75px; height: 30px;}

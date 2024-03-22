@@ -298,6 +298,20 @@ public class ProjectService {
 		
 		return list;
 	}
+	
+	/** 프로젝트 제한 조회
+	 *  @param pi : 페이징 처리 객체
+	 *  @return list : 프로젝트 제한 list
+	 */
+	public ArrayList<Project> selectProjectAllList(PageInfo pi) {
+		Connection conn = getConnection();
+		
+		ArrayList<Project> list = new ProjectDao().selectProjectAllList(conn, pi);
+		
+		close(conn);
+		
+		return list;
+	}
 
 	/** 심사 대상 프로젝트 제한 조회
 	 *  @param pi : 페이징 처리 객체

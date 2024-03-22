@@ -148,9 +148,9 @@
 							<div class="adm-content-right-area2-body pd15"><input class="reason" type="text" style="width: 100%; height: 100%;" required></div>
 						</div>
 						<div class="adm-content-right-area3">
-							<button type="button" class="adm-ban-allow-reset br5 brlg" onclick="resetUpdate();">초기화</button>
-							<button type="button" class="adm-allow-btn br5 brlg" disabled onclick="banAllow('W');">승인</button>
-							<button type="button" class="adm-ban-btn br5 brlg" disabled onclick="banAllow('B');">반려</button>
+							<button type="button" class="adm-ban-allow-reset br5 brlg" onclick="resetUpdate();" style="background-color: white; border: none;">초기화</button>
+							<button type="button" class="adm-allow-btn br5 brlg" disabled onclick="banAllow('W');" style="background-color: white; border: none;">승인</button>
+							<button type="button" class="adm-ban-btn br5 brlg" disabled onclick="banAllow('B');" style="background-color: white; border: none;">반려</button>
 						</div>
 					</div>
 	    		</div>

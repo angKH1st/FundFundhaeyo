@@ -43,7 +43,7 @@ public class AdminProjectSelectListController extends HttpServlet {
 		int startPage;   // 페이징바의 시작 수
 		int endPage;	 // 페이징바의 끝 수
 		
-		listCount = new ProjectService().selectProjectListCount();
+		listCount = new ProjectService().selectProjectAllListCount();
 		currentPage = Integer.parseInt(request.getParameter("cpage"));
 		pageLimit = 5;
 		boardLimit = 10;
@@ -56,7 +56,7 @@ public class AdminProjectSelectListController extends HttpServlet {
 		}
 		
 		PageInfo pi = new PageInfo(listCount, currentPage, pageLimit, boardLimit, maxPage, startPage, endPage);
-		ArrayList<Project> list = new ProjectService().selectProjectList(pi);
+		ArrayList<Project> list = new ProjectService().selectProjectAllList(pi);
 		
 		HashMap<String, Object> map = new HashMap<>();
 		map.put("pi", pi);

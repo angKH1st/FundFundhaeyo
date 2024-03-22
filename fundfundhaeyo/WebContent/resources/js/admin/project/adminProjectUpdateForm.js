@@ -100,18 +100,18 @@ function searchNo(){
 					switch(p.projectStatus){
 						case 'N' : 
 						$('.adm-ban-btn').prop('disabled', false);     // 반려 버튼 활성화
-						$('.adm-ban-btn').css('color', "red");
+						$('.adm-ban-btn').css('color', "red").css('background-color', 'white');
 						$('.adm-ban-btn').addClass('hoverA3');
 	        			$('.adm-allow-btn').prop('disabled', false);   // 승인 버튼 활성화
-						$('.adm-allow-btn').css('color', "blue");
+						$('.adm-allow-btn').css('color', "blue").css('background-color', 'white');
 						$('.adm-allow-btn').removeClass('hoverA3');
 	        			break;
 	        			case 'B' :
 	        			$('.adm-ban-btn').prop('disabled', true);      // 반려 버튼 비활성화
-	        			$('.adm-ban-btn').css('color', "gray");
+	        			$('.adm-ban-btn').css('color', "gray").css('background-color', 'white');
 	        			$('.adm-ban-btn').removeClass('hoverA3');
 				        $('.adm-allow-btn').prop('disabled', true);    // 승인 버튼 비활성화
-				        $('.adm-allow-btn').css('color', "gray");
+				        $('.adm-allow-btn').css('color', "gray").css('background-color', 'white');
 				        $('.adm-allow-btn').addClass('hoverA3');
 				        break;
 					}
