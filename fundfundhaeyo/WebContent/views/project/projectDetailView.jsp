@@ -132,10 +132,12 @@
 								<div class="project_detail_top_info_row2_btn1_num"><%= liker %></div>
 							</div>
 							<% } %>
+							<%--
 							<div class="project_detail_top_info_row2_btn2 br5 brlg fl share" data-projectNo="<%= p.getProjectNo() %>" onclick="sharePage();">
 								<div class="project_detail_top_info_row2_btn2_icon"><i class="fa-solid fa-share-nodes"></i></div>
 								<div class="project_detail_top_info_row2_btn2_num shareCnt"></div>
 							</div>
+							 --%>
 							<div class="project_detail_top_info_row2_btn4 br5 brlg fl clap" data-projectNo="<%= p.getProjectNo() %>" onclick="clapPage();">
 								<div class="project_detail_top_info_row2_btn4_icon"><i class="fa-solid fa-hands-clapping fa-sm"></i></div>
 								<div class="project_detail_top_info_row2_btn4_num clapCnt"></div>

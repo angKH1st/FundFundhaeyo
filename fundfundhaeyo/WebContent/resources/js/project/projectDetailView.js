@@ -94,6 +94,7 @@ function selectChatList() {
 	});
 }
 
+/*
 function sharePage(){
 	const shareObject = {
 		title: "뻔뻔해요 상품 페이지 입니다. 지금 후원에 참여하세요! 😘",
@@ -101,6 +102,7 @@ function sharePage(){
 		url: window.location.href
 	};
 	
+	if(navigator.share){
 		navigator
 		.share(shareObject)
 		.then(() => {
@@ -108,7 +110,11 @@ function sharePage(){
 		.catch((error) => {
 			alert('공유하기 실패했습니다.')
 		})
+	}else{
+		alert('페이지 공유를 지원하지 않습니다.')
+	}
 }
+*/
 
 $(document).ready(function() {
 	// 페이지가 로드되었을 때 프로젝트에 대한 '공유' 횟수를 조회

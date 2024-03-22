@@ -65,7 +65,7 @@
 
 .project_detail_top_info_row2>div{height: 100%;}
 .project_detail_top_info_row2>div:hover{cursor: pointer;}
-.project_detail_top_info_row2_btn1{width: 11%; text-align: center; padding: 4px; background-color: white; transition: transform 0.3s ease-in-out;}
+.project_detail_top_info_row2_btn1{width: 11%; text-align: center; padding: 4px; background-color: white; transition: transform 0.3s ease-in-out; margin-right: 10px;}
 .project_detail_top_info_row2_btn1:hover {transform: scale(1.1);}
 .project_detail_top_info_row2_btn2{width: 11%; text-align: center; padding: 4px; background-color: white; margin: 0 10px; transition: transform 0.3s ease-in-out;}
 .project_detail_top_info_row2_btn2:hover {transform: scale(1.1);}
