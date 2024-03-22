@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="resources/css/memberMypageSidebar.css">
 <script src="https://kit.fontawesome.com/4dc2c036ac.js" crossorigin="anonymous"></script>
 </head>
-<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+<link rel="icon" sizes="32x32" type="image/png" href="resources/image/main.ico">
 <body>
 	<div class="mypage_left_area fl">
 		<div class="mypage_left_top" align="center">

@@ -28,7 +28,7 @@
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <link rel="stylesheet" href="resources/css/admin/common/adminIndex.css">
 </head>
-<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+<link rel="icon" sizes="32x32" type="image/png" href="resources/image/main.ico">
 <body>
 	<%@ include file="common/adminHeader.jsp" %>
 	

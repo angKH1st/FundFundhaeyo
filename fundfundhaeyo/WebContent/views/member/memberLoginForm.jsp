@@ -8,7 +8,7 @@
 <script type="text/javascript" src="https://developers.kakao.com/sdk/js/kakao.js"></script>
 <link rel="stylesheet" href="resources/css/member/memberLoginForm.css">
 </head>
-<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+<link rel="icon" sizes="32x32" type="image/png" href="resources/image/main.ico">
 <body>
 	<%@ include file="../common/header.jsp" %>
 	

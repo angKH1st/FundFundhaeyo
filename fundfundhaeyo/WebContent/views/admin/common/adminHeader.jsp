@@ -28,7 +28,7 @@
 	@font-face {font-family: 'SejonghospitalBold';src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/SejonghospitalBold.woff2') format('woff2');font-weight: 400;font-style: normal;}
 	.font_sejong_outer{font-family: SejonghospitalBold; font-weight: 400; font-style: normal;}	
 </style>
-<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+<link rel="icon" sizes="32x32" type="image/png" href="resources/image/main.ico">
 <body>
 	<% if(alertMsg != null) { %>
 		<script>
