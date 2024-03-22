@@ -54,7 +54,7 @@
 							<div class="mypage_order_Form_right_list_inside brlg br5">
 								<div class="order_btn_area">
 									<div class="order_btn fl">
-										<%= ((Member)request.getAttribute("loginUser")).getUserName() %> 님의 결제 내역입니다.
+										프로젝트 결제 내역입니다.
 									</div> 
 									<div class="order_cnt fl">
 									</div>

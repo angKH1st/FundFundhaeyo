@@ -29,10 +29,10 @@
 						<div class="mypage_notices_Form_right_list brlg br5">
 							<div class="notices_btn_area">
 								<div class="notices_btn fl">
-									<button type="button" class="current nBtn0" onclick="selectNotice(0, this);">전체</button> | 
-									<button type="button" class="nBtn1" onclick="selectNotice(1, this);">공지사항</button> |
-									<button type="button" class="nBtn2" onclick="selectNotice(2, this);">프로젝트</button> |
-									<button type="button" class="nBtn3" onclick="selectNotice(3, this);">Q&A</button>
+									<button type="button" class="current nBtn nBtn0" onclick="selectNotice(0, this);">전체</button> | 
+									<button type="button" class="nBtn1 nBtn" onclick="selectNotice(1, this);">공지사항</button> |
+									<button type="button" class="nBtn2 nBtn" onclick="selectNotice(2, this);">프로젝트</button> |
+									<button type="button" class="nBtn3 nBtn" onclick="selectNotice(3, this);">Q&A</button>
 								</div> 
 								<div class="notices_cnt fl">
 								</div>

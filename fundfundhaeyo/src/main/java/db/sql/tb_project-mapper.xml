@@ -447,6 +447,7 @@
 		SELECT
 		       COUNT(*) count
 		  FROM TB_PROJECT
+		 WHERE PROJECT_STATUS IN ('Y', 'E', 'W')
 	</entry>
 	
 	<entry key="selectProjectEndListCount">
@@ -461,7 +462,6 @@
 		       COUNT(*) count
 		  FROM TB_PROJECT
 		 WHERE PROJECT_STATUS = 'N'
-		   AND SYSDATE BETWEEN PROJECT_START AND PROJECT_END
 	</entry>
 	
 	<entry key="selectProjectLikesListCount">

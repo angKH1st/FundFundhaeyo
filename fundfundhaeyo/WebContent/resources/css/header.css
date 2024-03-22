@@ -34,6 +34,9 @@ html {overflow-y: scroll;}
 .hoverA2-2{text-decoration: none; color: black;}
 .hoverA2-2:hover{font-weight: bold; background-color: #f5f5f5;}
 
+.hoverA2-3{text-decoration: none; color: black;}
+.hoverA2-3:hover{font-weight: bold; background-color: #f5f5f5; cursor: pointer;}
+
 .hoverA3:hover{font-weight: bold; cursor: pointer;}
 
 .prHoverContainer{position: relative; overflow: hidden;}

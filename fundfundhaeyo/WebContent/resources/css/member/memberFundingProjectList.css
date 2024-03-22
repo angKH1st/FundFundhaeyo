@@ -51,8 +51,9 @@
 
 .funding_btn_area button{background-color: white; border:none;}
 
-.funding_funding_area>div{width: 100%; transition: transform 0.3s ease-in-out;}
-.funding_funding_area>div:hover{cursor: pointer; transform: scale(1.01);}
+.funding_funding_area>div{width: 100%;}
+.hover_thing{transition: transform 0.3s ease-in-out;}
+.hover_thing:hover{transform: scale(1.01);}
 .funding_obj>div{height: 100%; border-bottom: 0.5px solid lightgray;}
 .funding_area_left{width: 12%;}
 .funding_area_blank{width:2%;}

@@ -54,7 +54,7 @@
 							<div class="mypage_funding_Form_right_list_inside brlg br5">
 								<div class="funding_btn_area">
 									<div class="funding_btn fl">
-										<%= ((Member)request.getAttribute("loginUser")).getUserName() %> 님의 수익 내역입니다.
+										프로젝트 수익 내역입니다.
 									</div> 
 									<div class="funding_cnt fl">
 									</div>
@@ -72,7 +72,7 @@
 										<div class="funding_percentage_top centerXY fl">달성률</div>
 									</div>
 									<% for(int i = 0; i < list.size(); i++){ %>
-									<div class="funding_thing">
+									<div class="funding_thing hover_thing">
 										<div class="funding_index centerXY fl"><%= (currentPage - 1) * boardLimit + i + 1 %></div>
 										<div class="funding_category centerXY fl"><%= list.get(i).getPjCategoryName() %></div>
 										<div class="funding_tag centerXY fl"><%= list.get(i).getProjectTag() %></div>

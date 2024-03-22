@@ -23,8 +23,8 @@
 .mypage_recent_Form_right_list>div{width: 100%;}
 .recent_btn_area{height: 10%; border-bottom: 0.5px solid lightgray;}
 .recent_btn_area>div{height: 100%;}
-.recent_btn{width: 30%; padding: 17px 0 0 10px;}
-.recent_cnt{width: 70%; text-align: right; padding: 17px 10px 0 0;}
+.recent_btn{width: 45%; padding: 17px 0 0 10px;}
+.recent_cnt{width: 55%; text-align: right; padding: 17px 10px 0 0;}
 .recent_recent_area{height: 90%; overflow: auto;}
 .recent_recent_area::-webkit-scrollbar {display:none;}
 
@@ -51,8 +51,10 @@
 .current{color: skyblue;}
 
 .recent_recent_area>div{width: 100%; height: 100%;}
-.member_pr_form>div{width: 100%; height: 95px; margin: 19px 0; transition: transform 0.3s ease-in-out;}
-.member_pr_form>div:hover{transform: scale(1.1); cursor: pointer;}
+.member_pr_form>div{width: 100%; height: 95px; margin: 19px 0;}
+
+.member_pr_recent{transition: transform 0.3s ease-in-out;}
+.member_pr_form:hover{transform: scale(1.1); cursor: pointer;}
 
 .member_pr_recent>div{height: 100%;}
 .pr_img{width: 25%;}

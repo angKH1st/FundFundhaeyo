@@ -136,8 +136,10 @@
 							</div>
 						</div>
 						<div class="adm-content-right-profile2">
-							<div class="adm-content-right-profile2-header adm-content-center-main-body-header">신고 관련?</div>
+							<%--
+							<div class="adm-content-right-profile2-header adm-content-center-main-body-header"></div>
 							<div class="adm-content-right-profile2-body pd15"></div>
+							 --%>
 						</div>
 						<div class="adm-content-right-profile3">
 							<button style="background-color: white;" type="button" onclick="moveToList();">목록으로</button>

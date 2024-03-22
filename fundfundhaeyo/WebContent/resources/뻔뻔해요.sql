@@ -354,7 +354,9 @@ INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_
 VALUES(SEQ_PROJECT_NO.NEXTVAL, 6, 60, '셜록홈즈', '셜록홈즈 일대기', '그가 살아온 인생이 궁금하다면?', '#셜록홈즈', 5000000, '2024-02-22', '2024-03-24', '2024-03-24', '2024-04-07', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 7, 70, '추억의 이순신 게임', '7차 교육과정에도 실린 이순신 게임', '그 시절이 궁금하신가요?', '#이순신 게임', 6000000, '2024-02-22', '2024-03-24', '2024-03-24', '2024-04-07', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 7, 70, '추억의 이순신 게임', '7차 교육과정에도 실린 이순신 게임', '이순신을 모티브로 한 독창적이면서도 역사적인 배경의 게임에서 플레이어는 독도를 수호하는 이순신 장군의 역할을 맡게 됩니다.' || CHR(10) || CHR(10) ||  
+'게임은 총 3개의 스테이지로 구성되며, 각 스테이지의 마지막에는 강력한 보스를 물리쳐야 합니다.' || CHR(10) || CHR(10) ||   
+'이 게임은 역사와 전통을 사랑하는 마음을 담아 제작된 게임입니다. 플레이어는 이순신 장군의 영웅적인 모습을 체험하며 역사에 대한 이해도 높일 수 있을 것입니다. 많은 관심과 사랑 부탁드립니다!', '#이순신 게임', 6000000, '2024-02-22', '2024-03-24', '2024-03-24', '2024-04-07', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
 VALUES(SEQ_PROJECT_NO.NEXTVAL, 8, 20, '생원유로 만든 진짜 카이막' , '현재 그대로 진짜 카이막', '후처리 압축과정을 통한 더 진하고 깊은 맛', '#카이막', 500000, '2024-02-22', '2024-03-24', '2024-03-24', '2024-04-07', 'Y');
@@ -372,7 +374,8 @@ INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_
 VALUES(SEQ_PROJECT_NO.NEXTVAL, 3, 20, '맛과 영양 가득 천연벌꿀' , '천연벌꿀, 감귤꽃꿀', '각종 비타민과 천연 당분이 풍부합니다.', '#천연벌꿀', 100000, '2024-02-23', '2024-03-25', '2024-03-25', '2024-04-08', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 4, 40, '푹신푹신 햄스터 키링' , '푹햄이들 인형키링', '푹햄이 만지면서 힐링하세요', '#인형 키링', 800000, '2024-02-23', '2024-03-25', '2024-03-25', '2024-04-08', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 4, 40, '푹신푹신 햄스터 키링' , '푹햄이들 인형키링', '푹신푹신 햄스터란 이름답게 곁에두고 만지작 만지작 힘들 때 마다 만질 수 있으면 조금 더 힘이 나시지 않을까? 라는 저의 생각으로 푹햄이들 키링을 만들게 되었어요'  || CHR(10) || CHR(10) ||
+'정수리에 삐죽 튀어나온 앙증맞은 귀, 쪼그만 손가락 그리고 뒤에 달린 작고 귀여운 꼬리 오늘도 푹신푹신 귀여운 하루 되세요 햄내 ^-^!', '#인형 키링', 800000, '2024-02-23', '2024-03-25', '2024-03-25', '2024-04-08', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
 VALUES(SEQ_PROJECT_NO.NEXTVAL, 5, 40, '말랑쫀득 펭귄인형' , '말랑쫀득 펭귄인형', '일상에서 함께 하는 말랑쫀득 펭귄인형', '#캐릭터 인형', 700000, '2024-02-23', '2024-03-25', '2024-03-25', '2024-04-08', 'Y');
@@ -525,7 +528,9 @@ INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_
 VALUES(SEQ_PROJECT_NO.NEXTVAL, 16, 130, '놀이와 치석제거를 한번에' , '놀이부터 치석제거까지 1석2조 장난감', '천연고무로 만든 강아지 노즈워크 장난감', '#강아지 장난감', 800000, '2024-02-28', '2024-03-30', '2024-03-30', '2024-04-13', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
-VALUES(SEQ_PROJECT_NO.NEXTVAL, 17, 130, '세상에 단 하나뿐인 고양이 츄르짜개' , '마지막까지 츄릅 고양이 전용 츄르짜개', '이름을 각인할 수 있고, 키링으로 쓸 수 있어요', '#고양이 츄르짜개', 400000, '2024-02-28', '2024-03-30', '2024-03-30', '2024-04-13', 'Y');
+VALUES(SEQ_PROJECT_NO.NEXTVAL, 17, 130, '세상에 단 하나뿐인 고양이 츄르짜개' , '마지막까지 츄릅 고양이 전용 츄르짜개', '우리 집 고양이의 이름이 각인된 고양이 츄르짜개' || CHR(10) || CHR(10) ||
+'다들 츄르를 줄 때 항상 남아서 손으로 여러번 짜주는게 불편하고, 가끔 손을 무는 고양이도 있고, 손에 츄르가 묻어서 번거로운걸 경험하셨을거라 생각합니다.'  || CHR(10) || CHR(10) ||
+'그래서 제작 해봤습니다! 한손으로도 줄 수 있는 츄르 짜개 세상에 단 하나뿐인, 우리 고양이 전용 츄르짜개를 선물해봐요', '#고양이 츄르짜개', 400000, '2024-02-28', '2024-03-30', '2024-03-30', '2024-04-13', 'Y');
 
 INSERT INTO TB_PROJECT(PROJECT_NO, PROJECT_SELLER, PROJECT_CATEGORY_NO, PROJECT_OVERVIEW, PROJECT_TITLE, PROJECT_CONTENT, PROJECT_TAG, PROJECT_PRICE, PROJECT_START, PROJECT_END, PROJECT_PAYMENT_BUYER, PROJECT_PAYMENT_SELLER, PROJECT_STATUS) 
 VALUES(SEQ_PROJECT_NO.NEXTVAL, 18, 130, '고양이 전용 밀크티' , '고양이와 티타임', '고양이가 좋아하는 허브4종', '#개껌', 500000, '2024-02-28', '2024-03-30', '2024-03-30', '2024-04-13', 'Y');

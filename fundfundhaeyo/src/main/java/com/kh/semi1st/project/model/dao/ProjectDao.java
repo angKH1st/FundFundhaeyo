@@ -686,6 +686,10 @@ public class ProjectDao {
 			pstmt = conn.prepareStatement(sql);
 
 			rset = pstmt.executeQuery();
+			
+			if(rset.next()) {
+				listCount = rset.getInt("count"); 
+			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {

@@ -107,7 +107,7 @@ function sharePage(){
 		.then(() => {
 		})
 		.catch((error) => {
-			alert('공유하기 실패')
+			alert('공유하기 실패했습니다.')
 		})
 	}else{
 		alert('페이지 공유를 지원하지 않습니다.')

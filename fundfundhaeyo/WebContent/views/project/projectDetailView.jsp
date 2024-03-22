@@ -161,7 +161,7 @@
 				<div class="project_detail_content_col1 fl">
 					<div class="project_detail_content_col1_row1">
 						<div class="project_detail_content_project_title">상세설명</div>
-						<div class="project_detail_content_project_content brlg br5"><%= p.getProjectTitle() %></div>
+						<div class="project_detail_content_project_content brlg br5"><%= p.getProjectContent() %></div>
 					</div>
 					<div class="project_detail_content_col1_row2"><%-- 여백 --%></div>
 					<div class="project_detail_content_col1_row3">

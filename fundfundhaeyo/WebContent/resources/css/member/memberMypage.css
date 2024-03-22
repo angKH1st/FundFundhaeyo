@@ -33,7 +33,7 @@
 .mypage_activity_row1_grade2, .mypage_activity_row1_grade3, .mypage_activity_row1_grade4{border-left: 0.5px solid lightgray;}
 .mypage_activity_row1_grade1_title, .mypage_activity_row1_grade2_title, .mypage_activity_row1_grade3_title, .mypage_activity_row1_grade4_title{width: 20%; padding-top: 5px;}
 .mypage_activity_row1_grade1_count, .mypage_activity_row1_grade2_count, .mypage_activity_row1_grade3_count, .mypage_activity_row1_grade4_count{transition: transform 0.3s ease-in-out;}
-.mypage_activity_row1_grade1_count:hover, .mypage_activity_row1_grade2_count:hover, .mypage_activity_row1_grade3_count:hover, .mypage_activity_row1_grade4_count:hover {transform: scale(1.1);}
+.mypage_activity_row1_grade1_count:hover, .mypage_activity_row1_grade2_count:hover, .mypage_activity_row1_grade3_count:hover, .mypage_activity_row1_grade4_count:hover{transform: scale(1.1);}
 .mypage_count{width: 60%; text-align: right; padding: 20px 10px 0 0;}
 .mypage_title{width: 40%; text-align: left;}
 

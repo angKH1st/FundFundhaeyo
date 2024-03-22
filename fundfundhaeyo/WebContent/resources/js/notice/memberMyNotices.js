@@ -1,10 +1,21 @@
 $(document).ready(function() {
-	selectNotice(0, $('.nBtn0'));
-	
-	setInterval(function() {
-        selectNotice(0, $('.nBtn0'));
-    }, 5000);
-})
+    var currentIndex = 0; // 현재 선택된 버튼의 인덱스를 추적
+
+    // 초기 선택
+    selectNotice(currentIndex, $('.nBtn' + currentIndex));
+    
+    // 버튼 클릭 이벤트 핸들러
+    $('.nBtn').click(function() {
+        var index = $(this).index(); // 클릭된 버튼의 인덱스
+        currentIndex = index; // 현재 인덱스 업데이트
+        selectNotice(index, $(this));
+    });
+
+    // 5초마다 현재 선택된 버튼에 대한 알림 새로고침
+    setInterval(function() {
+        selectNotice(currentIndex, $('.nBtn' + currentIndex));
+    }, 1000);
+});
 
 function selectNotice(index, clickedElement) {
 	$('.nBtn0, .nBtn1, .nBtn2, .nBtn3').removeClass('current');

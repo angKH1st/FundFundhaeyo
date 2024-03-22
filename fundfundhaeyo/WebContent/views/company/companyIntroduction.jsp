@@ -88,7 +88,7 @@ pageEncoding="UTF-8"%>
 		          		<div class="member_name"><i class="fa-solid fa-address-book"></i> 어수지</div>
 		          		<div class="member_info">
 			          		<div class="member_profile centerXY pd15 fl">
-			          			 <img src="#">
+			          			 <img src="resources/image/FFHY/Suuuji.jpg">
 			          		</div>
 				        	 <div class="member_social fl">
 				          		 <div class="member_github github" onclick="githubSuuuji();">

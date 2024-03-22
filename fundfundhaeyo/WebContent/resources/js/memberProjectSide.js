@@ -13,6 +13,8 @@ $(document).ready(function() {
 		traditional: true,
 		success: function(list){
 			let value = "";
+			if(list.length !== 0){
+				
 			for(let i = 0; i < list.length; i++){
 				value += `<div class="member_pr_recent" onclick="moveToDetail(${list[i].projectNo});">
 	                		  <div class="pr_img centerXY fl"><img class="br10" width=65 height=65 src="${list[i].projectTitleImg}"></div>
@@ -22,6 +24,9 @@ $(document).ready(function() {
 	                		  	  <div class="pr_content_overview">${list[i].projectOverview}</div>
 	                		  </div>
 	                	  </div>`
+			}
+			}else {
+				value = `<div class="centerXY" style="padding-top: 170px;">최근 본 프로젝트가 없습니다.</div>`
 			}
 			$(".member_pr_form").html(value);
 		}

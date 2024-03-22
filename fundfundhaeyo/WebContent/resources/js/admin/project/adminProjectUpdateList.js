@@ -81,7 +81,7 @@ function loadPage(cpage) {
 			// 페이지 엔트리
 			$(".adm-content-center-main-body3-col1-startPoint").text((currentPage - 1) * boardLimit + 1); 	// 시작 프로젝트 #			
 			$(".adm-content-center-main-body3-col1-endPoint").text((currentPage - 1) * boardLimit + 1 + list.length - 1);			// 끝 프로젝트 #
-			$(".adm-content-center-main-body3-col1-totalPoint").text(listCount + 1); 						// 총 프로젝트 수
+			$(".adm-content-center-main-body3-col1-totalPoint").text(listCount); 						// 총 프로젝트 수
 			
 			cpage = currentPage;
 	    },

@@ -37,19 +37,19 @@
 					<div class="mypage_right_title"><h3>마이페이지</h3></div>
 					<div class="mypage_right_activity brlg br5">
 						<div class="mypage_activity_row1">
-							<div class="mypage_activity_row1_grade1 hoverA2-2 fl" onclick="moveToAttend();">
+							<div class="mypage_activity_row1_grade1 hoverA2-3 fl" onclick="moveToAttend();">
 								<div class="mypage_activity_row1_grade1_title"><h4>후원활동</h4></div>
 								<div class="mypage_activity_row1_grade1_count"><h3><%= buyer.getBuyerCount() %></h3><h5> 회</h5></div>
 							</div>
-							<div class="mypage_activity_row1_grade2 hoverA2-2 fl" onclick="moveToOrder();">
+							<div class="mypage_activity_row1_grade2 hoverA2-3 fl" onclick="moveToOrder();">
 								<div class="mypage_activity_row1_grade2_title"><h4>후원금액</h4></div>
 								<div class="mypage_activity_row1_grade2_count"><h3><%= nf.format(buyer.getBuyerFunding()) %></h3><h5> 원</h5></div>
 							</div>
-							<div class="mypage_activity_row1_grade3 hoverA2-2 fl" onclick="moveToMyPj();">
+							<div class="mypage_activity_row1_grade3 hoverA2-3 fl" onclick="moveToMyPj();">
 								<div class="mypage_activity_row1_grade3_title"><h4>창작활동</h4></div>
 								<div class="mypage_activity_row1_grade3_count"><h3><%= seller.getSellerCount() %></h3><h5> 회</h5></div>
 							</div>
-							<div class="mypage_activity_row1_grade4 hoverA2-2 fl" onclick="moveToFunding();">
+							<div class="mypage_activity_row1_grade4 hoverA2-3 fl" onclick="moveToFunding();">
 								<div class="mypage_activity_row1_grade4_title"><h4>창작금액</h4></div>
 								<div class="mypage_activity_row1_grade4_count"><h3><%= nf.format(seller.getSellerFunding()) %></h3><h5> 원</h5></div>
 							</div>
@@ -90,7 +90,7 @@
 								<div class="mypage_count fl">확인</div>
 							</div>
 							<div class="mypage_right_my_left_grade brlg br5" onclick="moveToGuide();">
-								<div class="mypage_activity_row1_grade1_title mypage_title fl"><i class="fa-solid fa-bookmark fa-lg" style="line-height: 150%; padding: 5px 10px 0 13px;"></i> 펀딩가이드</div>
+								<div class="mypage_activity_row1_grade1_title mypage_title fl"><i class="fa-solid fa-bookmark fa-lg" style="line-height: 150%; padding: 5px 10px 0 13px;"></i> &nbsp; 펀딩가이드</div>
 								<div class="mypage_count fl">확인</div>
 							</div>
 							<div class="mypage_right_my_left_grade brlg br5" onclick="moveToGear();">
@@ -104,7 +104,7 @@
 								<div class="mypage_count fl">확인</div>
 							</div>
 							<div class="mypage_right_my_left_grade brlg br5" onclick="moveToFAQ();">
-								<div class="mypage_activity_row1_grade1_title mypage_title fl"><i class="fa-regular fa-question fa-xl" style="line-height: 150%; padding: 5px 10px 0 10px;"></i> FAQ 자주묻는질문</div>
+								<div class="mypage_activity_row1_grade1_title mypage_title fl"><i class="fa-regular fa-question fa-xl" style="line-height: 150%; padding: 5px 10px 0 15px;"></i> &nbsp;&nbsp; FAQ 자주묻는질문</div>
 								<div class="mypage_count fl">확인</div>
 							</div>
 						</div>
