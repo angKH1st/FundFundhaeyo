@@ -101,7 +101,6 @@ function sharePage(){
 		url: window.location.href
 	};
 	
-	if(navigator.share){
 		navigator
 		.share(shareObject)
 		.then(() => {
@@ -109,9 +108,6 @@ function sharePage(){
 		.catch((error) => {
 			alert('공유하기 실패했습니다.')
 		})
-	}else{
-		alert('페이지 공유를 지원하지 않습니다.')
-	}
 }
 
 $(document).ready(function() {
