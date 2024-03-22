@@ -23,7 +23,7 @@
 <title>뻔뻔해요</title>
 <link rel="stylesheet" href="resources/css/index.css">
 </head>
-<link rel="icon" sizes="32x32" type="image/png" href="resources/image/closeupimg.png">
+<link rel="icon" sizes="32x32" type="image/png" href="resources/image/ffhy.ico">
 <body>
 	<%@ include file="views/common/header.jsp" %>
 	
@@ -208,29 +208,6 @@
 			<a href="<%= contextPath %>/moveToEnrollIntroduction.pr"><img src="resources/image/adv.png" width=1300 height=250></a>
 		</div>
 	</div>
-	
-	<script>
-		var HOME_PATH = window.HOME_PATH || '.';
-		var position = new naver.maps.LatLng(37.4989934, 127.032909);
-	
-		var map = new naver.maps.Map('map', {
-			center: position,
-			zoom: 19
-		});
-	
-		var markerOptions = {
-			position: position.destinationPoint(-30, 22),
-			map: map,
-			icon:
-			{
-				content: [
-					` <img src="resources/image/logo3.png" style="width: 90px; height: 70px;"/>`,
-				].join(''),
-			}
-		};
-	
-		var marker = new naver.maps.Marker(markerOptions);
-	</script>
 	
 	<%@ include file="views/common/footer.jsp" %>
 	
