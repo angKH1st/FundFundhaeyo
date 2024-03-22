@@ -95,7 +95,7 @@ INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'user09', 'pass09', '최연두',
 INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'user10', 'pass10', '하주연', '870501-2223154', '열받는사람', '010-1234-8124', 'uqeqweq@kh.or.kr', '서울시 강동구', '집 가고 싶다', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
 INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'user11', 'pass11', '김주황', '990101-2141231', 'bj지망생', '010-4312-1917', 'ubbd2@kh.or.kr', '서울시 강서구', '배고파요', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
 INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'user12', 'pass12', '박팔두', '030923-1231511', '도깨비', '010-0123-6456', 'rewab@kh.or.kr', '서울시 강동구', '언제까지', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
-INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'user13', 'pass13', '최지훈', '971012-1221811', '청바지가잘어울리는', '010-1234-6456', 'asee@kh.or.kr', '서울시 강동구', '으아아악', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'user13', 'pass13', '최지훈', '971012-1221811', '청바지어울림', '010-1234-6456', 'asee@kh.or.kr', '서울시 강동구', '으아아악', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
 INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'user14', 'pass14', '이딸기', '871108-2141231', '깃털', '010-1234-6456', 'usewer@kh.or.kr', '서울시 강남구 역삼동', '잘 부탁드립니다', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
 INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'user15', 'pass15', '김태현', '950814-2234561', 'Lovely킴', '010-3456-7890', 'urewim@kh.or.kr', '서울시 강남구', '반갑습니다, 김태현입니다.', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
 INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'user16', 'pass16', '이민수', '671001-1234562', 'Handsomely', '010-4567-8901', 'user16lee@kh.or.kr', '경기도 수원시', '안녕하세요, 이민수입니다.', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
@@ -115,6 +115,8 @@ INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'user29', 'pass29', '수지비',
 INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'user30', 'pass30', '윤아리', '910902-2212570', 'Shine윤', '010-7431-8903', 'yar30@kh.or.kr', '인천시 동구', '윤아리입니다. 잘 부탁드립니다!', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
 INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'user31', 'pass31', '임하리', '980114-2214176', '알빠누', '010-1314-7112', 'ang1515@kh.or.kr', '경기도 수원시', '많은 참여 예정', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
 INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'user32', 'pass32', '윤하예', '870117-2211050', '배고픈사람', '010-8171-0904', 'vest1013@kh.or.kr', '광주시 남구', '처음 가입했어요', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
+INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'nano', 'nano', '김재영', '950814-1234321', '할아버지', '010-1234-5678', 'nano@kh.or.kr', '서울시 강동구 천중로 50길 50', '우리네 인생 부질없다', 1, 'N', '2024-03-22', SYSDATE, DEFAULT, 'Y');
+INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'suji', 'suji', '어수지', '350102-2232412', '편의점껌도둑', '010-4321-4125', 'suji@kh.or.kr', '서울시 성북구', '집에 가고 싶다', 1, 'N', '2024-03-22', SYSDATE, DEFAULT, 'Y');
 --------------------------------------------------
 -------------- ANNOUNCEMENT 관련 ------------------	
 --------------------------------------------------
@@ -1271,6 +1273,12 @@ VALUES (SEQ_ATTACHMENT_NO.NEXTVAL, 32, 'basicUserProfile.png', '2024022209000081
 
 INSERT INTO TB_ATTACHMENT (ATTACHMENT_NO, ATTACHMENT_USER_NO, ATTACHMENT_ORIGIN_NAME, ATTACHMENT_UPDATE_NAME, ATTACHMENT_PATH, ATTACHMENT_LEVEL)
 VALUES (SEQ_ATTACHMENT_NO.NEXTVAL, 33, 'basicUserProfile.png', '2024022209000081110.png', 'resources/member_upfiles/', 1);
+
+INSERT INTO TB_ATTACHMENT (ATTACHMENT_NO, ATTACHMENT_USER_NO, ATTACHMENT_ORIGIN_NAME, ATTACHMENT_UPDATE_NAME, ATTACHMENT_PATH, ATTACHMENT_LEVEL)
+VALUES (SEQ_ATTACHMENT_NO.NEXTVAL, 34, 'basicUserProfile.png', '2024022209000081110.png', 'resources/member_upfiles/', 1);
+
+INSERT INTO TB_ATTACHMENT (ATTACHMENT_NO, ATTACHMENT_USER_NO, ATTACHMENT_ORIGIN_NAME, ATTACHMENT_UPDATE_NAME, ATTACHMENT_PATH, ATTACHMENT_LEVEL)
+VALUES (SEQ_ATTACHMENT_NO.NEXTVAL, 35, 'basicUserProfile.png', '2024022209000081110.png', 'resources/member_upfiles/', 1);
 
 ------------------ project ---------------------
 INSERT INTO TB_ATTACHMENT (ATTACHMENT_NO, ATTACHMENT_PROJECT_NO, ATTACHMENT_ORIGIN_NAME, ATTACHMENT_UPDATE_NAME, ATTACHMENT_PATH, ATTACHMENT_LEVEL)
