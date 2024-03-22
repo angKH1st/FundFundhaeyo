@@ -30,7 +30,7 @@
 						<div class="mypage_recent_Form_right_list brlg br5">
 							<div class="recent_btn_area">
 								<div class="recent_btn fl">
-									최근 관심있게 지켜 본 프로젝트를 모아볼 수 있는 공간입니다.
+									최근 본 프로젝트를 모아볼 수 있는 공간입니다.
 								</div> 
 								<div class="recent_cnt fl">
 								</div>

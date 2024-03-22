@@ -40,7 +40,7 @@
 						<div class="mypage_likes_Form_right_root">
 							<span><a href="<%= request.getContextPath() %>/mypage.me">Home</a></span>
 							<span> > </span>
-							<span>나의활동</span>
+							<span>나의 활동</span>
 						</div>
 						<div class="mypage_likes_Form_right_title"><h3>찜목록</h3></div>
 						<div class="mypage_likes_Form_right_list brlg br5 pd15">

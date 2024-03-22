@@ -118,12 +118,12 @@
 						</div>
 						<div class="project_detail_top_info_row2">
 							<% if(loginUser != null) { %>
-							<div class="project_detail_top_info_row2_btn1 br5 brlg fl">
-								<div class="project_detail_top_info_row2_btn1_icon likesContainer">
-	                        		<span class="likes" style="position: absolute; bottom: -6px; right: 15px; z-index: 10;" data-projectNo="<%= p.getProjectNo() %>"><i class="fa-solid fa-heart fa-lg"></i></span>
+								<div class="project_detail_top_info_row2_btn1 br5 brlg fl">
+									<div class="project_detail_top_info_row2_btn1_icon likesContainer">
+		                        		<span class="likes" style="position: absolute; bottom: -6px; right: 15px; z-index: 10;" data-projectNo="<%= p.getProjectNo() %>"><i class="fa-solid fa-heart fa-lg"></i></span>
+									</div>
+									<div class="project_detail_top_info_row2_btn1_num"><%= liker %></div>
 								</div>
-								<div class="project_detail_top_info_row2_btn1_num"><%= liker %></div>
-							</div>
 							<% }else{ %>
 							<div class="project_detail_top_info_row2_btn1 br5 brlg fl" onclick="alertToLogin();">
 								<div class="project_detail_top_info_row2_btn1_icon">
@@ -141,8 +141,18 @@
 								<div class="project_detail_top_info_row2_btn4_num clapCnt"></div>
 							</div>
 							<% if(loginUser != null) { %>
-								<% if(loginUser.getUserNo() != Integer.parseInt(p.getProjectSeller())){ %>
-								<div class="project_detail_top_info_row2_btn3 br5 brlg fl"><a style="color: white;" href="<%= contextPath %>/moveToOrderForm.pr?pno=<%= p.getProjectNo() %>">프로젝트 후원하기</a></div>
+								<% if((long)(ChronoUnit.DAYS.between(now, ((Date)p.getProjectEnd()).toLocalDate())) >= 0){ %>
+									<% if(loginUser.getUserNo() != Integer.parseInt(p.getProjectSeller())){ %>
+										<div class="project_detail_top_info_row2_btn3 br5 brlg fl"><a style="color: white;" href="<%= contextPath %>/moveToOrderForm.pr?pno=<%= p.getProjectNo() %>">프로젝트 후원하기</a></div>
+									<% }else{ %>
+									<div class="project_detail_top_info_row2_btn3 br5 brlg fl"><a style="color: white;" href="<%= contextPath %>/fundingProject.me?cpage=1">펀딩 확인하기</a></div>
+									<% } %>
+								<% }else { %>
+									<% if(loginUser.getUserNo() != Integer.parseInt(p.getProjectSeller())){ %>
+									<div class="project_detail_top_info_row2_btn3 br5 brlg fl"><a style="color: white;" href="<%= contextPath %>/orderProject.me?cpage=1">참여내역 확인하기</a></div>
+									<% }else{ %>
+									<div class="project_detail_top_info_row2_btn3 br5 brlg fl"><a style="color: white;" href="<%= contextPath %>/fundingProject.me?cpage=1">펀딩 확인하기</a></div>
+									<% } %>
 								<% } %>
 							<% }else { %>
 								<div class="project_detail_top_info_row2_btn3 br5 brlg fl" onclick="alertToLogin();">프로젝트 후원하기</div>
@@ -150,6 +160,8 @@
 							<div class="project_detail_top_info_row2_blank fl">
 								<% if((long)(ChronoUnit.DAYS.between(now, ((Date)p.getProjectEnd()).toLocalDate())) >= 0){ %>
 								<span class="blueBtn" style="padding: 3px;">D - <%= (long)(ChronoUnit.DAYS.between(now, ((Date)p.getProjectEnd()).toLocalDate())) %></span>
+								<% }else{ %>
+								<span class="blueBtn" style="padding: 3px;">종료</span>
 								<% } %>
 							</div>
 						</div>
@@ -160,12 +172,12 @@
 			<div class="project_detail_content">
 				<div class="project_detail_content_col1 fl">
 					<div class="project_detail_content_col1_row1">
-						<div class="project_detail_content_project_title">상세설명</div>
+						<div class="project_detail_content_project_title"><i class="fa-solid fa-pen-nib"></i> 상세설명</div>
 						<div class="project_detail_content_project_content brlg br5"><%= p.getProjectContent() %></div>
 					</div>
 					<div class="project_detail_content_col1_row2"><%-- 여백 --%></div>
 					<div class="project_detail_content_col1_row3">
-						<div class="project_detail_content_project_seller_title">창작자 정보</div>
+						<div class="project_detail_content_project_seller_title"><i class="fa-solid fa-camera-retro"></i> 창작자 정보</div>
 						<div class="project_detail_content_project_seller_content brlg br5">
 							<div class="project_seller_info_row1">
 								<div class="project_seller_info_row1_img fl centerXY"><img width=50 height=50 src="<%= contextPath %>/<%= seller.getUserImg() %>"></div>
@@ -182,7 +194,7 @@
 					</div>
 					<div class="project_detail_content_col1_row4"><%-- 여백 --%></div>
 					<div class="project_detail_content_col1_row5">
-						<div class="project_option_title">🎁 펀딩 옵션 🎁</div>
+						<div class="project_option_title"><i class="fa-solid fa-gift"></i> 펀딩 옵션</div>
 						<div class="project_option_content brlg br5 pd15">
 							<div class="project_option_content_row1">
 								<div class="project_option_content-row1_col1 centerXY fl">옵션 1. <%= nf.format((int)(p.getProjectPrice() * 0.1)) %> 원</div>

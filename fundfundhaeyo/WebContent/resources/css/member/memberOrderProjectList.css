@@ -52,7 +52,7 @@
 .order_btn_area button{background-color: white; border:none;}
 
 .order_list_thing{ transition: transform 0.3s ease-in-out;}
-.order_list_thing:hover{cursor: pointer; transform: scale(1.01);}
+.order_list_thing:hover{transform: scale(1.01);}
 .order_order_area>div{width: 100%;}
 .order_obj>div{height: 100%; border-bottom: 0.5px solid lightgray;}
 .order_area_left{width: 12%;}

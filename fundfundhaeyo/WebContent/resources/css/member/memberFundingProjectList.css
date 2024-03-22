@@ -36,9 +36,9 @@
 .funding_thing>div{height: 100%; border-top: 0.5px solid lightgray;}
 .funding_index{width: 5%;}
 .funding_category{width: 9%;}
-.funding_tag{width: 9%;}
+.funding_tag{width: 12%;}
 .funding_img{width: 5%;}
-.funding_project{width: 32%;}
+.funding_project{width: 29%;}
 .funding_amount{width: 15%; padding-right: 30px;}
 .funding_percentage{width: 10%; padding-right: 25px;}
 

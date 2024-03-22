@@ -47,7 +47,7 @@
 					<div class="mypage_update_Form_right_content1 pd15">
 						<div class="mypage_update_Form_right_root">
 							<span><a href="<%=request.getContextPath()%>/mypage.me">Home</a></span>
-							<span> > </span> <span>회원정보</span>
+							<span> > </span> <span>회원 정보</span>
 						</div>
 						<div class="mypage_update_Form_right_title">
 							<h3>회원정보수정</h3>
