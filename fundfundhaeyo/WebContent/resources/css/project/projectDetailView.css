@@ -25,7 +25,7 @@
 
 .project_detail_top_category>div{height: 100%;}
 .project_detail_top_category_col1{width: auto; margin-right: 5px;}
-.project_detail_top_category_col2{width: 20%;}
+.project_detail_top_category_col2{width: 60%; text-align: left;}
 
 .project_detail_top_title>div{height: 100%;}
 .project_detail_top_title_col1{width: 85%; padding-top: 5px;}
