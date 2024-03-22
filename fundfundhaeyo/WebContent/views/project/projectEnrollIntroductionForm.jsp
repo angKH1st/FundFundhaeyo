@@ -7,7 +7,7 @@
 <title>뻔뻔해요</title>
 <link rel="stylesheet" href="resources/css/project/projectEnrollIntroductionForm.css">
 </head>
-<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+<link rel="icon" sizes="32x32" type="image/png" href="resources/image/logo3.png">
 <body>
 	<%@ include file="../common/header.jsp" %>
 	
