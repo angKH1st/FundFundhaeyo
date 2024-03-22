@@ -116,7 +116,7 @@ INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'user30', 'pass30', '윤아리',
 INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'user31', 'pass31', '임하리', '980114-2214176', '알빠누', '010-1314-7112', 'ang1515@kh.or.kr', '경기도 수원시', '많은 참여 예정', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
 INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'user32', 'pass32', '윤하예', '870117-2211050', '배고픈사람', '010-8171-0904', 'vest1013@kh.or.kr', '광주시 남구', '처음 가입했어요', 1, 'N', '2024-02-22', SYSDATE, DEFAULT, 'Y');
 INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'nano', 'nano', '김재영', '950814-1234321', '할아버지', '010-1234-5678', 'nano@kh.or.kr', '서울시 강동구 천중로 50길 50', '우리네 인생 부질없다', 1, 'N', '2024-03-22', SYSDATE, DEFAULT, 'Y');
-INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'suji', 'suji', '어수지', '350102-2232412', '편의점껌도둑', '010-4321-4125', 'suji@kh.or.kr', '서울시 성북구', '집에 가고 싶다', 1, 'N', '2024-03-22', SYSDATE, DEFAULT, 'Y');
+INSERT INTO TB_MEMBER VALUES (SEQ_USER_NO.NEXTVAL, 'suji', 'suji', '어수지', '350102-2232412', '슈퍼껌도둑', '010-4321-4125', 'suji@kh.or.kr', '서울시 성북구', '집에 가고 싶다', 1, 'N', '2024-03-22', SYSDATE, DEFAULT, 'Y');
 --------------------------------------------------
 -------------- ANNOUNCEMENT 관련 ------------------	
 --------------------------------------------------
