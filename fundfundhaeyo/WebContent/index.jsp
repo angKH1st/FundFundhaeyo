@@ -62,7 +62,7 @@
 			<div class="ffh_content_top fl">
 				<div class="ffh_content_top_left fl">
 					<div class="ffh_content_top_left1">
-						<div class="ffh_content_top_left1_col1 fl"><h2 class="title_text" style="margin-top: 40px; margin-left: 20px;">🎈 전체 프로젝트 🎈</h2></div>
+						<div class="ffh_content_top_left1_col1 fl"><h2 class="title_text" style="margin-top: 40px; margin-left: 20px;"><i class="fa-duotone fa-balloons fa-lg" style="--fa-primary-color: #74C0FC; --fa-secondary-color: #74C0FC;"></i>  🎈 전체 프로젝트 🎈</h2></div>
 						<div class="ffh_content_top_left1_col2 fl">
 							<div class="ffh_content_top_left1_col2_row1"></div>
 							<div class="ffh_content_top_left1_col2_row2">

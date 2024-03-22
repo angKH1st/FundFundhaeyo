@@ -54,7 +54,7 @@
 							<div class="mypage_order_Form_right_list_inside brlg br5">
 								<div class="order_btn_area">
 									<div class="order_btn fl">
-										dd
+										<%= ((Member)request.getAttribute("loginUser")).getUserName() %> 님의 결제 내역입니다.
 									</div> 
 									<div class="order_cnt fl">
 									</div>
@@ -71,7 +71,7 @@
 										<div class="order_date_top centerXY fl">결제일</div>
 									</div>
 									<% for(int i = 0; i < list.size(); i++){ %>
-									<div class="order_thing">
+									<div class="order_thing order_list_thing">
 										<div class="order_index centerXY fl"><%= (currentPage - 1) * boardLimit + i + 1 %></div>
 										<div class="order_img centerXY fl"><img class="circleImg" width=35 height=35 src="<%= list.get(i).getPaymentProjectImg() %>"></div>
 										<div class="order_project leftXY fl"><%= list.get(i).getPaymentProjectName() %></div>

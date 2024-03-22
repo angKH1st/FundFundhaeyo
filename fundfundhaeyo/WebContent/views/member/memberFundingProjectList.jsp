@@ -54,7 +54,7 @@
 							<div class="mypage_funding_Form_right_list_inside brlg br5">
 								<div class="funding_btn_area">
 									<div class="funding_btn fl">
-										dd
+										<%= ((Member)request.getAttribute("loginUser")).getUserName() %> 님의 수익 내역입니다.
 									</div> 
 									<div class="funding_cnt fl">
 									</div>

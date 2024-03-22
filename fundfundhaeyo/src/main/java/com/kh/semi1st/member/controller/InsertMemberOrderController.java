@@ -55,9 +55,6 @@ public class InsertMemberOrderController extends HttpServlet {
 			result = resultB * resultS * resultOp;
 		}
 		
-		System.out.println(resultOption);
-		System.out.println(result);
-		
 		response.setContentType("text/html; charset=UTF-8");
 		response.getWriter().print(result);
 	}
