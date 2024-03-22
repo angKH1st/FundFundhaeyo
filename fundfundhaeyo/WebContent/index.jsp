@@ -23,7 +23,7 @@
 <title>뻔뻔해요</title>
 <link rel="stylesheet" href="resources/css/index.css">
 </head>
-<link rel="icon" sizes="32x32" type="image/png" href="resources/image/ffhy.ico">
+<link rel="icon" sizes="32x32" type="image/png" href="resources/image/main.ico">
 <body>
 	<%@ include file="views/common/header.jsp" %>
 	
