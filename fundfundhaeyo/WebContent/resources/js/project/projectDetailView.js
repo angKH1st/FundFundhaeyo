@@ -98,7 +98,7 @@ function clip(){
    var url = '';
    var textarea = document.createElement("textarea");
    document.body.appendChild(textarea);
-   url = 'window.location.href';
+   url = location;
    textarea.value = url;
    textarea.select();
    document.execCommand("copy");
