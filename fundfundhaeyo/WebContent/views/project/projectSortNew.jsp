@@ -18,7 +18,7 @@
 <title>뻔뻔해요</title>
 <link rel="stylesheet" href="resources/css/project/projectSortNew.css">
 </head>
-<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+<link rel="icon" sizes="32x32" type="image/png" href="resources/image/main.ico">
 <body>
 	<%@ include file="../common/header.jsp" %>
 	
