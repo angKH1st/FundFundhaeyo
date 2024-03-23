@@ -110,7 +110,11 @@
 					    				<input type="hidden" name="qNo" id="qNo" value="<%= q.getQnaNo() %>">
 					    				<button type="submit" id="submitBtn" disabled>제출</button>
 				    					<button type="button" id="deleteBtn">게시글 삭제</button>
+				    					<% if(r != null){ %>
+				    					<button type="button" id="deleteAnswerBtn">답변 삭제</button>
+				    					<% }else { %>
 				    					<button type="button" id="deleteAnswerBtn" disabled>답변 삭제</button>
+				    					<% } %>
 					    				<button type="reset" id="resetBtn" disabled>초기화</button>
 				    				<% } %>
 				    			</div>

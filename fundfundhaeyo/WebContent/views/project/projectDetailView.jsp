@@ -112,7 +112,7 @@
 								</tr>
 								<tr>
 									<td>결제</td>
-									<td><%= df.format(p.getProjectPaymentBuyer()) %> 까지 결제 진행</td>
+									<td><%= df.format(p.getProjectEnd()) %> 까지 결제 진행</td>
 								</tr>
 							</table>
 						</div>
