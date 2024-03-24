@@ -13,7 +13,7 @@
 	
     <div class="adm-content font_outer">
 	    <div class="adm-content-top">
-	    	<div class="adm-content-top-title fl"><h1>프로젝트조회</h1></div>
+	    	<div class="adm-content-top-title fl"><h1>프로젝트심사조회</h1></div>
 	    	<div class="adm-content-top-blank fl"></div>
 	    	<div class="adm-content-top-root fl">
 	    		<div class="adm-content-top-root-first fl"><a href="<%= contextPath %>">Home</a></div>

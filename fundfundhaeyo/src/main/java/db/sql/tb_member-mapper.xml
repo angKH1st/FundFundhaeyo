@@ -312,6 +312,7 @@
 		                 WHERE LIKES_USER_NO = ?
 		                   AND LIKES_STATUS = 'Y'
 		                   AND ATTACHMENT_LEVEL = 1
+		                   AND SYSDATE BETWEEN PROJECT_START AND PROJECT_END + 1
 		                 ORDER
 		                    BY PROJECT_NO DESC
 		                 ) E
@@ -536,7 +537,9 @@
 		SELECT
 			   COUNT(*) "COUNT"
 		  FROM TB_LIKES
+          JOIN TB_PROJECT ON (LIKES_PROJECT_NO = PROJECT_NO)
 		 WHERE LIKES_USER_NO = ?
+           AND SYSDATE BETWEEN PROJECT_START AND PROJECT_END + 1
 	</entry>
 	
 	<entry key="selectMySellerProjectCount">

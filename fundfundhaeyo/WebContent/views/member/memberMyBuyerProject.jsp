@@ -66,8 +66,10 @@
 										<div class="mypage_ongoing_project_dday fl">
 										<% if((long)(ChronoUnit.DAYS.between(now, ((Date)p.getProjectEnd()).toLocalDate())) == 0){ %>
 										<span class="project-d-day" style="color: red">오늘 마감!</span>
-										<% }else{ %>
+										<% }else if((long)(ChronoUnit.DAYS.between(now, ((Date)p.getProjectEnd()).toLocalDate())) == 0){ %>
 										<span class="project-d-day">D-<%= (long)(ChronoUnit.DAYS.between(now, ((Date)p.getProjectEnd()).toLocalDate())) %></span>
+										<% }else { %>
+										<span class="project-d-day"></span>
 										<% } %>
 										</div>
 									</div>
