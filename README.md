@@ -154,6 +154,8 @@ ERD : [**DB 모델링**](https://www.erdcloud.com/d/34sJQqpYz4FekDaKK)
 #### 🟣 메인페이지
 &nbsp;&nbsp;&nbsp; - 메인페이지
 
+
+
 <br><br>
 
 #### 🟣 마이페이지
@@ -172,7 +174,7 @@ ERD : [**DB 모델링**](https://www.erdcloud.com/d/34sJQqpYz4FekDaKK)
 
 &nbsp;&nbsp;&nbsp; - 프로젝트 승인
 
-
+![프로젝트승인](https://github.com/angKH1st/FundFundhaeyo/assets/151509995/38cc560e-908c-4287-bf8f-166cc6571347)
 
 <br><br>
 
@@ -185,13 +187,13 @@ ERD : [**DB 모델링**](https://www.erdcloud.com/d/34sJQqpYz4FekDaKK)
 #### 🟣 찜/알림
 &nbsp;&nbsp;&nbsp; - 찜
 
-
+![찜](https://github.com/angKH1st/FundFundhaeyo/assets/151509995/0dbd201d-d76c-4267-92d8-eaa6a4d6b4e4)
 
 <br><br>
 
 &nbsp;&nbsp;&nbsp; - 알림
 
-
+![알림](https://github.com/angKH1st/FundFundhaeyo/assets/151509995/af23eac9-e659-4411-bb18-59f62b217835)
 
 <br><br>
 
@@ -205,7 +207,7 @@ ERD : [**DB 모델링**](https://www.erdcloud.com/d/34sJQqpYz4FekDaKK)
 #### 🟣 프로젝트 주문/결제페이지, 결제 API 및 후원/창작내역
 &nbsp;&nbsp;&nbsp; - 프로젝트 주문/결제페이지, 결제 API 및 후원/창작내역
 
-
+![프로젝트후원](https://github.com/angKH1st/FundFundhaeyo/assets/151509995/d03c0af7-d375-41cd-bb91-c773923d98e0)
 
 <br><br>
 
