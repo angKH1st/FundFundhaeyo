@@ -234,19 +234,56 @@ ERD : [**DB 모델링**](https://www.erdcloud.com/d/34sJQqpYz4FekDaKK)
 
 ### 💛 어수지
 
-#### 🟡 TBU : 기능 1
-&nbsp;&nbsp;&nbsp; - <!-- TBU : 세부1 -->
+#### 🟡 카카오톡 로그인 API
+&nbsp;&nbsp;&nbsp; - 카카오톡 로그인 API
 
-<!-- TBU : img/link 등 1~2장 내외 간결하게 --> 
-<br><br>
-&nbsp;&nbsp;&nbsp; - <!-- TBU : 세부2 -->
+![카카오톡 로그인](https://github.com/angKH1st/FundFundhaeyo/assets/151509995/107c31a3-abb7-486b-9e02-eec5317c9890)
 
-<!-- TBU : img/link 등 1~2장 내외 간결하게 --> 
 <br><br>
-&nbsp;&nbsp;&nbsp; - <!-- TBU : 세부3 -->
 
-<!-- TBU : img/link 등 1~2장 내외 간결하게 --> 
+#### 🟡 최근 본 프로젝트
+&nbsp;&nbsp;&nbsp; - 최근 본 프로젝트
+
+
+
 <br><br>
+
+#### 🟡 검색페이지
+&nbsp;&nbsp;&nbsp; - 검색페이지
+
+![검색](https://github.com/angKH1st/FundFundhaeyo/assets/151509995/144a3626-b8e7-47fa-822b-2a88edc93343)
+
+<br><br>
+
+#### 🟡 아이디/비밀번호 찾기
+&nbsp;&nbsp;&nbsp; - 아이디/비밀번호 찾기
+
+![아이디   비밀번호 찾기](https://github.com/angKH1st/FundFundhaeyo/assets/151509995/b05df1e4-3ddb-4ffa-8271-354cacd771c5)
+
+<br><br>
+
+#### 🟡 비밀번호 변경
+&nbsp;&nbsp;&nbsp; - 비밀번호 변경
+
+
+
+<br><br>
+
+#### 🟡 고객지원 FAQ/펀딩 가이드
+&nbsp;&nbsp;&nbsp; - 고객지원 FAQ/펀딩 가이드
+
+![고객지원](https://github.com/angKH1st/FundFundhaeyo/assets/151509995/6e9e16d5-2d96-4520-8d67-b2da3e062d71)
+
+<br><br>
+
+#### 🟡 SNS 공유
+&nbsp;&nbsp;&nbsp; - SNS 공유
+
+
+
+<br><br>
+
+
 
 ### 📕 최종보고서
 <details>
