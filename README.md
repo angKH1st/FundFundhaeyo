@@ -289,6 +289,7 @@ ERD : [**DB 모델링**](https://www.erdcloud.com/d/34sJQqpYz4FekDaKK)
 <details>
 <summary>접기/펼치기</summary>
 <pre>
-  <!-- TBU : 최종보고서 -->
+  ![1](https://github.com/angKH1st/FundFundhaeyo/assets/151509995/a6d02c01-4308-4a73-b011-dd1d88157b60)
+
 </pre>
 </details>
